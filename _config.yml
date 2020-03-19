@@ -1,0 +1,49 @@
+# Site settings
+title: Tejal Wakchoure
+email: tejal.wakchoure@gmail.com
+url: https://tejalwakchoure.github.io
+description: "Personal Website"
+skills_1: "Data Science"
+skills_2: "UI/UX Design"
+skills_3: "Social Network Analysis"
+meta_author: Wakchoure Tejal
+
+# Google webmaster tools
+google_verify:
+
+# https://ssl.bing.com/webmaster/configure/verify/ownership Option 2 content= goes here
+bing_verify:
+
+# Color settings (hex-codes without the leading hash-tag)
+color:
+  primary: '000000'
+  primary-rgb: '0,0,0'
+  secondary: '000000'
+  secondary-dark: '000000'
+  header_left_dark: '06021b'
+  header_left: '15119a'
+  header_left_small: '02005d'
+  header_right: '8e0a6b'
+  header_right_dark: '35072b'
+  bkg: '0b0954'
+  bkg_dark: '010008'
+
+# Footer settings
+footer:
+  copyright: Dr. Henry Jekyll
+  location: Location
+  credits: Credits
+
+# Social networks usernames
+social:
+  - title: linkedin
+    url: //linkedin.com/in/tejalw
+  - title: github
+    url: //github.com/tejalwakchoure
+
+# Credits content
+credits: 'Freelancer is a free to use, open source Bootstrap theme created by <a href="http://startbootstrap.com">Start Bootstrap</a>.'
+
+# Build settings
+markdown: kramdown
+permalink: pretty

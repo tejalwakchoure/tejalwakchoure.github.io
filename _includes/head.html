@@ -1,0 +1,94 @@
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="{{ site.description }}">
+    {% if site.meta_author %}<meta name="author" content="{{ site.meta_author }}">{% endif %}
+    <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.url }}">
+    <link rel="alternate" type="application/rss+xml" title="RSS" href="/feed.xml">
+
+    <!-- Custom CSS & Bootstrap Core CSS - Uses Bootswatch Flatly Theme: http://bootswatch.com/flatly/ -->
+    <link rel="stylesheet" href="{{ "/style.css" }}">    
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/v4-shims.css">
+
+    <!--Preload the preloader CSS-->
+    <style>
+        preloader {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .loader {
+            display: flex;
+            justify-content: space-between;
+        }
+        .dot {
+            margin-left: 15px;
+            margin-right: 15px;
+            width: 20px;
+            height: 20px;
+            background-color: #252525;
+            border-radius: 50%;
+            animation: loader 1200ms ease-out infinite;
+        }
+        .dot:nth-child(1) {
+            animation-delay: 0.1s;
+        }
+        .dot:nth-child(2) {
+            animation-delay: 0.2s;
+        }
+        .dot:nth-child(3) {
+            animation-delay: 0.3s;
+        }
+        @keyframes loader {
+            0%, 100% {
+              transform: translateY(0);
+            }
+            50% {
+              transform: translateY(200%);
+            }
+        } 
+    </style>
+
+    <!--Avoid flickering-->
+    <script>
+        document.write(".js-hide { display: none; }");
+    </script>
+
+    <!-- Favicon support -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/img/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/assets/site.webmanifest">
+
+    <!-- Google verification -->
+    {% if site.google_verify %}<meta name="google-site-verification" content="{{ site.google_verify }}">{% endif %}
+
+    <!-- Bing Verification -->
+    {% if site.bing_verify %}<meta name="msvalidate.01" content="{{ site.bing_verify }}">{% endif %}
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-133963307-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-133963307-1');
+    </script>
+
+    <!-- Custom Fonts -->
+    <link rel="stylesheet" href="{{ "/css/font-awesome/css/font-awesome.min.css" }}">
+    <link href="//fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href='//fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
+    <link href="//fonts.googleapis.com/css?family=Raleway:300" rel="stylesheet" type="text/css">
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+      <![endif]-->
+      <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-wp-preserve="%3Cstyle%3E%0A%0A.back-to-top%20%7B%0A%0Abackground%3A%20none%3B%0A%0Amargin%3A%200%3B%0A%0Aposition%3A%20fixed%3B%0A%0Abottom%3A%200%3B%0A%0Aright%3A%200%3B%0A%0Awidth%3A%2070px%3B%0A%0Aheight%3A%2070px%3B%0A%0Az-index%3A%20100%3B%0A%0Adisplay%3A%20none%3B%0A%0Atext-decoration%3A%20none%3B%0A%0Acolor%3A%20%23ffffff%3B%0A%0Abackground-color%3A%20%23ff9000%3B%0A%0A%7D%0A%0A%C2%A0%0A%0A.back-to-top%20i%20%7B%0A%0A%C2%A0%20font-size%3A%2060px%3B%0A%0A%7D%0A%0A%3C%2Fstyle%3E" data-mce-resize="false" data-mce-placeholder="1" class="mce-object" width="20" height="20" alt="&lt;style&gt;" title="&lt;style&gt;" />
+</head>

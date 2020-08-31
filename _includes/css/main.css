@@ -78,7 +78,7 @@ section.under_construction {
 	padding: 2% !important;
 	color: #{{ site.color.construction }};
 	display: table;
-	background: #fff0e2;
+	background: #fff4e9;
 }
 
 section.under_construction a {

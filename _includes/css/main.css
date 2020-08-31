@@ -19,6 +19,10 @@ body{
 	visibility:hidden;  
 }
 
+.show-on-submit {
+	visibility:hidden;
+}
+
 p { 
 	font-size: 20px;    
 }   

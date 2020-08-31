@@ -70,11 +70,11 @@ hr.primary{
 
 under_construction {
 	width: 100%;
-	min-height: 100vh !important;
+	height: 100vh;
 	color: #575757;
-	/*overflow: auto;
-	display: table;
-	position: relative;*/
+	overflow: auto;
+	display: block;
+	position: relative;
 	background: #FFF5EE;
 }
 

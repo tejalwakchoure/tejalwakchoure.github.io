@@ -37,7 +37,7 @@ a:focus,
 a:active,   
 a.active {  
 	outline: 0; 
-	color: #e6e6e6 !important;
+	color: #e6e6e6; /*!important;*/
 }   
 
 h1, 

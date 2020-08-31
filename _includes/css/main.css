@@ -68,7 +68,7 @@ hr.primary{
 	margin: 0 auto; 
 }
 
-under_construction {
+.under_construction {
 	width: 100%;
 	height: 100vh;
 	color: #575757;

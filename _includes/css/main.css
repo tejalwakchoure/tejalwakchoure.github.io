@@ -68,6 +68,16 @@ hr.primary{
 	margin: 0 auto; 
 }
 
+under_construction {
+	width: 100%;
+	min-height: 100vh !important;
+	color: #575757;
+	/*overflow: auto;
+	display: table;
+	position: relative;*/
+	background: #FFF5EE;
+}
+
 header {    
 	width: 100%;    
 	padding: 5% 0;

@@ -1,28 +1,3 @@
-<!DOCTYPE html>
-<html>
-    {% include head.html %}
-    <body id="page-top" class="index">
-       
-        {% if true %}
-            {% include js.html %}
-            {% include under_construction.html %}
-        
-        {% else %}
-            {% include js.html %}
-            {% include preloader.html %}
-            {% include nav.html %}
-            <div class="hide1">
-                {% include header.html %}        
-            </div>
-            <div class="hide2">
-                {% include about.html %}
-                {% include portfolio_grid.html %}
-                {% include contact.html %}        
-                {% include footer.html %}
-            </div>
-            {% include modals.html %}
-        {% endif %}
-
-    </body>
-</html>
- 
+---
+layout: development
+---

@@ -81,9 +81,9 @@ section.under_construction {
 	background: #fff0e2;
 }
 
-section.under_construction .a,
-section.under_construction .a:hover, 
-section.under_construction .a:focus {
+section.under_construction a,
+section.under_construction a:hover, 
+section.under_construction a:focus {
 	color: #{{ site.color.construction }} !important;
 }
 

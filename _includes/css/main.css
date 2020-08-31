@@ -13,14 +13,14 @@ body{
 }  
 
 .hide1 header .container{   
-	visibility:hidden;  
+	visibility: hidden;  
 }   
 .hide2{ 
-	visibility:hidden;  
+	visibility: hidden;  
 }
 
 .show-on-submit {
-	visibility:hidden;
+	display: none;
 }
 
 p { 
@@ -76,7 +76,7 @@ section.under_construction {
 	width: 100%;
 	height: 100vh;
 	color: #575757;
-	display: block;
+	display: table;
 	background: #FFF5EE;
 }
 

@@ -2,7 +2,7 @@
 
 Options +FollowSymlinks
 RewriteEngine On
-RewriteBase /
-RewriteCond %{REMOTE_ADDR} !^182.70.69.187
-RewriteCond %{REQUEST_URI} !^/dev.html$ [NC]
-RewriteRule ^(.*)$ /dev.html [R=302,L]
+RewriteCond %{REMOTE_ADDR} !^182\.70\.69\.187
+RewriteCond %{REQUEST_URI} !/construction.html$ [NC]
+RewriteCond %{REQUEST_URI} !\.(jpe?g?|png|gif) [NC]
+RewriteRule .* /dev.html [R=302,L]

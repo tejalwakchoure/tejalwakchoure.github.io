@@ -72,9 +72,7 @@ section.under_construction {
 	width: 100%;
 	height: 100vh;
 	color: #575757;
-	overflow: auto;
 	display: block;
-	position: relative;
 	background: #FFF5EE;
 }
 

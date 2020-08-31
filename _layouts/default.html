@@ -2,15 +2,15 @@
 <html>
     {% include head.html %}
     <body id="page-top" class="index">
-        {% include js.html %}
-        {% include preloader.html %}
-        
+       
         {% if true %}
-            <div class="hide1">
-                {% include under_construction.html %}     
-            </div>
+            {% include js.html %}
+            {% include preloader.html %}
+            {% include under_construction.html %}     
         
         {% else %}
+            {% include js.html %}
+            {% include preloader.html %}
             {% include nav.html %}
             <div class="hide1">
                 {% include header.html %}        

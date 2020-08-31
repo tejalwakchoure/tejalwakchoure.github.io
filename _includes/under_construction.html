@@ -6,7 +6,8 @@
 				<h1>Hi there!</h1>
 				<hr style="border-top: solid 1px; max-width: 150px;"/>
 				<br>
-				<p>I am currently updating my website with new projects. For any queries, drop me a note at <a href="mailto:{{ site.email }}" target="_blank">tejal.wakchoure@gmail.com</a>:</p>
+				<p>I am currently updating this space with new projects.</p>
+				<p>If you'd like to chat, drop me a note at <a href="mailto:{{ site.email }}" target="_blank">tejal.wakchoure@gmail.com</a>:</p>
 				<br>
 				</div>
 			</div>
@@ -15,7 +16,7 @@
 
 				<form action="//formspree.io/{{ site.email }}" method="POST" target="output_frame"
 							name="sentMessage" id="contactForm" novalidate 
-							style="width: 50% !important; margin: auto;">
+							style="width: 50%; max-width: 500px; margin: auto;">
 
 							<div class="form-group col-xs-12 floating-label-form-group controls" 
 								style="border-top-right-radius: 5px;border-top-left-radius: 5px; border-bottom: 0;">
@@ -39,8 +40,8 @@
 
 							<br>
 							<div id="success"></div>
-							<div class="form-group col-xs-12" style="padding: 10px">
-								<button type="submit" class="btn btn-success btn" style=""
+							<div class="form-group col-xs-12" style="padding: 20px; margin: 0;">
+								<button type="submit" class="btn btn-success btn" 
 									onclick="document.getElementById('thanks').style.display = 'block';">Send Note</button>
 							</div>
 						<div id="thanks" class="show-on-submit"><p>Thank you, I will be in touch soon!</p></div>

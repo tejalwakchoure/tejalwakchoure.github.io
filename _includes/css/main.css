@@ -81,6 +81,25 @@ section.under_construction {
 	background: #fff0e2;
 }
 
+section.under_construction .a,
+section.under_construction .a:hover, 
+section.under_construction .a:focus {
+	color: #{{ site.color.construction }} !important;
+}
+
+section.under_construction .btn {
+	width: 30%; 
+	background-color: #{{ site.color.construction }};
+	border-color: #{{ site.color.construction }};
+}
+section.under_construction .btn:hover,
+section.under_construction .btn:active,
+section.under_construction .btn:focus {
+	background-color: black;
+	border-color: black;
+}
+
+
 header {    
 	width: 100%;    
 	padding: 5% 0;
@@ -330,8 +349,8 @@ section.success {
 .floating-label-form-group {    
 	position: relative; 
 	margin-bottom: 0;   
-	padding-bottom: .5em;   
-	border: 0.70px solid #{{ site.color.construction }};
+	padding: .5em;   
+	border: 1px solid #bfbfbf;
 }   
 
 .floating-label-form-group input,   
@@ -377,19 +396,6 @@ section.success {
 
 .floating-label-form-group-with-focus label {   
 	color: #{{ site.color.primary }};   
-}   
-
-form .btn {
-	width: 30%; 
-	background-color: #{{ site.color.construction }};
-	border-color: #{{ site.color.construction }};
-}
-
-form .btn:hover,
-form .btn:active,
-form .btn:focus {
-	background-color: black;
-	border-color: black;
 }
 
 form .row:first-child .floating-label-form-group {  

@@ -1,8 +1,8 @@
 # Redirect the all users except developer IP to dev.html
 
 Options +FollowSymlinks
-RewriteEngine On
+RewriteEngine on
 RewriteCond %{REMOTE_ADDR} !^182\.70\.69\.187$
-RewriteCond %{REQUEST_URI} !^/development.html$ [NC]
+RewriteCond %{REQUEST_URI} !=/development.html$ [NC]
 RewriteCond %{REQUEST_URI} !\.(jpe?g?|png|gif) [NC]
 RewriteRule (.*) /development.html [R=302,L]

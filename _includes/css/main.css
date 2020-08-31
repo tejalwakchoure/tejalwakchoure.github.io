@@ -76,9 +76,9 @@ section.under_construction {
 	width: 100%;
 	height: 100vh;
 	padding: 5% !important;
-	color: #575757;
+	color: #{{ site.color.construction }};
 	display: table;
-	background: #FFF5EE;
+	background: #fff0e2;
 }
 
 header {    
@@ -331,7 +331,7 @@ section.success {
 	position: relative; 
 	margin-bottom: 0;   
 	padding-bottom: .5em;   
-	border-bottom: 1px solid #eee;  
+	border: 0.70px solid #{{ site.color.construction }};
 }   
 
 .floating-label-form-group input,   
@@ -378,6 +378,19 @@ section.success {
 .floating-label-form-group-with-focus label {   
 	color: #{{ site.color.primary }};   
 }   
+
+form .btn {
+	width: 30%; 
+	background-color: #{{ site.color.construction }};
+	border-color: #{{ site.color.construction }};
+}
+
+form .btn:hover,
+form .btn:active,
+form .btn:focus {
+	background-color: black;
+	border-color: black;
+}
 
 form .row:first-child .floating-label-form-group {  
 	border-top: 1px solid #eee; 

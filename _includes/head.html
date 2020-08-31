@@ -66,6 +66,22 @@
     <link rel="icon" type="image/png" sizes="16x16" href="/assets/img/favicon/favicon-16x16.png">
     <link rel="manifest" href="/assets/site.webmanifest">
 
+
+    <script>
+        var message = "";
+        $("#sendMessage").on("click", function() {
+            message = $("#contactForm").serialize();
+            $.ajax({
+                url: "//formspree.io/tejal.wakchoure@gmail.com", 
+                method: "POST",
+                data: {message: message},
+                dataType: "json"
+            });
+            alert('Thanks for the email, I\'ll be in touch promptly.');
+            return false;
+        });
+    </script>
+
     <!-- Google verification -->
     {% if site.google_verify %}<meta name="google-site-verification" content="{{ site.google_verify }}">{% endif %}
 

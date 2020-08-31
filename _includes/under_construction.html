@@ -20,7 +20,7 @@
 								  </div>
 								  <button type="submit" class="btn btn-primary" style="background-color: #B6513F !important;">Contact Me!</button>
 								</form> -->
-								<form  action="//formspree.io/{{ site.email }}" method="POST" name="sentMessage" id="contactForm" novalidate>
+								<form  method="POST" name="sentMessage" id="contactForm" novalidate>
 					<div class="row control-group">
 						<div class="form-group col-xs-12 floating-label-form-group controls">
 							<label for="name">Name</label>
@@ -50,15 +50,14 @@
 					<div id="success"></div>
 					<div class="row">
 						<div class="form-group col-xs-12">
-							<button type="submit" class="btn btn-success btn-lg">Send</button>
-							<input type="hidden" name="_next" value="//tejalwakchoure.github.io"/>
+							<button type="submit" id="sendMessage" class="btn btn-success btn-lg">Send</button>
+							<!-- <input type="hidden" name="_next" value="//tejalwakchoure.github.io"/> -->
 						</div>
 					</div>
 
 				</form>
           </div>
       </div>
-
 
 
 

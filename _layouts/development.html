@@ -4,17 +4,19 @@
     <body id="page-top" class="index">
         {% include js.html %}
         {% include preloader.html %}
-        <div class="hide1">
-            {% include nav.html %}
-            {% include header.html %}        
+        <div class="body-container">
+            <div class="hide1">
+                {% include nav.html %}
+                {% include header.html %}        
+            </div>
+            <div class="hide2">
+                {% include about.html %}
+                {% include portfolio_grid.html %}
+                {% include contact.html %}        
+                {% include footer.html %}
+            </div>
+            {% include modals.html %}
         </div>
-        <div class="hide2">
-            {% include about.html %}
-            {% include portfolio_grid.html %}
-            {% include contact.html %}        
-            {% include footer.html %}
-        </div>
-        {% include modals.html %}
     </body>
 </html>
  

@@ -4,7 +4,7 @@ RewriteEngine On
 # and need to be able to get past the maintenance mode.
 # One might call this the 'allow people list'
 
-RewriteCond %{REMOTE_HOST} !^182\.70\.69\.187
+# RewriteCond %{REMOTE_HOST} !^182\.70\.69\.187
 
 # Make sure the maintenance mode only applies to this domain
 # Example: I am hosting different sites on my server

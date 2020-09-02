@@ -13,83 +13,11 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/v4-shims.css">
 
-    <!--Preload the preloader CSS-->
-    <style>
-        .no-js preloader { 
-            display: none;  
-        }
-        .js preloader {
-            height: 100%;
-            width: 100%;
-            z-index: 4;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-        .oldloader {
-            display: flex;
-            justify-content: space-between;
-        }
-        .dot {
-            margin-left: 15px;
-            margin-right: 15px;
-            width: 20px;
-            height: 20px;
-            background-color: #252525;
-            border-radius: 50%;
-            animation: loader 1200ms ease-out infinite;
-        }
-        .dot:nth-child(1) {
-            animation-delay: 0.1s;
-        }
-        .dot:nth-child(2) {
-            animation-delay: 0.2s;
-        }
-        .dot:nth-child(3) {
-            animation-delay: 0.3s;
-        }
-        @keyframes oldloader {
-            0%, 100% {
-              transform: translateY(0);
-            }
-            50% {
-              transform: translateY(200%);
-            }
-        } 
-        .loader{
-            background: linear-gradient(to right, #232526,#414345);
-            height: 100%;
-            width: 100%;
-            display: flex;
-            align-items: center;
-        }
-        .loader-counter{
-          h1{
-            margin: auto;
-            color:#fff;
-            font-size:1.5em;
-          }
-    </style>
 
-    <!--Avoid flickering and show preloader-->
-   <!--  <script type="text/javascript">
-        // document.write(".js-hide { display: none; }");
-        $('body').hide();
-        $('preloader').show();
 
-        $(document).ready(function(){
-            var counter = 0;
-            var count = 0;
-            var i = setInterval(function(){
-              $(".newloader .newloader-counter h1").html("%" + count);              
-              counter++;
-              count++;
-              if(counter == 101){
-                clearInterval(i);
-              }
-            },50);
-            });
-    </script> -->
+
+
+    
 
     <!-- Favicon support -->
     <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/favicon/apple-touch-icon.png">

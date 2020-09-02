@@ -14,19 +14,28 @@
 		display: flex;
 	    flex-direction: column;
 	    align-items: center;
+	    font-family:Raleway,Montserrat,sans-serif;
+		font-weight: 100; 
+		text-transform: lowercase; 
 	}
-	#preloader .container .row #count::before {
+	#preloader .container #brand{
+		/*font-family:Raleway,Montserrat,sans-serif;
+		font-weight: 100; 
+		text-transform: lowercase; */
+    	font-size: 100%; 5.5em;
+	}
+	#preloader .container #count::before {
 		content: "%";
-		font-family:Raleway,Montserrat,sans-serif;
+		/*font-family:Raleway,Montserrat,sans-serif;
 		font-weight: 100; 
-		text-transform: lowercase; 
-		font-size: 10%; /*3em;*/
+		text-transform: lowercase;*/ 
+		font-size: 10%; 2em;
 	}
-	#preloader p {
-		font-family:Raleway,Montserrat,sans-serif;
+	#preloader .container #count{
+		/*font-family:Raleway,Montserrat,sans-serif;
 		font-weight: 100; 
-		text-transform: lowercase; 
-    	font-size: 100%; /*5em;*/
+		text-transform: lowercase; */
+    	font-size: 100%; 4em;
 	}
 
 
@@ -34,11 +43,7 @@
 
 <div id="preloader">
 	<div class="container">
-		<div class="row" style="margin: auto;">
-			<p id="brand">tw</p>
-		</div>
-		<div class="row" style="margin: auto;">
-			<p id="count">0</p>
-		</div>
+		<p id="brand" style="margin: auto auto 0 auto;">tw</p>
+		<p id="count" style="margin: auto;">0</p>
 	</div>
 </div>

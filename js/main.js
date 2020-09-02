@@ -13,14 +13,16 @@ document.getElementById('body-container').style.display = 'none';
 $(document).ready(function() {
     var counter = 0;
     var i = setInterval(function(){
-      $("#preloader .container .row #count").html(counter);
+      $("#preloader .container #count").html(counter);
       counter++;
       if(counter == 101){
         clearInterval(i);
-        $('#preloader').fadeOut(1000);
+        $('#preloader').slideUp(1000);
         $('#body-container').fadeIn(1000);
+        // $('#preloader').fadeOut(1000);
+        // $('#body-container').fadeIn(1000);
         }
-    }, 200);
+    }, 100);
 });
 
 

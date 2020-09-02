@@ -51,6 +51,17 @@
               transform: translateY(200%);
             }
         } 
+        .newloader{
+            background: linear-gradient(to right, #232526,#414345);
+            height: 100%;
+            width: 100vh;
+        }
+        .newloader-counter{
+          h1{
+            margin: auto;
+            color:#fff;
+            font-size:1.5em;
+          }
     </style>
 
     <!--Avoid flickering and show preloader-->
@@ -58,6 +69,18 @@
         // document.write(".js-hide { display: none; }");
         $('body').hide();
         $('preloader').show();
+        $(document).ready(function(){
+            var counter = 0;
+            var count = 0;
+            var i = setInterval(function(){
+              $(".newloader .newloader-counter h1").html("%" + count);              
+              counter++;
+              count++;
+              if(counter == 101){
+                clearInterval(i);
+              }
+            },50);
+            });
     </script>
 
     <!-- Favicon support -->

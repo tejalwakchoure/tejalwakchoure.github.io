@@ -1,4 +1,10 @@
 
+// Get window status
+window.loaded = false;
+$(window).load(function() {
+    window.loaded = true;
+});
+
 //Preloader and page fade in setup
 function fadeInChildren(parent, base_delay) {
     var elems = $(parent).children();
@@ -9,22 +15,23 @@ function fadeInChildren(parent, base_delay) {
 
 document.getElementById('body-container').style.display = 'none';
 $(document).ready(function() {
-    var counter = 0;
+    var counter = 1;
     var i = setInterval(function(){
       $("#preloader .container #wrapper #count").html(counter);
-      counter++;
-      if(counter == 100){
+      counter = counter + (counter^(counter));
+      
+      if(counter >= 100){
+        while(!window.loaded) {}
         clearInterval(i);
+        // Animate components on and off the screen on loading
         $('#preloader').slideUp(1000);
         $('#body-container').fadeIn(1000);
-
-        // Animate components on and off the screen on loading
         $('.hide1 header .img-responsive').css({opacity: 0.0, visibility: "visible"}).delay(500).animate({opacity: 1.0}, 500);
         $('.hide1 header').css({opacity: 0.0, visibility: "visible"}).delay(500).animate({opacity: 1.0}, 500);  
         fadeInChildren('.hide1 header .intro-text',1000);
         $('.hide2').css({opacity: 0.0, visibility: "visible"}).delay(2300).animate({opacity: 1.0}, 500);
      }
-    }, 100);
+    }, 50);
 });
 // setTimeout(function() {
 //  //After 2000 milliseconds, fade out the overlay. The animation duration is 500 ms.

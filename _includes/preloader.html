@@ -4,19 +4,34 @@
 	width: 100%;
 	position: relative;
 	z-index: 4;
-	background: white no-repeat center url('https://media.giphy.com/media/ZBQhoZC0nqknSviPqT/giphy.gif')
+	/*background: white no-repeat center url('https://media.giphy.com/media/ZBQhoZC0nqknSviPqT/giphy.gif')*/
 	} 
 </style>
 
 <div id="preloader">
+	<h1>
+		0
+	</h1>
 </div>
 
 <script type="text/javascript">
-	
-	function loadFunction() {
+	document.getElementById('page-top').style.display = 'none';
+	$(document).ready(function() {
 		// document.getElementById('preloader').style.display = 'none';
-	}
+		var counter = 0;
+        var i = setInterval(function(){
+          $("#preloader h1").html("%" + counter);
+          counter++;
+          if(counter == 101){
+            clearInterval(i);
+            document.getElementById('page-top').style.display = 'block';
+            document.getElementById('preloader').style.display = 'none';
 
-	setTimeout('document.getElementById("preloader").style.display="none"', 5000);
+        	}
+        	// setTimeout('document.getElementById("preloader").style.display="none"', 5000);
+        });
+	});
+
+	
 
 </script>

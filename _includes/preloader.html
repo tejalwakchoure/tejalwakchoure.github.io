@@ -5,12 +5,7 @@
 	position: relative;
 	z-index: 4;
 	background: white /*no-repeat center url('https://media.giphy.com/media/ZBQhoZC0nqknSviPqT/giphy.gif')*/
-	} 
-
-	.no-js #preloader { 
-    display: none;  
 	}
-
 </style>
 
 <div id="preloader">
@@ -48,7 +43,7 @@
 		  count++;
 		  if(counter == 101){
 		    clearInterval(i);
-		    document.getElementById('body-container').style.display = 'block';
+		    // document.getElementById('body-container').style.display = 'block';
             document.getElementById('preloader').style.display = 'none';
 		  }
 		},100);

@@ -31,23 +31,24 @@
 	#preloader .container #brand{
     	font-size: 7em;
 	}
-	#preloader .container #count::before {
+	/*#preloader .container #count::before {
 		content: "%";
 		font-size: 0.5em;
-	}
-	#preloader .container #count{
+	}*/
+	#preloader .container #wrapper #count{
     	font-size: 4em;
 	}
+
 </style>
 
 
 <div id="preloader">
 	<div class="container">
-		<!-- <div id="wrapper1" style="margin: auto auto 0 auto;"> -->
 			<p id="brand" style="margin: auto auto 0 auto;">tw</p>
-		<!-- </div> -->
-		<!-- <div id="wrapper2" style="margin: auto;"> -->
-			<p id="count" style="margin: auto;">0</p>
-		<!-- </div> -->
+			<!-- <p id="count" style="margin: auto;">0</p> -->
+			<div id="wrapper" style="margin: auto;display: flex;flex-direction: row;align-items: flex-end;">
+				<p style="font-size: 2em;">%</p>
+			    <p id="count" style="margin-bottom: 0;">100</p>
+			</div>
 	</div>
 </div>

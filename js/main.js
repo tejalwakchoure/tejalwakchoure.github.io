@@ -11,7 +11,7 @@ document.getElementById('body-container').style.display = 'none';
 $(document).ready(function() {
     var counter = 0;
     var i = setInterval(function(){
-      $("#preloader .container #count").html(counter);
+      $("#preloader .container #wrapper #count").html(counter);
       counter++;
       if(counter == 101){
         clearInterval(i);

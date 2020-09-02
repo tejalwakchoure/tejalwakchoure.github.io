@@ -4,8 +4,8 @@
 		width: 100%;
 		position: relative;
 		z-index: 4;
-		background-color: #fff4e9;
-		color: #{{ site.color.construction }};
+		background-color: #{{ site.color.lightbkg }}
+		color: #{{ site.color.lighttext }};
 	}
 	#preloader .container {
 		height: 100vh; 
@@ -28,15 +28,12 @@
 		display: flex;
 	    align-items: center;
 	}*/
-	#preloader .container #brand{
-    	font-size: 7em;
-	}
 	/*#preloader .container #count::before {
 		content: "%";
 		font-size: 0.5em;
 	}*/
-	#preloader .container #wrapper #count{
-    	font-size: 4em;
+	#preloader .container #wrapper {
+    	font-family:lato,Montserrat,sans-serif;
 	}
 
 </style>
@@ -44,11 +41,12 @@
 
 <div id="preloader">
 	<div class="container">
-			<p id="brand" style="margin: auto auto 0 auto;">tw</p>
-			<!-- <p id="count" style="margin: auto;">0</p> -->
-			<div id="wrapper" style="margin: auto;display: flex;flex-direction: row;align-items: flex-end;">
+			<p id="brand" style="font-size: 7em; margin: auto auto 0 auto;">tw</p>
+			
+			<div id="wrapper" style="margin:auto; display:flex; 
+								flex-direction:row; align-items:flex-end;">
 				<p style="font-size: 2em; padding-right: 10px;">%</p>
-			    <p id="count" style="margin-bottom: 0;">100</p>
+			    <p id="count" style="font-size: 4em; margin-bottom: 0;">100</p>
 			</div>
 	</div>
 </div>

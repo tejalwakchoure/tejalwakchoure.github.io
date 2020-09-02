@@ -87,13 +87,13 @@ section.under_construction {
 	width: 100%;
 	height: 100vh;
 	padding: 2% !important;
-	color: #{{ site.color.construction }};
+	color: #{{ site.color.lighttext }};
 	display: table;
-	background: #fff4e9;
+	background: #{{ site.color.lightbkg }}
 }
 
 section.under_construction a {
-	color: #{{ site.color.construction }} !important;
+	color: #{{ site.color.lighttext }} !important;
 	font-weight: bold;
 }
 
@@ -106,8 +106,8 @@ section.under_construction a.active {
 
 section.under_construction .btn {
 	width: 30%;
-	background-color: #{{ site.color.construction }};
-	border-color: #{{ site.color.construction }};
+	background-color: #{{ site.color.lighttext }};
+	border-color: #{{ site.color.lighttext }};
 }
 section.under_construction .btn:hover,
 section.under_construction .btn:focus,

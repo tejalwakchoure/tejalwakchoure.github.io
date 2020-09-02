@@ -27,7 +27,9 @@ color:
   header_right_dark: '35072b'
   bkg: '0b0954'
   bkg_dark: '010008'
-  construction: '575757'
+  
+  lighttext: '575757'
+  lightbkg: 'fff4e9'
 
 # Footer settings
 footer:

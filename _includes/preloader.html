@@ -15,8 +15,8 @@
 <!--Avoid flickering and show preloader-->
 <script type="text/javascript">
     // document.write(".js-hide { display: none; }");
-    $('body-container').hide();
-    $('preloader').show();
+    // $('body-container').hide();
+    // $('preloader').show();
     $(document).ready(function(){
         var counter = 0;
         var i = setInterval(function(){
@@ -30,7 +30,7 @@
 			$("preloader").animate({
 				top: -200
 			}, 1500);
-			$('body-container').show();
+			// $('body-container').show();
           }
         },200);
         });

@@ -19,9 +19,6 @@ $(document).ready(function() {
         clearInterval(i);
         $('#preloader').fadeOut(1000);
         $('#body-container').fadeIn(1000);
-
-        // document.getElementById('body-container').style.display = 'block';
-        // document.getElementById('preloader').style.display = 'none';
         }
     }, 200);
 });
@@ -29,7 +26,6 @@ $(document).ready(function() {
 
 function fadeInChildren(parent, base_delay) {
     var elems = $(parent).children();
-
     $(elems).each(function(index) {
         $(this).css({opacity: 0.0, visibility: "visible"}).delay(base_delay+(500*index)).animate({opacity: 1.0}, 500);
     });

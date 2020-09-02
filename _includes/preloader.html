@@ -17,14 +17,14 @@
 		font-weight: 100; 
 		text-transform: lowercase; 
 	}
-	#preloader .container #brand{
+	#preloader .container div #brand{
     	font-size: 5.5em;
 	}
-	#preloader .container #count::before {
+	#preloader .container div #count::before {
 		content: "%";
 		font-size: 2em;
 	}
-	#preloader .container #count{
+	#preloader .container div #count{
     	font-size: 4em;
 	}
 </style>
@@ -32,7 +32,7 @@
 
 <div id="preloader">
 	<div class="container">
-		<p id="brand" style="margin: auto auto 0 auto;">tw</p>
-		<p id="count" style="margin: auto;">0</p>
+		<div style="margin: auto auto 0 auto;"><p id="brand">tw</p></div>
+		<div style="margin: auto;"><p id="count">0</p></div>
 	</div>
 </div>

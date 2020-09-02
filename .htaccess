@@ -1,3 +1,6 @@
+Test.
+
+
 RewriteEngine on
 RewriteCond %{HTTP_HOST} ^tejalwakchoure\.github\.io$ 
 RewriteRule (.*) http://tejalwakchoure.github.io/$1 [R=301,L]

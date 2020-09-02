@@ -7,7 +7,7 @@ html,body
 	background-color: #e6e6e6; 
 	overflow-x: hidden;
 	font-variant-numeric: lining-nums;
-    font-feature-settings: "lnum";    
+    font-feature-settings: "lnum";
 }   
 
 /* Hide scrollbar for Chrome, Safari and Opera */

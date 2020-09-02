@@ -19,11 +19,9 @@
     $('preloader').show();
     $(document).ready(function(){
         var counter = 0;
-        var count = 0;
         var i = setInterval(function(){
-          $(".newloader .newloader-counter h1").html("%" + count);              
+          $("preloader .newloader .newloader-counter h1").html("%" + counter);
           counter++;
-          count++;
           if(counter == 101){
             clearInterval(i);
             

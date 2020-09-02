@@ -8,9 +8,6 @@ html,body
 	overflow-x: hidden;     
 }   
 
-body{   
-	display: none;  
-} 
 /* Hide scrollbar for Chrome, Safari and Opera */
 body::-webkit-scrollbar {
     display: none;
@@ -20,6 +17,10 @@ body::-webkit-scrollbar {
 body {
   -ms-overflow-style: none;  /* IE and Edge */
   scrollbar-width: none;  /* Firefox */
+} 
+
+.body-container{   
+	display: none;  
 } 
 
 .hide1 header .container{   

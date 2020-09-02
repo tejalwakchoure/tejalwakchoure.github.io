@@ -10,7 +10,17 @@ html,body
 
 body{   
 	display: none;  
-}  
+} 
+/* Hide scrollbar for Chrome, Safari and Opera */
+body::-webkit-scrollbar {
+    display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+body {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+} 
 
 .hide1 header .container{   
 	visibility: hidden;  
@@ -203,6 +213,7 @@ header .intro-text .skills {
 }   
 
 .navbar {   
+	z-index: 3;
 	text-transform: uppercase;  
 	font-family: lato,"Helvetica Neue",Helvetica,Arial,sans-serif;
 }   
@@ -449,7 +460,7 @@ footer .footer-below {
 }   
 
 .scroll-top {   
-	z-index: 1049;  
+	z-index: 3;  
 	position: fixed;    
 	right: 2%;  
 	bottom: 2%; 

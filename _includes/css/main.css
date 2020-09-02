@@ -5,7 +5,9 @@ html,body
 	margin: 0px;    
 	padding: 0px;   
 	background-color: #e6e6e6; 
-	overflow-x: hidden;     
+	overflow-x: hidden;
+	font-variant-numeric: lining-nums;
+    font-feature-settings: "lnum";    
 }   
 
 /* Hide scrollbar for Chrome, Safari and Opera */
@@ -18,10 +20,6 @@ body {
   -ms-overflow-style: none;  /* IE and Edge */
   scrollbar-width: none;  /* Firefox */
 }
-
-.body-container{   
-	/*display: none;  */
-} 
 
 .hide1 header .container{   
 	visibility: hidden;  
@@ -89,7 +87,7 @@ section.under_construction {
 	padding: 2% !important;
 	color: #{{ site.color.lighttext }};
 	display: table;
-	background: #{{ site.color.lightbkg }}
+	background: #{{ site.color.lightbkg }};
 }
 
 section.under_construction a {
@@ -188,6 +186,7 @@ header .intro-text .skills {
 	}
 }
 
+
 @media(min-width:768px) {   
 	.navbar-fixed-top { 
 		padding: 15px 0;
@@ -197,7 +196,8 @@ header .intro-text .skills {
 	}   
 
 	.navbar-fixed-top .navbar-brand {   
-		font-size: 2em; 
+		font-size: 2em;
+		letter-spacing: -0.08em; 
 		-webkit-transition: all .3s;    
 		-moz-transition: all .3s;   
 		transition: all .3s;    
@@ -209,7 +209,8 @@ header .intro-text .skills {
 	}   
 
 	.navbar-fixed-top.navbar-shrink .navbar-brand { 
-		font-size: 1.5em;   
+		font-size: 1.5em;
+		letter-spacing: -0.08em;   
 	}   
 }   
 

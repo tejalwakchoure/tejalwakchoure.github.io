@@ -1,37 +1,40 @@
-<preloader>
+<div id="preloader" class="preloader">
 <!-- 	<div class="loader">
 	  <span class="dot"></span>
 	  <span class="dot"></span>
 	  <span class="dot"></span>
 	</div> -->
-	<div class="newloader">
-	  <div class="container newloader-counter">
+	<div class="loader">
+	  <div class="container loader-counter">
 	    <h1 style="text-align: center;">0</h1>
 	  </div>
 	</div>
 
-</preloader>
+</div>
 
 <!--Avoid flickering and show preloader-->
 <script type="text/javascript">
     // document.write(".js-hide { display: none; }");
     // $('body-container').hide();
     // $('preloader').show();
-    $(document).ready(function(){
-        var counter = 0;
-        var i = setInterval(function(){
-          $("preloader .newloader .newloader-counter h1").html("%" + counter);
-          counter++;
-          if(counter == 101){
-            clearInterval(i);
+   
+    setTimeout('document.getElementById("preloader").style.display="none"', 5000);
+
+   //  $(document).ready(function(){
+   //      var counter = 0;
+   //      var i = setInterval(function(){
+   //        $("preloader .newloader .newloader-counter h1").html("%" + counter);
+   //        counter++;
+   //        if(counter == 101){
+   //          clearInterval(i);
             
-            // Animate loader off screen
-			// $('preloader').hide();
-			$("preloader").animate({
-				top: -200
-			}, 1500);
-			// $('body-container').show();
-          }
-        },200);
-        });
+   //          // Animate loader off screen
+			// // $('preloader').hide();
+			// $("preloader").animate({
+			// 	top: -200
+			// }, 1500);
+			// // $('body-container').show();
+   //        }
+   //      },200);
+   //      });
 </script>

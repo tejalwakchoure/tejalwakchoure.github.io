@@ -15,10 +15,10 @@
 
     <!--Preload the preloader CSS-->
     <style>
-        .no-js preloader { 
+        .no-js .preloader { 
             display: none;  
         }
-        .js preloader {
+        .js .preloader {
             height: 100%;
             width: 100%;
             z-index: 4;
@@ -26,7 +26,7 @@
             justify-content: center;
             align-items: center;
         }
-        .loader {
+        .oldloader {
             display: flex;
             justify-content: space-between;
         }
@@ -48,7 +48,7 @@
         .dot:nth-child(3) {
             animation-delay: 0.3s;
         }
-        @keyframes loader {
+        @keyframes oldloader {
             0%, 100% {
               transform: translateY(0);
             }
@@ -56,14 +56,14 @@
               transform: translateY(200%);
             }
         } 
-        .newloader{
+        .loader{
             background: linear-gradient(to right, #232526,#414345);
             height: 100%;
             width: 100%;
             display: flex;
             align-items: center;
         }
-        .newloader-counter{
+        .loader-counter{
           h1{
             margin: auto;
             color:#fff;

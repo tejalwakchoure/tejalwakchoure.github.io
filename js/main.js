@@ -19,7 +19,7 @@ $(document).ready(function() {
     var i = setInterval(function(){
       $("#preloader .container #wrapper #count").html(counter);
       counter++;
-      if(counter >= 100){
+      if(counter >= 101){
         while(!window.loaded) {}
         clearInterval(i);
         // Animate components on and off the screen on loading

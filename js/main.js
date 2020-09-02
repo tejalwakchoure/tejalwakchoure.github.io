@@ -18,7 +18,7 @@ $(document).ready(function() {
     var counter = 1;
     var i = setInterval(function(){
       $("#preloader .container #wrapper #count").html(counter);
-      counter = counter + (counter**1.5);
+      counter = counter**1.5;
       console.log(counter)
       if(counter >= 100){
         while(!window.loaded) {}

@@ -1,5 +1,5 @@
 <style>
-	#loading {
+	#preloader {
 	height: 100vh;
 	width: 100%;
 	position: relative;
@@ -8,15 +8,15 @@
 	} 
 </style>
 
-<div id="loading">
+<div id="preloader">
 </div>
 
 <script type="text/javascript">
 	
-	var preloader_var = document.getElementById('loading');
-
 	function loadFunction() {
-		preloader_var.style.display = 'none';
+		// document.getElementById('preloader').style.display = 'none';
 	}
+
+	setTimeout('document.getElementById("preloader").style.display="none"', 5000);
 
 </script>

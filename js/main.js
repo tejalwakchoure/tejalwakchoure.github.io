@@ -1,10 +1,5 @@
-/*!
- * Start Bootstrap - Freelancer Bootstrap Theme (http://startbootstrap.com)
- * Code licensed under the Apache License v2.0.
- * For details, see http://www.apache.org/licenses/LICENSE-2.0.
- */
 
-//Preloader and page fade
+//Preloader and page fade in
 
 // setTimeout(function() {
 // 	//After 2000 milliseconds, fade out the overlay. The animation duration is 500 ms.
@@ -12,7 +7,7 @@
 // $('#body-container').fadeIn(1000);
 // }, 1000);
 
-
+// setTimeout('document.getElementById("preloader").style.display="none"', 5000);
 
 document.getElementById('body-container').style.display = 'none';
 $(document).ready(function() {
@@ -27,38 +22,9 @@ $(document).ready(function() {
 
         // document.getElementById('body-container').style.display = 'block';
         // document.getElementById('preloader').style.display = 'none';
-
-     }
-     // setTimeout('document.getElementById("preloader").style.display="none"', 5000);
+        }
     }, 200);
 });
-
-
-
-
-    // document.getElementById('body-container').style.display = 'none';
-    // setTimeout('document.getElementById("preloader").style.display="none"', 5000);
-
-
-    // $(document).ready(function(){
-    //  var counter = 0;
-    //  var count = 0;
-    //  var i = setInterval(function(){
-    //    $("#preloader .container h1").html("%" + count);
-          
-    //    counter++;
-    //    count++;
-    //    if(counter == 101){
-    //      clearInterval(i);
-    //      // document.getElementById('body-container').style.display = 'block';
-    //      // document.getElementById('preloader').style.display = 'none';
-    //    }
-    //  },100);
-    // });
-
-
-
-
 
 
 function fadeInChildren(parent, base_delay) {

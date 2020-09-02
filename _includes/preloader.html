@@ -1,9 +1,6 @@
 <style>
+
 	#preloader {
-		font-family:raleway; 
-		font-weight: 300; 
-		text-transform: lowercase; 
-		font-size: 5em;
 		height: 100vh;
 		width: 100%;
 		position: relative;
@@ -11,19 +8,36 @@
 		background-color: #fff4e9; /*no-repeat center url('https://media.giphy.com/media/ZBQhoZC0nqknSviPqT/giphy.gif')*/
 		color: #{{ site.color.construction }};
 	}
+	#preloader .container {
+		height: 100vh; 
+		width: 100%;
+		display: flex;
+	    flex-direction: column;
+	    align-items: center;
+	}
 	#preloader .container .row #count::before {
 		content: "%";
-		font-size: 3em;
+		font-family:raleway; 
+		font-weight: 300; 
+		text-transform: lowercase; 
+		font-size: 1.5em;
 	}
+	#preloader p {
+		font-family:raleway; 
+		font-weight: 300; 
+		text-transform: lowercase; 
+    	font-size: 1.5em;
+	}
+
 </style>
 
 <div id="preloader">
-	<div class="container" style="height: 100vh; width: 100%; display: flex; align-items: center;">
-		<div class="row">
-			<p id="brand" style="margin: auto;">tw</p>
+	<div class="container">
+		<div class="row" style="margin: auto;">
+			<p id="brand">tw</p>
 		</div>
-		<div class="row">
-			<p id="count" style="margin: auto;">0</p>
+		<div class="row" style="margin: auto;">
+			<p id="count">0</p>
 		</div>
 	</div>
 </div>

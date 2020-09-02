@@ -15,8 +15,8 @@
 <!--Avoid flickering and show preloader-->
 <script type="text/javascript">
     // document.write(".js-hide { display: none; }");
-    $('body').hide();
-    $('preloader').show();
+    // $('body').hide();
+    // $('preloader').show();
 
     $(document).ready(function(){
         var counter = 0;
@@ -28,6 +28,6 @@
           if(counter == 101){
             clearInterval(i);
           }
-        },50);
+        },500);
         });
 </script>

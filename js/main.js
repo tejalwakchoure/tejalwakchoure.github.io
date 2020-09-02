@@ -13,7 +13,7 @@ $(document).ready(function() {
     var i = setInterval(function(){
       $("#preloader .container #wrapper #count").html(counter);
       counter++;
-      if(counter == 101){
+      if(counter == 100){
         clearInterval(i);
         $('#preloader').slideUp(1000);
         $('#body-container').fadeIn(1000);

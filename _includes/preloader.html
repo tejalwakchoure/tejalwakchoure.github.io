@@ -17,14 +17,25 @@
 		font-weight: 100; 
 		text-transform: lowercase; 
 	}
-	#preloader .container #wrapper1 #brand{
-    	font-size: 5.5em;
+	/*#preloader .container #wrapper1 {
+		height: 50vh;
+	    display: flex;
+	    align-items: flex-end;
 	}
-	#preloader .container #wrapper2 #count::before {
+	
+	#preloader .container #wrapper2 {
+		height: 50vh;
+		display: flex;
+	    align-items: center;
+	}*/
+	#preloader .container #brand{
+    	font-size: 7em;
+	}
+	#preloader .container #count::before {
 		content: "%";
-		font-size: 2em;
+		font-size: 0.5em;
 	}
-	#preloader .container #wrapper2 #count{
+	#preloader .container #count{
     	font-size: 4em;
 	}
 </style>
@@ -32,7 +43,11 @@
 
 <div id="preloader">
 	<div class="container">
-		<div id="wrapper1" style="margin: auto auto 0 auto;"><p id="brand">tw</p></div>
-		<div id="wrapper2" style="margin: auto;"><p id="count">0</p></div>
+		<!-- <div id="wrapper1" style="margin: auto auto 0 auto;"> -->
+			<p id="brand" style="margin: auto auto 0 auto;">tw</p>
+		<!-- </div> -->
+		<!-- <div id="wrapper2" style="margin: auto;"> -->
+			<p id="count" style="margin: auto;">0</p>
+		<!-- </div> -->
 	</div>
 </div>

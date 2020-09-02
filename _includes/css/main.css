@@ -127,6 +127,7 @@ section.under_construction a.active {
 
 section.under_construction .btn {
 	width: 30%;
+	min-width: fit-content;
 	background-color: #{{ site.color.lighttext }};
 	border-color: #{{ site.color.lighttext }};
 }

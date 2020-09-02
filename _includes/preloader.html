@@ -17,7 +17,7 @@
 </div>
 
 <script type="text/javascript">
-	document.getElementById('page-top').style.display = 'none';
+	document.getElementById('body-container').style.display = 'none';
 	$(document).ready(function() {
 		// document.getElementById('preloader').style.display = 'none';
 		var counter = 0;
@@ -26,7 +26,7 @@
           counter++;
           if(counter == 101){
             clearInterval(i);
-            document.getElementById('page-top').style.display = 'block';
+            document.getElementById('body-container').style.display = 'block';
             document.getElementById('preloader').style.display = 'none';
 
         	}

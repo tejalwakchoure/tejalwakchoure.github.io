@@ -1,13 +1,11 @@
 
-//Preloader and page fade in
-
-// setTimeout(function() {
-// 	//After 2000 milliseconds, fade out the overlay. The animation duration is 500 ms.
-//   $('#preloader').fadeOut(500);
-// $('#body-container').fadeIn(1000);
-// }, 1000);
-
-// setTimeout('document.getElementById("preloader").style.display="none"', 5000);
+//Preloader and page fade in setup
+function fadeInChildren(parent, base_delay) {
+    var elems = $(parent).children();
+    $(elems).each(function(index) {
+        $(this).css({opacity: 0.0, visibility: "visible"}).delay(base_delay+(500*index)).animate({opacity: 1.0}, 500);
+    });
+}
 
 document.getElementById('body-container').style.display = 'none';
 $(document).ready(function() {
@@ -19,29 +17,32 @@ $(document).ready(function() {
         clearInterval(i);
         $('#preloader').slideUp(1000);
         $('#body-container').fadeIn(1000);
-        // $('#preloader').fadeOut(1000);
-        // $('#body-container').fadeIn(1000);
-        }
+
+        // Animate components on and off the screen on loading
+        $('.hide1 header .img-responsive').css({opacity: 0.0, visibility: "visible"}).delay(500).animate({opacity: 1.0}, 500);
+        $('.hide1 header').css({opacity: 0.0, visibility: "visible"}).delay(500).animate({opacity: 1.0}, 500);  
+        fadeInChildren('.hide1 header .intro-text',1000);
+        $('.hide2').css({opacity: 0.0, visibility: "visible"}).delay(2300).animate({opacity: 1.0}, 500);
+     }
     }, 100);
 });
-
-
-function fadeInChildren(parent, base_delay) {
-    var elems = $(parent).children();
-    $(elems).each(function(index) {
-        $(this).css({opacity: 0.0, visibility: "visible"}).delay(base_delay+(500*index)).animate({opacity: 1.0}, 500);
-    });
-}
+// setTimeout(function() {
+//  //After 2000 milliseconds, fade out the overlay. The animation duration is 500 ms.
+//   $('#preloader').fadeOut(500);
+// $('#body-container').fadeIn(1000);
+// }, 1000);
 
 // $(window).load(function() {
-// 		// Animate components on and off the screen on loading
-// 		$('preloader').fadeOut('slow');
-// 		$('body').fadeIn('slow');
-// 		$('.hide1 header .img-responsive').css({opacity: 0.0, visibility: "visible"}).delay(500).animate({opacity: 1.0}, 500);
-// 		$('.hide1 header').css({opacity: 0.0, visibility: "visible"}).delay(500).animate({opacity: 1.0}, 500);	
-// 		fadeInChildren('.hide1 header .intro-text',1000);
-// 		$('.hide2').css({opacity: 0.0, visibility: "visible"}).delay(2300).animate({opacity: 1.0}, 500);
-// 	});
+//      // Animate components on and off the screen on loading
+//      $('preloader').fadeOut('slow');
+//      $('body').fadeIn('slow');
+//      $('.hide1 header .img-responsive').css({opacity: 0.0, visibility: "visible"}).delay(500).animate({opacity: 1.0}, 500);
+//      $('.hide1 header').css({opacity: 0.0, visibility: "visible"}).delay(500).animate({opacity: 1.0}, 500);  
+//      fadeInChildren('.hide1 header .intro-text',1000);
+//      $('.hide2').css({opacity: 0.0, visibility: "visible"}).delay(2300).animate({opacity: 1.0}, 500);
+//  });
+
+
 
 // jQuery for page scrolling feature - requires jQuery Easing plugin
 $(function() {
@@ -63,4 +64,3 @@ $('body').scrollspy({
 $('.navbar-collapse ul li a').click(function() {
     $('.navbar-toggle:visible').click();
 });
-

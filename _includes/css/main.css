@@ -19,12 +19,6 @@ body {
   scrollbar-width: none;  /* Firefox */
 }
 
-#loading {
-	height: 100vh;
-	width: 100%;
-	background: white url('https://loading.io/spinners/clock/lg.walking-clock-preloader.gif');
-} 
-
 .body-container{   
 	/*display: none;  */
 } 

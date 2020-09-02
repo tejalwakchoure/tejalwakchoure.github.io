@@ -15,7 +15,10 @@
 
     <!--Preload the preloader CSS-->
     <style>
-        preloader {
+        .no-js preloader { 
+            display: none;  
+        }
+        .js preloader {
             height: 100%;
             width: 100%;
             z-index: 4;

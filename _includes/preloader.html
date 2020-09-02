@@ -5,8 +5,8 @@
 	  <span class="dot"></span>
 	</div> -->
 	<div class="newloader">
-	  <div class="newloader-counter">
-	    <h1>0</h1>
+	  <div class="container newloader-counter">
+	    <h1 style="text-align: center;">0</h1>
 	  </div>
 	</div>
 
@@ -26,8 +26,13 @@
           count++;
           if(counter == 101){
             clearInterval(i);
-            // $('preloader').hide();
-            $('body-container').show();
+            
+            // Animate loader off screen
+			// $('preloader').hide();
+			$("preloader").animate({
+				top: -200
+			}, 1500);
+			$('body-container').show();
           }
         },200);
         });

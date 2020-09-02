@@ -31,7 +31,7 @@ $(document).ready(function() {
         fadeInChildren('.hide1 header .intro-text',1000);
         $('.hide2').css({opacity: 0.0, visibility: "visible"}).delay(2300).animate({opacity: 1.0}, 500);
      }
-    }, 50);
+    }, 20);
 });
 // setTimeout(function() {
 //  //After 2000 milliseconds, fade out the overlay. The animation duration is 500 ms.

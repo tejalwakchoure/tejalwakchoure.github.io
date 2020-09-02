@@ -1,16 +1,21 @@
 <style>
 	#preloader {
-	height: 100vh;
-	width: 100%;
-	position: relative;
-	z-index: 4;
-	background: #FFF5EE; /*no-repeat center url('https://media.giphy.com/media/ZBQhoZC0nqknSviPqT/giphy.gif')*/
-	color: #{{ site.color.construction }};
+		font-family:raleway; 
+		font-weight: 300; 
+		text-transform: lowercase; 
+		font-size: 1.5em;
+		height: 100vh;
+		width: 100%;
+		position: relative;
+		z-index: 4;
+		background: #FFF5EE; /*no-repeat center url('https://media.giphy.com/media/ZBQhoZC0nqknSviPqT/giphy.gif')*/
+		color: #{{ site.color.construction }};
 	}
 </style>
 
 <div id="preloader">
 	<div class="container" style="height: 100vh; width: 100%; display: flex; align-items: center;">
-		<h1 style="margin: auto;">0</h1>
+		<p id="brand" style="margin: auto;">tw</p>
+		<p id="count" style="margin: auto;">0</p>
 	</div>
 </div>

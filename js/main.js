@@ -19,7 +19,7 @@ document.getElementById('body-container').style.display = 'none';
      // document.getElementById('preloader').style.display = 'none';
      var counter = 0;
         var i = setInterval(function(){
-          $("#preloader .container h1").html("%" + counter);
+          $("#preloader .container #count").html("%" + counter);
           counter++;
           if(counter == 101){
             clearInterval(i);

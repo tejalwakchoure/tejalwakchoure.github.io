@@ -4,10 +4,19 @@
 	width: 100%;
 	position: relative;
 	z-index: 4;
-	background: white url('https://media.giphy.com/media/ZBQhoZC0nqknSviPqT/giphy.gif')
+	background: white no-repeat center url('https://media.giphy.com/media/ZBQhoZC0nqknSviPqT/giphy.gif')
 	} 
 </style>
 
 <div id="loading">
-	
 </div>
+
+<script type="text/javascript">
+	
+	var preloader_var = document.getElementById('loading');
+
+	function loadFunction() {
+		preloader_var.style.display = 'none';
+	}
+
+</script>

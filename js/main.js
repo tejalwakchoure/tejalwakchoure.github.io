@@ -18,7 +18,7 @@ $(document).ready(function() {
     var counter = 1;
     var i = setInterval(function(){
       $("#preloader .container #wrapper #count").html(counter);
-      counter = counter**1.5;
+      counter++;
       console.log(counter)
       if(counter >= 100){
         while(!window.loaded) {}
@@ -31,7 +31,7 @@ $(document).ready(function() {
         fadeInChildren('.hide1 header .intro-text',1000);
         $('.hide2').css({opacity: 0.0, visibility: "visible"}).delay(2300).animate({opacity: 1.0}, 500);
      }
-    }, 20);
+    }, 10);
 });
 // setTimeout(function() {
 //  //After 2000 milliseconds, fade out the overlay. The animation duration is 500 ms.

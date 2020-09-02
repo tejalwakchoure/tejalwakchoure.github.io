@@ -1,38 +1,4 @@
-RewriteEngine On
-
-# Add all the IP addresses of people that are helping in development
-# and need to be able to get past the maintenance mode.
-# One might call this the 'allow people list'
-
-# RewriteCond %{REMOTE_HOST} !^182\.70\.69\.187
-
-# Make sure the maintenance mode only applies to this domain
-# Example: I am hosting different sites on my server
-# which could be affected by these rules.
-
-RewriteCond %{HTTP_HOST} ^tejalwakchoure.github.io$ [OR]
-RewriteCond %{HTTP_HOST} ^www.tejalwakchoure.github.io$
-
-# This is the 'ignore file list'. It allows access to all
-# files that are needed to display the maintenance mode page.
-# Example: pages, css files, js files, images, anything.
-# IMPORTANT: If you don't do this properly, visitors will end up with
-# endless redirect loops in their browser.
-
-RewriteCond %{REQUEST_URI} !/development\.htm$
-RewriteCond %{REQUEST_URI} !/style\.css$
-RewriteCond %{REQUEST_URI} !/_config\.yml$
-RewriteCond %{REQUEST_URI} !/_includes/
-RewriteCond %{REQUEST_URI} !/_layouts/
-RewriteCond %{REQUEST_URI} !/assets\/img\/favicon/
-RewriteCond %{REQUEST_URI} !/css/
-RewriteCond %{REQUEST_URI} !/js/
-RewriteCond %{REQUEST_URI} !/mail/
-
-
-# Rewrite whatever request is coming in to the maintenance mode page
-# The R=302 tells browsers (and search engines) that this
-# redirect is only temporarily.
-# L stops any other rules below this from executing whenever somebody is redirected.
-
-RewriteRule \.*$ /development.htm [R=302,L]
+RewriteEngine on
+RewriteCond %{HTTP_HOST} ^tejalwakchoure\.github\.io$ 
+RewriteRule (.*) http://tejalwakchoure.github.io/$1 [R=301,L]
+RewriteRule ^$ development [L]

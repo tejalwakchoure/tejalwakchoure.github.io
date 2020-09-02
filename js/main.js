@@ -15,24 +15,23 @@
 
 
 document.getElementById('body-container').style.display = 'none';
-    $(document).ready(function() {
-     // document.getElementById('preloader').style.display = 'none';
-     var counter = 0;
-        var i = setInterval(function(){
-          $("#preloader .container #count").html("%" + counter);
-          counter++;
-          if(counter == 101){
-            clearInterval(i);
-            $('#preloader').fadeOut(500);
-            $('#body-container').fadeIn(1000);
+$(document).ready(function() {
+    var counter = 0;
+    var i = setInterval(function(){
+      $("#preloader .container .row #count").html(counter);
+      counter++;
+      if(counter == 101){
+        clearInterval(i);
+        $('#preloader').fadeOut(1000);
+        $('#body-container').fadeIn(1000);
 
-            // document.getElementById('body-container').style.display = 'block';
-            // document.getElementById('preloader').style.display = 'none';
+        // document.getElementById('body-container').style.display = 'block';
+        // document.getElementById('preloader').style.display = 'none';
 
-         }
-         // setTimeout('document.getElementById("preloader").style.display="none"', 5000);
-        }, 200);
-    });
+     }
+     // setTimeout('document.getElementById("preloader").style.display="none"', 5000);
+    }, 200);
+});
 
 
 

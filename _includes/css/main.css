@@ -155,7 +155,7 @@ header {
 }   
 
 header img {
-	transform: translate(8.67%,15%);
+	/*transform: translate(8.67%,15%);*/
 } 
 
 header .intro-text {
@@ -208,7 +208,8 @@ header .intro-text .skills {
 	}
 
 	header {
-		background: linear-gradient(to right, #{{ site.color.bkg_dark }} 0%, #{{ site.color.bkg }} 100%);
+		background-color: #{{ site.color.lightbkg }};
+		/*background: linear-gradient(to right, #{{ site.color.bkg_dark }} 0%, #{{ site.color.bkg }} 100%);*/
 	}
 }
 

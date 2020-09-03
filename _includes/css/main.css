@@ -170,12 +170,12 @@ header img {
 	/*display: block;
     margin-right: 0;
     margin-left: auto;*/
-	width: 90%;
+	width: 100%;
 }
 
 header .title {
 	display: block;
-    padding-top: 5vw;
+    padding-top: 3vw;
     padding-bottom: 5vw;
 }
 
@@ -213,7 +213,7 @@ header .intro-text .skills {
 	header .title {
 		display: flex;
 		padding-top: 0;
-    	padding-bottom: 0;
+    	padding-bottom: 2vw;
 	}
 	header .intro-text .name {  
 		/*font-size: 7vw !important;*/

@@ -154,8 +154,8 @@ header {
 	color: black;
 	min-height: 100vh !important;
 	overflow: auto;
-	display: table;
-	position: relative;
+	display: flex;
+	flex-direction: row;
 	margin-top: -21px;
 	background: #{{ site.color.lightbkg }};
 	/*background: linear-gradient(to right,#{{ site.color.header_left_dark }} 0%,#{{ site.color.header_left }} 73%,#{{ site.color.header_right }} 73%,#{{ site.color.header_right_dark }} 100%);*/
@@ -163,8 +163,8 @@ header {
 
 header img {
 	/*transform: translate(8.67%,15%);*/
-	width: 50vw;
-    transform: translateY(10vh) translateX(5vw);
+	width: 100%;
+    /*transform: translateY(10vh) translateX(5vw);*/
 } 
 
 header .intro-text {
@@ -209,9 +209,9 @@ header .intro-text .skills {
     	transform: translateY(10vh) translateX(5vw);*/
 	}
 
-	header .col-lg-7 {
+	/*header .col-lg-7 {
 		padding: 0;
-	}
+	}*/
 
 	header .intro-text {
 		padding: 15% 0 15% 0;

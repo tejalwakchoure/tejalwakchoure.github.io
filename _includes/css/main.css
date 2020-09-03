@@ -5,6 +5,7 @@ html,body
 	margin: 0px;    
 	padding: 0px;
 	overflow-x: hidden;
+	overflow-y: auto;
 	font-variant-numeric: lining-nums;
     font-feature-settings: "lnum";
     font-weight: 300;
@@ -96,7 +97,7 @@ hr{
 	max-width: 200px;   
 	border: 0;  
 	border-top: solid 3px;  
-	overflow: visible;  
+	/*overflow: visible;  */
 }   
 
 hr.light{   
@@ -153,7 +154,7 @@ header {
 	/*color: #d2d2d2;*/
 	color: black;
 	min-height: 100vh !important;
-	overflow: auto;
+	/*overflow: auto;*/
 	display: flex;
 	flex-direction: row;
 	margin-top: -21px;
@@ -374,7 +375,7 @@ section.success {
 	height: 100%;
 	margin-top: -15px;
 	text-align: center;
-	overflow: auto;
+	/*overflow: auto;*/
 	color: #e6e6e6;
 	font-size: 30px;
 	letter-spacing: 3px;

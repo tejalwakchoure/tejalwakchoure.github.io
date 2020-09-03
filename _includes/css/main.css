@@ -194,7 +194,7 @@ header .intro-text .skills {
 
 @media(min-width:768px) {
 	header {
-		flex-direction: row;
+		flex-direction: row !important;
 	}
 	header .intro-text .name {  
 		font-size: 4.25em;  

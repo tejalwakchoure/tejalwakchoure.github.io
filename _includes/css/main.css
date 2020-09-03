@@ -174,7 +174,7 @@ header img {
 }
 
 header .img_div, .title {
-	width: 100vw;
+	width: auto;
 }
 
 header .title {
@@ -217,7 +217,7 @@ header .intro-text .skills {
 	}
 
 	header .img_div, .title {
-		width: auto;
+		width: 50vw;
 	}
 
 	header .title {

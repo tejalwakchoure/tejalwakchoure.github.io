@@ -274,6 +274,8 @@ header .intro-text .skills {
 	padding-bottom:0 !important;    
 	height: 30px;   
 	color: black !important;
+	font-size: 1.25em;
+
 }  
 
 .navbar-default .navbar-toggle .icon-bar {

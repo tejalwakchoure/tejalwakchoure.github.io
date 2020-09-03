@@ -1,9 +1,9 @@
 
 // Get window status
-window.loaded = false;
-$(window).load(function() {
-    window.loaded = true;
-});
+// window.loaded = false;
+// $(window).load(function() {
+//     window.loaded = true;
+// });
 
 //Preloader and page fade in setup
 function fadeInChildren(parent, base_delay) {
@@ -20,7 +20,7 @@ $(document).ready(function() {
       $("#preloader .container #wrapper #count").html(counter);
       counter++;
       if(counter >= 101){
-        while(!window.loaded) {}
+        // while(!window.loaded) {}
         clearInterval(i);
         // Animate components on and off the screen on loading
         $('#preloader').slideUp(1000);

@@ -250,7 +250,7 @@ header .intro-text .skills {
 	text-transform: uppercase;
 	font-weight: 400;
 	font-family:Raleway,Montserrat,sans-serif;
-	background-color: red;
+	background-color: #{{ site.color.lightbkg }};
 }   
 
 .navbar a:focus {   

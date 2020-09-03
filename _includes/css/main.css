@@ -23,6 +23,11 @@ body {
   scrollbar-width: none;  /* Firefox */
 }
 
+.animate__animated.animate__fadeOutRight {
+  --animate-duration: 1000;
+}
+
+
 #preloader {
 	height: 100vh;
 	width: 100%;
@@ -145,7 +150,8 @@ section.under_construction .btn.active {
 header {    
 	width: 100%;    
 	padding: 5% 0;
-	color: #d2d2d2;    
+	/*color: #d2d2d2;*/
+	color: black;
 	min-height: 100vh !important;
 	overflow: auto;
 	display: table;
@@ -213,7 +219,7 @@ header .intro-text .skills {
 	}
 
 	header {
-		background: #{{ site.color.lightbkg }};
+		/*background: #{{ site.color.lightbkg }};*/
 		/*background: linear-gradient(to right, #{{ site.color.bkg_dark }} 0%, #{{ site.color.bkg }} 100%);*/
 	}
 }

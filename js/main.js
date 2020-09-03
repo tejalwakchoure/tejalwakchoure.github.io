@@ -23,7 +23,8 @@ $(document).ready(function() {
         // while(!window.loaded) {}
         clearInterval(i);
         // Animate components on and off the screen on loading
-        $('#preloader').slideUp(1000);
+        // $('#preloader').slideUp(1000);
+        $('#preloader').addClass("animate__animated", "animate__fadeOutRight");
         $('#body-container').fadeIn(1000);
         $('.hide1 header .img-responsive').css({opacity: 0.0, visibility: "visible"}).delay(500).animate({opacity: 1.0}, 500);
         $('.hide1 header').css({opacity: 0.0, visibility: "visible"}).delay(500).animate({opacity: 1.0}, 500);  

@@ -312,8 +312,16 @@ header .intro-text .skills {
 	padding-bottom:0 !important;    
 	height: 30px;   
 	color: #{{ site.color.lighttext }} !important;
-	/*color: black !important;*/
 	font-size: 1.5em;
+
+	/* from nav-toggle */
+	position: relative;
+    float: left;
+    margin-left: 15px;
+    padding: 9px 10px;
+    margin-top: 13px;
+    margin-bottom: 13px;
+}
 }  
 
 .navbar-default .navbar-toggle .icon-bar {

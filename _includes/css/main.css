@@ -173,6 +173,10 @@ header img {
     width: 100%;
 }
 
+header .img_div, .title {
+	width: 50vw;
+}
+
 header .title {
 	display: block;
 	padding-top: 3vw;
@@ -210,6 +214,10 @@ header .intro-text .skills {
 @media(min-width:768px) {
 	header {
 		flex-direction: row !important;
+	}
+
+	header .img_div, .title {
+		width: 100vw;
 	}
 
 	header .title {

@@ -164,12 +164,18 @@ header {
     flex-direction: column;
 	background: #{{ site.color.lightbkg }};
 	/*background: linear-gradient(to right,#{{ site.color.header_left_dark }} 0%,#{{ site.color.header_left }} 73%,#{{ site.color.header_right }} 73%,#{{ site.color.header_right_dark }} 100%);*/
-}   
+}
 
 header img {
 	/*transform: translate(8.67%,15%);*/
 	width: 90%;
     /*transform: translateY(10vh) translateX(5vw);*/
+}
+
+header .title {
+	display: block;
+    padding-top: 5vw;
+    padding-bottom: 5vw;
 }
 
 header .intro-text {

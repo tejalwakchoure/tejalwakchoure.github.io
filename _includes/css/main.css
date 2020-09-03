@@ -157,6 +157,8 @@ header {
 
 header img {
 	/*transform: translate(8.67%,15%);*/
+	width: 50vw;
+    transform: translateY(10vh) translateX(5vw);
 } 
 
 header .intro-text {
@@ -195,8 +197,10 @@ header .intro-text .skills {
 
 @media (max-width: 1200px) {
 	header img {
-		width: 100%;
-		transform: translateY(21px);
+		/*width: 100%;
+		transform: translateY(21px);*/
+		/*width: 50vw;
+    	transform: translateY(10vh) translateX(5vw);*/
 	}
 
 	header .col-lg-7 {

@@ -164,7 +164,7 @@ header {
 
 header img {
 	/*transform: translate(8.67%,15%);*/
-	/*width: 100%;*/
+	width: 100%;
     /*transform: translateY(10vh) translateX(5vw);*/
 } 
 
@@ -178,7 +178,7 @@ header .intro-text {
 }
 
 header .intro-text .name {
-	font-size: 10vw; 
+	font-size: 3em; 
 	font-weight: bolder;     
 	letter-spacing: 10px;
 	text-transform: uppercase;
@@ -186,7 +186,7 @@ header .intro-text .name {
 
 
 header .intro-text .skills {    
-	font-size: 4vw;  
+	font-size: 1.5em;  
 	/*font-weight: 400;*/
 	letter-spacing: 4px;
 	font-variant-caps: all-small-caps;
@@ -214,7 +214,8 @@ header .intro-text .skills {
 		padding: 0;
 	}*/
 
-	header .intro-text {
+	header .intro-text .name{
+		/*font-size: 3.35em;*/
 		/*padding: 15% 0 15% 0;
 		transform: translateY(0);*/
 	}

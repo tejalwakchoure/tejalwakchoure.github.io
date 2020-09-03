@@ -173,7 +173,7 @@ header .intro-text {
 	display: block; 
 	visibility: hidden;
 	text-align: right;
-	padding-right: 5vw; 
+	/*padding-right: 5vw; */
 	/*font-family: "lato", sans-serif;*/
 }
 

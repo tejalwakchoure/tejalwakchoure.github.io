@@ -217,7 +217,7 @@ header .intro-text .skills {
 	}
 
 	header .img_div, .title {
-		width: 50vw;
+		width: auto;
 	}
 
 	header .title {

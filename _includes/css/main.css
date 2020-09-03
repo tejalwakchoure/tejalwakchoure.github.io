@@ -265,7 +265,7 @@ header .intro-text .skills {
 	text-transform: uppercase;
 	font-weight: 400;
 	font-family:Raleway,Montserrat,sans-serif;
-	color: #{{ site.color.lighttext }} !important;
+	color: #{{ site.color.lighttext }};
 	background-color: #{{ site.color.lightbkg }};
 }   
 
@@ -289,6 +289,7 @@ header .intro-text .skills {
 	padding-top:5px !important; 
 	padding-bottom:0 !important;    
 	height: 30px;   
+	color: #{{ site.color.lighttext }} !important;
 	/*color: black !important;*/
 	font-size: 1.5em;
 }  

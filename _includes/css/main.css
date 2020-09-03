@@ -151,7 +151,8 @@ header {
 	display: table;
 	position: relative;
 	margin-top: -21px;
-	background: linear-gradient(to right,#{{ site.color.header_left_dark }} 0%,#{{ site.color.header_left }} 73%,#{{ site.color.header_right }} 73%,#{{ site.color.header_right_dark }} 100%);
+	background: #{{ site.color.lightbkg }};
+	/*background: linear-gradient(to right,#{{ site.color.header_left_dark }} 0%,#{{ site.color.header_left }} 73%,#{{ site.color.header_right }} 73%,#{{ site.color.header_right_dark }} 100%);*/
 }   
 
 header img {
@@ -208,7 +209,7 @@ header .intro-text .skills {
 	}
 
 	header {
-		background-color: #{{ site.color.lightbkg }};
+		background: #{{ site.color.lightbkg }};
 		/*background: linear-gradient(to right, #{{ site.color.bkg_dark }} 0%, #{{ site.color.bkg }} 100%);*/
 	}
 }

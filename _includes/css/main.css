@@ -198,13 +198,13 @@ header .intro-text .skills {
 	}   
 
 	header .intro-text .skills {    
-		font-size: 1.3em;  
+		font-size: 1.75em;  
 	}  
 } 
 
 @media (max-width: 1200px) {
 	header img {
-		/*width: 100%;*/
+		width: 100%;
 		/*transform: translateY(21px);*/
 		/*width: 50vw;
     	transform: translateY(10vh) translateX(5vw);*/
@@ -215,8 +215,8 @@ header .intro-text .skills {
 	}*/
 
 	header .intro-text {
-		padding: 15% 0 15% 0;
-		transform: translateY(0);
+		/*padding: 15% 0 15% 0;
+		transform: translateY(0);*/
 	}
 
 	header {

@@ -8,6 +8,8 @@ html,body
 	overflow-x: hidden;
 	font-variant-numeric: lining-nums;
     font-feature-settings: "lnum";
+    font-weight: 300;
+    font-family:Raleway,Montserrat,sans-serif;
 }   
 
 /* Hide scrollbar for Chrome, Safari and Opera */
@@ -157,17 +159,17 @@ header img {
 } 
 
 header .intro-text {
-	transform: translateY(40%);
+	/*transform: translateY(40%);*/
 	display: block; 
 	visibility: hidden;
-	text-align: left;
-	padding-left: 2%; 
-	font-family: "lato", sans-serif;
+	text-align: right;
+	padding-right: 2%; 
+	/*font-family: "lato", sans-serif;*/
 }
 
 header .intro-text .name {
 	font-size: 10vw; 
-	font-weight: 300;     
+	font-weight: bolder;     
 	letter-spacing: 10px;
 	text-transform: uppercase;
 }   
@@ -175,7 +177,7 @@ header .intro-text .name {
 
 header .intro-text .skills {    
 	font-size: 4vw;  
-	font-weight: 400;
+	/*font-weight: 400;*/
 	letter-spacing: 4px;
 	font-variant-caps: all-small-caps;
 }  

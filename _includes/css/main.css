@@ -226,7 +226,8 @@ header .intro-text .skills {
 		text-transform: lowercase; 
 		-webkit-transition: all .3s;    
 		-moz-transition: all .3s;   
-		transition: all .3s;    
+		transition: all .3s;
+		margin: 0!important;    
 
 	}
 
@@ -239,6 +240,7 @@ header .intro-text .skills {
 		letter-spacing: -0.08em;   
 		/*font-weight: 100 !important;*/
 		text-transform: lowercase;
+		margin: 0!important;
 	}  
 }   
 
@@ -272,7 +274,11 @@ header .intro-text .skills {
 	padding-bottom:0 !important;    
 	height: 30px;   
 	color: black !important;
-}   
+}  
+
+.navbar-default .navbar-toggle .icon-bar {
+    background-color: black;
+} 
 
 .navbar-nav>.active>a { 
 	background-color: #{{ site.color.secondary-dark }} !important;  

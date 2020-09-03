@@ -173,8 +173,14 @@ header img {
     width: 100%;
 }
 
-header .img_div, .title {
+header .img_div {
 	width: auto;
+	padding-right: 0;
+}
+
+header .title {
+	width: auto;
+	padding-left: 0;
 }
 
 header .title {
@@ -216,11 +222,14 @@ header .intro-text .skills {
 		flex-direction: row !important;
 	}
 
-	header .img_div, .title {
+	header .img_div {
 		width: 50vw;
+		padding-right: 2vw;
 	}
 
 	header .title {
+		width: 50vw;
+		padding-left: 2vw;
 		display: flex;
 		padding-top: 0;
 		padding-bottom: 2vw;

@@ -221,12 +221,14 @@ header .intro-text .skills {
 
 	.navbar-fixed-top .navbar-brand {   
 		font-size: 2em;
-		letter-spacing: -0.08em; 
+		letter-spacing: -0.08em;
+		font-weight: 100;
+		text-transform: lowercase; 
 		-webkit-transition: all .3s;    
 		-moz-transition: all .3s;   
 		transition: all .3s;    
 
-	}   
+	}
 
 	.navbar-fixed-top.navbar-shrink {   
 		padding: 10px 0;    
@@ -235,13 +237,18 @@ header .intro-text .skills {
 	.navbar-fixed-top.navbar-shrink .navbar-brand { 
 		font-size: 1.5em;
 		letter-spacing: -0.08em;   
-	}   
+		font-weight: 100;
+		text-transform: lowercase;
+	}  
 }   
 
 .navbar {   
 	z-index: 3;
-	text-transform: uppercase;  
-	font-family: lato,"Helvetica Neue",Helvetica,Arial,sans-serif;
+	color: black;
+	text-transform: uppercase;
+	font-weight: 300;
+	font-family:Raleway,Montserrat,sans-serif;
+	background-color: red;
 }   
 
 .navbar a:focus {   
@@ -261,9 +268,10 @@ header .intro-text .skills {
 	border: 0;  
 }   
 .navbar-nav > li > a, .navbar-brand {   
-	padding-top:5px !important; padding-bottom:0 !important;    
+	padding-top:5px !important; 
+	padding-bottom:0 !important;    
 	height: 30px;   
-	color: #e6e6e6;
+	color: black;
 }   
 
 .navbar-nav>.active>a { 

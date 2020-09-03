@@ -325,7 +325,7 @@ header .intro-text .skills {
 }  
 
 .navbar-default .navbar-toggle .icon-bar {
-    background-color: black;
+    background-color: #{{ site.color.lighttext }} !important;
 } 
 
 .navbar-default .navbar-toggle {

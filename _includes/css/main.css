@@ -261,10 +261,10 @@ header .intro-text .skills {
 
 .navbar {   
 	z-index: 3;
-	color: black;
 	text-transform: uppercase;
 	font-weight: 400;
 	font-family:Raleway,Montserrat,sans-serif;
+	color: #{{ site.color.lighttext }};
 	background-color: #{{ site.color.lightbkg }};
 }   
 

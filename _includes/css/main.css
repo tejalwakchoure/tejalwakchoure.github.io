@@ -172,7 +172,7 @@ header .intro-text {
 	display: block; 
 	visibility: hidden;
 	text-align: right;
-	padding-right: 2%; 
+	padding-right: 5vw; 
 	/*font-family: "lato", sans-serif;*/
 }
 
@@ -203,8 +203,8 @@ header .intro-text .skills {
 
 @media (max-width: 1200px) {
 	header img {
-		/*width: 100%;
-		transform: translateY(21px);*/
+		/*width: 100%;*/
+		/*transform: translateY(21px);*/
 		/*width: 50vw;
     	transform: translateY(10vh) translateX(5vw);*/
 	}
@@ -234,9 +234,9 @@ header .intro-text .skills {
 	}   
 
 	.navbar-fixed-top .navbar-brand {   
-		font-size: 2em;
+		font-size: 3em !important;
 		letter-spacing: -0.08em;
-		/*font-weight: 100 !important;*/
+		font-weight: 100 !important;
 		text-transform: lowercase; 
 		-webkit-transition: all .3s;    
 		-moz-transition: all .3s;   
@@ -250,9 +250,9 @@ header .intro-text .skills {
 	}   
 
 	.navbar-fixed-top.navbar-shrink .navbar-brand { 
-		font-size: 1.5em;
+		font-size: 2em !important;
 		letter-spacing: -0.08em;   
-		/*font-weight: 100 !important;*/
+		font-weight: 100 !important;
 		text-transform: lowercase;
 		margin: 0!important;
 	}  
@@ -288,8 +288,7 @@ header .intro-text .skills {
 	padding-bottom:0 !important;    
 	height: 30px;   
 	color: black !important;
-	font-size: 1.25em;
-
+	font-size: 1.5em;
 }  
 
 .navbar-default .navbar-toggle .icon-bar {

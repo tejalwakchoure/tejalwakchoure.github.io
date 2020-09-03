@@ -190,7 +190,8 @@ header .intro-text {
 
 header .intro-text .name {
 	/*font-size: 3em; */
-	font-size: 6.5vw;
+	
+	font-size: 8.5vw;
 	font-weight: 700;     
 	/*letter-spacing: 10px;*/
 	text-transform: uppercase;
@@ -200,7 +201,8 @@ header .intro-text .name {
 header .intro-text .skills {    
 	/*font-size: 1.5em;  */
 	font-weight: 400;
-	font-size: 2.5vw;
+	
+	font-size: 3.25vw;
 	/*letter-spacing: 4px;*/
 	/*font-variant-caps: all-small-caps;*/
 }  
@@ -216,10 +218,12 @@ header .intro-text .skills {
     	padding-bottom: 2vw;
 	}
 	header .intro-text .name {  
+		font-size: 6.5vw;
 		/*font-size: 7vw !important;*/
 	}   
 
 	header .intro-text .skills {    
+		font-size: 2.5vw;
 		/*font-size: 3vw !important;*/
 	}  
 } 

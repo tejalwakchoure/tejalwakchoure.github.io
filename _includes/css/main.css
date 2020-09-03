@@ -320,6 +320,15 @@ header .intro-text .skills {
     background-color: black;
 } 
 
+.navbar-default .navbar-toggle {
+	border: 0;
+}
+
+.navbar-default .navbar-toggle:hover, 
+.navbar-default .navbar-toggle:focus {
+	background-color: transparent;
+}
+
 .navbar-nav>.active>a { 
 	/*background-color: #{{ site.color.secondary-dark }} !important;  */
 }   

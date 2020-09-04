@@ -377,8 +377,8 @@ section h2 {
 }   
 
 section.success {   
-	color: #e6e6e6;    
-	background: linear-gradient(to right, #{{ site.color.bkg_dark }} 0%, #{{ site.color.bkg }} 100%);  
+	color: #{{ site.color.lighttext }};    
+	background: #{{ site.color.lightbkg }};
 }   
 
 @media(max-width:767px) {   

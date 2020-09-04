@@ -13,8 +13,8 @@ function fadeInChildren(parent, base_delay) {
     });
 }
 
-document.getElementById('body-container').style.display = 'none';
 $(document).ready(function() {
+    document.getElementById('body-container').style.display = 'none';
     var counter = 0;
     var i = setInterval(function(){
       $("#preloader .container #wrapper #count").html(counter);

@@ -123,7 +123,7 @@ hr.primary{
 	margin: 0 auto; 
 }
 
-section.under_construction {
+#under_construction {
 	width: 100%;
 	height: 100vh;
 	padding: 2% !important;
@@ -132,28 +132,28 @@ section.under_construction {
 	background: #{{ site.color.lightbkg }};
 }
 
-section.under_construction a {
+#under_construction a {
 	color: #{{ site.color.lighttext }} !important;
 	font-weight: bold;
 }
 
-section.under_construction a:hover,
-section.under_construction a:focus, 
-section.under_construction a:active,
-section.under_construction a.active {
+#under_construction a:hover,
+#under_construction a:focus, 
+#under_construction a:active,
+#under_construction a.active {
 	color: black !important;
 }
 
-section.under_construction .btn {
+#under_construction .btn {
 	width: 30%;
 	min-width: fit-content;
 	background-color: #{{ site.color.lighttext }};
 	border-color: #{{ site.color.lighttext }};
 }
-section.under_construction .btn:hover,
-section.under_construction .btn:focus,
-section.under_construction .btn:active,
-section.under_construction .btn.active {
+#under_construction .btn:hover,
+#under_construction .btn:focus,
+#under_construction .btn:active,
+#under_construction .btn.active {
 	background-color: black;
 	border-color: black;
 }

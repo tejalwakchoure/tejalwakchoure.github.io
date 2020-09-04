@@ -14,9 +14,7 @@ function fadeInChildren(parent, base_delay) {
 }
 
 $(document).ready(function() {
-    // document.getElementById('body-container').style.display = 'none';
-    $('#body-container').css({display: 'none'}); // portfolio onwards not part of body-container??
-
+    $('#body-container').css({display: 'none'});
     var counter = 0;
     var i = setInterval(function(){
       $("#preloader .container #wrapper #count").html(counter);

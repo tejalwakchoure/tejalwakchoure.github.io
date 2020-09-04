@@ -64,11 +64,15 @@ body {
 }
 
 p { 
-	font-size: 20px;    
+	font-size: 25px;/*20px;*/    
 }   
 
 p.small {   
 	font-size: 16px;    
+}
+
+p.large {   
+	font-size: 40px;    
 }   
 
 a,  
@@ -211,7 +215,7 @@ header .intro-text .name {
 header .intro-text .skills {    
 	/*font-size: 1.5em;  */
 	font-weight: 400;
-	
+	color: #{{ site.color.lighttext }};
 	font-size: 3.25vw;
 	/*letter-spacing: 4px;*/
 	/*font-variant-caps: all-small-caps;*/
@@ -390,6 +394,10 @@ section.success {
 		padding-top: 75px;  
 	}   
 }   
+
+#about p {
+	padding: 2vh 0;
+}
 
 #portfolio .portfolio-item {    
 	right: 0;   

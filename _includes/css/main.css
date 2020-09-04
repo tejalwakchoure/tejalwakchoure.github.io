@@ -28,12 +28,14 @@ body {
 	--animate-duration: 1000;
 }
 
-#about .img_div {
+section.about .img_div {
 	position: relative;
   	display: inline-block;
+/*  	height: 100%;
+    width: 100%;*/
 }
 
-#about .img_div::after {
+section.about .img_div::after {
   	content: '';
   	position: absolute;
   	left: 3rem;

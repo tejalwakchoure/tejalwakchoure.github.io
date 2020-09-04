@@ -39,11 +39,16 @@ body {
 	height: 15px;
 	width: 15px;
 	border-radius: 50%;
-	border: 1px solid #{{ site.color.lighttext }};
+	background: #{{ site.color.lighttext }};
+    margin: auto;
 }
 
 #line {
-	border: 5px solid #{{ site.color.lighttext }};
+	background: #{{ site.color.lighttext }};
+    width: 30%;
+    height: 5px;
+    margin: auto 0;
+}
 }
 
 #preloader {

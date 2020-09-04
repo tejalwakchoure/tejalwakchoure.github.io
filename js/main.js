@@ -15,7 +15,7 @@ function fadeInChildren(parent, base_delay) {
 
 document.getElementById('body-container').style.display = 'none';
 $(document).ready(function() {
-    var counter = 1;
+    var counter = 0;
     var i = setInterval(function(){
       $("#preloader .container #wrapper #count").html(counter);
       counter++;

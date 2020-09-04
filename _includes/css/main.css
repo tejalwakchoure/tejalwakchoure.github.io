@@ -28,24 +28,6 @@ body {
 	--animate-duration: 1000;
 }
 
-section.about .img_div {
-	position: relative;
-  	display: inline-block;
-/*  	height: 100%;
-    width: 100%;*/
-}
-
-section.about .img_div::after {
-  	content: '';
-  	position: absolute;
-  	left: 3rem;
-  	top: 3rem;
-  	border: 2px solid #8E394D;
-  	width: 100%;
-  	height: 100%;
-  	z-index: -1;
-}
-
 #rectangle {
 	height: 85%;
 	width: 100%;
@@ -420,6 +402,25 @@ section.success {
 
 #about p {
 	padding: 2vh 2vw;
+}
+
+
+#about .img_div {
+	position: relative;
+  	display: inline-block;
+/*  	height: 100%;
+    width: 100%;*/
+}
+
+#about .img_div::after {
+  	content: '';
+  	position: absolute;
+  	left: 3rem;
+  	top: 3rem;
+  	border: 2px solid #8E394D;
+  	width: 100%;
+  	height: 100%;
+  	z-index: -1;
 }
 
 #portfolio .portfolio-item {    

@@ -594,6 +594,7 @@ footer .footer-col {
 footer .footer-below {  
 	padding: 12px 0;    
 	color: #575757;
+	background-color: transparent;
     border-top: 1px solid #575757;
 	/*background-color: #{{ site.color.secondary-dark }}; */
 }   

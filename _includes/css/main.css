@@ -758,15 +758,26 @@ footer .footer-below {
   font-size: 2rem;
 }
 
-@for $i from 1 through 6 {
+.grid-item:nth-child(odd){
+  height: 400px;
+  line-height: 400px;
+}
+
+.grid-item:nth-child(even){
+  height: 500px;
+  line-height: 500px;
+}
+
+/*@for $i from 1 through 6 {
   .grid-item{$i} {
-    /*$h: (random(200) + 400) + px;*/
     $h: ((100*(i%2)) + 400) + px;
+
     height: $h;
     line-height: $h;
   }
-}
+}*/
 
+/*$h: (random(200) + 400) + px;*/
 
 /*.grid-item1 {
   height: 400px;

@@ -575,7 +575,7 @@ form .row:first-child .floating-label-form-group {
 }   
 
 footer {    
-	color: #e6e6e6;    
+	/*color: #e6e6e6;    */
 }   
 
 footer h3 { 
@@ -584,7 +584,7 @@ footer h3 {
 
 footer .footer-above {  
 	padding-top: 50px;  
-	background-color: #{{ site.color.secondary }};  
+	/*background-color: #{{ site.color.secondary }};  */
 }   
 
 footer .footer-col {    
@@ -593,7 +593,9 @@ footer .footer-col {
 
 footer .footer-below {  
 	padding: 12px 0;    
-	background-color: #{{ site.color.secondary-dark }}; 
+	color: #575757;
+    border-top: 1px solid #575757;
+	/*background-color: #{{ site.color.secondary-dark }}; */
 }   
 
 

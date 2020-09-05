@@ -10,23 +10,11 @@
         </div>
         <div class="grid">
               <div class="grid-col"></div>
-  <div class="grid-col"></div>
-  <div class="grid-col"></div>
+              <div class="grid-col"></div>
+              <div class="grid-col"></div>
     
             {% for post in site.posts %}
-            <!-- {% if {{ post.modal-id }} == "5" %}
-            <div class="col-md-4 portfolio-item">
-                <a href="#portfolioModal-{{ post.modal-id }}" class="portfolio-link" data-toggle="modal">
-                    <div class="caption">
-                        <div class="caption-content">
-                            {{ post.title }}
-                        </div>
-                    </div>
-                    <img src="assets/img/portfolio/{{ post.img }}" class="img-responsive" alt="{{ post.alt }}" style="/*display: block;*/ margin-left: auto; margin-right: auto; object-fit: cover; height: 300px; width: 300px; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
-                </a>
-            </div>
-            {% else %} -->
-            <div class="grid-item grid-item{{ post.modal-id }} portfolio-item">
+            <div class="grid-item grid-item#{{ post.modal-id }} portfolio-item">
                 <a href="#portfolioModal-{{ post.modal-id }}" class="portfolio-link" data-toggle="modal">
                     <div class="caption">
                         <div class="caption-content">
@@ -36,11 +24,11 @@
                     <img src="assets/img/portfolio/{{ post.img }}" class="img-responsive" alt="{{ post.alt }}" style="/*display: block;*/ margin-left: auto; margin-right: auto; object-fit: cover; height: 400px; width: 300px; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
                 </a>
             </div>
-            <!-- {% endif %} -->
             {% endfor %}
         </div>
     </div>
 </section>
+
 <script src="https://unpkg.com/colcade@0/colcade.js"></script>
 
 

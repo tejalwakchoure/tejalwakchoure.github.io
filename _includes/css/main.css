@@ -751,7 +751,7 @@ footer .footer-below {
 .grid-item {
   background: #EC985A;
   color: white;
-  margin: .5rem .5rem 1rem .5rem;
+  padding: 0.5em;
   text-align: center;
   font-family: system-ui;
   font-weight: 900;
@@ -760,7 +760,7 @@ footer .footer-below {
 
 @for $i from 1 through 6 {
   .grid-item{$i} {
-    $h: (random(300) + 400) + px;
+    $h: (random(200) + 400) + px;
     height: $h;
     line-height: $h;
   }

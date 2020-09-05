@@ -741,9 +741,8 @@ footer .footer-below {
 }
 
 .grid-item {
-  	$h: 450px;
-    height: $h;
-    line-height: $h;
+    height: 450px;
+    line-height: 450px;
 }
 
 /* 2 columns at medium size */
@@ -756,17 +755,15 @@ footer .footer-below {
    	.grid-col:nth-child(1) > .grid-item:nth-child(1),
 	.grid-col:nth-child(2) > .grid-item:nth-child(2),
 	.grid-col:nth-child(1) > .grid-item:nth-child(3) {
-	    $h: 400px;
-	    height: $h;
-	    line-height: $h;
+	    height: 400px;
+	    line-height: 400px;
 	}
 
 	.grid-col:nth-child(2) > .grid-item:nth-child(1),
 	.grid-col:nth-child(1) > .grid-item:nth-child(2),
 	.grid-col:nth-child(2) > .grid-item:nth-child(3) {
-	    $h: 500px;
-	    height: $h;
-	    line-height: $h;
+	    height: 500px;
+	    line-height: 500px;
 	}
 }
 
@@ -780,17 +777,15 @@ footer .footer-below {
   	.grid-col:nth-child(1) > .grid-item:nth-child(2),
 	.grid-col:nth-child(2) > .grid-item:nth-child(1),
 	.grid-col:nth-child(3) > .grid-item:nth-child(2) {
-	    $h: 400px;
-	    height: $h;
-	    line-height: $h;
+	    height: 400px;
+	    line-height: 400px;
 	}
 
 	.grid-col:nth-child(1) > .grid-item:nth-child(1),
 	.grid-col:nth-child(2) > .grid-item:nth-child(2),
 	.grid-col:nth-child(3) > .grid-item:nth-child(1) {
-	    $h: 500px;
-	    height: $h;
-	    line-height: $h;
+	    height: 500px;
+	    line-height: 500px;
 	}
 }
 

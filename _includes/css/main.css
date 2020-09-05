@@ -796,7 +796,7 @@ footer .footer-below {
 
 
 
-.portfolio-link {    
+#portfolio .container .row .grid .grid-item .portfolio-link {    
 	display: block; 
 	/*position: relative; */
 	/*margin: 0 auto; */
@@ -805,7 +805,7 @@ footer .footer-below {
 	width: 100%;
 }   
 
-.portfolio-link .caption {
+#portfolio .container .row .grid .grid-item .portfolio-link .caption {
 	position: absolute;
 	width: 100%;
 	height: 100%;
@@ -816,11 +816,11 @@ footer .footer-below {
 	transition: all ease .5s;
 }
 
-.portfolio-link .caption:hover {
+#portfolio .container .row .grid .grid-item .portfolio-link .caption:hover {
 	opacity: 1;
 }
 
-.portfolio-link .caption .caption-content {
+#portfolio .container .row .grid .grid-item .portfolio-link .caption .caption-content {
 	position: absolute;
 	top: 50%;
 	left: 10%;
@@ -835,12 +835,12 @@ footer .footer-below {
 	font-variant-caps: all-petite-caps;
 }
 
-.portfolio-link .caption .caption-content i {
+#portfolio .container .row .grid .grid-item .portfolio-link .caption .caption-content i {
 	margin-top: -12px;
 }
 
-.portfolio-link .caption .caption-content h3,
-.portfolio-link .caption .caption-content h4 {
+#portfolio .container .row .grid .grid-item .portfolio-link .caption .caption-content h3,
+#portfolio .container .row .grid .grid-item .portfolio-link .caption .caption-content h4 {
 	margin: 0;
 }
 

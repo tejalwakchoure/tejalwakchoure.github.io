@@ -17,10 +17,9 @@
                             {{ post.title }}
                         </div>
                     </div>
-                    <img src="assets/img/portfolio/{{ post.img }}" class="img-responsive" alt="{{ post.alt }}" style="display: block; margin-left: auto; margin-right: auto; object-fit: cover; /*height: 300px; width: 300px;*/
-                    box-shadow: 0 4px 8px 0 
-                    rgba(0, 0, 0, 0.2), 0 6px 20px 0 
-                    rgba(0, 0, 0, 0.19);">
+                    <img src="assets/img/portfolio/{{ post.img }}" class="img-responsive" alt="{{ post.alt }}" style="/*display: block;*/ margin-left: auto; margin-right: auto; object-fit: cover; height: 400px; width: 300px; box-shadow: 0 4px 8px 0 
+                        rgba(0, 0, 0, 0.2), 0 6px 20px 0 
+                        rgba(0, 0, 0, 0.19);">
                 </a>
             </div>
             {% endfor %}
@@ -28,7 +27,7 @@
     </div>
 </section>
 
- <script src="https://unpkg.com/magic-grid/dist/magic-grid.min.js"></script>
+<!--  <script src="https://unpkg.com/magic-grid/dist/magic-grid.min.js"></script>
 
 <script>
 
@@ -47,3 +46,4 @@
     console.log("magicGrid heard!")
     magicGrid.positionItems(); //This function is useful in cases where you have to manually trigger a repositioning; for instance, if a new element is added to the container.
 </script>
+ -->

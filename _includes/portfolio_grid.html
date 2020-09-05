@@ -27,3 +27,14 @@
         </div>
     </div>
 </section>
+
+<script>
+    let magicGrid = new MagicGrid({
+      container: "#portfolio .container", // Required. Can be a class, id, or an HTMLElement.
+      static: true, // Required for static content.
+      animate: true, // Optional.
+    });
+    magicGrid.listen(); // get data from api
+    console.log("magicGrid heard!")
+    // magicGrid.positionItems(); //This function is useful in cases where you have to manually trigger a repositioning; for instance, if a new element is added to the container.
+</script>

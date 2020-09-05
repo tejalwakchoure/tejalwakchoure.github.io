@@ -5,10 +5,6 @@
 //     window.loaded = true;
 // });
 
-$('.grid').colcade({
-  columns: '.grid-col',
-  items: '.grid-item'
-})
 
 //Preloader and page fade in setup
 function fadeInChildren(parent, base_delay) {

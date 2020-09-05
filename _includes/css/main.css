@@ -714,8 +714,6 @@ footer .footer-below {
 
 
 
-
-
 .grid {
   display: -webkit-box;
   display: flex;
@@ -727,27 +725,6 @@ footer .footer-below {
           flex-grow: 1;
 }
 
-/* 2 columns by default, hide columns 2 & 3 */
-.grid-col:nth-child(2), .grid-col:nth-child(3) {
-  display: none;
-}
-
-/* 3 columns at medium size */
-@media (min-width: 768px) {
-  .grid-col:nth-child(2) {
-    display: block;
-  }
-
-  /* show column 2 */
-}
-/* 4 columns at large size */
-@media (min-width: 1080px) {
-  .grid-col:nth-child(3) {
-    display: block;
-  }
-
-  /* show column 3 */
-}
 .grid-item {
   background: #EC985A;
   color: white;
@@ -758,53 +735,62 @@ footer .footer-below {
   font-size: 2rem;
 }
 
-.grid-item:nth-child(odd){
-  height: 400px;
-  line-height: 400px;
+/* 1 column by default, hide columns 2 & 3 */
+.grid-col:nth-child(2), .grid-col:nth-child(3) { 
+	display: none 
 }
 
-.grid-item:nth-child(even){
-  height: 500px;
-  line-height: 500px;
-}
-
-/*@for $i from 1 through 6 {
-  .grid-item{$i} {
-    $h: ((100*(i%2)) + 400) + px;
-
+.grid-item {
+  	$h: 450px;
     height: $h;
     line-height: $h;
-  }
-}*/
-
-/*$h: (random(200) + 400) + px;*/
-
-/*.grid-item1 {
-  height: 400px;
-  line-height: 400px;
 }
 
-.grid-item2 {
-  height: 400px;
-  line-height: 400px;
+/* 2 columns at medium size */
+@media ( min-width: 768px ) {
+	/* show column 2 */
+	.grid-col:nth-child(2) { 
+  		display: block; 
+	}
+  
+   	.grid-col:nth-child(1) > .grid-item:nth-child(1),
+	.grid-col:nth-child(2) > .grid-item:nth-child(2),
+	.grid-col:nth-child(1) > .grid-item:nth-child(3) {
+	    $h: 400px;
+	    height: $h;
+	    line-height: $h;
+	}
+
+	.grid-col:nth-child(2) > .grid-item:nth-child(1),
+	.grid-col:nth-child(1) > .grid-item:nth-child(2),
+	.grid-col:nth-child(2) > .grid-item:nth-child(3) {
+	    $h: 500px;
+	    height: $h;
+	    line-height: $h;
+	}
 }
 
-.grid-item3 {
-  height: 400px;
-  line-height: 400px;
+/* 3 columns at large size */
+@media ( min-width: 1080px ) {
+	/* show column 3 */
+  	.grid-col:nth-child(3) { 
+  		display: block; 
+  	} 
+  
+  	.grid-col:nth-child(1) > .grid-item:nth-child(2),
+	.grid-col:nth-child(2) > .grid-item:nth-child(1),
+	.grid-col:nth-child(3) > .grid-item:nth-child(2) {
+	    $h: 400px;
+	    height: $h;
+	    line-height: $h;
+	}
+
+	.grid-col:nth-child(1) > .grid-item:nth-child(1),
+	.grid-col:nth-child(2) > .grid-item:nth-child(2),
+	.grid-col:nth-child(3) > .grid-item:nth-child(1) {
+	    $h: 500px;
+	    height: $h;
+	    line-height: $h;
+	}
 }
 
-.grid-item4 {
-  height: 400px;
-  line-height: 400px;
-}
-
-.grid-item5 {
-  height: 500px;
-  line-height: 500px;
-}
-
-.grid-item6 {
-  height: 400px;
-  line-height: 400px;
-}*/

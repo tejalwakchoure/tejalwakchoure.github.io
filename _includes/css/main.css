@@ -707,3 +707,54 @@ footer .footer-below {
 @-ms-viewport{  
 	width: device-width;  
 }
+
+
+
+
+
+
+
+
+.grid {
+  display: flex;
+  padding: .5rem .5rem 0 .5rem;
+}
+
+.grid-col {
+  flex-grow: 1;
+}
+
+/* 2 columns by default, hide columns 2 & 3 */
+.grid-col:nth-child(2), .grid-col:nth-child(3) { display: none }
+
+/* 3 columns at medium size */
+@media ( min-width: 768px ) {
+  .grid-col:nth-child(2) { display: block; } /* show column 2 */
+}
+
+/* 4 columns at large size */
+@media ( min-width: 1080px ) {
+  .grid-col:nth-child(3) { display: block; } /* show column 3 */
+}
+
+.grid-item {
+  background: #EC985A;
+  color: white;
+  margin: .5rem .5rem 1rem .5rem;
+  text-align: center;
+  font-family: system-ui;
+  font-weight: 900;
+  font-size: 2rem;
+}
+
+@for $i from 1 through 6 {
+  .grid-item#{$i} {
+    $h: (random(300) + 200) + px;
+    height: $h;
+    line-height: $h;
+  }
+}
+
+
+
+

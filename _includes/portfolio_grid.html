@@ -8,7 +8,11 @@
                 <hr class="light">
             </div>
         </div>
-        <div class="row">
+        <div class="grid">
+              <div class="grid-col"></div>
+  <div class="grid-col"></div>
+  <div class="grid-col"></div>
+    
             {% for post in site.posts %}
             <!-- {% if {{ post.modal-id }} == "5" %}
             <div class="col-md-4 portfolio-item">
@@ -22,7 +26,7 @@
                 </a>
             </div>
             {% else %} -->
-            <div class="col-md-4 portfolio-item">
+            <div class="grid-item grid-item{{ post.modal-id }} portfolio-item">
                 <a href="#portfolioModal-{{ post.modal-id }}" class="portfolio-link" data-toggle="modal">
                     <div class="caption">
                         <div class="caption-content">
@@ -37,6 +41,8 @@
         </div>
     </div>
 </section>
+<script src="https://unpkg.com/colcade@0/colcade.js"></script>
+
 
 <!--  <script src="https://unpkg.com/magic-grid/dist/magic-grid.min.js"></script>
 

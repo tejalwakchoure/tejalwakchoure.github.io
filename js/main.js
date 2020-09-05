@@ -5,6 +5,12 @@
 //     window.loaded = true;
 // });
 
+var colc = new Colcade( '.grid', {
+  columns: '.grid-col',
+  items: '.grid-item'
+});
+
+
 //Preloader and page fade in setup
 function fadeInChildren(parent, base_delay) {
     var elems = $(parent).children();

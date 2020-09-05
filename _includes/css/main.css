@@ -758,6 +758,15 @@ footer .footer-below {
   font-size: 2rem;
 }
 
+/*@for $i from 1 through 6 {
+  .grid-item#{$i} {
+    $h: (random(300) + 400) + px;
+    height: $h;
+    line-height: $h;
+  }
+}*/
+
+
 .grid-item1 {
   height: 533px;
   line-height: 533px;

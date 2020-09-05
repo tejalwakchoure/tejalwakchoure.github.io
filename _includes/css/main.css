@@ -749,7 +749,7 @@ footer .footer-below {
 
 @for $i from 1 through 6 {
   .grid-item#{$i} {
-    $h: (random(300) + 200) + px;
+    $h: (random(300) + 400) + px; /*(random(300) + 200) + px;*/
     height: $h;
     line-height: $h;
   }

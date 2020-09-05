@@ -10,14 +10,14 @@
         </div>
         <div class="row">
             {% for post in site.posts %}
-            <div class="col-lg-4 portfolio-item">
+            <div class="col portfolio-item">
                 <a href="#portfolioModal-{{ post.modal-id }}" class="portfolio-link" data-toggle="modal">
                     <div class="caption">
                         <div class="caption-content">
                             {{ post.title }}
                         </div>
                     </div>
-                    <img src="assets/img/portfolio/{{ post.img }}" class="img-responsive" alt="{{ post.alt }}" style="display: block; margin-left: auto; margin-right: auto; object-fit: cover; height: 300px; width: 300px;
+                    <img src="assets/img/portfolio/{{ post.img }}" class="img-responsive" alt="{{ post.alt }}" style="display: block; margin-left: auto; margin-right: auto; object-fit: cover; /*height: 300px; width: 300px;*/
                     box-shadow: 0 4px 8px 0 
                     rgba(0, 0, 0, 0.2), 0 6px 20px 0 
                     rgba(0, 0, 0, 0.19);">
@@ -33,11 +33,17 @@
 <script>
 
     let magicGrid = new MagicGrid({
-      container: "#portfolio .container", // Required. Can be a class, id, or an HTMLElement.
-      static: true, // Required for static content.
-      animate: true, // Optional.
+      container: "#portfolio .container", // Required. Can be a class, id, or an HTMLElement
+  static: false, // Required for static content. Default: false.
+  items: 6, // Required for dynamic content. Initial number of items in the container.
+  gutter: 30, // Optional. Space between items. Default: 25(px).
+  maxColumns: 3, // Optional. Maximum number of columns. Default: Infinite.
+  useMin: true, // Optional. Prioritize shorter columns when positioning items? Default: false.
+  useTransform: true, // Optional. Position items using CSS transform? Default: True.
+  animate: true, // Optional. Animate item positioning? Default: false.
+  center: true, //Optional. Center the grid items? Default: true. 
     });
     magicGrid.listen(); // get data from api
     console.log("magicGrid heard!")
-    // magicGrid.positionItems(); //This function is useful in cases where you have to manually trigger a repositioning; for instance, if a new element is added to the container.
+    magicGrid.positionItems(); //This function is useful in cases where you have to manually trigger a repositioning; for instance, if a new element is added to the container.
 </script>

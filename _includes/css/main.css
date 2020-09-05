@@ -758,41 +758,41 @@ footer .footer-below {
   font-size: 2rem;
 }
 
-/*@for $i from 1 through 6 {
-  .grid-item#{$i} {
+@for $i from 1 through 6 {
+  .grid-item{$i} {
     $h: (random(300) + 400) + px;
     height: $h;
     line-height: $h;
   }
-}*/
+}
 
 
-.grid-item1 {
-  height: 533px;
-  line-height: 533px;
+/*.grid-item1 {
+  height: 400px;
+  line-height: 400px;
 }
 
 .grid-item2 {
-  height: 645px;
-  line-height: 645px;
+  height: 400px;
+  line-height: 400px;
 }
 
 .grid-item3 {
-  height: 450px;
-  line-height: 450px;
+  height: 400px;
+  line-height: 400px;
 }
 
 .grid-item4 {
-  height: 593px;
-  line-height: 593px;
+  height: 400px;
+  line-height: 400px;
 }
 
 .grid-item5 {
-  height: 695px;
-  line-height: 695px;
+  height: 500px;
+  line-height: 500px;
 }
 
 .grid-item6 {
-  height: 679px;
-  line-height: 679px;
-}
+  height: 400px;
+  line-height: 400px;
+}*/

@@ -791,6 +791,16 @@ footer .footer-below {
 
 
 
+#portfolioDetails {
+	height: 300px;
+	width: 300px;
+	background-color: pink;
+	/*display: none;*/
+}
+
+
+
+
 
 
 

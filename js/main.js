@@ -94,6 +94,11 @@ $(function() {
     $.each($('#portfolioDetails .container .row #myCarousel .carousel-inner .item'), function(item) {
       item.css('height', maxHeight + 'px');
     }
+
+    var y_shift = '';
+    y_shift =  ($('#portfolioDetails .container .row #myCarousel').outerHeight(true) - (maxHeight + 'px'))/2;
+    console.log($('#portfolioDetails .container .row #myCarousel').outerHeight(true), (maxHeight + 'px'), y_shift);
+    $('#portfolioDetails .container .row #myCarousel .carousel-inner .item').css('background-position-y') = y_shift;
 }
 
 

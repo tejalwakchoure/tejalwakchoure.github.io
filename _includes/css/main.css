@@ -797,8 +797,13 @@ footer .footer-below {
 	/*display: none;*/
 }
 
-#portfolioDetails .container .row {
+#portfolioDetails .container .row #myCarousel {
 	background-color: pink;
+}
+
+#portfolioDetails fa {
+	background: transparent; 
+	color: white;
 }
 
 #portfolioDetails .btn:hover,

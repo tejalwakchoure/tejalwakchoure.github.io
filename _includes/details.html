@@ -11,15 +11,12 @@
 			<!-- Wrapper for slides -->
 			<div class="carousel-inner">
 				{% for post in site.posts %}
-				{%if {{ post.modal-id }} == '6' %}
 				<div class="item active">
 					<div id="slide-{{ post.modal-id }}"><img src="assets/img/portfolio/{{ post.img }}" class="img-responsive" alt="{{ post.alt }}" style=" height: 100%; width: 100%; object-fit: cover;"></div>
 				</div>
-				{% else %}
-				<div class="item">
+				<!-- <div class="item">
 					<div id="slide-{{ post.modal-id }}"><img src="assets/img/portfolio/{{ post.img }}" class="img-responsive" alt="{{ post.alt }}" style=" height: 100%; width: 100%; object-fit: cover;"></div>
-				</div>
-				{% endif %}
+				</div> -->
 				{% endfor %}
 			</div>
 

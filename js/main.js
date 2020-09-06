@@ -51,7 +51,7 @@ $(document).ready(function() {
 //  });
 
 // onclick event for portfolio details
-toggleDetails() {
+function toggleDetails() {
     $('#portfolioDetails').toggle();
 }
 

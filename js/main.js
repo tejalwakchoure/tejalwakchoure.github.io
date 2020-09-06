@@ -78,8 +78,24 @@ $(function() {
 
 
 $(function() {
-    $('#portfolioDetails .container #myCarousel .carousel-inner #slide-6').addClass('active');
+    $('#portfolioDetails .container .row #myCarousel .carousel-inner #slide-6').addClass('active');
 });
+
+$(function() {
+    var maxHeight = '';
+    var heights = [];
+
+    $.each($('#portfolioDetails .container .row #myCarousel .carousel-inner .item'), function(item){
+      heights.push(item.outerHeight(true));
+    }
+
+    maxHeight = Math.max.apply(Math, heights);
+
+    $.each($('#portfolioDetails .container .row #myCarousel .carousel-inner .item'), function(item) {
+      item.css('height', maxHeight + 'px');
+    }
+}
+
 
 // Highlight the top nav as scrolling occurs
 $('body').scrollspy({

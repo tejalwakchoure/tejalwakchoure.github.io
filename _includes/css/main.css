@@ -793,11 +793,11 @@ footer .footer-below {
 #portfolioDetails {
 	height: 60vh;
     width: 100%;
-	background-color: pink;
+	/*background-color: pink;*/
 	/*display: none;*/
 }
 
-#portfolioDetails .container {
+#portfolioDetails .container .row {
 	background-color: pink;
 }
 
@@ -808,6 +808,8 @@ footer .footer-below {
 	color: #{{ site.color.lighttext }};
 	outline: 0;
 }
+
+
 
 
 .slider {

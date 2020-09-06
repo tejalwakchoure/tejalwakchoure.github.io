@@ -2,22 +2,82 @@
 	<div class="container">
 		<div class="row">
             <div class="col-lg-12 text-center">
-				<div class="slider">
+				<div class="slider hide-scroll">
 				  	<div class="slides">
 					  	{% for post in site.posts %}
 							<div id="slide-{{ post.modal-id }}">{{ post.modal-id }}</div>
 						{% endfor %}
 					</div>
-					<div class="hide-scroll">
-						{% for post in site.posts %}
-							<a href="#slide-{{ post.modal-id }}"></a>
-						{% endfor %}
-					</div>
+					{% for post in site.posts %}
+						<a href="#slide-{{ post.modal-id }}"></a>
+					{% endfor %}
 				</div>
 			</div>
 		</div>
 	</div>
 </section>
+
+
+
+
+<!-- 
+ {% for post in site.posts %}
+    <div class="portfolio-modal modal fade" id="portfolioModal-{{ post.modal-id }}" tabindex="-1" role="dialog" aria-hidden="true" style="text-align: center !important; margin-top: 2% !important;
+    margin-bottom: 2% !important;
+    margin-left: 5% !important;
+    margin-right: 5% !important;">
+        <div class="modal-content" style="border-radius: 20px !important;">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-2"></div>
+                    <div class="col">
+                        <div class="modal-body">
+                            <h2>{{ post.title }}</h2>
+                            <hr class="primary">
+                            {% if post.description %}
+                                <p>{{ post.description }}</p>
+                            {% endif %}
+                            <ul class="list-inline item-details">
+                                {% if post.client %}
+                                    <li>Client:
+                                        <strong><a href="http://startbootstrap.com">{{ post.client }}</a>
+                                        </strong>
+                                    </li>
+                                {% endif %}
+                                {% if post.project-date %}
+                                    <li>Date:
+                                        <strong>{{ post.project-date }}
+                                        </strong>
+                                    </li>
+                                {% endif %}
+                                {% if post.category %}
+                                    <li>Area:
+                                        <strong>{{ post.category }}
+                                        </strong>
+                                    </li>
+                                {% endif %}
+                              {% if post.github-link %}
+                               <li>Code:
+                               <strong><a 
+                                href={{ post.github-link }}
+                                style="text-decoration: underline; color: #000" 
+                                target="_blank">GitHub Repo</a>
+                                          </strong>
+                                </li>
+                                {% endif %}
+                            </ul>
+                            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+                        </div>
+                    </div>
+                    <div class="col-sm-2"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endfor %}
+ -->
+
+
 
 
 <!-- 		{% for post in site.posts %}

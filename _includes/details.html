@@ -5,5 +5,14 @@
 			<h2>Details for project #{{ post.modal-id }}</h2>
 		</div>
 		{% endfor %}
+
+		<div class="dotstyle dotstyle-fillup">
+			<ul>
+				<li class="current"><a href="#">Home</a></li>
+				{% for post in site.posts %}
+					<li><a href="portfolio-item-{{ post.modal-id }}">{{ post.modal-id }}</a></li>
+				{% endfor %}
+			</ul>
+		</div>
 	</div>
 </section>

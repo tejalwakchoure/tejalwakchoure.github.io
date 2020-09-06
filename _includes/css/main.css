@@ -800,6 +800,8 @@ footer .footer-below {
 .slider {
   /*height: 100vh;*/
   /*padding-top: 40vh;*/
+  height: 100%;
+  width: 100%;
   text-align: center;
   overflow: hidden;
   padding-left: 5vw;

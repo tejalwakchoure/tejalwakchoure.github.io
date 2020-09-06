@@ -54,7 +54,7 @@ $(document).ready(function() {
 function toggleDetails() {
     $('#portfolioDetails').toggle();
     if ($('#portfolioDetails').css('display') == 'none') {
-       $(this).href = javascript:void(0);
+       $(this).href = 'javascript:void(0)';
     }
 }
 

@@ -6,12 +6,15 @@
 				<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
 				<li data-target="#myCarousel" data-slide-to="1"></li>
 				<li data-target="#myCarousel" data-slide-to="2"></li>
+				<li data-target="#myCarousel" data-slide-to="3"></li>
+				<li data-target="#myCarousel" data-slide-to="4"></li>
+				<li data-target="#myCarousel" data-slide-to="5"></li>
 			</ul>
 
 			<!-- Wrapper for slides -->
 			<div class="carousel-inner">
 				{% for post in site.posts %}
-				<div class="item active">
+				<div class="item" style="height: 400px; object-fit: cover;">
 					<div id="slide-{{ post.modal-id }}"><img src="assets/img/portfolio/{{ post.img }}" class="img-responsive" alt="{{ post.alt }}" style=" height: 100%; width: 100%; object-fit: cover;"></div>
 				</div>
 				<!-- <div class="item">

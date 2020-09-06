@@ -1,16 +1,23 @@
 <section id="portfolioDetails">
 	<div class="container">
-		<div class="slider">
-		  	<div class="slides">
-			  	{% for post in site.posts %}
-					<div id="slide-{{ post.modal-id }}">{{ post.modal-id }}</div>
-				{% endfor %}
+		<div class="row">
+            <div class="col-lg-12 text-center">
+				<div class="slider">
+				  	<div class="slides">
+					  	{% for post in site.posts %}
+							<div id="slide-{{ post.modal-id }}">{{ post.modal-id }}</div>
+						{% endfor %}
+					</div>
+					{% for post in site.posts %}
+						<div class="hidden">
+							<a href="#slide-{{ post.modal-id }}"></a>
+						</div>
+					{% endfor %}
+				</div>
 			</div>
-			{% for post in site.posts %}
-				<a href="#slide-{{ post.modal-id }}"></a>
-			{% endfor %}
 		</div>
-		
+	</div>
+</section>
 
 
 <!-- 		{% for post in site.posts %}
@@ -27,5 +34,3 @@
 				{% endfor %}
 			</ul>
 		</div> -->
-	</div>
-</section>

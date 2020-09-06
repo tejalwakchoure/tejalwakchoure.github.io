@@ -31,6 +31,25 @@
             </div>
         </div>
     </div>
+    <div id="portfolioDetails">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <div class="slider hide-scroll">
+                    <div class="slides">
+                        {% for post in site.posts %}
+                            <div id="slide-{{ post.modal-id }}">{{ post.modal-id }}</div>
+                        {% endfor %}
+                    </div>
+                    {% for post in site.posts %}
+                        <a href="#slide-{{ post.modal-id }}"></a>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
 </section>
 
 

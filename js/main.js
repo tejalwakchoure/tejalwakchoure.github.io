@@ -50,6 +50,10 @@ $(document).ready(function() {
 //      $('.hide2').css({opacity: 0.0, visibility: "visible"}).delay(2300).animate({opacity: 1.0}, 500);
 //  });
 
+// onclick event for portfolio details
+toggleDetails() {
+    $('#portfolioDetails').toggle();
+}
 
 
 // jQuery for page scrolling feature - requires jQuery Easing plugin

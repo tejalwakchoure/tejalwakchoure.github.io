@@ -514,7 +514,7 @@ section.success {
 .btn-outline:active,    
 .btn-outline.active {   
 	border: solid 2px #fff; 
-	color: #{{ site.color.primary }};   
+	color: #{{ site.color.lighttext }};   
 	background: #e6e6e6;   
 }   
 
@@ -796,6 +796,19 @@ footer .footer-below {
 	background-color: pink;
 	/*display: none;*/
 }
+
+#portfolioDetails .container {
+	background-color: pink;
+}
+
+#portfolioDetails .btn:hover,
+#portfolioDetails .btn:focus,
+#portfolioDetails .btn:active,
+#portfolioDetails .btn.active {
+	color: #{{ site.color.lighttext }};
+	outline: 0;
+}
+
 
 .slider {
   /*height: 100vh;*/

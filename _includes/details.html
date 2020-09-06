@@ -1,5 +1,10 @@
 <section id="portfolioDetails">
-	<div class="container">
+	<div class="row">
+            <div class="col-lg-12 text-center">
+                <hr class="light">
+            </div>
+        </div>
+	<div class="container" style="padding-left: 0">
 		<div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="false">
 			<!-- Indicators -->
 			<ul class="carousel-indicators">
@@ -12,53 +17,53 @@
 			</ul>
 
 			<!-- Wrapper for slides -->
-			<div class="carousel-inner">
+			<div class="carousel-inner" style="padding-bottom: 100px;">
 				{% for post in site.posts %}
-				<div id="slide-{{ post.modal-id }}" class="item" style="height: 400px; object-fit: cover;">
+				<div id="slide-{{ post.modal-id }}" class="item" style="height: fit-content; object-fit: cover; background: url('assets/img/portfolio/{{ post.img }}') no-repeat; background-size: 200px 100%;">
 					
-					<div class="container" style="text-align: center; padding: 5%;">
+					<div class="container" style="text-align: center;">
 						<div class="row">
-							<div class="col-md-4">
-								<img src="assets/img/portfolio/{{ post.img }}" class="img-responsive" alt="{{ post.alt }}" style=" height: 100%; width: 100%; object-fit: cover;">
-							</div>
-							<div class="col-md-8">>
-								<h2>{{ post.title }}</h2>
-								<hr class="primary">
-								{% if post.description %}
-								<p>{{ post.description }}</p>
+							<button type="button" class="btn btn-light" onclick=""
+							style="border-radius: 50%; float:right; background: transparent; color: white; padding-top: 20px; padding-bottom: 0;" >
+								<i class="fa fa-chevron-up"></i>
+						</button>
+					</div>
+					<div class="row" style="display: flex; flex-direction: row;">
+						<img src="assets/img/portfolio/{{ post.img }}" class="img-responsive" alt="{{ post.alt }}" style=" height: 300px; width: 300px; object-fit: cover; margin: auto 0 auto 100px;">
+						<div style="padding-left: 3%; margin: auto;">
+							<h2>{{ post.title }}</h2>
+							<hr class="primary">
+							{% if post.description %}
+							<p>{{ post.description }}</p>
+							{% endif %}
+							<ul class="list-inline item-details">
+								{% if post.project-date %}
+								<li>Date:
+									<strong>{{ post.project-date }}
+									</strong>
+								</li>
 								{% endif %}
-								<ul class="list-inline item-details">
-									{% if post.project-date %}
-									<li>Date:
-										<strong>{{ post.project-date }}
-										</strong>
-									</li>
-									{% endif %}
-									{% if post.category %}
-									<li>Area:
-										<strong>{{ post.category }}
-										</strong>
-									</li>
-									{% endif %}
-									{% if post.github-link %}
-									<li>Code:
-										<strong><a 
-											href={{ post.github-link }}
-											style="text-decoration: underline; color: #000" 
-											target="_blank">GitHub Repo</a>
-										</strong>
-									</li>
-									{% endif %}
-								</ul>
-								<button type="button" class="btn btn-default" onclick=""><i class="fa fa-times"></i>Back</button>
-							</div>
+								{% if post.category %}
+								<li>Area:
+									<strong>{{ post.category }}
+									</strong>
+								</li>
+								{% endif %}
+								{% if post.github-link %}
+								<li>Code:
+									<strong><a 
+										href={{ post.github-link }}
+										style="text-decoration: underline; color: #000" 
+										target="_blank">GitHub Repo</a>
+									</strong>
+								</li>
+								{% endif %}
+							</ul>
 						</div>
 					</div>
 				</div>
-				<!-- <div class="item">
-					<div id="slide-{{ post.modal-id }}"><img src="assets/img/portfolio/{{ post.img }}" class="img-responsive" alt="{{ post.alt }}" style=" height: 100%; width: 100%; object-fit: cover;"></div>
-				</div> -->
-				{% endfor %}
+			</div>
+			{% endfor %}
 			</div>
 
 			<!-- Left and right controls -->
@@ -72,6 +77,11 @@
 			</a>
 		</div>
 	</div>
+	<div class="row">
+            <div class="col-lg-12 text-center">
+                <hr class="light">
+            </div>
+        </div>
 </section>
 
 

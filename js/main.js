@@ -99,7 +99,7 @@ $(function() {
     y_shift =  ($('#portfolioDetails .container .row #myCarousel').outerHeight(true) - (maxHeight + 'px'))/2;
     console.log($('#portfolioDetails .container .row #myCarousel').outerHeight(true), (maxHeight + 'px'), y_shift);
     $('#portfolioDetails .container .row #myCarousel .carousel-inner .item').css('background-position-y') = y_shift;
-}
+});
 
 
 // Highlight the top nav as scrolling occurs

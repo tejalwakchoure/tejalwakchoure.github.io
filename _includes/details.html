@@ -8,11 +8,11 @@
 							<div id="slide-{{ post.modal-id }}">{{ post.modal-id }}</div>
 						{% endfor %}
 					</div>
-					{% for post in site.posts %}
-						<div class="page-scroll">
+					<div class="hide-scroll">
+						{% for post in site.posts %}
 							<a href="#slide-{{ post.modal-id }}"></a>
-						</div>
-					{% endfor %}
+						{% endfor %}
+					</div>
 				</div>
 			</div>
 		</div>

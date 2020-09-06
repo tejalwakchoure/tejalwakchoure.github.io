@@ -70,6 +70,12 @@ $(function() {
     });
 });
 
+$(function() {
+    $('.hide-scroll a').bind('click', function(event) {
+        event.preventDefault();
+    });
+});
+
 // Highlight the top nav as scrolling occurs
 $('body').scrollspy({
     target: '.navbar-fixed-top'

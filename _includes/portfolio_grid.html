@@ -16,7 +16,7 @@
                 {% for post in site.posts %}
                     <div class="grid-item grid-item{{ post.modal-id }}">
                         <div class="page-scroll" style="height: 100%; width: 100%;">
-                        <a href="#portfolioDetails-{{ post.modal-id }}" style="height: 100%; width: 100%;" onclick="toggleDetails()">
+                        <a id="portfolio-link" href="#portfolioDetails-{{ post.modal-id }}" style="height: 100%; width: 100%;" onclick="toggleDetails()">
                             <!--    
                             <div class="caption">
                                 <div class="caption-content">

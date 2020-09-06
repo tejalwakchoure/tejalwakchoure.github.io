@@ -1,5 +1,9 @@
 <section id="portfolioDetails">
 	<div class="container">
-		<p>test</p>
+		{% for post in site.posts %}
+		<div id="portfolioDetails-{{ post.modal-id }}">
+			<h2>Details for project #{{ post.modal-id }}</h2>
+		</div>
+		{% endfor %}
 	</div>
 </section>

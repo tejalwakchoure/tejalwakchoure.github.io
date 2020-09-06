@@ -16,8 +16,8 @@
                 {% for post in site.posts %}
                     <div class="grid-item grid-item{{ post.modal-id }}">
                         <div class="page-scroll">
-                        <a href="#portfolioDetails" onclick="toggleDetails()">
-                            <!--    -{{ post.modal-id }}
+                        <a href="#portfolioDetails-{{ post.modal-id }}" onclick="toggleDetails()">
+                            <!--    
                             <div class="caption">
                                 <div class="caption-content">
                                     {{ post.title }}

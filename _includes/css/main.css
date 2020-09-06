@@ -791,16 +791,15 @@ footer .footer-below {
 
 
 #portfolioDetails {
-	/*height: 300px;*/
-	/*width: 300px;*/
+	height: 60vh;
+    width: 100%;
 	background-color: pink;
 	/*display: none;*/
 }
 
 .slider {
-  height: 100vh;
-  padding-top: 40vh;
-  width: 100vw;
+  /*height: 100vh;*/
+  /*padding-top: 40vh;*/
   text-align: center;
   overflow: hidden;
   padding-left: 5vw;
@@ -810,6 +809,8 @@ footer .footer-below {
 .slides {
   display: flex;
   overflow-x: auto;
+  height: 100%;
+  width: 100%;
   scroll-snap-type: x mandatory;
   scroll-behavior: smooth;
   -webkit-overflow-scrolling: touch;

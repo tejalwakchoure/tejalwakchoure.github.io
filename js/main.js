@@ -76,6 +76,11 @@ $(function() {
     });
 });
 
+
+$(function() {
+    $('#portfolioDetails .container #myCarousel .carousel-inner #slide-6').addClass('active');
+});
+
 // Highlight the top nav as scrolling occurs
 $('body').scrollspy({
     target: '.navbar-fixed-top'

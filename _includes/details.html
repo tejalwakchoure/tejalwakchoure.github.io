@@ -14,8 +14,8 @@
 			<!-- Wrapper for slides -->
 			<div class="carousel-inner">
 				{% for post in site.posts %}
-				<div class="item" style="height: 400px; object-fit: cover;">
-					<div id="slide-{{ post.modal-id }}"><img src="assets/img/portfolio/{{ post.img }}" class="img-responsive" alt="{{ post.alt }}" style=" height: 100%; width: 100%; object-fit: cover;"></div>
+				<div id="slide-{{ post.modal-id }}" class="item" style="height: 400px; object-fit: cover;">
+					<img src="assets/img/portfolio/{{ post.img }}" class="img-responsive" alt="{{ post.alt }}" style=" height: 100%; width: 100%; object-fit: cover;">
 				</div>
 				<!-- <div class="item">
 					<div id="slide-{{ post.modal-id }}"><img src="assets/img/portfolio/{{ post.img }}" class="img-responsive" alt="{{ post.alt }}" style=" height: 100%; width: 100%; object-fit: cover;"></div>

@@ -53,7 +53,7 @@ $(document).ready(function() {
 // onclick event for portfolio details
 function toggleDetails() {
     $('#portfolioDetails').toggle();
-    if ($('#portfolioDetails').style.display == 'none') {
+    if ($('#portfolioDetails').css('display') == 'none') {
         return false;
     }
 }

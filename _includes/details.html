@@ -1,6 +1,6 @@
 <section id="portfolioDetails">
 	<div class="container">
-		<div id="myCarousel" class="carousel slide" data-ride="carousel">
+		<div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="false">
 			<!-- Indicators -->
 			<ul class="carousel-indicators">
 				<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
@@ -15,7 +15,45 @@
 			<div class="carousel-inner">
 				{% for post in site.posts %}
 				<div id="slide-{{ post.modal-id }}" class="item" style="height: 400px; object-fit: cover;">
-					<img src="assets/img/portfolio/{{ post.img }}" class="img-responsive" alt="{{ post.alt }}" style=" height: 100%; width: 100%; object-fit: cover;">
+					
+					<div class="container" style="text-align: center; padding: 5%;">
+						<div class="row">
+							<div class="col-md-4">
+								<img src="assets/img/portfolio/{{ post.img }}" class="img-responsive" alt="{{ post.alt }}" style=" height: 100%; width: 100%; object-fit: cover;">
+							</div>
+							<div class="col-md-8">>
+								<h2>{{ post.title }}</h2>
+								<hr class="primary">
+								{% if post.description %}
+								<p>{{ post.description }}</p>
+								{% endif %}
+								<ul class="list-inline item-details">
+									{% if post.project-date %}
+									<li>Date:
+										<strong>{{ post.project-date }}
+										</strong>
+									</li>
+									{% endif %}
+									{% if post.category %}
+									<li>Area:
+										<strong>{{ post.category }}
+										</strong>
+									</li>
+									{% endif %}
+									{% if post.github-link %}
+									<li>Code:
+										<strong><a 
+											href={{ post.github-link }}
+											style="text-decoration: underline; color: #000" 
+											target="_blank">GitHub Repo</a>
+										</strong>
+									</li>
+									{% endif %}
+								</ul>
+								<button type="button" class="btn btn-default" onclick=""><i class="fa fa-times"></i>Back</button>
+							</div>
+						</div>
+					</div>
 				</div>
 				<!-- <div class="item">
 					<div id="slide-{{ post.modal-id }}"><img src="assets/img/portfolio/{{ post.img }}" class="img-responsive" alt="{{ post.alt }}" style=" height: 100%; width: 100%; object-fit: cover;"></div>
@@ -53,67 +91,6 @@
 				</div>
 			</div>
 		</div> -->
-
-
-
-
-
-<!-- 
- {% for post in site.posts %}
-    <div class="portfolio-modal modal fade" id="portfolioModal-{{ post.modal-id }}" tabindex="-1" role="dialog" aria-hidden="true" style="text-align: center !important; margin-top: 2% !important;
-    margin-bottom: 2% !important;
-    margin-left: 5% !important;
-    margin-right: 5% !important;">
-        <div class="modal-content" style="border-radius: 20px !important;">
-            <div class="container">
-                <div class="row">
-                    <div class="col-sm-2"></div>
-                    <div class="col">
-                        <div class="modal-body">
-                            <h2>{{ post.title }}</h2>
-                            <hr class="primary">
-                            {% if post.description %}
-                                <p>{{ post.description }}</p>
-                            {% endif %}
-                            <ul class="list-inline item-details">
-                                {% if post.client %}
-                                    <li>Client:
-                                        <strong><a href="http://startbootstrap.com">{{ post.client }}</a>
-                                        </strong>
-                                    </li>
-                                {% endif %}
-                                {% if post.project-date %}
-                                    <li>Date:
-                                        <strong>{{ post.project-date }}
-                                        </strong>
-                                    </li>
-                                {% endif %}
-                                {% if post.category %}
-                                    <li>Area:
-                                        <strong>{{ post.category }}
-                                        </strong>
-                                    </li>
-                                {% endif %}
-                              {% if post.github-link %}
-                               <li>Code:
-                               <strong><a 
-                                href={{ post.github-link }}
-                                style="text-decoration: underline; color: #000" 
-                                target="_blank">GitHub Repo</a>
-                                          </strong>
-                                </li>
-                                {% endif %}
-                            </ul>
-                            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
-                        </div>
-                    </div>
-                    <div class="col-sm-2"></div>
-                </div>
-            </div>
-        </div>
-    </div>
-{% endfor %}
--->
 
 
 

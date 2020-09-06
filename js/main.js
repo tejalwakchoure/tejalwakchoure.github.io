@@ -87,13 +87,13 @@ $(function() {
 
     $.each($('#portfolioDetails .container .row #myCarousel .carousel-inner .item'), function(item){
       heights.push(item.outerHeight(true));
-    }
+    });
 
     maxHeight = Math.max.apply(Math, heights);
 
     $.each($('#portfolioDetails .container .row #myCarousel .carousel-inner .item'), function(item) {
       item.css('height', maxHeight + 'px');
-    }
+    });
 
     var y_shift = '';
     y_shift =  ($('#portfolioDetails .container .row #myCarousel').outerHeight(true) - (maxHeight + 'px'))/2;

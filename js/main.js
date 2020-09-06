@@ -54,7 +54,7 @@ $(document).ready(function() {
 function toggleDetails() {
     $('#portfolioDetails').toggle();
     if ($('#portfolioDetails').css('display') == 'none') {
-       $(this).href = 'javascript:void(0)';
+       $('#portfolio-link').href = 'javascript:void(0)';
     }
 }
 
@@ -79,3 +79,4 @@ $('body').scrollspy({
 $('.navbar-collapse ul li a').click(function() {
     $('.navbar-toggle:visible').click();
 });
+

@@ -53,7 +53,7 @@ $(document).ready(function() {
 
 // onclick event for portfolio details
 function toggleDetails(num) {
-    conosle.log("in fn");
+    console.log("in fn");
     if( !$('#portfolioDetails').hasClass('collapse in')) {
         console.log("in first IF @ num=",num);
         $('#portfolioDetails').addClass('collapse in');

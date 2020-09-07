@@ -785,11 +785,6 @@ footer .footer-below {
 }
 
 
-
-
-
-
-
 #portfolioDetails {
 	height: 60vh;
     width: 100%;
@@ -807,93 +802,11 @@ footer .footer-below {
     background: none;
 }
 
-
-.slider {
-  /*height: 100vh;*/
-  /*padding-top: 40vh;*/
-  height: 100%;
-  width: 100%;
-  text-align: center;
-  overflow: hidden;
-  padding-left: 5vw;
-  padding-right: 5vw;
+#portfolioDetails .container .row #myCarousel  .carousel-inner .item .container .row #sideimg:after {
+	content: "<img src="assets/img/portfolio/{{ post.img }}" class="img-responsive" alt="{{ post.alt }}" style=" height: 250px; width: 300px; object-fit: cover; margin: auto 0 auto 100px;">"
+	position: absolute;
+	z-index: 3; /*change*/
 }
-
-.slides {
-  display: flex;
-  overflow-x: auto;
-  height: 100%;
-  width: 100%;
-  scroll-snap-type: x mandatory;
-  scroll-behavior: smooth;
-  -webkit-overflow-scrolling: touch;
-  /*
-  scroll-snap-points-x: repeat(300px);
-  scroll-snap-type: mandatory;
-  */
-}
-
-.slides::-webkit-scrollbar {
-	display: none;
-}
-
-.slides > div {
-  scroll-snap-align: start;
-  flex-shrink: 0;
-  width: 100%;
-  height: 100%;
-  margin-right: 5%;
-  margin-left: 5%;
-  border-radius: 5px;
-  background: #eee;
-  transform-origin: center center;
-  transform: scale(1);
-  transition: transform 0.5s;
-  position: relative;
-  
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 100px;
-}
-
-.slides > div:target {
-/*   transform: scale(0.8); */
-}
-
-.slider > a {
-  display: inline-flex;
-  width: 1em;
-  height: 1em;
-  background: lightgray;
-  align-items: center;
-  justify-content: center;
-  border-radius: 50%;
-  margin: 0.5em;
-}
-
-.slider > a:active,
-.slider > a:focus,
-.slider > a.active {
-  background: black;
-}
-.slider > a:hover {
-  background: gray;
-}
-
-/* Don't need button navigation */
-@supports (scroll-snap-type) {
-  .slider > a {
-    display: none;
-  }
-}
-
-
-
-
-
-
-
 
 
 #portfolio .container .row .grid .grid-item .portfolio-link {    

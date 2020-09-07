@@ -53,8 +53,15 @@ $(document).ready(function() {
 
 // onclick event for portfolio details
 function toggleDetails(num) {
-    if( $('#portfolioDetails').hasClass('collapse in') && $('#slide-'+num).hasClass('active')) {
+    conosle.log("in fn");
+    if( !$('#portfolioDetails').hasClass('collapse in')) {
+        console.log("in first IF @ num=",num);
+        $('#portfolioDetails').addClass('collapse in');
+    }
+    else if( $('#portfolioDetails').hasClass('collapse in') && $('#slide-'+num).hasClass('active')) {
+        console.log("in second IF @ num=",num);
         $('#portfolioDetails').removeClass('collapse in');
+        console.log("removed class");
     }
 }
 

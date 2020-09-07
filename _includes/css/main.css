@@ -802,7 +802,7 @@ footer .footer-below {
     background: none;
 }
 
-#portfolioDetails .container .row #myCarousel  .carousel-inner .item .container .row #sideimg:after {
+#portfolioDetails .container .row #myCarousel  .carousel-inner .item .container .row #sideimg::after {
 	content: "<img src="assets/img/portfolio/{{ post.img }}" class="img-responsive" alt="{{ post.alt }}" style=" height: 250px; width: 300px; object-fit: cover; margin: auto 0 auto 100px;">"
 	position: absolute;
 	z-index: 3; /*change*/

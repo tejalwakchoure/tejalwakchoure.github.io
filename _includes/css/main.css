@@ -801,25 +801,7 @@ footer .footer-below {
 	background-color: pink;
 }
 
-#portfolioDetails .btn {
-	color: white;
-	background: transparent;
-}
-
-#portfolioDetails .btn:hover,
-#portfolioDetails .btn:focus,
-#portfolioDetails .btn:active,
-#portfolioDetails .btn.active {
-	color: #{{ site.color.lighttext }};
-	outline: 0;
-}
-
-#portfolioDetails fa {
-	background: transparent; 
-	color: white;
-}
-
-.carousel-control {
+#portfolioDetails .container .row #myCarousel  .carousel-control {
     bottom: 50px;
     top: auto;
     background: none;

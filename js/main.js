@@ -98,7 +98,7 @@ $(function() {
 
     maxHeight = Math.max.apply(Math, heights);
 
-    $(".carousel-inner").css('height') = maxHeight + 'px';
+    $(".carousel-inner").css({'height': maxHeight + 'px'});
     // $(".carousel-inner > .item").siblings().each(function(i){
     //   $(this).css('height', maxHeight + 'px');
     // });

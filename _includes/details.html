@@ -32,11 +32,12 @@
 						</button>
 					</div>
 					<div class="row" style="display: flex; flex-direction: row;">
-						<img id="sideimg" src="assets/img/portfolio/{{ post.img }}" class="img-responsive" alt="{{ post.alt }}" style=" height: 400px; width: 200px; object-fit: cover; margin: auto 0;">
+						<img src="assets/img/portfolio/{{ post.img }}" class="img-responsive" alt="{{ post.alt }}" style=" height: 400px; width: 200px; object-fit: cover; margin: auto 0;">
 						
+						<img src="assets/img/portfolio/{{ post.img }}" class="img-responsive" alt="{{ post.alt }}" style=" position: absolute; z-index:3; margin: auto 0 auto 100px;
+						height: 250px; width: 300px; object-fit: cover; ">
 						
-						
-						<div style="padding-left: 3%; padding-right: 1%; margin: auto;">
+						<div style="padding-left: 3%; padding-right: 1%; margin: auto auto auto 200px;">
 							<h2>{{ post.title }}</h2>
 							<hr class="primary">
 							{% if post.description %}

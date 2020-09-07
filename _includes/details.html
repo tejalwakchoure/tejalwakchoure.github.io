@@ -25,19 +25,19 @@
 					
 					<div class="container" style="text-align: center;">
 						<div class="row">
-							<button type="button" class="btn btn-light" onclick=""
-							style="border-radius: 50%; float:right; padding-top: 20px; padding-bottom: 0;
-									color: white; background: transparent; outline: 0;" >
+							<a role="button" href="#portfolio-item-{{ post.modal-id }}"
+							style="float:right; padding: 20px 20px 0 20px; outline: 0;" >
 								<i class="fa fa-chevron-up" style="color: white; background: transparent;"></i>
-						</button>
+						</a>
 					</div>
-					<div class="row" style="display: flex; flex-direction: row;">
+					<div class="row" style="display: flex; flex-direction: row; position: relative;">
 						<img src="assets/img/portfolio/{{ post.img }}" class="img-responsive" alt="{{ post.alt }}" style=" height: 400px; width: 200px; object-fit: cover; margin: auto 0;">
 						
-						<img src="assets/img/portfolio/{{ post.img }}" class="img-responsive" alt="{{ post.alt }}" style=" position: absolute; z-index:3; margin: auto 0 auto 100px;
-						height: 250px; width: 300px; object-fit: cover; ">
+						<img src="assets/img/portfolio/{{ post.img }}" class="img-responsive" alt="{{ post.alt }}" style=" position: absolute; z-index: 2; margin: auto 0 auto 100px;
+						height: 250px; width: 300px; object-fit: cover;
+						top: 50%; bottom: 50%; ">
 						
-						<div style="padding-left: 3%; padding-right: 1%; margin: auto auto auto 200px;">
+						<div style="padding-left: 3%; padding-right: 2%; margin: auto auto auto 200px;">
 							<h2>{{ post.title }}</h2>
 							<hr class="primary">
 							{% if post.description %}
@@ -75,7 +75,7 @@
 
 			<!-- Left and right controls -->
 			<a class="left carousel-control" href="#myCarousel" data-slide="prev">
-				<i class="fa fa-long-arrow-alt-right" style="color: white; background: transparent;"></i>
+				<i class="fa fa-long-arrow-alt-left" style="color: white; background: transparent;"></i>
 				<span class="sr-only">Previous</span>
 			</a>
 			<a class="right carousel-control" href="#myCarousel" data-slide="next">

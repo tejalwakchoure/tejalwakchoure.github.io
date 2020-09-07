@@ -31,6 +31,7 @@ $(document).ready(function() {
         $('.hide1 header').css({opacity: 0.0, visibility: "visible"}).delay(500).animate({opacity: 1.0}, 500);  
         fadeInChildren('.hide1 header .intro-text',1000);
         $('.hide2').css({opacity: 0.0, visibility: "visible"}).delay(2300).animate({opacity: 1.0}, 500);
+        $('#portfolioDetails .container .row #myCarousel .carousel-inner #slide-6').addClass('active');
      }
     }, 10);
 });
@@ -51,12 +52,23 @@ $(document).ready(function() {
 //  });
 
 // onclick event for portfolio details
-function toggleDetails() {
-    $('#portfolioDetails').toggle();
-    if ($('#portfolioDetails').css('display') != 'none') {
-       $('#portfolio-link').href = 'javascript:void(0)';
+function toggleDetails(num) {
+    if( $('#portfolioDetails').hasClass('collapse in') && $('#slide-'+num).hasClass('active')) {
+        $('#portfolioDetails').removeClass('collapse in');
     }
 }
+
+// // onclick event for portfolio details
+// function showDetails(num) {
+//     $('#portfolioDetails .container .row #myCarousel .carousel-inner .item').removeClass('active');
+//     $('#portfolioDetails .container .row #myCarousel .carousel-inner #slide-'+num).addClass('active');
+
+//     // $('#portfolioDetails').toggle();
+//     // if ($('#portfolioDetails').css('display') != 'none') {
+//     //    $('#portfolio-link').href = 'javascript:void(0)';
+//     // }
+
+// }
 
 
 // jQuery for page scrolling feature - requires jQuery Easing plugin
@@ -74,11 +86,6 @@ $(function() {
     $('.hide-scroll a').bind('click', function(event) {
         event.preventDefault();
     });
-});
-
-
-$(function() {
-    $('#portfolioDetails .container .row #myCarousel .carousel-inner #slide-6').addClass('active');
 });
 
 $(function() {

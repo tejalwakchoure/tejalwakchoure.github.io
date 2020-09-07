@@ -91,9 +91,10 @@ $(function() {
 
     maxHeight = Math.max.apply(Math, heights);
 
-    $(".carousel-inner > .item").siblings().each(function(i){
-      $(this).css('height', maxHeight + 'px');
-    });
+    $(".carousel-inner").css('height') = maxHeight + 'px';
+    // $(".carousel-inner > .item").siblings().each(function(i){
+    //   $(this).css('height', maxHeight + 'px');
+    // });
 
     // var y_shift = '';
     // y_shift =  ($('#portfolioDetails .container .row #myCarousel').outerHeight(true) - (maxHeight + 'px'))/2;

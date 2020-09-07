@@ -15,8 +15,8 @@
                 <div class="grid-col"></div>
                 {% for post in site.posts %}
                     <div id="portfolio-item-{{ post.modal-id }}" class="grid-item grid-item{{ post.modal-id }}">
-                        <a data-target="#myCarousel" data-slide-to="{{ post.modal-id }}" href="" 
-                        onclick="return toggleDetails({{ post.modal-id }});" style="display: block; height: 100%; width: 100%;"> 
+                        <a data-target="#myCarousel" data-slide-to="6-{{ post.modal-id }}" href="" 
+                        onclick="return toggleDetails(6-{{ post.modal-id }});" style="display: block; height: 100%; width: 100%;"> 
 
                             <!-- <div class="caption">
                                 <div class="caption-content">

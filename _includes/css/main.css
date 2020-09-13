@@ -407,7 +407,7 @@ section.success {
 	background: #{{ site.color.lightbkg }};
 }   
 
-@media(max-width:767px) {   
+@media(max-width:768px) {   
 	section {   
 		padding: 75px 5vw; /*75px 0;*/    
 	}   
@@ -477,7 +477,7 @@ section.success {
 	z-index: 2; 
 }   
 
-@media(min-width:767px) {   
+@media(min-width:768px) {   
 	#portfolio .portfolio-item {    
 		margin: 0 0 30px;   
 	}   
@@ -721,19 +721,23 @@ footer .footer-below {
   font-weight: 100;
 }
 
+
+.li.complete {
+  flex-basis: 33%;
+}
+
 .status {
   position: relative;
   padding: 20px 40px 0 40px;
   display: flex;
   text-align: center;
   justify-content: center;
-
-  border-top: 1px solid #{{ site.color.lighttext }};
+  font-weight: 100;
+  border-top: 2px solid #{{ site.color.lighttext }};
 }
 .status h4 {
   font-weight: 600;
-      padding-top: 10px;
-
+  padding-top: 10px;
 }
 .status:before {
   content: "";
@@ -747,36 +751,33 @@ footer .footer-below {
   left: 42%;
 }
 
-.li.complete {
-  flex-basis: 33%;
-}
-.li.complete .status {
-  border-top: 2px solid #{{ site.color.lighttext }};
-  font-weight: 100;
-}
 
-@media (min-device-width: 320px) and (max-device-width: 700px) {
+@media ( max-width: 768px ) {
   .timeline {
-    list-style-type: none;
-    display: block;
+    flex-direction: column;
   }
 
-  .li {
+  .li.complete {
     display: flex;
     width: inherit;
   }
 
   .timestamp {
-    width: 100px;
+  	padding: 20px;
+    flex-basis: 50%;
   }
 
   .status:before {
-    left: -8%;
-    top: 30%;
+    top: 32%;
+    left: -14px;
+  }
+  .status {
+  	flex-basis: 50%;
+  	padding: 20px;
+    border-top: 0;
+    border-left: 2px solid #{{ site.color.lighttext }};
   }
 }
-
-
 
 
 

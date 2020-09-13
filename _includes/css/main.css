@@ -738,23 +738,17 @@ footer .footer-below {
   content: "";
   width: 25px;
   height: 25px;
-  background-color: white;
   border-radius: 50%;
+  background-color: #{{ site.color.lighttext }};
   border: 5px solid #{{ site.color.lightbkg }};
   position: absolute;
-  top: -12.5px;
+  top: -14px;
   left: 42%;
 }
 
 .li.complete .status {
   border-top: 2px solid #{{ site.color.lighttext }};
-}
-.li.complete .status:before {
-  border: none;
-  background-color: #{{ site.color.lighttext }};
-}
-.li.complete .status h4 {
-  font-weight: 300;
+  font-weight: 100;
 }
 
 @media (min-device-width: 320px) and (max-device-width: 700px) {

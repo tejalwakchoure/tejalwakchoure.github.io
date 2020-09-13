@@ -708,6 +708,7 @@ footer .footer-below {
   display: flex;
   align-items: flex-start;
   justify-content: center;
+  padding: 0;
 }
 
 

@@ -384,8 +384,12 @@ header .intro-text .skills {
 
 .navbar-text {
 	font-weight: 100;
-	font-size: 1em;
 	text-align: end;
+	text-transform: none;
+    float: right !important;
+    padding: 2.5px 0 0 45px;
+    margin: 0;
+    font-size: 0.9em;
 	color: #{{ site.color.lighttext }} !important;
 }
 

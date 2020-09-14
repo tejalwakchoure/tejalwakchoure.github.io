@@ -64,7 +64,8 @@ function startTime() {
     var day = today.getDate();
     m = checkTime(m);
     s = checkTime(s);
-    $('.navbar-text').html(h + ":" + m + ":" + s + "<br>" + day + " " + month);
+    var period = (h<12)? "AM":"PM";
+    $('.navbar-text').html(h + ":" + m + ":" + s + " " + period +  "<br>" + day + " " + month);
     var t = setTimeout(startTime, 500);
 }
 function checkTime(i) {

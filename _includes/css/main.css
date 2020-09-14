@@ -378,6 +378,7 @@ header .intro-text .skills {
 }
 
 .datetime {
+	font-weight: 100;
 	color: #{{ site.color.lighttext }} !important;
 }
 

@@ -83,7 +83,7 @@ var mySwiper = new Swiper('.swiper-container', {
     // Optional parameters
     // cssMode: true,
     // loop: true,
-    direction: 'horizontal',
+    // direction: 'horizontal',
     slidesPerView: 1,
     // spaceBetween: 30,
     pagination: {

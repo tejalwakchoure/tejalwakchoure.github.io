@@ -128,16 +128,11 @@ $(function() {
     });
     maxHeight = Math.max.apply(Math, heights);
     console.log("maxheight", maxHeight, maxHeight + 'px');
-    $(".carousel-inner").css({'height': maxHeight + 'px'});
+    $(".carousel-inner").css({'height': maxHeight + 'px !important'});
 
     // $(".carousel-inner > .item").siblings().each(function(i){
     //   $(this).css('height', maxHeight + 'px');
     // });
-
-    // var y_shift = '';
-    // y_shift =  ($('#portfolioDetails .container .row #myCarousel').outerHeight(true) - (maxHeight + 'px'))/2;
-    // console.log($('#portfolioDetails .container .row #myCarousel').outerHeight(true), (maxHeight + 'px'), y_shift);
-    // $('#portfolioDetails .container .row #myCarousel .carousel-inner .item').css('background-position-y') = y_shift;
 });
 
 

@@ -121,18 +121,15 @@ $(function() {
 $(function() {
     var maxHeight = '';
     var heights = [];
-
     $(".carousel-inner > .item").siblings().each(function(i){
-        console.log("slide#", $(this), "height", $(this).outerHeight());
       heights.push($(this).outerHeight());
     });
-    maxHeight = Math.max.apply(Math, heights);
-    console.log("maxheight", maxHeight, maxHeight + 'px');
-    $(".carousel-inner").css({'height': maxHeight + 'px !important'});
 
-    // $(".carousel-inner > .item").siblings().each(function(i){
-    //   $(this).css('height', maxHeight + 'px');
-    // });
+    maxHeight = Math.max.apply(Math, heights);
+    $(".carousel-inner").css({'height': maxHeight + 'px !important'});
+    $(".carousel-inner > .item").siblings().each(function(i){
+        $(this).css({'height': maxHeight + 'px !important'});
+    });
 });
 
 

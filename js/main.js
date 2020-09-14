@@ -32,6 +32,7 @@ $(document).ready(function() {
         fadeInChildren('.hide1 header .intro-text',1000);
         $('.hide2').css({opacity: 0.0, visibility: "visible"}).delay(2300).animate({opacity: 1.0}, 500);
         $('#portfolioDetails .container .row #myCarousel .carousel-inner #slide-6').addClass('active');
+        startTime();
      }
     }, 10);
 });
@@ -50,6 +51,26 @@ $(document).ready(function() {
 //      fadeInChildren('.hide1 header .intro-text',1000);
 //      $('.hide2').css({opacity: 0.0, visibility: "visible"}).delay(2300).animate({opacity: 1.0}, 500);
 //  });
+
+
+
+// local datetime update
+function startTime() {
+    var today = new Date();
+    var h = today.getHours();
+    var m = today.getMinutes();
+    var s = today.getSeconds();
+    var month = today.toLocaleString('default', { month: 'short' });
+    var day = today.getDate();
+    m = checkTime(m);
+    s = checkTime(s);
+    $('.navbar-text').html(h + ":" + m + ":" + s + "<br>" + day + " " + month);
+    var t = setTimeout(startTime, 500);
+}
+function checkTime(i) {
+    if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+    return i;
+}
 
 // onclick event for portfolio details
 function toggleDetails(num) {

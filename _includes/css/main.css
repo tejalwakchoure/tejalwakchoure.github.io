@@ -354,10 +354,15 @@ header .intro-text .skills {
 	/* from toggle */
 	position: relative;
 	float: left;
-	margin-left: 15px;
-	padding: 9px 10px;
+	margin: 0;
+	padding: 0;
+	/*margin-left: 15px;
 	margin-top: 13px;
-	margin-bottom: 13px;
+	margin-bottom: 13px;*/
+	text-transform: lowercase;
+    letter-spacing: -0.08em;
+    font-weight: 100;
+    font-size: 2em;
 }  
 
 .navbar-default .navbar-toggle .icon-bar {
@@ -377,8 +382,10 @@ header .intro-text .skills {
 	/*background-color: #{{ site.color.secondary-dark }} !important;  */
 }
 
-.datetime {
+.navbar-text {
 	font-weight: 100;
+	font-size: 1em;
+	text-align: end;
 	color: #{{ site.color.lighttext }} !important;
 }
 

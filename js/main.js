@@ -59,15 +59,14 @@ function startTime() {
     var today = new Date();
     var h = today.getHours();
     var m = today.getMinutes();
-    var month = today.toLocaleString('default', { month: 'short' }); 
-    var mth = today.getMonth();
+    // var month = today.toLocaleString('default', { month: 'short' }); 
+    var mth = today.getMonth() + 1;
     var day = today.getDate();
     m = checkTime(m);
     mth = checkTime(mth);
-    var period = (h<12)? "AM":"PM";
+    // var period = (h<12)? "AM":"PM";
     // h = (h<13)? h:(h-12);
-    // $('.navbar-text').html(day + " " + month  +  "<br>" + h + " : " + m + " " + period);
-    $('.navbar-text').html(day + "/" + mth  +  "<br>" + h + " : " + m);
+    $('.navbar-text').html(day + "/" + mth  +  "<br>" + h + ":" + m);
     var t = setTimeout(startTime, 500);
 }
 function checkTime(i) {

@@ -76,16 +76,16 @@ function checkTime(i) {
 
 // onclick event for portfolio details
 function toggleDetails(num) {
-    console.log("in fn");
-    if( !$('#portfolioDetails').hasClass('collapse in')) {
-        console.log("in first IF @ num=",num);
-        $("#portfolioDetails").collapse('toggle');
-    }
-    else if( $('#portfolioDetails').hasClass('collapse in') && $('#slide-'+num).hasClass('active')) {
-        console.log("in second IF @ num=",num);
-        $("#portfolioDetails").collapse('toggle');
-        console.log("toggled class");
-    }
+    // console.log("in fn");
+    // if( !$('#portfolioDetails').hasClass('collapse in')) {
+    //     console.log("in first IF @ num=",num);
+    //     $("#portfolioDetails").collapse('toggle');
+    // }
+    // else if( $('#portfolioDetails').hasClass('collapse in') && $('#slide-'+num).hasClass('active')) {
+    //     console.log("in second IF @ num=",num);
+    //     $("#portfolioDetails").collapse('toggle');
+    //     console.log("toggled class");
+    // }
 }
 
 // // onclick event for portfolio details

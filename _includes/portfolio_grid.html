@@ -15,15 +15,15 @@
                 <div class="grid-col"></div>
                 {% for post in site.posts %}
                     <div id="portfolio-item-{{ post.modal-id }}" class="grid-item grid-item{{ post.modal-id }}">
-                        <a data-target="#myCarousel" data-slide-to="6-{{ post.modal-id }}" href="" 
-                        onclick="return toggleDetails(6-{{ post.modal-id }});" style="display: block; height: 100%; width: 100%;"> 
+                        <!-- <a data-target="#myCarousel" data-slide-to="6-{{ post.modal-id }}" href="" 
+                        onclick="return toggleDetails(6-{{ post.modal-id }});" style="display: block; height: 100%; width: 100%;">  -->
 
                             <!-- <div class="caption">
                                 <div class="caption-content">
                                     {{ post.title }}
                                 </div>
                             </div> -->
-
+                        <a data-target="#portfolioDetails" data-toggle="collapse">
                             <img src="assets/img/portfolio/{{ post.img }}" class="img-responsive" alt="{{ post.alt }}" style=" height: 100%; width: 100%; object-fit: cover; /*box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);*/ ">
                         </a>
                     </div>

@@ -6,8 +6,7 @@
             </div>
         </div> -->
 	<div class="row" style="padding-left: 0">
-		<!-- <div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="false"> -->
-		<div class="swiper-container">
+		<div id="myCarousel" class="swiper-container">
 
 			<!-- Indicators -->
 			<!-- <ul class="carousel-indicators">
@@ -20,14 +19,10 @@
 			</ul> -->
 
 			<!-- Wrapper for slides -->
-			<!-- <div class="carousel-inner" style="padding-bottom: 100px;"> -->
-			<div class="swiper-wrapper" style="padding-bottom: 100px;">
+			<div class="swiper-wrapper carousel-inner" style="padding-bottom: 100px;">
 				{% for post in site.posts %}
-
-<!-- 				<div id="slide-{{ post.modal-id }}" class="item" 
-					style="height: fit-content; object-fit: cover; width: 100%;"> -->
 				
-				<div class="swiper-slide" id="slide-{{ post.modal-id }}"
+				<div class="swiper-slide item" id="slide-{{ post.modal-id }}"
 				style="height: fit-content; object-fit: cover; width: 100%;">
 
 					<div class="container" style="text-align: center; width: 100%;">
@@ -82,23 +77,13 @@
 			{% endfor %}
 			</div>
 
-			<!-- Left and right controls -->
-<!-- 			<a class="left carousel-control" href="#myCarousel" data-slide="prev">
-				<i class="fa fa-2x fa-arrow-alt-circle-left" style="color: white; background: transparent;"></i>
-				<span class="sr-only">Previous</span>
-			</a>
-			<a class="right carousel-control" href="#myCarousel" data-slide="next">
-				<i class="fa fa-2x fa-arrow-alt-circle-right" style="color: white; background: transparent;"></i>
-				<span class="sr-only">Next</span>
-			</a> -->
-
 			<!-- If we need pagination -->
     		<div class="swiper-pagination"></div>
 
-			<div class="swiper-button-prev"></div>
-			<div class="swiper-button-next"></div>
+			<div class="swiper-button-prev carousel-control"></div>
+			<div class="swiper-button-next carousel-control"></div>
 			<!-- If we need scrollbar -->
-    		<div class="swiper-scrollbar"></div>
+    		<div class="swiper-scrollbar carousel-control"></div>
 		</div>
 	</div>
 	<!-- <div class="row">
@@ -110,37 +95,81 @@
 </section>
 
 
+<!-- Bootstrap carousel -->
+<!-- 		<div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="false">
 
+			<ul class="carousel-indicators">
+				<li id="link-0" data-target="#myCarousel" data-slide-to="0" class="active"></li>
+				<li id="link-1" data-target="#myCarousel" data-slide-to="1"></li>
+				<li id="link-2" data-target="#myCarousel" data-slide-to="2"></li>
+				<li id="link-3" data-target="#myCarousel" data-slide-to="3"></li>
+				<li id="link-4" data-target="#myCarousel" data-slide-to="4"></li>
+				<li id="link-5" data-target="#myCarousel" data-slide-to="5"></li>
+			</ul>
 
-		<!-- <div class="row">
-            <div class="col-lg-12 text-center">
-				<div class="slider">
-				  	<div class="slides">
-					  	{% for post in site.posts %}
-							<div id="slide-{{ post.modal-id }}">{{ post.modal-id }}</div>
-						{% endfor %}
+			<div class="carousel-inner" style="padding-bottom: 100px;">
+				{% for post in site.posts %}
+
+				<div id="slide-{{ post.modal-id }}" class="item" 
+					style="height: fit-content; object-fit: cover; width: 100%;">
+					<div class="container" style="text-align: center; width: 100%;">
+						<div class="row">
+							<div class="page-scroll" style="height:fit-content; width:fit-content; float:right;">
+								<a role="button" href="#portfolio-item-{{ post.modal-id }}"
+								style="float:right; padding: 20px 20px 0 20px; outline: 0;" >
+									<i class="fa fa-chevron-up" style="color: white; background: transparent;"></i>
+								</a>
+						</div>
 					</div>
-					{% for post in site.posts %}
-						<a href="#slide-{{ post.modal-id }}"></a>
-					{% endfor %}
+					<div class="row" style="display: flex; flex-direction: row; position: relative;">
+						<img src="assets/img/portfolio/{{ post.img }}" class="img-responsive" alt="{{ post.alt }}" style=" height: 400px; width: 200px; object-fit: cover; margin: auto 0;">
+						
+						<img src="assets/img/portfolio/{{ post.img }}" class="img-responsive" alt="{{ post.alt }}" style=" position: absolute; z-index: 2; margin: auto 0 auto 100px;
+						height: 250px; width: 300px; object-fit: cover;
+						top: 50%; bottom: 50%; ">
+						
+						<div style="padding-left: 3%; padding-right: 2%; margin: auto auto auto 200px;">
+							<h2>{{ post.title }}</h2>
+							<hr class="primary">
+							{% if post.description %}
+							<p style="font-size: 20px; text-align: left;">{{ post.description }}</p>
+							{% endif %}
+							<ul class="list-inline item-details">
+								{% if post.project-date %}
+								<li>Date:
+									<strong>{{ post.project-date }}
+									</strong>
+								</li>
+								{% endif %}
+								{% if post.category %}
+								<li>Area:
+									<strong>{{ post.category }}
+									</strong>
+								</li>
+								{% endif %}
+								{% if post.github-link %}
+								<li>Code:
+									<strong><a 
+										href={{ post.github-link }}
+										style="text-decoration: underline; color: #000" 
+										target="_blank">GitHub Repo</a>
+									</strong>
+								</li>
+								{% endif %}
+							</ul>
+						</div>
+					</div>
 				</div>
 			</div>
-		</div> -->
+			{% endfor %}
+			</div>
 
-
-
-
-<!-- 		{% for post in site.posts %}
-		<div id="portfolioDetails-{{ post.modal-id }}">
-			<h2>Details for project #{{ post.modal-id }}</h2>
-		</div>
-		{% endfor %}
-
-		<div class="dotstyle dotstyle-fillup">
-			<ul>
-				<li class="current"><a href="#">Home</a></li>
-				{% for post in site.posts %}
-					<li><a href="portfolio-item-{{ post.modal-id }}">{{ post.modal-id }}</a></li>
-				{% endfor %}
-			</ul>
+			<a class="left carousel-control" href="#myCarousel" data-slide="prev">
+				<i class="fa fa-2x fa-arrow-alt-circle-left" style="color: white; background: transparent;"></i>
+				<span class="sr-only">Previous</span>
+			</a>
+			<a class="right carousel-control" href="#myCarousel" data-slide="next">
+				<i class="fa fa-2x fa-arrow-alt-circle-right" style="color: white; background: transparent;"></i>
+				<span class="sr-only">Next</span>
+			</a>
 		</div> -->

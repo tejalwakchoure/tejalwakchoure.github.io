@@ -65,7 +65,7 @@ function startTime() {
     m = checkTime(m);
     s = checkTime(s);
     var period = (h<12)? "AM":"PM";
-    $('.navbar-text').html(h + ":" + m + ":" + s + " " + period +  "<br>" + day + " " + month);
+    $('.navbar-text').html(day + " " + month  +  "<br>" + h + " : " + m + " " + period);
     var t = setTimeout(startTime, 500);
 }
 function checkTime(i) {

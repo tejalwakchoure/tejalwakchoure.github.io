@@ -58,11 +58,14 @@ function startTime() {
     var today = new Date();
     var h = today.getHours();
     var m = today.getMinutes();
-    // var month = today.toLocaleString('default', { month: 'short' }); 
     var mth = today.getMonth() + 1;
     var day = today.getDate();
+    h = checkTime(h);
     m = checkTime(m);
     mth = checkTime(mth);
+    day = checkTime(day);
+
+    // var month = today.toLocaleString('default', { month: 'short' });   
     // var period = (h<12)? "AM":"PM";
     // h = (h<13)? h:(h-12);
     $('.navbar-text').html(day + "/" + mth  +  "<br>" + h + ":" + m);
@@ -78,28 +81,20 @@ function toggleDetails(num) {
     
     $('#myCarousel #link-'+num).click();
     num = 6-num;
-    // console.log('#', num)
-    // if($('#myCarousel #slide-'+num).hasClass('active')) {
-    //     console.log("#slide-", num, " is active")
-    //     $('#portfolioDetails').collapse('toggle');
-    //     console.log('collapse toggled show/hide')
-    // }
-    // // else if($('#portfolioDetails').is('.collapse:not(.show)')) {
-    // else 
 
     if($('#portfolioDetails').is( ":hidden")) {
-        console.log("#slide-", num, " is not active ; section is not visible")
+        // console.log("#slide-", num, " is not active ; section is not visible")
         $('#portfolioDetails').collapse('toggle');
-        console.log('collapse toggled to show')
+        // console.log('collapse toggled to show')
     }
     else if($('#portfolioDetails').is( ":visible") && $('#slide-'+num).hasClass('active')) {
-        console.log("#slide-", num, " is active")
+        // console.log("#slide-", num, " is active")
         $('#portfolioDetails').collapse('toggle');
-        console.log('collapse toggled show/hide')
+        // console.log('collapse toggled show/hide')
+        $("#portfolio-link-"+num).attr('href','javascript:void(0)'); //reqd?
     }
-    // else if($('#portfolioDetails').is('.collapse:not(.show)')) {
     else {
-        console.log('no toggle action')
+        // console.log('no toggle action')
     }
 
     return false;

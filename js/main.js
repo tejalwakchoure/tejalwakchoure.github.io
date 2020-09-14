@@ -53,7 +53,6 @@ $(document).ready(function() {
 //  });
 
 
-
 // local datetime update
 function startTime() {
     var today = new Date();
@@ -76,30 +75,20 @@ function checkTime(i) {
 
 // onclick event for portfolio details
 function toggleDetails(num) {
-    // console.log("in fn");
-    // if( !$('#portfolioDetails').hasClass('collapse in')) {
-    //     console.log("in first IF @ num=",num);
-    //     $("#portfolioDetails").collapse('toggle');
-    // }
-    // else if( $('#portfolioDetails').hasClass('collapse in') && $('#slide-'+num).hasClass('active')) {
-    //     console.log("in second IF @ num=",num);
-    //     $("#portfolioDetails").collapse('toggle');
-    //     console.log("toggled class");
-    // }
+    
+    $('#myCarousel #link-'+num).click();
+
+    if($('#myCarousel #slide-'+num).hasClass('active')) {
+        $('#portfolioDetails').collapse('toggle');
+    }
+    else if($('#portfolioDetails').is('.collapse:not(.show)')) {
+        $('#portfolioDetails').collapse('toggle');
+    }
+    else {
+    }
+
+    return false;
 }
-
-// // onclick event for portfolio details
-// function showDetails(num) {
-//     $('#portfolioDetails .container .row #myCarousel .carousel-inner .item').removeClass('active');
-//     $('#portfolioDetails .container .row #myCarousel .carousel-inner #slide-'+num).addClass('active');
-
-//     // $('#portfolioDetails').toggle();
-//     // if ($('#portfolioDetails').css('display') != 'none') {
-//     //    $('#portfolio-link').href = 'javascript:void(0)';
-//     // }
-
-// }
-
 
 // Equalize carousel heights
 $(function() {
@@ -115,7 +104,6 @@ $(function() {
         $(this).css({'height': maxHeight + 'px !important'});
     });
 });
-
 
 // jQuery for page scrolling feature - requires jQuery Easing plugin
 $(function() {

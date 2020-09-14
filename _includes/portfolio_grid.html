@@ -23,7 +23,7 @@
                                     {{ post.title }}
                                 </div>
                             </div> -->
-                        <a data-target="#portfolioDetails" data-toggle="collapse">
+                        <a id="portfolio-link-{{ post.modal-id }}" onclick="return toggleDetails({{ post.modal-id }});">
                             <img src="assets/img/portfolio/{{ post.img }}" class="img-responsive" alt="{{ post.alt }}" style=" height: 100%; width: 100%; object-fit: cover; /*box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);*/ ">
                         </a>
                     </div>

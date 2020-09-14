@@ -21,11 +21,10 @@
 			<!-- Wrapper for slides -->
 			<div class="swiper-wrapper carousel-inner" style="padding-bottom: 100px;">
 				{% for post in site.posts %}
-				
 				<div class="swiper-slide item" id="slide-{{ post.modal-id }}"
 				style="height: fit-content; object-fit: cover; width: 100%;">
-
-					<div class="container" style="text-align: center; width: 100%;">
+				<p>slide {{ post.modal-id }}</p>
+					<!-- <div class="container" style="text-align: center; width: 100%;">
 						<div class="row">
 							<div class="page-scroll" style="height:fit-content; width:fit-content; float:right;">
 								<a role="button" href="#portfolio-item-{{ post.modal-id }}"
@@ -72,7 +71,7 @@
 							</ul>
 						</div>
 					</div>
-				</div>
+				</div> -->
 			</div>
 			{% endfor %}
 			</div>

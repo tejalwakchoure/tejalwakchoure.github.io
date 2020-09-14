@@ -31,7 +31,7 @@ $(document).ready(function() {
         $('.hide1 header').css({opacity: 0.0, visibility: "visible"}).delay(500).animate({opacity: 1.0}, 500);  
         fadeInChildren('.hide1 header .intro-text',1000);
         $('.hide2').css({opacity: 0.0, visibility: "visible"}).delay(2300).animate({opacity: 1.0}, 500);
-        // $('#portfolioDetails .container .row #myCarousel .carousel-inner #slide-6').addClass('active');
+        $('#portfolioDetails .container .row #myCarousel .carousel-inner #slide-6').addClass('active');
         startTime();
      }
     }, 10);

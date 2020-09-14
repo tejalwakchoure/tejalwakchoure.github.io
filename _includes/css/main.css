@@ -375,7 +375,11 @@ header .intro-text .skills {
 
 .navbar-nav>.active>a { 
 	/*background-color: #{{ site.color.secondary-dark }} !important;  */
-}   
+}
+
+.datetime {
+	color: #{{ site.color.lighttext }} !important;
+}
 
 .navbar {min-height:30px !important;}   
 

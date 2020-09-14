@@ -80,25 +80,23 @@ function checkTime(i) {
 
 // Swiper initialization
 var mySwiper = new Swiper('.swiper-container', {
-  // Optional parameters
-  cssMode: true,
-  // direction: 'horizontal',
-  // loop: true,
-
-  // If we need pagination
-  pagination: {
-    el: '.swiper-pagination',
-  },
-
-  // Navigation arrows
-  navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
-  },
-   mousewheel: true,
+    // Optional parameters
+    // cssMode: true,
+    // loop: true,
+    direction: 'horizontal',
+    slidesPerView: 1,
+    // spaceBetween: 30,
+    pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+    },
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
+    mousewheel: true,
     keyboard: true,
 
-  // And if we need scrollbar
   // scrollbar: {
   //   el: '.swiper-scrollbar',
   // },

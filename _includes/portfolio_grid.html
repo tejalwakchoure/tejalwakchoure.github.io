@@ -23,9 +23,12 @@
                                     {{ post.title }}
                                 </div>
                             </div> -->
-                        <a id="portfolio-link-{{ post.modal-id }}" onclick="return toggleDetails(6-{{ post.modal-id }});">
-                            <img src="assets/img/portfolio/{{ post.img }}" class="img-responsive" alt="{{ post.alt }}" style=" height: 100%; width: 100%; object-fit: cover; /*box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);*/ ">
-                        </a>
+                        <div class="page-scroll">
+                            <a id="portfolio-link-{{ post.modal-id }}" href="#portfolioDetails" 
+                                onclick="return toggleDetails(6-{{ post.modal-id }});">
+                                <img src="assets/img/portfolio/{{ post.img }}" class="img-responsive" alt="{{ post.alt }}" style=" height: 100%; width: 100%; object-fit: cover; /*box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);*/ ">
+                            </a>
+                        </div>
                     </div>
                 {% endfor %}
             </div>

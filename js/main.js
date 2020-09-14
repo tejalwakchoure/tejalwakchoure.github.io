@@ -118,26 +118,26 @@ $(function() {
     });
 });
 
-// $(function() {
-//     var maxHeight = '';
-//     var heights = [];
+$(function() {
+    var maxHeight = '';
+    var heights = [];
 
-//     $(".carousel-inner > .item").siblings().each(function(i){
-//       heights.push($(this).outerHeight());
-//     });
+    $(".carousel-inner > .item").siblings().each(function(i){
+      heights.push($(this).outerHeight());
+    });
 
-//     maxHeight = Math.max.apply(Math, heights);
+    maxHeight = Math.max.apply(Math, heights);
 
-//     $(".carousel-inner").css({'height': maxHeight + 'px'});
-//     // $(".carousel-inner > .item").siblings().each(function(i){
-//     //   $(this).css('height', maxHeight + 'px');
-//     // });
+    $(".carousel-inner").css({'height': maxHeight + 'px'});
+    // $(".carousel-inner > .item").siblings().each(function(i){
+    //   $(this).css('height', maxHeight + 'px');
+    // });
 
-//     // var y_shift = '';
-//     // y_shift =  ($('#portfolioDetails .container .row #myCarousel').outerHeight(true) - (maxHeight + 'px'))/2;
-//     // console.log($('#portfolioDetails .container .row #myCarousel').outerHeight(true), (maxHeight + 'px'), y_shift);
-//     // $('#portfolioDetails .container .row #myCarousel .carousel-inner .item').css('background-position-y') = y_shift;
-// });
+    // var y_shift = '';
+    // y_shift =  ($('#portfolioDetails .container .row #myCarousel').outerHeight(true) - (maxHeight + 'px'))/2;
+    // console.log($('#portfolioDetails .container .row #myCarousel').outerHeight(true), (maxHeight + 'px'), y_shift);
+    // $('#portfolioDetails .container .row #myCarousel .carousel-inner .item').css('background-position-y') = y_shift;
+});
 
 
 // Highlight the top nav as scrolling occurs

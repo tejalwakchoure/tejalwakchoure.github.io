@@ -339,7 +339,7 @@ header .intro-text .skills {
 	text-align: end;
 	text-transform: none;
     float: right !important;
-    padding: 2.5px 0 0 45px;
+    padding: 0;
     margin: 0;
     font-size: 0.9em;
 	color: #{{ site.color.lighttext }} !important;
@@ -386,6 +386,10 @@ header .intro-text .skills {
 
 	.navbar-container {
 		padding-top: 0;
+	}
+
+	.navbar-text {
+		padding: 2.5px 0 0 25px;
 	}
 }
 

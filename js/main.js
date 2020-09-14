@@ -83,13 +83,14 @@ function toggleDetails(num) {
         $('#portfolioDetails').collapse('toggle');
         console.log('collapse toggled show/hide')
     }
-    else if($('#portfolioDetails').is('.collapse:not(.show)')) {
+    // else if($('#portfolioDetails').is('.collapse:not(.show)')) {
+    else if($('#portfolioDetails').is( ":hidden") {
         console.log("#slide-", num, " is not active ; section is not visible")
         $('#portfolioDetails').collapse('toggle');
         console.log('collapse toggled to show')
     }
     else {
-        console.log('no action')
+        console.log('no toggle action')
     }
 
     return false;

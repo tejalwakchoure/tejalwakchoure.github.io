@@ -101,23 +101,7 @@ function toggleDetails(num) {
 // }
 
 
-// jQuery for page scrolling feature - requires jQuery Easing plugin
-$(function() {
-    $('.page-scroll a').bind('click', function(event) {
-        var $anchor = $(this);
-        $('html, body').stop().animate({
-            scrollTop: $($anchor.attr('href'))[0].offsetTop
-        }, 1500, 'easeInOutExpo');
-        event.preventDefault();
-    });
-});
-
-$(function() {
-    $('.hide-scroll a').bind('click', function(event) {
-        event.preventDefault();
-    });
-});
-
+// Equalize carousel heights
 $(function() {
     var maxHeight = '';
     var heights = [];
@@ -133,6 +117,22 @@ $(function() {
 });
 
 
+// jQuery for page scrolling feature - requires jQuery Easing plugin
+$(function() {
+    $('.page-scroll a').bind('click', function(event) {
+        var $anchor = $(this);
+        $('html, body').stop().animate({
+            scrollTop: $($anchor.attr('href'))[0].offsetTop
+        }, 1500, 'easeInOutExpo');
+        event.preventDefault();
+    });
+});
+$(function() {
+    $('.hide-scroll a').bind('click', function(event) {
+        event.preventDefault();
+    });
+});
+
 // Highlight the top nav as scrolling occurs
 $('body').scrollspy({
     target: '.navbar-fixed-top'
@@ -142,4 +142,3 @@ $('body').scrollspy({
 $('.navbar-collapse ul li a').click(function() {
     $('.navbar-toggle:visible').click();
 });
-

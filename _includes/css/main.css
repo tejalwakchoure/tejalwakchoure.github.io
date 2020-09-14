@@ -875,7 +875,7 @@ footer .footer-below {
 
 
 #portfolioDetails {
-	height: 60vh;
+	height: fit-content;
     width: 100%;
 	/*background-color: pink;*/
 	/*display: none;*/

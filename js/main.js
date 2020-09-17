@@ -99,7 +99,7 @@ function toggleDetails(num) {
     // $('#myCarousel #link-'+num).click();
     swiper.slideTo(num,1000,false)
     console.log('moved to #slide-',num)
-    num = 6-num;
+    // num = 6-num;
 
     if($('#portfolioDetails').is( ":hidden")) {
         console.log("#slide-", num, " is not active ; section is not visible")
@@ -113,7 +113,7 @@ function toggleDetails(num) {
         $("#portfolio-link-"+num).attr('href','javascript:void(0)'); //reqd?
     }
     else {
-        // console.log('no toggle action')
+        console.log("no toggle action on #slide-", num)
     }
 
     return false;

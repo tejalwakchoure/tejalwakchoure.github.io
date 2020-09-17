@@ -11,29 +11,28 @@
 				<div class="swiper-wrapper" style="width: 90vw !important;">
 					{% for post in site.posts %}
 					<div class="swiper-slide" id="slide-{{ post.modal-id }}" 
-					style="height: auto !important; width: 100% !important; background-color: pink;/*display: flex;*/ ">
+					style="height: auto !important; width: 100% !important;">
 						<div class="container" style="text-align: center; width: 100%;">
-							<div class="row">
-								<div class="page-scroll" style="height:fit-content; width:fit-content; float:left;">
+						<div class="row">
+								<!-- <div class="page-scroll" style="height:fit-content; width:fit-content; float:left;"> -->
 									<a role="button" href="#portfolio-item-{{ post.modal-id }}" class="slide-link"
 									style="float: left; padding: 20px 20px 0 20px; outline: 0;"
 									onclick="return toggleOnPortfolioLink(6-{{ post.modal-id }});" >
 										<i class="fa fa-2x fa-angle-double-left" style="color: gray; background: transparent;"></i>
 									</a>
-							</div>
+							<!-- </div> -->
 						</div>
-						<div class="row" style="display: flex; flex-direction: row; position: relative; padding: 10px 0;">
-							<img src="assets/img/portfolio/{{ post.img }}" class="img-responsive" alt="{{ post.alt }}" style=" height: 400px; width: 200px; object-fit: cover; margin: auto 0;">
+						<div class="row" id="content-row" style="display: flex; flex-direction: row; position: relative; padding: 10px 0;">
+							<img src="assets/img/portfolio/{{ post.img }}" class="img-responsive" alt="{{ post.alt }}" id="main-img" style=" height: 400px; width: 200px; object-fit: cover; margin: auto 0;">
 							
-							<img src="assets/img/portfolio/{{ post.img }}" class="img-responsive" alt="{{ post.alt }}" style=" position: absolute; z-index: 2; margin: auto 0 auto 100px;
+							<img src="assets/img/portfolio/{{ post.img }}" class="img-responsive" alt="{{ post.alt }}" id="img-on-top" style=" position: absolute; z-index: 2; margin: auto 0 auto 100px;
 							height: 250px; width: 300px; object-fit: cover;
 							top: 50%; bottom: 50%; ">
 							
-							<div style="padding-left: 3%; padding-right: 2%; margin: auto auto auto 200px;">
-								<h2>{{ post.title }}</h2>
-								<hr class="primary">
+							<div id="content" style="padding-left: 3%; padding-right: 2%; margin: auto auto auto 200px;">
+								<h2 style="margin-bottom: 10%;">{{ post.title }}</h2>
 								{% if post.description %}
-								<p style="font-size: 20px; text-align: left;">{{ post.description }}</p>
+								<p style="font-size: 20px; text-align: left; margin-bottom: 5%;">{{ post.description }}</p>
 								{% endif %}
 								<ul class="list-inline item-details">
 									{% if post.project-date %}

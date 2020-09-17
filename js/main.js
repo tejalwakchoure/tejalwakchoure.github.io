@@ -105,7 +105,17 @@ function toggleDetails(num) {
 
     $(".portfolio-link").attr("href", "#portfolioDetails");
     $(".slide-link").attr("href", "#portfolio-item-"+num);
-    
+}
+
+function toggleOnPortfolioLink(num) {
+    if($('#portfolioDetails').css('display')!='none') {
+        $('#portfolio').show().siblings('section').hide();
+    }
+    else if($('#portfolio').css('display')!='none') {
+        swiper.slideTo(num);
+        $('#portfolioDetails').show().siblings('section').hide();
+    }
+}
     
 
     // if($('#portfolioDetails').is( ":hidden")) {

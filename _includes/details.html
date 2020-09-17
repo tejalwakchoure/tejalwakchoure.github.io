@@ -7,8 +7,7 @@
             </div>
         </div> -->
 	<div class="row" style="/*padding-left: 0*/ ">
-		<div class="swiper-container" style="width: 100%;
-      height: 100%;">
+		<div class="swiper-container" style="width: 100%; height: 100%; display: block;">
 			<div class="swiper-wrapper" style="width: 90vw !important;">
 				{% for post in site.posts %}
 				<div class="swiper-slide" id="slide-{{ post.modal-id }}" 
@@ -64,9 +63,11 @@
 			</div>
 			{% endfor %}
 			</div>
-    		<div class="swiper-pagination"></div>
-			<div class="swiper-button-prev"></div>
-			<div class="swiper-button-next"></div>
+    		<div class="swiper-pagination" style="display: inline-block;"></div>
+    		<div class="swiper-navigation" style="display: inline-block; width: 100%; color: gray !important;">
+				<div class="swiper-button-prev"></div>
+				<div class="swiper-button-next"></div>
+			</div>
 		</div>
 	</div>
 	<!-- <div class="row">

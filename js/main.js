@@ -97,9 +97,9 @@ var swiper = new Swiper('.swiper-container', {
 function toggleDetails(num) {
     
     // $('#myCarousel #link-'+num).click();
-    swiper.slideTo(num,1000,false)
+    swiper.slideTo(num)
     console.log('moved to #slide-',num)
-    // num = 6-num;
+    num = 6-num;
 
     if($('#portfolioDetails').is( ":hidden")) {
         console.log("#slide-", num, " is not active ; section is not visible")
@@ -115,6 +115,21 @@ function toggleDetails(num) {
     else {
         console.log("no toggle action on #slide-", num)
     }
+    
+    // if($('#portfolioDetails').is( ":hidden")) {
+    //     console.log("#slide-", num, " is not active ; section is not visible")
+    //     $('#portfolioDetails').collapse('toggle');
+    //     console.log('collapse toggled to show')
+    // }
+    // else if($('#portfolioDetails').is( ":visible") && $('#slide-'+num).hasClass('active')) {
+    //     console.log("#slide-", num, " is active")
+    //     $('#portfolioDetails').collapse('toggle');
+    //     console.log('collapse toggled show/hide')
+    //     $("#portfolio-link-"+num).attr('href','javascript:void(0)'); //reqd?
+    // }
+    // else {
+    //     console.log("no toggle action on #slide-", num)
+    // }
 
     return false;
 }

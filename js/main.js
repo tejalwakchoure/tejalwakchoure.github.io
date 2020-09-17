@@ -89,6 +89,8 @@ var swiper = new Swiper('.swiper-container', {
       },
       mousewheel: true,
       keyboard: true,
+      observer: true,
+      observeParents: true,
     });
 
 

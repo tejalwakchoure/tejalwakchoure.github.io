@@ -881,6 +881,20 @@ footer .footer-below {
 	/*display: none;*/
 }
 
+.slider {
+	display: flex;
+	scroll-snap-type: x mandatory;
+	-webkit-overflow-scrolling: touch;
+	overflow-x: scroll;
+}
+
+.slide-item {
+	min-width: 100vw;
+	height: 100vh;
+	scroll-snap-align: start;
+	position: relative;
+}
+
 #portfolioDetails .container .row #myCarousel {
 	background-color: pink;
 }

@@ -76,32 +76,7 @@ function checkTime(i) {
     return i;
 }
 
-
-
-// // Swiper initialization
-// var mySwiper = new Swiper('.swiper-container', {
-//     // Optional parameters
-//     // cssMode: true,
-//     // loop: true,
-//     // direction: 'horizontal',
-//     slidesPerView: 1,
-//     // spaceBetween: 30,
-//     pagination: {
-//         el: '.swiper-pagination',
-//         clickable: true,
-//     },
-//     navigation: {
-//         nextEl: '.swiper-button-next',
-//         prevEl: '.swiper-button-prev',
-//     },
-//     mousewheel: true,
-//     keyboard: true,
-
-//   // scrollbar: {
-//   //   el: '.swiper-scrollbar',
-//   // },
-// })
-
+// Carousel initialization
 var swiper = new Swiper('.swiper-container', {
       cssMode: true,
       navigation: {
@@ -121,8 +96,9 @@ var swiper = new Swiper('.swiper-container', {
 // onclick event for portfolio details
 function toggleDetails(num) {
     
-    $('#myCarousel #link-'+num).click();
-    num = 6-num;
+    // $('#myCarousel #link-'+num).click();
+    swiper.slideTo(num,1000,false)
+    // num = 6-num;
 
     if($('#portfolioDetails').is( ":hidden")) {
         // console.log("#slide-", num, " is not active ; section is not visible")
@@ -143,19 +119,19 @@ function toggleDetails(num) {
 }
 
 // Equalize carousel heights
-$(function() {
-    var maxHeight = '';
-    var heights = [];
-    $(".carousel-inner > .item").siblings().each(function(i){
-      heights.push($(this).outerHeight());
-    });
+// $(function() {
+//     var maxHeight = '';
+//     var heights = [];
+//     $(".carousel-inner > .item").siblings().each(function(i){
+//       heights.push($(this).outerHeight());
+//     });
 
-    maxHeight = Math.max.apply(Math, heights);
-    $(".carousel-inner").css({'height': maxHeight + 'px !important'});
-    $(".carousel-inner > .item").siblings().each(function(i){
-        $(this).css({'height': maxHeight + 'px !important'});
-    });
-});
+//     maxHeight = Math.max.apply(Math, heights);
+//     $(".carousel-inner").css({'height': maxHeight + 'px !important'});
+//     $(".carousel-inner > .item").siblings().each(function(i){
+//         $(this).css({'height': maxHeight + 'px !important'});
+//     });
+// });
 
 // jQuery for page scrolling feature - requires jQuery Easing plugin
 $(function() {

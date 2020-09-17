@@ -100,22 +100,14 @@ function toggleDetails(num) {
     swiper.slideTo(num)
     console.log('moved to #slide-',num)
     num = 6-num;
+    $('#portfolioDetails').collapse('toggle');
+    $('#portfolio').collapse('toggle');
 
-    if($('#portfolioDetails').is( ":hidden")) {
-        console.log("#slide-", num, " is not active ; section is not visible")
-        $('#portfolioDetails').collapse('toggle');
-        console.log('collapse toggled to show')
-    }
-    else if($('#portfolioDetails').is( ":visible") && $('#slide-'+num).hasClass('active')) {
-        console.log("#slide-", num, " is active")
-        $('#portfolioDetails').collapse('toggle');
-        console.log('collapse toggled show/hide')
-        $("#portfolio-link-"+num).attr('href','javascript:void(0)'); //reqd?
-    }
-    else {
-        console.log("no toggle action on #slide-", num)
-    }
+    $(".portfolio-link").attr("href", "#portfolioDetails");
+    $(".slide-link").attr("href", "#portfolio-item-"+num);
     
+    
+
     // if($('#portfolioDetails').is( ":hidden")) {
     //     console.log("#slide-", num, " is not active ; section is not visible")
     //     $('#portfolioDetails').collapse('toggle');

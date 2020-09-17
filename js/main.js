@@ -105,6 +105,8 @@ function toggleDetails(num) {
 
     $(".portfolio-link").attr("href", "#portfolioDetails");
     $(".slide-link").attr("href", "#portfolio-item-"+num);
+    return false;
+
 }
 
 function toggleOnPortfolioLink(num) {
@@ -115,6 +117,10 @@ function toggleOnPortfolioLink(num) {
         swiper.slideTo(num);
         $('#portfolioDetails').show().siblings('section').hide();
     }
+    else {
+    }
+    return false;
+
 }
     
 
@@ -133,8 +139,6 @@ function toggleOnPortfolioLink(num) {
     //     console.log("no toggle action on #slide-", num)
     // }
 
-    return false;
-}
 
 // Equalize carousel heights
 // $(function() {

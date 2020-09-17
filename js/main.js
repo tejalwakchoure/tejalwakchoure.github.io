@@ -78,29 +78,43 @@ function checkTime(i) {
 
 
 
-// Swiper initialization
-var mySwiper = new Swiper('.swiper-container', {
-    // Optional parameters
-    // cssMode: true,
-    // loop: true,
-    // direction: 'horizontal',
-    slidesPerView: 1,
-    // spaceBetween: 30,
-    pagination: {
-        el: '.swiper-pagination',
-        clickable: true,
-    },
-    navigation: {
+// // Swiper initialization
+// var mySwiper = new Swiper('.swiper-container', {
+//     // Optional parameters
+//     // cssMode: true,
+//     // loop: true,
+//     // direction: 'horizontal',
+//     slidesPerView: 1,
+//     // spaceBetween: 30,
+//     pagination: {
+//         el: '.swiper-pagination',
+//         clickable: true,
+//     },
+//     navigation: {
+//         nextEl: '.swiper-button-next',
+//         prevEl: '.swiper-button-prev',
+//     },
+//     mousewheel: true,
+//     keyboard: true,
+
+//   // scrollbar: {
+//   //   el: '.swiper-scrollbar',
+//   // },
+// })
+
+var swiper = new Swiper('.swiper-container', {
+      cssMode: true,
+      navigation: {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
-    },
-    mousewheel: true,
-    keyboard: true,
-
-  // scrollbar: {
-  //   el: '.swiper-scrollbar',
-  // },
-})
+      },
+      pagination: {
+        el: '.swiper-pagination'
+      },
+      mousewheel: true,
+      keyboard: true,
+    });
+    
 
 
 // onclick event for portfolio details

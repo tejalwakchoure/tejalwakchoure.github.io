@@ -11,8 +11,7 @@
       height: 100%;">
 			<div class="swiper-wrapper">
 				{% for post in site.posts %}
-				<div class="swiper-slide" 
-				style="height: fit-content; object-fit: cover; width: 100%; display: flex;">
+				<div class="swiper-slide" style="height: auto !important; width: 100% !important; /*display: flex;*/ ">
 					<div class="container" style="text-align: center; width: 100%;">
 						<div class="row">
 							<div class="page-scroll" style="height:fit-content; width:fit-content; float:right;">
@@ -67,7 +66,7 @@
     		<div class="swiper-pagination"></div>
 			<div class="swiper-button-prev"></div>
 			<div class="swiper-button-next"></div>
-    		<div class="swiper-scrollbar"></div>
+    		<!-- <div class="swiper-scrollbar"></div> -->
 		</div>
 	</div>
 	<!-- <div class="row">

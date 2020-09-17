@@ -109,12 +109,13 @@ var swiper = new Swiper('.swiper-container', {
         prevEl: '.swiper-button-prev',
       },
       pagination: {
-        el: '.swiper-pagination'
+        el: '.swiper-pagination',
+        clickable: true,
       },
       mousewheel: true,
       keyboard: true,
     });
-    
+
 
 
 // onclick event for portfolio details

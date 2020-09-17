@@ -15,14 +15,14 @@
 						<div class="container" style="text-align: center; width: 100%;">
 							<div class="row">
 								<div class="page-scroll" style="height:fit-content; width:fit-content; float:left;">
-									<a role="button" href="#portfolio" class="slide-link"
+									<a role="button" href="#portfolio-item-{{ post.modal-id }}" class="slide-link"
 									style="float: left; padding: 20px 20px 0 20px; outline: 0;"
 									onclick="return toggleOnPortfolioLink(6-{{ post.modal-id }});" >
 										<i class="fa fa-2x fa-angle-double-left" style="color: gray; background: transparent;"></i>
 									</a>
 							</div>
 						</div>
-						<div class="row" style="display: flex; flex-direction: row; position: relative;">
+						<div class="row" style="display: flex; flex-direction: row; position: relative; padding: 10px 0;">
 							<img src="assets/img/portfolio/{{ post.img }}" class="img-responsive" alt="{{ post.alt }}" style=" height: 400px; width: 200px; object-fit: cover; margin: auto 0;">
 							
 							<img src="assets/img/portfolio/{{ post.img }}" class="img-responsive" alt="{{ post.alt }}" style=" position: absolute; z-index: 2; margin: auto 0 auto 100px;

@@ -116,13 +116,12 @@ function toggleOnPortfolioLink(num) {
         $('#portfolio').show().siblings('section').hide();
     }
     else if($('#portfolio').css('display')!='none') {
-        swiper.slideTo(num);
         $('#portfolioDetails').show().siblings('section').hide();
+        swiper.slideTo(num);
     }
     else {
     }
     return false;
-
 }
     
 

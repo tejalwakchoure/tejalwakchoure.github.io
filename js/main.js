@@ -26,13 +26,14 @@ $(document).ready(function() {
         // Animate components on and off the screen on loading
         $('#preloader').slideUp(1000);
         // $('#preloader').addClass("animate__animated", "animate__fadeOutRight");
-        $('#body-container').fadeIn(1000);
-        $('.hide1 header .img-responsive').css({opacity: 0.0, visibility: "visible"}).delay(500).animate({opacity: 1.0}, 500);
-        $('.hide1 header').css({opacity: 0.0, visibility: "visible"}).delay(500).animate({opacity: 1.0}, 500);  
-        fadeInChildren('.hide1 header .intro-text',1000);
-        $('.hide1').css({opacity: 0.0, visibility: "visible"}).delay(500).animate({opacity: 1.0}, 500);  
+        // $('#body-container').fadeIn(1000);
+        $('#body-container').classList.add('animate__animated', 'animate__zoomIn', 'animate__delay-2s')
+        // $('.hide1').css({opacity: 0.0, visibility: "visible"}).delay(500).animate({opacity: 1.0}, 500);  
+        // $('.hide1 header .img-responsive').css({opacity: 0.0, visibility: "visible"}).delay(500).animate({opacity: 1.0}, 500);
+        // $('.hide1 header').css({opacity: 0.0, visibility: "visible"}).delay(500).animate({opacity: 1.0}, 500);  
+        // fadeInChildren('.hide1 header .intro-text',1000);
+        fadeInChildren('.hide1 header',1000);
         // fadeInChildren('.hide1 section',1000);
-        // $('.hide2').css({opacity: 0.0, visibility: "visible"}).delay(2300).animate({opacity: 1.0}, 500);
         // $('#portfolioDetails .container .row #myCarousel .carousel-inner #slide-6').addClass('active');
         startTime();
      }
@@ -50,8 +51,8 @@ $(document).ready(function() {
 //      $('body').fadeIn('slow');
 //      $('.hide1 header .img-responsive').css({opacity: 0.0, visibility: "visible"}).delay(500).animate({opacity: 1.0}, 500);
 //      $('.hide1 header').css({opacity: 0.0, visibility: "visible"}).delay(500).animate({opacity: 1.0}, 500);  
+//      $('.hide1').css({opacity: 0.0, visibility: "visible"}).delay(500).animate({opacity: 1.0}, 500);  
 //      fadeInChildren('.hide1 header .intro-text',1000);
-//      $('.hide2').css({opacity: 0.0, visibility: "visible"}).delay(2300).animate({opacity: 1.0}, 500);
 //  });
 
 

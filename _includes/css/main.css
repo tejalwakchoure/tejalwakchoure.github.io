@@ -74,13 +74,10 @@ body {
 	font-weight:200;
 }
 
-.hide1, .hide1 header .container{   
+/*.hide1, .hide1 header .container{   
 	visibility: hidden;  
-}  
-/*.hide2{ 
-	visibility: hidden;  
-}*/
-
+}
+*/
 .show-on-submit {
 	display: none;
 }

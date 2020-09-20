@@ -110,6 +110,7 @@ function toggleDetails(num) {
 
 function toggleOnPortfolioLink(num) {
     if($('#portfolioDetails').css('display')!='none') {
+        $('#portfolio').addClass("animate__animated animate__slideInRight");
         $('#portfolio').show().siblings('section').hide();
     }
     else if($('#portfolio').css('display')!='none') {

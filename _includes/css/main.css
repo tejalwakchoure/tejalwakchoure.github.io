@@ -10,7 +10,7 @@ html,body
 	font-feature-settings: "lnum";
 	font-weight: 300;
 	font-family:Raleway,Montserrat,sans-serif;
-	background-color: #{{ site.color.lightbkg }};
+	/*background-color: #{{ site.color.lightbkg }};*/
 }   
 
 /* Hide scrollbar for Chrome, Safari and Opera */
@@ -198,8 +198,7 @@ header {
 	margin: 0;
 	display: flex;
 	flex-direction: column;
-	background: #{{ site.color.lightbkg }};
-	/*background: linear-gradient(to right,#{{ site.color.header_left_dark }} 0%,#{{ site.color.header_left }} 73%,#{{ site.color.header_right }} 73%,#{{ site.color.header_right_dark }} 100%);*/
+	/*background: #{{ site.color.lightbkg }};*/
 }
 
 header img {
@@ -300,7 +299,7 @@ header .intro-text .skills {
 	font-weight: 400;
 	font-family:Raleway,Montserrat,sans-serif;
 	color: #{{ site.color.lighttext }};
-	background-color: #{{ site.color.lightbkg }};
+	/*background-color: #{{ site.color.lightbkg }};*/
 	min-height: 30px !important;
 }   
 
@@ -429,7 +428,7 @@ section h2 {
 
 section.success {   
 	color: #{{ site.color.lighttext }};    
-	background: #{{ site.color.lightbkg }};
+	/*background: #{{ site.color.lightbkg }};*/
 }   
 
 @media(max-width:768px) {   
@@ -818,60 +817,6 @@ footer .footer-below {
 		display: none;
 	}
 }
-
-
-#portfolio .portfolio-link {    
-	display: block; 
-	/*position: relative; */
-	/*margin: 0 auto; */
-	/*width: 300px;*/
-	height: 100%;
-	width: 100%;
-}   
-
-#portfolio .caption {
-	position: absolute;
-	width: 100%;
-	height: 100%;
-	opacity: 1;
-	background: rgba({{ site.color.primary-rgb }},.85);
-/*	-webkit-transition: all ease .5s;
-	-moz-transition: all ease .5s;
-	transition: all ease .5s;*/
-	transition: transform 300ms;
-    /*background-color: lighten(deeppink, 15%);*/
-    transform: translate3d(0, 100%, 0);
-}
-
-#portfolio .caption:hover {
-	/*opacity: 1;*/
-	transform: translate3d(0, 0, 0);
-}
-
-#portfolio .caption-content {
-	position: absolute;
-	top: 50%;
-	left: 10%;
-	width: 80%;
-	height: 100%;
-	margin-top: -15px;
-	text-align: center;
-	/*overflow: auto;*/
-	color: #e6e6e6;
-	font-size: 30px;
-	letter-spacing: 3px;
-	font-variant-caps: all-petite-caps;
-}
-
-#portfolio .caption-content i {
-	margin-top: -12px;
-}
-
-#portfolio .caption-content h3,
-#portfolio .caption-content h4 {
-	margin: 0;
-}
-
 
 #portfolio .overlay-link {
 	height: 100%;

@@ -447,7 +447,7 @@ section.success {
 	margin: 0 auto; 
 	width: 300px;
 }   
-
+/*
 #portfolio .portfolio-item .portfolio-link .caption {
 	position: absolute;
 	width: 100%;
@@ -471,7 +471,7 @@ section.success {
 	height: 100%;
 	margin-top: -15px;
 	text-align: center;
-	/*overflow: auto;*/
+	overflow: auto; //was commented
 	color: #e6e6e6;
 	font-size: 30px;
 	letter-spacing: 3px;
@@ -486,7 +486,7 @@ section.success {
 #portfolio .portfolio-item .portfolio-link .caption .caption-content h4 {
 	margin: 0;
 }
-
+*/
 
 #portfolio * {  
 	z-index: 2; 

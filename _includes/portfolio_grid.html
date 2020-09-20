@@ -16,7 +16,7 @@
                     <div class="grid-col"></div>
                     <div class="grid-col"></div>
                     {% for post in site.posts %}
-                        <div id="portfolio-item-{{ post.modal-id }}" class="grid-item grid-item{{ post.modal-id }}" style=" /*box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);*/">
+                        <div id="portfolio-item-{{ post.modal-id }}" class="grid-item grid-item{{ post.modal-id }}" style="/*box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);*/">
                             <div style="position: relative; overflow: hidden; height: 100%; width: 100%;">
                             <!-- <div class="page-scroll" style="height: 100%; width: 100%;"> -->
                                 <a id="portfolio-link-{{ post.modal-id }}" href="#work"
@@ -24,7 +24,7 @@
                             <!-- </div> -->
                                 <div class="overlay"> {{ post.title }} </div>
                                     
-                                <img src="assets/img/portfolio/{{ post.img }}" class="img-responsive" alt="{{ post.alt }}" style=" height: 100%; width: 100%; object-fit: cover;">
+                                <img src="assets/img/portfolio/{{ post.img }}" class="img-responsive" alt="{{ post.alt }}" style="height: 100%; width: 100%; object-fit: cover;">
                                 </div>
                         </div>
                     {% endfor %}

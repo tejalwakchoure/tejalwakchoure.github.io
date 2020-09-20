@@ -992,7 +992,7 @@ footer .footer-below {
 }
 
 
-.overlay-link {
+a.overlay-link {
 	height: 100%;
 	width: 100%;
     position: absolute;

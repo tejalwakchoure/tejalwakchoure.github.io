@@ -15,8 +15,7 @@ function fadeInChildren(parent, base_delay) {
 }
 
 $(document).ready(function() {
-    // $('#body-container').css({display: 'none'});
-    $('#body-container').css({display: 'hidden'});
+    $('#body-container').css({display: 'none'});
     var counter = 0;
     var i = setInterval(function(){
       $("#preloader .container #wrapper #count").html(counter);
@@ -25,15 +24,14 @@ $(document).ready(function() {
         // while(!window.loaded) {}
         clearInterval(i);
         // Animate components on and off the screen on loading
-        // $('#preloader').slideUp(1000);
-        $('#preloader').addClass("animate__animated animate__slideOutUp");
-        // $('#body-container').fadeIn(1000);
-        $('#body-container').addClass('animate__animated animate__zoomIn animate__delay-2s')
+        $('#preloader').slideUp(1000);
+        // $('#preloader').addClass("animate__animated", "animate__fadeOutRight");
+        $('#body-container').fadeIn(1000);
         // $('.hide1').css({opacity: 0.0, visibility: "visible"}).delay(500).animate({opacity: 1.0}, 500);  
         // $('.hide1 header .img-responsive').css({opacity: 0.0, visibility: "visible"}).delay(500).animate({opacity: 1.0}, 500);
         // $('.hide1 header').css({opacity: 0.0, visibility: "visible"}).delay(500).animate({opacity: 1.0}, 500);  
         // fadeInChildren('.hide1 header .intro-text',1000);
-        fadeInChildren('.hide1 header',1000);
+        fadeInChildren('#body-container header',1000);
         // fadeInChildren('.hide1 section',1000);
         // $('#portfolioDetails .container .row #myCarousel .carousel-inner #slide-6').addClass('active');
         startTime();

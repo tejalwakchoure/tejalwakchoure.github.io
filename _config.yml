@@ -30,6 +30,7 @@ color:
   
   lighttext: '575757'
   lightbkg: 'fff4e9'
+  lightbkg_overlay: 'c79d6e'
 
 # Footer settings
 footer:

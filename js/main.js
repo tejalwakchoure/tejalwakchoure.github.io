@@ -26,8 +26,6 @@ $(document).ready(function() {
         // Animate components on and off the screen on loading
         $('#preloader').slideUp(1000);
         $('#body-container').fadeIn(1000);
-        // $('.hide1').css({opacity: 0.0, visibility: "visible"}).delay(500).animate({opacity: 1.0}, 500);  
-        // fadeInChildren('.hide1 header .intro-text',1000);
         fadeInChildren('#body-container header',1000);
         fadeInChildren('#body-container header .intro-text',1000);
         // $('#portfolioDetails .container .row #myCarousel .carousel-inner #slide-6').addClass('active');

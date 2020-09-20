@@ -991,3 +991,24 @@ footer .footer-below {
 	}
 }
 
+
+.overlay-link {
+	height: 100%;
+	width: 100%;
+    position: absolute;
+    z-index: 3;
+    top: 0;
+    left: 0;
+}
+
+.overlay {
+	position: absolute;
+    height: 100%;
+    width: 100%;
+    justify-content: center;
+    transition: transform 300ms;
+    background-color: black;
+    transform: translate3d(-100%, 0, 0);
+}
+}
+

@@ -24,8 +24,25 @@ body {
 	scrollbar-width: none;  /* Firefox */
 }
 
-.animate__animated.animate__fadeOutRight {
+/*.animate__animated.animate__fadeOutRight {
 	--animate-duration: 1000;
+}*/
+
+.body-container {
+  transition: background-color 1s ease;
+}
+
+.color-violet {
+  background-color: violet;
+}
+.color-blue {
+  background-color: blue;
+}
+.color-turquoise {
+  background-color: turquoise;
+}
+.color-green {
+  background-color: green;
 }
 
 #rectangle {

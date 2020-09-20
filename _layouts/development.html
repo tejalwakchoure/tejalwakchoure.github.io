@@ -4,14 +4,22 @@
     <body id="page-top" class="index">
         {% include preloader.html %}
         <div id="body-container" class="body-container">
+          <div class="section-bkg" data-color="violet">
             {% include nav.html %}
             {% include header.html %}
-            {% include about.html %}
+          </div>
+          <div class="section-bkg" data-color="blue">
+          {% include about.html %}
+          </div>
+          <div class="section-bkg" data-color="turquoise">
             {% include portfolio_grid.html %}
             {% include details.html %}
+          </div>
+          <div class="section-bkg" data-color="green">
             {% include contact.html %}        
             {% include footer.html %}
-        </div>
+          </div>
+        </div> 
         {% include js.html %}
     </body>
 </html>

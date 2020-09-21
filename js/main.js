@@ -64,16 +64,9 @@ $(window).scroll(function() {
     // So position of (position of top of div <= scroll position) && (position of bottom of div > scroll position).
     // Remember we set the scroll to 33% earlier in scroll var.
     if ($this.position().top <= scroll && $this.position().top + $this.height() > scroll) {
-      
-      console.log("changed from ", function(index,css) {
-        return (css.match (/(^|\s)color-\S+/g) || []).join(' ');});
-      
       $body.removeClass(function (index, css) {
         return (css.match (/(^|\s)color-\S+/g) || []).join(' ');
-      });
-      
-      console.log("changed to ", $(this).data('color'));
-      
+      });      
       $body.addClass('color-' + $(this).data('color'));
     }
   });    
@@ -102,7 +95,7 @@ function startTime() {
     var t = setTimeout(startTime, 500);
 }
 function checkTime(i) {
-    if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+    if (i < 10) {i = "0" + i};
     return i;
 }
 
@@ -121,14 +114,14 @@ var swiper = new Swiper('.swiper-container', {
       keyboard: true,
       observer: true,
       observeParents: true,
+      slidesPerView: 1
     });
 
 
 
 // onclick event for portfolio details
 function toggleDetails(num) {
-    
-    // $('#myCarousel #link-'+num).click();
+
     swiper.slideTo(num)
     console.log('moved to #slide-',num)
     num = 6-num;
@@ -155,38 +148,6 @@ function toggleOnPortfolioLink(num) {
     }
     return false;
 }
-    
-
-    // if($('#portfolioDetails').is( ":hidden")) {
-    //     console.log("#slide-", num, " is not active ; section is not visible")
-    //     $('#portfolioDetails').collapse('toggle');
-    //     console.log('collapse toggled to show')
-    // }
-    // else if($('#portfolioDetails').is( ":visible") && $('#slide-'+num).hasClass('active')) {
-    //     console.log("#slide-", num, " is active")
-    //     $('#portfolioDetails').collapse('toggle');
-    //     console.log('collapse toggled show/hide')
-    //     $("#portfolio-link-"+num).attr('href','javascript:void(0)'); //reqd?
-    // }
-    // else {
-    //     console.log("no toggle action on #slide-", num)
-    // }
-
-
-// Equalize carousel heights
-// $(function() {
-//     var maxHeight = '';
-//     var heights = [];
-//     $(".carousel-inner > .item").siblings().each(function(i){
-//       heights.push($(this).outerHeight());
-//     });
-
-//     maxHeight = Math.max.apply(Math, heights);
-//     $(".carousel-inner").css({'height': maxHeight + 'px !important'});
-//     $(".carousel-inner > .item").siblings().each(function(i){
-//         $(this).css({'height': maxHeight + 'px !important'});
-//     });
-// });
 
 // jQuery for page scrolling feature - requires jQuery Easing plugin
 $(function() {

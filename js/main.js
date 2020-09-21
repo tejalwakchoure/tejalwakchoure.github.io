@@ -64,9 +64,16 @@ $(window).scroll(function() {
     // So position of (position of top of div <= scroll position) && (position of bottom of div > scroll position).
     // Remember we set the scroll to 33% earlier in scroll var.
     if ($this.position().top <= scroll && $this.position().top + $this.height() > scroll) {
+      
+      console.log("changed from ", function(index,css) {
+        return (css.match (/(^|\s)color-\S+/g) || []).join(' ');});
+      
       $body.removeClass(function (index, css) {
         return (css.match (/(^|\s)color-\S+/g) || []).join(' ');
       });
+      
+      console.log("changed to ", $(this).data('color'));
+      
       $body.addClass('color-' + $(this).data('color'));
     }
   });    

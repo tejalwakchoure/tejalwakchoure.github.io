@@ -148,6 +148,7 @@ function toggleOnPortfolioLink(num) {
     }
     else if($('#portfolio').css('display')!='none') {
         $('#portfolioDetails').show().siblings('section').hide();
+        swiper.update();
         swiper.slideTo(num);
     }
     else {

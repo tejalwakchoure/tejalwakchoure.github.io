@@ -51,8 +51,8 @@ $(document).ready(function() {
 
 
 
-$(window).scroll(function() {
-  var $window = $(window),
+$('.body-container').scroll(function() {
+  var $window = $('.body-container'),
   $body = $('.body-container'),
   $panel = $('.section-bkg');
   // Change 33% earlier than scroll position so colour is there when you arrive.

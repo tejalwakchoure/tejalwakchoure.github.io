@@ -114,7 +114,9 @@ var swiper = new Swiper('.swiper-container', {
       keyboard: true,
       observer: true,
       observeParents: true,
-      slidesPerView: 1
+      slidesPerView: 'auto',
+      visibilityFullFit: true,
+      autoResize: false
     });
 
 

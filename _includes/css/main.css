@@ -2,6 +2,7 @@ html,body
 {
 	width: 100%;    
 	/*height: 100%;   */
+	height: fit-content;
 	margin: 0px;    
 	padding: 0px;
 	overflow-x: hidden;
@@ -32,17 +33,17 @@ body {
   transition: background-color 1s ease;
 }
 
-.color-violet {
-  background-color: violet;
+.color-1 {
+  background-color: white;
 }
-.color-blue {
-  background-color: blue;
+.color-2 {
+  background-color: #{{ site.color.lightbkg }};
 }
-.color-turquoise {
-  background-color: turquoise;
+.color-3 {
+  background-color: #F8D4CD;
 }
-.color-green {
-  background-color: green;
+.color-4 {
+  background-color: #F2B0A3;
 }
 
 #rectangle {
@@ -299,6 +300,7 @@ header .intro-text .skills {
 	font-weight: 400;
 	font-family:Raleway,Montserrat,sans-serif;
 	color: #{{ site.color.lighttext }};
+	background: transparent;
 	/*background-color: #{{ site.color.lightbkg }};*/
 	min-height: 30px !important;
 }   

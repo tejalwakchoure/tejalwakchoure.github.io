@@ -146,7 +146,8 @@ function toggleOnPortfolioLink(num) {
         $('#portfolioDetails').show().siblings('section').hide();
         swiper.update();
         swiper.slideTo(num);
-        $(this).attr("href", "#portfolio-item-"+num);
+        // $(this).attr("href", "#portfolio-item-"+num);
+        $(".slide-link").attr("href", "#work");
     }
     else {
     }

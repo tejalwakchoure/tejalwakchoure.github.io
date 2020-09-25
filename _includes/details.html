@@ -1,19 +1,16 @@
 	<!-- Portfolio Details Section -->
-	<section id="portfolioDetails" class="animate__animated animate__slideInRight" 
-	style="display:none; animation-duration: 800ms;"> 
+	<section id="portfolioDetails" class="animate__animated animate__slideInRight" style="animation-duration: 800ms;"> 
 		<div class="container">
 		<div class="row">
 			<div class="swiper-container">
 				<div class="swiper-wrapper">
 					{% for post in site.posts %}
 					<div class="swiper-slide" id="slide-{{ post.modal-id }}">
-						<div class="container" style="text-align: center; width: 100%;">
+						<div class="container text-center">
 						<div class="row">
 								<!-- <div class="page-scroll" style="height:fit-content; width:fit-content; float:left;"> -->
-								<a role="button" href="#portfolio-item-{{ post.modal-id }}"  id="#slide-link-{{ post.modal-id }}" class="slide-link"
-								style="float: left; padding: 20px 20px 0 20px; outline: 0;"
-								onclick="return toggleOnPortfolioLink(6-{{ post.modal-id }});">
-									<i class="fa fa-2x fa-angle-double-left" style="color: gray; background: transparent;"></i>
+								<a role="button" href="#portfolio-item-{{ post.modal-id }}" id="#slide-link-{{ post.modal-id }}" onclick="return toggleOnPortfolioLink(6-{{ post.modal-id }});">
+									<i class="fa fa-2x fa-angle-double-left"></i>
 								</a>
 							<!-- </div> -->
 						</div>
@@ -23,9 +20,9 @@
 							<img src="assets/img/portfolio/{{ post.img }}" class="img-responsive" alt="{{ post.alt }}" id="img-on-top">
 							
 							<div id="content">
-								<h2 style="margin-bottom: 10%;">{{ post.title }}</h2>
+								<h2>{{ post.title }}</h2>
 								{% if post.description %}
-								<p style="font-size: 20px; text-align: left; margin-bottom: 5%;">{{ post.description }}</p>
+								<p>{{ post.description }}</p>
 								{% endif %}
 								<ul class="list-inline item-details">
 									{% if post.project-date %}
@@ -42,10 +39,7 @@
 									{% endif %}
 									{% if post.github-link %}
 									<li>Code:
-										<strong><a 
-											href={{ post.github-link }}
-											style="text-decoration: underline; color: #000" 
-											target="_blank">GitHub Repo</a>
+										<strong><a href={{ post.github-link }} target="_blank">GitHub Repo</a>
 										</strong>
 									</li>
 									{% endif %}
@@ -56,8 +50,8 @@
 				</div>
 				{% endfor %}
 				</div>
-	    		<div class="swiper-pagination" style="display: inline-block;"></div>
-	    		<div class="swiper-navigation" style="display: inline-table; width: 100%; color: gray !important;">
+	    		<div class="swiper-pagination"></div>
+	    		<div class="swiper-navigation">
 					<div class="swiper-button-prev"></div>
 					<div class="swiper-button-next"></div>
 				</div>

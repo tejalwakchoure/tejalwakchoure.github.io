@@ -16,21 +16,30 @@ bing_verify:
 
 # Color settings (hex-codes without the leading hash-tag)
 color:
-  primary: '000000'
-  primary-rgb: '0,0,0'
-  secondary: '000000'
-  secondary-dark: '000000'
-  header_left_dark: '06021b'
-  header_left: '15119a'
-  header_left_small: '02005d'
-  header_right: '8e0a6b'
-  header_right_dark: '35072b'
-  bkg: '0b0954'
-  bkg_dark: '010008'
+  # primary: '000000'
+  # primary-rgb: '0,0,0'
+  # secondary: '000000'
+  # secondary-dark: '000000'
+  # header_left_dark: '06021b'
+  # header_left: '15119a'
+  # header_left_small: '02005d'
+  # header_right: '8e0a6b'
+  # header_right_dark: '35072b'
+  # bkg: '0b0954'
+  # bkg_dark: '010008'
   
-  lighttext: '8E394D' #'575757'
-  lightbkg: white; #'fff4e9'
-  lightbkg_overlay: 'c79d6e'
+    lighttext: '575757'
+    lighttext_heading: black;
+    lightelement: '8E394D'
+    lightbkg: white
+    lightbkg_secondary: 'fff4e9'
+    lightbkg_overlay: 'c79d6e'
+    bkg1: white
+    bkg2: 'fff4e9'
+    bkg3: 'F8D4CD'
+    bkg4: 'F2B0A3'
+    gray_light: 'EEEEEE'
+    gray_dark: 'bfbfbf'
 
 # Footer settings
 footer:

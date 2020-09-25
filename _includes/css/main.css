@@ -280,7 +280,7 @@ hr.primary{
 		font-size: 3em !important;
 		letter-spacing: -0.08em;
 		font-weight: 100 !important;
-		text-transform: lowercase; 
+		text-transform: lowercase !important; 
 		-webkit-transition: all .3s;    
 		-moz-transition: all .3s;   
 		transition: all .3s;
@@ -296,7 +296,7 @@ hr.primary{
 		font-size: 2em !important;
 		letter-spacing: -0.08em;   
 		font-weight: 100 !important;
-		text-transform: lowercase;
+		text-transform: lowercase !important;
 		margin: 0!important;
 	}  
 
@@ -1051,7 +1051,7 @@ form .row:first-child .floating-label-form-group {
 		font-size: 2em !important;
 		letter-spacing: -0.08em;   
 		font-weight: 100 !important;
-		text-transform: lowercase;
+		text-transform: lowercase !important;
 		margin: 0!important;
 	}  
 

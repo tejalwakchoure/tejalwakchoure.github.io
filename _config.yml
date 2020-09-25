@@ -28,14 +28,14 @@ color:
   # bkg: '0b0954'
   # bkg_dark: '010008'
   
-    darktext: white
+    darktext: 'ffffff'
     lighttext: '575757'
-    lighttext_heading: black;
+    lighttext_heading: '000000'
     lightelement: '8E394D'
-    lightbkg: white
+    lightbkg: 'ffffff'
     lightbkg_secondary: 'fff4e9'
     lightbkg_overlay: 'c79d6e'
-    bkg1: white
+    bkg1: 'ffffff'
     bkg2: 'fff4e9'
     bkg3: 'F8D4CD'
     bkg4: 'F2B0A3'

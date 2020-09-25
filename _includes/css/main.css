@@ -988,7 +988,7 @@ form .row:first-child .floating-label-form-group {
 	font-family:Raleway,Montserrat,sans-serif;
 	letter-spacing: 1px;  
 	background: transparent;
-	color: #{{ site.color.lightelement }};
+	color: #{{ site.color.lightelement }} !important;
 }
 
 .sidenav .text {

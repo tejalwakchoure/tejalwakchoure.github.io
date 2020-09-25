@@ -28,6 +28,7 @@ color:
   # bkg: '0b0954'
   # bkg_dark: '010008'
   
+    darktext: white
     lighttext: '575757'
     lighttext_heading: black;
     lightelement: '8E394D'

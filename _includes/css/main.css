@@ -228,7 +228,7 @@ hr.primary{
 	float: left;
 	margin: 0;
 	padding: 0;
-	text-transform: lowercase;
+	text-transform: lowercase !important;
     letter-spacing: -0.08em;
     font-weight: 100;
     font-size: 2em;
@@ -1006,7 +1006,7 @@ form .row:first-child .floating-label-form-group {
 .sidenav a:hover, 
 .sidenav a:focus,
 .sidenav a:active,
-.sidenav a.active, {
+.sidenav a.active {
 	text-decoration: none;
 }
 /*
@@ -1035,7 +1035,7 @@ form .row:first-child .floating-label-form-group {
 		font-size: 3em !important;
 		letter-spacing: -0.08em;
 		font-weight: 100 !important;
-		text-transform: lowercase; 
+		text-transform: lowercase !important; 
 		-webkit-transition: all .3s;    
 		-moz-transition: all .3s;   
 		transition: all .3s;

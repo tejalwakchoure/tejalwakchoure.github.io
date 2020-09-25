@@ -803,6 +803,12 @@ footer .footer-below {
 	padding-right: 2%; 
 	margin: auto auto auto 200px;
 }
+.swiper-slide #content-row {
+	display: flex; 
+	flex-direction: row; 
+	position: relative; 
+	padding: 10px 0;
+}
 .swiper-slide #main-img {
 	height: 400px; 
 	width: 200px; 
@@ -846,6 +852,7 @@ footer .footer-below {
 	.swiper-slide #img-on-top {
 		height: 200px;
     	width: 250px;
+    	margin: auto 0 auto 50px;
 	}
 }
 

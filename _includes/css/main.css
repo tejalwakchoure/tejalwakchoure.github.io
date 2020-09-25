@@ -991,6 +991,14 @@ form .row:first-child .floating-label-form-group {
 	color: #{{ site.color.lightelement }} !important;
 }
 
+.sidenav .page-scroll {
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    height: 100%;
+    width: 100%;
+    margin: auto;
+    padding: 10px;
+}
 .sidenav .text {
     writing-mode: vertical-rl;
     transform: rotate(180deg);

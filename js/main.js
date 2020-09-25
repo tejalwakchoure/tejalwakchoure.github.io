@@ -151,7 +151,7 @@ function toggleOnPortfolioLink(num) {
     }
     else {
     }
-    return false;
+    // return false;
 }
 
 // jQuery for page scrolling feature - requires jQuery Easing plugin

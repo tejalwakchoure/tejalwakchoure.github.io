@@ -804,6 +804,7 @@ header .intro-text .skills {
     width: 100%;
     justify-content: center;
     transition: transform 300ms;
+    color: #{{ site.color.darktext }};
     background-color: #{{ site.color.lightbkg_overlay }};
     transform: translate3d(-101%, 0, 0);
     transition-duration: 500ms;

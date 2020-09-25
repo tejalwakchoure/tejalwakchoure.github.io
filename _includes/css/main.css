@@ -462,6 +462,12 @@ header .intro-text .skills {
 }*/
 
 #about p {
+/*	padding: 2vh 0;
+	font-weight: 500;
+	font-size: 70px;
+	color: #{{ site.color.lighttext_heading }}; */
+}
+#about p .hello {
 	padding: 2vh 0;
 	font-weight: 500;
 	font-size: 70px;

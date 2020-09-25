@@ -33,11 +33,14 @@ body {
   transition: background-color 1s ease;
 }
 
+.color-common {
+  background-color: #{{ site.color.lightbkg }};
+}
 .color-1 {
   background-color: white;
 }
 .color-2 {
-  background-color: #{{ site.color.lightbkg }};
+  background-color: #fff4e9;
 }
 .color-3 {
   background-color: #F8D4CD;

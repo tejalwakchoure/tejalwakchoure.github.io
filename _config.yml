@@ -28,8 +28,8 @@ color:
   bkg: '0b0954'
   bkg_dark: '010008'
   
-  lighttext: '575757'
-  lightbkg: 'fff4e9'
+  lighttext: '8E394D' #'575757'
+  lightbkg: white; #'fff4e9'
   lightbkg_overlay: 'c79d6e'
 
 # Footer settings

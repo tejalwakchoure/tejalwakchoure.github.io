@@ -140,14 +140,14 @@ function toggleOnPortfolioLink(num) {
     if($('#portfolioDetails').css('display')!='none') {
         $('#portfolio').addClass("animate__animated animate__slideInLeft");
         $('#portfolio').show().siblings('section').hide();
-        $(".overlay-link").attr("href", "#work");
+        // $(".overlay-link").attr("href", "#work");
     }
     else if($('#portfolio').css('display')!='none') {
         $('#portfolioDetails').show().siblings('section').hide();
         swiper.update();
         swiper.slideTo(num);
         // $(this).attr("href", "#portfolio-item-"+num);
-        $(".slide-link").attr("href", "#work");
+        // $(".slide-link").attr("href", "#work");
     }
     else {
     }

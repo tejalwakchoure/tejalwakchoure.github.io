@@ -883,7 +883,7 @@ footer .footer-below {
 	position: relative; 
 	margin-bottom: 0;   
 	padding: .5em;   
-	border: 1px solid #{{ site.color.gray_light }};
+	border: 1px solid #{{ site.color.gray_dark }};
 }   
 
 .floating-label-form-group input,   
@@ -969,32 +969,39 @@ form .row:first-child .floating-label-form-group {
 
 
 .sidenav {
-  height: 100%;
-  width: fit-content;
-  position: fixed;
-  z-index: 1;
-  top: 0;
-  left: 0;
-  background-color: #111;
-  overflow-x: hidden;
-  padding-top: 20px;
-  display:flex;
-  flex-direction:column;
+	height: 100%;
+    width: fit-content;
+    position: fixed;
+    z-index: 3;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    font-weight: 400;
+	font-family:Raleway,Montserrat,sans-serif;
+	letter-spacing: 1px;  
+	background: transparent;
+	color: #{{ site.color.lightelement }};
 }
 
+.sidenav .text {
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    height: 100%;
+    width: 100%;
+    margin: auto;
+    padding: 10px;
+}
 .sidenav a {
-  padding: 6px 8px 6px 16px;
-  text-decoration: none;
-  font-size: 25px;
-  color: #818181;
-  transform: rotate(-90deg);
-  height: 100%;
-  width: 100%;
-  margin: auto;
+	text-transform: uppercase;
 }
 
-.sidenav a:hover {
-  color: #f1f1f1;
+.sidenav a:hover, 
+.sidenav a:focus,
+.sidenav a:active,
+.sidenav a.active, {
+	text-decoration: none;
 }
 /*
 .main {
@@ -1006,3 +1013,48 @@ form .row:first-child .floating-label-form-group {
   .sidenav {padding-top: 15px;}
   .sidenav a {font-size: 18px;}
 }
+
+
+
+
+@media(min-width:768px) {   
+	.navbar-fixed-top { 
+		padding: 15px 0;
+		-webkit-transition: padding .3s;    
+		-moz-transition: padding .3s;   
+		transition: padding .3s;    
+	}   
+
+	.navbar-fixed-top .navbar-brand {   
+		font-size: 3em !important;
+		letter-spacing: -0.08em;
+		font-weight: 100 !important;
+		text-transform: lowercase; 
+		-webkit-transition: all .3s;    
+		-moz-transition: all .3s;   
+		transition: all .3s;
+		margin: 0!important;    
+
+	}
+
+	.navbar-fixed-top.navbar-shrink {   
+		padding: 10px 0;    
+	}   
+
+	.navbar-fixed-top.navbar-shrink .navbar-brand { 
+		font-size: 2em !important;
+		letter-spacing: -0.08em;   
+		font-weight: 100 !important;
+		text-transform: lowercase;
+		margin: 0!important;
+	}  
+
+	.navbar-container {
+		padding-top: 0;
+	}
+
+	.navbar-text {
+		padding: 2.5px 0 0 25px;
+	}
+}
+

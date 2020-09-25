@@ -121,30 +121,32 @@ var swiper = new Swiper('.swiper-container', {
 
 
 
-// onclick event for portfolio details
-function toggleDetails(num) {
+// // onclick event for portfolio details
+// function toggleDetails(num) {
 
-    swiper.slideTo(num)
-    console.log('moved to #slide-',num)
-    num = 6-num;
-    $('#portfolioDetails').collapse('toggle');
-    $('#portfolio').collapse('toggle');
+//     swiper.slideTo(num)
+//     console.log('moved to #slide-',num)
+//     num = 6-num;
+//     $('#portfolioDetails').collapse('toggle');
+//     $('#portfolio').collapse('toggle');
 
-    $(".portfolio-link").attr("href", "#portfolioDetails");
-    $(".slide-link").attr("href", "#portfolio-item-"+num);
-    return false;
+//     $(".portfolio-link").attr("href", "#portfolioDetails");
+//     $(".slide-link").attr("href", "#portfolio-item-"+num);
+//     return false;
 
-}
+// }
 
 function toggleOnPortfolioLink(num) {
     if($('#portfolioDetails').css('display')!='none') {
         $('#portfolio').addClass("animate__animated animate__slideInLeft");
         $('#portfolio').show().siblings('section').hide();
+        $(".overlay-link").attr("href", "#work");
     }
     else if($('#portfolio').css('display')!='none') {
         $('#portfolioDetails').show().siblings('section').hide();
         swiper.update();
         swiper.slideTo(num);
+        $(this).attr("href", "#portfolio-item-"+num);
     }
     else {
     }

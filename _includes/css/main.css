@@ -796,6 +796,11 @@ footer .footer-below {
 	display: grid;
 	padding: 10px 10px 10px 0;
 }
+.swiper-slide #content {
+	padding-left: 3%; 
+	padding-right: 2%; 
+	margin: auto auto auto 200px;
+}
 .swiper-pagination, .swiper-button-prev, .swiper-button-next {
 	position: relative !important;
 	color: gray;
@@ -810,6 +815,20 @@ footer .footer-below {
 	background: dimgray;
 }
 
+
+@media ( max-width: 1200px ) {
+	.swiper-slide #content {
+		margin: auto auto auto 150px;
+	}
+	.swiper-slide #main-img {
+		height: 350px;
+		width: 150px;
+	}
+	.swiper-slide #img-on-top {
+		height: 200px;
+    	width: 250px;
+	}
+}
 
 @media ( max-width: 768px ) {
 	#portfolioDetails .swiper-slide #content-row{
@@ -828,6 +847,7 @@ footer .footer-below {
 		display: none;
 	}
 }
+
 
 #portfolio .overlay-link {
 	height: 100%;

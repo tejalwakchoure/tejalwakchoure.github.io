@@ -136,7 +136,7 @@ $(function() {
         var $anchor = $(this);
         $('html, body').stop().animate({
             scrollTop: $($anchor.attr('href'))[0].offsetTop
-        }, 1500, 'easeInOutExpo');
+        }, 1000, 'easeInOutExpo');
         event.preventDefault();
     });
 });

@@ -397,7 +397,7 @@ header .intro-text {
 	/*transform: translateY(40%);*/
 	display: block; 
 	visibility: hidden;
-	text-align: right;
+	text-align: left;
 	/*padding-right: 5vw; */
 	/*font-family: "lato", sans-serif;*/
 }
@@ -420,6 +420,10 @@ header .intro-text .skills {
 	/*letter-spacing: 4px;*/
 	/*font-variant-caps: all-small-caps;*/
 }  
+
+header mark {
+	background-color: #{{ site.color.lightbkg }};
+}
 
 @media(min-width:768px) {
 	header {

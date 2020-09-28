@@ -121,22 +121,17 @@ function toggleOnPortfolioLink(num) {
         $('#portfolio').addClass("animate__animated animate__slideInLeft");
         $('#portfolio').show().siblings('section').hide();
         num = 6 - num;
-        // $(this).attr('href')="#portfolio-item-"+num;
         document.getElementById("portfolio-item-"+num).scrollIntoView(true);
-        // document.getElementById("slide-link-"+num).href="#portfolio-item-"+num;
     }
     else if($('#portfolio').css('display')!='none') {
         $('#portfolioDetails').show().siblings('section').hide();
         swiper.update();
         swiper.slideTo(num);
-        // $(this).attr('href')="#work";
-        num = 6 - num;
+        // num = 6 - num;
         document.getElementById('work').scrollIntoView(true);
-        // document.getElementById("portfolio-link-"+num).href="#work";
     }
     else {
     }
-    // event.preventDefault();
     return false;
 }
 

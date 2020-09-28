@@ -228,6 +228,7 @@ hr.primary{
 	float: left;
 	margin: 0;
 	padding: 0;
+	font-variant: none;
 	text-transform: lowercase !important;
     letter-spacing: -0.08em;
     font-weight: 100;
@@ -1011,7 +1012,8 @@ form .row:first-child .floating-label-form-group {
     flex-direction: column;
     font-weight: 400;
 	font-family:Raleway,Montserrat,sans-serif;
-	letter-spacing: 1px;  
+	font-size: 1em;
+	letter-spacing: 2px;  
 	background: transparent;
 	color: #{{ site.color.lightelement }} !important;
 }
@@ -1032,6 +1034,7 @@ form .row:first-child .floating-label-form-group {
     margin: auto;
     padding: 10px;
     text-align: center;
+    font-variant: all-small-caps;
     color: #{{ site.color.lightelement }} !important;
 }
 .sidenav a {

@@ -372,11 +372,13 @@ header {
 
 header img {
 	/*display: block;
-    margin-right: 0;
-    margin-left: auto;*/
+    margin-right: 0;*/
     z-index: 0;
     width: 100%;
     object-fit: cover;
+    margin-left: -10%;
+    width: 55vw;
+    max-width: none;
 }
 
 header .img_div {
@@ -406,7 +408,7 @@ header .intro-text {
 	display: block; 
 	visibility: hidden;
 	text-align: left;
-	margin-left: 50%;
+	margin-left: 55%;
 	/*padding-right: 5vw; */
 	/*font-family: "lato", sans-serif;*/
 }
@@ -443,23 +445,25 @@ header mark {
 
 	header .img_div {
 		width: 50vw;
-		padding-right: 2vw;
+		/*padding-right: 2vw;*/
 	}
 
 	header .title {
 		width: 50vw;
-		padding-left: 2vw;
+		/*padding-left: 2vw;*/
 		display: flex;
 		padding-top: 0;
-		padding-bottom: 2vw;
+		/*padding-bottom: 2vw; */
 	}
 	header .intro-text .name {  
-		font-size: 6.5vw;
+		font-size: 5vw;
+		/*font-size: 6.5vw;*/
 		/*font-size: 7vw !important;*/
 	}   
 
 	header .intro-text .skills {    
-		font-size: 2.5vw;
+		font-size: 3vw;
+		/*font-size: 2.5vw;*/
 		/*font-size: 3vw !important;*/
 	}  
 } 
@@ -489,7 +493,7 @@ header mark {
 	color: #{{ site.color.lighttext_heading }}; 
 }
 #about .main {
-	color: #{{ site.color.lightbkg }};
+	color: #{{ site.color.lightelement }};
 }
 #about a {
 	text-decoration: underline;
@@ -499,7 +503,7 @@ header mark {
 	object-fit: cover;
     height: 400px; 
     width: 300px; 
-    box-shadow: 25px 25px #{{ site.color.lightbkg }};
+    box-shadow: 25px 25px #{{ site.color.lightelement }};
 }
 #about .row {
 	display: flex; 
@@ -587,7 +591,11 @@ header mark {
 
 #work {
 	scroll-behavior: smooth;
-	padding: 0; 
+	/*padding: 0; */
+}
+
+#portfolio {
+	padding: 5vw 0;
 }
 
 #portfolio .portfolio-link-wrapper img {    

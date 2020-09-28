@@ -120,14 +120,19 @@ function toggleOnPortfolioLink(num) {
     if($('#portfolioDetails').css('display')!='none') {
         $('#portfolio').addClass("animate__animated animate__slideInLeft");
         $('#portfolio').show().siblings('section').hide();
+        num = 6 - num;
+        $(this).attr('href')="#portfolio-item-"+num;
     }
     else if($('#portfolio').css('display')!='none') {
         $('#portfolioDetails').show().siblings('section').hide();
         swiper.update();
         swiper.slideTo(num);
+        $(this).attr('href')="#work";
     }
     else {
     }
+    event.preventDefault();
+    return false;
 }
 
 // jQuery for page scrolling feature - requires jQuery Easing plugin

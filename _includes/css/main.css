@@ -1010,6 +1010,7 @@ form .row:first-child .floating-label-form-group {
     width: 100%;
     margin: auto;
     padding: 10px;
+    color: #{{ site.color.lightelement }} !important;
 }
 .sidenav a {
 	text-transform: uppercase;

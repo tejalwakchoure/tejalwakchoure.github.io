@@ -378,7 +378,7 @@ header img {
 }
 
 header .img_div {
-	width: auto;
+	/*width: auto;*/
 	padding: 0;
 	/*padding-right: 0;*/
 	/*display: flex; */
@@ -404,26 +404,27 @@ header .intro-text {
 	display: block; 
 	visibility: hidden;
 	text-align: left;
+	margin-left: 60%;
 	/*padding-right: 5vw; */
 	/*font-family: "lato", sans-serif;*/
 }
 
 header .intro-text .name {
-	/*font-size: 3em; */
+	font-size: 5vw; 
 	
-	font-size: 8.5vw;
+	/*font-size: 8.5vw;*/
 	font-weight: 700;     
-	/*letter-spacing: 10px;*/
+	letter-spacing: 1px;
 	text-transform: uppercase;
 }   
 
 
 header .intro-text .skills {    
-	/*font-size: 1.5em;  */
+	font-size: 3vw;
 	font-weight: 400;
 	color: #{{ site.color.lighttext }};
-	font-size: 3.25vw;
-	/*letter-spacing: 4px;*/
+	/*font-size: 3.25vw;*/
+	letter-spacing: 2px;
 	/*font-variant-caps: all-small-caps;*/
 }  
 

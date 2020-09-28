@@ -368,7 +368,7 @@ header {
 	/*margin-top: -21px;*/
 	padding-right: 0;
 	margin: 0;
-	flex-direction: column;
+	flex-direction: row;
 	/*background: #{{ site.color.lightbkg }};*/
 }
 
@@ -376,10 +376,10 @@ header img {
 	/*display: block;
     margin-right: 0;*/
     z-index: 0;
-    /*width: 100%;*/
     object-fit: cover;
     margin-left: -25%;
     width: 125%;
+    height: 100% !important;
     max-width: none !important;
 }
 
@@ -387,20 +387,22 @@ header .img_div {
 	/*width: auto;*/
 	padding: 0;
 	/*padding-right: 0;*/
-	/*display: flex; */
+	display: flex; 
     align-items: center;
     /*padding-bottom: 2vw;*/
-    height: 100%;
-    width: 100%;
+    /*height: 100%;*/
+    width: 50%;
 
 }
 
 header .title {
-	width: auto;
+	width: 50%;
 	/*padding-left: 0;*/
 	align-items: center;
 	display: block;
 	z-index: 1;
+	display: flex;
+	padding-top: 0;
 	/*padding-top: 3vw;*/
 	/*padding-bottom: 5vw;*/
 }
@@ -411,13 +413,13 @@ header .intro-text {
 	visibility: hidden;
 	text-align: left;
 	margin-left: 25%;
+	width: 100%;
 	/*padding-right: 5vw; */
 	/*font-family: "lato", sans-serif;*/
 }
 
 header .intro-text .name {
 	font-size: 5.5vw; 
-	
 	/*font-size: 8.5vw;*/
 	font-weight: 700;     
 	letter-spacing: 1px;
@@ -440,35 +442,40 @@ header mark {
 	padding-right: 10px;
 }
 
-@media(min-width:768px) {
+@media(max-width:768px) {
 	header {
-		flex-direction: row !important;
+		flex-direction: column-reverse !important;
+		padding: 0 5vw;
+	}
+
+	header img {
+		width: 100%;
+    	height: 100%;
+    	margin: auto;
 	}
 
 	header .img_div {
-		width: 50%;
-		/*padding-right: 2vw;*/
+		width: 100%;
 	}
 
 	header .title {
-		width: 50%;
-		/*padding-left: 2vw;*/
-		display: flex;
-		padding-top: 0;
-		/*padding-bottom: 2vw; */
+		width: 100%;
+		padding: 3vw 0;
 	}
-	header .intro-text .name {  
-		font-size: 5.5vw;
-		/*font-size: 6.5vw;*/
-		/*font-size: 7vw !important;*/
+
+	header .intro-text {
+		margin: auto;
+		width: fit-content;
+	}
+
+	header .intro-text .name { 
+		font-size: 8.5vw;
 	}   
 
 	header .intro-text .skills {    
-		font-size: 3vw;
-		/*font-size: 2.5vw;*/
-		/*font-size: 3vw !important;*/
+		font-size: 4vw;
 	}  
-} 
+}  
 
 /*@media (max-width: 1200px) {
 	header img {

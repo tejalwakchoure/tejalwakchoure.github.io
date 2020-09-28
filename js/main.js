@@ -122,7 +122,8 @@ function toggleOnPortfolioLink(num) {
         $('#portfolio').show().siblings('section').hide();
         num = 6 - num;
         // $(this).attr('href')="#portfolio-item-"+num;
-        document.getElementById("#slide-link-"+num).href="#portfolio-item-"+num;
+        document.getElementById("#portfolio-item-"+num).scrollIntoView(true);
+        // document.getElementById("#slide-link-"+num).href="#portfolio-item-"+num;
     }
     else if($('#portfolio').css('display')!='none') {
         $('#portfolioDetails').show().siblings('section').hide();
@@ -130,7 +131,8 @@ function toggleOnPortfolioLink(num) {
         swiper.slideTo(num);
         // $(this).attr('href')="#work";
         num = 6 - num;
-        document.getElementById("portfolio-link-"+num).href="#work";
+        document.getElementById('work').scrollIntoView(true);
+        // document.getElementById("portfolio-link-"+num).href="#work";
     }
     else {
     }

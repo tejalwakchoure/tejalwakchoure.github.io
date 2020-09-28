@@ -406,7 +406,7 @@ header .intro-text {
 	display: block; 
 	visibility: hidden;
 	text-align: left;
-	margin-left: 60%;
+	margin-left: 50%;
 	/*padding-right: 5vw; */
 	/*font-family: "lato", sans-serif;*/
 }

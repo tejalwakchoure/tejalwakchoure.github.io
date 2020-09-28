@@ -1022,7 +1022,7 @@ form .row:first-child .floating-label-form-group {
 	font-size: 1.3em;
 	letter-spacing: 2px;  
 	background: transparent;
-	color: #{{ site.color.lightelement }} !important;
+	/*color: #{{ site.color.lightelement }} !important;*/
 }
 
 .sidenav .page-scroll {

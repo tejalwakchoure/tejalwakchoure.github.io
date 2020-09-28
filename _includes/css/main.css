@@ -233,6 +233,7 @@ hr.primary{
     font-weight: 100;
     font-size: 2em;
     transform: rotate(0deg) !important;
+    padding: 0 !important;
 
 }  
 .navbar-toggle {
@@ -374,11 +375,11 @@ header img {
 	/*display: block;
     margin-right: 0;*/
     z-index: 0;
-    width: 100%;
+    /*width: 100%;*/
     object-fit: cover;
-    margin-left: -10%;
-    width: 55vw;
-    max-width: none;
+    margin-left: -5%;
+    width: 105%;
+    max-width: none !important;
 }
 
 header .img_div {
@@ -408,13 +409,13 @@ header .intro-text {
 	display: block; 
 	visibility: hidden;
 	text-align: left;
-	margin-left: 55%;
+	margin-left: 42.5%;
 	/*padding-right: 5vw; */
 	/*font-family: "lato", sans-serif;*/
 }
 
 header .intro-text .name {
-	font-size: 5vw; 
+	font-size: 5.5vw; 
 	
 	/*font-size: 8.5vw;*/
 	font-weight: 700;     
@@ -444,19 +445,19 @@ header mark {
 	}
 
 	header .img_div {
-		width: 50vw;
+		width: 50%;
 		/*padding-right: 2vw;*/
 	}
 
 	header .title {
-		width: 50vw;
+		width: 50%;
 		/*padding-left: 2vw;*/
 		display: flex;
 		padding-top: 0;
 		/*padding-bottom: 2vw; */
 	}
 	header .intro-text .name {  
-		font-size: 5vw;
+		font-size: 5.5vw;
 		/*font-size: 6.5vw;*/
 		/*font-size: 7vw !important;*/
 	}   
@@ -1049,52 +1050,6 @@ form .row:first-child .floating-label-form-group {
   padding: 0px 10px;
 }
 */
-@media screen and (max-height: 450px) {
-  .sidenav {padding-top: 15px;}
+/*@media screen and (max-height: 450px) {.sidenav {padding-top: 15px;}
   .sidenav a {font-size: 18px;}
-}
-
-
-
-
-@media(min-width:768px) {   
-	.navbar-fixed-top { 
-		padding: 15px 0;
-		-webkit-transition: padding .3s;    
-		-moz-transition: padding .3s;   
-		transition: padding .3s;    
-	}   
-
-	.navbar-fixed-top .navbar-brand {   
-		font-size: 3em !important;
-		letter-spacing: -0.08em;
-		font-weight: 100 !important;
-		text-transform: lowercase !important; 
-		-webkit-transition: all .3s;    
-		-moz-transition: all .3s;   
-		transition: all .3s;
-		margin: 0!important;    
-
-	}
-
-	.navbar-fixed-top.navbar-shrink {   
-		padding: 10px 0;    
-	}   
-
-	.navbar-fixed-top.navbar-shrink .navbar-brand { 
-		font-size: 2em !important;
-		letter-spacing: -0.08em;   
-		font-weight: 100 !important;
-		text-transform: lowercase !important;
-		margin: 0!important;
-	}  
-
-	.navbar-container {
-		padding-top: 0;
-	}
-
-	.navbar-text {
-		padding: 2.5px 0 0 25px;
-	}
-}
-
+}*/

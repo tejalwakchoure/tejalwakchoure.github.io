@@ -319,7 +319,7 @@ hr.primary{
 	box-sizing: border-box; 
 }   
 section {   
-	padding: 5vw;
+	padding: 5vw 5vw 5vw 7.5vw;
 	width: 100%;    
 	display: table; 
 	margin: 0;  

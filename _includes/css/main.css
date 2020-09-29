@@ -871,7 +871,7 @@ header mark {
   	overflow: hidden;
 }
 
-#contact .mail-link:after {
+.mail-link:after {
   	content: "";
   	position: absolute;
   	z-index: -1;
@@ -884,9 +884,9 @@ header mark {
   	transition-timing-function: ease-out;
   	background: #{{ site.color.lighttext }};
 }
-#contact .mail-link:hover:after,
-#contact .mail-link:focus:after,
-#contact .mail-link:active:after {
+.mail-link:hover:after,
+.mail-link:focus:after,
+.mail-link:active:after {
   	left: 0;
   	right: auto;
   	width: 100%;

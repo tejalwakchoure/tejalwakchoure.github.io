@@ -99,15 +99,15 @@ body {
 }
 
 p { 
-	font-size: 25px;/*20px;*/    
+	font-size: 20px;
 }   
 
 p.small {   
-	font-size: 16px;    
+	font-size: 13px;    
 }
 
 p.large {   
-	font-size: 40px;    
+	font-size: 35px;    
 }   
 
 a,  

@@ -475,7 +475,7 @@ header .intro-text .skills {
 }  
 
 header mark {
-	background-color: #{{ site.color.lightbkg }};
+	background-color: pink; /*#{{ site.color.lightbkg }};*/
 	padding-left: 10px;
 	padding-right: 10px;
 }

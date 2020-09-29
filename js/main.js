@@ -178,12 +178,12 @@ $('.navbar-collapse ul li a').click(function() {
 // Change brand properties when in/out of Header
 $(document).scroll(function () {
   if($('header').position().top <= $(document).scrollTop() && ($('header').position().top + $('header').outerHeight()) > $(document).scrollTop()) {
-     $('.navbar-brand').css({
+     $('.sidenav .page-scroll .navbar-brand').css({
             'font-size' : '4.5em',
             'margin' : '0px 20px 50px 0px !important'
         });
   } else {
-    $('.navbar-brand').css({
+    $('.sidenav .page-scroll .navbar-brand').css({
             'font-size' : '2em',
             'margin' : '0 !important'
         });

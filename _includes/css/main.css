@@ -866,29 +866,26 @@ header mark {
 #contact a.mail-link {
     text-decoration: none;
     /*pointer-events: none;*/
-  	/*display: inline;*/
+  	display: inline;
   	position: relative;
   	overflow: hidden;
 }
 
-#contact a.mail-link:after {
+#contact a.mail-link:before {
   	content: "";
   	position: absolute;
-  	z-index: -1;
-  	right: 0;
   	width: 0;
-  	bottom: -2px;
   	height: 2px;
-  	transition-property: width;
-  	transition-duration: 500ms;
-  	transition-timing-function: ease-out;
-  	background: #{{ site.color.lighttext }};
-}
-#contact a.mail-link:hover:after,
-#contact a.mail-link:focus:after,
-#contact a.mail-link:active:after {
+  	bottom: -3px;
   	left: 0;
-  	right: auto;
+  	background-color: #{{ site.color.lighttext }}; 
+  	visibility: hidden;
+  	transition: all 500ms ease-out;
+}
+#contact a.mail-link:hover:before,
+#contact a.mail-link:focus:before,
+#contact a.mail-link:active:before {
+  	visibility: visible;
   	width: 100%;
 }
 

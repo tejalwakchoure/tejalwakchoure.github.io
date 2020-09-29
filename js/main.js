@@ -146,8 +146,9 @@ $(function() {
     });
 });
 
-// window.addEventListener('wheel', { passive: false })
 // Smooth scrolling on mouse event
+$(document).addEventListener('wheel', { passive: false })
+
 $(document).SmoothScrollWheel(
   // {
   //   debug: false,

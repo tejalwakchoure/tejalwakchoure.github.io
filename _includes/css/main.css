@@ -862,6 +862,36 @@ header mark {
     color: #{{ site.color.lighttext_heading }}; 
 }
 
+
+#contact .mail-link {
+    text-decoration: none;
+    /*pointer-events: none;*/
+  	display: inline;
+  	position: relative;
+  	overflow: hidden;
+}
+
+#contact .mail-link:after {
+  	content: "";
+  	position: absolute;
+  	z-index: -1;
+  	right: 0;
+  	width: 0;
+  	bottom: -2px;
+  	height: 2px;
+  	transition-property: width;
+  	transition-duration: 500ms;
+  	transition-timing-function: ease-out;
+  	background: #{{ site.color.lighttext }};
+}
+#contact .mail-link:hover:after,
+#contact .mail-link:focus:after,
+#contact .mail-link:active:after {
+  	left: 0;
+  	right: auto;
+  	width: 100%;
+}
+
 footer {    
 	/*color: #{{ site.color.lightbkg }}; */
 }

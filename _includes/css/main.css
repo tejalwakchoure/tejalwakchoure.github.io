@@ -877,7 +877,7 @@ header mark {
   	width: 0;
   	height: 2px;
   	bottom: -3px;
-  	left: 0;
+  	right: 0;
   	background-color: #{{ site.color.lighttext }}; 
   	visibility: hidden;
   	transition: all 500ms ease-out;

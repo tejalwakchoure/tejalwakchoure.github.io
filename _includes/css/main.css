@@ -79,6 +79,7 @@ body {
 	background-color: #{{ site.color.lightbkg_secondary }};
 	color: #{{ site.color.lighttext }};
 }
+
 #preloader .container {
 	height: 100vh; 
 	width: 100%;
@@ -89,9 +90,37 @@ body {
 	font-weight: 100; 
 	text-transform: lowercase; 
 }
-#preloader .container #wrapper {
-	font-family:lato,Montserrat,sans-serif;
-	font-weight:200;
+#preloader #wrapper {
+	font-family: lato,Montserrat,sans-serif;
+	font-weight: 200;
+	margin: auto; 
+	display: flex; 
+	flex-direction: row; 
+	align-items: center;
+	height: 6em; 
+	width: 6em; 
+	min-width: fit-content; 
+	padding: 1em; 
+	border-radius: 50%; 
+	border: 0.5px solid #{{ site.color.lighttext }};
+}
+
+#preloader #brand {
+	font-size: 7.35em; 
+	letter-spacing: -0.08em; 
+	margin: auto auto 0 auto;
+	transition: transform 300ms ease-out;
+}
+
+#preloader #percent {
+	font-size: 1em; 
+	padding-right: 0.1em; 
+	margin: auto;
+}
+
+#preloader #count {
+	font-size: 1.75em; 
+	margin: auto;
 }
 
 .show-on-submit {
@@ -158,6 +187,10 @@ hr.primary{
 	color: #{{ site.color.lighttext }};
 	display: table;
 	background: #{{ site.color.lightbkg_secondary }};
+}
+
+#under_construction i {
+	color: #{{ site.color.lighttext }} !important;
 }
 
 #under_construction a {

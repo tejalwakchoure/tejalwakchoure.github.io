@@ -174,12 +174,12 @@ $(document).scroll(function () {
   if($('header').position().top <= $(document).scrollTop() && ($('header').position().top + $('header').outerHeight()) > $(document).scrollTop()) {
      $('.navbar-brand').css({
             'font-size' : '4.5em',
-            'margin' : '0px 20px 50px 0px'
+            'margin' : '0px 20px 50px 0px !important'
         });
   } else {
     $('.navbar-brand').css({
             'font-size' : '2em',
-            'margin' : '0'
+            'margin' : '0 !important'
         });
   }
 });

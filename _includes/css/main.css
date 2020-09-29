@@ -249,7 +249,7 @@ hr.primary{
 .navbar-inverse {   
 	border: 0;  
 }   
-.navbar-nav > li > a, .navbar-brand {   
+.navbar-nav > li > a, .sidenav .navbar-brand {   
 	padding-top:5px !important; 
 	padding-bottom:0 !important;    
 	height: 30px;   
@@ -257,7 +257,7 @@ hr.primary{
 	font-size: 1.5em;
 }
 
-.navbar-brand {
+.sidenav .navbar-brand {
 	/*position: relative;
 	float: left;*/
 
@@ -270,7 +270,7 @@ hr.primary{
     font-size: 4.5em;
     transform: rotate(90deg) !important;
     /*padding: 0 !important;*/
-    margin: 10px 20px !important;
+    margin: 10px 20px;
     transition-property: font-size, margin;
     transition: 300ms ease-in-out;
 }  
@@ -317,7 +317,7 @@ hr.primary{
 		transition: padding .3s;    
 	}   
 
-	.navbar-fixed-top .navbar-brand {   
+	.sidenav .navbar-fixed-top .navbar-brand {   
 		font-size: 3em !important;
 		letter-spacing: -0.08em;
 		font-weight: 100 !important;
@@ -333,7 +333,7 @@ hr.primary{
 		padding: 10px 0;    
 	}   
 
-	.navbar-fixed-top.navbar-shrink .navbar-brand { 
+	.sidenav .navbar-fixed-top.navbar-shrink .navbar-brand { 
 		font-size: 2em !important;
 		letter-spacing: -0.08em;   
 		font-weight: 100 !important;

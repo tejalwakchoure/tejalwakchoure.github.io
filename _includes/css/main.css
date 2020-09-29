@@ -190,7 +190,8 @@ hr.primary{
 }
 
 #under_construction i {
-	color: #{{ site.color.lighttext }} !important;
+	color: #{{ site.color.lighttext }};
+	background: transparent;
 }
 
 #under_construction a {

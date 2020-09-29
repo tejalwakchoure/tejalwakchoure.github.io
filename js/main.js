@@ -24,7 +24,7 @@ $(document).ready(function() {
         clearInterval(i);
         // Animate components on and off the screen on loading
         $('#preloader').slideUp(1000);
-        $('#preloader .container #brand').animate({right: "100%", bottom: "100%"}, 400, 'easeInExpo');
+        // $('#preloader .container #brand').animate({right: "100%", bottom: "100%"}, 400, 'easeInExpo');
         $('#body-container').fadeIn(1000);
         fadeInChildren('#body-container header',1000);
         fadeInChildren('#body-container header .intro-text',1000);

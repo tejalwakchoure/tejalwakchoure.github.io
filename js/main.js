@@ -25,7 +25,7 @@ $(document).ready(function() {
         clearInterval(i);
         // Animate components on and off the screen on loading
         $('#preloader').slideUp(1000);
-        $('#preloader #brand').animate({transform: translate(-100%, -100%)}, 1000);
+        $('#preloader #brand').animate({right: "100%", bottom: "100%"}, 1000);
         $('#body-container').fadeIn(1000);
         fadeInChildren('#body-container header',1000);
         fadeInChildren('#body-container header .intro-text',1000);

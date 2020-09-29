@@ -600,7 +600,8 @@ header mark {
   height: 25px;
   border-radius: 50%;
   background-color: #{{ site.color.lighttext }};
-  border: 5px solid #{{ site.color.lightbkg }};
+  /*border: 5px solid #{{ site.color.lightbkg }};*/
+  border: 5px solid pink;
   position: absolute;
   top: -14px;
   left: 42%;
@@ -955,12 +956,12 @@ footer .footer-below {
 
 
 .fa-linkedin {  
-	background: #{{ site.color.lightbkg }};
+	background: transparent;
 	/*color: #{{ site.color.lighttext }}; */
 }   
 
 .fa-github {    
-	background: #{{ site.color.lightbkg }}; 
+	background: transparent; 
 	/*color: #{{ site.color.lighttext }}; */
 } 
 

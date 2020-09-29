@@ -161,40 +161,18 @@ $('.navbar-collapse ul li a').click(function() {
     $('.navbar-toggle:visible').click();
 });
 
-// $(window).on("scroll", function() {
-//   var currentPos = $(window).scrollTop();
-//   if (currentPos > $('header').offsetTop) {
-//     $('.navbar-brand').css({
-//             'font-size' : '2em'
-//         });
-//   } else {
-//     $('.navbar-brand').css({
-//             'font-size' : '4.5em'
-//         });
-//   }
+
+// Change brand properties when in/out of Header
 $(document).scroll(function () {
   if($('header').position().top <= $(document).scrollTop() && ($('header').position().top + $('header').outerHeight()) > $(document).scrollTop()) {
      $('.navbar-brand').css({
-            'font-size' : '4.5em'
+            'font-size' : '4.5em',
+            'margin' : '0px 20px 50px 0px'
         });
   } else {
     $('.navbar-brand').css({
-            'font-size' : '2em'
+            'font-size' : '2em',
+            'margin' : '0'
         });
   }
 });
-
-//   // $('.nav li a').each(function() {
-//     var sectionLink = $(this);
-//     var navHeight = $('#nav-wrapper').outerHeight() + 1;
-//     var section = $(sectionLink.attr('href'));
-
-//     // subtract the navbar height from the top of the section
-//     if(section.position().top - navHeight  <= currentPos && sectionLink.offset().top + section.height()> currentPos) {
-//       $('.nav li').removeClass('active');
-//       sectionLink.parent().addClass('active');
-//     } else {
-//       sectionLink.parent().removeClass('active');
-//     }
-//   });        
-// });

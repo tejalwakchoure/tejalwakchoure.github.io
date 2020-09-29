@@ -237,7 +237,8 @@ hr.primary{
     transform: rotate(90deg) !important;
     /*padding: 0 !important;*/
     margin: 10px 20px;
-    transition: font-size 300ms ease-in-out;
+    transition-property: font-size, margin;
+    transition: 300ms ease-in-out;
 }  
 .navbar-toggle {
     margin-top: 0;

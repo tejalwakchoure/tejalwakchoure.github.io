@@ -147,10 +147,10 @@ $(function() {
 });
 
 // // Smooth scrolling on mouse event
-document.addEventListener("mousewheel", { passive: false });
-$(function() {
-    jQuery.scrollSpeed(100, 800, 'easeInOutExpo');
-});
+// document.addEventListener("mousewheel", { passive: false });
+// $(function() {
+//     jQuery.scrollSpeed(100, 800, 'easeInOutExpo');
+// });
 // window.addEventListener('wheel', { passive: false })
 
 // $(document).SmoothScrollWheel(

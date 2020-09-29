@@ -249,7 +249,7 @@ hr.primary{
 .navbar-inverse {   
 	border: 0;  
 }   
-.navbar-nav > li > a, .sidenav .navbar-brand {   
+.navbar-nav > li > a, .sidenav .page-scroll .navbar-brand {   
 	padding-top:5px !important; 
 	padding-bottom:0 !important;    
 	height: 30px;   
@@ -257,7 +257,7 @@ hr.primary{
 	font-size: 1.5em;
 }
 
-.sidenav .navbar-brand {
+.sidenav .page-scroll .navbar-brand {
 	/*position: relative;
 	float: left;*/
 
@@ -317,7 +317,7 @@ hr.primary{
 		transition: padding .3s;    
 	}   
 
-	.sidenav .navbar-fixed-top .navbar-brand {   
+	.sidenav .navbar-fixed-top .page-scroll .navbar-brand {   
 		font-size: 3em !important;
 		letter-spacing: -0.08em;
 		font-weight: 100 !important;
@@ -333,7 +333,7 @@ hr.primary{
 		padding: 10px 0;    
 	}   
 
-	.sidenav .navbar-fixed-top.navbar-shrink .navbar-brand { 
+	.sidenav .navbar-fixed-top.navbar-shrink .page-scroll .navbar-brand { 
 		font-size: 2em !important;
 		letter-spacing: -0.08em;   
 		font-weight: 100 !important;

@@ -863,7 +863,7 @@ header mark {
 }
 
 
-#contact .mail-link {
+.mail-link {
     text-decoration: none;
     /*pointer-events: none;*/
   	display: inline;

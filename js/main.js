@@ -146,10 +146,13 @@ $(function() {
     });
 });
 
-// Smooth scrolling on mouse event
-window.addEventListener('wheel', { passive: false })
+// // Smooth scrolling on mouse event
+$(function() {
+    jQuery.scrollSpeed(100, 800, 'easeInOutExpo');
+});
+// window.addEventListener('wheel', { passive: false })
 
-$(document).SmoothScrollWheel(
+// $(document).SmoothScrollWheel(
   // {
   //   debug: false,
   //   defaultDetailDelta: 3,
@@ -157,7 +160,7 @@ $(document).SmoothScrollWheel(
   //   defaultSpeed: 50,
   //   default<a href="https://www.jqueryscript.net/animation/">Animation</a>Time: 1500
   // }
-);
+// );
 
 
 // Highlight the top nav as scrolling occurs

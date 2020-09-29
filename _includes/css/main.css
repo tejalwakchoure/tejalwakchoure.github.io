@@ -270,7 +270,7 @@ hr.primary{
     font-size: 4.5em;
     transform: rotate(90deg) !important;
     /*padding: 0 !important;*/
-    margin: 10px 20px;
+    margin: 10px 20px !important;
     transition-property: font-size, margin;
     transition: 300ms ease-in-out;
 }  

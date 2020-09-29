@@ -863,7 +863,7 @@ header mark {
 }
 
 
-.mail-link {
+#contact .mail-link {
     text-decoration: none;
     /*pointer-events: none;*/
   	display: inline;
@@ -871,7 +871,7 @@ header mark {
   	overflow: hidden;
 }
 
-.mail-link:after {
+#contact .mail-link:after {
   	content: "";
   	position: absolute;
   	z-index: -1;
@@ -884,9 +884,9 @@ header mark {
   	transition-timing-function: ease-out;
   	background: #{{ site.color.lighttext }};
 }
-.mail-link:hover:after,
-.mail-link:focus:after,
-.mail-link:active:after {
+#contact .mail-link:hover:after,
+#contact .mail-link:focus:after,
+#contact .mail-link:active:after {
   	left: 0;
   	right: auto;
   	width: 100%;

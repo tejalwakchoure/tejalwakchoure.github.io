@@ -13,7 +13,6 @@ function fadeInChildren(parent, base_delay) {
         $(this).css({opacity: 0.0, visibility: "visible"}).delay(base_delay+(500*index)).animate({opacity: 1.0}, 500);
     });
 }
-
 $(document).ready(function() {
     $('#body-container').css({display: 'none'});
     var counter = 0;
@@ -51,7 +50,7 @@ $(document).ready(function() {
 //  });
 
 
-
+// Chanhge colours of background as we scroll down
 $(window).scroll(function() {
   var $window = $(window),
   $body = $('.body-container'),
@@ -136,7 +135,7 @@ function toggleOnPortfolioLink(num) {
     return false;
 }
 
-// jQuery for page scrolling feature - requires jQuery Easing plugin
+// onclick page scrolling - requires jQuery Easing plugin
 $(function() {
     $('.page-scroll a').bind('click', function(event) {
         var $anchor = $(this);
@@ -146,11 +145,18 @@ $(function() {
         event.preventDefault();
     });
 });
-$(function() {
-    $('.hide-scroll a').bind('click', function(event) {
-        event.preventDefault();
-    });
-});
+
+// Smooth scrolling on mouse event
+$('body').SmoothScrollWheel(
+  // {
+  //   debug: false,
+  //   defaultDetailDelta: 3,
+  //   defaultWheelDelta: 120,
+  //   defaultSpeed: 50,
+  //   default<a href="https://www.jqueryscript.net/animation/">Animation</a>Time: 1500
+  // }
+);
+
 
 // Highlight the top nav as scrolling occurs
 $('body').scrollspy({

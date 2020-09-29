@@ -147,7 +147,7 @@ $(function() {
 });
 
 // Smooth scrolling on mouse event
-$(document).addEventListener('wheel', { passive: false })
+window.addEventListener('wheel', { passive: false })
 
 $(document).SmoothScrollWheel(
   // {

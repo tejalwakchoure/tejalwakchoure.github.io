@@ -147,7 +147,7 @@ $(function() {
 });
 
 // // Smooth scrolling on mouse event
-document.addEventListener("mousewheel", this.mousewheel.bind(this), { passive: false });
+document.addEventListener("mousewheel", { passive: false });
 $(function() {
     jQuery.scrollSpeed(100, 800, 'easeInOutExpo');
 });

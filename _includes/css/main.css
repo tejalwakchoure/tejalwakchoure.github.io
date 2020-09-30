@@ -682,8 +682,8 @@ header mark {
 
 .parallax_container {
 	position: relative;
-	height: 400px;
-	width: 1000px;
+	/*height: 400px;
+	width: 1000px;*/
 	overflow-x: hidden;
 	overflow-y: scroll;
 	perspective: 8px;

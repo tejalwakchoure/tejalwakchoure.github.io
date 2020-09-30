@@ -196,7 +196,7 @@ $(window).on("load resize scroll", function() {
     var windowTop = $(window).scrollTop();
     var elementTop = $('header').offset().top;
     var currentpos = -10;//$('.bg-move').css('right');
-    var pos = currentpos + ((windowTop - elementTop) / 25);
-    // pos = pos + currentpos;
-      $('.hor_parallax').css({ right: pos });
+    var pos = currentpos + ((windowTop - elementTop) / 10);
+      $('.hor_parallax_right').css({ right: pos });
+      $('.hor_parallax_left').css({ left: pos });
 });

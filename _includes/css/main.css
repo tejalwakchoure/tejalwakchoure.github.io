@@ -576,11 +576,26 @@ header mark {
   align-items: center;
   font-weight: 100;
   position: relative;
+  transition: all 300ms ease-in-out;
 }
 
 
 .li.complete {
   flex-basis: 33%;
+}
+
+.li.complete:hover {
+    color: #{{ site.color.lighttext_heading }};
+}
+
+.li.complete:hover .status:before {
+    background-color: #{{ site.color.lighttext_heading }};
+}
+
+.li.complete:hover .timestamp {
+	transform: scale(1.2);
+    transition: all 300ms ease-in-out;
+    animation-direction: alternate;
 }
 
 .status {

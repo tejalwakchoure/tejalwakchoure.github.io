@@ -950,8 +950,7 @@ footer .footer-below {
 	padding: 12px 0;    
 	color: #{{ site.color.lighttext }};
 	background-color: transparent;
-    border-top: 1px solid #{{ site.color.lighttext }};
-	/*background-color: #{{ site.color.lightbkg }}; */
+    /*border-top: 1px solid #{{ site.color.lighttext }};*/
 }   
 
 

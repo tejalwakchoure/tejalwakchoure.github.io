@@ -575,6 +575,7 @@ header mark {
   flex-direction: column;
   align-items: center;
   font-weight: 100;
+  position: relative;
 }
 
 
@@ -589,7 +590,7 @@ header mark {
   text-align: center;
   justify-content: center;
   font-weight: 100;
-  border-top: 2px solid #{{ site.color.lighttext }};
+  border-top: 1px solid #{{ site.color.lighttext }};
 }
 .status h4 {
   font-weight: 600;
@@ -643,6 +644,10 @@ header mark {
 	/*padding: 0; */
 }
 
+#work .heading {
+	font-size: 70px;
+}
+
 #portfolio {
 	padding: 5vw 0;
 }
@@ -681,7 +686,7 @@ header mark {
 .grid {
 	display: flex;
   	display: -webkit-box;
-  	padding: .5rem .5rem 0 .5rem;
+  	/*padding: .5rem .5rem 0 .5rem;*/
 }
 
 .grid-col {
@@ -692,11 +697,9 @@ header mark {
 .grid-item {
   	color: #{{ site.color.lightbkg }};
   	text-align: center;
-  	padding: 0.65em;
-
+  	/*padding: 0.65em;*/
   	font-weight: 900;
   	font-size: 2rem;
-
   	height: 400px;
     line-height: 400px;
 }

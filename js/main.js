@@ -191,7 +191,7 @@ $(window).on("load resize scroll", function() {
   }
 });
 
-// Horizontal parallax
+// Horizontal header parallax
 $(window).on("load resize scroll", function() {
     var windowTop = $(window).scrollTop();
     var elementTop = $('header').offset().top;

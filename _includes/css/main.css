@@ -667,11 +667,43 @@ header mark {
 	padding: 5vw 0;
 }
 
-#portfolio .portfolio-link-wrapper img {    
-	height: 100%; 
-	width: 100%; 
-	object-fit: cover;
+
+
+
+
+#portfolio .parallax_container {
+	position: relative;
+	height: 400px;
+	width: 1000px;
+	overflow-x: hidden;
+	overflow-y: scroll;
+	perspective: 8px;
+	perspective-origin: 0%;
+	background: dimgray;
 }
+#portfolio .parallax_background {
+  position: absolute;
+  width: 100%;
+  height: 100%; /*1000px;*/
+  transform: translateZ(0px); /*scale(1);*/
+  background: lightgray;
+}
+#portfolio .parallax_imgdiv {
+	display: flex;
+	height: 100%;
+	width: 100%;
+	overflow: hidden;
+	background: pink;
+}   
+#portfolio .parallax_img {
+	position: relative;
+	display: block;
+	object-fit: cover;
+	transform: translateZ(2px); /*scale(parallax-scale-factor(1));*/
+}
+
+
+
 
 #portfolio .portfolio-link-wrapper {
 	position: relative; 
@@ -679,6 +711,12 @@ header mark {
 	height: 100%; 
 	width: 100%;
 }   
+
+#portfolio .portfolio-link-wrapper img {    
+	height: 100%; 
+	width: 100%; 
+	object-fit: cover;
+}
 
 #portfolio .portfolio-item .portfolio-link {    
 	display: block; 

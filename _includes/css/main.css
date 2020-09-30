@@ -671,7 +671,7 @@ header mark {
 
 
 
-#portfolio .parallax_container {
+.parallax_container {
 	position: relative;
 	height: 400px;
 	width: 1000px;
@@ -679,7 +679,7 @@ header mark {
 	overflow-y: scroll;
 	perspective: 8px;
 	perspective-origin: 0%;
-	background: dimgray;
+	background: black;
 }
 #portfolio .parallax_background {
   position: absolute;
@@ -750,7 +750,7 @@ header mark {
 .grid-item {
   	color: #{{ site.color.lightbkg }};
   	text-align: center;
-  	/*padding: 0.65em;*/
+  	padding: 0.65em;
   	font-weight: 900;
   	font-size: 2rem;
   	height: 400px;

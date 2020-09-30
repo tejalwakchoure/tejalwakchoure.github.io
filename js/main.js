@@ -176,9 +176,9 @@ $('.navbar-collapse ul li a').click(function() {
 
 
 // Change brand properties when in/out of Header
-$(document).on("load resize scroll", function() {
+$(window).on("load resize scroll", function() {
 // $(document).scroll(function () {
-  if($('header').position().top <= $(document).scrollTop() && ($('header').position().top + $('header').outerHeight()) > $(document).scrollTop()) {
+  if($('header').position().top <= $(window).scrollTop() && ($('header').position().top + $('header').outerHeight()) > $(window).scrollTop()) {
      $('.sidenav .page-scroll .navbar-brand').css({
             'font-size' : '4.5em',
             'margin' : '0px 20px 50px 0px'

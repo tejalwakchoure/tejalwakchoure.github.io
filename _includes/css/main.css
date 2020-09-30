@@ -422,6 +422,14 @@ header img {
     max-width: none !important;
 }
 
+.hor_parallax {
+  position: absolute;
+/*  height: 300px;
+  width: 400px;*/
+  /*top: 30%;*/
+  right: -10px;
+}
+
 header .img_div {
 	/*width: auto;*/
 	padding: 0;

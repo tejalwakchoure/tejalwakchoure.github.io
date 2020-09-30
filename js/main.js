@@ -190,3 +190,13 @@ $(document).on("load resize scroll", function() {
         });
   }
 });
+
+// Horizontal parallax
+$(window).on("load resize scroll", function() {
+    var windowTop = $(window).scrollTop();
+    var elementTop = $('header').offset().top;
+    var currentpos = -10;//$('.bg-move').css('right');
+    var pos = currentpos + ((windowTop - elementTop) / 25);
+    // pos = pos + currentpos;
+      $('.hor_parallax').css({ right: pos });
+});

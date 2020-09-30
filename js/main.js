@@ -176,7 +176,8 @@ $('.navbar-collapse ul li a').click(function() {
 
 
 // Change brand properties when in/out of Header
-$(document).scroll(function () {
+$(document).on("load resize scroll", function() {
+// $(document).scroll(function () {
   if($('header').position().top <= $(document).scrollTop() && ($('header').position().top + $('header').outerHeight()) > $(document).scrollTop()) {
      $('.sidenav .page-scroll .navbar-brand').css({
             'font-size' : '4.5em',

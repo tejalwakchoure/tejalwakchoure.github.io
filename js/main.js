@@ -200,3 +200,19 @@ $(window).on("load resize scroll", function() {
       $('.hor_parallax_right').css({ right: pos });
       $('.hor_parallax_left').css({ left: pos });
 });
+
+
+// Portfolio grid parallax
+// Y axis scroll speed
+var velocity = 0.5;
+function update(){ 
+    var pos = $(window).scrollTop(); 
+    $('.px_div').each(function() { 
+        var $element = $(this);
+        // subtract some from the height b/c of the padding
+        var height = $element.height();
+        $('.px_div').css('backgroundPosition', '50% ' + Math.round((height - pos) * velocity * 5) + 'px'); 
+    }); 
+};
+
+$(window).bind('scroll', update);

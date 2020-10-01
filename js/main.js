@@ -146,7 +146,7 @@ function toggleOnPortfolioLink(num) {
 $(function() {
   swiper_in.update();
   swiper_in.slideTo(swiper.realIndex);
-}
+});
 
 
 // onclick page scrolling - requires jQuery Easing plugin

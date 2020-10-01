@@ -843,13 +843,19 @@ header mark {
 	background: transparent;
 }
 .swiper-slide #content {
-	padding-left: 3%; 
+	/*padding-left: 3%; 
 	padding-right: 2%; 
-	margin: auto auto auto 200px;
+	margin: auto auto auto 200px;*/
+
+	padding-left: 3%;
+    padding-right: 2%;
+    margin: auto auto auto 200px;
+    width: 100%;
 }
 .swiper-slide #content-row {
 	display: flex; 
-	flex-direction: row; 
+	/*flex-direction: row; */
+	flex-direction: column; 
 	position: relative; 
 	padding: 10px 0;
 }
@@ -864,20 +870,36 @@ header mark {
 	/*color: #{{ site.color.lighttext_heading }};*/
 }
 .swiper-slide #main-img {
-	height: 400px; 
+/*	height: 400px; 
 	width: 200px; 
 	object-fit: cover; 
-	margin: auto 0;
+	margin: auto 0;*/
+
+	    width: 500px;
+    height: 200px;
+    object-fit: cover;
+    margin: 0 auto;
+    text-align: center;
 }
 .swiper-slide #img-on-top {
-	position: absolute; 
+	/*position: absolute; 
 	z-index: 2; 
 	margin: auto 0 auto 100px;
 	height: 250px; 
 	width: 300px; 
 	object-fit: cover;
 	top: 50%; 
-	bottom: 50%;
+	bottom: 50%;*/
+
+
+	    position: absolute;
+    z-index: 2;
+    margin: auto 0 auto 100px;
+    height: 250px;
+    width: 300px;
+    object-fit: cover;
+    top: 10%;
+    left: 30%;
 }
 .swiper-pagination, .swiper-button-prev, .swiper-button-next {
 	position: relative !important;
@@ -905,16 +927,27 @@ header mark {
 
 @media ( max-width: 1200px ) {
 	.swiper-slide #content {
-		margin: auto auto auto 150px;
+		/*margin: auto auto auto 150px;*/
+
+    margin: 200px auto auto auto;
+
 	}
 	.swiper-slide #main-img {
-		height: 350px;
-		width: 150px;
+		/*height: 350px;
+		width: 150px;*/
+
+		    width: 450px;
+    height: 175px;
 	}
 	.swiper-slide #img-on-top {
-		height: 200px;
+/*		height: 200px;
     	width: 250px;
-    	margin: auto 0 auto 50px;
+    	margin: auto 0 auto 50px;*/
+
+    	height: 250px;
+    width: 300px;
+    margin: 0 auto 50px auto;
+
 	}
 }
 

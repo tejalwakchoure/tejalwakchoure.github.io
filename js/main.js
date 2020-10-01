@@ -204,7 +204,7 @@ $(window).on("load resize scroll", function() {
 
 // Portfolio grid parallax
 // Y axis scroll speed
-var velocity = 0.3;
+var velocity = 0.5;
 function update(){ 
     var pos = $(window).scrollTop(); 
     $('.px_div').each(function() { 

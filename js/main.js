@@ -116,6 +116,14 @@ var swiper = new Swiper('.swiper-container', {
       observeParents: true,
     });
 
+var swiper_in = new Swiper('.swiper-container-in', {
+      cssMode: true,
+      mousewheel: true,
+      keyboard: true,
+      observer: true,
+      observeParents: true,
+    });
+
 function toggleOnPortfolioLink(num) {
     if($('#portfolioDetails').css('display')!='none') {
         $('#portfolio').addClass("animate__animated animate__slideInLeft");
@@ -134,6 +142,12 @@ function toggleOnPortfolioLink(num) {
     }
     return false;
 }
+
+$(function() {
+  swiper_in.update();
+  swiper_in.slideTo(swiper.activeIndex);
+}
+
 
 // onclick page scrolling - requires jQuery Easing plugin
 $(function() {

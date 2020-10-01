@@ -145,7 +145,7 @@ function toggleOnPortfolioLink(num) {
 
 $(function() {
   swiper_in.update();
-  swiper_in.slideTo(swiper.activeIndex);
+  swiper_in.slideTo(swiper.realIndex);
 }
 
 

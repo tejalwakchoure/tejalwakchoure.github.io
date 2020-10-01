@@ -206,13 +206,11 @@ $(window).on("load resize scroll", function() {
 // Y axis scroll speed
 var velocity = 0.1;
 function update(){ 
-    var pos = $(window).scrollTop(); 
+    var pos = $('#portfolio').scrollTop(); 
     $('.px_div').each(function() { 
         var $element = $(this);
-        // subtract some from the height b/c of the padding
-        var height = $element.height();
+        var height = $element.height(); // subtract some from the height b/c of the padding
         $('.px_div').css('backgroundPosition', '50% ' + Math.round((height - pos) * velocity) + 'px'); 
     }); 
 };
-
 $(window).bind('scroll', update);

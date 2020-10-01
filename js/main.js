@@ -177,8 +177,8 @@ $('.navbar-collapse ul li a').click(function() {
 
 // Change brand properties when in/out of Header
 $(window).on("load resize scroll", function() {
-// $(document).scroll(function () {
-  if($('header').position().top <= $(window).scrollTop() && ($('header').position().top + $('header').outerHeight()) > $(window).scrollTop()) {
+  // if($('header').position().top <= $(window).scrollTop() && ($('header').position().top + $('header').outerHeight()) > $(window).scrollTop()) {
+  if($('header').offset().top <= $(window).scrollTop() && ($('header').offset().top + $('header').outerHeight()) > $(window).scrollTop()) {
      $('.sidenav .page-scroll .navbar-brand').css({
             'font-size' : '4.5em',
             'margin' : '0px 20px 50px 0px'
@@ -206,7 +206,7 @@ $(window).on("load resize scroll", function() {
 // Y axis scroll speed
 var velocity = 0.1;
 function update(){ 
-    var pos = $('#portfolio').scrollTop(); 
+    var pos = $(window).scrollTop(); 
     $('.px_div').each(function() { 
         var $element = $(this);
         var height = $element.height(); // subtract some from the height b/c of the padding
@@ -214,3 +214,4 @@ function update(){
     }); 
 };
 $(window).bind('scroll', update);
+

@@ -99,38 +99,37 @@ function checkTime(i) {
     return i;
 }
 
+// Swiper initialization
+var swiper = new Swiper('.swiper-container', {
+      cssMode: true,
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      mousewheel: true,
+      keyboard: true,
+      observer: true,
+      observeParents: true,
+    });
 
-$(document).ready(function () {
-    // Swiper initialization
-    var swiper = new Swiper('.swiper-container', {
-          cssMode: true,
-          navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
-          },
-          pagination: {
-            el: '.swiper-pagination',
-            clickable: true,
-          },
-          mousewheel: true,
-          keyboard: true,
-          observer: true,
-          observeParents: true,
-        });
+var swiper_in = new Swiper('.swiper-container-in', {
+      // nextButton: '.swiper-button-next',
+      // prevButton: '.swiper-button-prev',
+      controller: {
+        inverse: true,
+      },
+      cssMode: true,
+      mousewheel: true,
+      keyboard: true,
+      observer: true,
+      observeParents: true,
+    });
 
-    var swiper_in = new Swiper('.swiper-container-in', {
-          // nextButton: '.swiper-button-next',
-          // prevButton: '.swiper-button-prev',
-          controller: {
-            inverse: true,
-          },
-          cssMode: true,
-          mousewheel: true,
-          keyboard: true,
-          observer: true,
-          observeParents: true,
-        });
-    
+$(document).ready(function() {
     swiper_in.controller.control = swiper;
 });
 

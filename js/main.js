@@ -223,7 +223,7 @@ $(window).on("load resize scroll", function() {
 
 // Portfolio grid parallax
 $(window).on("load resize scroll", function() {
-  var velocity = 0.25; // Y axis scroll speed
+  var velocity = 0.1; // Y axis scroll speed
   if($('#portfolio').offset().top <= $(window).scrollTop() && ($('#portfolio').offset().top + $('#portfolio').outerHeight()) > $(window).scrollTop()) {
     var pos = $(window).scrollTop() - $('#portfolio').offset().top;
     $('.px_div').each(function() { 

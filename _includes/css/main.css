@@ -719,7 +719,7 @@ header mark {
 	background-position:center top; 
 	background-repeat: no-repeat;
 	background-size: cover;
-	transform-origin: bottom;
+	transform-origin: center;
 	transform: scale(1.2);
 }
 
@@ -760,6 +760,8 @@ header mark {
 	display: flex;
   	display: -webkit-box;
   	/*padding: .5rem .5rem 0 .5rem;*/
+  	box-shadow: 0px 0px 9px 6px #{{ site.color.gray_light }};
+    background: #{{ site.color.gray_dark }};
 }
 
 .grid-col {
@@ -782,9 +784,8 @@ header mark {
 	display: none;
 }
 
-/* 2 columns at medium size */
+/* 2 columns at medium/large size */
 @media ( min-width: 768px ) {
-	/* show column 2 */
 	.grid-col:nth-child(2) { 
   		display: block; 
 	}
@@ -803,8 +804,7 @@ header mark {
 }
 
 /* 3 columns at large size */
-@media ( min-width: 1080px ) {
-	/* show column 3 */
+/*@media ( min-width: 1080px ) {
   	.grid-col:nth-child(3) { 
   		display: block; 
   	}
@@ -822,7 +822,7 @@ header mark {
 	    height: 500px;
 	    line-height: 500px;
 	}
-}
+}*/
 
 #portfolioDetails {
 	height: fit-content;

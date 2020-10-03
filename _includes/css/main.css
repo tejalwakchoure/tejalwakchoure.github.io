@@ -775,8 +775,8 @@ header mark {
   	padding: 0.65em;
   	font-weight: 900;
   	font-size: 2rem;
-  	height: 400px;
-    line-height: 400px;
+  	height: 500px;
+    line-height: 500px;
 }
 
 /* 1 column by default, hide columns 2 & 3 */
@@ -792,14 +792,14 @@ header mark {
   
    	.grid-col:nth-child(1) > .grid-item:nth-child(odd),
 	.grid-col:nth-child(2) > .grid-item:nth-child(even) {
-	    height: 400px;
-	    line-height: 400px;
+	    height: 500px;
+	    line-height: 500px;
 	}
 
 	.grid-col:nth-child(1) > .grid-item:nth-child(even),
 	.grid-col:nth-child(2) > .grid-item:nth-child(odd) {
-	    height: 500px;
-	    line-height: 500px;
+	    height: 600px;
+	    line-height: 600px;
 	}
 }
 

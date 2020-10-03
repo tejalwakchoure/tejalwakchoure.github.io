@@ -21,13 +21,10 @@
                                 <a id="portfolio-link-{{ post.modal-id }}" href="javascript:void(0);" class="overlay-link" onclick="toggleOnPortfolioLink(6-{{ post.modal-id }});"></a>
                             <!-- </div> -->
                                 <div class="overlay" 
-                                style="/*background-color: pink !important; color: black !important;*/ ">
-                                     {{ post.title }} </div>
-                                <div style="background:black;height: 100%;width: 100%;">
-                                <div class="px_div">
-                                    <!-- <img src="assets/img/portfolio/{{ post.img }}" class="img-responsive" alt="{{ post.alt }}"> -->
-                                </div>
-                                </div>
+                                style="/*background-color: pink !important; color: black !important;*/ "> {{ post.title }} </div>
+                                <!-- <div style="background:black;height: 100%;width: 100%;"> -->
+                                <div class="px_div" style="background-image: url('assets/img/portfolio/{{ post.img }}')"> </div>
+                                <!-- </div> -->
                             </div>
                         </div>
                     {% endfor %}

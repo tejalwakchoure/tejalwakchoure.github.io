@@ -101,6 +101,10 @@ function checkTime(i) {
 
 // Swiper initialization
 var swiper = new Swiper('.swiper-container', {
+      controller: {
+        control: swiper_in,
+        // inverse: true,
+      },
       cssMode: true,
       navigation: {
         nextEl: '.swiper-button-next',
@@ -117,10 +121,7 @@ var swiper = new Swiper('.swiper-container', {
     });
 
 var swiper_in = new Swiper('.swiper-container-in', {
-      controller: {
-        control: swiper,
-        // inverse: true,
-      },
+      effect: 'flip',
       cssMode: true,
       mousewheel: true,
       keyboard: true,

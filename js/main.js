@@ -234,7 +234,7 @@ $(window).on("load resize scroll", function() {
   // Y axis scroll speed
   var velocity = 0.1;
   if($('#portfolio').offset().top <= $(window).scrollTop() && ($('#portfolio').offset().top + $('#portfolio').outerHeight()) > $(window).scrollTop()) {
-    var pos = $(window).scrollTop() - ('#portfolio').offset().top;
+    var pos = $(window).scrollTop() - $('#portfolio').offset().top;
     $('.px_div').each(function() { 
         var $element = $(this);
         var height = $element.height();

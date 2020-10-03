@@ -760,8 +760,8 @@ header mark {
 	display: flex;
   	display: -webkit-box;
   	/*padding: .5rem .5rem 0 .5rem;*/
-  	box-shadow: 0px 0px 9px 2px #{{ site.color.gray_light }};
-    background: #{{ site.color.gray_dark }};
+  	/*box-shadow: 0px 0px 9px 2px #{{ site.color.gray_light }};*/
+    /*background: #{{ site.color.gray_dark }};*/
 }
 
 .grid-col {
@@ -842,7 +842,7 @@ header mark {
 
 .swiper-container {
 	/*background-color: #{{ site.color.lightbkg_overlay }};;*/
-	box-shadow: 0px 0px 13px #{{ site.color.gray_light }};;
+	/*box-shadow: 0px 0px 13px #{{ site.color.gray_light }};;*/
 	display: grid;
 	padding: 10px 10px 10px 0;
 	height: 100%;

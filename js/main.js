@@ -117,12 +117,17 @@ var swiper = new Swiper('.swiper-container', {
     });
 
 var swiper_in = new Swiper('.swiper-container-in', {
+      // nextButton: '.swiper-button-next',
+      // prevButton: '.swiper-button-prev',
+      control: swiper,
       cssMode: true,
       mousewheel: true,
       keyboard: true,
       observer: true,
       observeParents: true,
     });
+
+
 
 function toggleOnPortfolioLink(num) {
     if($('#portfolioDetails').css('display')!='none') {
@@ -143,10 +148,10 @@ function toggleOnPortfolioLink(num) {
     return false;
 }
 
-$(function() {
-  swiper_in.update();
-  swiper_in.slideTo(swiper.realIndex);
-});
+// $(function() {
+//   swiper_in.update();
+//   swiper_in.slideTo(swiper.realIndex);
+// });
 
 
 // onclick page scrolling - requires jQuery Easing plugin

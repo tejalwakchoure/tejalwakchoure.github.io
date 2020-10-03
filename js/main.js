@@ -117,10 +117,9 @@ var swiper = new Swiper('.swiper-container', {
     });
 
 var swiper_in = new Swiper('.swiper-container-in', {
-      // nextButton: '.swiper-button-next',
-      // prevButton: '.swiper-button-prev',
       controller: {
-        inverse: true,
+        control: swiper,
+        // inverse: true,
       },
       cssMode: true,
       mousewheel: true,
@@ -129,9 +128,9 @@ var swiper_in = new Swiper('.swiper-container-in', {
       observeParents: true,
     });
 
-$(document).ready(function() {
-    swiper_in.controller.control = swiper;
-});
+// $(document).ready(function() {
+//     swiper_in.controller.control = swiper;
+// });
 
 
 function toggleOnPortfolioLink(num) {
@@ -145,6 +144,8 @@ function toggleOnPortfolioLink(num) {
         $('#portfolioDetails').show().siblings('section').hide();
         swiper.update();
         swiper.slideTo(num);
+        swiper_in.update();
+        swiper_in.slideTo(num);
         // num = 6 - num;
         document.getElementById('work').scrollIntoView(true);
     }

@@ -716,10 +716,9 @@ header mark {
 	width: 100%;
 	transition: 0s linear;
     transition-property: background-position;
-	/*background-image:url(http://th00.deviantart.net/fs49/PRE/f/2009/207/e/d/Orange_Desktop_Background_by_The_Dogfather.png);*/
 	background-position:center top; 
 	background-repeat: no-repeat;
-	/*background-size: cover;*/
+	background-size: cover;
 	transform-origin: bottom;
 	transform: scale(1.2);
 }

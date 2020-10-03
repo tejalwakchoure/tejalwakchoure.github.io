@@ -233,15 +233,15 @@ $(window).on("load resize scroll", function() {
 $(window).on("load resize scroll", function() {
   // Y axis scroll speed
   var velocity = 0.1;
-  // if($('#portfolio').offset().top <= $(window).scrollTop() && ($('#portfolio').offset().top + $('#portfolio').outerHeight()) > $(window).scrollTop()) {
-    var pos = $(window).scrollTop(); // - $('#portfolio').offset().top;
+  if($('#portfolio').offset().top <= $(window).scrollTop() && ($('#portfolio').offset().top + $('#portfolio').outerHeight()) > $(window).scrollTop()) {
+    var pos = $(window).scrollTop() - $('#portfolio').offset().top;
     $('.px_div').each(function() { 
         var $element = $(this);
         var height = $element.height();
         // $('.px_div').css('background-position', '50%' + Math.round(-1* pos * velocity) + 'px'); 
         $('.px_div').css('backgroundPosition', '50% ' + Math.round((height - pos) * velocity) + 'px'); 
     });
-  // }
+  }
 });
 
 // // Y axis scroll speed

@@ -207,7 +207,8 @@ $(window).on("load resize scroll", function() {
   if($('header').offset().top <= $(window).scrollTop() && ($('header').offset().top + $('header').outerHeight()) > $(window).scrollTop()) {
      $('.sidenav .page-scroll .navbar-brand').css({
             'font-size' : '4.5em',
-            'margin' : '0px 20px 50px 0px'
+            'margin' : '50px 10px 40px 0px'
+            // 'margin' : '0px 20px 50px 0px'
         });
   } else {
     $('.sidenav .page-scroll .navbar-brand').css({

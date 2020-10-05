@@ -222,11 +222,12 @@ $(document).ready(function() {
     // swiper_in.controller.control = swiper;
 
     // Portfolio grid parallax
-    $('.px_img').each(function() {
-        new simpleParallax($(this), {
-        delay: .6,
-        transition: 'cubic-bezier(0,0,0,1)'
-      });
+    const images = document.querySelectorAll('.px_img');
+    images.forEach(image => {
+          new simpleParallax(image, {
+          delay: .6,
+          transition: 'cubic-bezier(0,0,0,1)'
+        });
     });
     // const images = document.querySelectorAll('.px_img');
 

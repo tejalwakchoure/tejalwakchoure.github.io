@@ -121,7 +121,7 @@ var swiper_in = new Swiper('.swiper-container-in', {
       //   control: swiper,
       //   // inverse: true,
       // },
-      effect: 'flip',
+      // effect: 'flip',
       cssMode: true,
       mousewheel: true,
       keyboard: true,
@@ -130,7 +130,7 @@ var swiper_in = new Swiper('.swiper-container-in', {
     });
 
 $(document).ready(function() {
-    swiper_in.controller.control = swiper;
+    swiper.controller.control = swiper_in;
 });
 
 
@@ -230,17 +230,53 @@ $(window).on("load resize scroll", function() {
 
 // Portfolio grid parallax
 $(window).on("load resize scroll", function() {
-  var velocity = 0.1; // Y axis scroll speed
-  if($('#portfolio').offset().top <= $(window).scrollTop() && ($('#portfolio').offset().top + $('#portfolio').outerHeight()) > $(window).scrollTop()) {
-    var pos = $(window).scrollTop() - $('#portfolio').offset().top;
-    $('.px_div').each(function() { 
-        var $element = $(this);
-        var height = $element.height();
-        // $('.px_div').css('background-position', '50%' + Math.round(-1* pos * velocity) + 'px'); 
-        $('.px_div').css('backgroundPosition', '50% ' + Math.round((height - pos) * velocity) + 'px'); 
-    });
-  }
+   $('.px_div').each(function() { 
+    var velocity = 0.1; // Y axis scroll speed
+    var element = $(this);
+    var height = element.outerHeight(true); //element.height();
+    var topOfElement = element.offset().top;
+    var bottomOfElement = element.offset().top + element.outerHeight(true);
+    var $window = $(window);
+    var scrollTopPosition = $window.scrollTop() + $window.height();
+    var windowScrollTop = $window.scrollTop();
+    // if($('#portfolio').offset().top <= $(window).scrollTop() && ($('#portfolio').offset().top + $('#portfolio').outerHeight()) > $(window).scrollTop()) {
+    if ((windowScrollTop > bottomOfElement && windowScrollTop > topOfElement) || (scrollTopPosition < topOfElement && scrollTopPosition < bottomOfElement)) {
+      // Element is hidden
+    } 
+    else {
+      // Element is partially/completely visible
+      var pos = windowScrollTop - topOfElement;
+      // $('.px_div').each(function() { 
+          // var $element = $(this);
+          // var height = element.height();
+          // $('.px_div').css('background-position', '50%' + Math.round(-1* pos * velocity) + 'px'); 
+          $('.px_div').css('backgroundPosition', '50% ' + Math.round((height - pos) * velocity) + 'px'); 
+    }
+  });
 });
+
+
+
+// if (windowScrollTop > bottomOfElement && windowScrollTop > topOfElement) {
+//     // Element is hidden (above viewable area)
+
+// } else if (scrollTopPosition < topOfElement && scrollTopPosition < bottomOfElement) {
+//     // Element is hidden (below viewable area)
+
+// } else if (windowScrollTop > topOfElement && windowScrollTop < bottomOfElement) {
+//     // Element is partially visible (above viewable area)
+//     //**start scrolling**
+
+// } else if (scrollTopPosition < bottomOfElement && scrollTopPosition > topOfElement) {
+//     // Element is partially visible (below viewable area)
+
+// } else {
+//     // Element is completely visible
+// }
+
+
+
+
 
 // // Y axis scroll speed
 // var velocity = 0.1;

@@ -146,8 +146,7 @@ var swiper_in = new Swiper('.swiper-container-in', {
             var slideProgress = swiper.slides[i].progress;
             var innerOffset = swiper.width * interleaveOffset;
             var innerTranslate = slideProgress * innerOffset;
-            swiper.slides[i].querySelector(".swiper-container-in .swiper-wrapper .swiper-slide").style.transform =
-              "translate3d(" + innerTranslate + "px, 0, 0)";
+            swiper.slides[i].querySelector(".swiper-container-in .swiper-wrapper .swiper-slide").css({"transform" :  "translate3d(" + innerTranslate + "px, 0, 0)"});
           }      
         },
         touchStart: function() {
@@ -160,8 +159,7 @@ var swiper_in = new Swiper('.swiper-container-in', {
           var swiper = this;
           for (var i = 0; i < swiper.slides.length; i++) {
             swiper.slides[i].style.transition = speed + "ms";
-            swiper.slides[i].querySelector(".swiper-container-in .swiper-wrapper .swiper-slide").style.transition =
-              speed + "ms";
+            swiper.slides[i].querySelector(".swiper-container-in .swiper-wrapper .swiper-slide").css({"transition" : speed + "ms"});
           }
         }
       }
@@ -195,8 +193,7 @@ var swiper_innermost = new Swiper('.swiper-container-innermost', {
             var slideProgress = swiper.slides[i].progress;
             var innerOffset = swiper.width * interleaveOffset;
             var innerTranslate = slideProgress * innerOffset;
-            swiper.slides[i].querySelector(".swiper-container-innermost .swiper-wrapper .swiper-slide").style.transform =
-              "translate3d(" + innerTranslate + "px, 0, 0)";
+            swiper.slides[i].querySelector(".swiper-container-innermost .swiper-wrapper .swiper-slide").css({"transform" :  "translate3d(" + innerTranslate + "px, 0, 0)"});
           }      
         },
         touchStart: function() {
@@ -209,8 +206,7 @@ var swiper_innermost = new Swiper('.swiper-container-innermost', {
           var swiper = this;
           for (var i = 0; i < swiper.slides.length; i++) {
             swiper.slides[i].style.transition = speed + "ms";
-            swiper.slides[i].querySelector(".swiper-container-innermost .swiper-wrapper .swiper-slide").style.transition =
-              speed + "ms";
+            swiper.slides[i].querySelector(".swiper-container-innermost .swiper-wrapper .swiper-slide").css({"transition" : speed + "ms"});
           }
         }
       }

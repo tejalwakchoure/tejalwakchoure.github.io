@@ -842,6 +842,17 @@ header mark {
 	padding: 5vw 0;
 }
 
+.swiper-container-innermost {
+	/*background-color: #{{ site.color.lightbkg_overlay }};;*/
+	display: grid;
+	padding: 10px 0;
+	height: 400px; /*fit-content;*/
+	/*width: 100%;*/
+	position: absolute;
+	top: 12.5%;
+    left: auto;
+    z-index: 3;
+}
 .swiper-container-in {
 	/*background-color: #{{ site.color.lightbkg_overlay }};;*/
 	display: grid;

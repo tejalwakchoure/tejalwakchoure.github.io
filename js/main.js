@@ -146,7 +146,7 @@ var swiper_in = new Swiper('.swiper-container-in', {
             var slideProgress = swiper.slides[i].progress;
             var innerOffset = swiper.width * interleaveOffset;
             var innerTranslate = slideProgress * innerOffset;
-            swiper.slides[i].querySelector(".swiper-slide").style.transform =
+            swiper.slides[i].querySelector(".swiper-container-in .swiper-wrapper .swiper-slide").style.transform =
               "translate3d(" + innerTranslate + "px, 0, 0)";
           }      
         },
@@ -160,7 +160,7 @@ var swiper_in = new Swiper('.swiper-container-in', {
           var swiper = this;
           for (var i = 0; i < swiper.slides.length; i++) {
             swiper.slides[i].style.transition = speed + "ms";
-            swiper.slides[i].querySelector(".swiper-slide").style.transition =
+            swiper.slides[i].querySelector(".swiper-container-in .swiper-wrapper .swiper-slide").style.transition =
               speed + "ms";
           }
         }
@@ -195,7 +195,7 @@ var swiper_innermost = new Swiper('.swiper-container-innermost', {
             var slideProgress = swiper.slides[i].progress;
             var innerOffset = swiper.width * interleaveOffset;
             var innerTranslate = slideProgress * innerOffset;
-            swiper.slides[i].querySelector(".swiper-slide").style.transform =
+            swiper.slides[i].querySelector(".swiper-container-innermost .swiper-wrapper .swiper-slide").style.transform =
               "translate3d(" + innerTranslate + "px, 0, 0)";
           }      
         },
@@ -209,7 +209,7 @@ var swiper_innermost = new Swiper('.swiper-container-innermost', {
           var swiper = this;
           for (var i = 0; i < swiper.slides.length; i++) {
             swiper.slides[i].style.transition = speed + "ms";
-            swiper.slides[i].querySelector(".swiper-slide").style.transition =
+            swiper.slides[i].querySelector(".swiper-container-innermost .swiper-wrapper .swiper-slide").style.transition =
               speed + "ms";
           }
         }
@@ -222,19 +222,15 @@ $(document).ready(function() {
     // swiper_in.controller.control = swiper;
 
     // Portfolio grid parallax
-    const images = document.querySelectorAll('.px_img');
-    images.forEach(image => {
-          new simpleParallax(image, {
-          delay: .6,
-          transition: 'cubic-bezier(0,0,0,1)'
-        });
-    });
     // const images = document.querySelectorAll('.px_img');
-
-    // new simpleParallax(images, {
-    //   delay: .6,
-    //   transition: 'cubic-bezier(0,0,0,1)'
+    // images.forEach(image => {
+    //       new simpleParallax(image, {
+    //       delay: .6,
+    //       transition: 'cubic-bezier(0,0,0,1)'
+    //     });
     // });
+    const images = document.querySelectorAll('.px_img');
+    new simpleParallax(images);
 });
 
 
@@ -251,6 +247,8 @@ function toggleOnPortfolioLink(num) {
         swiper.slideTo(num);
         swiper_in.update();
         swiper_in.slideTo(num);
+        swiper_innermost.update();
+        swiper_innermost.slideTo(num);
         // num = 6 - num;
         document.getElementById('work').scrollIntoView(true);
     }

@@ -123,14 +123,14 @@ var swiper_in = new Swiper('.swiper-container-in', {
       //   // inverse: true,
       // },
       // effect: 'flip',
-      cssMode: true,
+      // cssMode: true,
       mousewheel: true,
       keyboard: true,
       observer: true,
       observeParents: true,
 
       // loop: true,
-      // speed: 1000,
+      speed: 1000,
       // grabCursor: true,
       watchSlidesProgress: true,
       // mousewheelControl: true,
@@ -148,6 +148,7 @@ var swiper_in = new Swiper('.swiper-container-in', {
           //   var innerTranslate = slideProgress * innerOffset;
           //   swiper.slides[i].querySelector(".swiper-container-in .slide-inner").css({"transform" :  "translate3d(" + innerTranslate + "px, 0, 0)"});
           // } 
+          var swiper = this;
           $('.swiper-container-in .slide-inner').each(function() { 
             var slideProgress = $(this).progress;
             var innerOffset = swiper.width * interleaveOffset;
@@ -160,6 +161,7 @@ var swiper_in = new Swiper('.swiper-container-in', {
           // for (var i = 0; i < swiper.slides.length; i++) {
           //   swiper.slides[i].style.transition = "";
           // }
+          var swiper = this;
           $('.swiper-container-in .swiper-slide').each(function() { 
             $(this).css({"transition" :  ""});
           })
@@ -170,6 +172,7 @@ var swiper_in = new Swiper('.swiper-container-in', {
           //   swiper.slides[i].style.transition = speed + "ms";
           //   swiper.slides[i].querySelector(".swiper-container-in .slide-inner").css({"transition" : speed + "ms"});
           // }
+          var swiper = this;
           $('.swiper-container-in .swiper-slide').each(function() { 
             $(this).css({"transition" :  speed + "ms"});
           });
@@ -185,14 +188,14 @@ var swiper_innermost = new Swiper('.swiper-container-innermost', {
       //   // inverse: true,
       // },
       // effect: 'flip',
-      cssMode: true,
+      // cssMode: true,
       mousewheel: true,
       keyboard: true,
       observer: true,
       observeParents: true,
 
       // loop: true,
-      // speed: 1000,
+      speed: 1000,
       // grabCursor: true,
       watchSlidesProgress: true,
       // mousewheelControl: true,
@@ -210,6 +213,7 @@ var swiper_innermost = new Swiper('.swiper-container-innermost', {
           //   var innerTranslate = slideProgress * innerOffset;
           //   swiper.slides[i].querySelector(".swiper-container-in .slide-inner").css({"transform" :  "translate3d(" + innerTranslate + "px, 0, 0)"});
           // } 
+          var swiper = this;
           $('.swiper-container-innermost .slide-inner').each(function() { 
             var slideProgress = $(this).progress;
             var innerOffset = swiper.width * interleaveOffset;
@@ -222,6 +226,7 @@ var swiper_innermost = new Swiper('.swiper-container-innermost', {
           // for (var i = 0; i < swiper.slides.length; i++) {
           //   swiper.slides[i].style.transition = "";
           // }
+          var swiper = this;
           $('.swiper-container-innermost .swiper-slide').each(function() { 
             $(this).css({"transition" :  ""});
           })
@@ -232,6 +237,7 @@ var swiper_innermost = new Swiper('.swiper-container-innermost', {
           //   swiper.slides[i].style.transition = speed + "ms";
           //   swiper.slides[i].querySelector(".swiper-container-in .slide-inner").css({"transition" : speed + "ms"});
           // }
+          var swiper = this;
           $('.swiper-container-innermost .swiper-slide').each(function() { 
             $(this).css({"transition" :  speed + "ms"});
           });
@@ -257,8 +263,8 @@ $(function() {
 });
 
 $(document).ready(function() {
-    swiper.controller.control = swiper_in;
     swiper_in.controller.control = swiper_innermost;
+    swiper.controller.control = swiper_in;
     // swiper_in.controller.control = swiper;
 
     // Portfolio grid parallax

@@ -243,9 +243,12 @@ var swiper_innermost = new Swiper('.swiper-container-innermost', {
     });
 
 const images = document.querySelectorAll('.px_img');
-new simpleParallax(images);
+// new simpleParallax(images);
 images.forEach(img => {
   console.log(img.src);
+  new simpleParallax(img, {
+    customWrapper: img.parentNode.nodeName,
+  });
 })
 
 $(document).ready(function() {

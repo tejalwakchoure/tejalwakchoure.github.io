@@ -227,7 +227,7 @@ $(document).ready(function() {
         delay: .6,
         transition: 'cubic-bezier(0,0,0,1)'
       });
-    }
+    });
     // const images = document.querySelectorAll('.px_img');
 
     // new simpleParallax(images, {

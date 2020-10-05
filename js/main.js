@@ -121,7 +121,7 @@ var swiper_in = new Swiper('.swiper-container-in', {
       //   control: swiper,
       //   // inverse: true,
       // },
-      effect: 'flip',
+      // effect: 'flip',
       cssMode: true,
       mousewheel: true,
       keyboard: true,
@@ -131,6 +131,7 @@ var swiper_in = new Swiper('.swiper-container-in', {
 
 $(document).ready(function() {
     swiper.controller.control = swiper_in;
+    swiper_in.controller.control = swiper;
 });
 
 

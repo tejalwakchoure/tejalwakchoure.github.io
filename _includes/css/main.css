@@ -292,16 +292,16 @@ hr.primary{
 }
 
 .navbar-text {
-	font-weight: 300 !important;
+	font-weight: 300;
 	text-align: start !important;
 	writing-mode: horizontal-tb !important;
 	transform: none!important;
-	text-transform: none;
+	/*text-transform: none;*/
     /*float: right !important;*/
     /*padding: 0;
     margin: 0;*/
-    /*font-size: 0.8em;*/
-	color: #{{ site.color.lightelement }} !important;
+    font-size: 0.8em;
+	/*color: #{{ site.color.lightelement }} !important;*/
 }
 
 .navbar-container {

@@ -258,7 +258,7 @@ $(document).ready(function() {
 
 $(document).ready(function() {
     swiper.controller.control = swiper_in;
-    swiper.controller.control = swiper_innermost;
+    swiper_in.controller.control = swiper_innermost;
     // swiper_in.controller.control = swiper;
 
     // Portfolio grid parallax

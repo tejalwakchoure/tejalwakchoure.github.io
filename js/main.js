@@ -212,6 +212,9 @@ var swiper_innermost = new Swiper('.swiper-container-innermost', {
       }
     });
 
+const images = document.querySelectorAll('.px_img');
+new simpleParallax(images);
+    
 $(document).ready(function() {
     swiper.controller.control = swiper_in;
     swiper.controller.control = swiper_innermost;
@@ -225,8 +228,7 @@ $(document).ready(function() {
     //       transition: 'cubic-bezier(0,0,0,1)'
     //     });
     // });
-    const images = document.querySelectorAll('.px_img');
-    new simpleParallax(images);
+
 });
 
 

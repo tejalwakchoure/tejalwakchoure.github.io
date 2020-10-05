@@ -99,7 +99,7 @@ function checkTime(i) {
     return i;
 }
 
-// Swiper initialization
+// Swiper initializations
 var swiper = new Swiper('.swiper-container', {
       cssMode: true,
       navigation: {
@@ -116,6 +116,7 @@ var swiper = new Swiper('.swiper-container', {
       observeParents: true,
     });
 
+var interleaveOffset = 0.5;
 var swiper_in = new Swiper('.swiper-container-in', {
       // controller: {
       //   control: swiper,
@@ -127,6 +128,44 @@ var swiper_in = new Swiper('.swiper-container-in', {
       keyboard: true,
       observer: true,
       observeParents: true,
+
+
+      loop: true,
+      speed: 1000,
+      grabCursor: true,
+      watchSlidesProgress: true,
+      // mousewheelControl: true,
+      // keyboardControl: true,
+      // navigation: {
+      //   nextEl: ".swiper-button-next",
+      //   prevEl: ".swiper-button-prev"
+      // },
+      on: {
+        progress: function() {
+          var swiper = this;
+          for (var i = 0; i < swiper.slides.length; i++) {
+            var slideProgress = swiper.slides[i].progress;
+            var innerOffset = swiper.width * interleaveOffset;
+            var innerTranslate = slideProgress * innerOffset;
+            swiper.slides[i].querySelector(".slide-inner").style.transform =
+              "translate3d(" + innerTranslate + "px, 0, 0)";
+          }      
+        },
+        touchStart: function() {
+          var swiper = this;
+          for (var i = 0; i < swiper.slides.length; i++) {
+            swiper.slides[i].style.transition = "";
+          }
+        },
+        setTransition: function(speed) {
+          var swiper = this;
+          for (var i = 0; i < swiper.slides.length; i++) {
+            swiper.slides[i].style.transition = speed + "ms";
+            swiper.slides[i].querySelector(".slide-inner").style.transition =
+              speed + "ms";
+          }
+        }
+      }
     });
 
 $(document).ready(function() {

@@ -230,7 +230,7 @@ $(window).on("load resize scroll", function() {
 
 
 // Portfolio grid parallax
-const images = document.querySelectorAll('.parallaxed');
+const images = document.querySelectorAll('.px_img');
 new simpleParallax(images);
 
 

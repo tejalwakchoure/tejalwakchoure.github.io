@@ -141,26 +141,41 @@ var swiper_in = new Swiper('.swiper-container-in', {
       // },
       on: {
         progress: function() {
-          var swiper = this;
-          for (var i = 0; i < swiper.slides.length; i++) {
-            var slideProgress = swiper.slides[i].progress;
+          // var swiper = this;
+          // for (var i = 0; i < swiper.slides.length; i++) {
+          //   var slideProgress = swiper.slides[i].progress;
+          //   var innerOffset = swiper.width * interleaveOffset;
+          //   var innerTranslate = slideProgress * innerOffset;
+          //   swiper.slides[i].querySelector(".swiper-container-in .slide-inner").css({"transform" :  "translate3d(" + innerTranslate + "px, 0, 0)"});
+          // } 
+          $('.swiper-container-in .slide-inner').each(function() { 
+            var slideProgress = $(this).progress;
             var innerOffset = swiper.width * interleaveOffset;
             var innerTranslate = slideProgress * innerOffset;
-            swiper.slides[i].querySelector(".swiper-container-in .slide-inner").css({"transform" :  "translate3d(" + innerTranslate + "px, 0, 0)"});
-          }      
+            $(this).css({"transform" :  "translate3d(" + innerTranslate + "px, 0, 0)"});
+          })
         },
         touchStart: function() {
-          var swiper = this;
-          for (var i = 0; i < swiper.slides.length; i++) {
-            swiper.slides[i].style.transition = "";
-          }
+          // var swiper = this;
+          // for (var i = 0; i < swiper.slides.length; i++) {
+          //   swiper.slides[i].style.transition = "";
+          // }
+          $('.swiper-container-in .swiper-slide').each(function() { 
+            $(this).css({"transition" :  ""});
+          })
         },
         setTransition: function(speed) {
-          var swiper = this;
-          for (var i = 0; i < swiper.slides.length; i++) {
-            swiper.slides[i].style.transition = speed + "ms";
-            swiper.slides[i].querySelector(".swiper-container-in .slide-inner").css({"transition" : speed + "ms"});
-          }
+          // var swiper = this;
+          // for (var i = 0; i < swiper.slides.length; i++) {
+          //   swiper.slides[i].style.transition = speed + "ms";
+          //   swiper.slides[i].querySelector(".swiper-container-in .slide-inner").css({"transition" : speed + "ms"});
+          // }
+          $('.swiper-container-in .swiper-slide').each(function() { 
+            $(this).css({"transition" :  speed + "ms"});
+          });
+          $('.swiper-container-in .slide-inner').each(function() { 
+            $(this).css({"transition" :  speed + "ms"});
+          });
         }
       }
     });
@@ -188,33 +203,48 @@ var swiper_innermost = new Swiper('.swiper-container-innermost', {
       // },
       on: {
         progress: function() {
-          var swiper = this;
-          for (var i = 0; i < swiper.slides.length; i++) {
-            var slideProgress = swiper.slides[i].progress;
+          // var swiper = this;
+          // for (var i = 0; i < swiper.slides.length; i++) {
+          //   var slideProgress = swiper.slides[i].progress;
+          //   var innerOffset = swiper.width * interleaveOffset;
+          //   var innerTranslate = slideProgress * innerOffset;
+          //   swiper.slides[i].querySelector(".swiper-container-in .slide-inner").css({"transform" :  "translate3d(" + innerTranslate + "px, 0, 0)"});
+          // } 
+          $('.swiper-container-innermost .slide-inner').each(function() { 
+            var slideProgress = $(this).progress;
             var innerOffset = swiper.width * interleaveOffset;
             var innerTranslate = slideProgress * innerOffset;
-            swiper.slides[i].querySelector(".swiper-container-innermost .slide-inner").css({"transform" :  "translate3d(" + innerTranslate + "px, 0, 0)"});
-          }      
+            $(this).css({"transform" :  "translate3d(" + innerTranslate + "px, 0, 0)"});
+          })
         },
         touchStart: function() {
-          var swiper = this;
-          for (var i = 0; i < swiper.slides.length; i++) {
-            swiper.slides[i].style.transition = "";
-          }
+          // var swiper = this;
+          // for (var i = 0; i < swiper.slides.length; i++) {
+          //   swiper.slides[i].style.transition = "";
+          // }
+          $('.swiper-container-innermost .swiper-slide').each(function() { 
+            $(this).css({"transition" :  ""});
+          })
         },
         setTransition: function(speed) {
-          var swiper = this;
-          for (var i = 0; i < swiper.slides.length; i++) {
-            swiper.slides[i].style.transition = speed + "ms";
-            swiper.slides[i].querySelector(".swiper-container-innermost .slide-inner").css({"transition" : speed + "ms"});
-          }
+          // var swiper = this;
+          // for (var i = 0; i < swiper.slides.length; i++) {
+          //   swiper.slides[i].style.transition = speed + "ms";
+          //   swiper.slides[i].querySelector(".swiper-container-in .slide-inner").css({"transition" : speed + "ms"});
+          // }
+          $('.swiper-container-innermost .swiper-slide').each(function() { 
+            $(this).css({"transition" :  speed + "ms"});
+          });
+          $('.swiper-container-innermost .slide-inner').each(function() { 
+            $(this).css({"transition" :  speed + "ms"});
+          });
         }
       }
     });
 
 const images = document.querySelectorAll('.px_img');
 new simpleParallax(images);
-    
+
 $(document).ready(function() {
     swiper.controller.control = swiper_in;
     swiper.controller.control = swiper_innermost;

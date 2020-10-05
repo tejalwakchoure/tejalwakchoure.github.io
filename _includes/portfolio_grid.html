@@ -16,17 +16,17 @@
                     <!-- <div class="grid-col"></div> -->
                     {% for post in site.posts %}
                         <div id="portfolio-item-{{ post.modal-id }}" class="grid-item grid-item{{ post.modal-id }}" style="/*box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);*/">
-                            <div class="portfolio-link-wrapper">
+                            <div class="portfolio-link-wrapper" style="background: black;">
                             <!-- <div class="page-scroll" style="height: 100%; width: 100%;"> -->
                                 <a id="portfolio-link-{{ post.modal-id }}" href="javascript:void(0);" class="overlay-link" onclick="toggleOnPortfolioLink(6-{{ post.modal-id }});"></a>
                             <!-- </div> -->
                                 <div class="overlay" 
                                 style="/*background-color: pink !important; color: black !important;*/ "> {{ post.title }} </div>
-                                <div style="background:black;height: 100%;width: 100%;">
+                                <!-- <div style="background:black;height: 100%;width: 100%;"> -->
                                 <!-- <div class="px_div" style="background-image: url('assets/img/portfolio/{{ post.img }}')"> </div>
                                 </div> -->
-                                <img src="assets/img/portfolio/{{ post.img }}" alt="image" class="parallaxed"/>
-                                </div>
+                                <img height="600px" width="400px" src="assets/img/portfolio/{{ post.img }}" alt="image" class="parallaxed"/>
+                                <!-- </div> -->
                             </div>
                         </div>
                     {% endfor %}

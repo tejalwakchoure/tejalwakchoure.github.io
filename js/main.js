@@ -129,10 +129,9 @@ var swiper_in = new Swiper('.swiper-container-in', {
       observer: true,
       observeParents: true,
 
-
-      loop: true,
-      speed: 1000,
-      grabCursor: true,
+      // loop: true,
+      // speed: 1000,
+      // grabCursor: true,
       watchSlidesProgress: true,
       // mousewheelControl: true,
       // keyboardControl: true,
@@ -147,7 +146,7 @@ var swiper_in = new Swiper('.swiper-container-in', {
             var slideProgress = swiper.slides[i].progress;
             var innerOffset = swiper.width * interleaveOffset;
             var innerTranslate = slideProgress * innerOffset;
-            swiper.slides[i].querySelector(".slide-inner").style.transform =
+            swiper.slides[i].querySelector(".swiper-slide").style.transform =
               "translate3d(" + innerTranslate + "px, 0, 0)";
           }      
         },
@@ -161,7 +160,56 @@ var swiper_in = new Swiper('.swiper-container-in', {
           var swiper = this;
           for (var i = 0; i < swiper.slides.length; i++) {
             swiper.slides[i].style.transition = speed + "ms";
-            swiper.slides[i].querySelector(".slide-inner").style.transition =
+            swiper.slides[i].querySelector(".swiper-slide").style.transition =
+              speed + "ms";
+          }
+        }
+      }
+    });
+var swiper_innermost = new Swiper('.swiper-container-innermost', {
+      // controller: {
+      //   control: swiper,
+      //   // inverse: true,
+      // },
+      // effect: 'flip',
+      cssMode: true,
+      mousewheel: true,
+      keyboard: true,
+      observer: true,
+      observeParents: true,
+
+      // loop: true,
+      // speed: 1000,
+      // grabCursor: true,
+      watchSlidesProgress: true,
+      // mousewheelControl: true,
+      // keyboardControl: true,
+      // navigation: {
+      //   nextEl: ".swiper-button-next",
+      //   prevEl: ".swiper-button-prev"
+      // },
+      on: {
+        progress: function() {
+          var swiper = this;
+          for (var i = 0; i < swiper.slides.length; i++) {
+            var slideProgress = swiper.slides[i].progress;
+            var innerOffset = swiper.width * interleaveOffset;
+            var innerTranslate = slideProgress * innerOffset;
+            swiper.slides[i].querySelector(".swiper-slide").style.transform =
+              "translate3d(" + innerTranslate + "px, 0, 0)";
+          }      
+        },
+        touchStart: function() {
+          var swiper = this;
+          for (var i = 0; i < swiper.slides.length; i++) {
+            swiper.slides[i].style.transition = "";
+          }
+        },
+        setTransition: function(speed) {
+          var swiper = this;
+          for (var i = 0; i < swiper.slides.length; i++) {
+            swiper.slides[i].style.transition = speed + "ms";
+            swiper.slides[i].querySelector(".swiper-slide").style.transition =
               speed + "ms";
           }
         }
@@ -170,7 +218,8 @@ var swiper_in = new Swiper('.swiper-container-in', {
 
 $(document).ready(function() {
     swiper.controller.control = swiper_in;
-    swiper_in.controller.control = swiper;
+    swiper.controller.control = swiper_innermost;
+    // swiper_in.controller.control = swiper;
 });
 
 

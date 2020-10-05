@@ -231,10 +231,7 @@ $(window).on("load resize scroll", function() {
 
 // Portfolio grid parallax
 const images = document.querySelectorAll('.px_img');
-new simpleParallax(images, {
-  customContainer: document.querySelector('#portfolio'),
-  customWrapper: document.querySelector('.portfolio-link-wrapper')
-});
+new simpleParallax(images);
 
 
 

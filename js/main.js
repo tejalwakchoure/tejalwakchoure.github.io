@@ -220,6 +220,20 @@ $(document).ready(function() {
     swiper.controller.control = swiper_in;
     swiper.controller.control = swiper_innermost;
     // swiper_in.controller.control = swiper;
+
+    // Portfolio grid parallax
+    $('.px_img').each(function() {
+        new simpleParallax($(this), {
+        delay: .6,
+        transition: 'cubic-bezier(0,0,0,1)'
+      });
+    }
+    // const images = document.querySelectorAll('.px_img');
+
+    // new simpleParallax(images, {
+    //   delay: .6,
+    //   transition: 'cubic-bezier(0,0,0,1)'
+    // });
 });
 
 
@@ -318,12 +332,7 @@ $(window).on("load resize scroll", function() {
 });
 
 
-// Portfolio grid parallax
-const images = document.querySelectorAll('.px_img');
-new simpleParallax(images, {
-  delay: .6,
-  transition: 'cubic-bezier(0,0,0,1)'
-});
+
 
 
 

@@ -251,7 +251,7 @@ $(document).ready(function() {
       delay: .6,
       transition: 'cubic-bezier(0,0,0,1)',
       customWrapper: img.parentNode.nodeName,
-      customContainer: img.parentNode.nodeName,
+      // customContainer: img.parentNode.nodeName,
     });
   });
 });

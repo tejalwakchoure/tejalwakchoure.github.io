@@ -740,11 +740,11 @@ header mark {
 	width: 100%;
 }   
 
-#portfolio .portfolio-link-wrapper .simpleParallax {
-/*	width: 100%;
-    height: 100%;*/
-}
-#portfolio .portfolio-link-wrapper .px_img {
+/*#portfolio .portfolio-link-wrapper .simpleParallax {
+	width: 100%;
+    height: 100%;
+}*/
+#portfolio .portfolio-link-wrapper img {
 	width: 100%;
     height: 100%;
     display: block;

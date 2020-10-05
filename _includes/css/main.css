@@ -741,12 +741,10 @@ header mark {
 }   
 
 #portfolio .portfolio-link-wrapper .simpleParallax,
-#portfolio .portfolio-link-wrapper img {    
-/*	height: 100%; 
-	width: 100%; */
+#portfolio .portfolio-link-wrapper .px_img {
 	width: 100%;
     height: 100%;
-    display: block;
+    /*display: block;*/
 	object-fit: cover;
 
 }

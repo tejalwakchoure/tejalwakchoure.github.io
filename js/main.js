@@ -244,6 +244,9 @@ var swiper_innermost = new Swiper('.swiper-container-innermost', {
 
 const images = document.querySelectorAll('.px_img');
 new simpleParallax(images);
+images.forEach(img => {
+  console.log(img.src);
+})
 
 $(document).ready(function() {
     swiper.controller.control = swiper_in;

@@ -847,10 +847,17 @@ header mark {
 .swiper-container-in {
 	/*background-color: #{{ site.color.lightbkg_overlay }};;*/
 	display: grid;
-	padding: 10px 10px 10px 0;
-	height: fit-content;
-	width: 100%;
-	/*position: absolute;*/
+	padding: 10px 0;
+	height: 400px; /*fit-content;*/
+	/*width: 100%;*/
+	position: absolute;
+	top: 12.5%;
+    left: auto;
+    z-index: 3;
+}
+
+.swiper-notification {
+	display: none;
 }
 
 .swiper-container {
@@ -875,7 +882,7 @@ header mark {
 
 	padding-left: 3%;
     padding-right: 2%;
-    margin: auto auto auto 200px;
+    margin: auto; /* auto auto 200px;*/
     width: 100%;
 }
 .swiper-slide #content-row {
@@ -901,7 +908,7 @@ header mark {
 	object-fit: cover; 
 	margin: auto 0;*/
 
-	    width: 500px;
+	    width: 600px;
     height: 200px;
     object-fit: cover;
     margin: 0 auto;
@@ -918,36 +925,47 @@ header mark {
 	bottom: 50%;*/
 
 
-	    position: absolute;
-    z-index: 2;
-    margin: auto 0 auto 100px;
-    height: 250px;
-    width: 300px;
+	position: absolute;
+    /*z-index: 2;*/
+    margin: 75px auto 0 auto;
+    height: 300px;
+    width: 400px;
     object-fit: cover;
-    top: 10%;
-    left: 30%;
+    /*top: 10%;*/
+    left: 28.5%
 }
 .swiper-pagination, .swiper-button-prev, .swiper-button-next {
 	position: relative !important;
+	width: auto;
+	height: auto;
 	color: #{{ site.color.lighttext }};
 }
 .swiper-pagination {
 	display: inline-table; 
 	left: 2.5%;
+	margin: 10px 0;
 }
 .swiper-navigation {
 	display: inline-table; 
 	width: 100%; 
+	height: fit-content;
 	color: #{{ site.color.lighttext }}; !important;
 }
 .swiper-button-prev {
 	float: left;
+	margin-left: 10px;
 }
 .swiper-button-next {
 	float: right;
+	margin-right: 10px;
 }
 .swiper-pagination-bullet-active {
 	background: #{{ site.color.lighttext_heading }};
+}
+
+.swiper-button-prev:after, .swiper-container-rtl .swiper-button-next:after,
+.swiper-button-next:after, .swiper-container-rtl .swiper-button-prev:after {
+	content: '';
 }
 
 
@@ -962,17 +980,17 @@ header mark {
 		/*height: 350px;
 		width: 150px;*/
 
-		    width: 450px;
-    height: 175px;
+/*		    width: 450px;
+    height: 175px;*/
 	}
 	.swiper-slide #img-on-top {
 /*		height: 200px;
     	width: 250px;
     	margin: auto 0 auto 50px;*/
 
-    	height: 250px;
+/*    	height: 250px;
     width: 300px;
-    margin: 0 auto 50px auto;
+    margin: 0 auto 50px auto;*/
 
 	}
 }

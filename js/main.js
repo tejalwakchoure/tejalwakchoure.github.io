@@ -242,14 +242,19 @@ var swiper_innermost = new Swiper('.swiper-container-innermost', {
       }
     });
 
-const images = document.querySelectorAll('.px_img');
-// new simpleParallax(images);
-images.forEach(img => {
-  console.log(img.src);
-  new simpleParallax(img, {
-    customWrapper: img.parentNode.nodeName,
+$(document).ready(function() {
+  const images = document.querySelectorAll('.px_img');
+  // new simpleParallax(images);
+  images.forEach(img => {
+    console.log(img.src);
+    new simpleParallax(img, {
+      delay: .6,
+      transition: 'cubic-bezier(0,0,0,1)',
+      customWrapper: img.parentNode.nodeName,
+      customContainer: img.parentNode.nodeName,
+    });
   });
-})
+});
 
 $(document).ready(function() {
     swiper.controller.control = swiper_in;

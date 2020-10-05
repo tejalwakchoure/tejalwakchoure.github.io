@@ -122,7 +122,7 @@ var swiper_in = new Swiper('.swiper-container-in', {
       //   // inverse: true,
       // },
       effect: 'flip',
-      // cssMode: true,
+      cssMode: true,
       mousewheel: true,
       keyboard: true,
       observer: true,

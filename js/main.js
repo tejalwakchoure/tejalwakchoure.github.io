@@ -123,8 +123,8 @@ var swiper_in = new Swiper('.swiper-container-in', {
       // },
       effect: 'flip',
       // cssMode: true,
-      // mousewheel: true,
-      // keyboard: true,
+      mousewheel: true,
+      keyboard: true,
       observer: true,
       observeParents: true,
     });

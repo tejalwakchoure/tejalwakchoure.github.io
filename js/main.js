@@ -229,33 +229,38 @@ $(window).on("load resize scroll", function() {
 
 
 // Portfolio grid parallax
-$(window).on("load resize scroll", function() {
-   $('.px_div').each(function() { 
-    var velocity = 0.1; // Y axis scroll speed
-    var element = $(this);
-    var height = element.height(); //element.outerHeight(true);
-    var topOfElement = element.offset().top;
-    var bottomOfElement = element.offset().top + element.height(); //element.outerHeight(true);
-    var $window = $(window);
-    var scrollTopPosition = $window.scrollTop() + $window.height();
-    var windowScrollTop = $window.scrollTop();
-    // if($('#portfolio').offset().top <= $(window).scrollTop() && ($('#portfolio').offset().top + $('#portfolio').outerHeight()) > $(window).scrollTop()) {
-    if ((windowScrollTop > bottomOfElement && windowScrollTop > topOfElement) || (scrollTopPosition < topOfElement && scrollTopPosition < bottomOfElement)) {
-      // Element is hidden
-    } 
-    else {
-      // Element is partially/completely visible
-      // var pos = windowScrollTop - topOfElement;
-      var pos = windowScrollTop - topOfElement;
-      // $('.px_div').each(function() { 
-          // var $element = $(this);
-          // var height = element.height();
-          // $('.px_div').css('background-position', '50%' + Math.round(-1* pos * velocity) + 'px'); 
-          // $('.px_div').css('backgroundPosition', '50% ' + Math.round((height - pos) * velocity) + 'px'); 
-          $('.px_div').css('transform', 'translate3d(0px,' + Math.round((height - pos) * velocity) + 'px, 0px) scale(1.3)'); 
-    }
-  });
-});
+const images = document.querySelectorAll('.parallaxed');
+new simpleParallax(images);
+
+
+
+// $(window).on("load resize scroll", function() {
+//    $('.px_div').each(function() { 
+//     var velocity = 0.1; // Y axis scroll speed
+//     var element = $(this);
+//     var height = element.height(); //element.outerHeight(true);
+//     var topOfElement = element.offset().top;
+//     var bottomOfElement = element.offset().top + element.height(); //element.outerHeight(true);
+//     var $window = $(window);
+//     var scrollTopPosition = $window.scrollTop() + $window.height();
+//     var windowScrollTop = $window.scrollTop();
+//     // if($('#portfolio').offset().top <= $(window).scrollTop() && ($('#portfolio').offset().top + $('#portfolio').outerHeight()) > $(window).scrollTop()) {
+//     if ((windowScrollTop > bottomOfElement && windowScrollTop > topOfElement) || (scrollTopPosition < topOfElement && scrollTopPosition < bottomOfElement)) {
+//       // Element is hidden
+//     } 
+//     else {
+//       // Element is partially/completely visible
+//       // var pos = windowScrollTop - topOfElement;
+//       var pos = windowScrollTop - topOfElement;
+//       // $('.px_div').each(function() { 
+//           // var $element = $(this);
+//           // var height = element.height();
+//           // $('.px_div').css('background-position', '50%' + Math.round(-1* pos * velocity) + 'px'); 
+//           // $('.px_div').css('backgroundPosition', '50% ' + Math.round((height - pos) * velocity) + 'px'); 
+//           $('.px_div').css('transform', 'translate3d(0px,' + Math.round((height - pos) * velocity) + 'px, 0px) scale(1.3)'); 
+//     }
+//   });
+// });
 
 
 

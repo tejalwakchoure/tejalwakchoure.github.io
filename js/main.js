@@ -195,7 +195,7 @@ images.forEach(img => {
           customWrapper: img.parentNode.nodeName,
         });
       })
-      .attr("src", img.attr("src"));
+      .attr("src", img.src);
 });
 
 

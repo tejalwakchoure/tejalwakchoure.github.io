@@ -198,10 +198,10 @@ $(document).ready(function() {
 //       // .attr("src", img.src);
 // });
 
-// document.addEventListener("DOMContentLoaded", theDomHasLoaded, false);
-window.addEventListener("load", pageFullyLoaded, false);
+document.addEventListener("DOMContentLoaded", domLoaded, false);
+// window.addEventListener("load", pageFullyLoaded, false);
 
-function pageFullyLoaded(e) {
+function domLoaded(e) {
     var images = document.querySelectorAll('.px_img');
     images.forEach(img => {
         console.log("inside dom load fn");

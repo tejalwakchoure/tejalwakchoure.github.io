@@ -118,7 +118,7 @@ $(function() {
         new simpleParallax(img, {
             delay: .5,
             transition: 'cubic-bezier(0,0,0,1)',
-            customWrapper: img.parentNode.nodeName,
+            // customWrapper: img.parentNode.nodeName,
         });
     }
     $('.px_img').each(function() {
@@ -150,12 +150,14 @@ $(function() {
 //     console.log("loading");
 //     if(img.complete) { // checks if image is loaded
 //         console.log("loaded");
-//     new simpleParallax(img, {
-//           delay: .5,
-//           transition: 'cubic-bezier(0,0,0,1)',
-//           // customWrapper: img.parentNode.nodeName,
-//       });
-//     }});
+//         new simpleParallax(img, {
+//               delay: .5,
+//               transition: 'cubic-bezier(0,0,0,1)',
+//               // customWrapper: img.parentNode.nodeName,
+//           });
+//         clearInterval(parallaxVar);
+//     }
+//   });
 // }, 500);
 
 // Swiper initializations

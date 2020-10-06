@@ -87,17 +87,18 @@ function checkTime(i) {
 
 // Portfolio parallax
 // var images = new Image;
-// images.forEach(img => {
-//     img.addEventListener("load", function () {
-//       console.log("image parallax loaded");
-//       new simpleParallax(img, {
-//           delay: .5,
-//           transition: 'cubic-bezier(0,0,0,1)',
-//           customWrapper: img.parentNode.nodeName,
-//       });
-//     });
-//     img.src= e.target.result;
-// });
+var images = document.querySelectorAll('.px_img');
+images.forEach(img => {
+    img.addEventListener("load", function () {
+      console.log("image parallax loaded");
+      new simpleParallax(img, {
+          delay: .5,
+          transition: 'cubic-bezier(0,0,0,1)',
+          customWrapper: img.parentNode.nodeName,
+      });
+    });
+    img.src= e.target.result;
+});
 
 
 // var images = document.querySelectorAll('.px_img');
@@ -113,32 +114,32 @@ function checkTime(i) {
 //     });
 // });
 
-loadPortfolioImages(document.querySelectorAll('.px_img')).then(images => {
-  images.forEach(img => {
-    console.log("image parallax loaded");
-    new simpleParallax(img, {
-        delay: .5,
-        transition: 'cubic-bezier(0,0,0,1)',
-        // customWrapper: img.parentNode.nodeName,
-    });
-  });
-});
-async function loadPortfolioImages(imageArray) {
-    const promiseArray = []; 
-    const newImageArray = [];
-    for (let image of imageArray) {
-        promiseArray.push(new Promise(resolve => {
-            const img = new Image();
-            img.onload = resolve;
-            img.className = "px_img img-responsive";
-            img.src = image.src;
-            newImageArray.push(img);
-        }));
-    }
-    await Promise.all(promiseArray); // wait for all the images to be loaded
-    console.log("all images loaded");
-    return newImageArray;
-}
+// loadPortfolioImages(document.querySelectorAll('.px_img')).then(images => {
+//   images.forEach(img => {
+//     console.log("image parallax loaded");
+//     new simpleParallax(img, {
+//         delay: .5,
+//         transition: 'cubic-bezier(0,0,0,1)',
+//         // customWrapper: img.parentNode.nodeName,
+//     });
+//   });
+// });
+// async function loadPortfolioImages(imageArray) {
+//     const promiseArray = []; 
+//     const newImageArray = [];
+//     for (let image of imageArray) {
+//         promiseArray.push(new Promise(resolve => {
+//             const img = new Image();
+//             img.onload = resolve;
+//             img.className = "px_img img-responsive";
+//             img.src = image.src;
+//             newImageArray.push(img);
+//         }));
+//     }
+//     await Promise.all(promiseArray); // wait for all the images to be loaded
+//     console.log("all images loaded");
+//     return newImageArray;
+// }
 
 // Swiper initializations
 var interleaveOffset = 0.5;

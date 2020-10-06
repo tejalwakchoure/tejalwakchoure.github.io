@@ -25,16 +25,15 @@
 			</div>
 
 			<div class="swiper-container">
+				<div class="row">
+					<a role="button" href="javascript:void(0);" class="slide-link" style="float: left; padding: 10px 30px; background: #e82e2e; color: white;" onclick="toggleOnPortfolioLink(-1);">
+						<i class="fa fa-2x fa-angle-double-left"></i>
+					</a>
+				</div>
 				<div class="swiper-wrapper">
 					{% for post in site.posts %}
 					<div class="swiper-slide" id="slide-{{ post.modal-id }}">
 					<div class="container text-center">
-						<div class="row">
-							<a role="button" href="javascript:void(0);" id="#slide-link-{{ post.modal-id }}" style="float: left; padding: 10px 30px; background: #e82e2e; color: white;" 
-							onclick="toggleOnPortfolioLink(6-{{ post.modal-id }});">
-								<i class="fa fa-2x fa-angle-double-left"></i>
-							</a>
-						</div>
 						<div class="row" id="img-positioning-row"></div>
 						<div class="row" id="content-row">				
 							<div id="content">

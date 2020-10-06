@@ -224,6 +224,9 @@ $(document).ready(function() {
 // }
 
 function toggleOnPortfolioLink(num) {
+    if(num == -1) {
+      num = swiper.realIndex;
+    }
     if($('#portfolioDetails').css('display')!='none') {
         $('#portfolio').addClass("animate__animated animate__slideInLeft");
         $('#portfolio').show().siblings('section').hide();

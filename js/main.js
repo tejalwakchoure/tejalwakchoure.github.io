@@ -169,29 +169,29 @@ $(document).ready(function() {
 });
 
 
-// var images = document.querySelectorAll('.px_img');
-//   // new simpleParallax(images);
-// images.forEach(img => {
-//   console.log("outside");
-//   new simpleParallax(img, {
-//     delay: .5,
-//     transition: 'cubic-bezier(0,0,0,1)',
-//     customWrapper: img.parentNode.nodeName,
-//   });
-// });
-
-$(document).ready(function(){
-    const images = document.querySelectorAll('.px_img');
+var images = document.querySelectorAll('.px_img');
   // new simpleParallax(images);
-  images.forEach(img => {
-    console.log("document ready");
-    new simpleParallax(img, {
-      delay: .5,
-      transition: 'cubic-bezier(0,0,0,1)',
-      customWrapper: img.parentNode.nodeName,
-    });
+images.forEach(img => {
+  console.log("outside");
+  new simpleParallax(img, {
+    delay: .5,
+    transition: 'cubic-bezier(0,0,0,1)',
+    customWrapper: img.parentNode.nodeName,
   });
- }); 
+});
+
+// $(document).ready(function(){
+//     const images = document.querySelectorAll('.px_img');
+//   // new simpleParallax(images);
+//   images.forEach(img => {
+//     console.log("document ready");
+//     new simpleParallax(img, {
+//       delay: .5,
+//       transition: 'cubic-bezier(0,0,0,1)',
+//       customWrapper: img.parentNode.nodeName,
+//     });
+//   });
+//  }); 
 
 
 // Parallax for portfolio grid (last element to load, use for preloader check)

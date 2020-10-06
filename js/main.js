@@ -98,7 +98,7 @@ var swiper_innermost = new Swiper('.swiper-container-innermost', {
       observer: true,
       observeParents: true,
       speed: interleaveSpeed,
-      virtualTranslate: true,
+      // virtualTranslate: true,
       watchSlidesProgress: true,
       on: {
         progress: function() {
@@ -131,7 +131,7 @@ var swiper_in = new Swiper('.swiper-container-in', {
       observer: true,
       observeParents: true,
       speed: interleaveSpeed,
-      virtualTranslate: true,
+      // virtualTranslate: true,
       watchSlidesProgress: true,
       on: {
         progress: function() {

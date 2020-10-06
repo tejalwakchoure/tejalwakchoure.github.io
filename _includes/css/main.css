@@ -926,11 +926,13 @@ header mark {
     object-fit: cover;
     margin: 0 auto;
     text-align: center;
+    position: absolute;
 }
 .swiper-slide #img-on-top {
 	height: 300px;
     width: 400px;
     object-fit: cover;
+    position: absolute;
 }
 .swiper-pagination, .swiper-button-prev, .swiper-button-next {
 	position: relative !important;

@@ -183,41 +183,46 @@ $(document).ready(function() {
 });
 
 
-var images = document.querySelectorAll('.px_img');
-  // new simpleParallax(images);
-images.forEach(img => {
-  console.log("outside");
-  new simpleParallax(img, {
-    delay: .5,
-    transition: 'cubic-bezier(0,0,0,1)',
-    customWrapper: img.parentNode.nodeName,
-  });
-});
+// var images = document.querySelectorAll('.px_img');
+//   // new simpleParallax(images);
+// images.forEach(img => {
+//   console.log("outside");
+//   new simpleParallax(img, {
+//     delay: .5,
+//     transition: 'cubic-bezier(0,0,0,1)',
+//     customWrapper: img.parentNode.nodeName,
+//   });
+// });
 
- // $(window).load(function(){
- //    const images = document.querySelectorAll('.px_img');
- //  // new simpleParallax(images);
- //  images.forEach(img => {
- //    console.log("window load");
- //    new simpleParallax(img, {
- //      transition: 'cubic-bezier(0,0,0,1)',
- //      customWrapper: img.parentNode.nodeName,
- //    });
- //  });
- // });
+// $(document).ready(function(){
+//     const images = document.querySelectorAll('.px_img');
+//   // new simpleParallax(images);
+//   images.forEach(img => {
+//     console.log("document ready");
+//     new simpleParallax(img, {
+//       delay: .5,
+//       transition: 'cubic-bezier(0,0,0,1)',
+//       customWrapper: img.parentNode.nodeName,
+//     });
+//   });
+//  }); 
 
-$(document).ready(function(){
-    const images = document.querySelectorAll('.px_img');
+window.onload = function(){
+  window.document.body.onload = addParallax;
+};
+
+function addParallax() {
+  const images = document.querySelectorAll('.px_img');
   // new simpleParallax(images);
   images.forEach(img => {
-    console.log("document ready");
+    console.log("on load, document body loaded");
     new simpleParallax(img, {
       delay: .5,
       transition: 'cubic-bezier(0,0,0,1)',
       customWrapper: img.parentNode.nodeName,
     });
   });
- }); 
+}
 
 function toggleOnPortfolioLink(num) {
     if($('#portfolioDetails').css('display')!='none') {

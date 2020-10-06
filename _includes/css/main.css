@@ -352,17 +352,16 @@ hr.primary{
 	}
 }
 
-@media(min-width:768px) {   
+@media(max-width:768px) {   
 	.sidenav .navbar-fixed-top.navbar-shrink .page-scroll .navbar-brand { 
-		font-size: 2em !important;
+		/*font-size: 2em !important;
 		letter-spacing: -0.08em;   
 		font-weight: 100 !important;
 		text-transform: lowercase !important;
-		margin: 0!important;
+		margin: 0!important;*/
 		padding: 0!important;
 	}
 }
-
 
 
 *{      

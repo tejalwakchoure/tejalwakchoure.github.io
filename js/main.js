@@ -86,43 +86,43 @@ function checkTime(i) {
 }
 
 // Portfolio parallax
-loadPortfolioImages(document.querySelectorAll('.px_img')).then(images => {
-  images.forEach(img => {
+var images = document.querySelectorAll('.px_img');
+images.forEach(img => {
+    while(!(img.complete && img.naturalHeight !== 0)) {
+        console.log("img not loaded yet");
+        continue;
+    }
     new simpleParallax(img, {
         delay: .5,
         transition: 'cubic-bezier(0,0,0,1)',
-        customWrapper: img.parentNode.nodeName,
+        // customWrapper: img.parentNode.nodeName,
     });
-  });
 });
-// var images = document.querySelectorAll('.px_img');
-// images.forEach(img => {
-//     while(!(img.complete && img.naturalHeight !== 0)) {
-//         console.log("img not loaded yet");
-//         continue;
-//     }
+
+// loadPortfolioImages(document.querySelectorAll('.px_img')).then(images => {
+//   images.forEach(img => {
 //     new simpleParallax(img, {
 //         delay: .5,
 //         transition: 'cubic-bezier(0,0,0,1)',
-//         customWrapper: img.parentNode.nodeName,
+//         // customWrapper: img.parentNode.nodeName,
 //     });
+//   });
 // });
-
-async function loadPortfolioImages(imageArray) {
-    const promiseArray = []; 
-    const newImageArray = [];
-    for (let image of imageArray) {
-        promiseArray.push(new Promise(resolve => {
-            const img = image; //new Image();
-            img.onload = resolve;
-            img.src = image.src;
-            newImageArray.push(img);
-        }));
-    }
-    await Promise.all(promiseArray); // wait for all the images to be loaded
-    console.log("all images loaded");
-    return newImageArray;
-}
+// async function loadPortfolioImages(imageArray) {
+//     const promiseArray = []; 
+//     const newImageArray = [];
+//     for (let image of imageArray) {
+//         promiseArray.push(new Promise(resolve => {
+//             const img = image; //new Image();
+//             img.onload = resolve;
+//             img.src = image.src;
+//             newImageArray.push(img);
+//         }));
+//     }
+//     await Promise.all(promiseArray); // wait for all the images to be loaded
+//     console.log("all images loaded");
+//     return newImageArray;
+// }
 
 // Swiper initializations
 var interleaveOffset = 0.5;

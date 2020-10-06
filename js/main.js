@@ -130,7 +130,7 @@ async function loadPortfolioImages(imageArray) {
         promiseArray.push(new Promise(resolve => {
             const img = new Image();
             img.onload = resolve;
-            img.addClass("px_img img-responsive");
+            img.className = "px_img img-responsive";
             img.src = image.src;
             newImageArray.push(img);
         }));

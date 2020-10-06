@@ -188,7 +188,7 @@ var images = document.querySelectorAll('.px_img');
 images.forEach(img => {
   console.log("outside");
   new simpleParallax(img, {
-    delay: 0,
+    delay: .5,
     transition: 'cubic-bezier(0,0,0,1)',
     customWrapper: img.parentNode.nodeName,
   });
@@ -212,7 +212,7 @@ $(document).ready(function(){
   images.forEach(img => {
     console.log("document ready");
     new simpleParallax(img, {
-      delay: 0,
+      delay: .5,
       transition: 'cubic-bezier(0,0,0,1)',
       customWrapper: img.parentNode.nodeName,
     });

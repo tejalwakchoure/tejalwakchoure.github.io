@@ -17,14 +17,13 @@
                     {% for post in site.posts %}
                         <div id="portfolio-item-{{ post.modal-id }}" class="grid-item grid-item{{ post.modal-id }}" style="/*box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);*/">
                             <div class="portfolio-link-wrapper" style="background: black;">
-                            <!-- <div class="page-scroll" style="height: 100%; width: 100%;"> -->
                                 <a id="portfolio-link-{{ post.modal-id }}" href="javascript:void(0);" class="overlay-link" onclick="toggleOnPortfolioLink(6-{{ post.modal-id }});"></a>
-                            <!-- </div> -->
                                 <div class="overlay" 
                                 style="/*background-color: pink !important; color: black !important;*/ "> {{ post.title }} </div>
                                 <!-- <div style="background:black;height: 100%;width: 100%;"> -->
                                 <!-- <div class="px_div" style="background-image: url('assets/img/portfolio/{{ post.img }}')"> </div>
                                 </div> -->
+                                <!-- To reduce the lossless effect, if the scale is set at 1.2 and your image is 500px width, do the simple math 500 * 1.2 = 600. So you can choose a 600px image to replace your 500px one, and don't see any quality leak.  -->
                                 <img src="assets/img/portfolio/{{ post.img }}" alt="image" class="px_img img-responsive"/>
                                 <!-- </div> -->
                             </div>

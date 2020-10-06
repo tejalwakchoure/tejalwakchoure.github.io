@@ -5,8 +5,8 @@
 //     window.loaded = true;
 // });
 
-var pageFullyLoadedVar = false;
-window.addEventListener("load", pageFullyLoaded, false);
+// var pageFullyLoadedVar = false;
+// window.addEventListener("load", pageFullyLoaded, false);
 
 //Preloader and page fade in setup
 function fadeInChildren(parent, base_delay) {

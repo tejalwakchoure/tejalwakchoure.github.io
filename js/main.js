@@ -170,18 +170,24 @@ $(document).ready(function() {
 
 
 var images = document.querySelectorAll('.px_img');
-new simpleParallax(images, {
-  delay: .5,
-  transition: 'cubic-bezier(0,0,0,1)',
+images.forEach(img => {
+    console.log("outside");
+    
+    // img.on('load', function()  {
+    $("<img/>").on('load', function()  {
+        console.log("img loaded");
+        new simpleParallax(img, {
+          delay: .5,
+          transition: 'cubic-bezier(0,0,0,1)',
+          customWrapper: img.parentNode.nodeName,
+        });
+      })
+      .attr("src", img.attr("src"));
 });
-// images.forEach(img => {
-//   console.log("outside");
-//   new simpleParallax(img, { 
-//     delay: .5,
-//     transition: 'cubic-bezier(0,0,0,1)',
-//     customWrapper: img.parentNode.nodeName,
-//   });
-// });
+
+
+
+
 
 // $(document).ready(function(){
 //     const images = document.querySelectorAll('.px_img');

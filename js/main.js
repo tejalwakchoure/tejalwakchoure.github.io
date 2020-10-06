@@ -86,18 +86,20 @@ function checkTime(i) {
 }
 
 // Portfolio parallax
-var images = new Image;
-images.forEach(img => {
-    img.addEventListener("load", function () {
-      console.log("image parallax loaded");
-      new simpleParallax(img, {
-          delay: .5,
-          transition: 'cubic-bezier(0,0,0,1)',
-          customWrapper: img.parentNode.nodeName,
-      });
-    });
-    img.src= e.target.result;
-});
+// var images = new Image;
+// images.forEach(img => {
+//     img.addEventListener("load", function () {
+//       console.log("image parallax loaded");
+//       new simpleParallax(img, {
+//           delay: .5,
+//           transition: 'cubic-bezier(0,0,0,1)',
+//           customWrapper: img.parentNode.nodeName,
+//       });
+//     });
+//     img.src= e.target.result;
+// });
+
+
 // var images = document.querySelectorAll('.px_img');
 // images.forEach(img => {
 //     while(!(img.complete && img.naturalHeight !== 0)) {

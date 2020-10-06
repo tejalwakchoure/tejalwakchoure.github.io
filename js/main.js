@@ -169,34 +169,36 @@ $(document).ready(function() {
 });
 
 
-$('.px_img').each(function() {
-    console.log("outside");
-    // $(this).on('load', function()  {
-    $("<img/>").on('load', function()  {
-        console.log("img loaded");
-        new simpleParallax($(this), {
-          delay: .5,
-          transition: 'cubic-bezier(0,0,0,1)',
-          customWrapper: $(this).parentNode.nodeName,
-        });
-      })
-      .attr("src", $(this).attr("src"));
-});
-
-// var images = document.querySelectorAll('.px_img');
-// images.forEach(img => {
+// $('.px_img').each(function() {
 //     console.log("outside");
-//     // img.on('load', function()  {
+//     // $(this).on('load', function()  {
 //     $("<img/>").on('load', function()  {
 //         console.log("img loaded");
-//         new simpleParallax(img, {
+//         new simpleParallax($(this), {
 //           delay: .5,
 //           transition: 'cubic-bezier(0,0,0,1)',
-//           customWrapper: img.parentNode.nodeName,
+//           customWrapper: $(this).parentNode.nodeName,
 //         });
 //       })
-//       .attr("src", img.attr("src"));
+//       .attr("src", $(this).attr("src"));
 // });
+
+var images = document.querySelectorAll('.px_img');
+images.forEach(img => {
+    console.log("outside");
+    // img.on('load', function()  {
+    $("<img/>").on('load', function()  {
+        console.log("img loaded");
+        new simpleParallax(img, {
+          delay: .5,
+          transition: 'cubic-bezier(0,0,0,1)',
+          customWrapper: img.parentNode.nodeName,
+        });
+      })
+      .attr("src", img.attr("src"));
+});
+
+
 
 function toggleOnPortfolioLink(num) {
     if(num == -1) {

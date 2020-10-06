@@ -124,13 +124,14 @@ var swiper_in = new Swiper('.swiper-container-in', {
       // },
       // effect: 'flip',
       // cssMode: true,
-      mousewheel: true,
-      keyboard: true,
+
+      // mousewheel: true,
+      // keyboard: true,
       observer: true,
       observeParents: true,
 
       // loop: true,
-      speed: 1000,
+      speed: 500,
       // grabCursor: true,
       watchSlidesProgress: true,
       // mousewheelControl: true,
@@ -189,13 +190,14 @@ var swiper_innermost = new Swiper('.swiper-container-innermost', {
       // },
       // effect: 'flip',
       // cssMode: true,
-      mousewheel: true,
-      keyboard: true,
+
+      // mousewheel: true,
+      // keyboard: true,
       observer: true,
       observeParents: true,
 
       // loop: true,
-      speed: 1000,
+      speed: 500,
       // grabCursor: true,
       watchSlidesProgress: true,
       // mousewheelControl: true,
@@ -248,19 +250,17 @@ var swiper_innermost = new Swiper('.swiper-container-innermost', {
       }
     });
 
-$(function() {
+// $(function() {
   const images = document.querySelectorAll('.px_img');
   // new simpleParallax(images);
   images.forEach(img => {
-    console.log(img.src);
+    console.log("outside");
     new simpleParallax(img, {
-      // delay: .6,
       transition: 'cubic-bezier(0,0,0,1)',
       customWrapper: img.parentNode.nodeName,
-      // customContainer: img.parentNode.nodeName,
     });
   });
-});
+// });
 
 $(document).ready(function() {
     swiper_in.controller.control = swiper_innermost;
@@ -278,6 +278,30 @@ $(document).ready(function() {
 
 });
 
+
+ $(window).load(function(){
+    const images = document.querySelectorAll('.px_img');
+  // new simpleParallax(images);
+  images.forEach(img => {
+    console.log("window load");
+    new simpleParallax(img, {
+      transition: 'cubic-bezier(0,0,0,1)',
+      customWrapper: img.parentNode.nodeName,
+    });
+  });
+ });
+
+$(document).ready(function(){
+    const images = document.querySelectorAll('.px_img');
+  // new simpleParallax(images);
+  images.forEach(img => {
+    console.log("document ready");
+    new simpleParallax(img, {
+      transition: 'cubic-bezier(0,0,0,1)',
+      customWrapper: img.parentNode.nodeName,
+    });
+  });
+ }); 
 
 function toggleOnPortfolioLink(num) {
     if($('#portfolioDetails').css('display')!='none') {

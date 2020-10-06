@@ -126,12 +126,12 @@ $(function() {
     }
     var images = document.querySelectorAll('.px_img');
     var counter = images.length;
-    images.each(function() {
+    images.forEach(img => {
         // if( this.complete ) {
         //     console.log("image already loaded");
         //     imageLoaded.call( this );
         // } else {
-            $(this).on('load', imageLoaded);
+            $(img).on('load', imageLoaded);
         // }
     });
 });

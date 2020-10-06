@@ -697,12 +697,12 @@ header mark {
 	width: 100%;
 }   
 
-/*#portfolio .portfolio-link-wrapper .simpleParallax {
+#portfolio .portfolio-link-wrapper .simpleParallax {
 	position: relative; 
 	overflow: hidden; 
 	height: 100%; 
 	width: 100%;
-}   */
+}   
 
 #portfolio .portfolio-link-wrapper img {
 	width: 100%;

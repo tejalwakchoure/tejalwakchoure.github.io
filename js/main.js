@@ -50,23 +50,39 @@ function pageFullyLoaded(e) {
 }
 
 
+// var images = document.querySelectorAll('.px_img');
+// images.forEach(img => {
+//     if (!img.prop('complete')) {
+//       console.log("Waiting to be loaded!");
+//       img.on('load', function() {
+//         console.log("Loaded!");
+//         new simpleParallax(img, {
+//           delay: .5,
+//           transition: 'cubic-bezier(0,0,0,1)',
+//           customWrapper: img.parentNode.nodeName,
+//         });
+//       });
+//     } else {
+//       console.log("Already loaded!");
+//     }
+// });
+
 var images = document.querySelectorAll('.px_img');
-images.forEach(img => {
-    if (!img.prop('complete')) {
+$('.px_img').each(function () {
+    if (!$(this).prop('complete')) {
       console.log("Waiting to be loaded!");
-      img.on('load', function() {
+      $(this).on('load', function() {
         console.log("Loaded!");
-        new simpleParallax(img, {
+        new simpleParallax($(this), {
           delay: .5,
           transition: 'cubic-bezier(0,0,0,1)',
-          customWrapper: img.parentNode.nodeName,
+          // customWrapper: img.parentNode.nodeName,
         });
       });
     } else {
       console.log("Already loaded!");
     }
 });
-
 
 // Change colours of background as we scroll down
 $(window).scroll(function() {

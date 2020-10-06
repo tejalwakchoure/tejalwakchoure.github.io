@@ -28,16 +28,10 @@ $(document).ready(function() {
         $('#body-container').fadeIn(1000);
         fadeInChildren('#body-container header',1000);
         fadeInChildren('#body-container header .intro-text',1000);
-        // $('#portfolioDetails .container .row #myCarousel .carousel-inner #slide-6').addClass('active');
         startTime();
      }
     }, 10);
 });
-// setTimeout(function() {
-//  //After 2000 milliseconds, fade out the overlay. The animation duration is 500 ms.
-//   $('#preloader').fadeOut(500);
-// $('#body-container').fadeIn(1000);
-// }, 1000);
 
 // $(window).load(function() {
 //      // Animate components on and off the screen on loading
@@ -50,19 +44,17 @@ $(document).ready(function() {
 //  });
 
 
-// Chanhge colours of background as we scroll down
+// Change colours of background as we scroll down
 $(window).scroll(function() {
   var $window = $(window),
   $body = $('.body-container'),
   $panel = $('.section-bkg');
-  // Change 33% earlier than scroll position so colour is there when you arrive.
+  // Change 33% earlier than scroll pos so colour is there when you arrive
   var scroll = $window.scrollTop() + ($window.height() / 3);
 
   $panel.each(function () {
     var $this = $(this);
-    // if position is within range of this panel.
-    // So position of (position of top of div <= scroll position) && (position of bottom of div > scroll position).
-    // Remember we set the scroll to 33% earlier in scroll var.
+    // if position is within range of this panel; so pos of (pos of top of div <= scroll pos) && (pos of bottom of div > scroll pos)
     if ($this.position().top <= scroll && $this.position().top + $this.height() > scroll) {
       $body.removeClass(function (index, css) {
         return (css.match (/(^|\s)color-\S+/g) || []).join(' ');
@@ -87,7 +79,6 @@ function startTime() {
     m = checkTime(m);
     mth = checkTime(mth);
     day = checkTime(day);
-
     // var month = today.toLocaleString('default', { month: 'short' });   
     // var period = (h<12)? "AM":"PM";
     // h = (h<13)? h:(h-12);
@@ -100,6 +91,75 @@ function checkTime(i) {
 }
 
 // Swiper initializations
+var interleaveOffset = 0.5;
+var interleaveSpeed = 1000;
+
+var swiper_innermost = new Swiper('.swiper-container-innermost', {
+      observer: true,
+      observeParents: true,
+      speed: interleaveSpeed,
+      virtualTranslate: true,
+      watchSlidesProgress: true,
+      on: {
+        progress: function() {
+          var swiper = this;
+          $('.swiper-container-innermost .slide-inner').each(function() { 
+            var slideProgress = $(this).progress;
+            var innerOffset = swiper.width * interleaveOffset;
+            var innerTranslate = slideProgress * innerOffset;
+            $(this).css({"transform" :  "translate3d(" + innerTranslate + "px, 0, 0)"});
+          })
+        },
+        touchStart: function() {
+          var swiper = this;
+          $('.swiper-container-innermost .swiper-slide').each(function() { 
+            $(this).css({"transition" :  ""});
+          })
+        },
+        setTransition: function(speed) {
+          var swiper = this;
+          $('.swiper-container-innermost .swiper-slide').each(function() { 
+            $(this).css({"transition" :  speed + "ms"});
+          });
+          $('.swiper-container-innermost .slide-inner').each(function() { 
+            $(this).css({"transition" :  speed + "ms"});
+          });
+        }
+      }
+    });
+var swiper_in = new Swiper('.swiper-container-in', {
+      observer: true,
+      observeParents: true,
+      speed: interleaveSpeed,
+      virtualTranslate: true,
+      watchSlidesProgress: true,
+      on: {
+        progress: function() {
+          var swiper = this;
+          $('.swiper-container-in .slide-inner').each(function() { 
+            var slideProgress = $(this).progress;
+            var innerOffset = swiper.width * interleaveOffset;
+            var innerTranslate = slideProgress * innerOffset;
+            $(this).css({"transform" :  "translate3d(" + innerTranslate + "px, 0, 0)"});
+          })
+        },
+        touchStart: function() {
+          var swiper = this;
+          $('.swiper-container-in .swiper-slide').each(function() { 
+            $(this).css({"transition" :  ""});
+          })
+        },
+        setTransition: function(speed) {
+          var swiper = this;
+          $('.swiper-container-in .swiper-slide').each(function() { 
+            $(this).css({"transition" :  speed + "ms"});
+          });
+          $('.swiper-container-in .slide-inner').each(function() { 
+            $(this).css({"transition" :  speed + "ms"});
+          });
+        }
+      }
+    });
 var swiper = new Swiper('.swiper-container', {
       cssMode: true,
       navigation: {
@@ -114,170 +174,24 @@ var swiper = new Swiper('.swiper-container', {
       keyboard: true,
       observer: true,
       observeParents: true,
+      virtualTranslate: true,
     });
-
-var interleaveOffset = 0.5;
-var swiper_in = new Swiper('.swiper-container-in', {
-      // controller: {
-      //   control: swiper,
-      //   // inverse: true,
-      // },
-      // effect: 'flip',
-      // cssMode: true,
-
-      // mousewheel: true,
-      // keyboard: true,
-      observer: true,
-      observeParents: true,
-
-      // loop: true,
-      speed: 500,
-      // grabCursor: true,
-      watchSlidesProgress: true,
-      // mousewheelControl: true,
-      // keyboardControl: true,
-      // navigation: {
-      //   nextEl: ".swiper-button-next",
-      //   prevEl: ".swiper-button-prev"
-      // },
-      on: {
-        progress: function() {
-          // var swiper = this;
-          // for (var i = 0; i < swiper.slides.length; i++) {
-          //   var slideProgress = swiper.slides[i].progress;
-          //   var innerOffset = swiper.width * interleaveOffset;
-          //   var innerTranslate = slideProgress * innerOffset;
-          //   swiper.slides[i].querySelector(".swiper-container-in .slide-inner").css({"transform" :  "translate3d(" + innerTranslate + "px, 0, 0)"});
-          // } 
-          var swiper = this;
-          $('.swiper-container-in .slide-inner').each(function() { 
-            var slideProgress = $(this).progress;
-            var innerOffset = swiper.width * interleaveOffset;
-            var innerTranslate = slideProgress * innerOffset;
-            $(this).css({"transform" :  "translate3d(" + innerTranslate + "px, 0, 0)"});
-          })
-        },
-        touchStart: function() {
-          // var swiper = this;
-          // for (var i = 0; i < swiper.slides.length; i++) {
-          //   swiper.slides[i].style.transition = "";
-          // }
-          var swiper = this;
-          $('.swiper-container-in .swiper-slide').each(function() { 
-            $(this).css({"transition" :  ""});
-          })
-        },
-        setTransition: function(speed) {
-          // var swiper = this;
-          // for (var i = 0; i < swiper.slides.length; i++) {
-          //   swiper.slides[i].style.transition = speed + "ms";
-          //   swiper.slides[i].querySelector(".swiper-container-in .slide-inner").css({"transition" : speed + "ms"});
-          // }
-          var swiper = this;
-          $('.swiper-container-in .swiper-slide').each(function() { 
-            $(this).css({"transition" :  speed + "ms"});
-          });
-          $('.swiper-container-in .slide-inner').each(function() { 
-            $(this).css({"transition" :  speed + "ms"});
-          });
-        }
-      }
-    });
-var swiper_innermost = new Swiper('.swiper-container-innermost', {
-      // controller: {
-      //   control: swiper,
-      //   // inverse: true,
-      // },
-      // effect: 'flip',
-      // cssMode: true,
-
-      // mousewheel: true,
-      // keyboard: true,
-      observer: true,
-      observeParents: true,
-
-      // loop: true,
-      speed: 500,
-      // grabCursor: true,
-      watchSlidesProgress: true,
-      // mousewheelControl: true,
-      // keyboardControl: true,
-      // navigation: {
-      //   nextEl: ".swiper-button-next",
-      //   prevEl: ".swiper-button-prev"
-      // },
-      on: {
-        progress: function() {
-          // var swiper = this;
-          // for (var i = 0; i < swiper.slides.length; i++) {
-          //   var slideProgress = swiper.slides[i].progress;
-          //   var innerOffset = swiper.width * interleaveOffset;
-          //   var innerTranslate = slideProgress * innerOffset;
-          //   swiper.slides[i].querySelector(".swiper-container-in .slide-inner").css({"transform" :  "translate3d(" + innerTranslate + "px, 0, 0)"});
-          // } 
-          var swiper = this;
-          $('.swiper-container-innermost .slide-inner').each(function() { 
-            var slideProgress = $(this).progress;
-            var innerOffset = swiper.width * interleaveOffset;
-            var innerTranslate = slideProgress * innerOffset;
-            $(this).css({"transform" :  "translate3d(" + innerTranslate + "px, 0, 0)"});
-          })
-        },
-        touchStart: function() {
-          // var swiper = this;
-          // for (var i = 0; i < swiper.slides.length; i++) {
-          //   swiper.slides[i].style.transition = "";
-          // }
-          var swiper = this;
-          $('.swiper-container-innermost .swiper-slide').each(function() { 
-            $(this).css({"transition" :  ""});
-          })
-        },
-        setTransition: function(speed) {
-          // var swiper = this;
-          // for (var i = 0; i < swiper.slides.length; i++) {
-          //   swiper.slides[i].style.transition = speed + "ms";
-          //   swiper.slides[i].querySelector(".swiper-container-in .slide-inner").css({"transition" : speed + "ms"});
-          // }
-          var swiper = this;
-          $('.swiper-container-innermost .swiper-slide').each(function() { 
-            $(this).css({"transition" :  speed + "ms"});
-          });
-          $('.swiper-container-innermost .slide-inner').each(function() { 
-            $(this).css({"transition" :  speed + "ms"});
-          });
-        }
-      }
-    });
-
-// $(function() {
-  var images = document.querySelectorAll('.px_img');
-  // new simpleParallax(images);
-  images.forEach(img => {
-    console.log("outside");
-    new simpleParallax(img, {
-      transition: 'cubic-bezier(0,0,0,1)',
-      customWrapper: img.parentNode.nodeName,
-    });
-  });
-// });
 
 $(document).ready(function() {
     swiper_in.controller.control = swiper_innermost;
     swiper.controller.control = swiper_in;
-    // swiper_in.controller.control = swiper;
-
-    // Portfolio grid parallax
-    // const images = document.querySelectorAll('.px_img');
-    // images.forEach(image => {
-    //       new simpleParallax(image, {
-    //       delay: .6,
-    //       transition: 'cubic-bezier(0,0,0,1)'
-    //     });
-    // });
-
 });
 
+
+var images = document.querySelectorAll('.px_img');
+  // new simpleParallax(images);
+images.forEach(img => {
+  console.log("outside");
+  new simpleParallax(img, {
+    transition: 'cubic-bezier(0,0,0,1)',
+    customWrapper: img.parentNode.nodeName,
+  });
+});
 
  // $(window).load(function(){
  //    const images = document.querySelectorAll('.px_img');
@@ -318,19 +232,12 @@ function toggleOnPortfolioLink(num) {
         swiper_in.slideTo(num);
         swiper_innermost.update();
         swiper_innermost.slideTo(num);
-        // num = 6 - num;
         document.getElementById('work').scrollIntoView(true);
     }
     else {
     }
     return false;
 }
-
-// $(function() {
-//   swiper_in.update();
-//   swiper_in.slideTo(swiper.realIndex);
-// });
-
 
 // onclick page scrolling - requires jQuery Easing plugin
 $(function() {
@@ -380,7 +287,6 @@ $(window).on("load resize scroll", function() {
             'font-size' : '4.5em',
             'margin' : '50px 10px 40px 0px'
         });
-            // 'margin' : '0px 20px 50px 0px'
   } else {
     $('.sidenav .page-scroll .navbar-brand').css({
             'font-size' : '2em',

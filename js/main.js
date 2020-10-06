@@ -198,9 +198,9 @@ $(document).ready(function() {
 //       // .attr("src", img.src);
 // });
 
-document.addEventListener("DOMContentLoaded", theDomHasLoaded, false);
+// document.addEventListener("DOMContentLoaded", theDomHasLoaded, false);
 
-function theDomHasLoaded(e) {
+// function theDomHasLoaded(e) {
     var images = document.querySelectorAll('.px_img');
     images.forEach(img => {
         console.log("inside dom load fn");
@@ -210,7 +210,7 @@ function theDomHasLoaded(e) {
           customWrapper: img.parentNode.nodeName,
         });
       });
-}
+// }
 
 
 function toggleOnPortfolioLink(num) {

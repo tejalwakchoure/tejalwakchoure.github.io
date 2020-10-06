@@ -23,7 +23,7 @@ $(document).ready(function() {
       counter++;
       if(counter >= 101){
         // while(!window.loaded) {}
-        while(!pageFullyLoadedVar) {}
+        // while(!pageFullyLoadedVar) {}
         clearInterval(i);
         // Animate components on and off the screen on loading
         $('#preloader').slideUp(1000);
@@ -38,16 +38,35 @@ $(document).ready(function() {
 
 function pageFullyLoaded(e) { 
   pageFullyLoadedVar = true;
-  var images = document.querySelectorAll('.px_img');
-  images.forEach(img => {
-      console.log("inside dom load fn");
-      new simpleParallax(img, {
-        delay: .5,
-        transition: 'cubic-bezier(0,0,0,1)',
-        customWrapper: img.parentNode.nodeName,
-      });
-    }); 
+  // var images = document.querySelectorAll('.px_img');
+  // images.forEach(img => {
+  //     console.log("inside dom load fn");
+  //     new simpleParallax(img, {
+  //       delay: .5,
+  //       transition: 'cubic-bezier(0,0,0,1)',
+  //       customWrapper: img.parentNode.nodeName,
+  //     });
+  //   }); 
 }
+
+
+var images = document.querySelectorAll('.px_img');
+images.forEach(img => {
+    if (!img.prop('complete')) {
+      console.log("Waiting to be loaded!");
+      img.on('load', function() {
+        console.log("Loaded!");
+        new simpleParallax(img, {
+          delay: .5,
+          transition: 'cubic-bezier(0,0,0,1)',
+          customWrapper: img.parentNode.nodeName,
+        });
+      });
+    } else {
+      console.log("Already loaded!");
+    }
+});
+
 
 // Change colours of background as we scroll down
 $(window).scroll(function() {

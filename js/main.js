@@ -91,7 +91,7 @@ loadPortfolioImages(document.querySelectorAll('.px_img')).then(images => {
     new simpleParallax(img, {
         delay: .5,
         transition: 'cubic-bezier(0,0,0,1)',
-        customWrapper: img.parentNode.nodeName,
+        // customWrapper: img.parentNode.nodeName,
     });
   });
 });

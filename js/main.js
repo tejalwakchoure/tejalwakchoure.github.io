@@ -56,6 +56,21 @@ function pageFullyLoaded(e) {
     });
 }
 
+
+// async drawImg(ctx, image){
+
+//     return new Promise(resolve => {
+
+//           image.onload = function () {
+//                 ctx.drawImage(image, 10, 10, 200, 180);
+//                 resolve('resolved');
+//              }
+
+//     });
+
+//   }
+
+
 // $('.px_img').each(function () {
 //   $(this).load(function(){
 //       if($(this).height() > 100) {
@@ -68,21 +83,6 @@ function pageFullyLoaded(e) {
 //       }
 //   });
 // });
-
-
-
-async drawImg(ctx, image){
-
-    return new Promise(resolve => {
-
-          image.onload = function () {
-                ctx.drawImage(image, 10, 10, 200, 180);
-                resolve('resolved');
-             }
-
-    });
-
-  }
 
 
 

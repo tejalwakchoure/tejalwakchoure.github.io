@@ -6,8 +6,7 @@
 // });
 
 var pageFullyLoadedVar = false;
-document.addEventListener("DOMContentLoaded", domLoaded, false);
-// window.addEventListener("load", pageFullyLoaded, false);
+window.addEventListener("load", pageFullyLoaded, false);
 
 //Preloader and page fade in setup
 function fadeInChildren(parent, base_delay) {
@@ -24,7 +23,9 @@ $(document).ready(function() {
       counter++;
       if(counter >= 101){
         // while(!window.loaded) {}
-        // while(!pageFullyLoadedVar) {}
+        while(!pageFullyLoadedVar) {
+          continue;
+        }
         clearInterval(i);
         // Animate components on and off the screen on loading
         $('#preloader').slideUp(1000);
@@ -37,7 +38,7 @@ $(document).ready(function() {
     }, 10);
 });
 
-function domLoaded(e) { 
+function pageFullyLoaded(e) { 
   pageFullyLoadedVar = true;
 
   var images = document.querySelectorAll('.px_img');
@@ -53,11 +54,6 @@ function domLoaded(e) {
         customWrapper: img.parentNode.nodeName,
       });
     });
-  // window.addEventListener("load", event => {
-  //   var image = document.querySelector('img');
-    // var isLoaded = image.complete && image.naturalHeight !== 0;
-    // alert(isLoaded);
-  // });
 }
 
 

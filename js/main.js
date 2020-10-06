@@ -251,7 +251,7 @@ var swiper_innermost = new Swiper('.swiper-container-innermost', {
     });
 
 // $(function() {
-  const images = document.querySelectorAll('.px_img');
+  var images = document.querySelectorAll('.px_img');
   // new simpleParallax(images);
   images.forEach(img => {
     console.log("outside");
@@ -279,17 +279,17 @@ $(document).ready(function() {
 });
 
 
- $(window).load(function(){
-    const images = document.querySelectorAll('.px_img');
-  // new simpleParallax(images);
-  images.forEach(img => {
-    console.log("window load");
-    new simpleParallax(img, {
-      transition: 'cubic-bezier(0,0,0,1)',
-      customWrapper: img.parentNode.nodeName,
-    });
-  });
- });
+ // $(window).load(function(){
+ //    const images = document.querySelectorAll('.px_img');
+ //  // new simpleParallax(images);
+ //  images.forEach(img => {
+ //    console.log("window load");
+ //    new simpleParallax(img, {
+ //      transition: 'cubic-bezier(0,0,0,1)',
+ //      customWrapper: img.parentNode.nodeName,
+ //    });
+ //  });
+ // });
 
 $(document).ready(function(){
     const images = document.querySelectorAll('.px_img');

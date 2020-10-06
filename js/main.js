@@ -248,19 +248,19 @@ var swiper_innermost = new Swiper('.swiper-container-innermost', {
       }
     });
 
-// $(function() {
+$(function() {
   const images = document.querySelectorAll('.px_img');
   // new simpleParallax(images);
   images.forEach(img => {
     console.log(img.src);
     new simpleParallax(img, {
-      delay: .6,
+      // delay: .6,
       transition: 'cubic-bezier(0,0,0,1)',
       customWrapper: img.parentNode.nodeName,
       // customContainer: img.parentNode.nodeName,
     });
   });
-// });
+});
 
 $(document).ready(function() {
     swiper_in.controller.control = swiper_innermost;

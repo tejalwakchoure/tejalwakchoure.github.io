@@ -38,16 +38,37 @@ $(document).ready(function() {
 
 function pageFullyLoaded(e) { 
   pageFullyLoadedVar = true;
-  // var images = document.querySelectorAll('.px_img');
-  // images.forEach(img => {
-  //     console.log("inside dom load fn");
-  //     new simpleParallax(img, {
-  //       delay: .5,
-  //       transition: 'cubic-bezier(0,0,0,1)',
-  //       customWrapper: img.parentNode.nodeName,
-  //     });
-  //   }); 
+
+  var images = document.querySelectorAll('.px_img');
+  images.forEach(img => {
+      while(!(img.complete && img.naturalHeight !== 0)) {
+        console.log("img not loaded yet");
+        continue;
+      }
+      console.log("inside page load fn");
+      new simpleParallax(img, {
+        delay: .5,
+        transition: 'cubic-bezier(0,0,0,1)',
+        customWrapper: img.parentNode.nodeName,
+      });
+    });
+  // window.addEventListener("load", event => {
+  //   var image = document.querySelector('img');
+    // var isLoaded = image.complete && image.naturalHeight !== 0;
+    // alert(isLoaded);
+  // });
 }
+
+
+// var images = document.querySelectorAll('.px_img');
+//   images.forEach(img => {
+//       console.log("inside dom load fn");
+//       new simpleParallax(img, {
+//         delay: .5,
+//         transition: 'cubic-bezier(0,0,0,1)',
+//         customWrapper: img.parentNode.nodeName,
+//       });
+//     }); 
 
 
 // var images = document.querySelectorAll('.px_img');
@@ -67,22 +88,22 @@ function pageFullyLoaded(e) {
 //     }
 // });
 
-var images = document.querySelectorAll('.px_img');
-$('.px_img').each(function () {
-    if (!$(this).prop('complete')) {
-      console.log("Waiting to be loaded!");
-      $(this).on('load', function() {
-        console.log("Loaded!");
-        new simpleParallax($(this), {
-          delay: .5,
-          transition: 'cubic-bezier(0,0,0,1)',
-          // customWrapper: img.parentNode.nodeName,
-        });
-      });
-    } else {
-      console.log("Already loaded!");
-    }
-});
+// var images = document.querySelectorAll('.px_img');
+// $('.px_img').each(function () {
+//     if (!$(this).prop('complete')) {
+//       console.log("Waiting to be loaded!");
+//       $(this).on('load', function() {
+//         console.log("Loaded!");
+//         new simpleParallax($(this), {
+//           delay: .5,
+//           transition: 'cubic-bezier(0,0,0,1)',
+//           // customWrapper: img.parentNode.nodeName,
+//         });
+//       });
+//     } else {
+//       console.log("Already loaded!");
+//     }
+// });
 
 // Change colours of background as we scroll down
 $(window).scroll(function() {

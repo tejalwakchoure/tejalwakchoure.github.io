@@ -112,37 +112,41 @@ function checkTime(i) {
 // });
 
 $(function() {
-    function imageLoaded(img) {
+    function imageLoaded() {
         // function to invoke for loaded image
-        console.log("image parallax load");
-        new simpleParallax(img, {
-            delay: .5,
-            transition: 'cubic-bezier(0,0,0,1)',
-            // customWrapper: img.parentNode.nodeName,
-        });
+        counter--; 
+        if( counter === 0 ) {
+          console.log("all images parallax loaded");
+          new simpleParallax(images, {
+              delay: .5,
+              transition: 'cubic-bezier(0,0,0,1)',
+              // customWrapper: img.parentNode.nodeName,
+          });
+        }
     }
-    $('.px_img').each(function() {
+    var images = document.querySelectorAll('.px_img');
+    var counter = images.length;
+    images.each(function() {
         // if( this.complete ) {
         //     console.log("image already loaded");
         //     imageLoaded.call( this );
         // } else {
-            $(this).on('load', imageLoaded(this));
+            $(this).on('load', imageLoaded);
         // }
     });
 });
 
-// var images = document.querySelectorAll('.px_img');
-// images.forEach(img => {
-//     while(!(img.complete && img.naturalHeight !== 0)) {
-//         console.log("img not loaded yet");
-//         continue;
-//     }
-//     new simpleParallax(img, {
+// $(window).on("load", function() {
+//     console.log("images parallax load");
+//     var images = document.querySelectorAll('.px_img');
+//     new simpleParallax(images, {
 //         delay: .5,
 //         transition: 'cubic-bezier(0,0,0,1)',
 //         // customWrapper: img.parentNode.nodeName,
 //     });
 // });
+
+
 
 // const images = document.querySelectorAll('.px_img');
 // var parallaxVar = setInterval(function() {

@@ -112,7 +112,7 @@ function checkTime(i) {
 // });
 
 $(function() {
-    function imageLoaded() {
+    function imageLoaded(img) {
         // function to invoke for loaded image
         console.log("image parallax load");
         new simpleParallax(img, {
@@ -126,7 +126,7 @@ $(function() {
             console.log("image already loaded");
             imageLoaded.call( this );
         } else {
-            $(this).on('load', imageLoaded);
+            $(this).on('load', imageLoaded(this));
         }
     });
 });

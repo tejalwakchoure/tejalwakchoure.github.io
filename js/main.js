@@ -248,8 +248,8 @@ var swiper_innermost = new Swiper('.swiper-container-innermost', {
       }
     });
 
-$(function() {
-  var images = document.querySelectorAll('.px_img');
+// $(function() {
+  const images = document.querySelectorAll('.px_img');
   // new simpleParallax(images);
   images.forEach(img => {
     console.log(img.src);
@@ -260,7 +260,7 @@ $(function() {
       // customContainer: img.parentNode.nodeName,
     });
   });
-});
+// });
 
 $(document).ready(function() {
     swiper_in.controller.control = swiper_innermost;

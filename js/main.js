@@ -5,6 +5,8 @@
 //     window.loaded = true;
 // });
 
+var pageFullyLoadedVar = false;
+window.addEventListener("load", pageFullyLoaded, false);
 
 //Preloader and page fade in setup
 function fadeInChildren(parent, base_delay) {
@@ -21,6 +23,7 @@ $(document).ready(function() {
       counter++;
       if(counter >= 101){
         // while(!window.loaded) {}
+        while(!pageFullyLoadedVar) {}
         clearInterval(i);
         // Animate components on and off the screen on loading
         $('#preloader').slideUp(1000);
@@ -32,6 +35,8 @@ $(document).ready(function() {
      }
     }, 10);
 });
+
+function pageFullyLoaded(e) { pageFullyLoadedVar = true; }
 
 // Change colours of background as we scroll down
 $(window).scroll(function() {

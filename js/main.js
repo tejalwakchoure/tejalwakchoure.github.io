@@ -88,38 +88,38 @@ function checkTime(i) {
 }
 
 // Portfolio parallax
-$(function() {
-    function imageLoaded() {
-        counter--; 
-        if( counter === 0 ) {
-          console.log("all images parallax loaded");
-          new simpleParallax(images, {
-              delay: .5,
-              transition: 'cubic-bezier(0,0,0,1)',
-          });
-        }
-    }
-    var images = document.querySelectorAll('.px_img');
-    var counter = images.length;
-    $('.px_img').each(function() {
-        // if( this.complete ) {
-        //     console.log("image already loaded");
-        //     imageLoaded.call( this );
-        // } else {
-            $(this).on('load', imageLoaded);
-        // }
-    });
-});
-
-// $(window).on("load", function() {
-//     console.log("images parallax load");
+// $(function() {
+//     function imageLoaded() {
+//         counter--; 
+//         if( counter === 0 ) {
+//           console.log("all images parallax loaded");
+//           new simpleParallax(images, {
+//               delay: .5,
+//               transition: 'cubic-bezier(0,0,0,1)',
+//           });
+//         }
+//     }
 //     var images = document.querySelectorAll('.px_img');
-//     new simpleParallax(images, {
-//         delay: .5,
-//         transition: 'cubic-bezier(0,0,0,1)',
-//         // customWrapper: img.parentNode.nodeName,
+//     var counter = images.length;
+//     $('.px_img').each(function() {
+//         // if( this.complete ) {
+//         //     console.log("image already loaded");
+//         //     imageLoaded.call( this );
+//         // } else {
+//             $(this).on('load', imageLoaded);
+//         // }
 //     });
 // });
+
+$(window).on("load", function() {
+    console.log("images parallax load");
+    var images = document.querySelectorAll('.px_img');
+    new simpleParallax(images, {
+        delay: .5,
+        transition: 'cubic-bezier(0,0,0,1)',
+        // customWrapper: img.parentNode.nodeName,
+    });
+});
 
 
 // const images = document.querySelectorAll('.px_img');

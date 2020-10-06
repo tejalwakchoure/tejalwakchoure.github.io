@@ -23,9 +23,9 @@ $(document).ready(function() {
       counter++;
       if(counter >= 101){
         // while(!window.loaded) {}
-        while(!pageFullyLoadedVar) {
-          continue;
-        }
+        // while(!pageFullyLoadedVar) {
+        //   continue;
+        // }
         clearInterval(i);
         // Animate components on and off the screen on loading
         $('#preloader').slideUp(1000);
@@ -39,7 +39,7 @@ $(document).ready(function() {
 });
 
 function pageFullyLoaded(e) { 
-  pageFullyLoadedVar = true;
+  // pageFullyLoadedVar = true;
 
   var images = document.querySelectorAll('.px_img');
   images.forEach(img => {
@@ -55,6 +55,35 @@ function pageFullyLoaded(e) {
       });
     });
 }
+
+// $('.px_img').each(function () {
+//   $(this).load(function(){
+//       if($(this).height() > 100) {
+//           console.log("loaded page load fn");
+//           new simpleParallax(img, {
+//             delay: .5,
+//             transition: 'cubic-bezier(0,0,0,1)',
+//             customWrapper: img.parentNode.nodeName,
+//           });
+//       }
+//   });
+// });
+
+
+
+async drawImg(ctx, image){
+
+    return new Promise(resolve => {
+
+          image.onload = function () {
+                ctx.drawImage(image, 10, 10, 200, 180);
+                resolve('resolved');
+             }
+
+    });
+
+  }
+
 
 
 // var images = document.querySelectorAll('.px_img');

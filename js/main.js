@@ -88,6 +88,7 @@ function checkTime(i) {
 }
 
 // Portfolio parallax
+
 // function parallaxing(img) {
 //     console.log("image parallax loaded");
 //     new simpleParallax(img, {
@@ -96,8 +97,6 @@ function checkTime(i) {
 //         customWrapper: img.parentNode.nodeName,
 //     });
 // }
-
-
 // var images = document.querySelectorAll('.px_img');
 // images.forEach(img => {
 //     // img.addEventListener("load", parallaxing(img));
@@ -126,12 +125,12 @@ $(function() {
     }
     var images = document.querySelectorAll('.px_img');
     var counter = images.length;
-    images.forEach(img => {
+    ('.px_img').each(function() {
         // if( this.complete ) {
         //     console.log("image already loaded");
         //     imageLoaded.call( this );
         // } else {
-            $(img).on('load', imageLoaded);
+            $(this).on('load', imageLoaded);
         // }
     });
 });

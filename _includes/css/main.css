@@ -680,59 +680,6 @@ header mark {
 	padding: 5vw 0;
 }
 
-
-
-
-
-/*.parallax_container {
-	position: relative;
-	overflow-x: hidden;
-	overflow-y: scroll;
-	perspective: 8px;
-	perspective-origin: 0%;
-	background: black;
-}
-#portfolio .parallax_background {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  transform: translateZ(0px);
-  background: lightgray;
-}
-#portfolio .parallax_imgdiv {
-	display: flex;
-	height: 100%;
-	width: 100%;
-	overflow: hidden;
-	background: pink;
-}   
-#portfolio .parallax_img {
-	position: relative;
-	display: block;
-	object-fit: cover;
-	transform: translateZ(2px);
-}*/
-
-.px_div {
-	height: 100%;
-	width: 100%;
-	
-/*	background-position:center top; 
-	background-repeat: no-repeat;
-	background-size: cover;
-	transform-origin: center;*/
-
-	/*transition: 0s linear;
-    transition-property: background-position;
-	transform: scale(1.2);*/
-
-	transform: translate3d(0px, 0px, 0px) scale(1.3);
-    transition: transform 0.4s cubic-bezier(0, 0, 0, 1) 0s;
-    will-change: transform;
-}
-
-
-
 #portfolio .portfolio-link-wrapper {
 	position: relative; 
 	overflow: hidden; 
@@ -740,10 +687,6 @@ header mark {
 	width: 100%;
 }   
 
-/*#portfolio .portfolio-link-wrapper .simpleParallax {
-	width: 100%;
-    height: 100%;
-}*/
 #portfolio .portfolio-link-wrapper img {
 	width: 100%;
     height: 100%;
@@ -895,7 +838,7 @@ header mark {
 	background: transparent;
 }
 .swiper-slide #img-positioning-row {
-	height: 500px; 
+	height: 450px; 
 	width: 100%;
 }
 .swiper-slide #content-row {
@@ -913,7 +856,7 @@ header mark {
 .swiper-slide #content p {
 	font-size: 20px; 
 	text-align: left; 
-	margin-top: 10%; 
+	margin-top: 7.5%; 
 	margin-bottom: 5%;
 }
 .swiper-slide #content a {
@@ -927,12 +870,18 @@ header mark {
     margin: 0 auto;
     text-align: center;
     position: absolute;
+    left: 50%;
+	-webkit-transform: translateX(-50%);
+	transform: translateX(-50%);
 }
 .swiper-slide #img-on-top {
 	height: 300px;
     width: 400px;
     object-fit: cover;
     position: absolute;
+    left: 50%;
+	-webkit-transform: translateX(-50%);
+	transform: translateX(-50%);
 }
 .swiper-pagination, .swiper-button-prev, .swiper-button-next {
 	position: relative !important;
@@ -970,21 +919,6 @@ header mark {
 	display: none;
 }
 
-/*@media ( max-width: 1200px ) {
-	.swiper-slide #content {
-    	margin: 200px auto auto auto;
-	}
-	.swiper-slide #main-img {
-		width: 450px;
-	    height: 175px;
-	}
-	.swiper-slide #img-on-top {
-		height: 250px;
-	    width: 300px;
-	    margin: 0 auto 50px auto;
-	}
-}*/
-
 @media ( max-width: 768px ) {
 	.swiper-container-innermost {
 		display: none;
@@ -993,7 +927,7 @@ header mark {
 		display: flex;
 	}
 	.swiper-slide #img-positioning-row {
-		height: 400px;
+		height: 350px;
 	}
 	.swiper-slide #content-row {
 		flex-direction: column;
@@ -1007,9 +941,6 @@ header mark {
 		width: 400px;
 		margin: auto;
 	}
-	/*.swiper-slide #img-on-top {
-		display: none;
-	}*/
 }
 
 

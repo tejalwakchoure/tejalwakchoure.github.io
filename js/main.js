@@ -193,22 +193,35 @@ $(document).ready(function() {
 //   });
 //  }); 
 
-$(window).on("load", function() {
-  window.document.body.onload = addParallax;
-});
 
-function addParallax() {
-  const images = document.querySelectorAll('.px_img');
-  // new simpleParallax(images);
-  images.forEach(img => {
-    console.log("on load, document body loaded");
-    new simpleParallax(img, {
-      delay: .5,
-      transition: 'cubic-bezier(0,0,0,1)',
-      customWrapper: img.parentNode.nodeName,
+// Parallax for portfolio grid (last element to load, use for preloader check)
+// $(window).on("load", function() {
+  $(window).document.body.onload = function() {
+    const images = document.querySelectorAll('.px_img');
+    // new simpleParallax(images);
+    images.forEach(img => {
+      console.log("on load, document body loaded");
+      new simpleParallax(img, {
+        delay: .5,
+        transition: 'cubic-bezier(0,0,0,1)',
+        customWrapper: img.parentNode.nodeName,
+      });
     });
-  });
-}
+  };
+// });
+
+// function addParallax() {
+//   const images = document.querySelectorAll('.px_img');
+//   // new simpleParallax(images);
+//   images.forEach(img => {
+//     console.log("on load, document body loaded");
+//     new simpleParallax(img, {
+//       delay: .5,
+//       transition: 'cubic-bezier(0,0,0,1)',
+//       customWrapper: img.parentNode.nodeName,
+//     });
+//   });
+// }
 
 function toggleOnPortfolioLink(num) {
     if($('#portfolioDetails').css('display')!='none') {
@@ -297,75 +310,3 @@ $(window).on("load resize scroll", function() {
       $('.hor_parallax_right').css({ right: pos });
       $('.hor_parallax_left').css({ left: pos });
 });
-
-
-
-
-
-
-// $(window).on("load resize scroll", function() {
-//    $('.px_div').each(function() { 
-//     var velocity = 0.1; // Y axis scroll speed
-//     var element = $(this);
-//     var height = element.height(); //element.outerHeight(true);
-//     var topOfElement = element.offset().top;
-//     var bottomOfElement = element.offset().top + element.height(); //element.outerHeight(true);
-//     var $window = $(window);
-//     var scrollTopPosition = $window.scrollTop() + $window.height();
-//     var windowScrollTop = $window.scrollTop();
-//     // if($('#portfolio').offset().top <= $(window).scrollTop() && ($('#portfolio').offset().top + $('#portfolio').outerHeight()) > $(window).scrollTop()) {
-//     if ((windowScrollTop > bottomOfElement && windowScrollTop > topOfElement) || (scrollTopPosition < topOfElement && scrollTopPosition < bottomOfElement)) {
-//       // Element is hidden
-//     } 
-//     else {
-//       // Element is partially/completely visible
-//       // var pos = windowScrollTop - topOfElement;
-//       var pos = windowScrollTop - topOfElement;
-//       // $('.px_div').each(function() { 
-//           // var $element = $(this);
-//           // var height = element.height();
-//           // $('.px_div').css('background-position', '50%' + Math.round(-1* pos * velocity) + 'px'); 
-//           // $('.px_div').css('backgroundPosition', '50% ' + Math.round((height - pos) * velocity) + 'px'); 
-//           $('.px_div').css('transform', 'translate3d(0px,' + Math.round((height - pos) * velocity) + 'px, 0px) scale(1.3)'); 
-//     }
-//   });
-// });
-
-
-
-// if (windowScrollTop > bottomOfElement && windowScrollTop > topOfElement) {
-//     // Element is hidden (above viewable area)
-
-// } else if (scrollTopPosition < topOfElement && scrollTopPosition < bottomOfElement) {
-//     // Element is hidden (below viewable area)
-
-// } else if (windowScrollTop > topOfElement && windowScrollTop < bottomOfElement) {
-//     // Element is partially visible (above viewable area)
-//     //**start scrolling**
-
-// } else if (scrollTopPosition < bottomOfElement && scrollTopPosition > topOfElement) {
-//     // Element is partially visible (below viewable area)
-
-// } else {
-//     // Element is completely visible
-// }
-
-
-
-
-
-// // Y axis scroll speed
-// var velocity = 0.1;
-
-// $(window).on("scroll", function() {
-//     var pos = $(window).scrollTop(); 
-//     $('.px_div').each(function() { 
-//       if ($(this).isOnScreen()) {
-//         var $element = $(this);
-//         // subtract some from the height b/c of the padding
-//         var height = $element.height();
-//         $('.px_div').css('background-position', '50%' + Math.round(-1*(pos) * velocity) + 'px'); 
-//       }
-//     });
-    
-// });

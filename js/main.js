@@ -38,7 +38,7 @@ $(document).ready(function() {
     }, 10);
 });
 
-function pageFullyLoaded(e) { 
+// function pageFullyLoaded(e) { 
   // pageFullyLoadedVar = true;
 
   var images = document.querySelectorAll('.px_img');
@@ -54,11 +54,10 @@ function pageFullyLoaded(e) {
         customWrapper: img.parentNode.nodeName,
       });
     });
-}
+// }
 
 
 // async drawImg(ctx, image){
-
 //     return new Promise(resolve => {
 
 //           image.onload = function () {
@@ -67,8 +66,7 @@ function pageFullyLoaded(e) {
 //              }
 
 //     });
-
-//   }
+// }
 
 
 // $('.px_img').each(function () {

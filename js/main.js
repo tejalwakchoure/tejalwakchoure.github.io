@@ -183,21 +183,34 @@ $(document).ready(function() {
 //       .attr("src", $(this).attr("src"));
 // });
 
-var images = document.querySelectorAll('.px_img');
-images.forEach(img => {
-    console.log("outside");
-    img.on('load', function()  {
-    // $("<img/>").on('load', function()  {
-        console.log("img loaded");
+// var images = document.querySelectorAll('.px_img');
+// images.forEach(img => {
+//     console.log("outside");
+//     img.on('load', function()  {
+//     // $("<img/>").on('load', function()  {
+//         console.log("img loaded");
+//         new simpleParallax(img, {
+//           delay: .5,
+//           transition: 'cubic-bezier(0,0,0,1)',
+//           customWrapper: img.parentNode.nodeName,
+//         });
+//       })
+//       // .attr("src", img.src);
+// });
+
+document.addEventListener("DOMContentLoaded", theDomHasLoaded, false);
+
+function theDomHasLoaded(e) {
+    var images = document.querySelectorAll('.px_img');
+    images.forEach(img => {
+        console.log("inside dom load fn");
         new simpleParallax(img, {
           delay: .5,
           transition: 'cubic-bezier(0,0,0,1)',
           customWrapper: img.parentNode.nodeName,
         });
-      })
-      // .attr("src", img.src);
-});
-
+      });
+}
 
 
 function toggleOnPortfolioLink(num) {

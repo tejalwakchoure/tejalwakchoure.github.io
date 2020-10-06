@@ -91,7 +91,7 @@ loadPortfolioImages(document.querySelectorAll('.px_img')).then(images => {
     new simpleParallax(img, {
         delay: .5,
         transition: 'cubic-bezier(0,0,0,1)',
-        // customWrapper: img.parentNode.nodeName,
+        customWrapper: img.parentNode.nodeName,
     });
   });
 });
@@ -113,7 +113,7 @@ async function loadPortfolioImages(imageArray) {
     const newImageArray = [];
     for (let image of imageArray) {
         promiseArray.push(new Promise(resolve => {
-            const img = new Image();
+            const img = image; //new Image();
             img.onload = resolve;
             img.src = image.src;
             newImageArray.push(img);

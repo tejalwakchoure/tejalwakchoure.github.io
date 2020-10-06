@@ -93,7 +93,8 @@ loadPortfolioImages(document.querySelectorAll('.px_img')).then(images => {
         transition: 'cubic-bezier(0,0,0,1)',
         customWrapper: img.parentNode.nodeName,
     });
-})
+  });
+});
 // var images = document.querySelectorAll('.px_img');
 // images.forEach(img => {
 //     while(!(img.complete && img.naturalHeight !== 0)) {
@@ -106,14 +107,6 @@ loadPortfolioImages(document.querySelectorAll('.px_img')).then(images => {
 //         customWrapper: img.parentNode.nodeName,
 //     });
 // });
-// async drawImg(ctx, image) {
-//   return new Promise(resolve => {
-//       image.onload = function () {
-//         ctx.drawImage(image, 10, 10, 200, 180);
-//         resolve('resolved');
-//       }
-//   });
-// }
 
 async function loadPortfolioImages(imageArray) {
     const promiseArray = []; 

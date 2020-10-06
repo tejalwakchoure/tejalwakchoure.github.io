@@ -88,43 +88,48 @@ function checkTime(i) {
 }
 
 // Portfolio parallax
-function parallaxing(img) {
-    console.log("image parallax loaded");
-    new simpleParallax(img, {
-        delay: .5,
-        transition: 'cubic-bezier(0,0,0,1)',
-        customWrapper: img.parentNode.nodeName,
-    });
-}
-
-
-var images = document.querySelectorAll('.px_img');
-images.forEach(img => {
-    // img.addEventListener("load", parallaxing(img));
-    img.on("load", function() {
-      console.log("image parallax loaded");
-    new simpleParallax(img, {
-        delay: .5,
-        transition: 'cubic-bezier(0,0,0,1)',
-        customWrapper: img.parentNode.nodeName,
-    });
-  });
-});
-
-
-
-// images.forEach(img => {
-//     img.addEventListener("load", function () {
-//       console.log("image parallax loaded");
-//       new simpleParallax(img, {
-//           delay: .5,
-//           transition: 'cubic-bezier(0,0,0,1)',
-//           customWrapper: img.parentNode.nodeName,
-//       });
+// function parallaxing(img) {
+//     console.log("image parallax loaded");
+//     new simpleParallax(img, {
+//         delay: .5,
+//         transition: 'cubic-bezier(0,0,0,1)',
+//         customWrapper: img.parentNode.nodeName,
 //     });
-//     img.src= e.target.result;
+// }
+
+
+// var images = document.querySelectorAll('.px_img');
+// images.forEach(img => {
+//     // img.addEventListener("load", parallaxing(img));
+//     img.on("load", function() {
+//       console.log("image parallax loaded");
+//     new simpleParallax(img, {
+//         delay: .5,
+//         transition: 'cubic-bezier(0,0,0,1)',
+//         customWrapper: img.parentNode.nodeName,
+//     });
+//   });
 // });
 
+$(function() {
+    function imageLoaded() {
+        // function to invoke for loaded image
+        console.log("image parallax load");
+        new simpleParallax(img, {
+            delay: .5,
+            transition: 'cubic-bezier(0,0,0,1)',
+            customWrapper: img.parentNode.nodeName,
+        });
+    }
+    $('.px_img').each(function() {
+        if( this.complete ) {
+            console.log("image already loaded");
+            imageLoaded.call( this );
+        } else {
+            $(this).on('load', imageLoaded);
+        }
+    });
+});
 
 // var images = document.querySelectorAll('.px_img');
 // images.forEach(img => {

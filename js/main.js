@@ -98,7 +98,15 @@ function parallaxing(img) {
 
 var images = document.querySelectorAll('.px_img');
 images.forEach(img => {
-    img.addEventListener("load", parallaxing(img));
+    // img.addEventListener("load", parallaxing(img));
+    img.on("load", function() {
+      console.log("image parallax loaded");
+    new simpleParallax(img, {
+        delay: .5,
+        transition: 'cubic-bezier(0,0,0,1)',
+        customWrapper: img.parentNode.nodeName,
+    });
+  });
 });
 
 

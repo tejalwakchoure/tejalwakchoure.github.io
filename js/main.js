@@ -196,7 +196,7 @@ $(document).ready(function() {
 
 // Parallax for portfolio grid (last element to load, use for preloader check)
 // $(window).on("load", function() {
-  $(window).document.body.onload = function() {
+  $(document).body.onload = function() {
     const images = document.querySelectorAll('.px_img');
     // new simpleParallax(images);
     images.forEach(img => {

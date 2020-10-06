@@ -193,9 +193,9 @@ $(document).ready(function() {
 //   });
 //  }); 
 
-window.onload = function(){
+$(window).on("load", function() {
   window.document.body.onload = addParallax;
-};
+});
 
 function addParallax() {
   const images = document.querySelectorAll('.px_img');

@@ -169,53 +169,33 @@ $(document).ready(function() {
 });
 
 
-var images = document.querySelectorAll('.px_img');
-images.forEach(img => {
+$('.px_img').each(function() {
     console.log("outside");
-    
-    // img.on('load', function()  {
+    // $(this).on('load', function()  {
     $("<img/>").on('load', function()  {
         console.log("img loaded");
-        new simpleParallax(img, {
+        new simpleParallax($(this), {
           delay: .5,
           transition: 'cubic-bezier(0,0,0,1)',
-          customWrapper: img.parentNode.nodeName,
+          customWrapper: $(this).parentNode.nodeName,
         });
       })
-      .attr("src", img.attr("src"));
+      .attr("src", $(this).attr("src"));
 });
 
-
-
-
-
-// $(document).ready(function(){
-//     const images = document.querySelectorAll('.px_img');
-//   // new simpleParallax(images);
-//   images.forEach(img => {
-//     console.log("document ready");
-//     new simpleParallax(img, {
-//       delay: .5,
-//       transition: 'cubic-bezier(0,0,0,1)',
-//       customWrapper: img.parentNode.nodeName,
-//     });
-//   });
-//  }); 
-
-
-// Parallax for portfolio grid (last element to load, use for preloader check)
-// $(window).on("load", function() {
-//   $('body').on("load", function() {
-//     const images = document.querySelectorAll('.px_img');
-//     // new simpleParallax(images);
-//     images.forEach(img => {
-//       console.log("on load, document body loaded");
-//       new simpleParallax(img, {
-//         delay: .5,
-//         transition: 'cubic-bezier(0,0,0,1)',
-//         customWrapper: img.parentNode.nodeName,
-//       });
-//     });
+// var images = document.querySelectorAll('.px_img');
+// images.forEach(img => {
+//     console.log("outside");
+//     // img.on('load', function()  {
+//     $("<img/>").on('load', function()  {
+//         console.log("img loaded");
+//         new simpleParallax(img, {
+//           delay: .5,
+//           transition: 'cubic-bezier(0,0,0,1)',
+//           customWrapper: img.parentNode.nodeName,
+//         });
+//       })
+//       .attr("src", img.attr("src"));
 // });
 
 function toggleOnPortfolioLink(num) {

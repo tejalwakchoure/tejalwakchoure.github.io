@@ -6,7 +6,8 @@
 // });
 
 var pageFullyLoadedVar = false;
-window.addEventListener("load", pageFullyLoaded, false);
+document.addEventListener("DOMContentLoaded", domLoaded, false);
+// window.addEventListener("load", pageFullyLoaded, false);
 
 //Preloader and page fade in setup
 function fadeInChildren(parent, base_delay) {
@@ -36,7 +37,7 @@ $(document).ready(function() {
     }, 10);
 });
 
-function pageFullyLoaded(e) { 
+function domLoaded(e) { 
   pageFullyLoadedVar = true;
 
   var images = document.querySelectorAll('.px_img');

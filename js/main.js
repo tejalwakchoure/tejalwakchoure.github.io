@@ -199,8 +199,9 @@ $(document).ready(function() {
 // });
 
 // document.addEventListener("DOMContentLoaded", theDomHasLoaded, false);
+window.addEventListener("load", pageFullyLoaded, false);
 
-// function theDomHasLoaded(e) {
+function pageFullyLoaded(e) {
     var images = document.querySelectorAll('.px_img');
     images.forEach(img => {
         console.log("inside dom load fn");
@@ -210,7 +211,7 @@ $(document).ready(function() {
           customWrapper: img.parentNode.nodeName,
         });
       });
-// }
+}
 
 
 function toggleOnPortfolioLink(num) {

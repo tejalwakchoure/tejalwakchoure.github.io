@@ -196,7 +196,7 @@ $(document).ready(function() {
 
 // Parallax for portfolio grid (last element to load, use for preloader check)
 // $(window).on("load", function() {
-  $('body').onload = function() {
+  $('body').on("load", function() {
     const images = document.querySelectorAll('.px_img');
     // new simpleParallax(images);
     images.forEach(img => {
@@ -207,21 +207,7 @@ $(document).ready(function() {
         customWrapper: img.parentNode.nodeName,
       });
     });
-  };
-// });
-
-// function addParallax() {
-//   const images = document.querySelectorAll('.px_img');
-//   // new simpleParallax(images);
-//   images.forEach(img => {
-//     console.log("on load, document body loaded");
-//     new simpleParallax(img, {
-//       delay: .5,
-//       transition: 'cubic-bezier(0,0,0,1)',
-//       customWrapper: img.parentNode.nodeName,
-//     });
-//   });
-// }
+});
 
 function toggleOnPortfolioLink(num) {
     if(num == -1) {

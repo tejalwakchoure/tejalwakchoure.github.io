@@ -7,7 +7,9 @@
 
 // var pageFullyLoadedVar = false;
 // window.addEventListener("load", pageFullyLoaded, false);
-
+$(window).on("load", function() {
+  console.log("window loaded");
+});
 //Preloader and page fade in setup
 function fadeInChildren(parent, base_delay) {
     var elems = $(parent).children();

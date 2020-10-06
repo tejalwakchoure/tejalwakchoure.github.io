@@ -33,17 +33,6 @@ $(document).ready(function() {
     }, 10);
 });
 
-// $(window).load(function() {
-//      // Animate components on and off the screen on loading
-//      $('preloader').fadeOut('slow');
-//      $('body').fadeIn('slow');
-//      $('.hide1 header .img-responsive').css({opacity: 0.0, visibility: "visible"}).delay(500).animate({opacity: 1.0}, 500);
-//      $('.hide1 header').css({opacity: 0.0, visibility: "visible"}).delay(500).animate({opacity: 1.0}, 500);  
-//      $('.hide1').css({opacity: 0.0, visibility: "visible"}).delay(500).animate({opacity: 1.0}, 500);  
-//      fadeInChildren('.hide1 header .intro-text',1000);
-//  });
-
-
 // Change colours of background as we scroll down
 $(window).scroll(function() {
   var $window = $(window),
@@ -64,9 +53,6 @@ $(window).scroll(function() {
   });    
   
 }).scroll();
-
-
-
 
 // local datetime update
 function startTime() {

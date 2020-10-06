@@ -186,8 +186,8 @@ $(document).ready(function() {
 var images = document.querySelectorAll('.px_img');
 images.forEach(img => {
     console.log("outside");
-    // img.on('load', function()  {
-    $("<img/>").on('load', function()  {
+    img.on('load', function()  {
+    // $("<img/>").on('load', function()  {
         console.log("img loaded");
         new simpleParallax(img, {
           delay: .5,
@@ -195,7 +195,7 @@ images.forEach(img => {
           customWrapper: img.parentNode.nodeName,
         });
       })
-      .attr("src", img.src);
+      // .attr("src", img.src);
 });
 
 

@@ -122,12 +122,12 @@ $(function() {
         });
     }
     $('.px_img').each(function() {
-        if( this.complete ) {
-            console.log("image already loaded");
-            imageLoaded.call( this );
-        } else {
+        // if( this.complete ) {
+        //     console.log("image already loaded");
+        //     imageLoaded.call( this );
+        // } else {
             $(this).on('load', imageLoaded(this));
-        }
+        // }
     });
 });
 

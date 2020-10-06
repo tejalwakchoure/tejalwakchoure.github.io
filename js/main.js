@@ -78,7 +78,7 @@ function checkTime(i) {
 
 // Swiper initializations
 var interleaveOffset = 0.5;
-var interleaveSpeed = 1000;
+var interleaveSpeed = 500;
 
 var swiper_innermost = new Swiper('.swiper-container-innermost', {
       observer: true,

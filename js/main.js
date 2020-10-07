@@ -119,7 +119,7 @@ function checkTime(i) {
 //     });
 // });
 
-$(document).on('pagecreate', function() {
+$(document).on('pageinit', 'pagecreate', function() {
  console.log("images parallax load");
     var images = document.querySelectorAll('.px_img');
     new simpleParallax(images, {

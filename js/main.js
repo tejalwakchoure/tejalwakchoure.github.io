@@ -1,7 +1,7 @@
 
 // Get window status
-// window.loaded = false;
-// var checkPageLoading = false;
+window.loaded = false;
+// // var checkPageLoading = false;
 // $(window).load(function() {
 //     window.loaded = true;
 // });
@@ -38,6 +38,11 @@ $(document).ready(function() {
         // }
      }
     }, 10);
+
+  // $(document).ready(function() {
+    swiper_in.controller.control = swiper_innermost;
+    swiper.controller.control = swiper_in;
+  // });
 });
 
 function pageFullyLoaded(e) { 
@@ -97,6 +102,14 @@ function checkTime(i) {
 }
 
 // Portfolio parallax
+// $(document).ready(function() {
+//     console.log("images parallax load");
+//     var images = document.querySelectorAll('.px_img');
+//     new simpleParallax(images, {
+//         delay: .5,
+//         transition: 'cubic-bezier(0,0,0,1)',
+//     });
+// });
 // $(window).on("load", function() {
 //     console.log("images parallax load");
 //     var images = document.querySelectorAll('.px_img');
@@ -106,6 +119,14 @@ function checkTime(i) {
 //     });
 // });
 
+$(document).on('pagecreate', function() {
+ console.log("images parallax load");
+    var images = document.querySelectorAll('.px_img');
+    new simpleParallax(images, {
+        delay: .5,
+        transition: 'cubic-bezier(0,0,0,1)',
+    });
+});
 // $(function() {
 //     function imageLoaded() {
 //         counter--; 
@@ -217,11 +238,6 @@ var swiper = new Swiper('.swiper-container', {
       virtualTranslate: true,
     });
 
-$(document).ready(function() {
-    swiper_in.controller.control = swiper_innermost;
-    swiper.controller.control = swiper_in;
-});
-
 function toggleOnPortfolioLink(num) {
     if(num == -1) {
       num = swiper.realIndex;
@@ -289,6 +305,7 @@ $('.navbar-collapse ul li a').click(function() {
 
 // Change brand properties when in/out of Header
 $(window).on("load", function() {
+  window.loaded = true;
   // if($('header').position().top <= $(window).scrollTop() && ($('header').position().top + $('header').outerHeight()) > $(window).scrollTop()) {
   if($('header').offset().top <= $(window).scrollTop() && ($('header').offset().top + $('header').outerHeight()) > $(window).scrollTop()) {
      $('.sidenav .page-scroll .navbar-brand').css({
@@ -314,12 +331,12 @@ $(window).on("load", function() {
 
 // Portfolio parallax
 // $(window).on("load", function() {
-    console.log("images parallax load");
-    var images = document.querySelectorAll('.px_img');
-    new simpleParallax(images, {
-        delay: .5,
-        transition: 'cubic-bezier(0,0,0,1)',
-    });
+    // console.log("images parallax load");
+    // var images = document.querySelectorAll('.px_img');
+    // new simpleParallax(images, {
+    //     delay: .5,
+    //     transition: 'cubic-bezier(0,0,0,1)',
+    // });
 // });
 });
 

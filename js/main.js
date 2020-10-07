@@ -1,12 +1,11 @@
 
 // Get window status
-// window.loaded = false;
-// $(window).load(function() {
-//     window.loaded = true;
-// });
-
-// var pageFullyLoadedVar = false;
-// window.addEventListener("load", pageFullyLoaded, false);
+window.loaded = false;
+var checkPageLoading = false;
+$(window).load(function() {
+    window.loaded = true;
+});
+window.addEventListener("load", pageFullyLoaded, false);
 
 //Preloader and page fade in setup
 function fadeInChildren(parent, base_delay) {
@@ -26,23 +25,33 @@ $(document).ready(function() {
         // while(!pageFullyLoadedVar) {
         //   continue;
         // }
-        $(window).load(function() {
         clearInterval(i);
-        // Animate components on and off the screen on loading
-        $('#preloader').slideUp(1000);
-        // $('#preloader .container #brand').animate({right: "100%", bottom: "100%"}, 400, 'easeInExpo');
-        $('#body-container').fadeIn(1000);
-        fadeInChildren('#body-container header',1000);
-        fadeInChildren('#body-container header .intro-text',1000);
-        startTime();
-      });
+        checkPageLoading = true;
+        // if(window.loaded) {
+          // // Animate components on and off the screen on loading
+          // $('#preloader').slideUp(1000);
+          // // $('#preloader .container #brand').animate({right: "100%", bottom: "100%"}, 400, 'easeInExpo');
+          // $('#body-container').fadeIn(1000);
+          // fadeInChildren('#body-container header',1000);
+          // fadeInChildren('#body-container header .intro-text',1000);
+          // startTime();
+        // }
      }
     }, 10);
 });
 
-// function pageFullyLoaded(e) { 
-  // pageFullyLoadedVar = true;
-// }
+function pageFullyLoaded(e) { 
+  if(checkPageLoading) {
+    console.log("window loaded!!");
+      // Animate components on and off the screen on loading
+      $('#preloader').slideUp(1000);
+      // $('#preloader .container #brand').animate({right: "100%", bottom: "100%"}, 400, 'easeInExpo');
+      $('#body-container').fadeIn(1000);
+      fadeInChildren('#body-container header',1000);
+      fadeInChildren('#body-container header .intro-text',1000);
+      startTime();
+  }
+}
 
 // Change colours of background as we scroll down
 $(window).scroll(function() {

@@ -155,7 +155,7 @@ $(window).on("load", function() {
 
 // Swiper initializations
 var interleaveOffset = 0.5;
-var interleaveSpeed = 500;
+var interleaveSpeed = 1000;
 
 var swiper_innermost = new Swiper('.swiper-container-innermost', {
       observer: true,

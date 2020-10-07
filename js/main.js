@@ -103,21 +103,21 @@ function checkTime(i) {
 
 // Portfolio parallax
 $(document).ready(function() {
-    console.log("images parallax load");
+    console.log("images parallax on ready");
     var images = document.querySelectorAll('.px_img');
     new simpleParallax(images, {
         delay: .5,
         transition: 'cubic-bezier(0,0,0,1)',
     });
 });
-// $(window).on("load", function() {
-//     console.log("images parallax load");
-//     var images = document.querySelectorAll('.px_img');
-//     new simpleParallax(images, {
-//         delay: .5,
-//         transition: 'cubic-bezier(0,0,0,1)',
-//     });
-// });
+$(window).on("load", function() {
+    console.log("images parallax on load");
+    var images = document.querySelectorAll('.px_img');
+    new simpleParallax(images, {
+        delay: .5,
+        transition: 'cubic-bezier(0,0,0,1)',
+    });
+});
 
 // $(function() {
 //     function imageLoaded() {

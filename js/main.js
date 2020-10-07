@@ -35,7 +35,7 @@ $(document).ready(function() {
         fadeInChildren('#body-container header',1000);
         fadeInChildren('#body-container header .intro-text',1000);
         startTime();
-      }
+      });
      }
     }, 10);
 });

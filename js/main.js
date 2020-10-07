@@ -1,10 +1,10 @@
 
 // Get window status
-window.loaded = false;
-var checkPageLoading = false;
-$(window).load(function() {
-    window.loaded = true;
-});
+// window.loaded = false;
+// var checkPageLoading = false;
+// $(window).load(function() {
+//     window.loaded = true;
+// });
 window.addEventListener("load", pageFullyLoaded, false);
 
 //Preloader and page fade in setup
@@ -26,31 +26,31 @@ $(document).ready(function() {
         //   continue;
         // }
         clearInterval(i);
-        checkPageLoading = true;
+        // checkPageLoading = true;
         // if(window.loaded) {
-          // // Animate components on and off the screen on loading
-          // $('#preloader').slideUp(1000);
-          // // $('#preloader .container #brand').animate({right: "100%", bottom: "100%"}, 400, 'easeInExpo');
-          // $('#body-container').fadeIn(1000);
-          // fadeInChildren('#body-container header',1000);
-          // fadeInChildren('#body-container header .intro-text',1000);
-          // startTime();
+          // Animate components on and off the screen on loading
+          $('#preloader').slideUp(1000);
+          // $('#preloader .container #brand').animate({right: "100%", bottom: "100%"}, 400, 'easeInExpo');
+          $('#body-container').fadeIn(1000);
+          fadeInChildren('#body-container header',1000);
+          fadeInChildren('#body-container header .intro-text',1000);
+          startTime();
         // }
      }
     }, 10);
 });
 
 function pageFullyLoaded(e) { 
-  if(checkPageLoading) {
-    console.log("window loaded!!");
-      // Animate components on and off the screen on loading
-      $('#preloader').slideUp(1000);
-      // $('#preloader .container #brand').animate({right: "100%", bottom: "100%"}, 400, 'easeInExpo');
-      $('#body-container').fadeIn(1000);
-      fadeInChildren('#body-container header',1000);
-      fadeInChildren('#body-container header .intro-text',1000);
-      startTime();
-  }
+  // if(checkPageLoading) {
+  //   console.log("window loaded!!")
+  //     // Animate components on and off the screen on loading
+  //     $('#preloader').slideUp(1000);
+  //     // $('#preloader .container #brand').animate({right: "100%", bottom: "100%"}, 400, 'easeInExpo');
+  //     $('#body-container').fadeIn(1000);
+  //     fadeInChildren('#body-container header',1000);
+  //     fadeInChildren('#body-container header .intro-text',1000);
+  //     startTime();
+  // }
 }
 
 // Change colours of background as we scroll down
@@ -97,14 +97,14 @@ function checkTime(i) {
 }
 
 // Portfolio parallax
-$(window).on("load", function() {
-    console.log("images parallax load");
-    var images = document.querySelectorAll('.px_img');
-    new simpleParallax(images, {
-        delay: .5,
-        transition: 'cubic-bezier(0,0,0,1)',
-    });
-});
+// $(window).on("load", function() {
+//     console.log("images parallax load");
+//     var images = document.querySelectorAll('.px_img');
+//     new simpleParallax(images, {
+//         delay: .5,
+//         transition: 'cubic-bezier(0,0,0,1)',
+//     });
+// });
 
 // $(function() {
 //     function imageLoaded() {
@@ -288,7 +288,7 @@ $('.navbar-collapse ul li a').click(function() {
 
 
 // Change brand properties when in/out of Header
-$(window).on("load resize scroll", function() {
+$(window).on("load", function() {
   // if($('header').position().top <= $(window).scrollTop() && ($('header').position().top + $('header').outerHeight()) > $(window).scrollTop()) {
   if($('header').offset().top <= $(window).scrollTop() && ($('header').offset().top + $('header').outerHeight()) > $(window).scrollTop()) {
      $('.sidenav .page-scroll .navbar-brand').css({
@@ -301,10 +301,46 @@ $(window).on("load resize scroll", function() {
             'margin' : '0'
         });
   }
-});
+// });
 
 // Horizontal header parallax
-$(window).on("load resize scroll", function() {
+// $(window).on("load resize scroll", function() {
+    var windowTop = $(window).scrollTop();
+    var elementTop = $('header').offset().top;
+    var currentpos = -10;//$('.bg-move').css('right');
+    var pos = currentpos + ((windowTop - elementTop) / 10);
+      $('.hor_parallax_right').css({ right: pos });
+      $('.hor_parallax_left').css({ left: pos });
+
+// Portfolio parallax
+// $(window).on("load", function() {
+    console.log("images parallax load");
+    var images = document.querySelectorAll('.px_img');
+    new simpleParallax(images, {
+        delay: .5,
+        transition: 'cubic-bezier(0,0,0,1)',
+    });
+// });
+});
+
+
+$(window).on("resize scroll", function() {
+  // if($('header').position().top <= $(window).scrollTop() && ($('header').position().top + $('header').outerHeight()) > $(window).scrollTop()) {
+  if($('header').offset().top <= $(window).scrollTop() && ($('header').offset().top + $('header').outerHeight()) > $(window).scrollTop()) {
+     $('.sidenav .page-scroll .navbar-brand').css({
+            'font-size' : '4.5em',
+            'margin' : '50px 10px 40px 0px'
+        });
+  } else {
+    $('.sidenav .page-scroll .navbar-brand').css({
+            'font-size' : '2em',
+            'margin' : '0'
+        });
+  }
+// });
+
+// Horizontal header parallax
+// $(window).on("load resize scroll", function() {
     var windowTop = $(window).scrollTop();
     var elementTop = $('header').offset().top;
     var currentpos = -10;//$('.bg-move').css('right');

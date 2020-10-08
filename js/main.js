@@ -115,17 +115,21 @@ function checkTime(i) {
 $(document).ready(function() {
     console.log("images parallax on ready");
     var images = document.querySelectorAll('.px_img');
-    new simpleParallax(images, {
+    images.forEach(img => {
+        new simpleParallax(img, {
         delay: .5,
         transition: 'cubic-bezier(0,0,0,1)',
+        customWrapper: img.parentNode.nodeName,
     });
 });
 $(window).on("load", function() {
     console.log("images parallax on load");
     var images = document.querySelectorAll('.px_img');
-    new simpleParallax(images, {
+    images.forEach(img => {
+        new simpleParallax(img, {
         delay: .5,
         transition: 'cubic-bezier(0,0,0,1)',
+        customWrapper: img.parentNode.nodeName,
     });
 });
 

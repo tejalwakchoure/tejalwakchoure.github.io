@@ -690,8 +690,9 @@ header mark {
 	padding: 5vw 0;
 }
 
-#portfolio .portfolio-link-wrapper,
-#portfolio .portfolio-link-wrapper .simpleParallax {
+#portfolio .portfolio-link-wrapper
+/*#portfolio .portfolio-link-wrapper .simpleParallax */
+{
 	position: relative; 
 	overflow: hidden; 
 	height: 100%; 

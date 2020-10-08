@@ -700,8 +700,8 @@ header mark {
 }
 
 #portfolio .portfolio-link-wrapper img {
-	width: 100%;
-    height: 100%;
+	width: auto; /*100%;*/
+    height: auto; /*100%;*/
     display: block;
 	object-fit: cover;
 }

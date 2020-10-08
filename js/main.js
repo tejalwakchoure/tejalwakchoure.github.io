@@ -120,6 +120,7 @@ $(document).ready(function() {
         delay: .5,
         transition: 'cubic-bezier(0,0,0,1)',
         customWrapper: img.parentNode.nodeName,
+        });
     });
 });
 $(window).on("load", function() {
@@ -130,7 +131,8 @@ $(window).on("load", function() {
         delay: .5,
         transition: 'cubic-bezier(0,0,0,1)',
         customWrapper: img.parentNode.nodeName,
-    });
+        });
+    });    
 });
 
 // $(function() {

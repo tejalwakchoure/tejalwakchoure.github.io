@@ -746,11 +746,11 @@ header mark {
   	height: 500px;
     line-height: 500px;
 
-    height: 600px !important; /*500px !important;*/
-    line-height: 600px !important; /*500px !important;*/
-    width: 600px !important; /*500px !important;*/
+    /*height: 600px !important;
+    line-height: 600px !important;
+    width: 600px !important;
     margin: 300px 0 100px 0;
-    padding: 0;
+    padding: 0;*/
 }
 
 .grid-col:nth-child(2) > .grid-item {
@@ -764,11 +764,11 @@ header mark {
 
 /* 2 columns at medium/large size */
 @media ( min-width: 768px ) {
-	/*.grid-col:nth-child(2) { 
+	.grid-col:nth-child(2) { 
   		display: block; 
 	}
   
-   	.grid-col:nth-child(1) > .grid-item:nth-child(odd),
+   	/*.grid-col:nth-child(1) > .grid-item:nth-child(odd),
 	.grid-col:nth-child(2) > .grid-item:nth-child(even) {
 	    height: 500px;
 	    line-height: 500px;
@@ -778,14 +778,14 @@ header mark {
 	.grid-col:nth-child(2) > .grid-item:nth-child(odd) {
 	    height: 600px;
 	    line-height: 600px;
-	}*/
+	}
 	.grid-col:nth-child(2) { 
   		display: block; 
 	}
   
 	.grid-col:nth-child(2) > .grid-item:nth-child(1) {
-	    margin-top: 625px; /*750px;*/
-	}
+	    margin-top: 625px; 
+	}*/ /*750px;*/
 }
 
 /* 3 columns at large size */

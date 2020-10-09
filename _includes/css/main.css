@@ -746,11 +746,11 @@ header mark {
   	height: 500px;
     line-height: 500px;
 
-    height: 600px !important;
-    line-height: 600px !important;
-    width: 600px !important;
+    height: 500px !important;
+    line-height: 500px !important;
+    width: 500px !important;
     margin: 300px 0 100px 0;
-    padding: 0;
+    padding: 1em;
 }
 
 /* 1 column by default, hide columns 2 & 3 */
@@ -780,13 +780,7 @@ header mark {
 	}
   
 	.grid-col:nth-child(2) > .grid-item:nth-child(1) {
-	    margin-top: 750px;
-	}
-
-	.grid-col:nth-child(1) > .grid-item:nth-child(even),
-	.grid-col:nth-child(2) > .grid-item:nth-child(odd) {
-	    height: 600px;
-	    line-height: 600px;
+	    margin-top: 625px;
 	}
 }
 

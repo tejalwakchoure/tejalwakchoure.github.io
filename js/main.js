@@ -118,7 +118,7 @@ $(document).ready(function() {
     images.forEach(img => {
         new simpleParallax(img, {
         delay: .5,
-        scale: 1.25,
+        scale: 1.2,
         transition: 'cubic-bezier(0,0,0,1)',
         customWrapper: img.parentNode.nodeName,
         });
@@ -130,7 +130,7 @@ $(window).on("load", function() {
     images.forEach(img => {
         new simpleParallax(img, {
         delay: .5,
-        scale: 1.25,
+        scale: 1.2,
         transition: 'cubic-bezier(0,0,0,1)',
         customWrapper: img.parentNode.nodeName,
         });

@@ -779,7 +779,7 @@ header mark {
   		display: block; 
 	}
   
-	.grid-col:nth-child(2) > ..grid-item:nth-child(1) {
+	.grid-col:nth-child(2) > .grid-item:nth-child(1) {
 	    margin-top: 750px;
 	}
 

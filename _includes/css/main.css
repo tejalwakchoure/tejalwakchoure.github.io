@@ -750,7 +750,7 @@ header mark {
     line-height: 600px !important; /*500px !important;*/
     width: 600px !important; /*500px !important;*/
     margin: 300px 0 100px 0;
-    padding: 1em;
+    padding: 0;
 }
 
 .grid-col:nth-child(2) > .grid-item {

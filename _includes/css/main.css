@@ -753,7 +753,11 @@ header mark {
     padding: 1em;
 }
 
-/* 1 column by default, hide columns 2 & 3 */
+.grid-col:nth-child(2) > .grid-item {
+	float: right;
+}
+
+/* 1 column by default, hide column 2 */
 .grid-col:nth-child(2), .grid-col:nth-child(3) { 
 	display: none;
 }

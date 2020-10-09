@@ -768,12 +768,21 @@ header mark {
   		display: block; 
 	}
   
-   	/*.grid-col:nth-child(1) > .grid-item:nth-child(even),
+   	/*.grid-col:nth-child(1) > .grid-item:nth-child(odd),
+	.grid-col:nth-child(2) > .grid-item:nth-child(even) {
+	    height: 500px;
+	    line-height: 500px;
+	}
+
+	.grid-col:nth-child(1) > .grid-item:nth-child(even),
 	.grid-col:nth-child(2) > .grid-item:nth-child(odd) {
 	    height: 600px;
 	    line-height: 600px;
 	}
-
+	.grid-col:nth-child(2) { 
+  		display: block; 
+	}
+  
 	.grid-col:nth-child(2) > .grid-item:nth-child(1) {
 	    margin-top: 625px; 
 	}*/ /*750px;*/

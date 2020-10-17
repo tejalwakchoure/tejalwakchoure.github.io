@@ -3,13 +3,8 @@
     {% include head.html %}
     <body id="page-top" class="index">
         {% include preloader.html %}
-        <div id="body-container" class="body-container" style="position: relative;">
-        <div style="width: 80%;
-                height: 90.5%; /*92.5%;*/
-                background: pink;
-                position: absolute;
-                margin: 10%;
-                z-index: 0;"></div>
+        <div id="body-container" class="body-container">
+        <div id="bkg-page"></div>
           <div class="section-bkg" data-color="common">
             {% include nav.html %}
             {% include header.html %}
@@ -22,7 +17,7 @@
             {% include details.html %}
           </div>
           <div class="section-bkg" data-color="common" 
-          style="background: linear-gradient(to left, #fed6ac 51.8%, white 0%);">
+          style="/*background: linear-gradient(to left, #fed6ac 51.8%, white 0%);*/ ">
             {% include contact.html %}        
             {% include footer.html %}
           </div>

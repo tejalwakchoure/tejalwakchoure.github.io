@@ -71,7 +71,7 @@ function pageFullyLoaded(e) {
 // Change colours of background as we scroll down
 $(window).scroll(function() {
   var $window = $(window),
-  $body = $('.body-container'),
+  $body = $('#body-container'),
   $panel = $('.section-bkg');
   // Change 33% earlier than scroll pos so colour is there when you arrive
   var scroll = $window.scrollTop() + ($window.height() / 3);

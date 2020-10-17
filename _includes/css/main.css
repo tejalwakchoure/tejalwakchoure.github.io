@@ -29,12 +29,12 @@ body {
 	--animate-duration: 1000;
 }*/
 
-.body-container {
+#body-container {
   transition: background-color 1s ease;
   position: relative;
 }
 
-.bkg-page {
+#bkg-page {
 	width: 80%;
     height: 90.5%; /*92.5%;*/
     background: #{{ site.color.backgroundcol }};

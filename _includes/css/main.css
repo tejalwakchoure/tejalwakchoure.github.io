@@ -156,8 +156,7 @@ a:focus,
 a:active,   
 a.active {  
 	outline: 0; 
-	/*color: #{{ site.color.text }};*/
-	color: #{{ site.color.gray_dark }};
+	color: #{{ site.color.text }};
 }   
 
 h1, 
@@ -870,6 +869,14 @@ header mark {
 	background: #{{ site.color.accent }}; 
 	color: #{{ site.color.text_light }};
 }
+
+.slide-link:hover,
+.slide-link:focus,
+.slide-link:active,
+.slide-link.active {
+	color: #{{ site.color.gray_dark }};
+}
+
 
 .swiper-container-innermost {
 	display: grid;

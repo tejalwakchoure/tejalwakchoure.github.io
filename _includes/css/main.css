@@ -1152,6 +1152,7 @@ footer .footer-below {
 	position: relative; 
 	margin-bottom: 0;   
 	padding: .5em;   
+	background: #{{ site.color.gray_light }};
 	border: 1px solid #{{ site.color.gray_dark }};
 }   
 

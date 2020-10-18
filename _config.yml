@@ -43,13 +43,15 @@ color:
     
 
     text: '575757'
-    heading: '000000'
-    accent: 'C46768'
-    backgroundcol: 'E5ECFB' #'eaefff'
-    page_bkg: 'ffffff'
     text_light: 'ffffff'
-    backgroundcol_dark: 'c79d6e'
+    heading: '000000'
+    accent: 'E82E2E'
+    backgroundcol: 'FFDDCB'
+    backgroundcol_dark: 'D49E80'
+    page_bkg: 'ffffff'
+    gray_light: 'EEEEEE'
     gray_dark: 'bfbfbf'
+
 
 # Footer settings
 footer:

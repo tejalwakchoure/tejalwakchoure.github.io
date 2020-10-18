@@ -867,7 +867,7 @@ header mark {
 	float: left; 
 	padding: 8px 24px; 
 	background: #{{ site.color.accent }}; 
-	/*color: white;*/
+	color: #{{ site.color.text_light }};
 }
 
 .swiper-container-innermost {

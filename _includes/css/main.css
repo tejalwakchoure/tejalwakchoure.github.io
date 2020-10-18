@@ -686,7 +686,7 @@ header mark {
   border-radius: 50%;
   background-color: #{{ site.color.text }};
   /*border: 5px solid #{{ site.color.lightbkg }};*/
-  border: 5px solid pink;
+  border: 5px solid #{{ site.color.backgroundcol }};
   position: absolute;
   top: -14px;
   left: 42%;

@@ -156,7 +156,8 @@ a:focus,
 a:active,   
 a.active {  
 	outline: 0; 
-	color: #{{ site.color.text }};
+	/*color: #{{ site.color.text }};*/
+	color: #{{ site.color.gray_dark }};
 }   
 
 h1, 

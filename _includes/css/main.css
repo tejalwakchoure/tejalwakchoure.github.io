@@ -788,8 +788,10 @@ header mark {
   	padding: 0.65em;
   	font-weight: 900;
   	font-size: 2rem;
-  	height: 500px;
-    line-height: 500px;
+  	
+  	/*height: 500px;
+    line-height: 500px;*/
+    
     /*width: 500px;*/
 
     /*height: 600px !important;

@@ -313,47 +313,13 @@ $('.navbar-collapse ul li a').click(function() {
 });
 
 
+
 // Change brand properties when in/out of Header
-$(window).on("load", function() {
+$(window).on("load resize scroll", function() {
   window.loaded = true;
   // if($('header').position().top <= $(window).scrollTop() && ($('header').position().top + $('header').outerHeight()) > $(window).scrollTop()) {
-  if($('header').offset().top <= $(window).scrollTop() && ($('header').offset().top + $('header').outerHeight()) > $(window).scrollTop()) {
-     $('.sidenav .page-scroll .navbar-brand').css({
-            'font-size' : '4.5em',
-            'margin' : '50px 10px 40px 0px'
-        });
-  } else {
-    $('.sidenav .page-scroll .navbar-brand').css({
-            'font-size' : '2em',
-            'margin' : '0'
-        });
-  }
-// });
-
-// Horizontal header parallax
-// $(window).on("load resize scroll", function() {
-    var windowTop = $(window).scrollTop();
-    var elementTop = $('header').offset().top;
-    var currentpos = -10;//$('.bg-move').css('right');
-    var pos = currentpos + ((windowTop - elementTop) / 10);
-      $('.hor_parallax_right').css({ right: pos });
-      $('.hor_parallax_left').css({ left: pos });
-
-// Portfolio parallax
-// $(window).on("load", function() {
-    // console.log("images parallax load");
-    // var images = document.querySelectorAll('.px_img');
-    // new simpleParallax(images, {
-    //     delay: .5,
-    //     transition: 'cubic-bezier(0,0,0,1)',
-    // });
-// });
-});
-
-
-$(window).on("resize scroll", function() {
-  // if($('header').position().top <= $(window).scrollTop() && ($('header').position().top + $('header').outerHeight()) > $(window).scrollTop()) {
-  if($('header').offset().top <= $(window).scrollTop() && ($('header').offset().top + $('header').outerHeight()) > $(window).scrollTop()) {
+  // if($('header').offset().top <= $(window).scrollTop() && ($('header').offset().top + $('header').outerHeight()) > $(window).scrollTop()) {
+  if($('.intro-text').offset().top <= $(window).scrollTop() && ($('.intro-text').offset().top + $('.intro-text').outerHeight()) > $(window).scrollTop()) {
      $('.sidenav .page-scroll .navbar-brand').css({
             'font-size' : '4.5em',
             'margin' : '50px 10px 40px 0px'

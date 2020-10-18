@@ -788,7 +788,7 @@ header mark {
   	padding: 0.65em;
   	font-weight: 900;
   	font-size: 2rem;
-  	
+
   	/*height: 500px;
     line-height: 500px;*/
     
@@ -1061,6 +1061,8 @@ header mark {
     background-color: #{{ site.color.backgroundcol_dark }};
     transform: translate3d(-101%, 0, 0);
     transition-duration: 500ms;
+
+    display: flex;
 }
 
 

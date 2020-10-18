@@ -45,7 +45,7 @@ color:
     text: '575757'
     text_light: 'ffffff'
     heading: '000000'
-    accent: 'E82E2E' # '76296F'
+    accent: '76296F' # 'E82E2E'
     backgroundcol: 'ffe1cf' #'DAE6FF'
     backgroundcol_dark: 'D49E80' #'4B69AB'
     backgroundcol_light: 'FDF0E6' # 'e6ecf8' 

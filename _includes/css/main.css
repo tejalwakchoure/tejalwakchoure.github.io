@@ -11,7 +11,7 @@ html,body
 	/*font-feature-settings: "lnum";*/
 	font-weight: 300;
 	/*font-family: Spectral, serif;*/
-	font-family: Source Sans Pro, sans-serif;
+	font-family: 'Source Sans Pro', sans-serif;
 
 	/*font-family: Raleway,Montserrat,sans-serif;*/
 	/*background-color: #{{ site.color.lightbkg }};*/
@@ -20,7 +20,7 @@ html,body
 .heading,
 .name,
 .skills {
-	font-family: noahgUl, sans-serif;
+	font-family: 'noahgUl', sans-serif;
 }
 
 
@@ -131,7 +131,7 @@ body {
 	letter-spacing: -0.08em; 
 	margin: auto auto 0 auto;
 	/*transition: transform 300ms ease-out;*/
-	font-family: Raleway,Montserrat,sans-serif;
+	font-family: 'Raleway','Montserrat',sans-serif;
 }
 
 #preloader #percent {
@@ -295,7 +295,7 @@ hr.primary{
     margin: 10px 20px;
     transition-property: font-size, margin;
     transition: 300ms ease-in-out;
-	font-family: Raleway,Montserrat,sans-serif;
+	font-family: 'Raleway','Montserrat',sans-serif;
 }  
 .navbar-toggle {
     margin-top: 0;

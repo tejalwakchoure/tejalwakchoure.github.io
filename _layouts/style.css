@@ -1,6 +1,4 @@
 {% include css/bootstrap.min.css %}
 {% include css/animate.min.css %}
 {% include css/swiper-bundle.min.css %}
-/*{% include ../css/font-awesome/css/font-awesome.min.css %}
-{% include ../css/fontstyles/css/stylesheet.css %}*/
 {% include css/main.css %}

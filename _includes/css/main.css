@@ -7,12 +7,22 @@ html,body
 	padding: 0px;
 	overflow-x: hidden;
 	overflow-y: auto;
-	font-variant-numeric: lining-nums;
-	font-feature-settings: "lnum";
+	/*font-variant-numeric: lining-nums;*/
+	/*font-feature-settings: "lnum";*/
 	font-weight: 300;
-	font-family:Raleway,Montserrat,sans-serif;
+	/*font-family: Spectral, serif;*/
+	font-family: Source Sans Pro, sans-serif;
+
+	/*font-family: Raleway,Montserrat,sans-serif;*/
 	/*background-color: #{{ site.color.lightbkg }};*/
-}   
+}
+
+.heading,
+.name,
+.skills {
+	font-family: noahgUl, sans-serif;
+}
+
 
 /* Hide scrollbar for Chrome, Safari and Opera */
 body::-webkit-scrollbar {
@@ -97,12 +107,12 @@ body {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	font-family:Raleway,Montserrat,sans-serif;
+	/*font-family:Raleway,Montserrat,sans-serif;*/
 	font-weight: 100; 
 	text-transform: lowercase; 
 }
 #preloader #wrapper {
-	font-family: lato,Montserrat,sans-serif;
+	/*font-family: lato,Montserrat,sans-serif;*/
 	font-weight: 200;
 	margin: auto; 
 	display: flex; 
@@ -166,7 +176,7 @@ h4,
 h5, 
 h6 {    
 	text-transform: uppercase;  
-	font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;    
+	/*font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;    */
 	letter-spacing: 3px;   
 }   
 
@@ -236,7 +246,7 @@ hr.primary{
 	z-index: 3;
 	text-transform: uppercase;
 	font-weight: 400;
-	font-family:Raleway,Montserrat,sans-serif;
+	/*font-family:Raleway,Montserrat,sans-serif;*/
 	color: #{{ site.color.accent }};
 	background: transparent;
 	/*background-color: #{{ site.color.lightbkg }};*/
@@ -1262,7 +1272,7 @@ form .row:first-child .floating-label-form-group {
     display: flex;
     flex-direction: column;
     font-weight: 400;
-	font-family:Raleway,Montserrat,sans-serif;
+	/*font-family:Raleway,Montserrat,sans-serif;*/
 	font-size: 1.3em;
 	letter-spacing: 2px;  
 	background: transparent;

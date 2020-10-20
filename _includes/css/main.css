@@ -565,7 +565,8 @@ header .intro-text .name {
 	/*font-size: 8.5vw;*/
 	font-weight: 700;     
 	letter-spacing: 1px;
-	text-transform: uppercase;
+	/*text-transform: uppercase;*/
+	text-transform: capitalize;
 	color: #{{ site.color.accent }};
 	font-family: cervanttisReg, 'noahgThin', 'Lato', sans-serif;
 }   

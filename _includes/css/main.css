@@ -511,6 +511,8 @@ header .img_div {
     /*height: 100%;*/
     width: 50%;
 
+    position: relative;
+
 }
 
 header .title {
@@ -528,6 +530,8 @@ header .title {
     padding-top: 13.25%;
     padding-top: 20%;
     /*padding-top: 10%;*/
+
+    position: relative;
 }
 
 header .intro-text {

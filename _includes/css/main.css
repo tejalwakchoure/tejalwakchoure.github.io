@@ -664,7 +664,8 @@ header mark {
     height: 400px; 
     width: 400px; 
     border-radius: 50%;
-    box-shadow: 8px 10px #{{ site.color.accent }};
+    /*box-shadow: 8px 10px #{{ site.color.accent }};*/
+    box-shadow: 5px 8px 0px 5px #{{ site.color.accent }};
     /*box-shadow: 25px 25px #{{ site.color.lightelement }};*/
 }
 #about .row {

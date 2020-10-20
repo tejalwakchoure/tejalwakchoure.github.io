@@ -1109,6 +1109,8 @@ header mark {
     transition-duration: 500ms;
 
     display: flex;
+    font-family: noahgLt, Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    letter-spacing: 3px;
 }
 
 

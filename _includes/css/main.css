@@ -490,6 +490,18 @@ header img {
     width: 80vw;
     height: 100% !important;
     transform: scaleX(-1);
+
+
+
+    z-index: 0;
+    object-fit: cover;
+    object-position: center;
+    max-width: none !important;
+    width: 170%;
+    margin-top: 15%;
+    margin-left: -70%;
+    height: 100% !important;
+    transform: scaleX(-1);
 }
 
 .hor_parallax_right {
@@ -544,7 +556,8 @@ header .intro-text {
 	/*padding-right: 5vw; */
 	/*font-family: "lato", sans-serif;*/
 
-	margin-left: 12.5%;
+	/*margin-left: 12.5%;*/
+	margin-left: 5%;
 }
 
 header .intro-text .name {

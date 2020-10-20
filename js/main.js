@@ -315,7 +315,7 @@ $('.navbar-collapse ul li a').click(function() {
 
 
 // Change brand properties when in/out of Header
-// $(window).on("load resize scroll", function() {
+$(window).on("load resize scroll", function() {
 //   window.loaded = true;
 //   // if($('header').position().top <= $(window).scrollTop() && ($('header').position().top + $('header').outerHeight()) > $(window).scrollTop()) {
 //   if($('header').offset().top <= $(window).scrollTop() && ($('header').offset().top + $('header').outerHeight()) > $(window).scrollTop()) {

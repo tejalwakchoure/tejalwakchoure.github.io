@@ -44,20 +44,20 @@
 								<ul class="list-inline item-details">
 									{% if post.project-date %}
 									<li>Date:
-										<strong>{{ post.project-date }}
-										</strong>
+										<span>{{ post.project-date }}
+										</span>
 									</li>
 									{% endif %}
 									{% if post.category %}
 									<li>Area:
-										<strong>{{ post.category }}
-										</strong>
+										<span>{{ post.category }}
+										</span>
 									</li>
 									{% endif %}
 									{% if post.github-link %}
 									<li>Code:
-										<strong><a href={{ post.github-link }} target="_blank">GitHub Repo</a>
-										</strong>
+										<span><a href={{ post.github-link }} target="_blank">GitHub Repo</a>
+										</span>
 									</li>
 									{% endif %}
 								</ul>

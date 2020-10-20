@@ -178,7 +178,8 @@ h5,
 h6 {    
 	text-transform: uppercase;  
 	/*font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;    */
-	letter-spacing: 3px;   
+	/*letter-spacing: 3px;   */
+	letter-spacing: 5px;   
 }   
 
 hr{ 

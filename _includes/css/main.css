@@ -293,7 +293,12 @@ hr.primary{
     font-size: 2.5em;
     transform: rotate(90deg) !important;
     /*padding: 0 !important;*/
-    margin: 10px 20px;
+
+
+    /*margin: 10px 20px;*/
+    margin: 0;
+
+
     transition-property: font-size, margin;
     transition: 300ms ease-in-out;
 	font-family: 'Raleway','Montserrat',sans-serif;

@@ -177,9 +177,12 @@ h4,
 h5, 
 h6 {    
 	text-transform: uppercase;  
-	/*font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;    */
-	/*letter-spacing: 3px;   */
-	letter-spacing: 5px;   
+	font-family: noahgReg, Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+	letter-spacing: 3px;   
+}
+
+#portfolioDetails h2 {
+	letter-spacing: 6px;
 }   
 
 hr{ 

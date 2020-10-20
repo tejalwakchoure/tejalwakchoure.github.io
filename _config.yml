@@ -49,7 +49,7 @@ color:
     backgroundcol: 'ffe1cf' #'DAE6FF'
     backgroundcol_dark: 'dfae91' #'4B69AB'
     backgroundcol_light: 'FDF0E6' # 'e6ecf8'
-    page_bkg: 'ffffff'
+    page_bkg: 'ffffff' # 'f2f2f2'
     gray_light: 'EEEEEE'
     gray_dark: 'bfbfbf'
 

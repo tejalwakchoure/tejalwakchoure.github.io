@@ -1309,7 +1309,7 @@ form .row:first-child .floating-label-form-group {
 	letter-spacing: 2px;  
 	background: transparent;
 	/*color: #{{ site.color.lightelement }} !important;*/
-	font-family:'noahgUl',Raleway,Montserrat,sans-serif;
+	font-family:'noahgLt',Raleway,Montserrat,sans-serif;
 }
 
 .sidenav .page-scroll {

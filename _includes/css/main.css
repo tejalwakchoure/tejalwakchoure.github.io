@@ -288,7 +288,7 @@ hr.primary{
     letter-spacing: -0.08em;
     font-weight: 100;
     font-size: 2.5em;
-    transform: rotate(90deg) !important;
+    transform: rotate(90deg);
     margin: 0;
 
     transition-property: font-size, margin;
@@ -434,6 +434,7 @@ hr.primary{
 	}
 	.sidenav .page-scroll .navbar-brand {
 		transform: none;
+		font-size: 2em;
 	}
 	.sidenav .text {
 		writing-mode: horizontal-tb;

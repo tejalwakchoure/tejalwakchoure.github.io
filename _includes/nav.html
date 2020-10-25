@@ -1,23 +1,35 @@
 
-<div class="sidenav">
-    <div class="container-fluid">
+<nav class="sidenav" 
+    style="flex-direction: column;">
 
-
-        <div class="navbar-header">
-            <span class="text navbar-text"></span>
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#nav-items">
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>                        
-            </button>
-            <div class="page-scroll">
-                <a class="navbar-brand text" href="#page-top">tw</a>
+        <div class="navbar-header container-fluid" 
+            style="display: block;
+                    padding-left: 10px;
+                    padding-right: 10px;">
+            <div class="page-scroll" 
+                style="display: inline-block;
+                        padding-left: 0;
+                        padding-top: 0;">
+                <a class="navbar-brand text" href="#page-top" 
+                    style="padding-left: 0;">tw</a>
             </div>
+            <span class="text navbar-text"></span>
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#nav-items" style="padding-right: 0;
+                                margin-right: 0;
+                                padding-top: 0;
+                                margin-top: 0;">
+                <i class="fa fa-align-left" 
+                    style="background: #{ site.color.backgroundcol_dark };"></i>
+                <!-- <span class="icon-bar" style="background: rebeccapurple;"></span>
+                <span class="icon-bar" style="background: rebeccapurple;"></span>
+                <span class="icon-bar" style="background: rebeccapurple;"></span>  -->   
+            </button>
         </div>
 
 
 
-        <div class="collapse navbar-collapse" id="nav-items">
+        <div class="collapse navbar-collapse" id="nav-items" 
+            style="background: #{ site.color.backgroundcol_dark };">
             <ul class="nav navbar-nav">
                 <li class="page-scroll">
                     <a class="text" href="#about">About</a>
@@ -30,8 +42,7 @@
                 </li>
             </ul>
         </div>
-    </div>
-</div>
+</nav>
 
 
 

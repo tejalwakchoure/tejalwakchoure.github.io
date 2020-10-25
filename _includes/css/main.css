@@ -418,6 +418,8 @@ hr.primary{
 .sidenav a:active,
 .sidenav a.active {
 	text-decoration: none;
+	
+	background: transparent;
 }
 
 
@@ -435,7 +437,8 @@ hr.primary{
 	}
 	.sidenav .page-scroll .navbar-brand {
 		transform: none;
-		font-size: 2em;
+		/*font-size: 2em;*/
+		font-size: 1.5em;
 	}
 	.sidenav .text {
 		writing-mode: horizontal-tb;

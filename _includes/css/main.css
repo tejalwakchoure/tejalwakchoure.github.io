@@ -247,14 +247,12 @@ hr.primary{
 }
 
 
-.navbar {   
+/*.navbar {   
 	z-index: 3;
 	text-transform: uppercase;
 	font-weight: 400;
-	/*font-family:Raleway,Montserrat,sans-serif;*/
 	color: #{{ site.color.accent }};
 	background: transparent;
-	/*background-color: #{{ site.color.lightbkg }};*/
 	min-height: 30px !important;
 	position: relative;
 }   
@@ -275,39 +273,29 @@ hr.primary{
 .navbar-inverse {   
 	border: 0;  
 }   
-.navbar-nav > li > a, .sidenav .page-scroll .navbar-brand {   
+.navbar-nav > li > a, */
+.sidenav .page-scroll .navbar-brand {   
 	padding-top:5px !important; 
 	padding-bottom:0 !important;    
 	height: 30px;   
 	color: #{{ site.color.accent }} !important;
 	font-size: 1.5em;
-}
+/*}
 
-.sidenav .page-scroll .navbar-brand {
-	/*position: relative;
-	float: left;*/
-
-	/*margin: 0;
-	padding: 0;*/
+.sidenav .page-scroll .navbar-brand {*/
 	font-variant: none !important;
 	text-transform: lowercase !important;
     letter-spacing: -0.08em;
     font-weight: 100;
-    /*font-size: 4.5em;*/
     font-size: 2.5em;
     transform: rotate(90deg) !important;
-    /*padding: 0 !important;*/
-
-
-    /*margin: 10px 20px;*/
     margin: 0;
-
 
     transition-property: font-size, margin;
     transition: 300ms ease-in-out;
 	font-family: 'Raleway','Montserrat',sans-serif;
 }  
-.navbar-toggle {
+/*.navbar-toggle {
     margin-top: 0;
     border: 0;
 }
@@ -329,12 +317,7 @@ hr.primary{
 	text-align: start !important;
 	writing-mode: horizontal-tb !important;
 	transform: none!important;
-	/*text-transform: none;*/
-    /*float: right !important;*/
-    /*padding: 0;
-    margin: 0;*/
     font-size: 0.75em;
-	/*color: #{{ site.color.lightelement }} !important;*/
 }
 
 .navbar-container {
@@ -342,18 +325,17 @@ hr.primary{
 	padding-left: 5vw; 
 	padding-right: 5vw;
 	padding-top: 13px;
-}
+}*/
 
-@media(min-width:768px) {   
-	.navbar-fixed-top { 
+/*@media(min-width:768px) {   */
+	/*.navbar-fixed-top { 
 		padding: 15px 0;
 		-webkit-transition: padding .3s;    
 		-moz-transition: padding .3s;   
 		transition: padding .3s;    
-	}   
+	}   */
 
-	.sidenav .navbar-fixed-top .page-scroll .navbar-brand {   
-		/*font-size: 3em !important;*/
+	/*.sidenav .navbar-fixed-top .page-scroll .navbar-brand {   
 		font-size: 2.5em !important;
 		letter-spacing: -0.08em;
 		font-weight: 100 !important;
@@ -363,40 +345,111 @@ hr.primary{
 		transition: all .3s;
 		margin: 0!important;    
 
-	}
+	}*/
 
-	.navbar-fixed-top.navbar-shrink {   
+	/*.navbar-fixed-top.navbar-shrink {   
 		padding: 10px 0;    
-	}   
+	}   */
 
-	.sidenav .navbar-fixed-top.navbar-shrink .page-scroll .navbar-brand { 
-		/*font-size: 2em !important;*/
+	/*.sidenav .navbar-fixed-top.navbar-shrink .page-scroll .navbar-brand { 
 		font-size: 2.5em !important;
 		letter-spacing: -0.08em;   
 		font-weight: 100 !important;
 		text-transform: lowercase !important;
 		margin: 0!important;
-	}  
+	}  */
 
-	.navbar-container {
+	/*.navbar-container {
 		padding-top: 0;
 	}
 
 	.navbar-text {
 		padding: 2.5px 0 0 25px;
+	}*/
+/*}*/
+
+
+
+.sidenav {
+	height: 100%;
+    width: fit-content;
+    position: fixed;
+    z-index: 3;
+    top: 0;
+    left: 0;
+    overflow: visible;
+    padding: 10px 0 30px 0;
+    display: flex;
+    flex-direction: column;
+    font-weight: 400;
+
+	font-size: 1.3em;
+	letter-spacing: 2px;  
+	background: transparent;
+	/*color: #{{ site.color.lightelement }} !important;*/
+	font-family:'noahgLt',Raleway,Montserrat,sans-serif;
+}
+
+.sidenav .page-scroll {
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    height: 100%;
+    width: 100%;
+    margin: auto;
+    padding: 10px;
+}
+.sidenav .text {
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    height: 100%;
+    width: 100%;
+    margin: auto;
+    padding: 10px;
+    text-align: center;
+    font-variant: all-small-caps;
+    color: #{{ site.color.accent }} !important;
+}
+.sidenav a {
+	text-transform: uppercase;
+}
+
+.sidenav a:hover, 
+.sidenav a:focus,
+.sidenav a:active,
+.sidenav a.active {
+	text-decoration: none;
+}
+
+
+@media(max-width:768px) {
+	.sidenav {
+		font-style: 1em;
+		flex-direction: row;
+		height: fit-content;
+		width: 100%;
+	}
+	.sidenav .page-scroll {
+	    writing-mode: horizontal-tb;
+	    transform: none;
+	}
+	.sidenav .page-scroll .navbar-brand {
+		transform: none;
+	}
+	.sidenav .text {
+		writing-mode: horizontal-tb;
+    	transform: none;
 	}
 }
 
-@media(max-width:768px) {   
-	.sidenav .navbar-fixed-top.navbar-shrink .page-scroll .navbar-brand { 
-		font-size: 1.5em !important;
-		/*letter-spacing: -0.08em;   
-		font-weight: 100 !important;
-		text-transform: lowercase !important;
-		margin: 0!important;*/
-		padding: 0!important;
-	}
+/*
+.main {
+  margin-left: 160px;  Same as the width of the sidenav 
+  padding: 0px 10px;
 }
+*/
+/*@media screen and (max-height: 450px) {.sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}*/
 
 
 *{      
@@ -1296,72 +1349,3 @@ form .row:first-child .floating-label-form-group {
 @-ms-viewport{  
 	width: device-width;  
 }
-
-
-
-.sidenav {
-	height: 100%;
-    width: fit-content;
-    position: fixed;
-    z-index: 3;
-    top: 0;
-    left: 0;
-    overflow: visible;
-    padding: 10px 0 30px 0;
-    display: flex;
-    flex-direction: column;
-    font-weight: 400;
-
-	font-size: 1.3em;
-	letter-spacing: 2px;  
-	background: transparent;
-	/*color: #{{ site.color.lightelement }} !important;*/
-	font-family:'noahgLt',Raleway,Montserrat,sans-serif;
-}
-
-.sidenav .page-scroll {
-    writing-mode: vertical-rl;
-    transform: rotate(180deg);
-    height: 100%;
-    width: 100%;
-    margin: auto;
-    padding: 10px;
-}
-.sidenav .text {
-    writing-mode: vertical-rl;
-    transform: rotate(180deg);
-    height: 100%;
-    width: 100%;
-    margin: auto;
-    padding: 10px;
-    text-align: center;
-    font-variant: all-small-caps;
-    color: #{{ site.color.accent }} !important;
-}
-.sidenav a {
-	text-transform: uppercase;
-}
-
-.sidenav a:hover, 
-.sidenav a:focus,
-.sidenav a:active,
-.sidenav a.active {
-	text-decoration: none;
-}
-
-@media ( max-width: 768px ) {
-	.sidenav {
-		font-style: 1em;
-	}
-}
-
-
-/*
-.main {
-  margin-left: 160px;  Same as the width of the sidenav 
-  padding: 0px 10px;
-}
-*/
-/*@media screen and (max-height: 450px) {.sidenav {padding-top: 15px;}
-  .sidenav a {font-size: 18px;}
-}*/

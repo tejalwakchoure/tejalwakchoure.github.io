@@ -441,7 +441,7 @@ hr.primary{
     font-variant: all-small-caps;
     color: #{{ site.color.accent }} !important;
 }
-
+/*
 .sidenav .time-wrapper {
 	display: inline-flex;
 
@@ -452,7 +452,7 @@ hr.primary{
     margin: auto;
     display: inline-flex;
     height: auto;
-}
+}*/
 
 .sidenav a {
 	text-transform: uppercase;

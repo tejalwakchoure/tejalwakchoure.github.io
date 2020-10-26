@@ -329,6 +329,10 @@ hr.primary{
     font-size: 0.75em;
 }
 
+.navbar {
+	align-items: end;
+}
+
 /*
 .navbar-container {
 	width: 100vw; 
@@ -421,7 +425,7 @@ hr.primary{
     height: 100%;
     width: 100%;
     margin: auto;
-    padding: 10px;
+    padding: 7.5px;
     text-align: center;
     font-variant: all-small-caps;
     color: #{{ site.color.accent }} !important;

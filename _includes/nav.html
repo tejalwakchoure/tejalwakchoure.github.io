@@ -1,7 +1,7 @@
 
 <nav class="sidenav navbar navbar-expand-md">
     <div class="page-scroll">
-        <a class="navbar-brand text nav-link" href="#page-top">tw</a>
+        <a class="navbar-brand text" href="#page-top" style="height: auto;">tw</a>
     </div>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <div class="navbar-toggler-icon">
@@ -9,10 +9,8 @@
                 style="color: #{{ site.color.accent }};"></i>
         </div>
     </button>
-    <span class="text navbar-text"></span>
-
     <div class="collapse navbar-collapse" id="navbarContent">
-        <ul class="navbar-nav mr-auto">
+        <ul class="navbar-nav" style="height: 100%;">
             <li class="page-scroll">
                 <a class="text" href="#about">About</a>
             </li>
@@ -23,7 +21,10 @@
                 <a class="text" href="#contact">Contact</a>
             </li>
         </ul>
-  </div>
+    </div>
+    <div style="display: inline-flex;">
+        <span class="text navbar-text" style="transform: rotate(0deg);"></span>
+    </div>
 </nav>
 
 

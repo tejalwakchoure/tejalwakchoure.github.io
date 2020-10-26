@@ -285,7 +285,7 @@ hr.primary{
 /*}
 
 .sidenav .page-scroll .navbar-brand {*/
-	padding: 0 .5rem;
+	
 	font-variant: none !important;
 	text-transform: lowercase !important;
     letter-spacing: -0.08em;
@@ -317,7 +317,7 @@ hr.primary{
 }
 
 .navbar-text {
-	font-weight: 300;
+/*	font-weight: 300;
 	text-align: start !important;
 	writing-mode: horizontal-tb !important;
 	transform: none!important;
@@ -330,7 +330,14 @@ hr.primary{
     font-size: 0.75em;
     transform: rotate(0deg);
     line-height: 100%;
-    padding: 0;
+    padding: 0 !important;*/
+
+
+    font-weight: 300;
+    font-size: 0.75em;
+    transform: rotate(90deg);
+    line-height: 100%;
+    padding-top: 0;
 }
 
 .navbar {
@@ -478,6 +485,7 @@ hr.primary{
 		transform: none;
 		/*font-size: 2em;*/
 		font-size: 1.5em;
+		padding: 0 .5rem;
 	}
 	.sidenav .text {
 		writing-mode: horizontal-tb;

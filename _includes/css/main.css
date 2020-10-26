@@ -107,7 +107,7 @@ body {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	/*font-family:Raleway,Montserrat,sans-serif;*/
+	font-family: Lato,Montserrat,sans-serif;
 	font-weight: 100; 
 	text-transform: lowercase; 
 }
@@ -128,6 +128,7 @@ body {
 
 #preloader #brand {
 	font-size: 7.35em; 
+	font-weight: 100;
 	letter-spacing: -0.08em; 
 	margin: auto auto 0 auto;
 	/*transition: transform 300ms ease-out;*/

@@ -285,6 +285,7 @@ hr.primary{
 /*}
 
 .sidenav .page-scroll .navbar-brand {*/
+	padding: 0 .5rem;
 	font-variant: none !important;
 	text-transform: lowercase !important;
     letter-spacing: -0.08em;
@@ -481,15 +482,19 @@ hr.primary{
 	.sidenav .text {
 		writing-mode: horizontal-tb;
     	transform: none;
-    	color: #{{ site.color.text_light }} !important;
+    	color: #{{ site.color.accent }} !important;
+    	/*color: #{{ site.color.text_light }} !important;*/
 	}
 	.sidenav .time-wrapper {
 		display: none;
 	}
 	.sidenav .navbar-collapse {
-		background: #{{ site.color.backgroundcol_dark }};
+		background: #{{ site.color.backgroundcol }};
+		/*background: #{{ site.color.backgroundcol_dark }};*/
 	}
 }
+
+
 
 /*
 .main {

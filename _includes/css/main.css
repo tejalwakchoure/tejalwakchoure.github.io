@@ -426,6 +426,11 @@ hr.primary{
     font-variant: all-small-caps;
     color: #{{ site.color.accent }} !important;
 }
+
+.sidenav .time-wrapper {
+	display: inline-flex;
+}
+
 .sidenav a {
 	text-transform: uppercase;
 }
@@ -462,7 +467,7 @@ hr.primary{
 		writing-mode: horizontal-tb;
     	transform: none;
 	}
-	.sidenav .navbar-text {
+	.sidenav .time-wrapper {
 		display: none;
 	}
 	.sidenav .navbar-collapse {

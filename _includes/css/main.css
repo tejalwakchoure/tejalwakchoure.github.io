@@ -247,7 +247,7 @@ hr.primary{
 }
 
 
-.navbar {   
+/*.navbar {   
 	z-index: 3;
 	text-transform: uppercase;
 	font-weight: 400;
@@ -273,16 +273,16 @@ hr.primary{
 .navbar-inverse {   
 	border: 0;  
 }   
-.navbar-nav > li > a, 
+.navbar-nav > li > a, */
 .sidenav .page-scroll .navbar-brand {   
 	padding-top:5px !important; 
 	padding-bottom:0 !important;    
 	height: 30px;   
 	color: #{{ site.color.accent }} !important;
 	font-size: 1.5em;
-}
+/*}
 
-.sidenav .page-scroll .navbar-brand {
+.sidenav .page-scroll .navbar-brand {*/
 	font-variant: none !important;
 	text-transform: lowercase !important;
     letter-spacing: -0.08em;
@@ -295,7 +295,7 @@ hr.primary{
     transition: 300ms ease-in-out;
 	font-family: 'Raleway','Montserrat',sans-serif;
 }  
-.navbar-toggle {
+/*.navbar-toggle {
     margin-top: 0;
     border: 0;
 }
@@ -325,17 +325,17 @@ hr.primary{
 	padding-left: 5vw; 
 	padding-right: 5vw;
 	padding-top: 13px;
-}
+}*/
 
 /*@media(min-width:768px) {   */
-	.navbar-fixed-top { 
+	/*.navbar-fixed-top { 
 		padding: 15px 0;
 		-webkit-transition: padding .3s;    
 		-moz-transition: padding .3s;   
 		transition: padding .3s;    
-	}   
+	}   */
 
-	.sidenav .navbar-fixed-top .page-scroll .navbar-brand {   
+	/*.sidenav .navbar-fixed-top .page-scroll .navbar-brand {   
 		font-size: 2.5em !important;
 		letter-spacing: -0.08em;
 		font-weight: 100 !important;
@@ -345,27 +345,27 @@ hr.primary{
 		transition: all .3s;
 		margin: 0!important;    
 
-	}
+	}*/
 
-	.navbar-fixed-top.navbar-shrink {   
+	/*.navbar-fixed-top.navbar-shrink {   
 		padding: 10px 0;    
-	}   
+	}   */
 
-	.sidenav .navbar-fixed-top.navbar-shrink .page-scroll .navbar-brand { 
+	/*.sidenav .navbar-fixed-top.navbar-shrink .page-scroll .navbar-brand { 
 		font-size: 2.5em !important;
 		letter-spacing: -0.08em;   
 		font-weight: 100 !important;
 		text-transform: lowercase !important;
 		margin: 0!important;
-	}  
+	}  */
 
-	.navbar-container {
+	/*.navbar-container {
 		padding-top: 0;
 	}
 
 	.navbar-text {
 		padding: 2.5px 0 0 25px;
-	}
+	}*/
 /*}*/
 
 
@@ -418,7 +418,6 @@ hr.primary{
 .sidenav a:active,
 .sidenav a.active {
 	text-decoration: none;
-	
 	background: transparent;
 }
 

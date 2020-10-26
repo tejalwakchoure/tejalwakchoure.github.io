@@ -460,6 +460,13 @@ hr.primary{
 		writing-mode: horizontal-tb;
     	transform: none;
 	}
+	.sidenav .navbar-text {
+		display: none;
+	}
+	.sidenav .navbar-collapse {
+		background: #{{ site.color.backgroundcol_dark }};
+		color: #{{ site.color.text_light }} !important;
+	}
 }
 
 /*

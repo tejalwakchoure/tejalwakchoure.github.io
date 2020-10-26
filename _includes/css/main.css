@@ -450,6 +450,8 @@ hr.primary{
 	.sidenav .page-scroll {
 	    writing-mode: horizontal-tb;
 	    transform: none;
+	    width: auto; 
+    	margin: 0;
 	}
 	.sidenav .page-scroll .navbar-brand {
 		transform: none;

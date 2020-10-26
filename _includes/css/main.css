@@ -466,13 +466,13 @@ hr.primary{
 	.sidenav .text {
 		writing-mode: horizontal-tb;
     	transform: none;
+    	color: #{{ site.color.text_light }} !important;
 	}
 	.sidenav .time-wrapper {
 		display: none;
 	}
 	.sidenav .navbar-collapse {
 		background: #{{ site.color.backgroundcol_dark }};
-		color: #{{ site.color.text_light }} !important;
 	}
 }
 

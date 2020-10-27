@@ -41,7 +41,7 @@ $(document).ready(function() {
 
           // $('#preloader #brand').addClass('animate__animated animate__fadeOutTopLeft');
           // $('#preloader #brand').css({'--animate-duration': '1s'});
-          $('#preloader #brand').css({'transform' : 'translate(-50vw, -25vh) scale(0.5, 0.5)'});
+          $('#preloader #brand').css({'transform' : 'translate(-50vw, -30vh) scale(0.4, 0.4)'});
 
           $('#preloader').slideUp(1000);
           // $('#preloader .container #brand').animate({right: "100%", bottom: "100%"}, 400, 'easeInExpo');

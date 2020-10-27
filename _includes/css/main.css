@@ -336,7 +336,7 @@ hr.primary{
 
     font-weight: 300;
     font-size: 0.75em;
-    transform: rotate(90deg);
+    transform: rotate(90deg) !important;
     line-height: 100%;
     padding-top: 0;
 }

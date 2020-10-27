@@ -12,39 +12,8 @@ window.addEventListener("load", pageFullyLoaded, false);
 $("#body-container").easeScroll({
   frameRate: 60,
   animationTime: 1000,
-  stepSize: 20,
+  stepSize: 30,
 });
-
-// $("#body-container").easeScroll({
-//   frameRate: 60,
-//   animationTime: 1000,
-//   stepSize: 120,
-//   pulseAlgorithm: 1,
-//   pulseScale: 8,
-//   pulseNormalize: 1,
-//   accelerationDelta: 20,
-//   accelerationMax: 1,
-//   keyboardSupport: true,
-//   arrowScroll: 50,
-//   touchpadSupport: true,
-//   fixedBackground: true
-// });
-
-
-// $(function() {
-//     jQuery.scrollSpeed(100, 800, 'easeInOutExpo');
-// });
-// $(document).SmoothScrollWheel(
-  // {
-  //   debug: false,
-  //   defaultDetailDelta: 3,
-  //   defaultWheelDelta: 120,
-  //   defaultSpeed: 50,
-  //   default<a href="https://www.jqueryscript.net/animation/">Animation</a>Time: 1500
-  // }
-// );
-// window.addEventListener('wheel', { passive: false })
-
 
 
 //Preloader and page fade in setup

@@ -11,7 +11,7 @@ window.addEventListener("load", pageFullyLoaded, false);
 // Smooth Mouse Scrolling
 $("#body-container").easeScroll({
   frameRate: 60,
-  animationTime: 1000,
+  animationTime: 2000,
   stepSize: 60,
 });
 

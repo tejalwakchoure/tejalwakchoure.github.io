@@ -44,9 +44,9 @@ $(document).ready(function() {
         // if(window.loaded) {
           // Animate components on and off the screen on loading
 
-          // const brand = $('#preloader #brand');
-          $('#preloader #brand').addClass('animate__animated animate__fadeOutTopLeft');
-          $('#preloader #brand').css({'--animate-duration': '1s'});
+          // $('#preloader #brand').addClass('animate__animated animate__fadeOutTopLeft');
+          // $('#preloader #brand').css({'--animate-duration': '1s'});
+          $('#preloader #brand').css({'transform' : 'translate(-50vh, -50vw) scale(0.5, 0.5)'});
 
           $('#preloader').slideUp(1000);
           // $('#preloader .container #brand').animate({right: "100%", bottom: "100%"}, 400, 'easeInExpo');

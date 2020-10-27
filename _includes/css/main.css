@@ -133,6 +133,10 @@ body {
 	margin: auto auto 0 auto;
 	/*transition: transform 300ms ease-out;*/
 	font-family: 'Raleway','Montserrat',sans-serif;
+
+
+	transform: translate(0, 0) scale(1, 1);
+	transition: transform ease 1s;
 }
 
 #preloader #percent {

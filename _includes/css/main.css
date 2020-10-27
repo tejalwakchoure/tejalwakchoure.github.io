@@ -338,7 +338,9 @@ hr.primary{
     font-size: 0.75em;
     transform: rotate(90deg) !important;
     line-height: 100%;
-    padding-top: 0;
+
+
+    padding: 15px;
 }
 
 .navbar {
@@ -442,18 +444,19 @@ hr.primary{
     font-variant: all-small-caps;
     color: #{{ site.color.accent }} !important;
 }
-/*
+
 .sidenav .time-wrapper {
-	display: inline-flex;
-
-
-	display: inline-flex;
+/*	display: inline-flex;
     height: 100%;
     width: 100%;
     margin: auto;
     display: inline-flex;
-    height: auto;
-}*/
+    height: auto;*/
+
+
+    width: auto;
+    margin: 0;
+}
 
 .sidenav a {
 	text-transform: uppercase;

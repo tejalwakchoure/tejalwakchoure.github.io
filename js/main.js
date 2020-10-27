@@ -7,6 +7,17 @@ window.loaded = false;
 // });
 window.addEventListener("load", pageFullyLoaded, false);
 
+
+// Smooth mouse scrolling
+let magicScroll = new MagicScroll({
+    target: document.querySelector("#body-container"),
+    speed: 80,
+    smooth: 12,
+    current: 0 // position
+});
+
+
+
 //Preloader and page fade in setup
 function fadeInChildren(parent, base_delay) {
     var elems = $(parent).children();
@@ -347,3 +358,4 @@ $(window).on("load resize scroll", function() {
       $('.hor_parallax_right').css({ right: pos });
       $('.hor_parallax_left').css({ left: pos });
 });
+

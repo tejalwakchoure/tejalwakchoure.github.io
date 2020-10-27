@@ -12,7 +12,7 @@ window.addEventListener("load", pageFullyLoaded, false);
 $("#body-container").easeScroll({
   frameRate: 60,
   animationTime: 1000,
-  stepSize: 30,
+  stepSize: 20,
 });
 
 // $("#body-container").easeScroll({

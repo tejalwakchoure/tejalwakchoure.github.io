@@ -8,16 +8,37 @@ window.loaded = false;
 window.addEventListener("load", pageFullyLoaded, false);
 
 
-// Smooth mouse scrolling
-// let magicScroll = new MagicScroll({
-//     target: document.querySelector("#body-container"),
-//     speed: 80,
-//     smooth: 12,
-//     current: 0 // position
+// Smooth Mouse Scrolling
+$("#body-container").easeScroll({
+  frameRate: 60,
+  animationTime: 1000,
+  stepSize: 120,
+  pulseAlgorithm: 1,
+  pulseScale: 8,
+  pulseNormalize: 1,
+  accelerationDelta: 20,
+  accelerationMax: 1,
+  keyboardSupport: true,
+  arrowScroll: 50,
+  touchpadSupport: true,
+  fixedBackground: true
+});
+
+// document.addEventListener("mousewheel", { passive: false });
+// $(function() {
+//     jQuery.scrollSpeed(100, 800, 'easeInOutExpo');
 // });
+// window.addEventListener('wheel', { passive: false })
 
-$("#body-container").easeScroll();
-
+// $(document).SmoothScrollWheel(
+  // {
+  //   debug: false,
+  //   defaultDetailDelta: 3,
+  //   defaultWheelDelta: 120,
+  //   defaultSpeed: 50,
+  //   default<a href="https://www.jqueryscript.net/animation/">Animation</a>Time: 1500
+  // }
+// );
 
 
 
@@ -46,7 +67,7 @@ $(document).ready(function() {
 
           // $('#preloader #brand').addClass('animate__animated animate__fadeOutTopLeft');
           // $('#preloader #brand').css({'--animate-duration': '1s'});
-          $('#preloader #brand').css({'transform' : 'translate(-50vh, -50vw) scale(0.5, 0.5)'});
+          $('#preloader #brand').css({'transform' : 'translate(-50vw, -50vh) scale(0, 0)'});
 
           $('#preloader').slideUp(1000);
           // $('#preloader .container #brand').animate({right: "100%", bottom: "100%"}, 400, 'easeInExpo');
@@ -302,24 +323,6 @@ $(function() {
         event.preventDefault();
     });
 });
-
-// // Smooth scrolling on mouse event
-// document.addEventListener("mousewheel", { passive: false });
-// $(function() {
-//     jQuery.scrollSpeed(100, 800, 'easeInOutExpo');
-// });
-// window.addEventListener('wheel', { passive: false })
-
-// $(document).SmoothScrollWheel(
-  // {
-  //   debug: false,
-  //   defaultDetailDelta: 3,
-  //   defaultWheelDelta: 120,
-  //   defaultSpeed: 50,
-  //   default<a href="https://www.jqueryscript.net/animation/">Animation</a>Time: 1500
-  // }
-// );
-
 
 // Highlight the top nav as scrolling occurs
 $('body').scrollspy({

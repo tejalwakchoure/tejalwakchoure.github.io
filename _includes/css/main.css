@@ -783,6 +783,12 @@ header mark {
 #about a {
 	text-decoration: underline;
 }
+#about .img_div {
+	padding-right: 25px; 
+	padding-bottom: 25px; 
+	margin: auto;
+	text-align: right;
+}
 #about img {
 	margin: auto; 
 	object-fit: cover;
@@ -866,31 +872,35 @@ header mark {
 
 
 @media ( max-width: 768px ) {
-  .timeline {
-    flex-direction: column;
-  }
+	#about .img_div {
+		text-align: center;
+	}
+	.timeline {
+		flex-direction: column;
+	}
 
-  .li.complete {
-    display: flex;
-    width: 100%;
-  }
+	.li.complete {
+		display: flex;
+		width: 100%;
+	}
 
-  .timestamp {
-  	padding: 20px;
-    flex-basis: 30%;
-    min-width: 100px;
-  }
+	.timestamp {
+		/*margin: 0;*/
+		padding: 20px;
+		flex-basis: 30%;
+		min-width: 100px;
+	}
 
-  .status:before {
-    top: 32%;
-    left: -14px;
-  }
-  .status {
-  	flex-basis: 70%;
-  	padding: 20px;
-    border-top: 0;
-    border-left: 2px solid #{{ site.color.text }};
-  }
+	.status:before {
+		top: 20px; /*32%;*/
+		left: -14px;
+	}
+	.status {
+		flex-basis: 70%;
+		padding: 20px;
+		border-top: 0;
+		border-left: 2px solid #{{ site.color.text }};
+	}
 }
 
 

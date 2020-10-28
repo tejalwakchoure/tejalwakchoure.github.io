@@ -52,6 +52,7 @@ color:
     page_bkg: 'ffffff' # 'f2f2f2'
     gray_light: 'EEEEEE'
     gray_dark: 'bfbfbf'
+    gray_darkest: '454545'
 
 
 # Footer settings

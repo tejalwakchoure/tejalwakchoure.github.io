@@ -947,11 +947,11 @@ header mark {
 	z-index: 2; 
 }   
 
-@media(min-width:768px) {   
+/*@media(min-width:768px) {   
 	#portfolio .portfolio-item {    
 		margin: 0 0 30px;   
 	}   
-}
+}*/
 
 
 .grid {
@@ -992,14 +992,14 @@ header mark {
 }
 
 /* 1 column by default, hide column 2 */
-.grid-col:nth-child(2), .grid-col:nth-child(3) { 
-	display: none;
+.grid-col:nth-child(2) { 
+	display: block;
 }
 
 /* 2 columns at medium/large size */
-@media ( min-width: 768px ) {
+@media ( max-width: 768px ) {
 	.grid-col:nth-child(2) { 
-  		display: block; 
+  		display: none; 
 	}
   
    	/*.grid-col:nth-child(1) > .grid-item:nth-child(odd),

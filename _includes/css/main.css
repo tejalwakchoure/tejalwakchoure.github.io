@@ -884,7 +884,7 @@ header mark {
 @media ( max-width: 768px ) {
 	#about .img_div {
 		text-align: center;
-		padding: 10vh 0 12vh 0;
+		padding: 10vh 0 2vh 0;
 	}
 	.timeline {
 		flex-direction: column;
@@ -907,6 +907,7 @@ header mark {
 
 	.status h5 {
 	  padding-top: 20px;
+	  font-size: 0.875rem;
 	}
 	.status:before {
 		top: 40px; /*20px;*/ /*32%;*/

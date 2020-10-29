@@ -23,6 +23,14 @@ html,body
 	font-family: 'noahgUl', sans-serif;
 }
 
+.heading {
+	font-size: 6.5em;
+}
+@media(max-width:768px) {
+	.heading {
+		font-size: 5em;
+	}
+}
 
 /* Hide scrollbar for Chrome, Safari and Opera */
 body::-webkit-scrollbar {
@@ -912,9 +920,9 @@ header mark {
 	/*padding: 0; */
 }
 
-#work .heading {
+/*#work .heading {
 	font-size: 70px;
-}
+}*/
 
 #portfolio {
 	padding: 5vw 0;
@@ -1259,7 +1267,7 @@ header mark {
 
 
 #contact .heading {
-	font-size: 6.5em;
+	/*font-size: 6.5em;*/
     font-weight: 500;
     text-transform: uppercase;
     color: #{{ site.color.heading }}; 

@@ -62,7 +62,7 @@ body {
 }
 @media(max-width:768px) {
 	#bkg-page {
-		height: 96.275%;
+		height: 94.325%;
 	}
 }
 
@@ -486,7 +486,7 @@ hr.primary{
 }
 
 
-@media(max-width:768px) {
+@media(max-width:767px) {
 	.sidenav {
 		font-style: 1em;
 		flex-direction: row;

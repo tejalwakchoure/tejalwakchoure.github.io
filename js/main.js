@@ -176,7 +176,7 @@ var interleaveOffset = 0.5;
 var interleaveSpeed = 1000;
 
 var swiper_innermost = new Swiper('.swiper-container-innermost', {
-      passiveListeners: false,
+      // passiveListeners: false,
 
 
       observer: true,
@@ -212,7 +212,7 @@ var swiper_innermost = new Swiper('.swiper-container-innermost', {
       }
     });
 var swiper_in = new Swiper('.swiper-container-in', {
-      passiveListeners: false,
+      // passiveListeners: false,
 
 
       observer: true,
@@ -248,9 +248,9 @@ var swiper_in = new Swiper('.swiper-container-in', {
       }
     });
 var swiper = new Swiper('.swiper-container', {
-      passiveListeners: false,
+      // passiveListeners: false,
 
-      
+
       cssMode: true,
       navigation: {
         nextEl: '.swiper-button-next',
@@ -344,3 +344,17 @@ $(window).on("load resize scroll", function() {
       $('.hor_parallax_left').css({ left: pos });
 });
 
+
+(function () {
+    if (typeof EventTarget !== "undefined") {
+        let func = EventTarget.prototype.addEventListener;
+        EventTarget.prototype.addEventListener = function (type, fn, capture) {
+            this.func = func;
+            if(typeof capture !== "boolean"){
+                capture = capture || {};
+                capture.passive = false;
+            }
+            this.func(type, fn, capture);
+        };
+    };
+}());

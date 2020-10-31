@@ -346,6 +346,6 @@ $(window).on("load resize scroll", function() {
 
 
 
-$('#portfolioDetails').addEventListener("mousewheel", {passive : false});
+document.getElementById('portfolioDetails').addEventListener("mousewheel", {passive : false});
 // $('#portfolioDetails').removeEventListener("mousewheel", {passive : false});
 

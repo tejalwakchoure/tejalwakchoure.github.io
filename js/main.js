@@ -344,3 +344,8 @@ $(window).on("load resize scroll", function() {
       $('.hor_parallax_left').css({ left: pos });
 });
 
+
+
+$('#portfolioDetails').addEventListener("mousewheel", {passive : false});
+// $('#portfolioDetails').removeEventListener("mousewheel", {passive : false});
+

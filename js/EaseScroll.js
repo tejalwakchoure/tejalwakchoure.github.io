@@ -139,13 +139,13 @@ $.fn.easeScroll = function(options) {
         }
 
         function u(e, t, o) {
-            // window.addEventListener(e, t, {passive : false})
-            window.addEventListener(e, t, o || !1)
+            window.addEventListener(e, t, {passive : false})
+            // window.addEventListener(e, t, o || !1)
         }
 
         function c(e, t, o) {
-            // window.removeEventListener(e, t, {passive : false})
-            window.removeEventListener(e, t, o || !1)
+            window.removeEventListener(e, t, {passive : false})
+            // window.removeEventListener(e, t, o || !1)
         }
 
         function s(e, t) {

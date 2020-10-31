@@ -9,11 +9,11 @@ window.addEventListener("load", pageFullyLoaded, false);
 
 
 // Smooth Mouse Scrolling
-// $("#body-container").easeScroll({
-//   frameRate: 60,
-//   animationTime: 1000,
-//   stepSize: 30,
-// });
+$("#body-container").easeScroll({
+  frameRate: 60,
+  animationTime: 1000,
+  stepSize: 30,
+});
 
 
 //Preloader and page fade in setup

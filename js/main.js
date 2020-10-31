@@ -176,6 +176,11 @@ var interleaveOffset = 0.5;
 var interleaveSpeed = 1000;
 
 var swiper_innermost = new Swiper('.swiper-container-innermost', {
+      cssMode: true,
+      mousewheel: true,
+      keyboard: true,
+
+      
       observer: true,
       observeParents: true,
       speed: interleaveSpeed,
@@ -209,6 +214,11 @@ var swiper_innermost = new Swiper('.swiper-container-innermost', {
       }
     });
 var swiper_in = new Swiper('.swiper-container-in', {
+      cssMode: true,
+      mousewheel: true,
+      keyboard: true,
+
+
       observer: true,
       observeParents: true,
       speed: interleaveSpeed,

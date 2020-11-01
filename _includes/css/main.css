@@ -605,6 +605,7 @@ header mark {
   	display: flex;
   	flex-direction: column;
   	align-items: center;
+  	font-family: noahgThin, Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
   	font-weight: 100;
   	position: relative;
   	transition: all 300ms ease-in-out;
@@ -650,7 +651,7 @@ header mark {
   border: 5px solid #{{ site.color.backgroundcol }};
   position: absolute;
   top: -14px;
-  left: 42%;
+  left: 46.8%;
 }
 
 

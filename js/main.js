@@ -15,9 +15,10 @@ window.addEventListener("load", pageFullyLoaded, false);
 //   stepSize: 30,
 // });
 // $("#body-container").SmoothScrollWheel();
-$(window).on('load', function() {
+
+// $(window).on('load', function() {
   $("#body-container").impulse();
-});
+// });
 
 
 

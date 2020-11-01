@@ -13,9 +13,9 @@
                     <div class="grid-col"></div>
                     <div class="grid-col"></div>
                     {% for post in site.posts %}
-                        <div id="portfolio-item-{{ post.modal-id }}" class="grid-item grid-item{{ post.modal-id }}">
+                        <div id="portfolio-item-{{ post.project-id }}" class="grid-item grid-item{{ post.project-id }}">
                             <div class="portfolio-link-wrapper">
-                                <a id="portfolio-link-{{ post.modal-id }}" href="javascript:void(0);" class="overlay-link" onclick="toggleOnPortfolioLink(6-{{ post.modal-id }});"></a>
+                                <a id="portfolio-link-{{ post.project-id }}" href="javascript:void(0);" class="overlay-link" onclick="toggleOnPortfolioLink(6-{{ post.project-id }});"></a>
                                 <div class="overlay"> 
                                     <span style="margin: auto;"> {{ post.title }} </span>
                                 </div>

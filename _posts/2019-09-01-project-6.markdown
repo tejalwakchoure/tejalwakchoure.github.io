@@ -1,6 +1,6 @@
 ---
 layout: default
-modal-id: 6
+project-id: 6
 date: 2019-09-01
 title: SuperGlue
 project-date: September 2019

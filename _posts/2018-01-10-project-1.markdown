@@ -1,7 +1,7 @@
 ---
 
 layout: default
-modal-id: 1
+project-id: 1
 date: 2018-01-10
 title: MLCAT
 project-date: January 2018

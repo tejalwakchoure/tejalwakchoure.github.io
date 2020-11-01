@@ -9,11 +9,12 @@ window.addEventListener("load", pageFullyLoaded, false);
 
 
 // Smooth Mouse Scrolling
-$("#body-container").easeScroll({
-  frameRate: 60,
-  animationTime: 1000,
-  stepSize: 30,
-});
+// $("#body-container").easeScroll({
+//   frameRate: 60,
+//   animationTime: 1000,
+//   stepSize: 30,
+// });
+$("#body-container").SmoothScrollWheel();
 
 
 //Preloader and page fade in setup
@@ -346,6 +347,6 @@ $(window).on("load resize scroll", function() {
 
 
 
-document.getElementById('portfolioDetails').addEventListener("mousewheel", {passive : true});
+// document.getElementById('portfolioDetails').addEventListener("mousewheel", {passive : true});
 // $('#portfolioDetails').removeEventListener("mousewheel", {passive : false});
 

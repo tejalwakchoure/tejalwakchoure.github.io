@@ -7,16 +7,12 @@ window.loaded = false;
 // });
 window.addEventListener("load", pageFullyLoaded, false);
 
-
 // Smooth Mouse Scrolling
 $("#body-container").easeScroll({
   frameRate: 60,
   animationTime: 1000,
   stepSize: 30,
 });
-
-// $("#body-container").SmoothScrollWheel();
-
 
 //Preloader and page fade in setup
 function fadeInChildren(parent, base_delay) {
@@ -51,10 +47,8 @@ $(document).ready(function() {
      }
     }, 10);
 
-  // $(document).ready(function() {
     swiper_in.controller.control = swiper_innermost;
     swiper.controller.control = swiper_in;
-  // });
 
   // Portfolio parallax
   // $(document).ready(function() {
@@ -80,28 +74,7 @@ function pageFullyLoaded(e) {
   // }
 }
 
-// Change colours of background as we scroll down
-$(window).scroll(function() {
-  var $window = $(window),
-  $body = $('#body-container'),
-  $panel = $('.section-bkg');
-  // Change 33% earlier than scroll pos so colour is there when you arrive
-  var scroll = $window.scrollTop() + ($window.height() / 3);
-
-  $panel.each(function () {
-    var $this = $(this);
-    // if position is within range of this panel; so pos of (pos of top of div <= scroll pos) && (pos of bottom of div > scroll pos)
-    if ($this.position().top <= scroll && $this.position().top + $this.height() > scroll) {
-      $body.removeClass(function (index, css) {
-        return (css.match (/(^|\s)color-\S+/g) || []).join(' ');
-      });      
-      $body.addClass('color-' + $(this).data('color'));
-    }
-  });    
-  
-}).scroll();
-
-// local datetime update
+// Local datetime update
 function startTime() {
     var today = new Date();
     var h = today.getHours();
@@ -148,30 +121,6 @@ $(window).on("load", function() {
         });
     });    
 });
-
-// $(function() {
-//     function imageLoaded() {
-//         counter--; 
-//         if( counter === 0 ) {
-//           console.log("all images parallax loaded");
-//           new simpleParallax(images, {
-//               delay: .5,
-//               transition: 'cubic-bezier(0,0,0,1)',
-//           });
-//         }
-//     }
-//     var images = document.querySelectorAll('.px_img');
-//     var counter = images.length;
-//     $('.px_img').each(function() {
-//         // img.addEventListener("load", imageLoaded(img));
-//         // if( this.complete ) {
-//         //     console.log("image already loaded");
-//         //     imageLoaded.call( this );
-//         // } else {
-//             $(this).on('load', imageLoaded);
-//         // }
-//     });
-// });
 
 // Swiper initializations
 var interleaveOffset = 0.5;
@@ -315,41 +264,30 @@ $('.navbar-collapse ul li a').click(function() {
     $('.navbar-toggle:visible').click();
 });
 
-
-
-// Change brand properties when in/out of Header
 $(window).on("load resize scroll", function() {
-//   window.loaded = true;
-//   // if($('header').position().top <= $(window).scrollTop() && ($('header').position().top + $('header').outerHeight()) > $(window).scrollTop()) {
-//   if($('header').offset().top <= $(window).scrollTop() && ($('header').offset().top + $('header').outerHeight()) > $(window).scrollTop()) {
-//      $('.sidenav .page-scroll .navbar-brand').css({
-//             'font-size' : '4.5em',
-//             'margin' : '50px 10px 40px 0px'
-//         });
-//   } else {
-//     $('.sidenav .page-scroll .navbar-brand').css({
-//             'font-size' : '2em',
-//             'margin' : '0'
-//         });
-//   }
+    // Change brand properties when in/out of Header
+    //   window.loaded = true;
+    //   // if($('header').position().top <= $(window).scrollTop() && ($('header').position().top + $('header').outerHeight()) > $(window).scrollTop()) {
+    //   if($('header').offset().top <= $(window).scrollTop() && ($('header').offset().top + $('header').outerHeight()) > $(window).scrollTop()) {
+    //      $('.sidenav .page-scroll .navbar-brand').css({
+    //             'font-size' : '4.5em',
+    //             'margin' : '50px 10px 40px 0px'
+    //         });
+    //   } else {
+    //     $('.sidenav .page-scroll .navbar-brand').css({
+    //             'font-size' : '2em',
+    //             'margin' : '0'
+    //         });
+    //   }
 
-
-// });
-
-// Horizontal header parallax
-// $(window).on("load resize scroll", function() {
+    // Horizontal header parallax
     var windowTop = $(window).scrollTop();
     var elementTop = $('header').offset().top;
-    var currentpos = -10;//$('.bg-move').css('right');
+    var currentpos = -10;
     var pos = currentpos + ((windowTop - elementTop) / 10);
       $('.hor_parallax_right').css({ right: pos });
       $('.hor_parallax_left').css({ left: pos });
 });
-
-
-// document.getElementById('portfolioDetails').addEventListener("mousewheel", {passive : true});
-// $('#portfolioDetails').removeEventListener("mousewheel", {passive : false});
-
 
 
 

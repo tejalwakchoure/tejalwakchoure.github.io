@@ -14,7 +14,11 @@ window.addEventListener("load", pageFullyLoaded, false);
 //   animationTime: 1000,
 //   stepSize: 30,
 // });
-$("#body-container").SmoothScrollWheel();
+// $("#body-container").SmoothScrollWheel();
+$(window).on('load', function() {
+  $("#body-container").impulse();
+});
+
 
 
 //Preloader and page fade in setup

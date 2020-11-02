@@ -10,7 +10,7 @@ html,body
 	font-feature-settings: "lnum";
 	font-weight: 300;
 	/*font-family: Spectral, serif;*/
-	font-family: 'Source Sans Pro', sans-serif;
+	font-family: 'Source Sans Pro', Lato, sans-serif;
 	/*letter-spacing: 0.5px;*/
 }
 

@@ -74,6 +74,57 @@ function pageFullyLoaded(e) {
   // }
 }
 
+
+
+
+
+$(document).ready(function() {
+  var dir = "assets/img/portfolio/";
+  var fileextension = ".jpg";
+
+
+  images.forEach(img => {
+    
+  });
+});
+
+
+  $.ajax({
+    url: dir,
+    success: function (data) {
+        $(data).find("a:contains(" + fileextension + ")").each(function () {
+            var filename = this.href.replace(window.location.host, "").replace("http://", "");
+            // $("body").append("<img src='" + dir + filename + "'>");
+            var myImg = new Image();
+            myImg.onload = function(){
+                console.log('img preloaded');
+            }
+            myImg.src = dir + filename;
+        });
+    }
+});
+
+
+
+
+//   var images = document.querySelectorAll('.px_img');
+//   images.forEach(img => {
+//     var myImg = new Image();
+//     myImg.onload = function(){
+//         console.log('img preloaded');
+//     }
+//     myImg.src = "assets/img/portfolio/"+ img_src;
+//   });
+// });
+
+
+
+
+
+
+
+
+
 // Local datetime update
 function startTime() {
     var today = new Date();

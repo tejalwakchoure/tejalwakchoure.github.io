@@ -211,6 +211,7 @@ hr.primary{
 #under_construction .btn.active {
 	background-color: #{{ site.color.heading }};
 	border-color: #{{ site.color.heading }};
+	box-shadow: none;
 }
 
 .sidenav .page-scroll .navbar-brand {   

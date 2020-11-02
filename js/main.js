@@ -27,7 +27,7 @@ $(document).ready(function() {
     var outerInterval = setInterval(function(){
       $("#preloader .container #wrapper #count").html(counter);
       counter++;
-      if(counter >= 101){
+      if(counter >= 101) {
         clearInterval(outerInterval);
         var innerInterval = setInterval(function() {
             if(document.readyState === 'complete') {
@@ -42,24 +42,12 @@ $(document).ready(function() {
               // $('#preloader .container #brand').animate({right: "100%", bottom: "100%"}, 400, 'easeInExpo');
               startTime();
             }
-        }, 10000);
+        }, 10);
+    }
+  }, 10);
 
-        // if(document.readyState === 'complete') {
-        //   console.log("window loaded");
-        //   // Animate components on and off the screen on loading
-        //   $('#preloader').slideUp(1000);
-        //   $('#body-container').fadeIn(1000);
-        //   fadeInChildren('#body-container header',1000);
-        //   fadeInChildren('#body-container header .intro-text',1000);
-        //   // $('#preloader #brand').css({'transform' : 'translate(-50vw, -30vh) scale(0.4, 0.4)'});
-        //   // $('#preloader .container #brand').animate({right: "100%", bottom: "100%"}, 400, 'easeInExpo');
-        //   startTime();
-        // }
-     }
-    }, 10);
-
-    swiper_in.controller.control = swiper_innermost;
-    swiper.controller.control = swiper_in;
+  swiper_in.controller.control = swiper_innermost;
+  swiper.controller.control = swiper_in;
 
   // Portfolio parallax
   // $(document).ready(function() {

@@ -1,19 +1,3 @@
-
-// Get window status
-window.loaded = false;
-// // var checkPageLoading = false;
-// $(window).load(function() {
-//     window.loaded = true;
-// });
-window.addEventListener("load", pageFullyLoaded, false);
-
-// Smooth Mouse Scrolling
-$("#body-container").easeScroll({
-  frameRate: 60,
-  animationTime: 1000,
-  stepSize: 30,
-});
-
 //Preloader and page fade in setup
 function fadeInChildren(parent, base_delay) {
     var elems = $(parent).children();
@@ -32,7 +16,6 @@ $(document).ready(function() {
         var innerInterval = setInterval(function() {
             if(document.readyState === 'complete') {
               clearInterval(innerInterval);
-              console.log("window loaded");
               // Animate components on and off the screen on loading
               $('#preloader').slideUp(1000);
               $('#body-container').fadeIn(1000);
@@ -42,9 +25,9 @@ $(document).ready(function() {
               // $('#preloader .container #brand').animate({right: "100%", bottom: "100%"}, 400, 'easeInExpo');
               startTime();
             }
-        }, 5);
-    }
-  }, 10);
+        }, 10);
+      }
+    }, 10);
 
   swiper_in.controller.control = swiper_innermost;
   swiper.controller.control = swiper_in;
@@ -60,23 +43,7 @@ $(document).ready(function() {
   // });
 });
 
-function pageFullyLoaded(e) { 
-  // if(checkPageLoading) {
-  //   console.log("window loaded!!")
-  //     // Animate components on and off the screen on loading
-  //     $('#preloader').slideUp(1000);
-  //     // $('#preloader .container #brand').animate({right: "100%", bottom: "100%"}, 400, 'easeInExpo');
-  //     $('#body-container').fadeIn(1000);
-  //     fadeInChildren('#body-container header',1000);
-  //     fadeInChildren('#body-container header .intro-text',1000);
-  //     startTime();
-  // }
-}
-
-
-
-
-
+//Preload images
 $(document).ready(function() {
   var dir = "assets/img/portfolio";
   var fileextension = ".jpg";
@@ -100,8 +67,6 @@ $(document).ready(function() {
 });
 
 
-
-
 //   var images = document.querySelectorAll('.px_img');
 //   images.forEach(img => {
 //     var myImg = new Image();
@@ -116,9 +81,12 @@ $(document).ready(function() {
 
 
 
-
-
-
+// Smooth Mouse Scrolling
+$("#body-container").easeScroll({
+  frameRate: 60,
+  animationTime: 1000,
+  stepSize: 30,
+});
 
 // Local datetime update
 function startTime() {

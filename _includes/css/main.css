@@ -11,6 +11,7 @@ html,body
 	font-weight: 300;
 	/*font-family: Spectral, serif;*/
 	font-family: 'Source Sans Pro', sans-serif;
+	letter-spacing: 0.5px;
 }
 
 .heading,
@@ -119,7 +120,8 @@ p {
 }   
 
 p.small {   
-	font-size: 13px;    
+	font-size: 13px;  
+	font-weight: unset;  
 }
 
 p.large {   
@@ -186,7 +188,7 @@ hr.primary{
 
 #under_construction a {
 	color: #{{ site.color.text }} !important;
-	font-weight: bold;
+	font-weight: 600;
 }
 
 #under_construction a:hover,
@@ -252,7 +254,7 @@ hr.primary{
     line-height: 100%;
 
 
-    padding: 15px;
+    padding: 15px !important;
 }
 
 .navbar {
@@ -641,6 +643,7 @@ header mark {
 }
 .status h5 {
   padding-top: 10px;
+  line-height: 100%;
 }
 .status:before {
   content: "";
@@ -651,7 +654,7 @@ header mark {
   border: 5px solid #{{ site.color.backgroundcol }};
   position: absolute;
   top: -14px;
-  left: 46.8%;
+  left: 46.5%;
 }
 
 
@@ -673,7 +676,7 @@ header mark {
 		transform: scale(1.1);
 	}
 	.timestamp {
-		padding: 20px 20px 40px 20px;
+		padding: 25px;
 		flex-basis: 30%;
 		min-width: 100px;
 	}
@@ -681,6 +684,7 @@ header mark {
 	.status h5 {
 	  padding-top: 20px;
 	  font-size: 0.875rem;
+	  line-height: 125%;
 	}
 	.status:before {
 		top: 40px;
@@ -981,7 +985,7 @@ header mark {
     transition-duration: 500ms;
 
     display: flex;
-    font-family: noahgLt, Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-family: noahgThin, Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
     letter-spacing: 3px;
 }
 
@@ -1124,6 +1128,16 @@ footer .footer-below {
 form .row:first-child .floating-label-form-group {  
 	border-top: 1px solid #{{ site.color.page_bkg }};
 }     
+
+.form-control::-moz-placeholder {
+  color: #{{ site.color.gray }};
+}
+.form-control:-ms-input-placeholder {
+  color: #{{ site.color.gray }};
+}
+.form-control::-webkit-input-placeholder {
+  color: #{{ site.color.gray }};
+}
 
 .btn:focus, 
 .btn:active,    

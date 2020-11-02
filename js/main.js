@@ -22,7 +22,6 @@ $(document).ready(function() {
               fadeInChildren('#body-container header',1000);
               fadeInChildren('#body-container header .intro-text',1000);
               // $('#preloader #brand').css({'transform' : 'translate(-50vw, -30vh) scale(0.4, 0.4)'});
-              // $('#preloader .container #brand').animate({right: "100%", bottom: "100%"}, 400, 'easeInExpo');
               startTime();
             }
         }, 10);

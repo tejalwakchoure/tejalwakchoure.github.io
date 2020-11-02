@@ -24,30 +24,36 @@ function fadeInChildren(parent, base_delay) {
 $(document).ready(function() {
     $('#body-container').css({display: 'none'});
     var counter = 0;
-    var i = setInterval(function(){
+    var outerInterval = setInterval(function(){
       $("#preloader .container #wrapper #count").html(counter);
       counter++;
       if(counter >= 101){
-        if(document.readyState === 'complete')
-        // $(window).on("load", function() {
-          console.log("window loaded");
-        
+        clearInterval(outerInterval);
+        var innerInterval = setInterval(function() {
+            if(document.readyState === 'complete') {
+              clearInterval(innerInterval);
+              console.log("window loaded");
+              // Animate components on and off the screen on loading
+              $('#preloader').slideUp(1000);
+              $('#body-container').fadeIn(1000);
+              fadeInChildren('#body-container header',1000);
+              fadeInChildren('#body-container header .intro-text',1000);
+              // $('#preloader #brand').css({'transform' : 'translate(-50vw, -30vh) scale(0.4, 0.4)'});
+              // $('#preloader .container #brand').animate({right: "100%", bottom: "100%"}, 400, 'easeInExpo');
+              startTime();
+            }
+        }, 5);
 
-        // while(!window.loaded) {}
-        // while(!pageFullyLoadedVar) {
-        //   continue;
-        // }
-        clearInterval(i);
-        // checkPageLoading = true;
-        // if(window.loaded) {
-          // Animate components on and off the screen on loading
-          // $('#preloader #brand').css({'transform' : 'translate(-50vw, -30vh) scale(0.4, 0.4)'});
-          // $('#preloader .container #brand').animate({right: "100%", bottom: "100%"}, 400, 'easeInExpo');
-          $('#preloader').slideUp(1000);
-          $('#body-container').fadeIn(1000);
-          fadeInChildren('#body-container header',1000);
-          fadeInChildren('#body-container header .intro-text',1000);
-          startTime();
+        // if(document.readyState === 'complete') {
+        //   console.log("window loaded");
+        //   // Animate components on and off the screen on loading
+        //   $('#preloader').slideUp(1000);
+        //   $('#body-container').fadeIn(1000);
+        //   fadeInChildren('#body-container header',1000);
+        //   fadeInChildren('#body-container header .intro-text',1000);
+        //   // $('#preloader #brand').css({'transform' : 'translate(-50vw, -30vh) scale(0.4, 0.4)'});
+        //   // $('#preloader .container #brand').animate({right: "100%", bottom: "100%"}, 400, 'easeInExpo');
+        //   startTime();
         // }
      }
     }, 10);

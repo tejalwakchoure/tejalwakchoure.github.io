@@ -11,7 +11,7 @@ html,body
 	font-weight: 300;
 	/*font-family: Spectral, serif;*/
 	font-family: 'Source Sans Pro', sans-serif;
-	letter-spacing: 0.5px;
+	/*letter-spacing: 0.5px;*/
 }
 
 .heading,
@@ -602,7 +602,7 @@ header mark {
 .timestamp {
 	margin-top: 20px;
   	margin-bottom: 20px;
-  	padding: 0px 40px;
+  	padding: 0px 30px;
   	padding-bottom: 10px;
   	display: flex;
   	flex-direction: column;
@@ -643,7 +643,7 @@ header mark {
 }
 .status h5 {
   padding-top: 10px;
-  line-height: 100%;
+  line-height: 125%;
 }
 .status:before {
   content: "";
@@ -684,7 +684,6 @@ header mark {
 	.status h5 {
 	  padding-top: 20px;
 	  font-size: 0.875rem;
-	  line-height: 125%;
 	}
 	.status:before {
 		top: 40px;

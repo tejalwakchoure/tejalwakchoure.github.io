@@ -28,10 +28,10 @@ $(document).ready(function() {
       $("#preloader .container #wrapper #count").html(counter);
       counter++;
       if(counter >= 101){
-        // if(document.readyState === 'complete')
-        $(window).on("load", function() {
+        if(document.readyState === 'complete')
+        // $(window).on("load", function() {
           console.log("window loaded");
-        });
+        }
 
         // while(!window.loaded) {}
         // while(!pageFullyLoadedVar) {

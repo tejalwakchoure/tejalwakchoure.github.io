@@ -87,8 +87,8 @@ $(document).ready(function() {
         $(data).find("a:contains(" + fileextension + ")").each(function () {
             var filename = this.href;//.replace(window.location.host, "").replace("http://", "");
             // $("body").append("<img src='" + dir + filename + "'>");
-            console.log(this.href);
-            console.log(this.href.replace(window.location.host, "").replace("http://", ""));
+            console.log("only href" + this.href);
+            console.log("href & replace" + this.href.replace(window.location.host, "").replace("http://", ""));
             var myImg = new Image();
             myImg.onload = function(){
                 console.log('img preloaded');

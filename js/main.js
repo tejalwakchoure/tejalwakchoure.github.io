@@ -79,7 +79,7 @@ function pageFullyLoaded(e) {
 
 
 $(document).ready(function() {
-  var dir = "assets/img/portfolio/";
+  var dir = "assets/img/portfolio";
   var fileextension = ".jpg";
   $.ajax({
     url: dir,

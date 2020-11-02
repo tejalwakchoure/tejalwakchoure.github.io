@@ -42,7 +42,7 @@ $(document).ready(function() {
               // $('#preloader .container #brand').animate({right: "100%", bottom: "100%"}, 400, 'easeInExpo');
               startTime();
             }
-        }, 5);
+        }, 10000);
 
         // if(document.readyState === 'complete') {
         //   console.log("window loaded");

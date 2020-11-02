@@ -200,6 +200,7 @@ hr.primary{
 
 #under_construction .btn {
 	width: 30%;
+	margin: 20px;
 	min-width: fit-content;
 	background-color: #{{ site.color.text }};
 	border-color: #{{ site.color.text }};

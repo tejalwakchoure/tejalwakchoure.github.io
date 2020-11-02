@@ -31,7 +31,7 @@ $(document).ready(function() {
         if(document.readyState === 'complete')
         // $(window).on("load", function() {
           console.log("window loaded");
-        }
+        
 
         // while(!window.loaded) {}
         // while(!pageFullyLoadedVar) {

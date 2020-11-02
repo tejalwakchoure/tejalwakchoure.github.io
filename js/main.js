@@ -82,13 +82,6 @@ $(document).ready(function() {
   var dir = "assets/img/portfolio/";
   var fileextension = ".jpg";
 
-
-  images.forEach(img => {
-    
-  });
-});
-
-
   $.ajax({
     url: dir,
     success: function (data) {

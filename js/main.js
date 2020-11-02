@@ -84,8 +84,9 @@ $(document).ready(function() {
   $.ajax({
     url: dir,
     success: function (data) {
-        $(data).find("a:contains(" + fileextension + ")").each(function () {
-            var filename = this.href;//.replace(window.location.host, "").replace("http://", "");
+        $(data).find("a").each(function () {
+        // $(data).find("a:contains(" + fileextension + ")").each(function () {
+            var filename = this.href.replace(window.location.host, "").replace("http://", "");
             // $("body").append("<img src='" + dir + filename + "'>");
             console.log("only href" + this.href);
             console.log("href & replace" + this.href.replace(window.location.host, "").replace("http://", ""));

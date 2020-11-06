@@ -1189,7 +1189,7 @@ form .row:first-child .floating-label-form-group {
     -moz-column-count: 2;
     -webkit-column-count: 2;
     column-gap: 1em;
-  width: 100%;
+  	width: 100%;
 }
 
 .masonry-item {

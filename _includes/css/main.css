@@ -1178,31 +1178,56 @@ form .row:first-child .floating-label-form-group {
 
 
 
-
-
-
-
-.grid {
-  display: flex;
-  flex-flow: column wrap;
-  align-content: space-between;
-  height: 2000px;
+.masonry-grid {
+    margin: 1.5em 0;
+    padding: 0;
+    -moz-column-gap: 1.5em;
+    -webkit-column-gap: 1.5em;
+    column-gap: 1.5em;
+    font-size: .85em;
+    column-count: 2;
+    -moz-column-count: 2;
+    -webkit-column-count: 2;
+    column-gap: 1em;
+  width: 100%;
 }
 
-.grid-item {
-  width: 49%;
-  margin-bottom: 2%;
+.masonry-item {
+    display: inline-block;
+    background: #fff;
+    padding: 1em;
+    margin: 0 0 1.5em;
+	  -webkit-transition:1s ease all;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-shadow: 2px 2px 4px 0 #ccc;
+    max-width: 500px;
+    width: 100%;
+    height: 500px;
 }
 
-/* Re-order items into rows */
-.grid-item:nth-child(2n+1) { order: 1; }
-.grid-item:nth-child(2n) { order: 2; }
+.masonry-item:nth-child(1),
+.masonry-item:nth-child(5),
+.masonry-item:nth-child(6) {
+  height: 500px;
+}
+.masonry-item:nth-child(3),
+.masonry-item:nth-child(4) {
+  height: 400px;
+}
+.masonry-item:nth-child(2) {
+  height: 600px;
+}
 
-/* Force new columns */
-.grid::before,
-.grid::after {
-  content: "";
-  flex-basis: 100%;
-  width: 0;
-  order: 1;
+@media (max-width: 768px) {
+    .masonry-grid {
+        -moz-column-count: 1;
+        -webkit-column-count: 1;
+        column-count: 1;
+    }
+  .masonry-item {
+    width: 100%;
+    height: 300px;
+  }
 }

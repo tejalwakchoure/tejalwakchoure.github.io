@@ -1170,3 +1170,38 @@ form .row:first-child .floating-label-form-group {
 @-ms-viewport{  
 	width: device-width;  
 }
+
+
+
+
+
+
+
+
+
+
+
+
+.grid {
+  display: flex;
+  flex-flow: column wrap;
+  align-content: space-between;
+}
+
+.grid-item {
+  width: 49%;
+  margin-bottom: 2%;
+}
+
+/* Re-order items into rows */
+.grid-item:nth-child(2n+1) { order: 1; }
+.grid-item:nth-child(2n) { order: 2; }
+
+/* Force new columns */
+.grid::before,
+.grid::after {
+  content: "";
+  flex-basis: 100%;
+  width: 0;
+  order: 2;
+}

@@ -1203,5 +1203,5 @@ form .row:first-child .floating-label-form-group {
   content: "";
   flex-basis: 100%;
   width: 0;
-  order: 2;
+  order: 1;
 }

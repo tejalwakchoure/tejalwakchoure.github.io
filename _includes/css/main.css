@@ -1186,6 +1186,7 @@ form .row:first-child .floating-label-form-group {
   display: flex;
   flex-flow: column wrap;
   align-content: space-between;
+  height: 2000px;
 }
 
 .grid-item {

@@ -44,22 +44,29 @@ $(document).ready(function() {
 
 //Preload images
 $(document).ready(function() {
-  var dir = "/development/assets/img/portfolio/";
+  var dir = "assets/img/portfolio/";
   var fileextension = ".jpg";
   $.ajax({
     url: dir,
     success: function (data) {
         $(data).find("a:contains(" + fileextension + ")").each(function () {
         // $(data).find("a:contains(" + fileextension + ")").each(function () {
-            var filename = this.href.replace(window.location.host, "").replace("http://", "");
-            // $("body").append("<img src='" + dir + filename + "'>");
-            console.log("only href" + this.href);
-            console.log("href & replace" + this.href.replace(window.location.host, "").replace("http://", ""));
-            var myImg = new Image();
-            myImg.onload = function(){
-                console.log('img preloaded');
-            }
-            myImg.src = dir + filename;
+            // var filename = this.href.replace(window.location.host, "").replace("http://", "");
+            // // $("body").append("<img src='" + dir + filename + "'>");
+            // console.log("only href" + this.href);
+            // console.log("href & replace" + this.href.replace(window.location.host, "").replace("http://", ""));
+            // var myImg = new Image();
+            // myImg.onload = function(){
+            //     console.log('img preloaded');
+            // }
+            // myImg.src = dir + filename;
+
+            
+            // var myImg = new Image();
+            // myImg.onload = function(){
+            //     console.log('img preloaded');
+            // }
+            // myImg.src = dir + filename;
         });
     }
   });

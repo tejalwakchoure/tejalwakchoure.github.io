@@ -979,11 +979,13 @@ header mark {
     height: 100%;
     width: 100%;
     justify-content: center;
-    transition: transform 300ms;
+
+    transition: all 300ms;
+    
     color: #{{ site.color.text_light }};
     background-color: #{{ site.color.backgroundcol_dark }};
     transform: translate3d(-101%, 0, 0);
-    transition-duration: 500ms;
+    /*transition-duration: 500ms;*/
 
     display: flex;
     font-family: noahgThin, Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
@@ -995,7 +997,7 @@ header mark {
 .overlay-link:hover ~ .overlay {
 	transform: translate3d(0, 0, 0);
 	visibility: visible;
-	transition-duration: 500ms;
+	/*transition-duration: 500ms;*/
 }
 
 

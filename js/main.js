@@ -44,12 +44,12 @@ $(document).ready(function() {
 
 //Preload images
 $(document).ready(function() {
-  var dir = "assets/img/portfolio";
+  var dir = "/development/assets/img/portfolio/";
   var fileextension = ".jpg";
   $.ajax({
     url: dir,
     success: function (data) {
-        $(data).find("a").each(function () {
+        $(data).find("a:contains(" + fileextension + ")").each(function () {
         // $(data).find("a:contains(" + fileextension + ")").each(function () {
             var filename = this.href.replace(window.location.host, "").replace("http://", "");
             // $("body").append("<img src='" + dir + filename + "'>");

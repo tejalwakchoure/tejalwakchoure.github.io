@@ -42,16 +42,21 @@ $(document).ready(function() {
   // });
 });
 
-//Preload images
+//Preload images & background images
 $(document).ready(function() {
     // var dir = "assets/img/portfolio/";
     // var images = ['project-1.jpg', 'project-2.jpg', 'project-3.jpg', 'project-4.jpg', 'project-5.jpg', 'project-6.jpg'];
-    $('img').forEach(img => {
+    var newImg = new Image();
+    newImg.src = $('#body-container').css('background-image');
+    console.log(newImg.src+' preloaded');
+
+    $('img').each(img => {
       var newImg = new Image();
       // img.src = dir + imgfile;
       newImg.src = img.src;
-      console.log(img.src+' preloaded');
+      console.log(newImg.src+' preloaded');
     });
+    //add parallax
 });
 
 // $(document).ready(function() {

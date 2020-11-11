@@ -44,12 +44,13 @@ $(document).ready(function() {
 
 //Preload images
 $(document).ready(function() {
-    var dir = "assets/img/portfolio/";
-    var images = ['project-1.jpg', 'project-2.jpg', 'project-3.jpg', 'project-4.jpg', 'project-5.jpg', 'project-6.jpg'];
-    images.forEach(imgfile => {
-      var img = new Image();
-      img.src = dir + imgfile;
-      console.log(imgfile+' preloaded');
+    // var dir = "assets/img/portfolio/";
+    // var images = ['project-1.jpg', 'project-2.jpg', 'project-3.jpg', 'project-4.jpg', 'project-5.jpg', 'project-6.jpg'];
+    $('img').forEach(img => {
+      var newImg = new Image();
+      // img.src = dir + imgfile;
+      newImg.src = img.src;
+      console.log(img.src+' preloaded');
     });
 });
 

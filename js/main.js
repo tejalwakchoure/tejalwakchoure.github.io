@@ -42,68 +42,6 @@ $(document).ready(function() {
   // });
 });
 
-//Preload images & background images
-$(document).ready(function() {
-    var dir = "assets/img/portfolio/";
-    var images = ['project-1.jpg', 'project-2.jpg', 'project-3.jpg', 'project-4.jpg', 'project-5.jpg', 'project-6.jpg'];
-    var newImg = new Image();
-    newImg.src = $('#body-container').css('background-image');
-    console.log(newImg.src+' preloaded');
-
-    // $('img').each(img => {
-    images.forEach(img => {
-      var newImg = new Image();
-      newImg.src = dir + img;
-      // newImg.src = img.src;
-      console.log(newImg.src+' preloaded');
-    });
-    //add parallax
-});
-
-// $(document).ready(function() {
-//   var dir = "assets/img/portfolio/";
-//   var fileextension = ".jpg";
-//   $.ajax({
-//     url: dir,
-//     success: function (data) {
-//         $(data).find("a:contains(" + fileextension + ")").each(function () {
-        // $(data).find("a:contains(" + fileextension + ")").each(function () {
-            // var filename = this.href.replace(window.location.host, "").replace("http://", "");
-            // // $("body").append("<img src='" + dir + filename + "'>");
-            // console.log("only href" + this.href);
-            // console.log("href & replace" + this.href.replace(window.location.host, "").replace("http://", ""));
-            // var myImg = new Image();
-            // myImg.onload = function(){
-            //     console.log('img preloaded');
-            // }
-            // myImg.src = dir + filename;
-
-
-            // var myImg = new Image();
-            // myImg.onload = function(){
-            //     console.log('img preloaded');
-            // }
-            // myImg.src = dir + filename;
-//         });
-//     }
-//   });
-// });
-
-
-//   var images = document.querySelectorAll('.px_img');
-//   images.forEach(img => {
-//     var myImg = new Image();
-//     myImg.onload = function(){
-//         console.log('img preloaded');
-//     }
-//     myImg.src = "assets/img/portfolio/"+ img_src;
-//   });
-// });
-
-
-
-
-
 // Smooth Mouse Scrolling
 $("#body-container").easeScroll({
   frameRate: 60,

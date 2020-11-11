@@ -48,7 +48,7 @@ $(document).ready(function() {
     var images = ['project-1.jpg', 'project-2.jpg', 'project-3.jpg', 'project-4.jpg', 'project-5.jpg', 'project-6.jpg'];
     images.forEach(imgfile => {
       var img = new Image();
-      myImg.src = dir + imgfile;
+      img.src = dir + imgfile;
       console.log(imgfile+' preloaded');
     });
 });

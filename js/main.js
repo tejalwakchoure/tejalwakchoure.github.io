@@ -44,12 +44,22 @@ $(document).ready(function() {
 
 //Preload images
 $(document).ready(function() {
-  var dir = "assets/img/portfolio/";
-  var fileextension = ".jpg";
-  $.ajax({
-    url: dir,
-    success: function (data) {
-        $(data).find("a:contains(" + fileextension + ")").each(function () {
+    var dir = "assets/img/portfolio/";
+    var images = ['project-1.jpg', 'project-2.jpg', 'project-3.jpg', 'project-4.jpg', 'project-5.jpg', 'project-6.jpg'];
+    images.forEach(imgfile => {
+      var img = new Image();
+      myImg.src = dir + imgfile;
+      console.log(imgfile+' preloaded');
+    });
+});
+
+// $(document).ready(function() {
+//   var dir = "assets/img/portfolio/";
+//   var fileextension = ".jpg";
+//   $.ajax({
+//     url: dir,
+//     success: function (data) {
+//         $(data).find("a:contains(" + fileextension + ")").each(function () {
         // $(data).find("a:contains(" + fileextension + ")").each(function () {
             // var filename = this.href.replace(window.location.host, "").replace("http://", "");
             // // $("body").append("<img src='" + dir + filename + "'>");
@@ -61,16 +71,16 @@ $(document).ready(function() {
             // }
             // myImg.src = dir + filename;
 
-            
+
             // var myImg = new Image();
             // myImg.onload = function(){
             //     console.log('img preloaded');
             // }
             // myImg.src = dir + filename;
-        });
-    }
-  });
-});
+//         });
+//     }
+//   });
+// });
 
 
 //   var images = document.querySelectorAll('.px_img');

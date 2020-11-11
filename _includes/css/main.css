@@ -1195,7 +1195,7 @@ form .row:first-child .floating-label-form-group {
 
 .masonry-item {
     /*display: inline-block;*/
-    padding: 1.2em;
+    padding: 1.35em;
     /*margin: 0 0 1.5em;*/
 	-webkit-transition:1s ease all;
     /*max-width: 500px;*/
@@ -1216,6 +1216,11 @@ form .row:first-child .floating-label-form-group {
 .masonry-item:nth-child(2) {
   height: 600px;
 }
+
+.masonry-item:nth-child(4) {
+  padding-top: 0;
+}
+
 
 @media (max-width: 768px) {
     .masonry-grid {

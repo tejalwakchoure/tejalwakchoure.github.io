@@ -32,7 +32,7 @@
             var dir = "assets/img/portfolio/";
             var images = ['project-1.jpg', 'project-2.jpg', 'project-3.jpg', 'project-4.jpg', 'project-5.jpg', 'project-6.jpg'];
             var newImg = new Image();
-            newImg.src = $('#body-container').css('background-image');
+            newImg.src = document.getElementById('body-container').style.backgroundImage.split('"')[1];
             console.log(newImg.src+' preloaded');
 
             // $('img').each(img => {

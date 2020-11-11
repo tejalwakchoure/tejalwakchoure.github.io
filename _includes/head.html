@@ -8,6 +8,23 @@
     <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.url }}">
     <link rel="alternate" type="application/rss+xml" title="RSS" href="/feed.xml">
 
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{{ "/style.css" }}"> 
+     
+    <!-- Fontawesome CSS -->
+    <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/v4-shims.css">
+     -->
+    <link rel="stylesheet" href="{{ "/css/font-awesome/css/font-awesome.min.css" }}">
+
+    <!-- Menu Icon CSS -->
+    <link rel="stylesheet" href="{{ "/css/menu-right-alt.css" }}">
+
+    <!-- Favicon support -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/img/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/assets/site.webmanifest">
 
     <!-- Preload images & background images -->
     <script type="text/javascript">
@@ -67,27 +84,13 @@
         //   });
         // });
     </script>
-
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="{{ "/style.css" }}"> 
-     
-    <!-- Fontawesome CSS -->
-    <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/v4-shims.css">
-     -->
-    <link rel="stylesheet" href="{{ "/css/font-awesome/css/font-awesome.min.css" }}">
-
-    <!-- Menu Icon CSS -->
-    <link rel="stylesheet" href="{{ "/css/menu-right-alt.css" }}">
-
+    
     <!-- Custom Fonts -->
     <link rel="stylesheet" href="{{ "/css/fontstyles/css/stylesheet.css" }}">
-
-    <!-- Favicon support -->
-    <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/favicon/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/assets/img/favicon/favicon-16x16.png">
-    <link rel="manifest" href="/assets/site.webmanifest">
+    <link href="//fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@100;200;300;400;500;600;700" rel="stylesheet">
+    <link href="//fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@100;200;300;400;500;600;700" rel="stylesheet">
+    <link href='//fonts.googleapis.com/css?family=Lato:100,200,300,400,700' rel='stylesheet' type='text/css'>
+    <link href="//brick.a.ssl.fastly.net/Raleway:100,300,400,500,600,700" rel="stylesheet" type="text/css">
 
     <!-- Google verification -->
     {% if site.google_verify %}<meta name="google-site-verification" content="{{ site.google_verify }}">{% endif %}
@@ -103,10 +106,4 @@
         gtag('js', new Date());
         gtag('config', 'UA-133963307-1');
     </script>
-    
-    <!-- Custom Fonts -->
-    <link href="//fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@100;200;300;400;500;600;700" rel="stylesheet">
-    <link href="//fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@100;200;300;400;500;600;700" rel="stylesheet">
-    <link href='//fonts.googleapis.com/css?family=Lato:100,200,300,400,700' rel='stylesheet' type='text/css'>
-    <link href="//brick.a.ssl.fastly.net/Raleway:100,300,400,500,600,700" rel="stylesheet" type="text/css">
 </head>

@@ -561,6 +561,10 @@ header mark {
 	}  
 } 
 
+#about {
+	text-align: justify !important;
+}
+
 #about .hello {
 	padding: 2vh 0;
 	font-weight: 500;

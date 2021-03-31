@@ -89,13 +89,14 @@ function preload(dir, imageArray, index=0) {
 $(window).on("load", function() {
 
   // Preload images & background images
-  var dir = 'assets/img/';
-  var images = ['marble-4x4.png', 'desk.jpg', 'header_2_HD.jpg']
-  preload(dir, images);
+  var dir1 = 'assets/img/';
+  var images1 = ['marble-4x4.png', 'desk.jpg', 'header_2_HD.jpg']
+  preload(dir1, images1);
 
-  var dir = 'assets/img/portfolio/';
-  var images = ['project-1.jpg', 'project-2.jpg', 'project-3.jpg', 'project-4.jpg', 'project-5.jpg', 'project-6.jpg'];
-  preload(dir, images);
+  var dir2 = 'assets/img/portfolio/';
+  var images2 = ['project-1.jpg', 'project-2.jpg', 'project-3.jpg', 'project-4.jpg', 'project-5.jpg', 'project-6.jpg'];
+  preload(dir2, images2);
+
 
 
     // var images = document.querySelectorAll('.px_img');
@@ -108,10 +109,13 @@ $(window).on("load", function() {
     //                           customWrapper: img.parentNode.nodeName,
     //                           });
 
+    // var images = document.querySelectorAll('.px_img');
+    // images.forEach(img => {
     //      setTimeout(function () {
-    //         img_parallax.refresh();
+    //         img.refresh();
     //         console.log("refreshed!");
-    //       }, 0);   
+    //       }, 0); 
+    // });  
 
     // console.log("images parallax on window load");
 
@@ -135,6 +139,13 @@ function addParallax(img) {
                                 transition: 'cubic-bezier(0,0,0,1)',
                                 customWrapper: img.parentNode.nodeName,
                                 });
+    // setTimeout(this.refresh,200);
+    img_parallax.onload = function() {
+         setTimeout(function () {
+            img_parallax.refresh;
+            console.log("refreshed!");
+          }, 200); 
+       }
 }
 
 // Swiper initializations

@@ -80,15 +80,13 @@ function preload(dir, imageArray, index=0) {
       img.src = dir + imageArray[index];
       console.log(img.src+' preloaded');
 
-
-      var img_parallax = new simpleParallax(img, {
-                            delay: .5,
-                            scale: 1.15,
-                            transition: 'cubic-bezier(0,0,0,1)',
-                            customWrapper: img.parentNode.nodeName,
-                            });
-      img_parallax.refresh();
-      console.log("and parallaxed on load");
+      // var img_parallax = new simpleParallax(img, {
+      //                       delay: .5,
+      //                       scale: 1.15,
+      //                       transition: 'cubic-bezier(0,0,0,1)',
+      //                       customWrapper: img.parentNode.nodeName,
+      //                       });
+      // img_parallax.refresh();
 
     }
 }
@@ -117,20 +115,19 @@ $(window).on("load", function() {
 // });
 
 
-// 0-------current-----0
-
 // $(window).on("load", function() {
-    // console.log("images parallax on load");
-    // var images = document.querySelectorAll('.px_img');
-    // images.forEach(img => {
-    //     var img_parallax = new simpleParallax(img, {
-    //                           delay: .5,
-    //                           scale: 1.15,
-    //                           transition: 'cubic-bezier(0,0,0,1)',
-    //                           customWrapper: img.parentNode.nodeName,
-    //                           });
-    //     // img_parallax.refresh();
-    // });    
+    console.log("images parallax on load");
+
+    var images = document.querySelectorAll('.px_img');
+    images.forEach(img => {
+        var img_parallax = new simpleParallax(img, {
+                              delay: .5,
+                              scale: 1.15,
+                              transition: 'cubic-bezier(0,0,0,1)',
+                              customWrapper: img.parentNode.nodeName,
+                              });
+        // img_parallax.refresh();
+    });    
 });
 
 // Swiper initializations

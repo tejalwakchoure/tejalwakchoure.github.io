@@ -127,9 +127,9 @@ $(window).on("load", function() {
     //     }
     // }); 
 
-  $(window).trigger('resize');
-    // img_parallax.refresh();
-    console.log("refreshed!");
+    // $(window).trigger('resize');
+    window.dispatchEvent(new Event('resize'));
+    console.log("faked resize!");
 
 });
 

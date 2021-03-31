@@ -130,10 +130,12 @@ $(window).on("load", function() {
                               transition: 'cubic-bezier(0,0,0,1)',
                               customWrapper: img.parentNode.nodeName,
                               });
-
-        setTimeout(function () {
-          img_parallax.refresh();
-        }, 0);
+        
+        img_parallax.onload = function() {
+             setTimeout(function () {
+            img_parallax.refresh();
+          }, 0);
+        }
 
     });    
 

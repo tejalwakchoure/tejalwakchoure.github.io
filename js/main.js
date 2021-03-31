@@ -6,7 +6,7 @@ function fadeInChildren(parent, base_delay) {
     });
 }
 $(document).ready(function() {
-    $('#body-container').css({display: 'none'});
+    // $('#body-container').css({display: 'none'});
     var counter = 0;
     var outerInterval = setInterval(function(){
       $("#preloader .container #wrapper #count").html(counter);

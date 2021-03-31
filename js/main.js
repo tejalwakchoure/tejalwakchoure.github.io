@@ -136,7 +136,7 @@ $(window).on("load", function() {
     //         img.refresh();
     //         console.log("refreshed!");
     //       }, 0); 
-    // });  
+    });  
 
     // console.log("images parallax on window load");
 

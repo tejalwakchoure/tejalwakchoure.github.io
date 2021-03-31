@@ -49,6 +49,31 @@ $("#body-container").easeScroll({
   stepSize: 30,
 });
 
+function preload(dir, imageArray, index=0) {
+  // index = index || 0;
+  if (imageArray && imageArray.length > index) {
+      var img = new Image ();
+      img.onload = function() {
+          preload(dir, imageArray, index + 1);
+      }
+      img.src = dir + images[index];
+      console.log(img.src+' preloaded');
+    }
+}
+
+/* images is an array with image metadata */
+$(window).load( function(){
+    /* Preload code goes here */
+    var dir = 'assets/img/portfolio/';
+    var images = ['project-1.jpg', 'project-2.jpg', 'project-3.jpg', 'project-4.jpg', 'project-5.jpg', 'project-6.jpg'];
+    // // var newImg = new Image();
+    // var imgfile = document.getElementById('body-container');
+    // newImg.src = imgfile.style.backgroundImage.split('"')[1];
+    preload(dir, images);
+    preload('', ['assets/img/marble-4x4.png']);
+
+});
+
 // Local datetime update
 function startTime() {
     var today = new Date();
@@ -94,7 +119,7 @@ $(window).on("load", function() {
                               transition: 'cubic-bezier(0,0,0,1)',
                               customWrapper: img.parentNode.nodeName,
                               });
-        img_parallax.refresh();
+        // img_parallax.refresh();
     });    
 });
 

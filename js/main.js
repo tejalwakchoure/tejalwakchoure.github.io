@@ -142,7 +142,7 @@ function addParallax(img) {
     // setTimeout(this.refresh,200);
     img_parallax.onload = function() {
          setTimeout(function () {
-            img_parallax.refresh;
+            img_parallax.refresh();
             console.log("refreshed!");
           }, 200); 
        }

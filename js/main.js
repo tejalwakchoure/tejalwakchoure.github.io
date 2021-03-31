@@ -139,8 +139,12 @@ function addParallax(img) {
                                 customWrapper: img.parentNode.nodeName,
                                 });
   
-  //   // img_parallax.refresh();
+  //   img_parallax.refresh();
   //   console.log("refreshed!");
+
+  // $(window).trigger('resize');
+  window.dispatchEvent(new Event('resize'));
+  console.log("faked resize!");
 }
 
 // Swiper initializations
@@ -354,7 +358,4 @@ function enableScroll(target) {
 
 disableScroll( document.getElementById('portfolioDetails') );
 
-// $(window).trigger('resize');
-window.dispatchEvent(new Event('resize'));
-console.log("faked resize!");
 

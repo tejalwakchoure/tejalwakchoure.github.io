@@ -127,6 +127,9 @@ $(window).on("load", function() {
     //     }
     // }); 
 
+  $(window).trigger('resize');
+    // img_parallax.refresh();
+    console.log("refreshed!");
 
 });
 
@@ -139,9 +142,9 @@ function addParallax(img) {
                                 transition: 'cubic-bezier(0,0,0,1)',
                                 customWrapper: img.parentNode.nodeName,
                                 });
-
-    img_parallax.refresh();
-    console.log("refreshed!");
+  
+  //   // img_parallax.refresh();
+  //   console.log("refreshed!");
 }
 
 // Swiper initializations

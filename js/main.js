@@ -95,7 +95,10 @@ function preload(dir, imageArray, index=0) {
 $(window).on("load", function() {
 
   // Preload images & background images
-  preload('', ['assets/img/marble-4x4.png']);
+  var dir = 'assets/img/';
+  var images = ['marble-4x4.png', 'desk.jpg', 'header_2_HD.jpg']
+  preload(dir, images);
+
   var dir = 'assets/img/portfolio/';
   var images = ['project-1.jpg', 'project-2.jpg', 'project-3.jpg', 'project-4.jpg', 'project-5.jpg', 'project-6.jpg'];
   preload(dir, images);
@@ -120,7 +123,7 @@ $(window).on("load", function() {
 
     var images = document.querySelectorAll('.px_img');
     images.forEach(img => {
-      
+
         var img_parallax = new simpleParallax(img, {
                               delay: .5,
                               scale: 1.15,
@@ -129,10 +132,8 @@ $(window).on("load", function() {
                               });
 
         setTimeout(function () {
-          img_parallax.get().refresh();
+          img_parallax.refresh();
         }, 0);
-            // img_parallax.refresh();
-
 
     });    
 

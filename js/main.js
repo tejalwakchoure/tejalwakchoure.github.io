@@ -127,10 +127,6 @@ $(window).on("load", function() {
     //     }
     // }); 
 
-    // $(window).trigger('resize');
-    window.dispatchEvent(new Event('resize'));
-    console.log("faked resize!");
-
 });
 
 
@@ -357,4 +353,8 @@ function enableScroll(target) {
 }
 
 disableScroll( document.getElementById('portfolioDetails') );
+
+// $(window).trigger('resize');
+window.dispatchEvent(new Event('resize'));
+console.log("faked resize!");
 

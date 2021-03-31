@@ -133,7 +133,7 @@ $(window).on("load", function() {
 function addParallax(img) {
   console.log("image parallax onload");
 
-  var timeout = setTimeout(function () {
+  // var timeout = setTimeout(function () {
 
   var img_parallax = new simpleParallax(img, {
                                 delay: .5,
@@ -142,14 +142,14 @@ function addParallax(img) {
                                 customWrapper: img.parentNode.nodeName,
                                 });
   
-  //   img_parallax.refresh();
-  // console.log("refreshed!");
-  console.log("timed out!");
+  img_parallax.refresh();
+  console.log("refreshed!");
+  // console.log("timed out!");
 
 
   // window.dispatchEvent(new Event('resize'));
   // console.log("faked resize!");
-  }, 200);
+  // }, 200);
 }
 
 // Swiper initializations

@@ -130,27 +130,27 @@ $(window).on("load", function() {
 });
 
 
-function addParallax(img) {
-  console.log("image parallax onload");
+// function addParallax(img) {
+//   console.log("image parallax onload");
 
-  // var timeout = setTimeout(function () {
+//   // var timeout = setTimeout(function () {
 
-  var img_parallax = new simpleParallax(img, {
-                                delay: .5,
-                                scale: 1.15,
-                                transition: 'cubic-bezier(0,0,0,1)',
-                                customWrapper: img.parentNode.nodeName,
-                                });
+//   var img_parallax = new simpleParallax(img, {
+//                                 delay: .5,
+//                                 scale: 1.15,
+//                                 transition: 'cubic-bezier(0,0,0,1)',
+//                                 customWrapper: img.parentNode.nodeName,
+//                                 });
   
-  img_parallax.refresh();
-  console.log("refreshed!");
-  // console.log("timed out!");
+//   img_parallax.refresh();
+//   console.log("refreshed!");
+//   // console.log("timed out!");
 
 
-  // window.dispatchEvent(new Event('resize'));
-  // console.log("faked resize!");
-  // }, 200);
-}
+//   // window.dispatchEvent(new Event('resize'));
+//   // console.log("faked resize!");
+//   // }, 200);
+// }
 
 // Swiper initializations
 var interleaveOffset = 0.5;
@@ -363,4 +363,18 @@ function enableScroll(target) {
 
 disableScroll( document.getElementById('portfolioDetails') );
 
+var images = document.querySelectorAll('.px_img');
+images.forEach(img => {
+  img.onload = function() { // trigger if the image was loaded
+       var img_parallax = new simpleParallax(img, {
+                          delay: .5,
+                          scale: 1.15,
+                          transition: 'cubic-bezier(0,0,0,1)',
+                          customWrapper: img.parentNode.nodeName,
+                          });
+
+       console.log("image parallax onload!!!");
+
+    }
+});  
 

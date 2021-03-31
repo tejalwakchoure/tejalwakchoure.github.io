@@ -376,5 +376,9 @@ images.forEach(img => {
        console.log("image parallax onload!!!");
 
     }
+     img.onerror = function() { // trigger if the image wasn't loaded
+        console.log($(this).attr('src') + ' - error!');
+    }
+
 });  
 

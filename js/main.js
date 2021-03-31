@@ -24,24 +24,24 @@ $(document).ready(function() {
               // $('#preloader #brand').css({'transform' : 'translate(-50vw, -30vh) scale(0.4, 0.4)'});
               startTime();
 
-              var images = document.querySelectorAll('.px_img');
-              images.forEach(img => {
-                img.onload = function() { // trigger if the image was loaded
-                     var img_parallax = new simpleParallax(img, {
-                                        delay: .5,
-                                        scale: 1.15,
-                                        transition: 'cubic-bezier(0,0,0,1)',
-                                        customWrapper: img.parentNode.nodeName,
-                                        });
+              // var images = document.querySelectorAll('.px_img');
+              // images.forEach(img => {
+              //   img.onload = function() { // trigger if the image was loaded
+              //        var img_parallax = new simpleParallax(img, {
+              //                           delay: .5,
+              //                           scale: 1.15,
+              //                           transition: 'cubic-bezier(0,0,0,1)',
+              //                           customWrapper: img.parentNode.nodeName,
+              //                           });
 
-                     console.log("image parallax onload!!!");
+              //        console.log("image parallax onload!!!");
 
-                  }
-                   img.onerror = function() { // trigger if the image wasn't loaded
-                      console.log($(this).attr('src') + ' - error!');
-                  }
+              //     }
+              //      img.onerror = function() { // trigger if the image wasn't loaded
+              //         console.log($(this).attr('src') + ' - error!');
+              //     }
 
-              });  
+              // });  
 
 
             }
@@ -120,15 +120,15 @@ $(window).on("load", function() {
 
 
 
-    // var images = document.querySelectorAll('.px_img');
-    // images.forEach(img => {
+    var images = document.querySelectorAll('.px_img');
+    images.forEach(img => {
 
-    //     var img_parallax = new simpleParallax(img, {
-    //                           delay: .5,
-    //                           scale: 1.15,
-    //                           transition: 'cubic-bezier(0,0,0,1)',
-    //                           customWrapper: img.parentNode.nodeName,
-    //                           });
+        var img_parallax = new simpleParallax(img, {
+                              delay: .5,
+                              scale: 1.15,
+                              transition: 'cubic-bezier(0,0,0,1)',
+                              customWrapper: img.parentNode.nodeName,
+                              });
 
     // var images = document.querySelectorAll('.px_img');
     // images.forEach(img => {

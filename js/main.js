@@ -139,13 +139,9 @@ function addParallax(img) {
                                 transition: 'cubic-bezier(0,0,0,1)',
                                 customWrapper: img.parentNode.nodeName,
                                 });
-    // setTimeout(this.refresh,200);
-    img_parallax.onload = function() {
-         setTimeout(function () {
-            img_parallax.refresh();
-            console.log("refreshed!");
-          }, 200); 
-       }
+
+    img_parallax.refresh();
+    console.log("refreshed!");
 }
 
 // Swiper initializations

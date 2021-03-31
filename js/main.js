@@ -32,14 +32,17 @@ $(document).ready(function() {
   swiper.controller.control = swiper_in;
 
   // Portfolio parallax
-  // $(document).ready(function() {
-      // console.log("images parallax on ready");
-      // var images = document.querySelectorAll('.px_img');
-      // new simpleParallax(images, {
-      //     delay: .5,
-      //     transition: 'cubic-bezier(0,0,0,1)',
-      // });
-  // });
+  console.log("images parallax on document ready");
+  var images = document.querySelectorAll('.px_img');
+  images.forEach(img => {
+        new simpleParallax(img, {
+        delay: .5,
+        scale: 1.15,
+        transition: 'cubic-bezier(0,0,0,1)',
+        customWrapper: img.parentNode.nodeName,
+        });
+  });
+
 });
 
 // Smooth Mouse Scrolling
@@ -79,15 +82,6 @@ function preload(dir, imageArray, index=0) {
       }
       img.src = dir + imageArray[index];
       console.log(img.src+' preloaded');
-
-      // var img_parallax = new simpleParallax(img, {
-      //                       delay: .5,
-      //                       scale: 1.15,
-      //                       transition: 'cubic-bezier(0,0,0,1)',
-      //                       customWrapper: img.parentNode.nodeName,
-      //                       });
-      // img_parallax.refresh();
-
     }
 }
 
@@ -103,42 +97,26 @@ $(window).on("load", function() {
   var images = ['project-1.jpg', 'project-2.jpg', 'project-3.jpg', 'project-4.jpg', 'project-5.jpg', 'project-6.jpg'];
   preload(dir, images);
 
-// Portfolio parallax
-// $(document).ready(function() {
-//     console.log("images parallax on ready");
-//     var images = document.querySelectorAll('.px_img');
-//     images.forEach(img => {
-//         new simpleParallax(img, {
-//         delay: .5,
-//         scale: 1.15,
-//         transition: 'cubic-bezier(0,0,0,1)',
-//         customWrapper: img.parentNode.nodeName,
-//         });
-//     });
-// });
 
+    // var images = document.querySelectorAll('.px_img');
+    // images.forEach(img => {
 
-// $(window).on("load", function() {
-    // console.log("images parallax on load");
+    //     var img_parallax = new simpleParallax(img, {
+    //                           delay: .5,
+    //                           scale: 1.15,
+    //                           transition: 'cubic-bezier(0,0,0,1)',
+    //                           customWrapper: img.parentNode.nodeName,
+    //                           });
+    // console.log("images parallax on window load");
 
-    var images = document.querySelectorAll('.px_img');
-    images.forEach(img => {
+    //     img_parallax.onload = function() {
+    //          setTimeout(function () {
+    //         img_parallax.refresh();
+    //         console.log("refreshed!");
+    //       }, 0);
+    //     }
 
-        var img_parallax = new simpleParallax(img, {
-                              delay: .5,
-                              scale: 1.15,
-                              transition: 'cubic-bezier(0,0,0,1)',
-                              customWrapper: img.parentNode.nodeName,
-                              });
-
-        img_parallax.onload = function() {
-             setTimeout(function () {
-            img_parallax.refresh();
-            console.log("refreshed!");
-          }, 0);
-        }
-
-    });    
+    // });    
 
 });
 

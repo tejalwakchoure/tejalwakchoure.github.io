@@ -56,8 +56,8 @@ function preload(dir, imageArray, index=0) {
       img.onload = function() {
           preload(dir, imageArray, index + 1);
       }
-      img.src = dir + images[index];
-      console.log(img.src+' preloaded');
+      img.src = dir + imageArray[index];
+      console.log(img.src+' newly preloaded');
     }
 }
 

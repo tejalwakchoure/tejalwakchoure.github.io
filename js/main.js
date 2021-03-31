@@ -116,18 +116,26 @@ $(window).on("load", function() {
 
 
 // $(window).on("load", function() {
-    console.log("images parallax on load");
+    // console.log("images parallax on load");
 
     var images = document.querySelectorAll('.px_img');
     images.forEach(img => {
+      
         var img_parallax = new simpleParallax(img, {
                               delay: .5,
                               scale: 1.15,
                               transition: 'cubic-bezier(0,0,0,1)',
                               customWrapper: img.parentNode.nodeName,
                               });
-        // img_parallax.refresh();
+
+        setTimeout(function () {
+          img_parallax.get().refresh();
+        }, 0);
+            // img_parallax.refresh();
+
+
     });    
+
 });
 
 // Swiper initializations

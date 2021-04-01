@@ -17,12 +17,14 @@ $(document).ready(function() {
         var innerInterval = setInterval(function() {
             if(document.readyState === 'complete') {
               clearInterval(innerInterval);
+              
               // Animate components on and off the screen on loading
               $('#preloader').slideUp(1000);
               $('#body-container').fadeIn(1000);
               fadeInChildren('#body-container header',1000);
               fadeInChildren('#body-container header .intro-text',1000);
               // $('#preloader #brand').css({'transform' : 'translate(-50vw, -30vh) scale(0.4, 0.4)'});
+              
               // Fire up other elements
               startTime();
               addPortfolioParallax();
@@ -42,9 +44,6 @@ $("#body-container").easeScroll({
   stepSize: 30,
 });
 
-// var images = document.querySelectorAll('.px_img');
-// $('#myDiv:visible').animate({left: '+=200px'}, 'slow');
-
 // Portfolio parallax
 function addPortfolioParallax() {
     var images = document.querySelectorAll('.px_img');
@@ -59,12 +58,10 @@ function addPortfolioParallax() {
             if ($('#body-container').is(':visible') || Date.now()-startParallaxTime > 4000) {
                 clearInterval(interval);
                 img_parallax.refresh();
-                console.log('interval parallax refreshed at +', Date.now()-startParallaxTime);
             }
         }, 100);
     });
 }
-
 
 // Local datetime update
 function startTime() {
@@ -88,27 +85,17 @@ function checkTime(i) {
     return i;
 }
 
-function preload(dir, imageArray, index=0) {
+// Preload images & background images
+function preloadImages(dir, imageArray, index=0) {
   if (imageArray && imageArray.length > index) {
       var img = new Image ();
       img.onload = function() {
-          preload(dir, imageArray, index + 1);
+          preloadImages(dir, imageArray, index + 1);
       }
       img.src = dir + imageArray[index];
       console.log(img.src+' preloaded');
     }
 }
-
-// Preload images & background images
-$(window).on("load", function() {
-  var dir1 = 'assets/img/';
-  var images1 = ['marble-4x4.png', 'desk.jpg', 'header_2_HD.jpg']
-  preload(dir1, images1);
-
-  var dir2 = 'assets/img/portfolio/';
-  var images2 = ['project-1.jpg', 'project-2.jpg', 'project-3.jpg', 'project-4.jpg', 'project-5.jpg', 'project-6.jpg'];
-  preload(dir2, images2);
-});
 
 // Swiper initializations
 var interleaveOffset = 0.5;
@@ -150,6 +137,7 @@ var swiper_innermost = new Swiper('.swiper-container-innermost', {
         }
       }
     });
+
 var swiper_in = new Swiper('.swiper-container-in', {
       // passiveListeners: false,
 
@@ -186,6 +174,7 @@ var swiper_in = new Swiper('.swiper-container-in', {
         }
       }
     });
+
 var swiper = new Swiper('.swiper-container', {
       // passiveListeners: false,
 
@@ -206,6 +195,7 @@ var swiper = new Swiper('.swiper-container', {
       virtualTranslate: true,
     });
 
+// Toggle visibility of project carousel
 function toggleOnPortfolioLink(num) {
     if(num == -1) {
       num = swiper.realIndex;
@@ -252,6 +242,16 @@ $('.navbar-collapse ul li a').click(function() {
     $('.navbar-toggle:visible').click();
 });
 
+$(window).on("load", function() {
+    var dir1 = 'assets/img/';
+    var images1 = ['marble-4x4.png', 'desk.jpg', 'header_2_HD.jpg']
+    preloadImages(dir1, images1);
+
+    var dir2 = 'assets/img/portfolio/';
+    var images2 = ['project-1.jpg', 'project-2.jpg', 'project-3.jpg', 'project-4.jpg', 'project-5.jpg', 'project-6.jpg'];
+    preloadImages(dir2, images2);
+});
+
 $(window).on("load resize scroll", function() {
     // Change brand properties when in/out of Header
     //   window.loaded = true;
@@ -276,7 +276,6 @@ $(window).on("load resize scroll", function() {
       $('.hor_parallax_right').css({ right: pos });
       $('.hor_parallax_left').css({ left: pos });
 });
-
 
 
 var keys = {37: 1, 38: 1, 39: 1, 40: 1};

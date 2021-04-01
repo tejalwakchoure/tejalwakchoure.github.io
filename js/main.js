@@ -28,29 +28,19 @@ $(document).ready(function() {
               // Portfolio parallax
               var images = document.querySelectorAll('.px_img');
               images.forEach(img => {
-                var img_parallax = new simpleParallax(img, {delay: .5,
-                                                            scale: 1.15,
-                                                            transition: 'cubic-bezier(0,0,0,1)',
-                                                            customWrapper: img.parentNode.nodeName,
-                                                            });
-                console.log('image parallax created');
-
-                var maxTime = 5000;
-                var startinterval = Date.now();
-                var interval = setInterval(function () {
-                    if ($('#body-container').is(':visible')) {
-                        clearInterval(interval);
-                        console.log('interval parallax refreshed at +', Date.now() - startinterval);
-                        // $(window).trigger('resize');
-                        img_parallax.refresh();
-
-                    } else {
-                        if (Date.now() - startinterval > maxTime) {
-                            clearInterval(interval);
-                            console.log('interval maxed out');
-                        }
-                    }
-                }, 100);
+                  var img_parallax = new simpleParallax(img, {delay: .5,
+                                                              scale: 1.15,
+                                                              transition: 'cubic-bezier(0,0,0,1)',
+                                                              customWrapper: img.parentNode.nodeName,
+                                                              });
+                  var startParallaxTime = Date.now();
+                  var interval = setInterval(function () {
+                      if ($('#body-container').is(':visible') || Date.now()-startParallaxTime > 4000) {
+                          clearInterval(interval);
+                          img_parallax.refresh();
+                          console.log('interval parallax refreshed at +', Date.now()-startParallaxTime);
+                      }
+                  }, 100);
               });
             }
         }, 10);
@@ -104,10 +94,8 @@ function preload(dir, imageArray, index=0) {
     }
 }
 
-
+// Preload images & background images
 $(window).on("load", function() {
-
-  // Preload images & background images
   var dir1 = 'assets/img/';
   var images1 = ['marble-4x4.png', 'desk.jpg', 'header_2_HD.jpg']
   preload(dir1, images1);
@@ -115,17 +103,6 @@ $(window).on("load", function() {
   var dir2 = 'assets/img/portfolio/';
   var images2 = ['project-1.jpg', 'project-2.jpg', 'project-3.jpg', 'project-4.jpg', 'project-5.jpg', 'project-6.jpg'];
   preload(dir2, images2);
-
-    // var images = document.querySelectorAll('.px_img');
-    // images.forEach(img => {
-
-    //     var img_parallax = new simpleParallax(img, {
-    //                           delay: .5,
-    //                           scale: 1.15,
-    //                           transition: 'cubic-bezier(0,0,0,1)',
-    //                           customWrapper: img.parentNode.nodeName,
-    //                           });
-    // });
 });
 
 // Swiper initializations

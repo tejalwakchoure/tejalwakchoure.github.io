@@ -30,7 +30,7 @@ $(document).ready(function() {
                 var maxTime = 5000;
                 var startinterval = Date.now();
                 var interval = setInterval(function () {
-                        if ($(img).is(':visible')) {
+                        if ($('#body-container').is(':visible')) {
                             clearInterval(interval);
                             console.log('interval parallaxed');
                             var img_parallax = new simpleParallax(img, {delay: .5,
@@ -38,6 +38,7 @@ $(document).ready(function() {
                                                                         transition: 'cubic-bezier(0,0,0,1)',
                                                                         customWrapper: img.parentNode.nodeName,
                                                                         });
+
 
                         } else {
                             if (Date.now() - startinterval > maxTime) {

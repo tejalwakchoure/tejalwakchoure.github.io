@@ -7,7 +7,6 @@ function fadeInChildren(parent, base_delay) {
 }
 $(document).ready(function() {
     $('#body-container').css({display: 'none'});
-
     // $('#body-container').hide();
     var counter = 0;
     var outerInterval = setInterval(function(){
@@ -33,6 +32,7 @@ $(document).ready(function() {
                                                                         transition: 'cubic-bezier(0,0,0,1)',
                                                                         customWrapper: img.parentNode.nodeName,
                                                                         });
+                console.log('image parallax created');
 
                 var maxTime = 5000;
                 var startinterval = Date.now();
@@ -40,7 +40,7 @@ $(document).ready(function() {
                         if ($('#body-container').is(':visible')) {
                             clearInterval(interval);
                             console.log('interval parallax refreshed at +', Date.now() - startinterval);
-                            $(window).trigger('resize');
+                            // $(window).trigger('resize');
                             img_parallax.refresh();
 
                         } else {
@@ -51,26 +51,6 @@ $(document).ready(function() {
                         }
                     }, 100);
               });
-
-              // var images = document.querySelectorAll('.px_img');
-              // images.forEach(img => {
-              //   img.onload = function() { // trigger if the image was loaded
-              //        var img_parallax = new simpleParallax(img, {
-              //                           delay: .5,
-              //                           scale: 1.15,
-              //                           transition: 'cubic-bezier(0,0,0,1)',
-              //                           customWrapper: img.parentNode.nodeName,
-              //                           });
-
-              //        console.log("image parallax onload!!!");
-
-              //     }
-              //      img.onerror = function() { // trigger if the image wasn't loaded
-              //         console.log($(this).attr('src') + ' - error!');
-              //     }
-
-              // });  
-
 
             }
         }, 10);
@@ -93,13 +73,6 @@ $(document).ready(function() {
   // });
 
 });
-
-
-$(window).resize(function() {
-  console.log('Handler for .resize() called!');
-});
-
-
 
 // Smooth Mouse Scrolling
 $("#body-container").easeScroll({

@@ -32,13 +32,13 @@ $(document).ready(function() {
                 var interval = setInterval(function () {
                         if ($('#body-container').is(':visible')) {
                             clearInterval(interval);
-                            console.log('interval parallaxed');
-                            var img_parallax = new simpleParallax(img, {delay: .5,
-                                                                        scale: 1.15,
-                                                                        transition: 'cubic-bezier(0,0,0,1)',
-                                                                        customWrapper: img.parentNode.nodeName,
-                                                                        });
-
+                            console.log('interval parallax refreshed');
+                            $(window).trigger('resize');
+                            // var img_parallax = new simpleParallax(img, {delay: .5,
+                            //                                             scale: 1.15,
+                            //                                             transition: 'cubic-bezier(0,0,0,1)',
+                            //                                             customWrapper: img.parentNode.nodeName,
+                            //                                             });
 
                         } else {
                             if (Date.now() - startinterval > maxTime) {
@@ -90,6 +90,13 @@ $(document).ready(function() {
   // });
 
 });
+
+
+$(window).resize(function() {
+  alert('Handler for .resize() called!');
+});
+
+
 
 // Smooth Mouse Scrolling
 $("#body-container").easeScroll({
@@ -145,8 +152,6 @@ $(window).on("load", function() {
   var dir2 = 'assets/img/portfolio/';
   var images2 = ['project-1.jpg', 'project-2.jpg', 'project-3.jpg', 'project-4.jpg', 'project-5.jpg', 'project-6.jpg'];
   preload(dir2, images2);
-
-
 
     var images = document.querySelectorAll('.px_img');
     images.forEach(img => {

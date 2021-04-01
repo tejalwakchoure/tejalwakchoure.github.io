@@ -39,19 +39,9 @@ $(document).ready(function() {
 
 // Smooth Mouse Scrolling
 $("#body-container").easeScroll({
-  // frameRate: 60,
-  // animationTime: 1000,
-  // stepSize: 30,
-    frameRate: 150,
+    frameRate: 60,
     animationTime: 1000,
-    stepSize: 100,
-    pulseAlgorithm: 1,
-    pulseScale: 4,
-    pulseNormalize: 1,
-    accelerationDelta: 50,
-    accelerationMax: 3,
-    keyboardSupport: 1,
-    arrowScroll: 50,
+    stepSize: 30,
 });
 
 // Portfolio parallax
@@ -110,16 +100,8 @@ function preloadImages(dir, imageArray, index=0) {
 var interleaveOffset = 0.5;
 var interleaveSpeed = 1000;
 
-//$('*').bind('touchmove', false);
-
-
-
 var swiper_innermost = new Swiper('.swiper-container-innermost', {
       // passiveListeners: false,
-
-
-
-
       observer: true,
       observeParents: true,
       speed: interleaveSpeed,
@@ -155,8 +137,6 @@ var swiper_innermost = new Swiper('.swiper-container-innermost', {
 
 var swiper_in = new Swiper('.swiper-container-in', {
       // passiveListeners: false,
-
-
       observer: true,
       observeParents: true,
       speed: interleaveSpeed,
@@ -192,8 +172,6 @@ var swiper_in = new Swiper('.swiper-container-in', {
 
 var swiper = new Swiper('.swiper-container', {
       // passiveListeners: false,
-
-
       cssMode: true,
       navigation: {
         nextEl: '.swiper-button-next',
@@ -293,44 +271,44 @@ $(window).on("load resize scroll", function() {
 });
 
 
-var keys = {37: 1, 38: 1, 39: 1, 40: 1};
+// var keys = {37: 1, 38: 1, 39: 1, 40: 1};
 
 function preventDefault(e) {
   e.preventDefault();
 }
 
-function preventDefaultForScrollKeys(e) {
-  if (keys[e.keyCode]) {
-    preventDefault(e);
-    return false;
-  }
-}
+// function preventDefaultForScrollKeys(e) {
+//   if (keys[e.keyCode]) {
+//     preventDefault(e);
+//     return false;
+//   }
+// }
 
-// modern Chrome requires { passive: false } when adding event
-var supportsPassive = false;
-try {
-  window.addEventListener("test", null, Object.defineProperty({}, 'passive', {
-    get: function () { supportsPassive = true; } 
-  }));
-} catch(e) {}
+// // modern Chrome requires { passive: false } when adding event
+// var supportsPassive = false;
+// try {
+//   window.addEventListener("test", null, Object.defineProperty({}, 'passive', {
+//     get: function () { supportsPassive = true; } 
+//   }));
+// } catch(e) {}
 
-var wheelOpt = supportsPassive ? { passive: false } : false;
-var wheelEvent = 'onwheel' in document.createElement('div') ? 'wheel' : 'mousewheel';
+// var wheelOpt = supportsPassive ? { passive: false } : false;
+// var wheelEvent = 'onwheel' in document.createElement('div') ? 'wheel' : 'mousewheel';
 
-// call this to Disable
-function disableScroll(target) {
-  target.addEventListener('DOMMouseScroll', preventDefault, false); // older FF
-  target.addEventListener(wheelEvent, preventDefault, wheelOpt); // modern desktop
-  target.addEventListener('touchmove', preventDefault, wheelOpt); // mobile
-  target.addEventListener('keydown', preventDefaultForScrollKeys, false);
-}
+// // call this to Disable
+// function disableScroll(target) {
+//   target.addEventListener('DOMMouseScroll', preventDefault, false); // older FF
+//   target.addEventListener(wheelEvent, preventDefault, wheelOpt); // modern desktop
+//   target.addEventListener('touchmove', preventDefault, wheelOpt); // mobile
+//   target.addEventListener('keydown', preventDefaultForScrollKeys, false);
+// }
 
-// call this to Enable
-function enableScroll(target) {
-  target.removeEventListener('DOMMouseScroll', preventDefault, false);
-  target.removeEventListener(wheelEvent, preventDefault, wheelOpt); 
-  target.removeEventListener('touchmove', preventDefault, wheelOpt);
-  target.removeEventListener('keydown', preventDefaultForScrollKeys, false);
-}
+// // call this to Enable
+// function enableScroll(target) {
+//   target.removeEventListener('DOMMouseScroll', preventDefault, false);
+//   target.removeEventListener(wheelEvent, preventDefault, wheelOpt); 
+//   target.removeEventListener('touchmove', preventDefault, wheelOpt);
+//   target.removeEventListener('keydown', preventDefaultForScrollKeys, false);
+// }
 
-// disableScroll( document.getElementById('portfolioDetails') );
+// // disableScroll( document.getElementById('portfolioDetails') );

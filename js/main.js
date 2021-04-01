@@ -6,8 +6,8 @@ function fadeInChildren(parent, base_delay) {
     });
 }
 $(document).ready(function() {
-    // $('#body-container').css({display: 'none'});
-    $('#body-container').hide();
+    $('#body-container').css({display: 'none'});
+    // $('#body-container').hide();
     var counter = 0;
     var outerInterval = setInterval(function(){
       $("#preloader .container #wrapper #count").html(counter);
@@ -24,6 +24,29 @@ $(document).ready(function() {
               fadeInChildren('#body-container header .intro-text',1000);
               // $('#preloader #brand').css({'transform' : 'translate(-50vw, -30vh) scale(0.4, 0.4)'});
               startTime();
+
+              var images = document.querySelectorAll('.px_img');
+              images.forEach(img => {
+                var maxTime = 5000;
+                var startinterval = Date.now();
+                var interval = setInterval(function () {
+                        if (img.is(':visible')) {
+                            clearInterval(interval);
+                            console.log('interval parallaxed');
+                            var img_parallax = new simpleParallax(img, {delay: .5,
+                                                                        scale: 1.15,
+                                                                        transition: 'cubic-bezier(0,0,0,1)',
+                                                                        customWrapper: img.parentNode.nodeName,
+                                                                        });
+
+                        } else {
+                            if (Date.now() - startinterval > maxTime) {
+                                clearInterval(interval);
+                                console.log('interval maxed out');
+                            }
+                        }
+                    }, 100);
+              });
 
               // var images = document.querySelectorAll('.px_img');
               // images.forEach(img => {
@@ -73,6 +96,9 @@ $("#body-container").easeScroll({
   animationTime: 1000,
   stepSize: 30,
 });
+
+var images = document.querySelectorAll('.px_img');
+$('#myDiv:visible').animate({left: '+=200px'}, 'slow');
 
 // Local datetime update
 function startTime() {

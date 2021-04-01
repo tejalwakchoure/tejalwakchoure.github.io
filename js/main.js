@@ -30,7 +30,7 @@ $(document).ready(function() {
                 var maxTime = 5000;
                 var startinterval = Date.now();
                 var interval = setInterval(function () {
-                        if (img.is(':visible')) {
+                        if ($(img).is(':visible')) {
                             clearInterval(interval);
                             console.log('interval parallaxed');
                             var img_parallax = new simpleParallax(img, {delay: .5,

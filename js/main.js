@@ -46,21 +46,39 @@ $("#body-container").easeScroll({
 
 // Portfolio parallax
 function addPortfolioParallax() {
-    var images = document.querySelectorAll('.px_img');
-    images.forEach(img => {
-        var img_parallax = new simpleParallax(img, {delay: .5,
-                                                    scale: 1.15,
-                                                    transition: 'cubic-bezier(0,0,0,1)',
-                                                    customWrapper: img.parentNode.nodeName,
-                                                    });
-        var startParallaxTime = Date.now();
-        var interval = setInterval(function () {
+    // var images = document.querySelectorAll('.px_img');
+    // images.forEach(img => {
+    //     var img_parallax = new simpleParallax(img, {delay: .5,
+    //                                                 scale: 1.15,
+    //                                                 transition: 'cubic-bezier(0,0,0,1)',
+    //                                                 customWrapper: img.parentNode.nodeName,
+    //                                                 });
+    //     var startParallaxTime = Date.now();
+    //     var interval = setInterval(function () {
+    //         if ($('#body-container').is(':visible') || Date.now()-startParallaxTime > 4000) {
+    //             clearInterval(interval);
+    //             img_parallax.refresh();
+    //         }
+    //     }, 100);
+    // });
+
+    var startParallaxTime = Date.now();
+      var interval = setInterval(function () {
             if ($('#body-container').is(':visible') || Date.now()-startParallaxTime > 4000) {
                 clearInterval(interval);
-                img_parallax.refresh();
+                var images = document.querySelectorAll('.px_img');
+                images.forEach(img => {
+                    var img_parallax = new simpleParallax(img, {delay: .5,
+                                                                scale: 1.15,
+                                                                transition: 'cubic-bezier(0,0,0,1)',
+                                                                customWrapper: img.parentNode.nodeName,
+                                                                });
+                    console.log("img parallaxed at =",Date.now()-startParallaxTime);
+                    
+                });
+                // img_parallax.refresh();
             }
         }, 100);
-    });
 }
 
 // Local datetime update

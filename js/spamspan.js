@@ -55,6 +55,7 @@ function spamSpan() {
 			anchorTag.className = spamSpanMainClass;
 			anchorTag.setAttribute('href', hrefAttr);
 			anchorTag.setAttribute('target', '_blank');
+			anchorTag.classList.add('mail-link');
 			anchorTag.appendChild(anchorTagText);
 		// replace the span with anchor
 		allSpamSpans[i].parentNode.replaceChild(anchorTag, allSpamSpans[i]);

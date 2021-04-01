@@ -7,6 +7,7 @@ function fadeInChildren(parent, base_delay) {
 }
 $(document).ready(function() {
     // $('#body-container').css({display: 'none'});
+    $('#body-container').hide();
     var counter = 0;
     var outerInterval = setInterval(function(){
       $("#preloader .container #wrapper #count").html(counter);
@@ -129,13 +130,6 @@ $(window).on("load", function() {
                               transition: 'cubic-bezier(0,0,0,1)',
                               customWrapper: img.parentNode.nodeName,
                               });
-
-    // var images = document.querySelectorAll('.px_img');
-    // images.forEach(img => {
-    //      setTimeout(function () {
-    //         img.refresh();
-    //         console.log("refreshed!");
-    //       }, 0); 
     });  
 
     // console.log("images parallax on window load");
@@ -383,5 +377,3 @@ function enableScroll(target) {
 }
 
 disableScroll( document.getElementById('portfolioDetails') );
-
-

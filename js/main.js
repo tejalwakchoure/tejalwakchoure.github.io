@@ -220,7 +220,7 @@ $(function() {
         var $anchor = $(this);
         $('html, body').stop().animate({
             scrollTop: $($anchor.attr('href'))[0].offsetTop
-        }, 1000, 'easeInOutExpo');
+        }, 2000, 'easeInOutExpo');
         event.preventDefault();
     });
 });

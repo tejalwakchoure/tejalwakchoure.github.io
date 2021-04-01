@@ -41,7 +41,8 @@ $(document).ready(function() {
 $("#body-container").easeScroll({
   frameRate: 60,
   animationTime: 1000,
-  stepSize: 30,
+  // stepSize: 30,
+  stepSize: 60,
 });
 
 // Portfolio parallax
@@ -107,7 +108,7 @@ var interleaveSpeed = 1000;
 var swiper_innermost = new Swiper('.swiper-container-innermost', {
       // passiveListeners: false,
 
-      
+
 
 
       observer: true,

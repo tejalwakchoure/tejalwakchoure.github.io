@@ -28,6 +28,12 @@ $(document).ready(function() {
 
               var images = document.querySelectorAll('.px_img');
               images.forEach(img => {
+                var img_parallax = new simpleParallax(img, {delay: .5,
+                                                                        scale: 1.15,
+                                                                        transition: 'cubic-bezier(0,0,0,1)',
+                                                                        customWrapper: img.parentNode.nodeName,
+                                                                        });
+
                 var maxTime = 5000;
                 var startinterval = Date.now();
                 var interval = setInterval(function () {
@@ -36,11 +42,6 @@ $(document).ready(function() {
                             console.log('interval parallax refreshed at +', Date.now() - startinterval);
                             $(window).trigger('resize');
                             img_parallax.refresh();
-                            // var img_parallax = new simpleParallax(img, {delay: .5,
-                            //                                             scale: 1.15,
-                            //                                             transition: 'cubic-bezier(0,0,0,1)',
-                            //                                             customWrapper: img.parentNode.nodeName,
-                            //                                             });
 
                         } else {
                             if (Date.now() - startinterval > maxTime) {

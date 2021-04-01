@@ -100,8 +100,14 @@ function preloadImages(dir, imageArray, index=0) {
 var interleaveOffset = 0.5;
 var interleaveSpeed = 1000;
 
+//$('*').bind('touchmove', false);
+
+
+
 var swiper_innermost = new Swiper('.swiper-container-innermost', {
       // passiveListeners: false,
+
+      
 
 
       observer: true,
@@ -317,4 +323,4 @@ function enableScroll(target) {
   target.removeEventListener('keydown', preventDefaultForScrollKeys, false);
 }
 
-disableScroll( document.getElementById('portfolioDetails') );
+// disableScroll( document.getElementById('portfolioDetails') );

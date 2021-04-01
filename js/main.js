@@ -95,7 +95,7 @@ $(document).ready(function() {
 
 
 $(window).resize(function() {
-  consolee.log('Handler for .resize() called!');
+  console.log('Handler for .resize() called!');
 });
 
 

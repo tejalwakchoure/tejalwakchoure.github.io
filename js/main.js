@@ -7,6 +7,7 @@ function fadeInChildren(parent, base_delay) {
 }
 $(document).ready(function() {
     $('#body-container').css({display: 'none'});
+
     // $('#body-container').hide();
     var counter = 0;
     var outerInterval = setInterval(function(){
@@ -32,8 +33,9 @@ $(document).ready(function() {
                 var interval = setInterval(function () {
                         if ($('#body-container').is(':visible')) {
                             clearInterval(interval);
-                            console.log('interval parallax refreshed');
+                            console.log('interval parallax refreshed at +', Date.now() - startinterval);
                             $(window).trigger('resize');
+                            img_parallax.refresh();
                             // var img_parallax = new simpleParallax(img, {delay: .5,
                             //                                             scale: 1.15,
                             //                                             transition: 'cubic-bezier(0,0,0,1)',
@@ -93,7 +95,7 @@ $(document).ready(function() {
 
 
 $(window).resize(function() {
-  alert('Handler for .resize() called!');
+  consolee.log('Handler for .resize() called!');
 });
 
 

@@ -270,12 +270,11 @@ $(window).on("load resize scroll", function() {
       $('.hor_parallax_left').css({ left: pos });
 });
 
-
 // var keys = {37: 1, 38: 1, 39: 1, 40: 1};
 
-function preventDefault(e) {
-  e.preventDefault();
-}
+// function preventDefault(e) {
+//   e.preventDefault();
+// }
 
 // function preventDefaultForScrollKeys(e) {
 //   if (keys[e.keyCode]) {

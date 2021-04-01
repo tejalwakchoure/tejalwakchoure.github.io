@@ -39,10 +39,19 @@ $(document).ready(function() {
 
 // Smooth Mouse Scrolling
 $("#body-container").easeScroll({
-  frameRate: 60,
-  animationTime: 1000,
+  // frameRate: 60,
+  // animationTime: 1000,
   // stepSize: 30,
-  stepSize: 60,
+    frameRate: 150,
+    animationTime: 1000,
+    stepSize: 100,
+    pulseAlgorithm: 1,
+    pulseScale: 4,
+    pulseNormalize: 1,
+    accelerationDelta: 50,
+    accelerationMax: 3,
+    keyboardSupport: 1,
+    arrowScroll: 50,
 });
 
 // Portfolio parallax

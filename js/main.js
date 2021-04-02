@@ -102,6 +102,8 @@ var interleaveSpeed = 1000;
 
 var swiper_innermost = new Swiper('.swiper-container-innermost', {
       // passiveListeners: false,
+      touchEventsTarget: 'wrapper',
+
       observer: true,
       observeParents: true,
       speed: interleaveSpeed,
@@ -137,6 +139,8 @@ var swiper_innermost = new Swiper('.swiper-container-innermost', {
 
 var swiper_in = new Swiper('.swiper-container-in', {
       // passiveListeners: false,
+      touchEventsTarget: 'wrapper',
+
       observer: true,
       observeParents: true,
       speed: interleaveSpeed,
@@ -172,6 +176,8 @@ var swiper_in = new Swiper('.swiper-container-in', {
 
 var swiper = new Swiper('.swiper-container', {
       // passiveListeners: false,
+      touchEventsTarget: 'wrapper',
+      
       cssMode: true,
       navigation: {
         nextEl: '.swiper-button-next',

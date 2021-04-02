@@ -175,6 +175,7 @@ var swiper_in = new Swiper('.swiper-container-in', {
 var swiper = new Swiper('.swiper-container', {
       // passiveListeners: false,
       threshold: 5,
+      shortSwipes: false,
 
       cssMode: true,
       touchEventsTarget: 'wrapper',

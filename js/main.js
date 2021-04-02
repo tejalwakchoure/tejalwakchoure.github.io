@@ -174,9 +174,10 @@ var swiper_in = new Swiper('.swiper-container-in', {
 
 var swiper = new Swiper('.swiper-container', {
       // passiveListeners: false,
-      // threshold: 5000,
-      // shortSwipes: false,
-      // longSwipesMs: 5000,
+      threshold: 5000,
+      shortSwipes: false,
+      longSwipes: false,
+      longSwipesMs: 5000,
 
       cssMode: true,
       touchEventsTarget: 'wrapper',
@@ -196,7 +197,6 @@ var swiper = new Swiper('.swiper-container', {
       virtualTranslate: true,
     });
 
-
 // Toggle visibility of project carousel
 function toggleOnPortfolioLink(num) {
     if(num == -1) {
@@ -207,8 +207,6 @@ function toggleOnPortfolioLink(num) {
         $('#portfolio').show().siblings('section').hide();
         num = 6 - num;
         document.getElementById("portfolio-item-"+num).scrollIntoView(true);
-
-        swiper.update();
     }
     else if($('#portfolio').css('display')!='none') {
         $('#portfolioDetails').show().siblings('section').hide();
@@ -219,9 +217,6 @@ function toggleOnPortfolioLink(num) {
         swiper_innermost.update();
         swiper_innermost.slideTo(num);
         document.getElementById('work').scrollIntoView(true);
-
-
-        swiper.update();
     }
     else {
     }
@@ -257,8 +252,6 @@ $(window).on("load", function() {
     var dir2 = 'assets/img/portfolio/';
     var images2 = ['project-1.jpg', 'project-2.jpg', 'project-3.jpg', 'project-4.jpg', 'project-5.jpg', 'project-6.jpg'];
     preloadImages(dir2, images2);
-
-    swiper.update();
 });
 
 $(window).on("load resize scroll", function() {

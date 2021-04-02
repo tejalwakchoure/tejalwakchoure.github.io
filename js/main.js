@@ -174,9 +174,9 @@ var swiper_in = new Swiper('.swiper-container-in', {
 
 var swiper = new Swiper('.swiper-container', {
       // passiveListeners: false,
-      threshold: 5000,
-      shortSwipes: false,
-      longSwipesMs: 5000,
+      // threshold: 5000,
+      // shortSwipes: false,
+      // longSwipesMs: 5000,
 
       cssMode: true,
       touchEventsTarget: 'wrapper',
@@ -196,7 +196,6 @@ var swiper = new Swiper('.swiper-container', {
       virtualTranslate: true,
     });
 
-swiper.update();
 
 // Toggle visibility of project carousel
 function toggleOnPortfolioLink(num) {
@@ -258,6 +257,8 @@ $(window).on("load", function() {
     var dir2 = 'assets/img/portfolio/';
     var images2 = ['project-1.jpg', 'project-2.jpg', 'project-3.jpg', 'project-4.jpg', 'project-5.jpg', 'project-6.jpg'];
     preloadImages(dir2, images2);
+
+    swiper.update();
 });
 
 $(window).on("load resize scroll", function() {

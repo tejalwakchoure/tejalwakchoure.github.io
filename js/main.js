@@ -178,6 +178,8 @@ var swiper = new Swiper('.swiper-container', {
       shortSwipes: false,
       longSwipes: false,
       longSwipesMs: 5000,
+      allowTouchMove: false,
+      touchRatio: 0,
 
       cssMode: true,
       touchEventsTarget: 'wrapper',

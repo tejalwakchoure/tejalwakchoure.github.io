@@ -174,10 +174,11 @@ var swiper_in = new Swiper('.swiper-container-in', {
 
 var swiper = new Swiper('.swiper-container', {
       // passiveListeners: false,
-      threshold: 5,
+      threshold: 5000,
       shortSwipes: false,
+      longSwipesMs: 5000,
 
-      // cssMode: true,
+      cssMode: true,
       touchEventsTarget: 'wrapper',
       simulateTouch: false,
       navigation: {

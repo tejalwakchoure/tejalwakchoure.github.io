@@ -909,6 +909,7 @@ header mark {
 	position: relative !important;
 	width: auto;
 	height: auto;
+	outline: 0;
 }
 .swiper-pagination {
 	display: inline-table; 
@@ -932,6 +933,9 @@ header mark {
 }
 .swiper-pagination-bullet-active {
 	background: #{{ site.color.heading }};
+}
+.swiper-button-prev:hover, .swiper-button-next:hover {
+	color: #{{ site.color.text }};
 }
 .swiper-button-prev:after, .swiper-container-rtl .swiper-button-next:after,
 .swiper-button-next:after, .swiper-container-rtl .swiper-button-prev:after {

@@ -214,17 +214,16 @@ function toggleOnPortfolioLink(num) {
     else if($('#portfolio').css('display')!='none') {
         $('#portfolioDetails').show().siblings('section').hide();
 
+
+        swiper.update();
+        swiper.slideTo(num);
+        console.log("sliding to #",num);
+
+
         swiper.updateProgress();
         swiper.updateSize();
         swiper.updateSlides();
         swiper.updateSlidesClasses();
-
-
-        swiper.update();
-        swiper.slideTo(num);
-
-
-
         swiper.navigation.update();  
         swiper.pagination.update();  
 

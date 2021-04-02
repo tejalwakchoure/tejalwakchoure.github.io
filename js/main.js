@@ -196,6 +196,8 @@ var swiper = new Swiper('.swiper-container', {
       virtualTranslate: true,
     });
 
+swiper.update();
+
 // Toggle visibility of project carousel
 function toggleOnPortfolioLink(num) {
     if(num == -1) {
@@ -216,6 +218,9 @@ function toggleOnPortfolioLink(num) {
         swiper_innermost.update();
         swiper_innermost.slideTo(num);
         document.getElementById('work').scrollIntoView(true);
+
+
+        swiper.update();
     }
     else {
     }

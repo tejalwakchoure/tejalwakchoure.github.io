@@ -174,7 +174,7 @@ var swiper_in = new Swiper('.swiper-container-in', {
 
 var swiper = new Swiper('.swiper-container', {
       // passiveListeners: false,
-
+      
       // threshold: 5000,
       // shortSwipes: false,
       // longSwipes: false,
@@ -213,23 +213,8 @@ function toggleOnPortfolioLink(num) {
     }
     else if($('#portfolio').css('display')!='none') {
         $('#portfolioDetails').show().siblings('section').hide();
-
-
         swiper.update();
         swiper.slideTo(num);
-        console.log("sliding to #",num);
-
-
-        swiper.updateProgress();
-        swiper.updateSize();
-        swiper.updateSlides();
-        swiper.updateSlidesClasses();
-        swiper.navigation.update();  
-        swiper.pagination.update();  
-
-
-
-
         swiper_in.update();
         swiper_in.slideTo(num);
         swiper_innermost.update();

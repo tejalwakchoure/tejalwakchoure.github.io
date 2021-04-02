@@ -931,6 +931,9 @@ header mark {
 	margin-right: 10px;
 	color: #{{ site.color.accent }};
 }
+.swiper-pagination-bullet {
+	outline: 0;
+}
 .swiper-pagination-bullet-active {
 	background: #{{ site.color.heading }};
 }

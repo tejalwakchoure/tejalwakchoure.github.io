@@ -449,8 +449,14 @@ header img {
     object-position: center;
     max-width: none !important;
     width: 170%;
-    margin-top: 15%;
-    margin-left: -70%;
+    /*margin-top: 15%;
+    margin-left: -70%;*/
+
+    
+    margin-top: 0;
+    margin-left: -40%;
+
+
     height: 100% !important;
     transform: scaleX(-1);
 }

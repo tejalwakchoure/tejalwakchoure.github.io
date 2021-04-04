@@ -825,9 +825,13 @@ header mark {
 	padding: 5vw 0;
 }
 
+#portfolioDetails .item-details {
+	font-size: 15px;
+}
+
 .slide-link {
 	float: left; 
-	padding: 8px 24px; 
+	padding: 5px 20px; 
 	background: #{{ site.color.accent }}; 
 	color: #{{ site.color.text_light }};
 }
@@ -838,7 +842,6 @@ header mark {
 .slide-link.active {
 	color: #{{ site.color.gray }};
 }
-
 
 .swiper-container-innermost {
 	display: grid;
@@ -889,14 +892,14 @@ header mark {
 	background: transparent;
 }
 .swiper-slide #img-positioning-row {
-	height: 450px; 
+	height: 400px; 
 	width: 100%;
 }
 .swiper-slide #content-row {
 	display: flex;
 	flex-direction: column; 
 	position: relative; 
-	padding: 10px 0;
+	padding-top: 10px;
 }
 .swiper-slide #content {
 	padding-left: 3%;
@@ -907,8 +910,8 @@ header mark {
 .swiper-slide #content p {
 	font-size: 20px; 
 	text-align: left; 
-	margin-top: 5%;
-	margin-bottom: 3.5%;
+	/*margin-top: 5%;*/
+	margin: 3.5% 0;
 }
 .swiper-slide #content a {
 	text-decoration: underline; 
@@ -942,7 +945,7 @@ header mark {
 .swiper-pagination {
 	display: inline-table; 
 	left: 2.5%;
-	margin: 10px 0;
+	margin-top: 10px;
 }
 .swiper-navigation {
 	display: inline-table; 

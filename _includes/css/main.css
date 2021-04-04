@@ -609,10 +609,10 @@ header mark {
 	object-fit: cover;
     height: 400px; 
     width: 400px; 
-    /*border-radius: 50%;*/
+    border-radius: 50%;
     /*box-shadow: 5px 8px 0px 5px #{{ site.color.gray_dark }};*/
     margin-top: 7.5vh;
-    box-shadow: 0 0 0px 5px #{{ site.color.gray_dark }};
+    /*box-shadow: 0 0 0px 5px #{{ site.color.gray_dark }};*/
 }
 #about .row {
 	display: flex; 
@@ -1142,7 +1142,7 @@ footer .footer-below {
 	border-radius: 0;   
 	font-size: 1.25em;   
 	background: 0 0;    
-	box-shadow: none!important; 
+	box-shadow: none !important; 
 	resize: none;   
 }   
 

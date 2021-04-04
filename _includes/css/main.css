@@ -46,11 +46,13 @@ body {
 }
 
 #bkg-page {
-	width: 80%;
+	/*width: 80%;*/
+	width: 70%;
     height: 90.725%;
     background: #{{ site.color.backgroundcol }};
     position: absolute;
-    margin: 10%;
+    /*margin: 10%;*/
+    margin: 10% 15%;
     z-index: 0;
 }
 @media(max-width:768px) {
@@ -587,7 +589,7 @@ header mark {
 #about .img_div {
 	margin: auto;
 	padding: 25px 25px 25px 0;
-	text-align: right;
+	/*text-align: right;*/
 }
 #about img {
 	margin: auto; 
@@ -596,7 +598,8 @@ header mark {
     width: 400px; 
     /*border-radius: 50%;*/
     /*box-shadow: 5px 8px 0px 5px #{{ site.color.gray_dark }};*/
-    box-shadow: 0 8px 0px 5px #{{ site.color.gray_dark }};
+    margin-top: 10vh;
+    box-shadow: 0 0 0px 5px #{{ site.color.gray_dark }};
 }
 #about .row {
 	display: flex; 

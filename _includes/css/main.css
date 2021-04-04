@@ -47,12 +47,12 @@ body {
 
 #bkg-page {
 	/*width: 80%;*/
-	width: 70%;
+	width: 75%;
     height: 90.725%;
     background: #{{ site.color.backgroundcol }};
     position: absolute;
     /*margin: 10%;*/
-    margin: 10% 15%;
+    margin: 10% 12.5%;
     z-index: 0;
 }
 @media(max-width:768px) {
@@ -721,7 +721,8 @@ header mark {
 }
 
 #portfolio {
-	padding: 5vw 0;
+	/*padding: 5vw 0;*/
+	padding: 5vw 20px;
 }
 
 #portfolio .portfolio-link-wrapper
@@ -1215,8 +1216,7 @@ form .row:first-child .floating-label-form-group {
   	width: 100%;
   	/*max-width: calc(1000px + 1.5em);*/
   	margin: auto;
-  	/*padding: 0;*/
-  	padding: 20px;
+  	padding: 0;
 }
 
 .masonry-item {

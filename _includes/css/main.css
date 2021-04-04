@@ -594,12 +594,16 @@ header mark {
 	object-fit: cover;
     height: 400px; 
     width: 400px; 
-    border-radius: 50%;
-    box-shadow: 5px 8px 0px 5px #{{ site.color.gray_dark }};
+    /*border-radius: 50%;*/
+    /*box-shadow: 5px 8px 0px 5px #{{ site.color.gray_dark }};*/
+    box-shadow: 0 8px 0px 5px #{{ site.color.gray_dark }};
 }
 #about .row {
 	display: flex; 
 	flex-flow: row wrap;
+}
+#about .col-md-6 {
+	padding: 0 50px;
 }
 
 

@@ -47,8 +47,9 @@ body {
 
 #bkg-page {
 	/*width: 80%;*/
+    /*height: 90.725%;*/
 	width: 75%;
-    height: 90.725%;
+    height: 91.65%;
     background: #{{ site.color.backgroundcol }};
     position: absolute;
     /*margin: 10%;*/

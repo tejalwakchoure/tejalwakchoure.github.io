@@ -436,14 +436,12 @@ header img {
     margin-top: 5%;
     width: 100vw;
     height: auto !important;
-    transform: scaleX(-1);
 
 
     margin-left: -30vw;
     margin-top: 5vw;
     width: 80vw;
     height: 100% !important;
-    transform: scaleX(-1);
 
 
 
@@ -459,9 +457,17 @@ header img {
     margin-top: 0;
     margin-left: -45%;
 
-
     height: 100% !important;
-    transform: scaleX(-1);
+
+
+    max-width: none !important;
+    width: 100%;
+    margin-left: 0;
+    height: 100% !important;
+    margin-top: 25%;
+}
+
+
 }
 
 .hor_parallax_right {
@@ -493,7 +499,7 @@ header .title {
 	padding-top: 0;
 
     padding-top: 13.25%;
-    padding-top: 20%;
+    /*padding-top: 20%;*/
 
     position: relative;
 }

@@ -1225,7 +1225,7 @@ form .row:first-child .floating-label-form-group {
     height: 500px;
     margin: 0;
     /*padding: 0.5em;*/
-  	padding: 35px;
+  	padding: 15px;
 }
 
 .masonry-item:nth-child(1),

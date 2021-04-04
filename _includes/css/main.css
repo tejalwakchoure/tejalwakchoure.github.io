@@ -367,7 +367,7 @@ hr.primary{
 	box-sizing: border-box; 
 }   
 section {   
-	padding: 6vh 6vw;
+	padding: 50vh 6vw 0 6vw;
 	width: 100%;    
 	display: table; 
 	margin: 0;  
@@ -464,8 +464,12 @@ header img {
     width: 100%;
     margin-left: 0;
     height: 100% !important;
-    margin-top: 25%;
-    margin-left: -10px;
+    /*margin-top: 25%;*/
+    /*margin-left: -10px;*/
+    margin-left: -100px;
+
+    height: 600px !important;
+    width: 600px !important;
 }
 
 
@@ -514,7 +518,7 @@ header .intro-text {
 
 
 	/*margin-left: 5%;*/
-	margin-left: 7.5%;
+	margin-left: 10%;
 }
 
 header .intro-text .name {
@@ -607,7 +611,7 @@ header mark {
     width: 400px; 
     /*border-radius: 50%;*/
     /*box-shadow: 5px 8px 0px 5px #{{ site.color.gray_dark }};*/
-    margin-top: 10vh;
+    margin-top: 7.5vh;
     box-shadow: 0 0 0px 5px #{{ site.color.gray_dark }};
 }
 #about .row {

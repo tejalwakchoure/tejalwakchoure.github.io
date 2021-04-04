@@ -997,7 +997,7 @@ header mark {
 }
 
 .overlay {
-	font-size: 1.25em; 
+	font-size: 20px;
 	font-weight: 300; 
 	text-transform: uppercase;
 	position: absolute;
@@ -1215,7 +1215,8 @@ form .row:first-child .floating-label-form-group {
   	width: 100%;
   	/*max-width: calc(1000px + 1.5em);*/
   	margin: auto;
-  	padding: 0;
+  	/*padding: 0;*/
+  	padding: 20px;
 }
 
 .masonry-item {

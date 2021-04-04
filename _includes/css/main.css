@@ -917,8 +917,12 @@ header mark {
 	text-decoration: underline; 
 }
 .swiper-slide #main-img {
-	width: 600px;
-    height: 200px;
+	/*width: 600px;
+    height: 200px;*/
+    width: 500px;
+    height: 150px;
+
+
     object-fit: cover;
     margin: 0 auto;
     text-align: center;
@@ -928,8 +932,12 @@ header mark {
 	transform: translateX(-50%);
 }
 .swiper-slide #img-on-top {
-	height: 300px;
-    width: 400px;
+	/*width: 400px;
+	height: 300px;*/
+    width: 300px;
+    height: 200px;
+
+
     object-fit: cover;
     position: absolute;
     left: 50%;

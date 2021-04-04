@@ -893,14 +893,14 @@ header mark {
 	background: transparent;
 }
 .swiper-slide #img-positioning-row {
-	height: 400px; 
+	height: 300px; 
 	width: 100%;
 }
 .swiper-slide #content-row {
 	display: flex;
 	flex-direction: column; 
 	position: relative; 
-	padding-top: 10px;
+	padding-top: 12px;
 }
 .swiper-slide #content {
 	padding-left: 3%;
@@ -1094,7 +1094,7 @@ footer .footer-col {
 }   
 
 footer .footer-below {  
-	padding: 12px 0;    
+	padding: 40px 0 10px 0;
 	color: #{{ site.color.text }};
 	background-color: transparent;
 }   

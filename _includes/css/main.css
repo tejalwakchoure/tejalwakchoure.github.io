@@ -120,7 +120,8 @@ body {
 }
 
 p { 
-	font-size: 20px;
+	/*font-size: 20px;*/
+	font-size: 18px;
 }   
 
 p.small {   
@@ -129,7 +130,8 @@ p.small {
 }
 
 p.large {   
-	font-size: 35px;    
+	/*font-size: 35px;*/
+	font-size: 30px;    
 }   
 
 a,  
@@ -827,9 +829,9 @@ header mark {
 	padding: 5vw 0;
 }
 
-#portfolioDetails .item-details {
+/*#portfolioDetails .item-details {
 	font-size: 13px;
-}
+}*/
 
 .slide-link {
 	float: left; 

@@ -41,26 +41,28 @@
 								{% if post.description %}
 								<p>{{ post.description }}</p>
 								{% endif %}
-								<ul class="list-inline item-details">
-									{% if post.project-date %}
-									<li>Date:
-										<span>{{ post.project-date }}
-										</span>
-									</li>
-									{% endif %}
-									{% if post.category %}
-									<li>Area:
-										<span>{{ post.category }}
-										</span>
-									</li>
-									{% endif %}
-									{% if post.github-link %}
-									<li>Code:
-										<span><a href={{ post.github-link }} target="_blank">GitHub Repo</a>
-										</span>
-									</li>
-									{% endif %}
-								</ul>
+								<p class="small">
+									<ul class="list-inline item-details">
+										{% if post.project-date %}
+										<li>Date:
+											<span>{{ post.project-date }}
+											</span>
+										</li>
+										{% endif %}
+										{% if post.category %}
+										<li>Area:
+											<span>{{ post.category }}
+											</span>
+										</li>
+										{% endif %}
+										{% if post.github-link %}
+										<li>Code:
+											<span><a href={{ post.github-link }} target="_blank">GitHub Repo</a>
+											</span>
+										</li>
+										{% endif %}
+									</ul>
+								</p>
 							</div>
 						</div>
 					</div>

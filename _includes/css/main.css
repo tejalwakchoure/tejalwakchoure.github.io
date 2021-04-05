@@ -526,18 +526,24 @@ header .intro-text {
 }
 
 header .intro-text .name {
-	font-size: 5.5vw; 
 	font-weight: 700;     
 	letter-spacing: 1px;
-	text-transform: capitalize;
+	/*text-transform: capitalize;*/
 	color: #{{ site.color.accent }};
-	font-family: cervanttisReg, 'noahgThin', 'Lato', sans-serif;
+	/*font-size: 5.5vw; 
+	font-family: cervanttisReg, 'noahgThin', 'Lato', sans-serif;*/
+
+	font-size: 8.5vw;
+	line-height: 10vw;
+	letter-spacing: 5px;
+	text-transform: lowercase;
+	font-family: 'noahgThin', 'Lato', sans-serif;
 }   
 
 
 header .intro-text .skills {    
-	font-size: 3vw;
-	font-weight: 400; 
+	font-size: 2.5vw;
+	font-weight: 100; 
 	font-family: 'noahgThin', 'Lato', sans-serif;
 	text-transform: lowercase;
 	color: #{{ site.color.text }};
@@ -593,8 +599,8 @@ header mark {
 
 #about .hello {
 	padding: 2vh 0;
-	font-weight: 500;
-	font-size: 70px;
+	font-weight: 100;
+	font-size: 60px;
 	color: #{{ site.color.heading }}; 
 }
 #about .main {

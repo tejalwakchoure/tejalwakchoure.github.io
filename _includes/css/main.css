@@ -473,7 +473,8 @@ header img {
     margin-left: -40px;
 
     height: 600px !important;
-    width: 600px !important;
+    /*width: 600px !important;*/
+    width: 45vw !important;
 }
 
 
@@ -568,6 +569,7 @@ header mark {
     	height: 100%;
     	margin: auto;
     	padding-top: 100px;
+    	height: 500px !important;
 	}
 
 	header .img_div {

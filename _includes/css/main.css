@@ -684,9 +684,10 @@ header mark {
   font-weight: 100;
   border-top: 1px solid #{{ site.color.text }};
 }
-.status h5 {
+.status h6 {
   padding-top: 10px;
-  line-height: 125%;
+  /*line-height: 125%;*/
+  line-height: 1.4;
 }
 .status:before {
   content: "";
@@ -724,7 +725,7 @@ header mark {
 		min-width: 100px;
 	}
 
-	.status h5 {
+	.status h6 {
 	  padding-top: 20px;
 	  font-size: 0.875rem;
 	}

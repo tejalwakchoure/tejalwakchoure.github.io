@@ -124,12 +124,12 @@ p {
 	font-size: 18px;
 }   
 
-p.small {   
+.small {   
 	font-size: 13px;  
 	font-weight: unset;  
 }
 
-p.large {   
+.large {   
 	/*font-size: 35px;*/
 	font-size: 30px;    
 }   
@@ -828,10 +828,6 @@ header mark {
 	display: none;
 	padding: 5vw 0;
 }
-
-/*#portfolioDetails .item-details {
-	font-size: 13px;
-}*/
 
 .slide-link {
 	float: left; 

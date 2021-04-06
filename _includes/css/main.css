@@ -625,7 +625,7 @@ header mark {
 @media ( max-width: 768px ) {
 	#about .img_div {
 		text-align: center;
-		padding: 10vh 0 2vh 0;
+		padding: 10vh 0 3vh 0;
 	}
 	#about img {
 	    height: 250px;
@@ -633,6 +633,7 @@ header mark {
 	}
 	#about .hello {
         font-size: 50px;
+        padding-bottom: 0;
 	}
 	.timeline {
 		flex-direction: column;

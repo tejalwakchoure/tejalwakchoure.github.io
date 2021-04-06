@@ -416,8 +416,8 @@ header img {
     margin-top: 0;
     margin-left: -40px;
     max-width: none !important;
-    width: 45vw !important;
-    height: 600px !important;
+    width: 45vw;
+    height: 600px;
 }
 
 .hor_parallax_right {
@@ -489,11 +489,9 @@ header mark {
 	}
 
 	header img {
-		width: 100%;
-    	height: 100%;
     	margin: auto;
     	padding-top: 100px;
-    	height: 500px !important;
+    	height: 500px;
 	}
 
 	header .img_div {

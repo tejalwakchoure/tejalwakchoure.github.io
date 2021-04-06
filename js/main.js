@@ -92,7 +92,6 @@ function preloadImages(dir, imageArray, index=0) {
           preloadImages(dir, imageArray, index + 1);
       }
       img.src = dir + imageArray[index];
-      console.log(img.src+' preloaded');
     }
 }
 
@@ -249,7 +248,7 @@ $('.navbar-collapse ul li a').click(function() {
 
 $(window).on("load", function() {
     var dir1 = 'assets/img/';
-    var images1 = ['desk.jpg', 'header_2_HD.jpg']
+    var images1 = ['new_header.png', 'header2copy.png']
     preloadImages(dir1, images1);
 
     var dir2 = 'assets/img/portfolio/';

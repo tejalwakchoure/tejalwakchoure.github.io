@@ -5,9 +5,9 @@ function fadeInChildren(parent, base_delay) {
         $(this).css({opacity: 0.0, visibility: "visible"}).delay(base_delay+(500*index)).animate({opacity: 1.0}, 500);
     });
 }
+
 $(document).ready(function() {
     $('#body-container').css({display: 'none'});
-
     var counter = 0;
     var outerInterval = setInterval(function(){
       $("#preloader .container #wrapper #count").html(counter);
@@ -17,14 +17,13 @@ $(document).ready(function() {
         var innerInterval = setInterval(function() {
             if(document.readyState === 'complete') {
               clearInterval(innerInterval);
-              
+
               // Animate components on and off the screen on loading
               $('#preloader').slideUp(1000);
               $('#body-container').fadeIn(1000);
               fadeInChildren('#body-container header',1000);
               fadeInChildren('#body-container header .intro-text',1000);
-              // $('#preloader #brand').css({'transform' : 'translate(-50vw, -30vh) scale(0.4, 0.4)'});
-              
+
               // Fire up other elements
               startTime();
               addPortfolioParallax();
@@ -73,9 +72,6 @@ function startTime() {
     m = checkTime(m);
     mth = checkTime(mth);
     day = checkTime(day);
-    // var month = today.toLocaleString('default', { month: 'short' });   
-    // var period = (h<12)? "AM":"PM";
-    // h = (h<13)? h:(h-12);
     $('.navbar-text').html(day + "/" + mth  +  "<br>" + h + ":" + m);
     var t = setTimeout(startTime, 500);
 }
@@ -100,12 +96,9 @@ var interleaveOffset = 0.5;
 var interleaveSpeed = 1000;
 
 var swiper_innermost = new Swiper('.swiper-container-innermost', {
-      // passiveListeners: false,
-
       observer: true,
       observeParents: true,
       speed: interleaveSpeed,
-      // virtualTranslate: true,
       watchSlidesProgress: true,
       on: {
         progress: function() {
@@ -136,12 +129,9 @@ var swiper_innermost = new Swiper('.swiper-container-innermost', {
     });
 
 var swiper_in = new Swiper('.swiper-container-in', {
-      // passiveListeners: false,
-
       observer: true,
       observeParents: true,
       speed: interleaveSpeed,
-      // virtualTranslate: true,
       watchSlidesProgress: true,
       on: {
         progress: function() {
@@ -172,15 +162,6 @@ var swiper_in = new Swiper('.swiper-container-in', {
     });
 
 var swiper = new Swiper('.swiper-container', {
-      // passiveListeners: false,
-      
-      // threshold: 5000,
-      // shortSwipes: false,
-      // longSwipes: false,
-      // longSwipesMs: 5000,
-      // allowTouchMove: false,
-      // touchRatio: 0,
-
       cssMode: true,
       touchEventsTarget: 'wrapper',
       simulateTouch: false,
@@ -256,23 +237,8 @@ $(window).on("load", function() {
     preloadImages(dir2, images2);
 });
 
+// Horizontal header parallax
 $(window).on("load resize scroll", function() {
-    // Change brand properties when in/out of Header
-    //   window.loaded = true;
-    //   // if($('header').position().top <= $(window).scrollTop() && ($('header').position().top + $('header').outerHeight()) > $(window).scrollTop()) {
-    //   if($('header').offset().top <= $(window).scrollTop() && ($('header').offset().top + $('header').outerHeight()) > $(window).scrollTop()) {
-    //      $('.sidenav .page-scroll .navbar-brand').css({
-    //             'font-size' : '4.5em',
-    //             'margin' : '50px 10px 40px 0px'
-    //         });
-    //   } else {
-    //     $('.sidenav .page-scroll .navbar-brand').css({
-    //             'font-size' : '2em',
-    //             'margin' : '0'
-    //         });
-    //   }
-
-    // Horizontal header parallax
     var windowTop = $(window).scrollTop();
     var elementTop = $('header').offset().top;
     var currentpos = -10;

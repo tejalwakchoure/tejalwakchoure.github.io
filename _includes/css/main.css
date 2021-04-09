@@ -151,6 +151,7 @@ p {
 	#preloader #wrapper {
 		height: 3.5em;
 	    width: 3.5em;
+	    font-weight: 300;
 	}
 
 	#preloader #brand {

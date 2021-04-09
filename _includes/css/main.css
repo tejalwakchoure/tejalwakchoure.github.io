@@ -128,15 +128,18 @@ p {
 
 @media(max-width:768px) {
 	p { 
-		font-size: 16px;
+		/*font-size: 16px;*/
+		font-size: 1em;
 	}   
 
 	.small {   
-		font-size: 12px;  
+		/*font-size: 12px;  */
+		font-size: 0.75em;  
 	}
 
 	.large {   
-		font-size: 25px;    
+		/*font-size: 25px;    */
+		font-size: 1.5em;    
 	} 
 }
 

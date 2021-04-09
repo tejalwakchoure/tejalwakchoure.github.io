@@ -87,30 +87,30 @@ body {
 	display: flex; 
 	flex-direction: row; 
 	align-items: center;
-	height: 6em; 
-	width: 6em; 
+	height: 4.5em; 
+	width: 4.5em; 
 	min-width: fit-content; 
-	padding: 1em; 
-	border-radius: 50%; 
-	border: 0.5px solid #{{ site.color.text }};
+	padding: 0.5em; 
+	/*s*/der: 0.5px solid #{{ site.color.text }};
 }
 
 #preloader #brand {
-	font-size: 7.35em; 
+	font-size: 4.5em; 
 	font-weight: 100;
 	letter-spacing: -0.08em; 
 	margin: auto auto 0 auto;
+	padding-top: 5%;
 	font-family: 'Raleway','Montserrat',sans-serif;
 }
 
 #preloader #percent {
-	font-size: 1em; 
+	font-size: 0.8em; 
 	padding-right: 0.1em; 
 	margin: auto;
 }
 
 #preloader #count {
-	font-size: 1.75em; 
+	font-size: 1.5em; 
 	margin: auto;
 }
 
@@ -143,6 +143,24 @@ p {
 	.large {   
 		font-size: 25px;    
 	} 
+	#preloader #wrapper {
+		height: 3.5em;
+	    width: 3.5em;
+	    padding: 0.5em;
+	}
+
+	#preloader #brand {
+		font-size: 4.5em;
+	}
+
+	#preloader #percent {
+		font-size: 0.75em; 
+		padding-right: 0;
+	}
+
+	#preloader #count {
+		font-size: 1em; 
+	}
 }
 
 a,  

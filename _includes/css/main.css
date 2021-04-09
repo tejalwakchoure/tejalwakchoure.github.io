@@ -53,7 +53,9 @@ body {
 }
 @media(max-width:768px) {
 	#bkg-page {
+		width: auto;
 		height: 94.325%;
+		margin: 5%;
 	}
 }
 

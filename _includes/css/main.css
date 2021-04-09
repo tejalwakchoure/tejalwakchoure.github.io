@@ -130,6 +130,7 @@ p {
 	p { 
 		/*font-size: 16px;*/
 		font-size: 1em;
+		width: auto;
 	}   
 
 	.small {   
@@ -631,6 +632,7 @@ header mark {
 	#about .img_div {
 		text-align: center;
 		padding: 10vh 0 3vh 0;
+		/*width: auto;*/
 	}
 	#about img {
 	    height: 250px;

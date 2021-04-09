@@ -18,15 +18,15 @@ $(document).ready(function() {
             if(document.readyState === 'complete') {
               clearInterval(innerInterval);
 
-              // Animate components on and off the screen on loading
-              $('#preloader').slideUp(1000);
-              $('#body-container').fadeIn(1000);
-              fadeInChildren('#body-container header',1000);
-              fadeInChildren('#body-container header .intro-text',1000);
+              // // Animate components on and off the screen on loading
+              // $('#preloader').slideUp(1000);
+              // $('#body-container').fadeIn(1000);
+              // fadeInChildren('#body-container header',1000);
+              // fadeInChildren('#body-container header .intro-text',1000);
 
-              // Fire up other elements
-              startTime();
-              addPortfolioParallax();
+              // // Fire up other elements
+              // startTime();
+              // addPortfolioParallax();
             }
         }, 10);
       }

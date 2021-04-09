@@ -26,7 +26,7 @@ html,body
 		font-size: 4em;
 	}
 	.fa-angle-down {
-		font-size: 2em;
+		font-size: 2em !important;
 	}
 }
 
@@ -134,17 +134,14 @@ p {
 @media(max-width:768px) {
 	p { 
 		font-size: 16px;
-		/*font-size: 1em;*/
 	}   
 
 	.small {   
 		font-size: 12px;  
-		/*font-size: 0.75em;  */
 	}
 
 	.large {   
 		font-size: 25px;    
-		/*font-size: 1.5em;    */
 	} 
 }
 
@@ -398,13 +395,15 @@ section h2 {
 
 @media(max-width:768px) {   
 	section {   
-		/*padding: 75px 5vw;*/
 		padding: 6%;
     	table-layout: fixed;
 	}
 	section.first { 
 		padding-top: 75px;  
 	}   
+	section h2 {    
+		font-size: 2em; 
+	}
 }   
 
 header {    
@@ -508,7 +507,7 @@ header mark {
 
 	header .img_div {
 		width: 100%;
-	}
+	} 
 
 	header .title {
 		width: 100%;
@@ -521,7 +520,7 @@ header mark {
 	}
 
 	header .intro-text .name { 
-		font-size: 9.5vw;
+		font-size: 10vw;
 	}   
 
 	header .intro-text .skills {    
@@ -643,7 +642,6 @@ header mark {
 	#about .img_div {
 		text-align: center;
 		padding: 10vh 0 3vh 0;
-		/*width: auto;*/
 	}
 	#about img {
 	    height: 250px;
@@ -955,6 +953,9 @@ header mark {
 		height: 300px;
 		width: 350px;
 		margin: auto;
+	}
+	.swiper-slide #content p {
+		margin: 5% 0;
 	}
 	.swiper-container {
 		width: 100%;

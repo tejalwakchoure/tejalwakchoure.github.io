@@ -135,7 +135,7 @@ p {
 @media(max-width:768px) {
 	header .intro-text .skills,
 	.timestamp {
-		font-family: noahgReg, Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+		/*font-family: noahgReg, Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;*/
 	}
 	p { 
 		font-size: 16px;
@@ -151,21 +151,11 @@ p {
 	#preloader #wrapper {
 		height: 3.5em;
 	    width: 3.5em;
-	    font-weight: 300;
+	    /*font-weight: 300;*/
 	}
-
 	#preloader #brand {
 		font-size: 4em;
 	}
-
-	/*#preloader #percent {
-		font-size: 0.75em; 
-		padding-right: 0;
-	}
-
-	#preloader #count {
-		font-size: 1em; 
-	}*/
 }
 
 a,  

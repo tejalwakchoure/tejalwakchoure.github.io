@@ -23,7 +23,10 @@ html,body
 }
 @media(max-width:768px) {
 	.heading {
-		font-size: 5em;
+		font-size: 4em;
+	}
+	.fa-angle-down {
+		font-size: 2em;
 	}
 }
 
@@ -53,8 +56,8 @@ body {
 }
 @media(max-width:768px) {
 	#bkg-page {
-		width: auto;
-		height: 94.325%;
+		width: 90%;
+		height: 95.3%;
 		margin: 5%;
 	}
 }
@@ -130,19 +133,18 @@ p {
 
 @media(max-width:768px) {
 	p { 
-		/*font-size: 16px;*/
-		font-size: 1em;
-		width: auto;
+		font-size: 16px;
+		/*font-size: 1em;*/
 	}   
 
 	.small {   
-		/*font-size: 12px;  */
-		font-size: 0.75em;  
+		font-size: 12px;  
+		/*font-size: 0.75em;  */
 	}
 
 	.large {   
-		/*font-size: 25px;    */
-		font-size: 1.5em;    
+		font-size: 25px;    
+		/*font-size: 1.5em;    */
 	} 
 }
 
@@ -375,7 +377,8 @@ hr.primary {
 section {   
 	padding: 20vh 6vw 0 6vw;
 	width: 100%;    
-	display: table; 
+	display: table;
+	table-layout: auto; 
 	margin: 0;  
 	min-height: 90% !important; 
 	height: 100vh;
@@ -395,7 +398,9 @@ section h2 {
 
 @media(max-width:768px) {   
 	section {   
-		padding: 75px 5vw;
+		/*padding: 75px 5vw;*/
+		padding: 6%;
+    	table-layout: fixed;
 	}
 	section.first { 
 		padding-top: 75px;  
@@ -496,8 +501,9 @@ header mark {
 
 	header img {
     	margin: auto;
-    	padding-top: 100px;
+    	padding-top: 15%;
     	height: 500px;
+    	width: 75vw;
 	}
 
 	header .img_div {
@@ -515,7 +521,7 @@ header mark {
 	}
 
 	header .intro-text .name { 
-		font-size: 8.5vw;
+		font-size: 9.5vw;
 	}   
 
 	header .intro-text .skills {    
@@ -631,6 +637,9 @@ header mark {
 }
 
 @media ( max-width: 768px ) {
+	#about .col-md-6 {
+		padding: 0 25px;
+	}
 	#about .img_div {
 		text-align: center;
 		padding: 10vh 0 3vh 0;
@@ -946,6 +955,9 @@ header mark {
 		height: 300px;
 		width: 400px;
 		margin: auto;
+	}
+	.swiper-container {
+		width: 100%;
 	}
 }
 

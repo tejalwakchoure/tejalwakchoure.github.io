@@ -100,7 +100,7 @@ body {
 	font-weight: 100;
 	letter-spacing: -0.08em; 
 	margin: auto auto 0 auto;
-	/*padding-top: 5%;*/
+	padding-top: 5%;
 	font-family: 'Raleway','Montserrat',sans-serif;
 }
 
@@ -157,14 +157,14 @@ p {
 		font-size: 4em;
 	}
 
-	#preloader #percent {
+	/*#preloader #percent {
 		font-size: 0.75em; 
 		padding-right: 0;
 	}
 
 	#preloader #count {
 		font-size: 1em; 
-	}
+	}*/
 }
 
 a,  

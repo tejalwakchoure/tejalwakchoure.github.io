@@ -942,7 +942,7 @@ header mark {
 		display: flex;
 	}
 	.swiper-slide #img-positioning-row {
-		height: 325px;
+		height: 350px;
 	}
 	.swiper-slide #content-row {
 		flex-direction: column;
@@ -953,7 +953,7 @@ header mark {
 	}
 	.swiper-slide #main-img {
 		height: 300px;
-		width: 400px;
+		width: 350px;
 		margin: auto;
 	}
 	.swiper-container {

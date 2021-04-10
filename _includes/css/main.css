@@ -1260,6 +1260,6 @@ form .row:first-child .floating-label-form-group {
 
 @media ( max-width: 480px ) {
 	.masonry-item {
-		height: 300px !important;
+		height: 250px !important;
 	}
 }

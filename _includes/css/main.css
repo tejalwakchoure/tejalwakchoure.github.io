@@ -23,9 +23,16 @@ html,body
 	overflow-wrap: normal;
 }
 
+.kill-on-large-devices {
+	display: none !important;
+}
+
 @media(max-width:768px) {
 	.kill-on-small-devices {
 	    display: none !important;
+	}
+	.kill-on-large-devices {
+		display: block !important;
 	}
 	.heading {
 		font-size: 3rem;
@@ -574,6 +581,7 @@ header mark {
 	padding: 2vh 0;
 	font-weight: 100;
 	/*font-size: 60px;*/
+	text-align: left;
 	font-size: 3.75rem;
 	color: #{{ site.color.heading }};
 }
@@ -693,6 +701,10 @@ header mark {
         /*font-size: 50px;*/
         font-size: 3.125rem;
         padding-bottom: 0;
+
+	}
+	#about .main {
+		text-align: justify;
 	}
 	.timeline {
 		flex-direction: column;
@@ -909,7 +921,7 @@ header mark {
     width: 100%;
 }
 .swiper-slide #content p {
-	text-align: left; 
+	text-align: justify; 
 	margin: 3.5% 0;
 }
 .swiper-slide #content a {

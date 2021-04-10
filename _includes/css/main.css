@@ -540,13 +540,14 @@ header mark {
 	}
 
 	header .intro-text {
-		margin: auto;
+		/*margin: auto;*/
 		width: fit-content;
 	}
 
 	header .intro-text .name { 
 		/*font-size: 10vw;*/
 		font-size: 4rem;
+		line-height: 4.5rem;
 	}   
 
 	header .intro-text .skills {    
@@ -554,6 +555,12 @@ header mark {
 		font-size: 2rem;
 	}
 } 
+
+@media ( max-width: 480px ) {
+	header img {
+		height: 300px;
+	}
+}
 
 #about {
 	text-align: justify !important;

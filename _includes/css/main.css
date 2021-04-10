@@ -552,6 +552,7 @@ header mark {
 	color: #{{ site.color.heading }}; 
 }
 #about .main {
+	text-align: left;
 	color: #{{ site.color.accent }};
 }
 #about a {
@@ -559,7 +560,9 @@ header mark {
 }
 #about .img_div {
 	margin: auto;
-	padding: 25px 25px 25px 0;
+	/*padding: 25px 25px 25px 0;*/
+	/*padding-right: 0 !important;*/
+	text-align: center;
 }
 #about img {
 	margin: auto; 

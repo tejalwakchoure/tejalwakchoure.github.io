@@ -37,7 +37,6 @@ html,body
 	.heading {
 		font-size: 3rem;
 		overflow-wrap: break-word;
-		font-weight: bold !important;
 	}
 	.fa-angle-down,
 	.fa-angle-double-left {

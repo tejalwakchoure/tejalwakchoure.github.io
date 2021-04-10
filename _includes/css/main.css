@@ -19,11 +19,11 @@ html,body
 }
 
 .heading {
-	font-size: 6.5em;
-}
+	font-size: 6.5rem;
+}s
 @media(max-width:768px) {
 	.heading {
-		font-size: 4em;
+		font-size: 4rem;
 	}
 	.fa-angle-down {
 		font-size: 2em !important;
@@ -408,7 +408,7 @@ section .container {
 
 section h2 {    
 	margin: 0;  
-	font-size: 2.5em; 
+	font-size: 2.5rem; 
 	color: #{{ site.color.heading }}; 
 }   
 
@@ -421,7 +421,7 @@ section h2 {
 		padding-top: 75px;  
 	}   
 	section h2 {    
-		font-size: 2em; 
+		font-size: 2rem; 
 	}
 }   
 
@@ -554,8 +554,9 @@ header mark {
 #about .hello {
 	padding: 2vh 0;
 	font-weight: 100;
-	font-size: 60px;
-	color: #{{ site.color.heading }}; 
+	/*font-size: 60px;*/
+	font-size: 3.75rem;
+	color: #{{ site.color.heading }};
 }
 #about .main {
 	text-align: left;
@@ -670,7 +671,8 @@ header mark {
     	width: 250px;
 	}
 	#about .hello {
-        font-size: 50px;
+        /*font-size: 50px;*/
+        font-size: 3.125rem;
         padding-bottom: 0;
 	}
 	.timeline {
@@ -814,6 +816,10 @@ header mark {
 	color: #{{ site.color.gray }};
 }
 
+.fa-caret-left, .fa-caret-right {
+	font-size: 2.5em;
+}
+
 .swiper-container-innermost {
 	display: grid;
 	padding: 10px 0;
@@ -827,7 +833,6 @@ header mark {
 	-webkit-transform: translateX(-50%);
 	transform: translateX(-50%);
 }
-
 
 .swiper-container-in {
 	display: grid;
@@ -879,7 +884,6 @@ header mark {
     width: 100%;
 }
 .swiper-slide #content p {
-	font-size: 18px; 
 	text-align: left; 
 	margin: 3.5% 0;
 }
@@ -994,7 +998,8 @@ header mark {
 }
 
 .overlay {
-	font-size: 25px;
+	/*font-size: 25px;*/
+	font-size: 1.563rem;
 	font-weight: 300; 
 	text-transform: uppercase;
 	position: absolute;
@@ -1076,10 +1081,10 @@ footer .footer-below {
 	background: transparent; 
 } 
 
-.btn-outline {  
+/*.btn-outline {  
 	margin-top: 15px;   
 	border: solid 2px #{{ site.color.page_bkg }};
-	font-size: 20px;    
+	font-size: 1.25rem;    
 	color: #{{ site.color.page_bkg }};
 	background: 0 0;    
 	transition: all .3s ease-in-out;    
@@ -1092,7 +1097,7 @@ footer .footer-below {
 	border: solid 2px #{{ site.color.page_bkg }};
 	color: #{{ site.color.text }};   
 	background: #{{ site.color.page_bkg }};
-}   
+}   */
 
 .floating-label-form-group {    
 	position: relative; 
@@ -1167,7 +1172,7 @@ form .row:first-child .floating-label-form-group {
 	outline: 0; 
 }   
 
-.scroll-top {   
+/*.scroll-top {   
 	z-index: 3;  
 	position: fixed;    
 	right: 2%;  
@@ -1180,9 +1185,9 @@ form .row:first-child .floating-label-form-group {
 	width: 50px;    
 	height: 50px;   
 	border-radius: 100%;    
-	font-size: 20px;    
+	font-size: 1.25rem;    
 	line-height: 28px;  
-}   
+}   */
 
 .scroll-top .btn:focus {    
 	outline: 0; 

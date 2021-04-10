@@ -37,6 +37,7 @@ html,body
 	.heading {
 		font-size: 3rem;
 		overflow-wrap: break-word;
+		font-weight: bold !important;
 	}
 	.fa-angle-down,
 	.fa-angle-double-left {
@@ -558,7 +559,8 @@ header mark {
 	header .intro-text .name { 
 		/*font-size: 10vw;*/
 		font-size: 4rem;
-		line-height: 4.5rem;
+		line-height: 5rem;
+		padding-bottom: 0.5rem;
 	}   
 
 	header .intro-text .skills {    

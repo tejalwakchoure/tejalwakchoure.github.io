@@ -1248,6 +1248,9 @@ form .row:first-child .floating-label-form-group {
 }
 
 @media (max-width: 768px) {
+	#contact .row {
+		padding: 0;
+	}
 	#contact a.mail-link:before {
 	  	visibility: visible;
 	  	width: 100%;

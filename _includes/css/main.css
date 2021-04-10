@@ -779,6 +779,12 @@ header mark {
 
 /* 2 columns at medium/large size */
 @media ( max-width: 768px ) {
+	#portfolio {
+	    padding: 5vw 0;
+	}
+	#portfolio .container {
+		padding: 0;
+	}
 	.grid-col:nth-child(2) { 
   		display: none; 
 	}
@@ -1260,6 +1266,6 @@ form .row:first-child .floating-label-form-group {
 
 @media ( max-width: 480px ) {
 	.masonry-item {
-		height: 250px !important;
+		height: 300px !important;
 	}
 }

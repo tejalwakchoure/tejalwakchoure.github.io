@@ -31,7 +31,8 @@ html,body
 		font-size: 3rem;
 		overflow-wrap: break-word;
 	}
-	.fa-angle-down {
+	.fa-angle-down,
+	.fa-angle-double-left {
 		font-size: 1.5em !important;
 	}
 }
@@ -981,16 +982,19 @@ header mark {
 	    letter-spacing: 4px;
 	}
 	.slide-link {
-		padding: 3px 15px;
+		padding: 2px 10px;
 	}
 	/*.swiper-container-innermost {
 		display: none;
 	}*/
+	.swiper-container-in {
+		top: 7.5%;
+	}
 	.swiper-container-in .slide-inner {
 		display: flex;
 	}
 	.swiper-slide #img-positioning-row {
-		height: 350px;
+		height: 300px;
 	}
 	.swiper-slide #content-row {
 		flex-direction: column;
@@ -1009,6 +1013,13 @@ header mark {
 	}
 	.swiper-container {
 		width: 100%;
+	}
+}
+
+@media (max-width: 480px) {
+	.swiper-slide #main-img {
+	    height: 300px;
+	    width: 300px;
 	}
 }
 

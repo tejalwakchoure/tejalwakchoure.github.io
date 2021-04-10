@@ -682,7 +682,7 @@ header mark {
 	}
 	#about .img_div {
 		text-align: center;
-		padding: 10vh 0 3vh 0;
+		padding: 10vh 25px 3vh 25px;
 	}
 	#about img {
 	    height: 250px;
@@ -1273,6 +1273,7 @@ form .row:first-child .floating-label-form-group {
     }
 	.masonry-item {
 		width: 100%;
+		padding: 20px;
 		height: 400px !important;
 	}
 }

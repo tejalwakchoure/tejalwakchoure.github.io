@@ -24,6 +24,9 @@ html,body
 }
 
 @media(max-width:768px) {
+	.kill-on-small-devices {
+	    display: none;
+	}
 	.heading {
 		font-size: 3rem;
 		overflow-wrap: break-word;
@@ -384,9 +387,9 @@ hr.primary {
     	padding: 10px;
     	color: #{{ site.color.accent }} !important;
 	}
-	.sidenav .time-wrapper {
+	/*.sidenav .time-wrapper {
 		display: none;
-	}
+	}*/
 	.sidenav .navbar-collapse {
 		background: #{{ site.color.backgroundcol }};
 	}
@@ -980,9 +983,9 @@ header mark {
 	.slide-link {
 		padding: 3px 15px;
 	}
-	.swiper-container-innermost {
+	/*.swiper-container-innermost {
 		display: none;
-	}
+	}*/
 	.swiper-container-in .slide-inner {
 		display: flex;
 	}

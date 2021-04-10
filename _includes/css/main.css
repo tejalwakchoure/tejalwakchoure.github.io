@@ -25,7 +25,7 @@ html,body
 
 @media(max-width:768px) {
 	.kill-on-small-devices {
-	    display: none;
+	    display: none !important;
 	}
 	.heading {
 		font-size: 3rem;

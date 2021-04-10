@@ -698,6 +698,7 @@ header mark {
     	width: 250px;
     	max-height: none;
     	max-width: none;
+    	margin-top: 0;
 	}
 	#about .hello {
         /*font-size: 50px;*/

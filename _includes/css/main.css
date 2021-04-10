@@ -120,16 +120,19 @@ body {
 }
 
 p { 
-	font-size: 18px;
+	/*font-size: 18px;*/
+	font-size: 1.125rem;
 }   
 
 .small {   
-	font-size: 13px;  
+	/*font-size: 13px;*/
+	font-size: 0.813rem;
 	font-weight: unset;  
 }
 
 .large {   
-	font-size: 30px;    
+	/*font-size: 30px;    */
+	font-size: 1.875rem;    
 }
 
 @media(max-width:768px) {
@@ -138,15 +141,18 @@ p {
 		/*font-family: noahgReg, Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;*/
 	}
 	p { 
-		font-size: 16px;
+		/*font-size: 16px;*/
+		font-size: 1rem;
 	}   
 
 	.small {   
-		font-size: 12px;  
+		/*font-size: 12px;  */
+		font-size: 0.75rem;  
 	}
 
 	.large {   
-		font-size: 25px;    
+		/*font-size: 25px;*/
+		font-size: 1.563rem;
 	} 
 	#preloader #wrapper {
 		height: 3.5em;

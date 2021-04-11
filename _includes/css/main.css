@@ -876,7 +876,6 @@ header mark {
 
 .slide-link {
 	float: left; 
-	padding: 5px 20px; 
 	color: #{{ site.color.accent }} !important;
 }
 
@@ -1042,7 +1041,7 @@ header mark {
 		display: none;
 	}*/
 	.swiper-container-in {
-		top: 7.5%;
+		top: 9.5%;
 	}
 	.swiper-container-in .slide-inner {
 		display: flex;

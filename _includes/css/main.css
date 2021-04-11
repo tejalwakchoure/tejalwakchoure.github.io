@@ -20,7 +20,7 @@ html,body
 
 .heading {
 	font-size: 6.5rem;
-	overflow-wrap: normal;
+	/*overflow-wrap: normal;*/
 }
 
 .kill-on-large-devices {
@@ -36,7 +36,7 @@ html,body
 	}
 	.heading {
 		font-size: 3rem;
-		overflow-wrap: break-word;
+		/*overflow-wrap: break-word;*/
 	}
 	.fa-angle-down,
 	.fa-angle-double-left {
@@ -167,7 +167,7 @@ p {
 	.large {   
 		/*font-size: 25px;*/
 		font-size: 1.45rem;
-	} 
+	}
 	#preloader #wrapper {
 		height: 3.5em;
 	    width: 3.5em;
@@ -176,15 +176,28 @@ p {
 	#preloader #brand {
 		font-size: 4em;
 	}
+	a,
+	#preloader,
+	#under_construction,
+	#under_construction i {
+		color: #{{ site.color.text_small_devices }};
+	}
+	#under_construction .btn {
+		background-color: #{{ site.color.text_small_devices }};
+		border-color: #{{ site.color.text_small_devices }};
+	}
 }
 
-a,  
+a {
+	color: #{{ site.color.text }};
+}
+
 a:hover,    
 a:focus,    
 a:active,   
 a.active {  
 	outline: 0; 
-	color: #{{ site.color.text }};
+	color: #{{ site.color.text_small_devices }};
 }   
 
 h1, 
@@ -527,6 +540,10 @@ header mark {
 }
 
 @media(max-width:768px) {
+	section,
+	header .intro-text .skills {
+		color: #{{ site.color.text_small_devices }};
+	}
 	header {
 		flex-direction: column-reverse !important;
 		padding: 0 5vw;
@@ -1036,6 +1053,9 @@ header mark {
 	.swiper-container {
 		width: 100%;
 	}
+	.swiper-button-prev:hover, .swiper-button-next:hover {
+		color: #{{ site.color.text_small_devices }};
+	}
 }
 
 @media (max-width: 480px) {
@@ -1301,6 +1321,12 @@ form .row:first-child .floating-label-form-group {
 	#contact a.mail-link:before {
 	  	visibility: visible;
 	  	width: 100%;
+	  	background-color: #{{ site.color.text_small_devices }}; 
+	}
+	footer a,
+	footer .footer-below,
+	.floating-label-form-group-with-focus label { 
+	  	color: #{{ site.color.text_small_devices }}; 
 	}
     .masonry-grid {
         -moz-column-count: 1;

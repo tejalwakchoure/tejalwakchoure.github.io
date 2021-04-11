@@ -17,6 +17,7 @@ bing_verify:
 color:
     text: '575757'
     text_light: 'ffffff'
+    text_small_devices: '000000'
     heading: '000000'
     accent: 'bc763d' # 'E82E2E'  '76296F'
     backgroundcol: 'ffe1cf' #'DAE6FF'

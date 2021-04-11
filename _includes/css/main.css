@@ -537,7 +537,7 @@ header mark {
 
 	header img {
     	margin: auto;
-    	padding-top: 53px;
+    	/*padding-top: 53px;*/
     	height: 500px;
     	width: 75vw;
 	}
@@ -1031,6 +1031,7 @@ header mark {
 	}
 	.swiper-slide #content p {
 		margin: 5% 0;
+		line-height: 1.25rem;
 	}
 	.swiper-container {
 		width: 100%;

@@ -140,7 +140,7 @@ p {
 
 .small {   
 	/*font-size: 13px;*/
-	font-size: 0.813rem;
+	font-size: 0.9rem;
 	font-weight: unset;  
 }
 
@@ -161,7 +161,7 @@ p {
 
 	.small {   
 		/*font-size: 12px;  */
-		font-size: 0.75rem;  
+		font-size: 0.8rem;  
 	}
 
 	.large {   
@@ -928,7 +928,7 @@ header mark {
 }
 .swiper-slide #content p {
 	text-align: justify; 
-	margin: 3.5% 0;
+	margin: 3.5% 5%;
 }
 .swiper-slide #content a {
 	text-decoration: underline; 

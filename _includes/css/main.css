@@ -216,21 +216,20 @@ h6 {
 }   
 
 hr { 
-	margin: 25px auto 30px; 
-	padding: 0; 
-	max-width: 200px;   
-	border: 0;  
-	border-top: solid 3px;  
-}   
-
+	margin: 20px auto;
+    padding: 0;
+    max-width: 1.8rem;
+    border: 0;
+    border-top: 1px solid #{{ site.color.text }};
+}
 hr.light {   
 	border-color: #{{ site.color.accent }};
-	padding-bottom: 20px; 
 }   
 
 hr.primary { 
 	border-color: #{{ site.color.accent }};
-}   
+} 
+
 .img-centered { 
 	margin: 0 auto; 
 }
@@ -1027,6 +1026,7 @@ header mark {
 @media ( max-width: 768px ) {
 	#portfolioDetails h2 {
 	    letter-spacing: 2px;
+	    font-size: 1.8rem;
 	}
 	#portfolioDetails .container {
 		padding: 0;
@@ -1050,8 +1050,9 @@ header mark {
 		flex-direction: column;
 	}
 	.swiper-slide #content{
+		overflow: hidden;
 		margin: auto;
-		padding: 3.5% 5%;
+		padding: 5%;
 	}
 	.swiper-slide #main-img {
 		height: 300px;
@@ -1059,7 +1060,7 @@ header mark {
 		margin: auto;
 	}
 	.swiper-slide #content p {
-		margin: 5% 0;
+		margin: 5% 1%;
 		line-height: 1.25rem;
 	}
 	.swiper-container {

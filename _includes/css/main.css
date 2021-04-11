@@ -183,8 +183,8 @@ p {
 		color: #{{ site.color.text_small_devices }} !important;
 	}
 	#under_construction .btn {
-		background-color: #{{ site.color.text_small_devices }};
-		border-color: #{{ site.color.text_small_devices }};
+		background-color: #{{ site.color.text_small_devices }} !important;
+		border-color: #{{ site.color.text_small_devices }} !important;
 	}
 }
 
@@ -543,7 +543,7 @@ header mark {
 	section,
 	header .intro-text .skills,
 	.crossout {
-		color: #{{ site.color.text_small_devices }};
+		color: #{{ site.color.text_small_devices }} !important;
 	}
 	header {
 		flex-direction: column-reverse !important;
@@ -557,6 +557,7 @@ header mark {
     	margin: auto;
     	/*padding-top: 53px;*/
     	height: 500px;
+    	min-height: 0;
     	width: 75vw;
 	}
 
@@ -872,8 +873,7 @@ header mark {
 .slide-link {
 	float: left; 
 	padding: 5px 20px; 
-	background: #{{ site.color.accent }}; 
-	color: #{{ site.color.text_light }} !important;
+	background: #{{ site.color.accent }};
 }
 
 .slide-link:hover,
@@ -1061,7 +1061,7 @@ header mark {
 		width: 100%;
 	}
 	.swiper-button-prev:hover, .swiper-button-next:hover {
-		color: #{{ site.color.text_small_devices }};
+		color: #{{ site.color.text_small_devices }} !important;
 	}
 }
 
@@ -1328,12 +1328,12 @@ form .row:first-child .floating-label-form-group {
 	#contact a.mail-link:before {
 	  	visibility: visible;
 	  	width: 100%;
-	  	background-color: #{{ site.color.text_small_devices }}; 
+	  	background-color: #{{ site.color.text_small_devices }} !important; 
 	}
 	footer a,
 	footer .footer-below,
 	.floating-label-form-group-with-focus label { 
-	  	color: #{{ site.color.text_small_devices }}; 
+	  	color: #{{ site.color.text_small_devices }} !important; 
 	}
     .masonry-grid {
         -moz-column-count: 1;

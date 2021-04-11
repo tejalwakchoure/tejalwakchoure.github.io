@@ -1311,11 +1311,13 @@ form .row:first-child .floating-label-form-group {
 		width: 100%;
 		padding: 20px !important;
 		height: 400px !important;
+		min-height: 0 !important;
 	}
 }
 
 @media ( max-width: 480px ) {
 	.masonry-item {
 		height: 300px !important;
+		min-height: 0 !important;
 	}
 }

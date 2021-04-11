@@ -38,9 +38,7 @@ html,body
 		font-size: 3rem;
 		/*overflow-wrap: break-word;*/
 	}
-	.fa-angle-down,
-	.fa-angle-double-left,
-	.fa-backward {
+	.fa-angle-down {
 		font-size: 1.5em !important;
 	}
 }
@@ -879,14 +877,18 @@ header mark {
 .slide-link {
 	float: left; 
 	padding: 5px 20px; 
-	background: #{{ site.color.accent }};
+	color: #{{ site.color.accent }} !important;
 }
 
 .slide-link:hover,
 .slide-link:focus,
 .slide-link:active,
 .slide-link.active {
-	color: #{{ site.color.gray }};
+	color: #{{ site.color.text }};
+}
+
+.fa-backward {
+	font-size: 1.5em;
 }
 
 .fa-caret-left, .fa-caret-right {
@@ -1033,9 +1035,9 @@ header mark {
 	#portfolioDetails .container {
 		padding: 0;
 	}
-	.slide-link {
+	/*.slide-link {
 		padding: 2px 10px;
-	}
+	}*/
 	/*.swiper-container-innermost {
 		display: none;
 	}*/

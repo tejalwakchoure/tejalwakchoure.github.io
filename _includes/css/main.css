@@ -180,7 +180,7 @@ p {
 	#preloader,
 	#under_construction,
 	#under_construction i {
-		color: #{{ site.color.text_small_devices }};
+		color: #{{ site.color.text_small_devices }} !important;
 	}
 	#under_construction .btn {
 		background-color: #{{ site.color.text_small_devices }};

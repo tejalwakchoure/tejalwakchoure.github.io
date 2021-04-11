@@ -407,7 +407,8 @@ hr.primary {
 	box-sizing: border-box; 
 }   
 section {   
-	padding: 20vh 6vw 0 6vw;
+	/*padding: 20vh 6vw 0 6vw;*/
+	padding: 5vh 6vw 15vh 6vw;
 	width: 100%;    
 	display: table;
 	table-layout: auto; 
@@ -486,7 +487,7 @@ header .title {
 	display: block;
 	z-index: 1;
 	display: flex;
-    padding-top: 13.25%;
+    padding-top: 10%;
     position: relative;
 }
 
@@ -516,6 +517,7 @@ header .intro-text .skills {
 	text-transform: lowercase;
 	color: #{{ site.color.text }};
 	letter-spacing: 2px;
+	padding-top: 2.5%;
 }  
 
 header mark {

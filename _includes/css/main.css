@@ -492,6 +492,7 @@ header .img_div {
     align-items: center;
     width: 40%;
     position: relative;
+    overflow: hidden;
 }
 
 header .title {
@@ -549,8 +550,9 @@ header mark {
 		flex-direction: column-reverse !important;
 		padding: 0 5vw;
 		padding-top: 53px;
-		height: auto;
-		max-height: 100vh;
+		/*height: auto;*/
+		/*max-height: 100vh;*/
+    	justify-content: flex-end;
 	}
 
 	header img {

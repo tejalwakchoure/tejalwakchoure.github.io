@@ -39,7 +39,8 @@ html,body
 		/*overflow-wrap: break-word;*/
 	}
 	.fa-angle-down,
-	.fa-angle-double-left {
+	.fa-angle-double-left,
+	.fa-backward {
 		font-size: 1.5em !important;
 	}
 }
@@ -444,6 +445,7 @@ section h2 {
 @media(max-width:768px) {   
 	section {   
 		padding: 6%;
+		padding-top: 60px; /* Accounting for the navbar height = 53px */
     	table-layout: fixed;
 	}
 	section.first { 
@@ -723,7 +725,7 @@ header mark {
 	}
 	#about .img_div {
 		text-align: center;
-		padding: 10vh 25px 3vh 25px;
+		padding: 3vh 25px;
 	}
 	#about img {
 	    height: 250px;

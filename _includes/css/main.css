@@ -442,16 +442,14 @@ section h2 {
 }   
 
 header {    
-	width: 100%;    
-	padding-right: 5vw;
-	padding-left: 5vw;
-	color: #{{ site.color.heading }};
-	min-height: 100vh !important;
-	display: flex;
+	height: 100vh;
 	width: 100vw;
 	padding-right: 0;
+	padding-left: 5vw;
 	margin: 0;
+	display: flex;
 	flex-direction: row;
+	color: #{{ site.color.heading }};
 }
 
 header img {
@@ -462,7 +460,7 @@ header img {
     margin-left: -40px;
     max-width: none !important;
     width: 45vw;
-    height: 600px;
+    min-height: 600px;
 }
 
 .hor_parallax_right {
@@ -531,12 +529,13 @@ header mark {
 		flex-direction: column-reverse !important;
 		padding: 0 5vw;
 		padding-top: 53px;
-		min-height: 0 !important;
+		height: auto;
+		max-height: 100vh;
 	}
 
 	header img {
     	margin: auto;
-    	padding-top: 5%;
+    	/*padding-top: 53px;*/
     	height: 500px;
     	width: 75vw;
 	}
@@ -571,6 +570,7 @@ header mark {
 @media ( max-width: 480px ) {
 	header img {
 		height: 300px;
+		/*padding-top: 0;*/
 	}
 }
 

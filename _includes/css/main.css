@@ -516,7 +516,7 @@ header .intro-text .name {
 	font-weight: 700;     
 	letter-spacing: 1px;
 	color: #{{ site.color.accent }};
-	font-size: min (8.5vw, 140px);
+	font-size: min(8.5vw, 140px);
 	line-height: 10vw;
 	letter-spacing: 4px;
 	text-transform: lowercase;
@@ -524,7 +524,7 @@ header .intro-text .name {
 }   
 
 header .intro-text .skills {    
-	font-size: min (2.5vw, 40px);
+	font-size: min(2.5vw, 40px);
 	font-weight: 100; 
 	font-family: 'noahgThin', 'Lato', sans-serif;
 	text-transform: lowercase;
@@ -873,7 +873,7 @@ header mark {
 	float: left; 
 	padding: 5px 20px; 
 	background: #{{ site.color.accent }}; 
-	color: #{{ site.color.text_light }};
+	color: #{{ site.color.text_light }} !important;
 }
 
 .slide-link:hover,

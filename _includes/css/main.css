@@ -565,16 +565,19 @@ header mark {
 
 	header .img_div {
 		width: 100%;
+		padding-right: 10px;
 	} 
 
 	header .title {
 		width: 100%;
 		padding: 3vw 0;
+		padding-left: 10px;
 	}
 
 	header .intro-text {
-		/*margin: auto;*/
-		width: fit-content;
+		/*width: fit-content;*/
+	    margin: auto;
+	    width: min-content;
 	}
 
 	header .intro-text .name { 

@@ -912,7 +912,7 @@ header mark {
 	display: grid;
 	padding: 10px 0;
 	position: absolute;
-	top: 12.5%;
+	top: 10.5%;
     height: 300px;
 	width: 600px;
 	margin: 0 auto;
@@ -1041,7 +1041,7 @@ header mark {
 		display: none;
 	}*/
 	.swiper-container-in {
-		top: 8.5%;
+		top: 7.5%;
 	}
 	.swiper-container-in .slide-inner {
 		display: flex;

@@ -4,6 +4,8 @@
     display: block;
     width: 16px;
     height: 14px;
+    -ms-transform: scale(var(--ggs,1))
+    -webkit-transform: scale(var(--ggs,1))
     transform: scale(var(--ggs,1))
 }
 

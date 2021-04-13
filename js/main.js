@@ -107,23 +107,21 @@ var swiper_innermost = new Swiper('.swiper-container-innermost', {
             var slideProgress = $(this).progress;
             var innerOffset = swiper.width * interleaveOffset;
             var innerTranslate = slideProgress * innerOffset;
+            $(this).css({"-ms-transform" :  "translate3d(" + innerTranslate + "px, 0, 0)"});
             $(this).css({"-webkit-transform" :  "translate3d(" + innerTranslate + "px, 0, 0)"});
             $(this).css({"transform" :  "translate3d(" + innerTranslate + "px, 0, 0)"});
           })
         },
         touchStart: function() {
           $('.swiper-container-innermost .swiper-slide').each(function() { 
-            $(this).css({"-webkit-transition" :  ""});
             $(this).css({"transition" :  ""});
           })
         },
         setTransition: function(speed) {
           $('.swiper-container-innermost .swiper-slide').each(function() { 
-            $(this).css({"-webkit-transition" :  speed + "ms"});
             $(this).css({"transition" :  speed + "ms"});
           });
           $('.swiper-container-innermost .slide-inner').each(function() { 
-            $(this).css({"-webkit-transition" :  speed + "ms"});
             $(this).css({"transition" :  speed + "ms"});
           });
         }
@@ -142,23 +140,21 @@ var swiper_in = new Swiper('.swiper-container-in', {
             var slideProgress = $(this).progress;
             var innerOffset = swiper.width * interleaveOffset;
             var innerTranslate = slideProgress * innerOffset;
+            $(this).css({"-ms-transform" :  "translate3d(" + innerTranslate + "px, 0, 0)"});
             $(this).css({"-webkit-transform" :  "translate3d(" + innerTranslate + "px, 0, 0)"});
             $(this).css({"transform" :  "translate3d(" + innerTranslate + "px, 0, 0)"});
           })
         },
         touchStart: function() {
           $('.swiper-container-in .swiper-slide').each(function() { 
-            $(this).css({"-webkit-transition" :  ""});
             $(this).css({"transition" :  ""});
           })
         },
         setTransition: function(speed) {
           $('.swiper-container-in .swiper-slide').each(function() { 
-            $(this).css({"-webkit-transition" :  speed + "ms"});
             $(this).css({"transition" :  speed + "ms"});
           });
           $('.swiper-container-in .slide-inner').each(function() { 
-            $(this).css({"-webkit-transition" :  speed + "ms"});
             $(this).css({"transition" :  speed + "ms"});
           });
         }

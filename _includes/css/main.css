@@ -271,6 +271,12 @@ hr.primary {
 	flex-direction: column !important;
 	height: -moz-fill-available;
 	height: -webkit-fill-available;
+	height: -moz-fit-content;
+	height: -webkit-fit-content;
+}
+
+.navbar-collapse {
+	height: 100%;
 }
 
 .sidenav {

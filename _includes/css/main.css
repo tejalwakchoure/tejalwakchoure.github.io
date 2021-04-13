@@ -267,13 +267,15 @@ hr.primary {
 }
 
 .navbar-nav {
-	flex-direction: column !important;
 	-ms-flex-direction: column !important;
+	flex-direction: column !important;
 	height: -webkit-fill-available;
 }
 
 .sidenav {
 	height: 100%;
+    width: -moz-fit-content;
+    width: -webkit-fit-content;
     width: fit-content;
     position: fixed;
     z-index: 3;
@@ -337,6 +339,8 @@ hr.primary {
 	.sidenav {
 		font-style: 1em;
 		flex-direction: row;
+		height: -moz-fit-content;
+		height: -webkit-fit-content;
 		height: fit-content;
 		width: 100%;
 		padding: 5px 0 0 0;
@@ -370,6 +374,9 @@ hr.primary {
 	}*/
 	.sidenav .navbar-collapse {
 		background: #{{ site.color.backgroundcol }};
+	}
+	.navbar-nav {
+		height: -webkit-fit-content;
 	}
 }
 

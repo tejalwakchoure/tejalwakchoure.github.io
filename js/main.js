@@ -264,7 +264,7 @@ function preventDefaultForScrollKeys(e) {
   }
 }
 
-modern Chrome requires { passive: false } when adding event
+// modern Chrome requires { passive: false } when adding event
 var supportsPassive = false;
 try {
   window.addEventListener("test", null, Object.defineProperty({}, 'passive', {

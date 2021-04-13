@@ -269,15 +269,11 @@ hr.primary {
 .navbar-nav {
 	-ms-flex-direction: column !important;
 	flex-direction: column !important;
-	height: -moz-fill-available;
+	/*height: -moz-fill-available;
 	height: -webkit-fill-available;
 	height: -moz-fit-content;
-	height: -webkit-fit-content;
-}
-
-.navbar-collapse {
+	height: -webkit-fit-content;*/
 	height: 100%;
-	width: 100%;
 }
 
 .sidenav {
@@ -298,6 +294,11 @@ hr.primary {
 	letter-spacing: 2px;  
 	background: transparent;
 	font-family:'noahgLt',Raleway,Montserrat,sans-serif;
+}
+
+.sidenav .navbar-collapse {
+	height: 100%;
+	width: 100%;
 }
 
 .sidenav .page-scroll {
@@ -381,12 +382,15 @@ hr.primary {
 		display: none;
 	}*/
 	.sidenav .navbar-collapse {
+		height: auto;
+		width: auto;
 		background: #{{ site.color.backgroundcol }};
 	}
 	.navbar-nav {
 		height: -moz-fit-content;
 		height: -webkit-fit-content;
 	}
+
 }
 
 *{      

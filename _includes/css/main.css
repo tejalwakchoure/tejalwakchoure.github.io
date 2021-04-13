@@ -270,7 +270,6 @@ hr.primary {
     transform: rotate(90deg) !important;
     line-height: 100%;
     padding: 15px !important;
-    transform: rotate(0deg);
 }
 
 .navbar {
@@ -1008,9 +1007,9 @@ header mark {
 	margin: 75px auto 0 auto;
 	overflow: hidden;
 	left: 50%;
-	-ms-transform: translateX(-50%);
-	-webkit-transform: translateX(-50%);
-	transform: translateX(-50%);
+	-ms-transform: translate3d(-50%, 0, 1px);
+	-webkit-transform: translate3d(-50%, 0, 1px);
+	transform: translate3d(-50%, 0, 1px);
 }
 
 .swiper-container-in {
@@ -1024,9 +1023,9 @@ header mark {
 	margin: 0 auto;
 	overflow: hidden;
 	left: 50%;
-    -ms-transform: translateX(-50%);
-    -webkit-transform: translateX(-50%);
-    transform: translateX(-50%);
+    -ms-transform: translate3d(-50%, 0, 1px);
+    -webkit-transform: translate3d(-50%, 0, 1px);
+    transform: translate3d(-50%, 0, 1px);
 }
 
 .swiper-container-in .slide-inner {
@@ -1085,9 +1084,9 @@ header mark {
     text-align: center;
     position: absolute;
     left: 50%;
-	-ms-transform: translateX(-50%);
-	-webkit-transform: translateX(-50%);
-	transform: translateX(-50%);
+	-ms-transform: translate3d(-50%, 0, 1px);
+	-webkit-transform: translate3d(-50%, 0, 1px);
+	transform: translate3d(-50%, 0, 1px);
 }
 .swiper-slide #img-on-top {
     width: 300px;
@@ -1096,9 +1095,9 @@ header mark {
     object-fit: cover;
     position: absolute;
     left: 50%;
-	-ms-transform: translateX(-50%);
-	-webkit-transform: translateX(-50%);
-	transform: translateX(-50%);
+	-ms-transform: translate3d(-50%, 0, 1px);
+	-webkit-transform: translate3d(-50%, 0, 1px);
+	transform: translate3d(-50%, 0, 1px);
 }
 .swiper-pagination, .swiper-button-prev, .swiper-button-next {
 	position: relative !important;

@@ -265,30 +265,30 @@ function preventDefaultForScrollKeys(e) {
 }
 
 // modern Chrome requires { passive: false } when adding event
-// var supportsPassive = false;
-// try {
-//   window.addEventListener("test", null, Object.defineProperty({}, 'passive', {
-//     get: function () { supportsPassive = true; } 
-//   }));
-// } catch(e) {}
+var supportsPassive = false;
+try {
+  window.addEventListener("test", null, Object.defineProperty({}, 'passive', {
+    get: function () { supportsPassive = true; } 
+  }));
+} catch(e) {}
 
-// var wheelOpt = supportsPassive ? { passive: false } : false;
-// var wheelEvent = 'onwheel' in document.createElement('div') ? 'wheel' : 'mousewheel';
+var wheelOpt = supportsPassive ? { passive: false } : false;
+var wheelEvent = 'onwheel' in document.createElement('div') ? 'wheel' : 'mousewheel';
 
-// // call this to Disable
-// function disableScroll(target) {
-//   target.addEventListener('DOMMouseScroll', preventDefault, false); // older FF
-//   target.addEventListener(wheelEvent, preventDefault, wheelOpt); // modern desktop
-//   target.addEventListener('touchmove', preventDefault, wheelOpt); // mobile
-//   target.addEventListener('keydown', preventDefaultForScrollKeys, false);
-// }
+// call this to Disable
+function disableScroll(target) {
+  target.addEventListener('DOMMouseScroll', preventDefault, false); // older FF
+  target.addEventListener(wheelEvent, preventDefault, wheelOpt); // modern desktop
+  target.addEventListener('touchmove', preventDefault, wheelOpt); // mobile
+  target.addEventListener('keydown', preventDefaultForScrollKeys, false);
+}
 
-// // call this to Enable
-// function enableScroll(target) {
-//   target.removeEventListener('DOMMouseScroll', preventDefault, false);
-//   target.removeEventListener(wheelEvent, preventDefault, wheelOpt); 
-//   target.removeEventListener('touchmove', preventDefault, wheelOpt);
-//   target.removeEventListener('keydown', preventDefaultForScrollKeys, false);
-// }
+// call this to Enable
+function enableScroll(target) {
+  target.removeEventListener('DOMMouseScroll', preventDefault, false);
+  target.removeEventListener(wheelEvent, preventDefault, wheelOpt); 
+  target.removeEventListener('touchmove', preventDefault, wheelOpt);
+  target.removeEventListener('keydown', preventDefaultForScrollKeys, false);
+}
 
 // disableScroll( document.getElementById('portfolioDetails') );

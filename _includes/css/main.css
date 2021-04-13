@@ -382,8 +382,8 @@ hr.primary {
 		display: none;
 	}*/
 	.navbar-collapse {
-		height: auto;
-		width: auto;
+		height: -webkit-fit-content;
+		width: -webkit-fit-content;
 		background: #{{ site.color.backgroundcol }};
 	}
 	.navbar-nav {

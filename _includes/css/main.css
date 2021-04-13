@@ -276,6 +276,11 @@ hr.primary {
 	height: 100%;
 }
 
+.navbar-collapse {
+	height: 100%;
+	width: 100%;
+}
+
 .sidenav {
 	height: 100%;
     width: -moz-fit-content;
@@ -294,11 +299,6 @@ hr.primary {
 	letter-spacing: 2px;  
 	background: transparent;
 	font-family:'noahgLt',Raleway,Montserrat,sans-serif;
-}
-
-.sidenav .navbar-collapse {
-	height: 100%;
-	width: 100%;
 }
 
 .sidenav .page-scroll {
@@ -381,7 +381,7 @@ hr.primary {
 	/*.sidenav .time-wrapper {
 		display: none;
 	}*/
-	.sidenav .navbar-collapse {
+	.navbar-collapse {
 		height: auto;
 		width: auto;
 		background: #{{ site.color.backgroundcol }};

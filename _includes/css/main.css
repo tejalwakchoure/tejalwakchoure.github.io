@@ -277,8 +277,14 @@ hr.primary {
 }
 
 .navbar-collapse {
-	height: 100%;
+	/*height: 100%;*/
 	width: 100%;
+}
+
+@media (min-width: 768px) {
+	.navbar-collapse {
+		height: -webkit-fit-content;
+	}
 }
 
 .sidenav {
@@ -382,8 +388,8 @@ hr.primary {
 		display: none;
 	}*/
 	.navbar-collapse {
-		height: -webkit-fit-content;
-		width: -webkit-fit-content;
+		/*height: -webkit-fit-content;*/
+		/*width: -webkit-fit-content;*/
 		background: #{{ site.color.backgroundcol }};
 	}
 	.navbar-nav {

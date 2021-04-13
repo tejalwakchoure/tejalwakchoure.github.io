@@ -269,6 +269,7 @@ hr.primary {
 .navbar-nav {
 	-ms-flex-direction: column !important;
 	flex-direction: column !important;
+	height: -moz-fill-available;
 	height: -webkit-fill-available;
 }
 
@@ -376,6 +377,7 @@ hr.primary {
 		background: #{{ site.color.backgroundcol }};
 	}
 	.navbar-nav {
+		height: -moz-fit-content;
 		height: -webkit-fit-content;
 	}
 }

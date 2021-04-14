@@ -530,14 +530,14 @@ header img {
     min-height: 600px;
 }
 
-.hor_parallax_right {
+/*.hor_parallax_right {
 	position: absolute;
 	right: -10px;
 }
 .hor_parallax_left {
   	position: absolute;
   	left: -10px;
-}
+}*/
 
 header .img_div {
 	padding: 0;

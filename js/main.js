@@ -107,9 +107,9 @@ var swiper_innermost = new Swiper('.swiper-container-innermost', {
             var slideProgress = $(this).progress;
             var innerOffset = swiper.width * interleaveOffset;
             var innerTranslate = slideProgress * innerOffset;
-            $(this).css({"-ms-transform" :  "translate3d(" + innerTranslate + "px, 0, 1px)"});
-            $(this).css({"-webkit-transform" :  "translate3d(" + innerTranslate + "px, 0, 1px)"});
-            $(this).css({"transform" :  "translate3d(" + innerTranslate + "px, 0, 1px)"});
+            $(this).css({"-ms-transform" :  "translate3d(" + innerTranslate + "px, 0, 0)"});
+            $(this).css({"-webkit-transform" :  "translate3d(" + innerTranslate + "px, 0, 0)"});
+            $(this).css({"transform" :  "translate3d(" + innerTranslate + "px, 0, 0)"});
           })
         },
         touchStart: function() {
@@ -140,9 +140,9 @@ var swiper_in = new Swiper('.swiper-container-in', {
             var slideProgress = $(this).progress;
             var innerOffset = swiper.width * interleaveOffset;
             var innerTranslate = slideProgress * innerOffset;
-            $(this).css({"-ms-transform" :  "translate3d(" + innerTranslate + "px, 0, 1px)"});
-            $(this).css({"-webkit-transform" :  "translate3d(" + innerTranslate + "px, 0, 1px)"});
-            $(this).css({"transform" :  "translate3d(" + innerTranslate + "px, 0, 1px)"});
+            $(this).css({"-ms-transform" :  "translate3d(" + innerTranslate + "px, 0, 0)"});
+            $(this).css({"-webkit-transform" :  "translate3d(" + innerTranslate + "px, 0, 0)"});
+            $(this).css({"transform" :  "translate3d(" + innerTranslate + "px, 0, 0)"});
           })
         },
         touchStart: function() {

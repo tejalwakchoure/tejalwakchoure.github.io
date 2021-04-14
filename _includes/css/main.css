@@ -12,6 +12,7 @@ html,body
 	font-feature-settings: "lnum";
 	font-weight: 300;
 	font-family: 'Source Sans Pro', Lato, sans-serif;
+	color: #{{ site.color.text }};
 }
 
 .heading,
@@ -1339,7 +1340,7 @@ footer .footer-col {
 
 footer .footer-below {  
 	padding: 40px 0 10px 0;
-	color: #{{ site.color.text }};
+	/*color: #{{ site.color.text }};*/
 	background-color: transparent;
 }   
 

@@ -162,7 +162,7 @@ var swiper_in = new Swiper('.swiper-container-in', {
     });
 
 var swiper = new Swiper('.swiper-container', {
-      // cssMode: true,
+      cssMode: true,
       touchEventsTarget: 'wrapper',
       simulateTouch: false,
       navigation: {
@@ -177,7 +177,7 @@ var swiper = new Swiper('.swiper-container', {
       keyboard: true,
       observer: true,
       observeParents: true,
-      virtualTranslate: true,
+      // virtualTranslate: true,
     });
 
 // Toggle visibility of project carousel

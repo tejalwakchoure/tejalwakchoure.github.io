@@ -173,7 +173,11 @@ var swiper = new Swiper('.swiper-container', {
         el: '.swiper-pagination',
         clickable: true,
       },
-      mousewheel: true,
+      mousewheel: {
+        forceToAxis: true,
+        sensitivity: 3,
+        thresholdDelta: 3,
+      },   
       keyboard: true,
       observer: true,
       observeParents: true,

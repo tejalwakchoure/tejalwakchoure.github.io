@@ -145,7 +145,7 @@ var swiper = new Swiper('.swiper-container', {
       observeParents: true,
       speed: interleaveSpeed,
       watchSlidesProgress: true,
-      on: swiper_transition_effect,
+      // on: swiper_transition_effect,
       touchEventsTarget: 'wrapper',
       keyboard: true,
       simulateTouch: false,

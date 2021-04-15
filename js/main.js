@@ -131,6 +131,14 @@ var swiper_innermost = new Swiper('.swiper-container-innermost', {
     });
 
 var swiper_in = new Swiper('.swiper-container-in', {
+      observer: true,
+      observeParents: true,
+      speed: interleaveSpeed,
+      watchSlidesProgress: true,
+      on: swiper_transition_effect,
+    });
+
+var swiper = new Swiper('.swiper-container', {
       // cssMode: true, -- causes transition to cut off in safari
       // virtualTranslate: true, -- causes outer box to stop moving in safari
       keyboard: true,
@@ -154,6 +162,7 @@ var swiper_in = new Swiper('.swiper-container-in', {
         el: '.swiper-pagination',
         clickable: true,
       },
+
     });
 
 // Toggle visibility of project carousel

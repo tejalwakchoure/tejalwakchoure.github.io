@@ -163,8 +163,8 @@ var swiper_in = new Swiper('.swiper-container-in', {
 
 var swiper = new Swiper('.swiper-container', {
       // cssMode: true,
-      // touchEventsTarget: 'wrapper',
-      // simulateTouch: false,
+      touchEventsTarget: 'wrapper',
+      simulateTouch: false,
       navigation: {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
@@ -177,6 +177,7 @@ var swiper = new Swiper('.swiper-container', {
       keyboard: true,
       observer: true,
       observeParents: true,
+      watchSlidesProgress: true,
       // virtualTranslate: true,
     });
 

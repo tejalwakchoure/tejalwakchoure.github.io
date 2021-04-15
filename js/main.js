@@ -162,8 +162,8 @@ var swiper_in = new Swiper('.swiper-container-in', {
     });
 
 var swiper = new Swiper('.swiper-container', {
-      cssMode: true,
-      touchEventsTarget: 'wrapper',
+      // cssMode: true,
+      // touchEventsTarget: 'wrapper',
       simulateTouch: false,
       navigation: {
         nextEl: '.swiper-button-next',

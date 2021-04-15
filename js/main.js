@@ -141,13 +141,13 @@ var swiper_in = new Swiper('.swiper-container-in', {
 var swiper = new Swiper('.swiper-container', {
       // cssMode: true, -- causes transition to cut off in safari
       // virtualTranslate: true, -- causes outer box to stop moving in safari
-      keyboard: true,
       observer: true,
       observeParents: true,
       speed: interleaveSpeed,
       watchSlidesProgress: true,
-      on: swiper_effect,
+      on: swiper_transition_effect,
       touchEventsTarget: 'wrapper',
+      keyboard: true,
       simulateTouch: false,
       // mousewheel: {
       //   forceToAxis: true,
@@ -162,7 +162,6 @@ var swiper = new Swiper('.swiper-container', {
         el: '.swiper-pagination',
         clickable: true,
       },
-
     });
 
 // Toggle visibility of project carousel

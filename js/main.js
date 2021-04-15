@@ -43,6 +43,11 @@ $("#body-container").easeScroll({
     stepSize: 30,
 });
 
+
+// For browsers without scroll support
+smoothscroll.polyfill();
+
+
 // Portfolio parallax
 function addPortfolioParallax() {
     var startParallaxTime = Date.now();

@@ -95,76 +95,57 @@ function preloadImages(dir, imageArray, index=0) {
 var interleaveOffset = 0.5;
 var interleaveSpeed = 1000;
 
+var swiper_transition_effect = {
+        progress: function() {
+          var swiper = this;
+          $('.slide-inner').each(function() { 
+            var slideProgress = $(this).progress;
+            var innerOffset = swiper.width * interleaveOffset;
+            var innerTranslate = slideProgress * innerOffset;
+            $(this).css({"-ms-transform" :  "translate3d(" + innerTranslate + "px, 0, 0)"});
+            $(this).css({"-webkit-transform" :  "translate3d(" + innerTranslate + "px, 0, 0)"});
+            $(this).css({"transform" :  "translate3d(" + innerTranslate + "px, 0, 0)"});
+          })
+        },
+        touchStart: function() {
+          $('.swiper-slide').each(function() { 
+            $(this).css({"transition" :  ""});
+          })
+        },
+        setTransition: function(speed) {
+          $('.swiper-slide').each(function() { 
+            $(this).css({"transition" :  speed + "ms"});
+          });
+          $('.slide-inner').each(function() { 
+            $(this).css({"transition" :  speed + "ms"});
+          });
+        }
+      }
+
 var swiper_innermost = new Swiper('.swiper-container-innermost', {
       observer: true,
       observeParents: true,
       speed: interleaveSpeed,
       watchSlidesProgress: true,
-      on: {
-        progress: function() {
-          var swiper = this;
-          $('.swiper-container-innermost .slide-inner').each(function() { 
-            var slideProgress = $(this).progress;
-            var innerOffset = swiper.width * interleaveOffset;
-            var innerTranslate = slideProgress * innerOffset;
-            $(this).css({"-ms-transform" :  "translate3d(" + innerTranslate + "px, 0, 0)"});
-            $(this).css({"-webkit-transform" :  "translate3d(" + innerTranslate + "px, 0, 0)"});
-            $(this).css({"transform" :  "translate3d(" + innerTranslate + "px, 0, 0)"});
-          })
-        },
-        touchStart: function() {
-          $('.swiper-container-innermost .swiper-slide').each(function() { 
-            $(this).css({"transition" :  ""});
-          })
-        },
-        setTransition: function(speed) {
-          $('.swiper-container-innermost .swiper-slide').each(function() { 
-            $(this).css({"transition" :  speed + "ms"});
-          });
-          $('.swiper-container-innermost .slide-inner').each(function() { 
-            $(this).css({"transition" :  speed + "ms"});
-          });
-        }
-      }
+      on: swiper_transition_effect,
     });
 
 var swiper_in = new Swiper('.swiper-container-in', {
+      // cssMode: true, -- causes transition to cut off in safari
+      // virtualTranslate: true, -- causes outer box to stop moving in safari
+      keyboard: true,
       observer: true,
       observeParents: true,
       speed: interleaveSpeed,
       watchSlidesProgress: true,
-      on: {
-        progress: function() {
-          var swiper = this;
-          $('.swiper-container-in .slide-inner').each(function() { 
-            var slideProgress = $(this).progress;
-            var innerOffset = swiper.width * interleaveOffset;
-            var innerTranslate = slideProgress * innerOffset;
-            $(this).css({"-ms-transform" :  "translate3d(" + innerTranslate + "px, 0, 0)"});
-            $(this).css({"-webkit-transform" :  "translate3d(" + innerTranslate + "px, 0, 0)"});
-            $(this).css({"transform" :  "translate3d(" + innerTranslate + "px, 0, 0)"});
-          })
-        },
-        touchStart: function() {
-          $('.swiper-container-in .swiper-slide').each(function() { 
-            $(this).css({"transition" :  ""});
-          })
-        },
-        setTransition: function(speed) {
-          $('.swiper-container-in .swiper-slide').each(function() { 
-            $(this).css({"transition" :  speed + "ms"});
-          });
-          $('.swiper-container-in .slide-inner').each(function() { 
-            $(this).css({"transition" :  speed + "ms"});
-          });
-        }
-      }
-    });
-
-var swiper = new Swiper('.swiper-container', {
-      cssMode: true,
+      on: swiper_effect,
       touchEventsTarget: 'wrapper',
       simulateTouch: false,
+      // mousewheel: {
+      //   forceToAxis: true,
+      //   // sensitivity: 3,
+      //      // thresholdDelta: 3,
+      // },   
       navigation: {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
@@ -173,11 +154,6 @@ var swiper = new Swiper('.swiper-container', {
         el: '.swiper-pagination',
         clickable: true,
       },
-      mousewheel: true,
-      keyboard: true,
-      observer: true,
-      observeParents: true,
-      virtualTranslate: true,
     });
 
 // Toggle visibility of project carousel

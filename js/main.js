@@ -70,7 +70,7 @@ var dummyPointsSum = dummyPoints.reduce((a, el) => {
                            return a;
                        }, 0);
 easingPoints = easingPoints.map((el, i) => {
-        return Math.round(MY_SCROLL_DISTANCE * dummyPoints[i] / dummyPointsSum);
+        return Math.round($('body').height() * dummyPoints[i] / dummyPointsSum);
 });
 var requestAnimationFrame = window.requestAnimationFrame ||
             window.mozRequestAnimationFrame ||

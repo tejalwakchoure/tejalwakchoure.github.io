@@ -52,8 +52,9 @@ body {
   	transition: background-color 1s ease;
   	position: relative;
 
-  	
+
   	overflow-y: hidden;
+  	height: fit-content;
 }
 
 #bkg-page {

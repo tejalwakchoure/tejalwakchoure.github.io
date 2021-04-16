@@ -1053,7 +1053,7 @@ header mark {
 	-webkit-transform: translateZ(0);
 	-webkit-backface-visibility: hidden;
 	overflow: hidden;
-	width: inherit;
+	width: inherit !important;
 }
 
 .swiper-slide #main-img {

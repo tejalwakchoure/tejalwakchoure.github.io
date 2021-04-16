@@ -27,6 +27,7 @@ $(document).ready(function() {
               // Fire up other elements
               startTime();
               addPortfolioParallax();
+              $("#body-container").getNiceScroll().resize();
             }
         }, 10);
       }
@@ -36,9 +37,9 @@ $(document).ready(function() {
   swiper.controller.control = swiper_in;
 
   $("#body-container").niceScroll();
-  $("#body-container").scroll(function(){
-    $("#body-container").getNiceScroll().resize();
-  });
+  // $("#body-container").scroll(function(){
+  //   $("#body-container").getNiceScroll().resize();
+  // });
 
 });
 
@@ -265,6 +266,7 @@ function toggleOnPortfolioLink(num) {
         $('#portfolio').show().siblings('section').hide();
         num = 6 - num;
         document.getElementById("portfolio-item-"+num).scrollIntoView(true);
+        $("#body-container").getNiceScroll().resize();
     }
     else if($('#portfolio').css('display')!='none') {
         $('#portfolioDetails').show().siblings('section').hide();
@@ -275,6 +277,7 @@ function toggleOnPortfolioLink(num) {
         swiper_innermost.update();
         swiper_innermost.slideTo(num);
         document.getElementById('work').scrollIntoView(true);
+        $("#body-container").getNiceScroll().resize();
     }
     else {
     }

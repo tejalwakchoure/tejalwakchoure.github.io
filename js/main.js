@@ -35,9 +35,9 @@ $(document).ready(function() {
   swiper_in.controller.control = swiper_innermost;
   swiper.controller.control = swiper_in;
 
-  // $("#body-container").niceScroll();
-  $("#div-to-scroll").scroll(function(){
-    $("#div-to-scroll").getNiceScroll().resize();
+  $("#body-container").niceScroll();
+  $("#body-container").scroll(function(){
+    $("#body-container").getNiceScroll().resize();
   });
 
 });

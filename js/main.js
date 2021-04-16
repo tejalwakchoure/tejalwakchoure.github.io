@@ -48,7 +48,8 @@ $("#body-container").niceScroll({
     scrollspeed: 60,
     // animationTime: 1000,
     mousescrollstep: 30,
-    // smoothscroll: true,
+    smoothscroll: true,
+    enablemousewheel: true,
 });
 
 

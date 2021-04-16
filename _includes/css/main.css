@@ -1213,6 +1213,9 @@ header mark {
 	.swiper-container-in {
 		top: 7.5%;
 	}
+	.swiper-container {
+		width: 100%;
+	}
 	.swiper-container-in .slide-inner {
 		display: -webkit-box;  /* OLD - iOS 6-, Safari 3.1-6, BB7 */
   		display: -ms-flexbox;  /* TWEENER - IE 10 */
@@ -1228,7 +1231,8 @@ header mark {
 	.swiper-slide #content{
 		overflow: hidden;
 		margin: auto;
-		padding: 5%;
+		/*padding: 5%;*/
+		padding: 3% 7%;
 	}
 	.swiper-slide #main-img {
 		height: 300px;
@@ -1239,8 +1243,9 @@ header mark {
 		margin: 5% 1%;
 		line-height: 1.25rem;
 	}
-	.swiper-container {
-		width: 100%;
+	.swiper-pagination {
+		margin-top: 0;
+		padding: 0;
 	}
 	.swiper-button-prev:hover, .swiper-button-next:hover {
 		color: #{{ site.color.text_small_devices }} !important;

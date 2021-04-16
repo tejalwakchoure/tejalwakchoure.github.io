@@ -34,6 +34,15 @@ $(document).ready(function() {
 
   swiper_in.controller.control = swiper_innermost;
   swiper.controller.control = swiper_in;
+
+  $("#body-container").niceScroll({
+    scrollspeed: 60,
+    // animationTime: 1000,
+    mousescrollstep: 30,
+    // smoothscroll: true,
+    // enablemousewheel: true,
+  });
+
 });
 
 // Smooth Mouse Scrolling
@@ -44,13 +53,13 @@ $(document).ready(function() {
 // });
 
 // For browsers without scroll support
-$("#body-container").niceScroll({
-    scrollspeed: 60,
-    // animationTime: 1000,
-    mousescrollstep: 30,
-    smoothscroll: true,
-    enablemousewheel: true,
-});
+// $("#body-container").niceScroll({
+//     scrollspeed: 60,
+//     // animationTime: 1000,
+//     mousescrollstep: 30,
+//     smoothscroll: true,
+//     enablemousewheel: true,
+// });
 
 
 

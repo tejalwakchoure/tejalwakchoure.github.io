@@ -44,6 +44,15 @@ $("#body-container").easeScroll({
 });
 
 // For browsers without scroll support
+$("#body-container").niceScroll({
+    scrollspeed: 60,
+    // animationTime: 1000,
+    mousescrollstep: 30,
+    // smoothscroll: true,
+});
+
+
+
 // import smoothscroll from 'smoothscroll-polyfill';
 // smoothscroll.polyfill();
 
@@ -58,41 +67,41 @@ $("#body-container").easeScroll({
 //   return hasSmooth;
 // };
 
-let easingPoints = new Array(60).fill(0)
-function easeCubicOut(t) {
-    return --t * t * t + 1;
-}
-// easing function will take care of decrementing t at each call (too lazy to test it at the moment. If it doesn't, just pass it a decrementing value at each call)
-let t = 60;
-var dummyPoints = new Array(60).fill(0).map(()=> easeCubicOut(t));
-var dummyPointsSum = dummyPoints.reduce((a, el) => {
-                            a += el;
-                           return a;
-                       }, 0);
-easingPoints = easingPoints.map((el, i) => {
-        return Math.round($('body').height() * dummyPoints[i] / dummyPointsSum);
-});
-var requestAnimationFrame = window.requestAnimationFrame ||
-            window.mozRequestAnimationFrame ||
-            window.webkitRequestAnimationFrame ||
-            window.msRequestAnimationFrame;
+// let easingPoints = new Array(60).fill(0)
+// function easeCubicOut(t) {
+//     return --t * t * t + 1;
+// }
+// // easing function will take care of decrementing t at each call (too lazy to test it at the moment. If it doesn't, just pass it a decrementing value at each call)
+// let t = 60;
+// var dummyPoints = new Array(60).fill(0).map(()=> easeCubicOut(t));
+// var dummyPointsSum = dummyPoints.reduce((a, el) => {
+//                             a += el;
+//                            return a;
+//                        }, 0);
+// easingPoints = easingPoints.map((el, i) => {
+//         return Math.round($('body').height() * dummyPoints[i] / dummyPointsSum);
+// });
+// var requestAnimationFrame = window.requestAnimationFrame ||
+//             window.mozRequestAnimationFrame ||
+//             window.webkitRequestAnimationFrame ||
+//             window.msRequestAnimationFrame;
 
-let i = 0;
-var step = (timestamp) => {
- window.scrollBy(
-   0,
-   easingPoints[i],
- );
+// let i = 0;
+// var step = (timestamp) => {
+//  window.scrollBy(
+//    0,
+//    easingPoints[i],
+//  );
 
-if (++i === 60) {
-      i = 0;
-      return setTimeout(() => {
-        this.myRequestAnimationFrame = requestAnimationFrame(step);
-      }, YOUR_TIMEOUT_HERE);
-  }
-};
+// if (++i === 60) {
+//       i = 0;
+//       return setTimeout(() => {
+//         this.myRequestAnimationFrame = requestAnimationFrame(step);
+//       }, YOUR_TIMEOUT_HERE);
+//   }
+// };
 
-this.myRequestAnimationFrame = requestAnimationFrame(step);
+// this.myRequestAnimationFrame = requestAnimationFrame(step);
 
 
 

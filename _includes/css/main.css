@@ -1045,15 +1045,11 @@ header mark {
 	/*position: relative;*/
     z-index: 2;
 }
-.swiper-wrapper {
-	width: inherit;
-}
 
 .swiper-slide {
 	-webkit-transform: translateZ(0);
 	-webkit-backface-visibility: hidden;
 	overflow: hidden;
-	width: inherit !important;
 }
 
 .swiper-slide #main-img {

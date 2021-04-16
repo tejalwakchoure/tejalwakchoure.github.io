@@ -44,8 +44,8 @@ $("#body-container").easeScroll({
 });
 
 // For browsers without scroll support
-import smoothscroll from 'smoothscroll-polyfill';
-smoothscroll.polyfill();
+// import smoothscroll from 'smoothscroll-polyfill';
+// smoothscroll.polyfill();
 
 
 // Portfolio parallax

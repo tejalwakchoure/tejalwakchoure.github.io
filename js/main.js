@@ -27,7 +27,7 @@ $(document).ready(function() {
               // Fire up other elements
               startTime();
               addPortfolioParallax();
-              $('body').getNiceScroll().resize();
+              // $('body').getNiceScroll().resize();
             }
         }, 10);
       }
@@ -37,7 +37,7 @@ $(document).ready(function() {
   swiper.controller.control = swiper_in;
 
   $('body').niceScroll({
-    scrollspeed: 60, // scrolling speed
+    scrollspeed: 30, // scrolling speed - moves faster if speed is less
     mousescrollstep: 60, // scrolling speed with mouse wheel (pixel)
     // directionlockdeadzone: 6, // dead zone in pixels for direction lock activation
     // nativeparentscrolling: true, // detect bottom of content and let parent to scroll, as native scroll does
@@ -266,7 +266,7 @@ function toggleOnPortfolioLink(num) {
         $('#portfolio').show().siblings('section').hide();
         num = 6 - num;
         document.getElementById("portfolio-item-"+num).scrollIntoView(true);
-        $('body').getNiceScroll().resize();
+        // $('body').getNiceScroll().resize();
     }
     else if($('#portfolio').css('display')!='none') {
         $('#portfolioDetails').show().siblings('section').hide();
@@ -277,7 +277,7 @@ function toggleOnPortfolioLink(num) {
         swiper_innermost.update();
         swiper_innermost.slideTo(num);
         document.getElementById('work').scrollIntoView(true);
-        $('body').getNiceScroll().resize();
+        // $('body').getNiceScroll().resize();
     }
     else {
     }
@@ -317,8 +317,8 @@ $(window).on("load", function() {
 
 // Horizontal header parallax
 $(window).on("load resize scroll", function() {
-    var windowTop = document.body.scrollTop || document.documentElement.scrollTop || document.scrollingElement.scrollTop;
-    // var windowTop = $(window).scrollTop(); // Depending on the browser, you may need to use $('html').scrollTop() || $('body').scrollTop() or $(document).scrollTop() or $(window).scrollTop().
+    // var windowTop = document.body.scrollTop || document.documentElement.scrollTop || document.scrollingElement.scrollTop;
+    var windowTop = $(window).scrollTop(); // Depending on the browser, you may need to use $('html').scrollTop() || $('body').scrollTop() or $(document).scrollTop() or $(window).scrollTop().
     var elementTop = $('header').offset().top;
     var currentpos = -10;
     var pos = currentpos + ((windowTop - elementTop) / 10);

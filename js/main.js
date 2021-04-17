@@ -282,8 +282,8 @@ $(window).on("load", function() {
 
 // Horizontal header parallax
 $(window).on("load resize scroll", function() {
-    // var windowTop = (document.scrollingElement && document.scrollingElement.scrollTop) || (document.documentElement && document.documentElement.scrollTop);
-    var windowTop = $(window).scrollTop(); // Depending on the browser, you may need to use $('html').scrollTop() || $('body').scrollTop() or $(document).scrollTop() or $(window).scrollTop().
+    var windowTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
+    // var windowTop = $(window).scrollTop(); // Depending on the browser, you may need to use $('html').scrollTop() || $('body').scrollTop() or $(document).scrollTop() or $(window).scrollTop().
     var elementTop = $('header').offset().top;
     var currentpos = -10;
     var pos = currentpos + ((windowTop - elementTop) / 10);

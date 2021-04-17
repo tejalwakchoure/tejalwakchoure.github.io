@@ -27,9 +27,7 @@ $(document).ready(function() {
               // Fire up other elements
               startTime();
               addPortfolioParallax();
-              // var body_height = $("#body-container").outerHeight(true);
-              // $('#body-container').css({height: body_height});
-              // $("#body-container").getNiceScroll().resize();
+              // $('body').getNiceScroll().resize();
             }
         }, 10);
       }
@@ -41,7 +39,41 @@ $(document).ready(function() {
   // var body_height = $("#body-container").outerHeight(true);
   // $('#body-container').css({height: body_height});
   // $("#body-container").niceScroll();
-  $('body').niceScroll();
+  $('body').niceScroll({
+
+    scrollspeed: 60, // scrolling speed
+    mousescrollstep: 40, // scrolling speed with mouse wheel (pixel)
+    touchbehavior: false, // DEPRECATED!! use "emulatetouch"
+    emulatetouch: false, // enable cursor-drag scrolling like touch devices in desktop computer
+    hwacceleration: true, // use hardware accelerated scroll when supported
+    
+    preservenativescrolling: true, // you can scroll native scrollable areas with mouse, bubbling mouse wheel event
+    railoffset: false, // you can add offset top/left for rail position
+    bouncescroll: false, // (only hw accell) enable scroll bouncing at the end of content as mobile-like 
+    spacebarenabled: true, // enable page down scrolling when space bar has pressed
+    disableoutline: true, // for chrome browser, disable outline (orange highlight) when selecting a div with nicescroll
+
+    enabletranslate3d: true, // nicescroll can use css translate to scroll content
+    enablemousewheel: true, // nicescroll can manage mouse wheel events
+    enablekeyboard: true, // nicescroll can manage keyboard events
+    smoothscroll: true, // scroll with ease movement
+
+    enablemouselockapi: true, // can use mouse caption lock API (same issue on object dragging)
+    cursorfixedheight: false, // set fixed height for cursor in pixel
+    hidecursordelay: 400, // set the delay in microseconds to fading out scrollbars
+    directionlockdeadzone: 6, // dead zone in pixels for direction lock activation
+    nativeparentscrolling: true, // detect bottom of content and let parent to scroll, as native scroll does
+    enablescrollonselection: true, // enable auto-scrolling of content when selection text
+    
+    cursordragspeed: 0.3, // speed of selection when dragged with cursor
+    cursordragontouch: false, // drag cursor in touch / touchbehavior mode also
+    oneaxismousemode: "auto", // it permits horizontal scrolling with mousewheel on horizontal only content, if false (vertical-only) mousewheel don't scroll horizontally, if value is auto detects two-axis mouse
+    preventmultitouchscrolling: true // prevent scrolling on multitouch events
+    disablemutationobserver: false // force MutationObserver disabled,
+    enableobserver: true // enable DOM changing observer, it tries to resize/hide/show when parent or content div had changed
+  
+  });
+
   // $("#body-container").scroll(function(){
   //   $("#body-container").getNiceScroll().resize();
   // });
@@ -271,7 +303,7 @@ function toggleOnPortfolioLink(num) {
         $('#portfolio').show().siblings('section').hide();
         num = 6 - num;
         document.getElementById("portfolio-item-"+num).scrollIntoView(true);
-        // $("#body-container").getNiceScroll().resize();
+        // $('body').getNiceScroll().resize();
     }
     else if($('#portfolio').css('display')!='none') {
         $('#portfolioDetails').show().siblings('section').hide();
@@ -282,7 +314,7 @@ function toggleOnPortfolioLink(num) {
         swiper_innermost.update();
         swiper_innermost.slideTo(num);
         document.getElementById('work').scrollIntoView(true);
-        // $("#body-container").getNiceScroll().resize();
+        // $('body').getNiceScroll().resize();
     }
     else {
     }

@@ -344,12 +344,12 @@ $(window).on("load resize scroll", function() {
 // }
 
 // // modern Chrome requires { passive: false } when adding event
-var supportsPassive = false;
-try {
-  window.addEventListener("test", null, Object.defineProperty({}, 'passive', {
-    get: function () { supportsPassive = true; } 
-  }));
-} catch(e) {}
+// var supportsPassive = false;
+// try {
+//   window.addEventListener("test", null, Object.defineProperty({}, 'passive', {
+//     get: function () { supportsPassive = true; } 
+//   }));
+// } catch(e) {}
 
 // var wheelOpt = supportsPassive ? { passive: false } : false;
 // var wheelEvent = 'onwheel' in document.createElement('div') ? 'wheel' : 'mousewheel';

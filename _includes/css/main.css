@@ -112,7 +112,7 @@ body {
 	padding: 0.5em; 
 	/*-webkit-border-radius: 50%; /* Android ≤ 1.6, iOS 1-3.2, Safari 3-4 */
 	/*border-radius: 50%; */
-	border: 0.5px solid #{{ site.color.text }};*/
+	/*border: 0.5px solid #{{ site.color.text }};*/
 }
 
 #preloader #brand {

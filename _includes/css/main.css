@@ -1041,6 +1041,7 @@ header mark {
 
 .slide-link {
 	float: left;
+	margin-left: 5px;
 	padding: 5px; 
 	outline: 0;
 	background: transparent;

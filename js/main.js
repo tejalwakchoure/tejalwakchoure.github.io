@@ -68,9 +68,9 @@ $(document).ready(function() {
     cursordragspeed: 0.3, // speed of selection when dragged with cursor
     cursordragontouch: false, // drag cursor in touch / touchbehavior mode also
     oneaxismousemode: "auto", // it permits horizontal scrolling with mousewheel on horizontal only content, if false (vertical-only) mousewheel don't scroll horizontally, if value is auto detects two-axis mouse
-    preventmultitouchscrolling: true // prevent scrolling on multitouch events
-    disablemutationobserver: false // force MutationObserver disabled,
-    enableobserver: true // enable DOM changing observer, it tries to resize/hide/show when parent or content div had changed
+    preventmultitouchscrolling: true, // prevent scrolling on multitouch events
+    disablemutationobserver: false, // force MutationObserver disabled,
+    enableobserver: true, // enable DOM changing observer, it tries to resize/hide/show when parent or content div had changed
   
   });
 

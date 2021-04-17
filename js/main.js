@@ -27,7 +27,9 @@ $(document).ready(function() {
               // Fire up other elements
               startTime();
               addPortfolioParallax();
-              // $("#body-container").getNiceScroll().resize();
+              var body_height = $("#body-container").height();
+              $('#body-container').css({height: body_height});
+              $("#body-container").getNiceScroll().resize();
             }
         }, 10);
       }
@@ -36,7 +38,9 @@ $(document).ready(function() {
   swiper_in.controller.control = swiper_innermost;
   swiper.controller.control = swiper_in;
 
-  // $("#body-container").niceScroll();
+  var body_height = $("#body-container").height();
+  $('#body-container').css({height: body_height});
+  $("#body-container").niceScroll();
   // $("#body-container").scroll(function(){
   //   $("#body-container").getNiceScroll().resize();
   // });

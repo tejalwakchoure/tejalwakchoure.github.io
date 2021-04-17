@@ -36,71 +36,36 @@ $(document).ready(function() {
   swiper_in.controller.control = swiper_innermost;
   swiper.controller.control = swiper_in;
 
-  $('body').niceScroll({
-    scrollspeed: 30, // scrolling speed - moves faster if speed is less
-    mousescrollstep: 60, // scrolling speed with mouse wheel (pixel)
-    // directionlockdeadzone: 6, // dead zone in pixels for direction lock activation
-    // nativeparentscrolling: true, // detect bottom of content and let parent to scroll, as native scroll does
-    cursordragspeed: 0.3, // speed of selection when dragged with cursor
-  });
+  // $('body').niceScroll({
+  //   scrollspeed: 30, // scrolling speed - moves faster if speed is less
+  //   mousescrollstep: 60, // scrolling speed with mouse wheel (pixel)
+  //   // directionlockdeadzone: 6, // dead zone in pixels for direction lock activation
+  //   // nativeparentscrolling: true, // detect bottom of content and let parent to scroll, as native scroll does
+  //   cursordragspeed: 0.3, // speed of selection when dragged with cursor
+  // });
 
 
 // $('body').niceScroll({
-//       zindex:"auto",
-//       cursoropacitymin:0,
-//       cursoropacitymax:1,
-//       cursorcolor:"#424242",
-//       cursorwidth:"5px",
-//       cursorborder:"1px solid #fff",
-//       cursorborderradius:"5px",
 //       scrollspeed:60,
 //       mousescrollstep:8*3,
 //       touchbehavior:false,
-//       hwacceleration:true,
 //       usetransition:true,
-//       boxzoom:false,
-//       dblclickzoom:true,
-//       gesturezoom:true,
-//       grabcursorenabled:true,
-//       autohidemode:true,
-//       background:"",
-//       iframeautoresize:true,
-//       cursorminheight:32,
 //       preservenativescrolling:true,
-//       railoffset:false,
 //       bouncescroll:true,
-//       spacebarenabled:true,
-//       railpadding:{top:0,right:0,left:0,bottom:0},
-//       disableoutline:true,
-//       horizrailenabled:true,
-//       railalign:"right",
-//       railvalign:"bottom",
 //       enabletranslate3d:true,
-//       enablemousewheel:true,
-//       enablekeyboard:true,
 //       smoothscroll:true,
-//       sensitiverail:true,
 //       enablemouselockapi:true,
-// //      cursormaxheight:false,
-//       cursorfixedheight:false,      
-//       directionlockdeadzone:6,
-//       hidecursordelay:400,
 //       nativeparentscrolling:true,
-//       enablescrollonselection:true,
-//       overflowx:true,
-//       overflowy:true,
 //       cursordragspeed:0.3,
-//       rtlmode:false,
-//       cursordragontouch:false,
 //     });
 });
 
 // Smooth Mouse Scrolling
-// $("#body-container").easeScroll({
-//     frameRate: 60,
-//     animationTime: 1000,
-//     stepSize: 30,
-// });
+$("#body-container").easeScroll({
+    frameRate: 60,
+    animationTime: 1000,
+    stepSize: 30,
+});
 
 // For browsers without scroll support
 

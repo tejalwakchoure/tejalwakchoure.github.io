@@ -975,8 +975,8 @@ header mark {
 }
 
 .grid-col:nth-child(2) {
-	text-align: right;
 	text-align: -webkit-right;
+	text-align: right;
 }
 
 /* 1 column by default, hide column 2 */

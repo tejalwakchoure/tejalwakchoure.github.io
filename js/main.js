@@ -37,18 +37,15 @@ $(document).ready(function() {
   swiper.controller.control = swiper_in;
 
   $('body').niceScroll({
-
     scrollspeed: 60, // scrolling speed
     mousescrollstep: 60, // scrolling speed with mouse wheel (pixel)
     // directionlockdeadzone: 6, // dead zone in pixels for direction lock activation
     // nativeparentscrolling: true, // detect bottom of content and let parent to scroll, as native scroll does
     cursordragspeed: 0.3, // speed of selection when dragged with cursor
-  
   });
 
 
 // $('body').niceScroll({
-
 //       zindex:"auto",
 //       cursoropacitymin:0,
 //       cursoropacitymax:1,
@@ -95,15 +92,7 @@ $(document).ready(function() {
 //       cursordragspeed:0.3,
 //       rtlmode:false,
 //       cursordragontouch:false,
-
 //     });
-
-
-
-  // $("#body-container").scroll(function(){
-  //   $("#body-container").getNiceScroll().resize();
-  // });
-
 });
 
 // Smooth Mouse Scrolling
@@ -114,19 +103,6 @@ $(document).ready(function() {
 // });
 
 // For browsers without scroll support
-// $("#body-container").niceScroll({
-//     scrollspeed: 60,
-//     // animationTime: 1000,
-//     mousescrollstep: 30,
-//     smoothscroll: true,
-//     enablemousewheel: true,
-// });
-
-
-
-// import smoothscroll from 'smoothscroll-polyfill';
-// smoothscroll.polyfill();
-
 
 // returns true if browser supports smooth scrolling
 // const supportsSmoothScrolling = () => {
@@ -137,45 +113,6 @@ $(document).ready(function() {
 //   body.style.scrollBehavior = scrollSave;
 //   return hasSmooth;
 // };
-
-// let easingPoints = new Array(60).fill(0)
-// function easeCubicOut(t) {
-//     return --t * t * t + 1;
-// }
-// // easing function will take care of decrementing t at each call (too lazy to test it at the moment. If it doesn't, just pass it a decrementing value at each call)
-// let t = 60;
-// var dummyPoints = new Array(60).fill(0).map(()=> easeCubicOut(t));
-// var dummyPointsSum = dummyPoints.reduce((a, el) => {
-//                             a += el;
-//                            return a;
-//                        }, 0);
-// easingPoints = easingPoints.map((el, i) => {
-//         return Math.round($('body').height() * dummyPoints[i] / dummyPointsSum);
-// });
-// var requestAnimationFrame = window.requestAnimationFrame ||
-//             window.mozRequestAnimationFrame ||
-//             window.webkitRequestAnimationFrame ||
-//             window.msRequestAnimationFrame;
-
-// let i = 0;
-// var step = (timestamp) => {
-//  window.scrollBy(
-//    0,
-//    easingPoints[i],
-//  );
-
-// if (++i === 60) {
-//       i = 0;
-//       return setTimeout(() => {
-//         this.myRequestAnimationFrame = requestAnimationFrame(step);
-//       }, YOUR_TIMEOUT_HERE);
-//   }
-// };
-
-// this.myRequestAnimationFrame = requestAnimationFrame(step);
-
-
-
 
 // Portfolio parallax
 function addPortfolioParallax() {
@@ -329,7 +266,7 @@ function toggleOnPortfolioLink(num) {
         $('#portfolio').show().siblings('section').hide();
         num = 6 - num;
         document.getElementById("portfolio-item-"+num).scrollIntoView(true);
-        // $('body').getNiceScroll().resize();
+        $('body').getNiceScroll().resize();
     }
     else if($('#portfolio').css('display')!='none') {
         $('#portfolioDetails').show().siblings('section').hide();
@@ -340,7 +277,7 @@ function toggleOnPortfolioLink(num) {
         swiper_innermost.update();
         swiper_innermost.slideTo(num);
         document.getElementById('work').scrollIntoView(true);
-        // $('body').getNiceScroll().resize();
+        $('body').getNiceScroll().resize();
     }
     else {
     }

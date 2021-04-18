@@ -41,7 +41,7 @@ $(document).ready(function() {
     mousescrollstep: 60, // scrolling speed with mouse wheel (pixel)
     // directionlockdeadzone: 6, // dead zone in pixels for direction lock activation
     // nativeparentscrolling: true, // detect bottom of content and let parent to scroll, as native scroll does
-    cursordragspeed: 0.3, // speed of selection when dragged with cursor
+     autohidemode: "hidden", // how hide the scrollbar works
   });
 
 

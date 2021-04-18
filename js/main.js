@@ -43,6 +43,7 @@ $(document).ready(function() {
     // nativeparentscrolling: true, // detect bottom of content and let parent to scroll, as native scroll does
      autohidemode: "hidden", // how hide the scrollbar works
   });
+  $('body').getNiceScroll().hide();
 
 
 // $('body').niceScroll({

@@ -36,34 +36,41 @@ $(document).ready(function() {
   swiper_in.controller.control = swiper_innermost;
   swiper.controller.control = swiper_in;
 
-  $('body').niceScroll({
-      scrollspeed: 40, // scrolling speed - moves faster if speed is less
-      mousescrollstep: 40, // scrolling speed with mouse wheel (pixel)
-      autohidemode: false, // how hide the scrollbar works
-//    scrollspeed:60,
-//    mousescrollstep:8*3,
-  });
-  // $('body').getNiceScroll().hide();
+  // For browsers without scroll support
+  // returns true if browser supports smooth scrolling
+  const supportsSmoothScrolling = () => {
+    const body = document.body;
+    const scrollSave = body.style.scrollBehavior;
+    body.style.scrollBehavior = 'smooth';
+    const hasSmooth = getComputedStyle(body).scrollBehavior === 'smooth';
+    body.style.scrollBehavior = scrollSave;
+    return hasSmooth;
+  };
+
+  if (supportsSmoothScrolling) {
+    // Smooth Mouse Scrolling
+    $("#body-container").easeScroll({
+        frameRate: 60,
+        animationTime: 1000,
+        stepSize: 30,
+    });
+
+  } else {
+
+   $('body').niceScroll({
+        scrollspeed: 40, // scrolling speed - moves faster if speed is less
+        mousescrollstep: 40, // scrolling speed with mouse wheel (pixel)
+        autohidemode: false, // how hide the scrollbar works
+        //    scrollspeed:60,
+        //    mousescrollstep:8*3,
+      });
+      // $('body').getNiceScroll().hide();
+    }
+  
 });
 
-// Smooth Mouse Scrolling
-// $("#body-container").easeScroll({
-//     frameRate: 60,
-//     animationTime: 1000,
-//     stepSize: 30,
-// });
 
-// For browsers without scroll support
 
-// returns true if browser supports smooth scrolling
-// const supportsSmoothScrolling = () => {
-//   const body = document.body;
-//   const scrollSave = body.style.scrollBehavior;
-//   body.style.scrollBehavior = 'smooth';
-//   const hasSmooth = getComputedStyle(body).scrollBehavior === 'smooth';
-//   body.style.scrollBehavior = scrollSave;
-//   return hasSmooth;
-// };
 
 // Portfolio parallax
 function addPortfolioParallax() {

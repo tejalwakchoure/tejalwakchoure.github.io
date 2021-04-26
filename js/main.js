@@ -87,7 +87,7 @@ function addPortfolioParallax() {
             var images = document.querySelectorAll('.px_img');
             images.forEach(img => {
                 var img_parallax = new simpleParallax(img, {delay: .5,
-                                                            scale: 1.25,
+                                                            scale: 1.3,
                                                             transition: 'cubic-bezier(0,0,0,1)',
                                                             customWrapper: img.parentNode.nodeName,
                                                             });

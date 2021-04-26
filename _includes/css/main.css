@@ -316,9 +316,9 @@ hr.primary {
 }
 
 .navbar-collapse {
+	flex-basis: 100% !important;
 	/*height: 100%;*/
 	width: 100%;
-	flex-basis: 100%;
 }
 
 @media (min-width: 768px) {

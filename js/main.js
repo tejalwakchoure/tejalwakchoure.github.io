@@ -37,9 +37,9 @@ $(document).ready(function() {
   swiper.controller.control = swiper_in;
 
   $('body').niceScroll({
-    scrollspeed: 30, // scrolling speed - moves faster if speed is less
-    mousescrollstep: 60, // scrolling speed with mouse wheel (pixel)
-     autohidemode: false, // how hide the scrollbar works
+      scrollspeed: 40, // scrolling speed - moves faster if speed is less
+      mousescrollstep: 40, // scrolling speed with mouse wheel (pixel)
+      autohidemode: false, // how hide the scrollbar works
   });
   $('body').getNiceScroll().hide();
 

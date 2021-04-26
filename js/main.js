@@ -36,14 +36,12 @@ $(document).ready(function() {
   swiper_in.controller.control = swiper_innermost;
   swiper.controller.control = swiper_in;
 
-  // $('body').niceScroll({
-  //   scrollspeed: 30, // scrolling speed - moves faster if speed is less
-  //   mousescrollstep: 60, // scrolling speed with mouse wheel (pixel)
-  //   // directionlockdeadzone: 6, // dead zone in pixels for direction lock activation
-  //   // nativeparentscrolling: true, // detect bottom of content and let parent to scroll, as native scroll does
-  //    autohidemode: "hidden", // how hide the scrollbar works
-  // });
-  // $('body').getNiceScroll().hide();
+  $('body').niceScroll({
+    scrollspeed: 30, // scrolling speed - moves faster if speed is less
+    mousescrollstep: 60, // scrolling speed with mouse wheel (pixel)
+     autohidemode: false, // how hide the scrollbar works
+  });
+  $('body').getNiceScroll().hide();
 
 
 // $('body').niceScroll({
@@ -62,11 +60,11 @@ $(document).ready(function() {
 });
 
 // Smooth Mouse Scrolling
-$("#body-container").easeScroll({
-    frameRate: 60,
-    animationTime: 1000,
-    stepSize: 30,
-});
+// $("#body-container").easeScroll({
+//     frameRate: 60,
+//     animationTime: 1000,
+//     stepSize: 30,
+// });
 
 // For browsers without scroll support
 
@@ -283,7 +281,8 @@ $(window).on("load", function() {
 
 // Horizontal header parallax
 $(window).on("load resize scroll", function() {
-    var windowTop = $(window).scrollTop(); // Depending on the browser, you may need to use var windowTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
+    // Depending on the browser, you may need to use var windowTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
+    var windowTop = $(window).scrollTop();
     var elementTop = $('header').offset().top;
     var currentpos = -10;
     var pos = currentpos + ((windowTop - elementTop) / 10);

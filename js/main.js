@@ -59,7 +59,7 @@ $(document).ready(function() {
 
    $('body').niceScroll({
         scrollspeed: 60, // scrolling speed - moves faster if speed is less
-        mousescrollstep: 24, // scrolling speed with mouse wheel (pixel)
+        mousescrollstep: 40, // scrolling speed with mouse wheel (pixel)
         autohidemode: false, // how hide the scrollbar works
         //    scrollspeed:60,
         //    mousescrollstep:8*3,

@@ -318,6 +318,7 @@ hr.primary {
 .navbar-collapse {
 	/*height: 100%;*/
 	width: 100%;
+	flex-basis: 100%;
 }
 
 @media (min-width: 768px) {

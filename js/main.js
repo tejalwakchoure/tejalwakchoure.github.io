@@ -40,23 +40,10 @@ $(document).ready(function() {
       scrollspeed: 40, // scrolling speed - moves faster if speed is less
       mousescrollstep: 40, // scrolling speed with mouse wheel (pixel)
       autohidemode: false, // how hide the scrollbar works
+//    scrollspeed:60,
+//    mousescrollstep:8*3,
   });
-  $('body').getNiceScroll().hide();
-
-
-// $('body').niceScroll({
-//       scrollspeed:60,
-//       mousescrollstep:8*3,
-//       touchbehavior:false,
-//       usetransition:true,
-//       preservenativescrolling:true,
-//       bouncescroll:true,
-//       enabletranslate3d:true,
-//       smoothscroll:true,
-//       enablemouselockapi:true,
-//       nativeparentscrolling:true,
-//       cursordragspeed:0.3,
-//     });
+  // $('body').getNiceScroll().hide();
 });
 
 // Smooth Mouse Scrolling

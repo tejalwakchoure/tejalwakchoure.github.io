@@ -47,25 +47,26 @@ $(document).ready(function() {
     return hasSmooth;
   };
 
-  if (supportsSmoothScrolling) {
-    // Smooth Mouse Scrolling
-    $("#body-container").easeScroll({
-        frameRate: 60,
-        animationTime: 1000,
-        stepSize: 30,
-    });
+  // if (supportsSmoothScrolling) {
+  //   // Smooth Mouse Scrolling
+  //   $("#body-container").easeScroll({
+  //       frameRate: 60,
+  //       animationTime: 1000,
+  //       stepSize: 30,
+  //   });
 
-  } else {
+  // } else {
 
    $('body').niceScroll({
-        scrollspeed: 40, // scrolling speed - moves faster if speed is less
-        mousescrollstep: 40, // scrolling speed with mouse wheel (pixel)
+        scrollspeed: 60, // scrolling speed - moves faster if speed is less
+        mousescrollstep: 24, // scrolling speed with mouse wheel (pixel)
         autohidemode: false, // how hide the scrollbar works
         //    scrollspeed:60,
         //    mousescrollstep:8*3,
       });
       // $('body').getNiceScroll().hide();
-    }
+
+    // }
   
 });
 

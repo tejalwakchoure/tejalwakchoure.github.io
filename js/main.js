@@ -281,8 +281,9 @@ $(window).on("load resize scroll", function() {
     var elementTop = $('header').offset().top;
     var currentpos = -10;
     var pos = currentpos + ((windowTop - elementTop) / 10);
-      $('.hor_parallax_right').css({ right: pos });
-      $('.hor_parallax_left').css({ left: pos });
+    $('.hor_parallax_right').css({ right: pos });
+    $('.hor_parallax_left').css({ left: pos });
+    $('body').getNiceScroll().resize();
 });
 
 

@@ -36,55 +36,32 @@ $(document).ready(function() {
   swiper_in.controller.control = swiper_innermost;
   swiper.controller.control = swiper_in;
 
-  // For browsers without scroll support
-  // returns true if browser supports smooth scrolling
-  // const supportsSmoothScrolling = () => {
-  //   const body = document.body;
-  //   const scrollSave = body.style.scrollBehavior;
-  //   body.style.scrollBehavior = 'smooth';
-  //   const hasSmooth = getComputedStyle(body).scrollBehavior === 'smooth';
-  //   body.style.scrollBehavior = scrollSave;
-  //   return hasSmooth;
-  // };
+  // Smooth Mouse Scrolling compatibility for browsers without scroll support
   var isSmoothScrollSupported = 'scrollBehavior' in document.documentElement.style;
 
-// if (isSmoothScrollSupported) {
-//     // Native smooth scrolling
-//     window.scroll(scrollToOptions);
-// } else {
-//     // Old way scrolling without effects
-//     window.scroll(scrollToOptions.left, scrollToOptions.top);
-// }
-
   if (isSmoothScrollSupported) {
-    // Smooth Mouse Scrolling
-    $("#body-container").easeScroll({
+    $('body').easeScroll({
         frameRate: 60,
         animationTime: 1000,
         stepSize: 30,
     });
-
   } else {
-
    $('body').niceScroll({
         scrollspeed: 60, // scrolling speed - moves faster if speed is less
-        mousescrollstep: 30, // scrolling speed with mouse wheel (pixel)
+        mousescrollstep: 10, // scrolling speed with mouse wheel (pixel)
         autohidemode: false, // how hide the scrollbar works
-        //    scrollspeed:60,
-        //    mousescrollstep:8*3,
         horizrailenabled: false,
       });
       // $('body').getNiceScroll().hide();
       $('body').mouseover(function(){
-        $('body').getNiceScroll().resize();
+          $('body').getNiceScroll().resize();
       });
-
+      $('body').scroll(function(){
+          $('body').getNiceScroll().resize();
+      });
     }
 });
 
-// $('body').scroll(function(){
-//   $('body').getNiceScroll().resize();
-// });
 
 
 // Portfolio parallax

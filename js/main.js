@@ -49,7 +49,7 @@ $(document).ready(function() {
    $('body').niceScroll({
         scrollspeed: 60, // scrolling speed - moves faster if speed is less
         mousescrollstep: 16, // scrolling speed with mouse wheel (pixel)
-        autohidemode: "hidden", // how hide the scrollbar works
+        // autohidemode: "hidden", // how hide the scrollbar works
       });
       // $('body').getNiceScroll().hide();
       // $('body').mouseover(function(){
@@ -61,7 +61,7 @@ $(document).ready(function() {
        $('body').on("mouseover scroll", function() {
           $('body').getNiceScroll().resize();
       });
-       $('.nicescroll-rails.nicescroll-rails-vr').css({opacity: "0 !important", display: "none"}); 
+       $('.nicescroll-rails .nicescroll-rails-vr').css({opacity: "0 !important", display: "none"}); 
     // }
 });
 

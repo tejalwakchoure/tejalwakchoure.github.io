@@ -39,27 +39,30 @@ $(document).ready(function() {
   // Smooth Mouse Scrolling compatibility for browsers without scroll support
   var isSmoothScrollSupported = 'scrollBehavior' in document.documentElement.style;
 
-  if (isSmoothScrollSupported) {
-    $('body').easeScroll({
-        frameRate: 60,
-        animationTime: 1000,
-        stepSize: 30,
-    });
-  } else {
+  // if (isSmoothScrollSupported) {
+  //   $('body').easeScroll({
+  //       frameRate: 60,
+  //       animationTime: 1000,
+  //       stepSize: 30,
+  //   });
+  // } else {
    $('body').niceScroll({
         scrollspeed: 60, // scrolling speed - moves faster if speed is less
-        mousescrollstep: 10, // scrolling speed with mouse wheel (pixel)
-        autohidemode: false, // how hide the scrollbar works
+        mousescrollstep: 16, // scrolling speed with mouse wheel (pixel)
+        autohidemode: "scroll", // how hide the scrollbar works
         horizrailenabled: false,
       });
       // $('body').getNiceScroll().hide();
-      $('body').mouseover(function(){
+      // $('body').mouseover(function(){
+      //     $('body').getNiceScroll().resize();
+      // });
+      // $('body').scroll(function(){
+      //     $('body').getNiceScroll().resize();
+      // });
+       $('body').on("mouseover scroll", function() {
           $('body').getNiceScroll().resize();
       });
-      $('body').scroll(function(){
-          $('body').getNiceScroll().resize();
-      });
-    }
+    // }
 });
 
 

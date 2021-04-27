@@ -1586,3 +1586,7 @@ form .row:first-child .floating-label-form-group {
 @-ms-viewport{  
 	width: device-width;  
 }
+
+.nicescroll-rails-vr {
+    display: block !important;
+ }

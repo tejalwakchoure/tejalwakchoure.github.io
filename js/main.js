@@ -61,7 +61,7 @@ $(document).ready(function() {
        $('body').on("mouseover scroll", function() {
           $('body').getNiceScroll().resize();
       });
-       $('.nicescroll-rails .nicescroll-rails-vr').css({opacity: "0 !important", display: "none"}); 
+       $('.nicescroll-rails-vr').css({opacity: "0 !important", display: "none"}); 
     // }
 });
 

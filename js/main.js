@@ -49,8 +49,7 @@ $(document).ready(function() {
    $('body').niceScroll({
         scrollspeed: 60, // scrolling speed - moves faster if speed is less
         mousescrollstep: 16, // scrolling speed with mouse wheel (pixel)
-        autohidemode: "scroll", // how hide the scrollbar works
-        horizrailenabled: false,
+        autohidemode: "hidden", // how hide the scrollbar works
       });
       // $('body').getNiceScroll().hide();
       // $('body').mouseover(function(){

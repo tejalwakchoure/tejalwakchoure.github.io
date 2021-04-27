@@ -58,8 +58,8 @@ $(document).ready(function() {
   // } else {
 
    $('body').niceScroll({
-        scrollspeed: 60, // scrolling speed - moves faster if speed is less
-        mousescrollstep: 40, // scrolling speed with mouse wheel (pixel)
+        scrollspeed: 80, // scrolling speed - moves faster if speed is less
+        mousescrollstep: 80, // scrolling speed with mouse wheel (pixel)
         autohidemode: false, // how hide the scrollbar works
         //    scrollspeed:60,
         //    mousescrollstep:8*3,
@@ -70,6 +70,13 @@ $(document).ready(function() {
   
 });
 
+$('body').scroll(function(){
+  $('body').getNiceScroll().resize();
+});
+
+// $('body').mouseover(function(){
+//   $('body').getNiceScroll().resize();
+// });
 
 
 

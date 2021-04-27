@@ -51,16 +51,16 @@ $(document).ready(function() {
         mousescrollstep: 16, // scrolling speed with mouse wheel (pixel)
         // autohidemode: "hidden", // how hide the scrollbar works
       });
-      // $('body').getNiceScroll().hide();
-      // $('body').mouseover(function(){
-      //     $('body').getNiceScroll().resize();
-      // });
-      // $('body').scroll(function(){
-      //     $('body').getNiceScroll().resize();
-      // });
-       $('body').on("mouseover scroll", function() {
+      $('body').getNiceScroll().hide();
+      $('body').mouseover(function(){
           $('body').getNiceScroll().resize();
       });
+      $('body').scroll(function(){
+          $('body').getNiceScroll().resize();
+      });
+      //  $('body').on("mouseover scroll", function() {
+      //     $('body').getNiceScroll().resize();
+      // });
        $('.nicescroll-rails-vr').css({opacity: "0 !important", display: "none"}); 
     // }
 });

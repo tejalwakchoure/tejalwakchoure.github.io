@@ -39,6 +39,7 @@ $(document).ready(function() {
    var nicescroll = $('html, body').niceScroll({
         scrollspeed: 60, // scrolling speed - moves faster if speed is less
         mousescrollstep: 16, // scrolling speed with mouse wheel (pixel)
+        horizrailenabled: false,
       });
     nicescroll.resize();
 

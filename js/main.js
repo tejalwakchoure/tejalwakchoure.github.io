@@ -38,8 +38,8 @@ $(document).ready(function() {
 
   // Smooth Mouse Scrolling for all browsers
    var nicescroll = $('html, body').niceScroll({
-        scrollspeed: 60, // scrolling speed - moves faster if speed is less
-        mousescrollstep: 16, // scrolling speed with mouse wheel (pixel)
+        // scrollspeed: 60, // scrolling speed - moves faster if speed is less
+        // mousescrollstep: 16, // scrolling speed with mouse wheel (pixel)
       });
 
     // $('html, body').on('mouseover scroll', function() {

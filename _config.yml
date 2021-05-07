@@ -2,9 +2,9 @@
 title: Tejal Wakchoure
 url: https://tejalwakchoure.github.io
 description: "Personal Website"
-skills_1: "Data Science"
-skills_2: "UI/UX Design"
-skills_3: "Social Network Analysis"
+# skills_1: "Data Science"
+# skills_2: "UI/UX Design"
+# skills_3: "Social Network Analysis"
 meta_author: Wakchoure Tejal
 
 # Google webmaster tools
@@ -16,23 +16,22 @@ bing_verify:
 # Color settings
 color:
     text: '575757'
-    text_light: 'ffffff'
-    text_small_devices: '000000'
     heading: '000000'
+    text_small_devices: '000000'
+    
     accent: 'bc763d' # 'E82E2E'  '76296F'
     backgroundcol: 'ffe1cf' #'DAE6FF'
     backgroundcol_dark: 'bc763d' # 'dfae91' #'4B69AB'
     backgroundcol_light: 'FDF0E6' # 'e6ecf8'
-    page_bkg: 'ffffff' # 'f2f2f2'
+    
+    white: 'ffffff'
     gray: 'bfbfbf'
-    gray_dark: '454545'
-
 
 # Footer settings
 footer:
   copyright: Tejal Wakchoure
-  location: Location
-  credits: Credits
+  # location: Location
+  # credits: Credits
 
 # Social networks usernames
 social:
@@ -46,7 +45,7 @@ plugins:
   - jekyll-redirect-from
 
 # Credits content
-credits:
+credits: Tejal Wakchoure
 
 # Build settings
 markdown: kramdown

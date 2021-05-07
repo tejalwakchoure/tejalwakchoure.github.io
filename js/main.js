@@ -27,7 +27,6 @@ $(document).ready(function() {
               // Fire up other elements
               startTime();
               addPortfolioParallax();
-              // nicescroll.resize();
             }
         }, 10);
       }
@@ -38,12 +37,21 @@ $(document).ready(function() {
 
   // Smooth Mouse Scrolling for all browsers
    var nicescroll = $('html, body').niceScroll({
-        // scrollspeed: 60, // scrolling speed - moves faster if speed is less
-        // mousescrollstep: 16, // scrolling speed with mouse wheel (pixel)
+        scrollspeed: 60, // scrolling speed - moves faster if speed is less
+        mousescrollstep: 16, // scrolling speed with mouse wheel (pixel)
       });
+   nicescroll.resize();
 
+    // If flickering occurs
     // $('html, body').on('mouseover scroll', function() {
     //       nicescroll.resize();
+    //   });
+
+    // Backup (will have to download .js)
+    // $("#body-container").easeScroll({
+    //       frameRate: 60,
+    //       animationTime: 1000,
+    //       stepSize: 30,
     //   });
     
     // Hide scrollbar
@@ -56,8 +64,6 @@ $(document).ready(function() {
     $('.nicescroll-rails.nicescroll-rails-vr').remove();
 
 });
-
-
 
 // Portfolio parallax
 function addPortfolioParallax() {

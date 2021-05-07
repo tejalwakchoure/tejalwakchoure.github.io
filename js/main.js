@@ -27,7 +27,7 @@ $(document).ready(function() {
               // Fire up other elements
               startTime();
               addPortfolioParallax();
-              // $('body').getNiceScroll().resize();
+              // nicescroll.resize();
             }
         }, 10);
       }
@@ -36,52 +36,25 @@ $(document).ready(function() {
   swiper_in.controller.control = swiper_innermost;
   swiper.controller.control = swiper_in;
 
-  // Smooth Mouse Scrolling compatibility for browsers without scroll support
-  var isSmoothScrollSupported = 'scrollBehavior' in document.documentElement.style;
-
-  // if (isSmoothScrollSupported) {
-  //   $('body').easeScroll({
-  //       frameRate: 60,
-  //       animationTime: 1000,
-  //       stepSize: 30,
-  //   });
-  // } else {
-   // $('body').niceScroll({
-   //      scrollspeed: 60, // scrolling speed - moves faster if speed is less
-   //      mousescrollstep: 16, // scrolling speed with mouse wheel (pixel)
-   //      // autohidemode: "hidden", // how hide the scrollbar works
-   //    });
+  // Smooth Mouse Scrolling for all browsers
    var nicescroll = $('html, body').niceScroll({
         scrollspeed: 60, // scrolling speed - moves faster if speed is less
         mousescrollstep: 16, // scrolling speed with mouse wheel (pixel)
-        // autohidemode: "hidden", // how hide the scrollbar works
       });
-      // $('body').getNiceScroll().resize();
 
-      // $('body').getNiceScroll().hide();
-      // $('.nicescroll-rails-vr').css({opacity: "0 !important", display: "none"}); 
-
-      //  $('body').on("mouseover scroll", function() {
-      //     $('body').getNiceScroll().resize();
-      // });
-    // }
-
-    // var page = $('body');  // set to the main content of the page   
-    // $(window).on('scroll', function(event, delta, deltaX, deltaY){
-    //     if (delta < 0) page.scrollTop(page.scrollTop() + 65);
-    //     else if (delta > 0) page.scrollTop(page.scrollTop() - 65);
-    //     return false;
-    // });
+    $('html, body').on('mouseover scroll', function() {
+          nicescroll.resize();
+      });
     
-  var _super = nicescroll.getContentSize;
-
-  nicescroll.getContentSize = function () {
+    // Hide scrollbar
+    var _super = nicescroll.getContentSize;
+    nicescroll.getContentSize = function () {
       var page = _super.call(nicescroll);
       page.h = nicescroll.win.height();
       return page;
-  }
-  $('.nicescroll-rails.nicescroll-rails-vr').remove();
-  
+    }
+    $('.nicescroll-rails.nicescroll-rails-vr').remove();
+
 });
 
 
@@ -238,7 +211,6 @@ function toggleOnPortfolioLink(num) {
         $('#portfolio').show().siblings('section').hide();
         num = 6 - num;
         document.getElementById("portfolio-item-"+num).scrollIntoView(true);
-        // $('body').getNiceScroll().resize();
     }
     else if($('#portfolio').css('display')!='none') {
         $('#portfolioDetails').show().siblings('section').hide();
@@ -249,7 +221,6 @@ function toggleOnPortfolioLink(num) {
         swiper_innermost.update();
         swiper_innermost.slideTo(num);
         document.getElementById('work').scrollIntoView(true);
-        // $('body').getNiceScroll().resize();
     }
     else {
     }
@@ -296,7 +267,6 @@ $(window).on("load resize scroll", function() {
     var pos = currentpos + ((windowTop - elementTop) / 10);
     $('.hor_parallax_right').css({ right: pos });
     $('.hor_parallax_left').css({ left: pos });
-    // $('body').getNiceScroll().resize();
 });
 
 

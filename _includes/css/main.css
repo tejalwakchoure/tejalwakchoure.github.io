@@ -964,10 +964,28 @@ header mark {
   	min-height: 600px;
   	height: 70vh;
 }
-
 .masonry-item:nth-child(4) {
   	padding-top: 0;
 }
+
+/*.grid-col:nth-child(1) > .grid-item:nth-child(odd),
+.grid-col:nth-child(2) > .grid-item:nth-child(even) {
+    height: 500px;
+    line-height: 500px;
+}
+
+.grid-col:nth-child(1) > .grid-item:nth-child(even),
+.grid-col:nth-child(2) > .grid-item:nth-child(odd) {
+    height: 600px;
+    line-height: 600px;
+}
+.grid-col:nth-child(2) { 
+		display: block; 
+}
+
+.grid-col:nth-child(2) > .grid-item:nth-child(1) {
+    margin-top: 625px; 
+}*/
 
 #portfolioDetails {
 	height: -moz-fit-content;
@@ -1136,7 +1154,7 @@ header mark {
 }
 .swiper-button-next {
 	float: right;
-	margin-right: 10px
+	margin-right: 10px;
 	color: #{{ site.color.accent }};
 }
 .swiper-button-prev:hover, .swiper-button-next:hover {
@@ -1162,25 +1180,6 @@ header mark {
 	.grid-col:nth-child(2) { 
   		display: none; 
 	}
-  
-   	/*.grid-col:nth-child(1) > .grid-item:nth-child(odd),
-	.grid-col:nth-child(2) > .grid-item:nth-child(even) {
-	    height: 500px;
-	    line-height: 500px;
-	}
-
-	.grid-col:nth-child(1) > .grid-item:nth-child(even),
-	.grid-col:nth-child(2) > .grid-item:nth-child(odd) {
-	    height: 600px;
-	    line-height: 600px;
-	}
-	.grid-col:nth-child(2) { 
-  		display: block; 
-	}
-  
-	.grid-col:nth-child(2) > .grid-item:nth-child(1) {
-	    margin-top: 625px; 
-	}*/
 
     .masonry-grid {
         -moz-column-count: 1;

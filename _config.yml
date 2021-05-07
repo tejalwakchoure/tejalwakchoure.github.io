@@ -1,10 +1,7 @@
 # Site settings
 title: Tejal Wakchoure
 url: https://tejalwakchoure.github.io
-description: "Personal Website"
-# skills_1: "Data Science"
-# skills_2: "UI/UX Design"
-# skills_3: "Social Network Analysis"
+description: Personal Website
 meta_author: Wakchoure Tejal
 
 # Google webmaster tools
@@ -30,8 +27,6 @@ color:
 # Footer settings
 footer:
   copyright: Tejal Wakchoure
-  # location: Location
-  # credits: Credits
 
 # Social networks usernames
 social:

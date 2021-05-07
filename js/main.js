@@ -40,6 +40,7 @@ $(document).ready(function() {
         scrollspeed: 60, // scrolling speed - moves faster if speed is less
         mousescrollstep: 16, // scrolling speed with mouse wheel (pixel)
       });
+   nicescroll.resize();
 
     // If flickering occurs
     // $('html, body').on('mouseover scroll', function() {

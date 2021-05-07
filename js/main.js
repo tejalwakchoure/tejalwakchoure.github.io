@@ -51,7 +51,7 @@ $(document).ready(function() {
    //      mousescrollstep: 16, // scrolling speed with mouse wheel (pixel)
    //      // autohidemode: "hidden", // how hide the scrollbar works
    //    });
-   $('html, body').niceScroll({
+   var nicescroll = $('html, body').niceScroll({
         scrollspeed: 60, // scrolling speed - moves faster if speed is less
         mousescrollstep: 16, // scrolling speed with mouse wheel (pixel)
         // autohidemode: "hidden", // how hide the scrollbar works
@@ -72,6 +72,16 @@ $(document).ready(function() {
     //     else if (delta > 0) page.scrollTop(page.scrollTop() - 65);
     //     return false;
     // });
+    
+  var _super = nicescroll.getContentSize;
+
+  nicescroll.getContentSize = function () {
+      var page = _super.call(nicescroll);
+      page.h = nicescroll.win.height();
+      return page;
+  }
+  $('.nicescroll-rails.nicescroll-rails-vr').remove();
+  
 });
 
 

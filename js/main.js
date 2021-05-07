@@ -40,7 +40,6 @@ $(document).ready(function() {
         scrollspeed: 60, // scrolling speed - moves faster if speed is less
         mousescrollstep: 16, // scrolling speed with mouse wheel (pixel)
       });
-   nicescroll.resize();
 
     // If flickering occurs
     // $('html, body').on('mouseover scroll', function() {
@@ -263,6 +262,8 @@ $(window).on("load", function() {
     var dir2 = 'assets/img/portfolio/';
     var images2 = ['project-1.jpg', 'project-2.jpg', 'project-3.jpg', 'project-4.jpg', 'project-5.jpg', 'project-6.jpg'];
     preloadImages(dir2, images2);
+
+    nicescroll.resize();
 });
 
 // Horizontal header parallax

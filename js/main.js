@@ -46,12 +46,12 @@ $(document).ready(function() {
   //       stepSize: 30,
   //   });
   // } else {
-   $('body').niceScroll({
-        scrollspeed: 60, // scrolling speed - moves faster if speed is less
-        mousescrollstep: 16, // scrolling speed with mouse wheel (pixel)
-        // autohidemode: "hidden", // how hide the scrollbar works
-      });
-   $('html').niceScroll({
+   // $('body').niceScroll({
+   //      scrollspeed: 60, // scrolling speed - moves faster if speed is less
+   //      mousescrollstep: 16, // scrolling speed with mouse wheel (pixel)
+   //      // autohidemode: "hidden", // how hide the scrollbar works
+   //    });
+   $('html','body').niceScroll({
         scrollspeed: 60, // scrolling speed - moves faster if speed is less
         mousescrollstep: 16, // scrolling speed with mouse wheel (pixel)
         // autohidemode: "hidden", // how hide the scrollbar works

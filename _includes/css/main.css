@@ -56,8 +56,7 @@ body {
   	transition: background-color 1s ease;
   	position: relative;
 
-
-  	overflow-y: hidden;
+  	overflow: hidden;
   	height: -moz-fit-content;
   	height: -webkit-fit-content;
   	height: fit-content;

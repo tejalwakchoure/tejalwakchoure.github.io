@@ -42,9 +42,9 @@ $(document).ready(function() {
         mousescrollstep: 16, // scrolling speed with mouse wheel (pixel)
       });
 
-    $('html, body').on('mouseover scroll', function() {
-          nicescroll.resize();
-      });
+    // $('html, body').on('mouseover scroll', function() {
+    //       nicescroll.resize();
+    //   });
     
     // Hide scrollbar
     var _super = nicescroll.getContentSize;

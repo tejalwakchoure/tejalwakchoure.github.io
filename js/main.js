@@ -46,24 +46,27 @@ $(document).ready(function() {
   //       stepSize: 30,
   //   });
   // } else {
-   $('body').niceScroll({
-        scrollspeed: 60, // scrolling speed - moves faster if speed is less
-        mousescrollstep: 16, // scrolling speed with mouse wheel (pixel)
-        autohidemode: "hidden", // how hide the scrollbar works
-      });
-      $('body').getNiceScroll().hide();
-      $('.nicescroll-rails-vr').css({opacity: "0 !important", display: "none"}); 
-      
-      // $('body').mouseover(function(){
+   // $('body').niceScroll({
+   //      scrollspeed: 60, // scrolling speed - moves faster if speed is less
+   //      mousescrollstep: 16, // scrolling speed with mouse wheel (pixel)
+   //      // autohidemode: "hidden", // how hide the scrollbar works
+   //    });
+      // $('body').getNiceScroll().resize();
+
+      // $('body').getNiceScroll().hide();
+      // $('.nicescroll-rails-vr').css({opacity: "0 !important", display: "none"}); 
+
+      //  $('body').on("mouseover scroll", function() {
       //     $('body').getNiceScroll().resize();
       // });
-      // $('body').scroll(function(){
-      //     $('body').getNiceScroll().resize();
-      // });
-       $('body').on("mouseover scroll", function() {
-          $('body').getNiceScroll().resize();
-      });
     // }
+
+    var page = $('body');  // set to the main content of the page   
+    $(window).mousewheel(function(event, delta, deltaX, deltaY){
+        if (delta < 0) page.scrollTop(page.scrollTop() + 65);
+        else if (delta > 0) page.scrollTop(page.scrollTop() - 65);
+        return false;
+    });
 });
 
 

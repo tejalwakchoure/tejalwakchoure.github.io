@@ -51,11 +51,11 @@ $(document).ready(function() {
         mousescrollstep: 16, // scrolling speed with mouse wheel (pixel)
         // autohidemode: "hidden", // how hide the scrollbar works
       });
-   $('html').niceScroll({
-        scrollspeed: 60, // scrolling speed - moves faster if speed is less
-        mousescrollstep: 16, // scrolling speed with mouse wheel (pixel)
-        // autohidemode: "hidden", // how hide the scrollbar works
-      });
+   // $('html').niceScroll({
+   //      scrollspeed: 60, // scrolling speed - moves faster if speed is less
+   //      mousescrollstep: 16, // scrolling speed with mouse wheel (pixel)
+   //      // autohidemode: "hidden", // how hide the scrollbar works
+   //    });
       // $('body').getNiceScroll().resize();
 
       // $('body').getNiceScroll().hide();

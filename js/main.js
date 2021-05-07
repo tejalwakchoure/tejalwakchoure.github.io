@@ -184,6 +184,7 @@ var swiper_in = new Swiper('.swiper-container-in', {
 
 var swiper = new Swiper('.swiper-container', {
       // cssMode: true,
+      // virtualTranslate: true,
       touchEventsTarget: 'wrapper',
       simulateTouch: false,
       navigation: {
@@ -203,7 +204,6 @@ var swiper = new Swiper('.swiper-container', {
       observer: true,
       observeParents: true,
       watchSlidesProgress: true,
-      // virtualTranslate: true,
     });
 
 // Toggle visibility of project carousel
@@ -218,6 +218,7 @@ function toggleOnPortfolioLink(num) {
         document.getElementById("portfolio-item-"+num).scrollIntoView(true);
     }
     else if($('#portfolio').css('display')!='none') {
+        $('#portfolioDetails').css({display: 'table'});
         $('#portfolioDetails').show().siblings('section').hide();
         swiper.update();
         swiper.slideTo(num);

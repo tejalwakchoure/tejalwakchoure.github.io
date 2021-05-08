@@ -38,13 +38,13 @@ $(document).ready(function() {
   // Smooth Mouse Scrolling for all browsers
   var isSmoothScrollSupported = 'scrollBehavior' in document.documentElement.style;
 
-  if(isSmoothScrollSupported) {
-      $("#body-container").easeScroll({
-            frameRate: 60,
-            animationTime: 1000,
-            stepSize: 60,
-        });
-  } else {
+  // if(isSmoothScrollSupported) {
+  //     $("#body-container").easeScroll({
+  //           frameRate: 60,
+  //           animationTime: 1000,
+  //           stepSize: 60,
+  //       });
+  // } else {
       var nicescroll = $('html, body').niceScroll({
           scrollspeed: 60, // scrolling speed - moves faster if speed is less
           mousescrollstep: 16, // scrolling speed with mouse wheel (pixel)
@@ -59,7 +59,7 @@ $(document).ready(function() {
         return page;
       }
       $('.nicescroll-rails.nicescroll-rails-vr').remove();
-  }
+  // }
 });
 
 // Portfolio parallax

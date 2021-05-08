@@ -35,37 +35,36 @@ $(document).ready(function() {
   swiper_in.controller.control = swiper_innermost;
   swiper.controller.control = swiper_in;
 
-  // Smooth Mouse Scrolling for all browsers
-  var isSmoothScrollSupported = 'scrollBehavior' in document.documentElement.style;
+    // Smooth Mouse Scrolling for all browsers
+    var isSmoothScrollSupported = 'scrollBehavior' in document.documentElement.style;
 
-  // if(isSmoothScrollSupported) {
-  //     $("#body-container").easeScroll({
-  //           frameRate: 60,
-  //           animationTime: 1000,
-  //           stepSize: 60,
-  //       });
-  // } else {
-      var nicescroll = $('html, body').niceScroll({
-          scrollspeed: 60, // scrolling speed - moves faster if speed is less
-          mousescrollstep: 16, // scrolling speed with mouse wheel (pixel)
-          autohidemode: false, 
-          zindex: 999 
-        });
+    if(isSmoothScrollSupported) {
+        $("#body-container").easeScroll({
+              frameRate: 60,
+              animationTime: 1000,
+              stepSize: 60,
+          });
+    } else {
+        var nicescroll = $('html, body').niceScroll({
+            scrollspeed: 60, // scrolling speed - moves faster if speed is less
+            mousescrollstep: 16, // scrolling speed with mouse wheel (pixel)
+            autohidemode: false, 
+            zindex: 999 
+          });
 
-      // Hide scrollbar
-      var _super = nicescroll.getContentSize;
-      nicescroll.getContentSize = function () {
-        var page = _super.call(nicescroll);
-        page.h = nicescroll.win.height();
-        return page;
-      }
-      $('.nicescroll-rails.nicescroll-rails-vr').remove();
+        // Hide scrollbar
+        var _super = nicescroll.getContentSize;
+        nicescroll.getContentSize = function () {
+          var page = _super.call(nicescroll);
+          page.h = nicescroll.win.height();
+          return page;
+          }
+        $('.nicescroll-rails.nicescroll-rails-vr').remove();
 
-      $('html, body').bind('wheel scroll', function () {
-        // $('html, body').niceScroll({ autohidemode: false, zindex: 999 }).resize();
-        nicescroll.resize();
-      });
-  // }
+        $('html, body').bind('wheel scroll', function () {
+          nicescroll.resize();
+          });
+    }
 });
 
 // Portfolio parallax

@@ -50,6 +50,7 @@ $(document).ready(function() {
           mousescrollstep: 16, // scrolling speed with mouse wheel (pixel)
         });
       
+      
       // Hide scrollbar
       var _super = nicescroll.getContentSize;
       nicescroll.getContentSize = function () {
@@ -58,10 +59,22 @@ $(document).ready(function() {
         return page;
       }
       $('.nicescroll-rails.nicescroll-rails-vr').remove();
-
-      nicescroll.resize();
+      resizeNicescroll(nicescroll);
+      // nicescroll.resize();
   // }
 });
+
+// Nicescroll
+function resizeNicescroll(nicescroll) {
+    var startResizeTime = Date.now();
+    var interval = setInterval(function () {
+        if ($('footer').is(':visible') || Date.now() - startResizeTime > 4000) {
+            clearInterval(interval);
+        } else {
+          nicescroll.resize();
+        }
+    }, 100);
+}
 
 // Portfolio parallax
 function addPortfolioParallax() {

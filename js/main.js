@@ -36,33 +36,29 @@ $(document).ready(function() {
   swiper.controller.control = swiper_in;
 
   // Smooth Mouse Scrolling for all browsers
-   // var nicescroll = $('html, body').niceScroll({
-   //      scrollspeed: 60, // scrolling speed - moves faster if speed is less
-   //      mousescrollstep: 16, // scrolling speed with mouse wheel (pixel)
-   //    });
-   //  nicescroll.resize();
-
-    // If flickering occurs
-    // $('html, body').on('mouseover scroll', function() {
-    //       nicescroll.resize();
-    //   });
-
-    // Backup
-    $("#body-container").easeScroll({
-          frameRate: 60,
-          animationTime: 1000,
-          stepSize: 30,
-      });
-    
-    // Hide scrollbar
-    // var _super = nicescroll.getContentSize;
-    // nicescroll.getContentSize = function () {
-    //   var page = _super.call(nicescroll);
-    //   page.h = nicescroll.win.height();
-    //   return page;
-    // }
-    // $('.nicescroll-rails.nicescroll-rails-vr').remove();
-
+  var isSmoothScrollSupported = 'scrollBehavior' in document.documentElement.style;
+  if(isSmoothScrollSupported) {
+      $("#body-container").easeScroll({
+            frameRate: 60,
+            animationTime: 1000,
+            stepSize: 60,
+        });
+  } else {
+      var nicescroll = $('html, body').niceScroll({
+          scrollspeed: 60, // scrolling speed - moves faster if speed is less
+          mousescrollstep: 16, // scrolling speed with mouse wheel (pixel)
+        });
+      nicescroll.resize();
+      
+      // Hide scrollbar
+      var _super = nicescroll.getContentSize;
+      nicescroll.getContentSize = function () {
+        var page = _super.call(nicescroll);
+        page.h = nicescroll.win.height();
+        return page;
+      }
+      $('.nicescroll-rails.nicescroll-rails-vr').remove();
+  }
 });
 
 

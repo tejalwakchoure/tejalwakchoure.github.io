@@ -47,7 +47,7 @@ $(document).ready(function() {
     //       nicescroll.resize();
     //   });
 
-    // Backup (will have to download .js)
+    // Backup
     // $("#body-container").easeScroll({
     //       frameRate: 60,
     //       animationTime: 1000,
@@ -55,13 +55,13 @@ $(document).ready(function() {
     //   });
     
     // Hide scrollbar
-    var _super = nicescroll.getContentSize;
-    nicescroll.getContentSize = function () {
-      var page = _super.call(nicescroll);
-      page.h = nicescroll.win.height();
-      return page;
-    }
-    $('.nicescroll-rails.nicescroll-rails-vr').remove();
+    // var _super = nicescroll.getContentSize;
+    // nicescroll.getContentSize = function () {
+    //   var page = _super.call(nicescroll);
+    //   page.h = nicescroll.win.height();
+    //   return page;
+    // }
+    // $('.nicescroll-rails.nicescroll-rails-vr').remove();
 
 });
 

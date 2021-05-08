@@ -17,6 +17,16 @@ html,body
 	color: #{{ site.color.text }};
 }
 
+html {
+	overflow: hidden !important;
+	touch-action: none;
+}
+body {
+	overflow: hidden !important;
+}
+
+
+
 .heading,
 .name,
 .skills {

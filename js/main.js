@@ -65,6 +65,10 @@ $(document).ready(function() {
 
 });
 
+
+window.addEventListener("mousewheel", this.mousewheel.bind(this), { passive: false });
+
+
 // Portfolio parallax
 function addPortfolioParallax() {
     var startParallaxTime = Date.now();

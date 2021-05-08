@@ -5,7 +5,7 @@ function fadeInChildren(parent, base_delay) {
         $(this).css({opacity: 0.0, visibility: "visible"}).delay(base_delay+(500*index)).animate({opacity: 1.0}, 500);
     });
 }
-var nicescroll;
+
 $(document).ready(function() {
     $('#body-container').css({display: 'none'});
     var counter = 0;
@@ -36,11 +36,11 @@ $(document).ready(function() {
   swiper.controller.control = swiper_in;
 
   // Smooth Mouse Scrolling for all browsers
-   nicescroll = $('html, body').niceScroll({
-        scrollspeed: 60, // scrolling speed - moves faster if speed is less
-        mousescrollstep: 16, // scrolling speed with mouse wheel (pixel)
-      });
-    nicescroll.resize();
+   // var nicescroll = $('html, body').niceScroll({
+   //      scrollspeed: 60, // scrolling speed - moves faster if speed is less
+   //      mousescrollstep: 16, // scrolling speed with mouse wheel (pixel)
+   //    });
+   //  nicescroll.resize();
 
     // If flickering occurs
     // $('html, body').on('mouseover scroll', function() {
@@ -48,20 +48,20 @@ $(document).ready(function() {
     //   });
 
     // Backup
-    // $("#body-container").easeScroll({
-    //       frameRate: 60,
-    //       animationTime: 1000,
-    //       stepSize: 30,
-    //   });
+    $("#body-container").easeScroll({
+          frameRate: 60,
+          animationTime: 1000,
+          stepSize: 30,
+      });
     
     // Hide scrollbar
-    var _super = nicescroll.getContentSize;
-    nicescroll.getContentSize = function () {
-      var page = _super.call(nicescroll);
-      page.h = nicescroll.win.height();
-      return page;
-    }
-    $('.nicescroll-rails.nicescroll-rails-vr').remove();
+    // var _super = nicescroll.getContentSize;
+    // nicescroll.getContentSize = function () {
+    //   var page = _super.call(nicescroll);
+    //   page.h = nicescroll.win.height();
+    //   return page;
+    // }
+    // $('.nicescroll-rails.nicescroll-rails-vr').remove();
 
 });
 
@@ -263,8 +263,6 @@ $(window).on("load", function() {
     var dir2 = 'assets/img/portfolio/';
     var images2 = ['project-1.jpg', 'project-2.jpg', 'project-3.jpg', 'project-4.jpg', 'project-5.jpg', 'project-6.jpg'];
     preloadImages(dir2, images2);
-
-    nicescroll.resize();
 });
 
 // Horizontal header parallax

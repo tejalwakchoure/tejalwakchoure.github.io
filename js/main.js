@@ -47,10 +47,8 @@ $(document).ready(function() {
   // } else {
       var nicescroll = $('html, body').niceScroll({
           scrollspeed: 60, // scrolling speed - moves faster if speed is less
-          cursordragontouch : true,
           mousescrollstep: 16, // scrolling speed with mouse wheel (pixel)
         });
-      nicescroll.resize();
       
       // Hide scrollbar
       var _super = nicescroll.getContentSize;
@@ -60,6 +58,8 @@ $(document).ready(function() {
         return page;
       }
       $('.nicescroll-rails.nicescroll-rails-vr').remove();
+
+      nicescroll.resize();
   // }
 });
 

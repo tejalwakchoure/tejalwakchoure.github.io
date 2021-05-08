@@ -66,7 +66,7 @@ $(document).ready(function() {
 });
 
 
-window.addEventListener("mousewheel", this.mousewheel.bind(this), { passive: false });
+window.addEventListener("mousewheel", { passive: false });
 
 
 // Portfolio parallax

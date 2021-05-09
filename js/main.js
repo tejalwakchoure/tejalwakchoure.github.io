@@ -38,6 +38,7 @@ $(document).ready(function() {
     // Smooth Mouse Scrolling for all browsers
     var isSmoothScrollSupported = 'scrollBehavior' in document.documentElement.style;
     const doc = isSmoothScrollSupported ? document : document.body;
+    console.log(doc);
     SmoothScroll(doc, 120, 12);
     // if(isSmoothScrollSupported) {
     //     $('html, body').easeScroll({

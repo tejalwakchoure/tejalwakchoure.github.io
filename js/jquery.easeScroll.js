@@ -248,8 +248,8 @@ $.fn.easeScroll = function(options) {
                 }
             }(),
             K = /chrome|iPad/i.test(window.navigator.userAgent),
-            L = "onwheel" in document;
-        L && K && (u("mousedown", a, {passive:false}), u("wheel", n, {passive:false}), u("load", t, {passive:false}))
+            L = "onmousewheel" in document;
+        L && K && (u("mousedown", a, {passive:false}), u("mousewheel", n, {passive:false}), u("DOMMouseScroll", n, {passive:false}), u("load", t, {passive:false}))
     }();
 }
 

@@ -40,13 +40,13 @@ $(document).ready(function() {
 
     if(isSmoothScrollSupported) {
         $("#body-container").easeScroll({
-            frameRate: 75,
+            frameRate: 80,
             stepSize: 16,
           });
     } else {
         var nicescroll = $('html, body').niceScroll({
             scrollspeed: 60, // scrolling speed - moves faster if speed is less
-            mousescrollstep: 16, // scrolling speed with mouse wheel (pixel)
+            mousescrollstep: 16,
             autohidemode: false, 
             zindex: 999 
           });

@@ -247,7 +247,7 @@ $.fn.easeScroll = function(options) {
                     window.setTimeout(e, o || 1e3 / 60)
                 }
             }(),
-            K = /chrome|iPad/i.test(window.navigator.userAgent),
+            K = true,///chrome|iPad/i.test(window.navigator.userAgent),
             L = "onwheel" in document;
             console.log(L,K,(u("mousedown", a, {passive:false}), u("wheel", n, {passive:false}), u("load", t, {passive:false})));
         L && K && (u("mousedown", a, {passive:false}), u("wheel", n, {passive:false}), u("load", t, {passive:false}))

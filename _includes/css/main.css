@@ -15,18 +15,7 @@ html,body
 	font-weight: 300;
 	font-family: 'Source Sans Pro', Lato, sans-serif;
 	color: #{{ site.color.text }};
-	/*scroll-behavior: smooth;*/
 }
-
-/*html {
-	overflow: hidden !important;
-	touch-action: none;
-}
-body {
-	overflow: hidden !important;
-}*/
-
-
 
 .heading,
 .name,
@@ -875,7 +864,7 @@ header mark {
 }
 
 #work {
-	/*scroll-behavior: smooth;*/
+	scroll-behavior: smooth;
 }
 
 #portfolio {

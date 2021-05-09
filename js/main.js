@@ -36,14 +36,14 @@ $(document).ready(function() {
     swiper.controller.control = swiper_in;
 
     // Smooth Mouse Scrolling for all browsers
-    // var isSmoothScrollSupported = 'scrollBehavior' in document.documentElement.style;
-
     $('html, body').easeScroll({
         frameRate: 60,
         stepSize: 60,
       });
 
     // Backup - slow but works on all browsers
+
+    // var isSmoothScrollSupported = 'scrollBehavior' in document.documentElement.style;
     // var nicescroll = $('html, body').niceScroll({
     //     scrollspeed: 60, // scrolling speed - moves faster if speed is less
     //     mousescrollstep: 16,

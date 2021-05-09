@@ -69,7 +69,7 @@ $.fn.easeScroll = function(options) {
                 r = l(n);
             if (!r || e.defaultPrevented || s(w, "embed") || s(n, "embed") && /\.pdf/i.test(n.src)) return !0;
             var a = e.wheelDeltaX || 0,
-                i = e.wheelDeltaY || 0;
+                i = e.wheelDeltaY || e.deltaY * -3 || 0;
 
             // if (e.deltaMode === 0) { // PIXEL
             //     px = -(e.deltaX * (opt.mousescrollstep / (18 * 3))) | 0;
@@ -79,8 +79,6 @@ $.fn.easeScroll = function(options) {
             //     py = -(e.deltaY * opt.mousescrollstep * 50 / 80) | 0;
             // }
 
-
-            if(i == 0 && e.deltaY !== 0) i = e.deltaY*-1*3;  //(e.deltaY > 0 ? 100 : -100) * -1;
             console.log(a,i,e.wheelDelta,e.detail);
             return a || i || (i = e.wheelDelta || e.detail || 0), !v.touchpadSupport && f(i) ? !0 : (Math.abs(a) > 1.2 && (a *= v.stepSize / 120), Math.abs(i) > 1.2 && (i *= v.stepSize / 120), o(r, -a, -i), void e.preventDefault())
         }
@@ -259,11 +257,9 @@ $.fn.easeScroll = function(options) {
                     window.setTimeout(e, o || 1e3 / 60)
                 }
             }(),
-            K = true,///chrome|iPad/i.test(window.navigator.userAgent),
-            L = "onwheel" in document;
-            // older Webkit+IE support or older Firefox
-            var wname = L ? "wheel" : ((document.onmousewheel !== undefined) ? "mousewheel" : "DOMMouseScroll");          
-            K && (u("mousedown", a, {passive:false}), u(wname, n, {passive:false}), u("load", t, {passive:false}))
-            console.log(L,K,wname);
+            // K = /chrome|iPad/i.test(window.navigator.userAgent),
+            L = ((document.onmousewheel !== undefined) ? "mousewheel" : "DOMMouseScroll");
+            console.log(L);
+            (u("mousedown", a, {passive:false}), u(L, n, {passive:false}), u("load", t, {passive:false}))
     }();
 }

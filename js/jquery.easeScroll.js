@@ -258,8 +258,7 @@ $.fn.easeScroll = function(options) {
                 }
             }(),
             // K = /chrome|iPad/i.test(window.navigator.userAgent),
-            // L = "onwheel" in document ? "wheel" : ((document.onmousewheel !== undefined) ? "mousewheel" : "DOMMouseScroll");
-            L = ((document.onmousewheel !== undefined) ? "mousewheel" : "DOMMouseScroll");
+            L = "onwheel" in document ? "wheel" : ((document.onmousewheel !== undefined) ? "mousewheel" : "DOMMouseScroll");
             (u("mousedown", a, {passive:false}), u(L, n, {passive:false}), u("load", t, {passive:false}))
     }();
 }

@@ -40,7 +40,7 @@ $(document).ready(function() {
 
     if(isSmoothScrollSupported) {
         $("#body-container").easeScroll({
-            frameRate: 60,
+            frameRate: 75,
             stepSize: 16,
           });
     } else {

@@ -79,8 +79,8 @@ $.fn.easeScroll = function(options) {
             //     py = -(e.deltaY * opt.mousescrollstep * 50 / 80) | 0;
             // }
 
-            console.log(a,i,e.wheelDelta,(e.detail || e.deltaY)  * -3);
-            return a || i || (i = e.wheelDelta || (e.detail || e.deltaY)  * -3 || 0), !v.touchpadSupport && f(i) ? !0 : (Math.abs(a) > 1.2 && (a *= v.stepSize / 120), Math.abs(i) > 1.2 && (i *= v.stepSize / 120), o(r, -a, -i), void e.preventDefault())
+            console.log(a,i,e.wheelDelta,(e.deltaY || e.detail || e.deltaX)  * -3);
+            return a || i || (i = e.wheelDelta || (e.deltaY || e.detail || e.deltaX)  * -3 || 0), !v.touchpadSupport && f(i) ? !0 : (Math.abs(a) > 1.2 && (a *= v.stepSize / 120), Math.abs(i) > 1.2 && (i *= v.stepSize / 120), o(r, -a, -i), void e.preventDefault())
         }
 
         function r(e) {

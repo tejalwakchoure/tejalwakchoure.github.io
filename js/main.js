@@ -59,10 +59,10 @@ $(document).ready(function() {
             return page;
           }
         $('.nicescroll-rails.nicescroll-rails-vr').remove();
-
-        $('html, body').bind('wheel scroll', function () {
-            nicescroll.resize();
-          });
+        nicescroll.resize();
+        // $('html, body').bind('wheel scroll', function () {
+        //     nicescroll.resize();
+        //   });
     }
 });
 

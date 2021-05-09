@@ -41,7 +41,7 @@ $(document).ready(function() {
     if(isSmoothScrollSupported) {
         $('html, body').easeScroll({
             frameRate: 60,
-            stepSize: 27,
+            stepSize: 60,
           });
     } else {
         var nicescroll = $('html, body').niceScroll({

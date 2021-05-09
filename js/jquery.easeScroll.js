@@ -68,9 +68,9 @@ $.fn.easeScroll = function(options) {
             var n = e.target,
                 r = l(n);
             if (!r || e.defaultPrevented || s(w, "embed") || s(n, "embed") && /\.pdf/i.test(n.src)) return !0;
-            var a = e.detailX || 0,
-                i = e.detailY || 0;
-            return a || i || (i = e.detail || 0), !v.touchpadSupport && f(i) ? !0 : (Math.abs(a) > 1.2 && (a *= v.stepSize / 120), Math.abs(i) > 1.2 && (i *= v.stepSize / 120), o(r, -a, -i), void e.preventDefault())
+            var a = e.wheelDeltaX || 0,
+                i = e.wheelDeltaY || 0;
+            return a || i || (i = e.wheelDelta || 0), !v.touchpadSupport && f(i) ? !0 : (Math.abs(a) > 1.2 && (a *= v.stepSize / 120), Math.abs(i) > 1.2 && (i *= v.stepSize / 120), o(r, -a, -i), void e.preventDefault())
         }
 
         function r(e) {

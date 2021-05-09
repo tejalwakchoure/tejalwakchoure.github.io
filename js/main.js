@@ -39,7 +39,7 @@ $(document).ready(function() {
     var isSmoothScrollSupported = 'scrollBehavior' in document.documentElement.style;
 
     if(isSmoothScrollSupported) {
-        $("#body-container").easeScroll({
+        $('html, body').easeScroll({
             frameRate: 80,
             stepSize: 16,
           });

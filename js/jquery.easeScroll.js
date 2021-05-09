@@ -70,6 +70,7 @@ $.fn.easeScroll = function(options) {
             if (!r || e.defaultPrevented || s(w, "embed") || s(n, "embed") && /\.pdf/i.test(n.src)) return !0;
             var a = e.wheelDeltaX || 0,
                 i = e.wheelDeltaY || 0;
+             console.log(a,i);
             return a || i || (i = e.wheelDelta || 0), !v.touchpadSupport && f(i) ? !0 : (Math.abs(a) > 1.2 && (a *= v.stepSize / 120), Math.abs(i) > 1.2 && (i *= v.stepSize / 120), o(r, -a, -i), void e.preventDefault())
         }
 
@@ -249,9 +250,8 @@ $.fn.easeScroll = function(options) {
             }(),
             K = true,///chrome|iPad/i.test(window.navigator.userAgent),
             L = "onwheel" in document;
-            console.log(L,K,(u("mousedown", a, {passive:false}), u("wheel", n, {passive:false}), u("load", t, {passive:false})));
-        L && K && (u("mousedown", a, {passive:false}), u("wheel", n, {passive:false}), u("load", t, {passive:false}))
+            var wname = L ? "wheel" : ((document.onmousewheel !== undefined) ? "mousewheel" : "DOMMouseScroll"); // older Webkit+IE support or older Firefox          
+            K && (u("mousedown", a, {passive:false}), u(wname, n, {passive:false}), u("load", t, {passive:false}))
+            console.log(L,K,wname);
     }();
 }
-
-

@@ -40,9 +40,8 @@ $(document).ready(function() {
 
     if(isSmoothScrollSupported) {
         $("#body-container").easeScroll({
-            frameRate: 80,
-            animationTime: 1000,
-            stepSize: 80,
+            frameRate: 60,
+            stepSize: 16,
           });
     } else {
         var nicescroll = $('html, body').niceScroll({

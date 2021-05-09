@@ -37,12 +37,12 @@ $(document).ready(function() {
 
     // Smooth Mouse Scrolling for all browsers
     var isSmoothScrollSupported = 'scrollBehavior' in document.documentElement.style;
-
+    console.log("isSmoothScrollSupported",isSmoothScrollSupported);
     if(isSmoothScrollSupported) {
         $("#body-container").easeScroll({
-              frameRate: 60,
-              animationTime: 1000,
-              stepSize: 60,
+              // frameRate: 60,
+              // animationTime: 1000,
+              // stepSize: 60,
           });
     } else {
         var nicescroll = $('html, body').niceScroll({

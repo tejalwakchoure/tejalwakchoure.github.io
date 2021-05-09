@@ -15,7 +15,7 @@ html,body
 	font-weight: 300;
 	font-family: 'Source Sans Pro', Lato, sans-serif;
 	color: #{{ site.color.text }};
-	scroll-behavior: smooth;
+	/*scroll-behavior: smooth;*/
 }
 
 /*html {

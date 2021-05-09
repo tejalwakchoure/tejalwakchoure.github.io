@@ -69,7 +69,7 @@ $.fn.easeScroll = function(options) {
                 r = l(n);
             if (!r || e.defaultPrevented || s(w, "embed") || s(n, "embed") && /\.pdf/i.test(n.src)) return !0;
             var a = e.wheelDeltaX || 0,
-                i = e.wheelDeltaY || e.deltaY * -3 || 0;
+                i = e.wheelDeltaY || e.deltaY * -3 || e.detail * -3 || 0;
 
             // if (e.deltaMode === 0) { // PIXEL
             //     px = -(e.deltaX * (opt.mousescrollstep / (18 * 3))) | 0;

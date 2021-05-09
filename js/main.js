@@ -36,34 +36,32 @@ $(document).ready(function() {
     swiper.controller.control = swiper_in;
 
     // Smooth Mouse Scrolling for all browsers
-    var isSmoothScrollSupported = true;//'scrollBehavior' in document.documentElement.style;
+    // var isSmoothScrollSupported = 'scrollBehavior' in document.documentElement.style;
 
-    if(isSmoothScrollSupported) {
-        $('html, body').easeScroll({
-            frameRate: 60,
-            stepSize: 60,
-          });
-    } else {
-        var nicescroll = $('html, body').niceScroll({
-            scrollspeed: 60, // scrolling speed - moves faster if speed is less
-            mousescrollstep: 16,
-            autohidemode: false, 
-            zindex: 999 
-          });
+    $('html, body').easeScroll({
+        frameRate: 60,
+        stepSize: 60,
+      });
 
-        // Hide scrollbar
-        var _super = nicescroll.getContentSize;
-        nicescroll.getContentSize = function () {
-            var page = _super.call(nicescroll);
-            page.h = nicescroll.win.height();
-            return page;
-          }
-        $('.nicescroll-rails.nicescroll-rails-vr').remove();
-        nicescroll.resize();
-        // $('html, body').bind('wheel scroll', function () {
-        //     nicescroll.resize();
-        //   });
-    }
+    // Backup - slow but works on all browsers
+    // var nicescroll = $('html, body').niceScroll({
+    //     scrollspeed: 60, // scrolling speed - moves faster if speed is less
+    //     mousescrollstep: 16,
+    //     autohidemode: false, 
+    //     zindex: 999 
+    //   });
+
+    // // Hide scrollbar
+    // var _super = nicescroll.getContentSize;
+    // nicescroll.getContentSize = function () {
+    //     var page = _super.call(nicescroll);
+    //     page.h = nicescroll.win.height();
+    //     return page;
+    //   }
+    // $('.nicescroll-rails.nicescroll-rails-vr').remove();
+    // $('html, body').bind('wheel scroll', function () {
+    //     nicescroll.resize();
+    //   });
 });
 
 // Portfolio parallax

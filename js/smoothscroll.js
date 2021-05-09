@@ -51,5 +51,3 @@ const SmoothScroll = (target, speed, smooth) => {
     );
   }()
 }
-
-export default SmoothScroll;

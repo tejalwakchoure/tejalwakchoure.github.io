@@ -274,6 +274,7 @@ $(window).on("load resize scroll", function() {
     var elementTop = $('header').offset().top;
     var currentpos = -10;
     var pos = currentpos + ((windowTop - elementTop) / 10);
+    console.log("pos= ", pos);
     $('.hor_parallax_right').css({ right: pos });
     $('.hor_parallax_left').css({ left: pos });
 });

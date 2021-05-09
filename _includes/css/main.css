@@ -16,6 +16,7 @@ html,body
 	font-family: 'Source Sans Pro', Lato, sans-serif;
 	color: #{{ site.color.text }};
 	scroll-behavior: smooth;
+}
 
 /*html {
 	overflow: hidden !important;

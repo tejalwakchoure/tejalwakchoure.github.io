@@ -37,12 +37,12 @@ $(document).ready(function() {
 
     // Smooth Mouse Scrolling for all browsers
     var isSmoothScrollSupported = 'scrollBehavior' in document.documentElement.style;
-    console.log("isSmoothScrollSupported",isSmoothScrollSupported);
+
     if(isSmoothScrollSupported) {
         $("#body-container").easeScroll({
-              // frameRate: 60,
-              // animationTime: 1000,
-              // stepSize: 60,
+            frameRate: 80,
+            animationTime: 1000,
+            stepSize: 80,
           });
     } else {
         var nicescroll = $('html, body').niceScroll({
@@ -55,14 +55,14 @@ $(document).ready(function() {
         // Hide scrollbar
         var _super = nicescroll.getContentSize;
         nicescroll.getContentSize = function () {
-          var page = _super.call(nicescroll);
-          page.h = nicescroll.win.height();
-          return page;
+            var page = _super.call(nicescroll);
+            page.h = nicescroll.win.height();
+            return page;
           }
         $('.nicescroll-rails.nicescroll-rails-vr').remove();
 
         $('html, body').bind('wheel scroll', function () {
-          nicescroll.resize();
+            nicescroll.resize();
           });
     }
 });

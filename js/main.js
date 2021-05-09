@@ -32,8 +32,8 @@ $(document).ready(function() {
       }
     }, 10);
 
-  swiper_in.controller.control = swiper_innermost;
-  swiper.controller.control = swiper_in;
+    swiper_in.controller.control = swiper_innermost;
+    swiper.controller.control = swiper_in;
 
     // Smooth Mouse Scrolling for all browsers
     var isSmoothScrollSupported = 'scrollBehavior' in document.documentElement.style;

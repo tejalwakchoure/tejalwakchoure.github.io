@@ -20,7 +20,7 @@ html,body
 .heading,
 .name,
 .skills {
-	font-family:  Poppins, Lato, 'Source Sans Pro', Helvetica, sans-serif;
+	font-family: Oswald, Poppins, Lato, 'Source Sans Pro', Helvetica, sans-serif;
 }
 
 .heading {
@@ -92,7 +92,6 @@ body {
   	display: flex;
 	flex-direction: column;
 	align-items: center;
-	/*font-family: Lato,Montserrat,sans-serif;*/
 	font-weight: 100; 
 	text-transform: lowercase; 
 }
@@ -169,7 +168,6 @@ h4,
 h5, 
 h6 {    
 	text-transform: uppercase;  
-	/*font-family: Lato, 'Source Sans Pro', Helvetica, sans-serif;*/
 	letter-spacing: 3px;   
 }
 
@@ -337,7 +335,6 @@ hr.primary {
 	font-size: 1.3em;
 	letter-spacing: 2px;  
 	background: transparent;
-	/*font-family:'noahgLt',Raleway,Montserrat,sans-serif;*/
 }
 
 .sidenav .page-scroll {
@@ -588,13 +585,11 @@ header .intro-text .name {
 	/*line-height: 10vw;*/
 	/*letter-spacing: 4px;*/
 	text-transform: lowercase;
-	/*font-family: 'noahgThin', 'Lato', sans-serif;*/
 }   
 
 header .intro-text .skills {    
 	font-size: min(2.25vw, 25px);
 	font-weight: 100; 
-	/*font-family: 'noahgThin', 'Lato', sans-serif;*/
 	text-transform: lowercase;
 	color: #{{ site.color.text }};
 	letter-spacing: 0.5px;
@@ -740,7 +735,6 @@ header mark {
   	display: flex;
   	flex-direction: column;
   	align-items: center;
-  	/*font-family: noahgThin, Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;*/
   	font-weight: 100;
   	position: relative;
   	-o-transition: all 300ms ease-in-out;  /* Opera 10.50–12.00 */
@@ -1289,7 +1283,6 @@ header mark {
     letter-spacing: 3px;
     visibility: hidden;
     z-index: 2;
-    /*font-family: noahgThin, Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;*/
     color: #{{ site.color.white }};
     background-color: #{{ site.color.backgroundcol_dark }};
 }

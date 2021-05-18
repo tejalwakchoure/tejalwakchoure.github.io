@@ -13,14 +13,14 @@ html,body
 	-webkit-font-feature-settings: "lnum";
 	font-feature-settings: "lnum";
 	font-weight: 300;
-	font-family: 'Source Sans Pro', Lato, sans-serif;
+	font-family: Lato, 'Source Sans Pro', Helvetica, sans-serif;
 	color: #{{ site.color.text }};
 }
 
 .heading,
 .name,
 .skills {
-	/*font-family: 'noahgUl', sans-serif;*/
+	font-family: Oswald, Poppins, Lato, 'Source Sans Pro', Helvetica, sans-serif;
 }
 
 .heading {
@@ -92,7 +92,7 @@ body {
   	display: flex;
 	flex-direction: column;
 	align-items: center;
-	font-family: Lato,Montserrat,sans-serif;
+	/*font-family: Lato,Montserrat,sans-serif;*/
 	font-weight: 100; 
 	text-transform: lowercase; 
 }
@@ -119,7 +119,7 @@ body {
 	letter-spacing: -0.08em; 
 	margin: auto auto 0 auto;
 	padding-top: 5%;
-	font-family: 'Raleway','Montserrat',sans-serif;
+	font-family: 'Raleway', Lato, sans-serif;
 }
 
 #preloader #percent {
@@ -169,7 +169,7 @@ h4,
 h5, 
 h6 {    
 	text-transform: uppercase;  
-	font-family: noahgReg, Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+	/*font-family: Lato, 'Source Sans Pro', Helvetica, sans-serif;*/
 	letter-spacing: 3px;   
 }
 
@@ -242,7 +242,7 @@ hr.primary {
 	padding: 0;    
 	height: auto;   
 	color: #{{ site.color.accent }} !important;
-	font-family: 'Raleway','Montserrat',sans-serif;
+	font-family: 'Raleway',Lato,sans-serif;
 	font-variant: none !important;
 	text-transform: lowercase !important;
     letter-spacing: -0.08em;
@@ -337,7 +337,7 @@ hr.primary {
 	font-size: 1.3em;
 	letter-spacing: 2px;  
 	background: transparent;
-	font-family:'noahgLt',Raleway,Montserrat,sans-serif;
+	/*font-family:'noahgLt',Raleway,Montserrat,sans-serif;*/
 }
 
 .sidenav .page-scroll {
@@ -740,7 +740,7 @@ header mark {
   	display: flex;
   	flex-direction: column;
   	align-items: center;
-  	font-family: noahgThin, Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+  	/*font-family: noahgThin, Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;*/
   	font-weight: 100;
   	position: relative;
   	-o-transition: all 300ms ease-in-out;  /* Opera 10.50–12.00 */
@@ -1289,7 +1289,7 @@ header mark {
     letter-spacing: 3px;
     visibility: hidden;
     z-index: 2;
-    font-family: noahgThin, Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    /*font-family: noahgThin, Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;*/
     color: #{{ site.color.white }};
     background-color: #{{ site.color.backgroundcol_dark }};
 }

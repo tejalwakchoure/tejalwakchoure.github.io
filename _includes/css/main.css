@@ -586,7 +586,7 @@ header .intro-text .name {
 	/*font-size: min(8.5vw, 140px);*/
 	font-size: min(3.5vw, 60px);
 	/*line-height: 10vw;*/
-	letter-spacing: 4px;
+	/*letter-spacing: 4px;*/
 	text-transform: lowercase;
 	/*font-family: 'noahgThin', 'Lato', sans-serif;*/
 }   

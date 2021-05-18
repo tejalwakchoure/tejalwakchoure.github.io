@@ -584,7 +584,7 @@ header .intro-text .name {
 	letter-spacing: 1px;
 	color: #{{ site.color.accent }};
 	/*font-size: min(8.5vw, 140px);*/
-	font-size: min(3.5vw, 60px);
+	font-size: min(4.5vw, 50px);
 	/*line-height: 10vw;*/
 	/*letter-spacing: 4px;*/
 	text-transform: lowercase;
@@ -592,12 +592,12 @@ header .intro-text .name {
 }   
 
 header .intro-text .skills {    
-	font-size: min(2.5vw, 40px);
+	font-size: min(2.25vw, 30px);
 	font-weight: 100; 
 	/*font-family: 'noahgThin', 'Lato', sans-serif;*/
 	text-transform: lowercase;
 	color: #{{ site.color.text }};
-	letter-spacing: 1px;
+	letter-spacing: 0.5px;
 	padding-top: 2.5%;
 }  
 

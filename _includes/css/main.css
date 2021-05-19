@@ -445,7 +445,9 @@ hr.primary {
 		height: -webkit-fit-content;
 		height: fit-content;
 	}
-
+	a.navbar-toggler.btn.collapsed:hover .navbar-menu-icon {
+    	color: #{{ site.color.accent_dark }} !important;
+	}
 }
 
 *{      
@@ -510,7 +512,6 @@ section h2 {
 	#preloader #brand {
 		font-size: 4em;
 	}
-	a,
 	#preloader,
 	#under_construction,
 	#under_construction i {
@@ -657,13 +658,13 @@ header mark {
 	}
 
 	header .intro-text .name { 
-		font-size: 4rem;
-		line-height: 5rem;
+		font-size: 2rem;
+		/*line-height: 5rem;*/
 		padding-bottom: 0.5rem;
 	}   
 
 	header .intro-text .skills {    
-		font-size: 2rem;
+		font-size: 1rem;
 	}
 } 
 
@@ -692,6 +693,11 @@ header mark {
 	/*text-decoration: underline;
 	color: #{{ site.color.accent }};
 }*/
+
+#about .about-col {
+	padding: 0 20%;
+}
+
 #about .img_div {
 	margin: auto;
 	text-align: center;
@@ -815,8 +821,8 @@ header mark {
 }
 
 @media ( max-width: 768px ) {
-	#about .col-md-6 {
-		padding: 0 25px;
+	#about .about-col {
+		padding: 0 6%;
 	}
 	#about .img_div {
 		text-align: center;
@@ -1239,6 +1245,7 @@ header mark {
 	}
 	.swiper-slide #content-row {
 		flex-direction: column;
+		width: auto;
 	}
 	.swiper-slide #content{
 		overflow: hidden;
@@ -1470,8 +1477,9 @@ form .row:first-child .floating-label-form-group {
 	#contact a.mail-link:before {
 	  	visibility: visible;
 	  	width: 100%;
-	  	background-color: #{{ site.color.text_small_devices }} !important; 
 	}
+	#contact a,
+	#contact a.mail-link:before,
 	footer a,
 	footer .footer-below,
 	.floating-label-form-group-with-focus label { 

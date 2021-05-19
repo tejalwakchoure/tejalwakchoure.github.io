@@ -236,16 +236,17 @@ function toggleOnPortfolioLink(num) {
 // onclick page scrolling - requires jQuery Easing plugin
 $(function() {
     $('.page-scroll a').bind('click', function(event) {
+      var page = $('html, body');
       var $anchor = $(this);
-          $('html, body').on("scroll mousedown wheel DOMMouseScroll mousewheel keyup touchmove", function(){
-           $('html, body').stop();
+
+      page.on("scroll mousedown wheel DOMMouseScroll mousewheel keyup touchmove", function(){
+           page.stop();
+      });
+      page.stop().animate({scrollTop: $($anchor.attr('href'))[0].offsetTop}, 
+        1000, 'easeInOutExpo', function(){
+           page.off("scroll mousedown wheel DOMMouseScroll mousewheel keyup touchmove");
        });
-        
-        $('html, body').stop().animate({scrollTop: $($anchor.attr('href'))[0].offsetTop}, 
-          1000, 'easeInOutExpo', function(){
-             $('html, body').off("scroll mousedown wheel DOMMouseScroll mousewheel keyup touchmove");
-         });
-        event.preventDefault();
+      event.preventDefault();
     });
 });
 
@@ -279,13 +280,6 @@ $(window).on("load resize scroll", function() {
     $('.hor_parallax_right').css({ right: pos });
     $('.hor_parallax_left').css({ left: pos });
 });
-
-// $('html, body').bind("scroll mousedown DOMMouseScroll mousewheel keyup touchstart", function(e){
-//     if ( e.which > 0 || e.type === "mousedown" || e.type === "mousewheel" || e.type === "touchstart"){
-//          $('html, body').stop().unbind('scroll mousedown DOMMouseScroll mousewheel keyup'); // This identifies the scroll as a user action, stops the animation, then unbinds the event straight after (optional)
-//     }
-// });
-
 
 // var keys = {37: 1, 38: 1, 39: 1, 40: 1};
 

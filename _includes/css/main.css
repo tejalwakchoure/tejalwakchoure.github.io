@@ -636,8 +636,8 @@ header mark {
     	margin: auto;
     	max-height: 450px;
     	min-height: 0;
-    	/*width: 75vw;*/
-    	height: 100%;
+    	width: 75vw;
+    	/*height: 100%;*/
 	}
 
 	header .img_div {
@@ -668,12 +668,12 @@ header mark {
 		font-size: 3rem;
 		/*line-height: 5rem;*/
 		padding-bottom: 0.5rem;
-		width: fit-content;
+		/*width: fit-content;*/
 	}   
 
 	header .intro-text .skills {    
 		font-size: 1.3rem;
-		width: fit-content;
+		/*width: fit-content;*/
 	}
 } 
 
@@ -681,12 +681,11 @@ header mark {
 	header img {
 		height: 300px;
 	}
-	header .title {
-		padding-left: 10px;
-	}
 	header .intro-text {
-     	margin: auto;
-     }
+		width: -moz-min-content;
+		width: -webkit-min-content;
+     	width: min-content;
+ 	}	
 }
 
 #about {

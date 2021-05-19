@@ -270,6 +270,11 @@ hr.primary {
     -webkit-transition: font-size 300ms ease-in-out, margin 300ms ease-in-out; /* Chrome 1-25, Safari 3.2+ */
     transition: font-size 300ms ease-in-out, margin 300ms ease-in-out;
 }  
+
+.sidenav .page-scroll .navbar-brand:hover {
+	font-weight: 200;
+}
+
 .navbar-toggle {
     margin-top: 0;
     border: 0;

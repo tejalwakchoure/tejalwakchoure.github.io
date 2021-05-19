@@ -646,7 +646,7 @@ header mark {
 
 	header .title {
 		width: 100%;
-		padding: 3vw 0;
+		/*padding: 3vw 0;*/
 		padding-left: 10px;
 	}
 

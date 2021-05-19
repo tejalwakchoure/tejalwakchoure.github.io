@@ -325,6 +325,9 @@ hr.primary {
   		height: -webkit-fit-content;
 		height: fit-content;
 	}
+	.navbar-expand-md .navbar-nav .nav-link {
+    	padding: 15px !important;
+    }
 }
 
 .sidenav {
@@ -379,8 +382,8 @@ hr.primary {
 }
 
 .sidenav .time-wrapper {
-    width: auto;
-    margin: 0;
+    /*width: auto;*/
+    /*margin: 0;*/
 }
 
 .sidenav a {

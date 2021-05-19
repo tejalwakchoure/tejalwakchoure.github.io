@@ -12,7 +12,7 @@ html,body
 	-moz-font-feature-settings: "lnum";
 	-webkit-font-feature-settings: "lnum";
 	font-feature-settings: "lnum";
-	font-weight: 300;
+	font-weight: 400;
 	font-family: Lato, 'Source Sans Pro', Helvetica, sans-serif;
 	color: #{{ site.color.text }};
 }
@@ -25,6 +25,10 @@ html,body
 
 .heading {
 	font-size: 6.5rem;
+	font-weight: 400;
+	word-spacing: 2px;
+	text-transform: lowercase;
+    color: #{{ site.color.heading }}; 
 }
 
 .btn {	
@@ -168,7 +172,8 @@ h4,
 h5, 
 h6 {    
 	text-transform: uppercase;  
-	letter-spacing: 3px;   
+	letter-spacing: 2px; 
+	word-spacing: 2px; 
 }
 
 hr { 
@@ -663,9 +668,9 @@ header mark {
 
 #about .hello {
 	padding: 2vh 0;
-	font-weight: 100;
+	/*font-weight: 100;*/
 	text-align: left;
-	font-size: 3.75rem;
+	font-size: 3.5rem;
 	color: #{{ site.color.heading }};
 }
 #about .main {
@@ -673,7 +678,8 @@ header mark {
 	color: #{{ site.color.accent }};
 }
 #about a {
-	text-decoration: underline;
+	/*text-decoration: underline;*/
+	color: #{{ site.color.accent }};
 }
 #about .img_div {
 	margin: auto;
@@ -735,7 +741,7 @@ header mark {
   	display: flex;
   	flex-direction: column;
   	align-items: center;
-  	font-weight: 100;
+  	font-weight: 300;
   	position: relative;
   	-o-transition: all 300ms ease-in-out;  /* Opera 10.50–12.00 */
   	-moz-transition: all 300ms ease-in-out;  /* Firefox 4-15 */
@@ -783,6 +789,7 @@ header mark {
 .status h6 {
   	padding-top: 10px;
   	line-height: 1.4;
+  	/*letter-spacing: 2px;*/
 }
 .status:before {
   	content: "";
@@ -996,7 +1003,7 @@ header mark {
 }
 
 #portfolioDetails h2 {
-	letter-spacing: 6px;
+	letter-spacing: 3px;
 }   
 
 .slide-link {
@@ -1260,7 +1267,7 @@ header mark {
 }
 
 .overlay {
-	font-size: 1.563rem;
+	font-size: 1.75rem;
 	font-weight: 300; 
 	text-transform: uppercase;
 	position: absolute;
@@ -1281,6 +1288,7 @@ header mark {
   	display: -webkit-flex; /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
     display: flex;
     letter-spacing: 3px;
+    word-spacing: 5px;
     visibility: hidden;
     z-index: 2;
     color: #{{ site.color.white }};
@@ -1296,11 +1304,12 @@ header mark {
 }
 
 #contact .heading {
-    font-weight: 500;
-    text-transform: uppercase;
-    color: #{{ site.color.heading }}; 
+    /*font-weight: 500;*/
+    /*text-transform: uppercase;*/
+    /*color: #{{ site.color.heading }}; */
 }
 
+#about a,
 a.nav-link,
 #contact a.mail-link {
     text-decoration: none;
@@ -1309,6 +1318,7 @@ a.nav-link,
   	overflow: hidden;
 }
 
+#about a:before,
 a.nav-link:before,
 #contact a.mail-link:before {
   	content: "";
@@ -1325,6 +1335,14 @@ a.nav-link:before,
   	background-color: #{{ site.color.text }}; 
 }
 
+#about a:before,
+a.nav-link:before {
+	background-color: #{{ site.color.accent }}; 
+}
+
+#about a:hover:before,
+#about a:focus:before,
+#about a:active:before,
 a.nav-link:hover:before,
 a.nav-link:focus:before,
 a.nav-link:active:before, 

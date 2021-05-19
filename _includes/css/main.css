@@ -487,8 +487,11 @@ section h2 {
 	.heading {
 		font-size: 3rem;
 	}
+	.heading-col {
+		padding: 0;
+	}
 	.fa-angle-down {
-		font-size: 1.5em !important;
+		/*font-size: 1.5em !important;*/
 	}
 	#bkg-page {
 		width: 90%;
@@ -879,7 +882,7 @@ header mark {
 		padding: 10vh 5vh;
 	}
 	.timestamp {
-		padding: 25px;
+		padding: 20px;
 		flex-basis: 30%;
 		min-width: 100px;
 		font-size: 0.9rem;

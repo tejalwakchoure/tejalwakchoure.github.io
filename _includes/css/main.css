@@ -664,7 +664,7 @@ header mark {
 	}   
 
 	header .intro-text .skills {    
-		font-size: 1.25rem;
+		font-size: 1.3rem;
 	}
 } 
 
@@ -836,7 +836,7 @@ header mark {
     	margin-top: 0;
 	}
 	#about .hello {
-        font-size: 3.125rem;
+        font-size: 2rem;
         padding-bottom: 0;
 
 	}
@@ -1185,7 +1185,7 @@ header mark {
 	color: #{{ site.color.accent }};
 }
 .swiper-button-prev:hover, .swiper-button-next:hover {
-	color: #{{ site.color.accent_dark }};
+	/*color: #{{ site.color.accent_dark }};*/
 }
 .swiper-button-prev:after, .swiper-container-rtl .swiper-button-next:after,
 .swiper-button-next:after, .swiper-container-rtl .swiper-button-prev:after {

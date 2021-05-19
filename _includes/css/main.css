@@ -689,11 +689,11 @@ header mark {
 }
 
 #about {
-	/*text-align: justify !important;
+	/*text-align: justify !important;*/
 }
 
 #about .hello {
-	/*padding: 2vh 0;*/
+	/*padding: 2vh 0;
 	/*font-weight: 100;*/
 	text-align: left;
 	font-size: 3rem;

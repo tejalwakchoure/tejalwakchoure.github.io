@@ -275,6 +275,12 @@ $(window).on("load resize scroll", function() {
     $('.hor_parallax_left').css({ left: pos });
 });
 
+$('html, body').bind("scroll mousedown DOMMouseScroll mousewheel keyup touchstart", function(e){
+    if ( e.which > 0 || e.type === "mousedown" || e.type === "mousewheel" || e.type === "touchstart"){
+         $('html, body').stop().unbind('scroll mousedown DOMMouseScroll mousewheel keyup'); // This identifies the scroll as a user action, stops the animation, then unbinds the event straight after (optional)
+    }
+});
+
 
 // var keys = {37: 1, 38: 1, 39: 1, 40: 1};
 

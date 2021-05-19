@@ -1258,6 +1258,7 @@ header mark {
 		margin: auto;
 	}
 	.swiper-slide #content p {
+		text-align: left;
 		margin: 5% 1%;
 		line-height: 1.25rem;
 	}

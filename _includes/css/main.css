@@ -331,7 +331,7 @@ hr.primary {
   	display: -webkit-flex; /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
   	display: flex;
     flex-direction: column;
-    font-weight: 400;
+    font-weight: 300;
 	font-size: 1.3em;
 	letter-spacing: 2px;  
 	background: transparent;
@@ -574,26 +574,26 @@ header .intro-text {
 	text-align: left;
 	width: 100%;
 	margin-left: 10%;
+	text-transform: lowercase;
 }
 
 header .intro-text .name {
+	font-size: min(4.5vw, 60px);
 	font-weight: 700;     
 	letter-spacing: 1px;
 	color: #{{ site.color.accent }};
 	/*font-size: min(8.5vw, 140px);*/
-	font-size: min(4.5vw, 60px);
 	/*line-height: 10vw;*/
 	/*letter-spacing: 4px;*/
-	text-transform: lowercase;
+	/*text-transform: lowercase;*/
 }   
 
 header .intro-text .skills {    
 	font-size: min(2.25vw, 25px);
-	font-weight: 100; 
-	text-transform: lowercase;
-	color: #{{ site.color.text }};
+	font-weight: 200; 
 	letter-spacing: 0.5px;
-	padding-top: 2.5%;
+	color: #{{ site.color.text }};
+	/*padding-top: 2%;*/
 }  
 
 header mark {
@@ -1301,6 +1301,7 @@ header mark {
     color: #{{ site.color.heading }}; 
 }
 
+a.nav-link,
 #contact a.mail-link {
     text-decoration: none;
   	display: inline;
@@ -1308,6 +1309,7 @@ header mark {
   	overflow: hidden;
 }
 
+a.nav-link:before,
 #contact a.mail-link:before {
   	content: "";
   	position: absolute;
@@ -1323,6 +1325,9 @@ header mark {
   	background-color: #{{ site.color.text }}; 
 }
 
+a.nav-link:hover:before,
+a.nav-link:focus:before,
+a.nav-link:active:before, 
 #contact a.mail-link:hover:before,
 #contact a.mail-link:focus:before,
 #contact a.mail-link:active:before {

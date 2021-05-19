@@ -496,13 +496,13 @@ section h2 {
 		margin: 5%;
 	}
 	p { 
-		font-size: 1rem;
+		font-size: 1.2rem;
 	}   
 	.small {   
-		font-size: 0.8rem;  
+		font-size: 0.9rem;  
 	}
 	.large {   
-		font-size: 1.45rem;
+		font-size: 1.5rem;
 	}
 	#preloader #wrapper {
 		height: 3.5em;
@@ -634,9 +634,10 @@ header mark {
 
 	header img {
     	margin: auto;
-    	height: 500px;
+    	max-height: 450px;
     	min-height: 0;
-    	width: 75vw;
+    	/*width: 75vw;*/
+    	height: 100%;
 	}
 
 	header .img_div {
@@ -648,34 +649,48 @@ header mark {
 		width: 100%;
 		/*padding: 3vw 0;*/
 		padding-left: 10px;
+	    padding-top: 0;
+	    padding-bottom: 0;
+	    margin: auto;
 	}
 
 	header .intro-text {
 	    margin: auto;
-	    width: -moz-min-content;
+	    /*width: -moz-min-content;
 		width: -webkit-min-content;
-	    width: min-content;
+	    width: min-content;*/
+	    width: -moz-fit-content;
+		width: -webkit-fit-content;
+	    width: fit-content;
 	}
 
 	header .intro-text .name { 
 		font-size: 3rem;
 		/*line-height: 5rem;*/
 		padding-bottom: 0.5rem;
+		width: fit-content;
 	}   
 
 	header .intro-text .skills {    
 		font-size: 1.3rem;
+		width: fit-content;
 	}
 } 
 
-@media ( max-width: 480px ) {
+@media (max-width: 480px) {
 	header img {
 		height: 300px;
 	}
+	header .title {
+		padding-left: 10px;
+	}
+	header .intro-text {
+     	margin: auto;
+     }
 }
 
 #about {
-	/*text-align: justify !important;*/
+	/*text-align: justify !important;
 }
 
 #about .hello {
@@ -750,7 +765,7 @@ header mark {
 .timestamp {
 	margin-top: 20px;
   	margin-bottom: 20px;
-  	padding: 0px 30px;
+  	/*padding: 0px 30px;*/
   	padding-bottom: 10px;
   	display: -webkit-box;  /* OLD - iOS 6-, Safari 3.1-6, BB7 */
   	display: -ms-flexbox;  /* TWEENER - IE 10 */
@@ -793,7 +808,7 @@ header mark {
 
 .status {
   	position: relative;
-  	padding: 20px 40px 0 40px;
+  	padding: 20px 30px 0 30px;
   	display: -webkit-box;  /* OLD - iOS 6-, Safari 3.1-6, BB7 */
   	display: -ms-flexbox;  /* TWEENER - IE 10 */
   	display: -webkit-flex; /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
@@ -1260,7 +1275,7 @@ header mark {
 	.swiper-slide #content p {
 		text-align: left;
 		margin: 5% 1%;
-		line-height: 1.25rem;
+		/*line-height: 1.25rem;*/
 	}
 	.swiper-pagination {
 		margin-top: 0;
@@ -1473,7 +1488,9 @@ form .row:first-child .floating-label-form-group {
 
 @media (max-width: 768px) {
 	#contact .row {
-		padding: 0;
+		padding-left: 0 !important;
+	    padding-right: 0 !important;
+	    text-align: center;
 	}
 	#contact a.mail-link:before {
 	  	visibility: visible;

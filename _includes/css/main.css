@@ -168,6 +168,7 @@ a:active,
 a.active {  
 	outline: 0; 
 	text-transform: none;
+	text-decoration: none;
 	color: #{{ site.color.accent_dark }};
 	/*color: #{{ site.color.text_small_devices }};*/
 }   
@@ -263,14 +264,11 @@ hr.primary {
     -webkit-transform: rotate(90deg);
     transform: rotate(90deg);
     margin: 0;
-	-moz-transition-property: font-size, margin; /*For older versions of Firefox only*/
-    -webkit-transition-property: font-size, margin;
-    transition-property: font-size, margin;
 
-    -o-transition: 300ms ease-in-out;  /* Opera 10.50–12.00 */
-  	-moz-transition: 300ms ease-in-out;  /* Firefox 4-15 */
-	-webkit-transition: 300ms ease-in-out;  /* Chrome 1-25, Safari 3.2+ */
-    transition: 300ms ease-in-out;
+    -o-transition: font-size 300ms ease-in-out, margin 300ms ease-in-out; /* Opera 10.50–12.00 */
+    -moz-transition: font-size 300ms ease-in-out, margin 300ms ease-in-out; /* Firefox 4-15 */
+    -webkit-transition: font-size 300ms ease-in-out, margin 300ms ease-in-out; /* Chrome 1-25, Safari 3.2+ */
+    transition: font-size 300ms ease-in-out, margin 300ms ease-in-out;
 }  
 .navbar-toggle {
     margin-top: 0;
@@ -378,7 +376,7 @@ hr.primary {
     padding: 15px;
     text-align: center;
     font-variant: all-small-caps;
-    color: #{{ site.color.accent }} !important;
+    color: #{{ site.color.accent }};
 }
 
 .sidenav .time-wrapper {
@@ -390,12 +388,10 @@ hr.primary {
 	text-transform: uppercase;
 }
 
-.sidenav a:hover, 
-.sidenav a:focus,
-.sidenav a:active,
-.sidenav a.active {
+.sidenav a:hover{
 	text-decoration: none;
 	background: transparent;
+	font-weight: 400;
 }
 
 
@@ -764,7 +760,7 @@ header mark {
 }
 
 .li.complete:hover {
-    color: #{{ site.color.heading }};
+    /*color: #{{ site.color.heading }};*/
 }
 
 .li.complete:hover .status:before {
@@ -1033,7 +1029,7 @@ header mark {
 .slide-link:focus,
 .slide-link:active,
 .slide-link.active {
-	color: #{{ site.color.text }};
+	color: #{{ site.color.accent_dark }};
 }
 
 .fa-backward {
@@ -1177,7 +1173,7 @@ header mark {
 	color: #{{ site.color.accent }};
 }
 .swiper-button-prev:hover, .swiper-button-next:hover {
-	color: #{{ site.color.text }};
+	color: #{{ site.color.accent_dark }};
 }
 .swiper-button-prev:after, .swiper-container-rtl .swiper-button-next:after,
 .swiper-button-next:after, .swiper-container-rtl .swiper-button-prev:after {
@@ -1324,12 +1320,21 @@ header mark {
     /*color: #{{ site.color.heading }}; */
 }
 
+#contact a {
+	color: #{{ site.color.text }}; 
+}
+
+#contact a:hover,    
+#contact a:focus,    
+#contact a:active,   
+#contact a.active {
+	color: #{{ site.color.text_small_devices }};
+}   
+
 #contact a.mail-link {
-    text-decoration: none;
   	display: inline;
   	position: relative;
   	overflow: hidden;
-  	color: #{{ site.color.text }}; 
 }
 
 #contact a.mail-link:before {

@@ -29,7 +29,8 @@ html,body
 	font-weight: 400;
 	word-spacing: 2px;
 	text-transform: lowercase;
-    color: #{{ site.color.heading }}; 
+    /*color: #{{ site.color.heading }}; */
+    color: #{{ site.color.accent }}; 
 }
 
 .btn {	
@@ -485,7 +486,8 @@ section h2 {
 		display: block !important;
 	}
 	.heading {
-		font-size: 3rem;
+		font-size: 3.125rem;
+		font-weight: 500;
 	}
 	.heading-col {
 		padding: 0;

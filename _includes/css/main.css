@@ -1006,6 +1006,33 @@ header mark {
   	padding: 15px;
 }
 
+
+.masonry-item:nth-child(1) {
+	order: 1;
+}
+
+.masonry-item:nth-child(2) {
+	order: 4;
+}
+
+.masonry-item:nth-child(3) {
+	order: 2;
+}
+
+.masonry-item:nth-child(4) {
+	order: 5;
+}
+
+.masonry-item:nth-child(5) {
+	order: 3;
+}
+
+.masonry-item:nth-child(6) {
+	order: 6;
+}
+
+
+
 .masonry-item:nth-child(1),
 .masonry-item:nth-child(5),
 .masonry-item:nth-child(6) {

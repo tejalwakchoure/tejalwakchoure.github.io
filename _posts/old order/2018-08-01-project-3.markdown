@@ -1,0 +1,13 @@
+---
+layout: default
+project-id: 3
+date: 2018-08-01
+title: IRCLogParser
+project-date: August 2018
+img: project-3.jpg
+alt: A chat system in use
+category: Text Mining, Natural Language Processing
+github-link: //github.com/tejalwakchoure/IRCLogParser
+description: A desktop-based NLP application that utilizes clustering analysis and inferential modeling in order to study user interactions on different levels on the Internet Relay Chat (IRC) networking service. It derives local and global communication patterns between users on different channels and assesses the evolution of the social structure over time by modeling aggregate graphs, temporal graphs, and heat maps.
+
+---

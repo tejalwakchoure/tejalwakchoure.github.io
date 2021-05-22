@@ -1204,7 +1204,7 @@ header mark {
 	color: #{{ site.color.accent }};
 }
 .swiper-button-prev:hover, .swiper-button-next:hover {
-	/*color: #{{ site.color.accent_dark }};*/
+	color: #{{ site.color.accent_dark }};
 }
 .swiper-button-prev:after, .swiper-container-rtl .swiper-button-next:after,
 .swiper-button-next:after, .swiper-container-rtl .swiper-button-prev:after {

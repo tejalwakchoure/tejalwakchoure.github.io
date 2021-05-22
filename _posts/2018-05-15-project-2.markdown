@@ -1,12 +1,12 @@
 ---
 layout: default
-project-id: 4
-title: PresenceID
-date: 2019-01-10
-project-date: January 2019
-img: project-4.jpg
-alt: A mobile app detecting contact
-category: Facial Recognition, Android Development
-description: A facial recognition-based attendance system built to improve transparency in student-teacher interaction, reduce instances of bias, and raise the overall administrative efficiency. It uses a transfer learning model that recognizes facial features with 98% accuracy, trained on a high-density database with 1000+ images. The complete system is deployed as an Android application with dashboards and registration services for effortless daily interaction.
-
+project-id: 2
+date: 2018-08-01
+title: IRCLogParser
+project-date: August 2018
+img: project-2.jpg
+alt: A chat system in use
+category: Text Mining, Natural Language Processing
+github-link: //github.com/tejalwakchoure/IRCLogParser
+description: A desktop-based NLP application that utilizes clustering analysis and inferential modeling in order to study user interactions on different levels on the Internet Relay Chat (IRC) networking service. It derives local and global communication patterns between users on different channels and assesses the evolution of the social structure over time by modeling aggregate graphs, temporal graphs, and heat maps.
 ---

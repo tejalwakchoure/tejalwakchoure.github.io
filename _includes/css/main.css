@@ -1040,7 +1040,7 @@ header mark {
   	min-height: 500px;
   	height: 60vh;
 }*/
-.masonry-item:nth-child(2),
+.masonry-item:nth-child(3),
 .masonry-item:nth-child(6) {
   	min-height: 400px;
   	height: 50vh;

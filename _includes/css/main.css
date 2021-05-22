@@ -71,7 +71,7 @@ body {
   	height: fit-content;
 }
 
-#bkg-page {
+#page-background {
 	width: 75%;
     height: 92.25%;
     background: #{{ site.color.backgroundcol }};
@@ -276,6 +276,10 @@ hr.primary {
 	font-weight: 200;
 }
 
+.sidenav .navbar-brand-scroll {
+	padding-top: 15px;
+}
+
 .navbar-toggle {
     margin-top: 0;
     border: 0;
@@ -332,6 +336,9 @@ hr.primary {
 	.navbar-expand-md .navbar-nav .nav-link {
     	padding: 15px !important;
     }
+    .sidenav .navbar-brand-scroll {
+		padding-top: 0;
+	}
 }
 
 .sidenav {
@@ -472,7 +479,7 @@ section .container {
 	vertical-align: middle;   
 }   
 
-section h2 {    
+section h2, #portfolioDetails h3 {    
 	margin: 0;  
 	font-size: 2.5rem; 
 	color: #{{ site.color.heading }}; 
@@ -495,7 +502,7 @@ section h2 {
 	.fa-angle-down {
 		/*font-size: 1.5em !important;*/
 	}
-	#bkg-page {
+	#page-background {
 		width: 90%;
 		height: 95.3%;
 		margin: 5%;
@@ -534,7 +541,7 @@ section h2 {
 	section.first { 
 		padding-top: 75px;  
 	}   
-	section h2 {    
+	section h2, #portfolioDetails h3 {    
 		font-size: 2rem; 
 	}
 }   
@@ -597,6 +604,12 @@ header .intro-text {
 	width: 100%;
 	margin-left: 10%;
 	text-transform: lowercase;
+
+	letter-spacing: 0;
+    word-spacing: 0;
+    font-size: 0;
+    font-weight: normal;
+    line-height: 1.5;
 }
 
 header .intro-text .name {
@@ -701,7 +714,11 @@ header mark {
 	/*padding: 2vh 0;
 	/*font-weight: 100;*/
 	text-align: left;
-	font-size: 3rem;
+	text-transform: none;
+	letter-spacing: initial;
+    word-spacing: initial;
+    font-size: 3rem;
+    margin-bottom: 1rem;
 	color: #{{ site.color.heading }};
 }
 #about .main {
@@ -822,9 +839,10 @@ header mark {
   	font-weight: 100;
   	border-top: 1px solid #{{ site.color.text }};
 }
-.status h6 {
+.status h3 {
   	padding-top: 10px;
   	line-height: 1.4;
+    font-size: 1rem;
   	/*letter-spacing: 2px;*/
 }
 .status:before {
@@ -889,7 +907,7 @@ header mark {
 		min-width: 100px;
 		font-size: 0.9rem;
 	}
-	.status h6 {
+	.status h3 {
 	  	padding-top: 20px;
 	  	font-size: 0.85rem;
 	}
@@ -1351,6 +1369,8 @@ header mark {
     /*font-weight: 500;*/
     /*text-transform: uppercase;*/
     /*color: #{{ site.color.heading }}; */
+    margin-bottom: 1rem;
+    line-height: 1.5;
 }
 
 #contact a {

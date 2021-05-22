@@ -955,10 +955,10 @@ header mark {
 	width: 300px;
 }
 
-.grid {
-	display: -webkit-box;  /* OLD - iOS 6-, Safari 3.1-6, BB7 */
-  	display: -ms-flexbox;  /* TWEENER - IE 10 */
-  	display: -webkit-flex; /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
+/*.grid {
+	display: -webkit-box; 
+  	display: -ms-flexbox; 
+  	display: -webkit-flex;
 	display: flex;
 }
 
@@ -967,25 +967,24 @@ header mark {
   	-webkit-box-flex: 1;
   	-webkit-flex: 1;
     flex-grow: 1;
-}
+}*/
 
-.grid-item {
+/*.grid-item {
   	color: #{{ site.color.backgroundcol }};
   	text-align: center;
   	padding: 0.65em;
   	font-weight: 900;
   	font-size: 2rem;
-}
+}*/
 
-.grid-col:nth-child(2) {
+/*.grid-col:nth-child(2) {
 	text-align: -webkit-right;
 	text-align: right;
 }
 
-/* 1 column by default, hide column 2 */
 .grid-col:nth-child(2) { 
 	display: block;
-}
+}*/
 
 .masonry-grid {
     -moz-column-gap: 0;

@@ -1,11 +1,13 @@
 ---
+
 layout: default
 project-id: 2
-date: 2019-05-15
-title: DBMS
-project-date: May 2019
+title: Healthcare Analytics
+date: 2018-05-15
+project-date: May 2018
 img: project-2.jpg
-alt: A computer analysing data
-category: Database Management, UIX Design
-description: An end-to-end framework that queries data from Data Lake, Sybase IQ, and Elasticsearch simultaneously to create a flat view for data collection. It solves the problem of smooth lateral data extraction and increases the efficiency of the database management system considerably. The responsive web interface, integrated smoothly with the backend services, makes for a seamless user experience.
+alt: A stethoscope
+category: Deep Learning, Digital Health
+description: Health-based classification into 8 different classes using a convolutional neural network architecture that uses exploratory data analysis techniques like principal component analysis and t-distributed stochastic neighbor embedding. The dataset is based on the expression levels of 77 proteins measured in the cerebral cortex of mice. A real-time diagnostic accuracy of 99.7% is obtained on the predictions.
+
 ---

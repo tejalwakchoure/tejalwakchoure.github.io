@@ -1,11 +1,13 @@
 ---
 layout: default
 project-id: 5
-title: PresenceID
-date: 2019-01-10
-project-date: January 2019
+date: 2019-05-15
+title: DBMS
+project-date: May 2019
 img: project-5.jpg
-alt: A mobile app detecting contact
-category: Facial Recognition, Android Development
-description: A facial recognition-based attendance system built to improve transparency in student-teacher interaction, reduce instances of bias, and raise the overall administrative efficiency. It uses a transfer learning model that recognizes facial features with 98% accuracy, trained on a high-density database with 1000+ images. The complete system is deployed as an Android application with dashboards and registration services for effortless daily interaction.
+alt: A computer analysing data
+category: Database Management, UIX Design
+description: An end-to-end framework that queries data from Data Lake, Sybase IQ, and Elasticsearch simultaneously to create a flat view for data collection. It solves the problem of smooth lateral data extraction and increases the efficiency of the database management system considerably. The responsive web interface, integrated smoothly with the backend services, makes for a seamless user experience.
+
+
 ---

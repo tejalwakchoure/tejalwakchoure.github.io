@@ -327,7 +327,7 @@ hr.primary {
 	width: 100%;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 769px) {
 	.navbar-collapse {
 		height: -moz-fit-content;
   		height: -webkit-fit-content;
@@ -336,9 +336,6 @@ hr.primary {
 	.navbar-expand-md .navbar-nav .nav-link {
     	padding: 15px !important;
     }
-    .sidenav .navbar-brand-scroll {
-		padding-top: 0;
-	}
 }
 
 .sidenav {
@@ -427,6 +424,9 @@ hr.primary {
 	    transform: none;
 	    width: auto; 
     	margin: 0;
+	}
+    .sidenav .navbar-brand-scroll {
+		padding-top: 0;
 	}
 	.sidenav .page-scroll .navbar-brand {
 		-ms-transform: none;
@@ -1040,7 +1040,7 @@ header mark {
   	min-height: 500px;
   	height: 60vh;
 }
-.masonry-item:nth-child(2)
+.masonry-item:nth-child(2),
 .masonry-item:nth-child(3) {
   	min-height: 400px;
   	height: 50vh;

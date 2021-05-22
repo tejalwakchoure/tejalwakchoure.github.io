@@ -408,7 +408,7 @@ hr.primary {
 }
 
 
-@media(max-width:767px) {
+@media(max-width:768px) {
 	.sidenav {
 		font-style: 1em;
 		flex-direction: row;
@@ -1034,23 +1034,21 @@ header mark {
 	order: 6;
 }
 
-.masonry-item:nth-child(1),
 .masonry-item:nth-child(4),
+.masonry-item:nth-child(5),
 .masonry-item:nth-child(6) {
   	min-height: 500px;
   	height: 60vh;
 }
-.masonry-item:nth-child(5),
-.masonry-item:nth-child(2) {
+.masonry-item:nth-child(2)
+.masonry-item:nth-child(3) {
   	min-height: 400px;
   	height: 50vh;
 }
-.masonry-item:nth-child(3) {
+.masonry-item:nth-child(1)
+ {
   	min-height: 600px;
   	height: 70vh;
-}
-.masonry-item:nth-child(2) {
-  	padding-top: 0;
 }
 
 /*.grid-col:nth-child(1) > .grid-item:nth-child(odd),
@@ -1284,6 +1282,7 @@ header mark {
 		padding: 20px !important;
 		height: 400px !important;
 		min-height: 0 !important;
+		order: initial !important;
 	}
 
 	#portfolioDetails h2 {

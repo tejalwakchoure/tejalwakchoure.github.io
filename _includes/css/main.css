@@ -999,8 +999,8 @@ header mark {
 
   	display: flex;
     flex-flow: column wrap;
-    height: 180vh;
     min-height: 1500px;
+    height: 180vh;
 }
 
 .masonry-item {
@@ -1034,18 +1034,19 @@ header mark {
 	order: 6;
 }
 
-.masonry-item:nth-child(4),
+/*.masonry-item:nth-child(4),
 .masonry-item:nth-child(5),
 .masonry-item:nth-child(6) {
   	min-height: 500px;
   	height: 60vh;
-}
+}*/
 .masonry-item:nth-child(2),
-.masonry-item:nth-child(3) {
+.masonry-item:nth-child(6) {
   	min-height: 400px;
   	height: 50vh;
 }
-.masonry-item:nth-child(1)
+.masonry-item:nth-child(1),
+.masonry-item:nth-child(4)
  {
   	min-height: 600px;
   	height: 70vh;

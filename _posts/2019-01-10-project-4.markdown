@@ -1,13 +1,12 @@
 ---
-
 layout: default
-project-id: 2
-title: Healthcare Analytics
-date: 2018-05-15
-project-date: May 2018
-img: project-2.jpg
-alt: A stethoscope
-category: Deep Learning, Digital Health
-description: Health-based classification into 8 different classes using a convolutional neural network architecture that uses exploratory data analysis techniques like principal component analysis and t-distributed stochastic neighbor embedding. The dataset is based on the expression levels of 77 proteins measured in the cerebral cortex of mice. A real-time diagnostic accuracy of 99.7% is obtained on the predictions.
+project-id: 4
+title: PresenceID
+date: 2019-01-10
+project-date: January 2019
+img: project-4.jpg
+alt: A mobile app detecting contact
+category: Facial Recognition, Android Development
+description: A facial recognition-based attendance system built to improve transparency in student-teacher interaction, reduce instances of bias, and raise the overall administrative efficiency. It uses a transfer learning model that recognizes facial features with 98% accuracy, trained on a high-density database with 1000+ images. The complete system is deployed as an Android application with dashboards and registration services for effortless daily interaction.
 
 ---

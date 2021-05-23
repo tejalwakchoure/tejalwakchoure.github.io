@@ -570,7 +570,8 @@ header img {
     max-width: none !important;
     /*width: 45vw;*/
     width: 100%;
-    min-height: 600px;
+    /*min-height: 600px;*/
+    max-height: 60vw;
     height: 80vh;
 }
 
@@ -649,13 +650,14 @@ header mark {
 		flex-direction: column-reverse !important;
 		padding: 0 5vw;
 		padding-top: 53px;
-    	justify-content: flex-end;
+    	/*justify-content: flex-end;*/
+    	justify-content: space-evenly;
 	}
 
 	header img {
     	margin: auto;
     	max-height: 450px;
-    	min-height: 0;
+    	/*min-height: 0;*/
     	width: 75vw;
     	/*height: 100%;*/
 	}

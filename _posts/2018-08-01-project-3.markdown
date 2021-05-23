@@ -4,7 +4,7 @@ project-id: 3
 date: 2018-08-01
 title: IRCLogParser
 project-date: August 2018
-img: project-3.jpg
+img: project-3.jp2
 alt: A chat system in use
 category: Text Mining, Natural Language Processing
 github-link: //github.com/tejalwakchoure/IRCLogParser

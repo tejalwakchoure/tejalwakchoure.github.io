@@ -261,12 +261,12 @@ $('.navbar-collapse ul li a').click(function() {
 });
 
 $(window).on("load", function() {
-    var dir1 = 'assets/img/';
-    var images1 = ['new_header.png', 'header2copy.png']
-    preloadImages(dir1, images1);
+    // var dir1 = 'assets/img/';
+    // var images1 = ['new_header.png', 'header2copy.png']
+    // preloadImages(dir1, images1);
 
     var dir2 = 'assets/img/portfolio/';
-    var images2 = ['project-1.jpg', 'project-2.jpg', 'project-3.jpg', 'project-4.jpg', 'project-5.jpg', 'project-6.jpg'];
+    var images2 = ['project-1.jp2', 'project-2.jp2', 'project-3.jp2', 'project-4.jp2', 'project-5.jp2', 'project-6.jp2'];
     preloadImages(dir2, images2);
 });
 

@@ -566,10 +566,12 @@ header img {
     object-fit: cover;
     object-position: center;
     margin-top: 0;
-    margin-left: -40px;
+    /*margin-left: -40px;*/
     max-width: none !important;
-    width: 45vw;
+    /*width: 45vw;*/
+    width: 100%;
     min-height: 600px;
+    height: 80vh;
 }
 
 header .img_div {

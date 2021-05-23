@@ -262,7 +262,7 @@ $('.navbar-collapse ul li a').click(function() {
 
 $(window).on("load", function() {
     var dir1 = 'assets/img/';
-    var images1 = ['profile-picture-1.jpeg', 'profile-picture-2.jpeg']
+    var images1 = ['profile-picture.jpeg']
     preloadImages(dir1, images1);
 
     var dir2 = 'assets/img/portfolio/';

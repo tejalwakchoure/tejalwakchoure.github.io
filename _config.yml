@@ -12,16 +12,13 @@ bing_verify:
 
 # Color settings
 color:
+    backgroundcol: 'D8EBF7' #'ffe1cf'
+    accent: '0B7272' #'bc763d'
+    backgroundcol_light: 'FDF0E6'
+    accent_dark: '97541e'
+
     text: '575757'
     heading: '000000'
-    text_small_devices: '000000'
-    
-    accent: 'bc763d' # 'E82E2E'  '76296F'
-    accent_dark: '97541e'
-    backgroundcol: 'ffe1cf' #'DAE6FF'
-    backgroundcol_dark: 'bc763d' # 'dfae91' #'4B69AB'
-    backgroundcol_light: 'FDF0E6' # 'e6ecf8'
-    
     white: 'ffffff'
     gray: 'bfbfbf'
 

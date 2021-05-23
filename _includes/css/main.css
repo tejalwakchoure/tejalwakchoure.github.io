@@ -171,7 +171,7 @@ a.active {
 	text-transform: none;
 	text-decoration: none;
 	color: #{{ site.color.accent_dark }};
-	/*color: #{{ site.color.text_small_devices }};*/
+	/*color: #{{ site.color.heading }};*/
 }   
 
 h1, 
@@ -527,11 +527,11 @@ section h2, #portfolioDetails h3 {
 	#preloader,
 	#under_construction,
 	#under_construction i {
-		color: #{{ site.color.text_small_devices }} !important;
+		color: #{{ site.color.heading }} !important;
 	}
 	#under_construction .btn {
-		background-color: #{{ site.color.text_small_devices }} !important;
-		border-color: #{{ site.color.text_small_devices }} !important;
+		background-color: #{{ site.color.heading }} !important;
+		border-color: #{{ site.color.heading }} !important;
 	} 
 	section {   
 		padding: 6%;
@@ -641,7 +641,7 @@ header mark {
 	section,
 	header .intro-text .skills,
 	.crossout {
-		color: #{{ site.color.text_small_devices }} !important;
+		color: #{{ site.color.heading }} !important;
 	}
 	header {
 		flex-direction: column-reverse !important;
@@ -1332,7 +1332,7 @@ header mark {
 		padding: 0;
 	}
 	.swiper-button-prev:hover, .swiper-button-next:hover {
-		color: #{{ site.color.text_small_devices }} !important;
+		color: #{{ site.color.heading }} !important;
 	}
 }
 
@@ -1382,7 +1382,7 @@ header mark {
     visibility: hidden;
     z-index: 2;
     color: #{{ site.color.white }};
-    background-color: #{{ site.color.backgroundcol_dark }};
+    background-color: #{{ site.color.accent }};
 }
 
 .overlay-link:hover ~ .overlay {
@@ -1409,7 +1409,7 @@ header mark {
 #contact a:focus,    
 #contact a:active,   
 #contact a.active {
-	color: #{{ site.color.text_small_devices }};
+	color: #{{ site.color.heading }};
 }   
 
 #contact a.mail-link {
@@ -1553,7 +1553,7 @@ form .row:first-child .floating-label-form-group {
 	footer a,
 	footer .footer-below,
 	.floating-label-form-group-with-focus label { 
-	  	color: #{{ site.color.text_small_devices }} !important; 
+	  	color: #{{ site.color.heading }} !important; 
 	}
 }
 

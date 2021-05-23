@@ -13,7 +13,7 @@ bing_verify:
 # Color settings
 color:
     backgroundcol: 'D8EBF7' #'ffe1cf'
-    accent: '0B7272' #'bc763d'
+    accent: '2F2B6A' #'bc763d'
     backgroundcol_light: 'FDF0E6'
     accent_dark: '97541e'
 

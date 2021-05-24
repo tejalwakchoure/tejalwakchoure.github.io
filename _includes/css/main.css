@@ -69,15 +69,16 @@ body {
   	height: -moz-fit-content;
   	height: -webkit-fit-content;
   	height: fit-content;
+  	background: #{{ site.color.white }};
 }
 
 #page-background {
-	width: 75%;
+	/*width: 75%;
     height: 92.25%;
     background: #{{ site.color.backgroundcol }};
     position: absolute;
     margin: 10% 12.5%;
-    z-index: 0;
+    z-index: 0;*/
 }
 
 #preloader {
@@ -503,9 +504,9 @@ section h2, #portfolioDetails h3 {
 		/*font-size: 1.5em !important;*/
 	}
 	#page-background {
-		width: 90%;
+		/*width: 90%;
 		height: 95.3%;
-		margin: 5%;
+		margin: 5%;*/
 	}
 	p { 
 		font-size: 1.2rem;
@@ -558,6 +559,7 @@ header {
 	display: flex;
 	flex-direction: row;
 	color: #{{ site.color.heading }};
+    background: linear-gradient(to bottom, #{{ site.color.backgroundcol }} 0%, #{{ site.color.backgroundcol }} 75%, #{{ site.color.white }} 100%);
 }
 
 header img {
@@ -652,6 +654,7 @@ header mark {
 		padding-top: 53px;
     	/*justify-content: flex-end;*/
     	justify-content: space-evenly;
+    	background: linear-gradient(to bottom, #{{ site.color.backgroundcol }} 0%, #{{ site.color.backgroundcol }} 53px, #{{ site.color.backgroundcol }} 75%, #{{ site.color.white }} 100%);
 	}
 
 	header img {
@@ -851,14 +854,14 @@ header mark {
 }
 .status:before {
   	content: "";
-  	width: 25px;
-  	height: 25px;
+  	width: 15px;
+  	height: 15px;
   	-webkit-border-radius: 50%; /* Android ≤ 1.6, iOS 1-3.2, Safari 3-4 */
   	border-radius: 50%;
-  	background-color: #{{ site.color.text }};
-  	border: 5px solid #{{ site.color.backgroundcol }};
+  	/*border: 5px solid #{{ site.color.backgroundcol }};*/
   	position: absolute;
-  	top: -14px;
+  	top: -8px;
+  	background-color: #{{ site.color.text }};
 }
 
 @media ( max-width: 768px ) {
@@ -916,8 +919,10 @@ header mark {
 	  	font-size: 0.85rem;
 	}
 	.status:before {
-		top: 40px;
-		left: -14px;
+		/*top: 40px;
+		left: -14px;*/
+		top: 43px;
+    	left: -8px;
 	}
 	.status {
 		flex-basis: 70%;
@@ -928,6 +933,7 @@ header mark {
 
 #work {
 	scroll-behavior: smooth;
+	background: linear-gradient(to bottom, #{{ site.color.white }} 0%, #{{ site.color.backgroundcol }} 25%, #{{ site.color.backgroundcol }} 75%, #{{ site.color.white }} 100%);
 }
 
 #portfolio {

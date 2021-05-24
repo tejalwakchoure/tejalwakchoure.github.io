@@ -515,7 +515,7 @@ section h2, #portfolioDetails h3 {
 	.large {   
 		font-size: 1.5rem;
 	}
-	#prelaoder {
+	#preloader {
 		background-color: #{{ site.color.backgroundcol_lightest }};
 	}
 	#preloader #wrapper {

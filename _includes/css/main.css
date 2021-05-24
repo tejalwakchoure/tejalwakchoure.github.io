@@ -210,7 +210,7 @@ hr.primary {
 	padding: 2% !important;
 	color: #{{ site.color.text }};
 	display: table;
-	background: #{{ site.color.backgroundcol_light }};
+	background: #{{ site.color.backgroundcol_lightest }};
 }
 
 #under_construction i {
@@ -525,9 +525,6 @@ section h2, #portfolioDetails h3 {
 	}
 	#preloader #brand {
 		font-size: 4em;
-	}
-	#under_construction {
-		background-color: #{{ site.color.backgroundcol_lightest }};
 	}
 	#preloader,
 	#under_construction,

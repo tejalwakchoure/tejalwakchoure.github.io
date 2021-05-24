@@ -621,7 +621,8 @@ header .intro-text .name {
 	font-size: min(4.5vw, 60px);
 	font-weight: 700;     
 	letter-spacing: 1px;
-	color: #{{ site.color.accent }};
+	/*color: #{{ site.color.accent }};*/
+
 	/*font-size: min(8.5vw, 140px);*/
 	/*line-height: 10vw;*/
 	/*letter-spacing: 4px;*/
@@ -860,7 +861,7 @@ header mark {
   	border-radius: 50%;
   	/*border: 5px solid #{{ site.color.backgroundcol }};*/
   	position: absolute;
-  	top: -8px;
+  	top: -7.5px;
   	background-color: #{{ site.color.text }};
 }
 
@@ -922,7 +923,7 @@ header mark {
 		/*top: 40px;
 		left: -14px;*/
 		top: 43px;
-    	left: -8px;
+    	left: -8.5px;
 	}
 	.status {
 		flex-basis: 70%;

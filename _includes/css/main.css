@@ -1106,7 +1106,7 @@ header mark {
 	padding: 5px; 
 	outline: 0;
 	background: transparent;
-	color: #{{ site.color.text }};
+	color: #{{ site.color.button }};
 }
 
 .slide-link:hover,
@@ -1250,12 +1250,12 @@ header mark {
 .swiper-button-prev {
 	float: left;
 	margin-left: 10px;
-	color: #{{ site.color.text }};
+	color: #{{ site.color.button }};
 }
 .swiper-button-next {
 	float: right;
 	margin-right: 10px;
-	color: #{{ site.color.text }};
+	color: #{{ site.color.button }};
 }
 .swiper-button-prev:hover, .swiper-button-next:hover {
 	color: #{{ site.color.heading }};
@@ -1412,7 +1412,7 @@ header mark {
 }
 
 #contact a {
-	color: #{{ site.color.text }}; 
+	color: #{{ site.color.button }}; 
 }
 
 #contact a:hover,    
@@ -1440,7 +1440,7 @@ header mark {
 	-webkit-transition: all 500ms ease-out;  /* Chrome 1-25, Safari 3.2+ */
   	transition: all 500ms ease-out;
   	visibility: hidden;
-  	background-color: #{{ site.color.text }}; 
+  	background-color: #{{ site.color.heading }}; 
 }
 
 #contact a.mail-link:hover:before,

@@ -12,9 +12,9 @@ bing_verify:
 
 # Color settings
 color:
-    backgroundcol: 'D8F6FF' #'ffe1cf'
+    backgroundcol: 'B3E3F4' #'ffe1cf'
+    backgroundcol_light: 'B3E3F4' #'FDF0E6'
     accent: '393939' #'bc763d'
-    backgroundcol_light: 'D8F6FF' #'FDF0E6'
     accent_dark: '393939' #'97541e'
 
     text: '575757'

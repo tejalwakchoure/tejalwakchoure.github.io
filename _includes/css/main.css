@@ -558,7 +558,7 @@ header {
   	display: -webkit-flex; /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
 	display: flex;
 	flex-direction: row;
-	color: #{{ site.color.heading }};
+	/*color: #{{ site.color.heading }};*/
     background: linear-gradient(to bottom, #{{ site.color.backgroundcol }} 0%, #{{ site.color.backgroundcol }} 75%, #{{ site.color.white }} 100%);
 }
 
@@ -633,7 +633,8 @@ header .intro-text .skills {
 	font-size: min(2.25vw, 25px);
 	font-weight: 200; 
 	letter-spacing: 0.5px;
-	color: #{{ site.color.text }};
+	/*color: #{{ site.color.text }};*/
+	
 	/*padding-top: 2%;*/
 }  
 

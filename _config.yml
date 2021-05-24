@@ -13,7 +13,7 @@ bing_verify:
 # Color settings
 color:
     backgroundcol: 'D4F5FF' #'ffe1cf'
-    backgroundcol_light: 'D4F5FF' #'FDF0E6'
+    backgroundcol_light: 'dcf7ff' #'FDF0E6'
     link: '2C82D6' #'bc763d'
     link_dark: '0755A4' #'97541e'
     text: '393939' #'575757'

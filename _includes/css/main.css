@@ -29,8 +29,7 @@ html,body
 	font-weight: 400;
 	word-spacing: 2px;
 	text-transform: lowercase;
-    /*color: #{{ site.color.heading }}; */
-    color: #{{ site.color.accent }}; 
+    color: #{{ site.color.heading }}; 
 }
 
 .btn {	
@@ -161,7 +160,7 @@ p {
 
 a {
 	/*color: #{{ site.color.text }};*/
-	color: #{{ site.color.accent }};
+	color: #{{ site.color.link }};
 }
 
 a:hover,    
@@ -171,7 +170,7 @@ a.active {
 	outline: 0; 
 	text-transform: none;
 	text-decoration: none;
-	color: #{{ site.color.accent_dark }};
+	color: #{{ site.color.link_dark }};
 	/*color: #{{ site.color.heading }};*/
 }   
 
@@ -194,11 +193,11 @@ hr {
     border-top: 1px solid #{{ site.color.text }};
 }
 hr.light {   
-	border-color: #{{ site.color.accent }};
+	border-color: #{{ site.color.heading }};
 }   
 
 hr.primary { 
-	border-color: #{{ site.color.accent }};
+	border-color: #{{ site.color.heading }};
 } 
 
 .img-centered { 
@@ -254,7 +253,7 @@ hr.primary {
 .sidenav .page-scroll .navbar-brand {   
 	padding: 0;    
 	height: auto;   
-	color: #{{ site.color.accent }} !important;
+	/*color: #{{ site.color.accent }} !important;*/
 	font-family: 'Raleway',Lato,sans-serif;
 	font-variant: none !important;
 	text-transform: lowercase !important;
@@ -291,7 +290,7 @@ hr.primary {
 }
 
 .navbar-default .navbar-toggle .icon-bar {
-	background-color: #{{ site.color.accent }} !important;
+	/*background-color: #{{ site.color.accent }} !important;*/
 }
 
 .navbar-default .navbar-toggle:hover, 
@@ -387,7 +386,7 @@ hr.primary {
     padding: 15px;
     text-align: center;
     font-variant: all-small-caps;
-    color: #{{ site.color.accent }};
+    /*color: #{{ site.color.accent }};*/
 }
 
 .sidenav .time-wrapper {
@@ -444,7 +443,6 @@ hr.primary {
 	    -webkit-transform: none;
     	transform: none;
     	padding: 10px;
-    	color: #{{ site.color.accent }} !important;
 	}
 	.navbar-collapse {
 		background: #{{ site.color.backgroundcol }};
@@ -455,7 +453,7 @@ hr.primary {
 		height: fit-content;
 	}
 	a.navbar-toggler.btn.collapsed:hover .navbar-menu-icon {
-    	color: #{{ site.color.accent_dark }} !important;
+    	color: #{{ site.color.heading }} !important;
 	}
 }
 
@@ -634,7 +632,7 @@ header .intro-text .skills {
 	font-weight: 200; 
 	letter-spacing: 0.5px;
 	/*color: #{{ site.color.text }};*/
-	
+
 	/*padding-top: 2%;*/
 }  
 
@@ -731,8 +729,8 @@ header mark {
 	color: #{{ site.color.heading }};
 }
 #about .main {
-	text-align: left;
-	color: #{{ site.color.accent }};
+	/*text-align: left;*/
+	/*color: #{{ site.color.accent }};*/
 }
 /*#about a {
 	/*text-decoration: underline;
@@ -1108,14 +1106,14 @@ header mark {
 	padding: 5px; 
 	outline: 0;
 	background: transparent;
-	color: #{{ site.color.accent }};
+	color: #{{ site.color.text }};
 }
 
 .slide-link:hover,
 .slide-link:focus,
 .slide-link:active,
 .slide-link.active {
-	color: #{{ site.color.accent_dark }};
+	color: #{{ site.color.heading }};
 }
 
 .fa-backward {
@@ -1252,15 +1250,15 @@ header mark {
 .swiper-button-prev {
 	float: left;
 	margin-left: 10px;
-	color: #{{ site.color.accent }};
+	color: #{{ site.color.text }};
 }
 .swiper-button-next {
 	float: right;
 	margin-right: 10px;
-	color: #{{ site.color.accent }};
+	color: #{{ site.color.text }};
 }
 .swiper-button-prev:hover, .swiper-button-next:hover {
-	color: #{{ site.color.accent_dark }};
+	color: #{{ site.color.heading }};
 }
 .swiper-button-prev:after, .swiper-container-rtl .swiper-button-next:after,
 .swiper-button-next:after, .swiper-container-rtl .swiper-button-prev:after {
@@ -1394,7 +1392,7 @@ header mark {
     visibility: hidden;
     z-index: 2;
     color: #{{ site.color.white }};
-    background-color: #{{ site.color.accent }};
+    background-color: #{{ site.color.text }};
 }
 
 .overlay-link:hover ~ .overlay {

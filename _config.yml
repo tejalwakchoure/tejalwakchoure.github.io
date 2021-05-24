@@ -14,10 +14,9 @@ bing_verify:
 color:
     backgroundcol: 'D4F5FF' #'ffe1cf'
     backgroundcol_light: 'D4F5FF' #'FDF0E6'
-    link: '2C82D6' #'bc763d'
+    link: '1E89E1' #'2C82D6' #'bc763d'
     link_dark: '393939' #'97541e'
-    #'1E89E1'
-    
+
     text: '393939' #'575757'
     heading: '000000'
     white: 'ffffff'

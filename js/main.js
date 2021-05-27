@@ -64,7 +64,7 @@ $(document).ready(function() {
     //   });
 
     // Removing hover state on click for target="_blank" link elements
-    document.querySelectorAll('a').forEach(a => {}
+    document.querySelectorAll('a').forEach(a => {
       a.addEventListener('click', (e) => e.target.blur());
     });
 });

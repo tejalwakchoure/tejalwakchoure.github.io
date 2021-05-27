@@ -8,7 +8,8 @@ project-date: January 2018
 img: project-1.jpg
 alt: A system visualizing and manipulating data
 category: Social Network Analysis, Graph Theory
-github-link: //github.com/tejalwakchoure/MLCAT
+link-type: GitHub
+link: //github.com/tejalwakchoure/MLCAT
 description: A mailing list parser that extracts information such as senders and time stamps from an IMAP server-based mailing list and uses this information to construct consversation thread hypergraphs. Time-varying network analyses of these hypergraphs reveal participant behavior and communication patterns which can be used to form predictive models to understand the intricate characteristics of a social network.
 
 ---

@@ -62,11 +62,6 @@ $(document).ready(function() {
     // $('html, body').bind('wheel scroll', function () {
     //     nicescroll.resize();
     //   });
-
-    // Removing hover state on click for target="_blank" link elements
-    document.querySelectorAll('a').forEach(a => {
-      a.addEventListener('click', (e) => e.target.blur());
-    });
 });
 
 // Portfolio parallax

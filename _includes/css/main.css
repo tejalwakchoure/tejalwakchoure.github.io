@@ -888,7 +888,7 @@ header mark {
 
 	}
 	#about .main {
-		text-align: justify;
+		/*text-align: justify;*/
 	}
 	.timeline {
 		flex-direction: column;

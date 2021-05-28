@@ -261,26 +261,26 @@ $('.navbar-collapse ul li a').click(function() {
 });
 
 $(window).on("load", function() {
-  var windowSize = $(window).width();
-  if(windowSize < 768) {
-    var dir1 = 'assets/img/small-devices/';
-    var images1 = ['profile-picture.jpeg']
-    preloadImages(dir1, images1);
+  // var windowSize = $(window).width();
+  // if(windowSize < 768) {
+  //   var dir1 = 'assets/img/small-devices/';
+  //   var images1 = ['profile-picture.jpeg']
+  //   preloadImages(dir1, images1);
 
-    var dir2 = 'assets/img/small-devices/portfolio/';
-    var images2 = ['project-1.jpg', 'project-2.jpg', 'project-3.jpg', 'project-4.jpg', 'project-5.jpg', 'project-6.jpg'];
-    preloadImages(dir2, images2);
-    console.log("smaller pics");
-  } else {
-    var dir1 = 'assets/img/';
-    var images1 = ['profile-picture.jpeg']
-    preloadImages(dir1, images1);
+  //   var dir2 = 'assets/img/small-devices/portfolio/';
+  //   var images2 = ['project-1.jpg', 'project-2.jpg', 'project-3.jpg', 'project-4.jpg', 'project-5.jpg', 'project-6.jpg'];
+  //   preloadImages(dir2, images2);
+  //   console.log("smaller pics");
+  // } else {
+  //   var dir1 = 'assets/img/';
+  //   var images1 = ['profile-picture.jpeg']
+  //   preloadImages(dir1, images1);
 
-    var dir2 = 'assets/img/portfolio/';
-    var images2 = ['project-1.jpg', 'project-2.jpg', 'project-3.jpg', 'project-4.jpg', 'project-5.jpg', 'project-6.jpg'];
-    preloadImages(dir2, images2);
-    console.log("larger pics");
-  }
+  //   var dir2 = 'assets/img/portfolio/';
+  //   var images2 = ['project-1.jpg', 'project-2.jpg', 'project-3.jpg', 'project-4.jpg', 'project-5.jpg', 'project-6.jpg'];
+  //   preloadImages(dir2, images2);
+  //   console.log("larger pics");
+  // }
 });
 
 // Horizontal header parallax

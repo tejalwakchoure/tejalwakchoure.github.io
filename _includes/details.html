@@ -6,7 +6,10 @@
 					{% for post in site.posts %}
 					<div class="swiper-slide">
 						<div class="slide-inner container text-center">
-							<img src="assets/img/portfolio/{{ post.img }}" class="img-responsive" alt="{{ post.alt }}" id="main-img">
+							<img src="assets/img/portfolio/{{ post.img }}" class="img-responsive" alt="{{ post.alt }}" 
+							srcset="assets/img/small-devices/portfolio/{{ post.img }} 600w, assets/img/portfolio/{{ post.img }} 1200w" 
+                                sizes="(max-width: 768px) 400px, 48vw"
+                                id="main-img">
 					</div>
 				</div>
 				{% endfor %}
@@ -17,7 +20,10 @@
 					{% for post in site.posts %}
 					<div class="swiper-slide">
 						<div class="slide-inner container text-center">
-							<img src="assets/img/portfolio/{{ post.img }}" class="img-responsive" alt="{{ post.alt }}" id="img-on-top"> 
+							<img src="assets/img/portfolio/{{ post.img }}" class="img-responsive" alt="{{ post.alt }}" 
+							srcset="assets/img/small-devices/portfolio/{{ post.img }} 600w, assets/img/portfolio/{{ post.img }} 1200w" 
+                                sizes="(max-width: 768px) 400px, 48vw"
+                                id="img-on-top"> 
 					</div>
 				</div>
 				{% endfor %}

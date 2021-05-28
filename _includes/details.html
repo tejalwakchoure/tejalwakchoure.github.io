@@ -6,10 +6,21 @@
 					{% for post in site.posts %}
 					<div class="swiper-slide">
 						<div class="slide-inner container text-center">
-							<img src="assets/img/portfolio/{{ post.img }}" class="img-responsive" alt="{{ post.alt }}" 
+							<!-- <img src="assets/img/portfolio/{{ post.img }}" class="img-responsive" alt="{{ post.alt }}" 
 							srcset="assets/img/small-devices/portfolio/{{ post.img }} 600w, assets/img/portfolio/{{ post.img }} 1200w" 
                                 sizes="(max-width: 768px) 400px, 48vw"
-                                id="main-img">
+                                id="main-img"> -->
+                            <picture>
+                               <source 
+                                  media="(max-width: 768px)"
+                                  srcset="assets/img/small-devices/portfolio/{{ post.img }}">
+                               <source 
+                                  srcset="assets/img/portfolio/{{ post.img }}">
+                               <img src="assets/img/portfolio/{{ post.img }}" 
+                               class="img-responsive" 
+                               alt="{{ post.alt }}"
+                               id="main-img">
+                            </picture>
 					</div>
 				</div>
 				{% endfor %}
@@ -20,10 +31,22 @@
 					{% for post in site.posts %}
 					<div class="swiper-slide">
 						<div class="slide-inner container text-center">
-							<img src="assets/img/portfolio/{{ post.img }}" class="img-responsive" alt="{{ post.alt }}" 
+							<!-- <img src="assets/img/portfolio/{{ post.img }}" class="img-responsive" alt="{{ post.alt }}" 
 							srcset="assets/img/small-devices/portfolio/{{ post.img }} 600w, assets/img/portfolio/{{ post.img }} 1200w" 
                                 sizes="(max-width: 768px) 400px, 48vw"
-                                id="img-on-top"> 
+                                id="img-on-top">  -->
+
+                            <picture>
+                               <source 
+                                  media="(max-width: 768px)"
+                                  srcset="assets/img/small-devices/portfolio/{{ post.img }}">
+                               <source 
+                                  srcset="assets/img/portfolio/{{ post.img }}">
+                               <img src="assets/img/portfolio/{{ post.img }}" 
+                               class="img-responsive" 
+                               alt="{{ post.alt }}"
+                               id="img-on-top">
+                            </picture>
 					</div>
 				</div>
 				{% endfor %}

@@ -269,7 +269,6 @@ $(window).on("load", function() {
   preloadImages(dir1, images1);
   var images2 = ['project-1.jpg', 'project-2.jpg', 'project-3.jpg', 'project-4.jpg', 'project-5.jpg', 'project-6.jpg'];
   preloadImages(dir2, images2);
-  console.log(smallScreen);
 });
 
 // Horizontal header parallax

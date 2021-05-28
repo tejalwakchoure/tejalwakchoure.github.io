@@ -660,6 +660,13 @@ header mark {
     	background: linear-gradient(to bottom, #{{ site.color.backgroundcol }} 0%, #{{ site.color.backgroundcol }} 53px, #{{ site.color.backgroundcol }} 75%, #{{ site.color.white }} 100%);
 	}
 
+	header picture {
+		margin: auto;
+	    padding-right: 15px;
+	    margin-bottom: 15px;
+        height: calc(100% - 15px);
+	}
+
 	header img {
     	/*margin: auto;*/
 
@@ -668,11 +675,6 @@ header mark {
     	max-height: calc(450px - 15px);
 	    width: calc(75vw - 15px);
 	    height: 100%;
-	    margin-bottom: 15px;
-	}
-
-	header picture {
-		margin: auto;
 	}
 
 	header .img_div {

@@ -261,15 +261,15 @@ $('.navbar-collapse ul li a').click(function() {
 });
 
 $(window).on("load", function() {
-  // var smallScreen = $(window).width() < 768 ? true : false;
-  // var dir1 = smallScreen ? 'assets/img/small-devices/' : 'assets/img/';
-  // var dir2 = smallScreen ? 'assets/img/small-devices/portfolio/' : 'assets/img/portfolio/';
+  var smallScreen = $(window).width() < 768 ? true : false;
+  var dir1 = smallScreen ? 'assets/img/small-devices/' : 'assets/img/';
+  var dir2 = smallScreen ? 'assets/img/small-devices/portfolio/' : 'assets/img/portfolio/';
 
-  // var images1 = ['profile-picture.jpeg']
-  // preloadImages(dir1, images1);
-  // var images2 = ['project-1.jpg', 'project-2.jpg', 'project-3.jpg', 'project-4.jpg', 'project-5.jpg', 'project-6.jpg'];
-  // preloadImages(dir2, images2);
-  // console.log(smallScreen);
+  var images1 = ['profile-picture.jpeg']
+  preloadImages(dir1, images1);
+  var images2 = ['project-1.jpg', 'project-2.jpg', 'project-3.jpg', 'project-4.jpg', 'project-5.jpg', 'project-6.jpg'];
+  preloadImages(dir2, images2);
+  console.log(smallScreen);
 });
 
 // Horizontal header parallax

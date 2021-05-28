@@ -741,7 +741,13 @@ header mark {
 }*/
 
 #about .about-col {
-	padding: 0 20%;
+	/*padding: 0 20%;*/
+}
+
+#about .about-main-row {
+	width: 60%;
+	max-width: 1000px;
+	margin: auto;
 }
 
 #about .img_div {
@@ -869,7 +875,11 @@ header mark {
 
 @media ( max-width: 768px ) {
 	#about .about-col {
-		padding: 0 6%;
+		/*padding: 0 6%;*/
+	}
+	#about .about-main-row {
+		width: 100%;
+		/*margin: 0;*/
 	}
 	#about .img_div {
 		text-align: center;
@@ -1216,11 +1226,13 @@ header mark {
     padding-right: 2%;
     margin: auto;
     width: 100%;
+    max-width: 1000px;
 }
 .swiper-slide #content p {
 	text-align: justify; 
-	margin: 3.5% 5%;
-	margin: 3.5% 9%;
+	/*margin: 3.5% 5%;
+	margin: 3.5% 9%;*/
+	margin: 3.5% 0;
 }
 /*.swiper-slide #content a {
 	text-decoration: underline; 
@@ -1328,7 +1340,7 @@ header mark {
 	.swiper-slide #content{
 		overflow: hidden;
 		margin: auto;
-		padding: 3% 7%;
+		padding: 3%;
 	}
 	.swiper-slide #main-img {
 		height: 300px;

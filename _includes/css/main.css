@@ -878,7 +878,7 @@ header mark {
 		/*padding: 0 6%;*/
 	}
 	#about .about-main-row {
-		width: 100%;
+		width: 100% !important;
 		/*margin: 0;*/
 	}
 	#about .img_div {
@@ -1219,11 +1219,11 @@ header mark {
 	flex-direction: column; 
 	position: relative; 
 	padding-top: 12px;
-	width: 100%;
+	/*width: 100%;*/
 }
 .swiper-slide #content {
 	padding-left: 3%;
-    padding-right: 2%;
+    padding-right: 3%;
     margin: auto;
     width: 100%;
     max-width: 1000px;

@@ -889,7 +889,7 @@ header mark {
 
 @media ( max-width: 768px ) {
 	#about .about-col {
-		/*padding: 0 6%;*/
+		padding: 0;
 	}
 	#about .about-main-row {
 		width: 100% !important;
@@ -1371,7 +1371,7 @@ header mark {
 	}
 	.swiper-slide #content p {
 		text-align: left;
-		margin: 5% 1%;
+		margin: 5% 2%;
 		/*line-height: 1.25rem;*/
 	}
 	.swiper-pagination {

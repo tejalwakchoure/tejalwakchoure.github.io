@@ -6,7 +6,7 @@ title: DBMS
 project-date: May 2019
 img: project-5.jpg
 alt: A computer analysing data
-category: Database Management, UIX Design
+category: UI/UX Design, Database Management
 description: An end-to-end framework that queries data from Data Lake, Sybase IQ, and Elasticsearch simultaneously to create a flat view for data collection. It solves the problem of smooth lateral data extraction and increases the efficiency of the database management system considerably. The responsive web interface, integrated smoothly with the backend services, makes for a seamless user experience.
 
 

@@ -6,7 +6,7 @@ title: SuperGlue
 project-date: September 2019
 img: project-6.jpg
 alt: A news story being filmed
-category: Affective Analysis, Machine Learning
+category: Affective Analysis, Computer Vision
 link-type: Project Website
 link: //media.mit.edu/projects/superglue/overview/
 description: A media digestion tool that fuses multiple modalities to create a comprehensive model for the cross-analysis of facial expressions, body gestures,  posture, scene context, and other nonverbal cues in broadcast news. It explores the nature of news portrayal on different media outlets to understand how they affect their audiences and contribute to the formation of potentially dangerous "echo chambers."

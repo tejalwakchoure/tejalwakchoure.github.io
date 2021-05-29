@@ -279,7 +279,9 @@ hr.primary {
 .sidenav .navbar-brand-scroll {
 	padding-top: 15px;
 }
-
+.navbar-toggler-icon {
+	width: auto;
+}
 .navbar-toggle {
     margin-top: 0;
     border: 0;
@@ -287,7 +289,7 @@ hr.primary {
 
 .navbar-toggler {
 	/*padding: 0.5rem;*/
-	padding: 0.25em;
+	padding: 0.5rem 0.5em;
 }
 
 .navbar-default .navbar-toggle .icon-bar {
@@ -438,7 +440,7 @@ hr.primary {
 	    -webkit-transform: none;
 		transform: none;
 		font-size: 1.5em;
-		padding: 0 0.25em;
+		padding: 0 0.5em;
 		font-weight: 300;
 	}
 	.sidenav .text {

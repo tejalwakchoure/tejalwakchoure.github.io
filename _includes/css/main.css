@@ -698,7 +698,7 @@ header mark {
 		padding-left: 10px;
 	    padding-top: 0;
 	    padding-bottom: 0;
-	    margin: auto;
+	    /*margin: auto;*/
 	}
 
 	header .intro-text {
@@ -726,7 +726,8 @@ header mark {
 
 @media (max-width: 480px) {
 	header img {
-		height: 300px;
+		/*height: 300px;*/
+		max-height: calc(300px - 15px);
 	}
 	header .intro-text {
 		width: -moz-min-content;

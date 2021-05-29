@@ -443,6 +443,9 @@ hr.primary {
 		padding: 0 0.5em;
 		font-weight: 300;
 	}
+	.sidenav .page-scroll .navbar-brand:hover {
+		font-weight: 300;
+	}
 	.sidenav .text {
 		writing-mode: horizontal-tb;
 		-ms-transform: none;

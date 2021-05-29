@@ -6,10 +6,6 @@
 					{% for post in site.posts %}
 					<div class="swiper-slide">
 						<div class="slide-inner container text-center">
-							<!-- <img src="assets/img/portfolio/{{ post.img }}" class="img-responsive" alt="{{ post.alt }}" 
-							srcset="assets/img/small-devices/portfolio/{{ post.img }} 600w, assets/img/portfolio/{{ post.img }} 1200w" 
-                                sizes="(max-width: 768px) 400px, 48vw"
-                                id="main-img"> -->
                             <picture>
                                <source 
                                   media="(max-width: 768px)"
@@ -21,9 +17,9 @@
                                alt="{{ post.alt }}"
                                id="main-img">
                             </picture>
+						</div>
 					</div>
-				</div>
-				{% endfor %}
+					{% endfor %}
 				</div>
 			</div>
 			<div class="swiper-container-innermost kill-on-small-devices" dir="rtl">
@@ -31,11 +27,6 @@
 					{% for post in site.posts %}
 					<div class="swiper-slide">
 						<div class="slide-inner container text-center">
-							<!-- <img src="assets/img/portfolio/{{ post.img }}" class="img-responsive" alt="{{ post.alt }}" 
-							srcset="assets/img/small-devices/portfolio/{{ post.img }} 600w, assets/img/portfolio/{{ post.img }} 1200w" 
-                                sizes="(max-width: 768px) 400px, 48vw"
-                                id="img-on-top">  -->
-
                             <picture>
                                <source 
                                   media="(max-width: 768px)"
@@ -47,9 +38,9 @@
                                alt="{{ post.alt }}"
                                id="img-on-top">
                             </picture>
+						</div>
 					</div>
-				</div>
-				{% endfor %}
+					{% endfor %}
 				</div>
 			</div>
 

@@ -26,6 +26,4 @@ this was a four-month long project.
 I worked on the UI as well as the algorithm for this project. the UI was done in android studio with java/XML and the algorithm was in python. the UI had separate landings for students and teachers, with provisions for courses, grading, etc for an integrated experience.
 
 
-<!-- A facial recognition-based attendance system built to improve transparency in student-teacher interaction, reduce instances of bias, and raise the overall administrative efficiency. It uses a transfer learning model that recognizes facial features with 98% accuracy, trained on a high-density database with 1000+ images. The complete system is deployed as an Android application with dashboards and registration services for effortless daily interaction. -->
-
 ---

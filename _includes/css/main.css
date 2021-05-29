@@ -448,6 +448,7 @@ hr.primary {
 	    -webkit-transform: none;
     	transform: none;
     	padding: 10px;
+    	font-weight: 400;
 	}
 	.navbar-collapse {
 		background: #{{ site.color.backgroundcol }};

@@ -44,4 +44,5 @@ credits: Tejal Wakchoure
 
 # Build settings
 markdown: kramdown
+excerpt_separator: <!--more-->
 permalink: pretty

@@ -124,6 +124,7 @@ body {
 	letter-spacing: -0.08em; 
 	margin: auto auto 0 auto;
 	padding-top: 5%;
+	transition-timing-function: ease-in;
 	font-family: 'Raleway', Lato, sans-serif;
 }
 

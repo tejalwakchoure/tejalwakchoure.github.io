@@ -1,9 +1,17 @@
 <!DOCTYPE html>
 <html>
     {% include head.html %}
-    <body id="page-top" class="index">
+    <body id="main" class="index">
+        {% include preloader.html %}
+        <div id="body-container">
+          {% include nav.html %}
+          {% include header.html %}
+          {% include about.html %}
+          {% include portfolio_grid.html %}
+          {% include details.html %}
+          {% include contact.html %}        
+          {% include footer.html %}
+        </div> 
         {% include js.html %}
-        {% include under_construction.html %}
     </body>
 </html>
- 

@@ -32,6 +32,9 @@ $(document).ready(function() {
       }
     }, 10);
 
+    $('.hor_parallax_right').css({ right: -10 });
+    $('.hor_parallax_left').css({ left: -10 });
+
     swiper_in.controller.control = swiper_innermost;
     swiper.controller.control = swiper_in;
 
@@ -41,8 +44,7 @@ $(document).ready(function() {
         stepSize: 60,
       });
 
-    // Backup - slow but works on all browsers
-
+    // // Backup - slow but works on all browsers
     // var isSmoothScrollSupported = 'scrollBehavior' in document.documentElement.style;
     // var nicescroll = $('html, body').niceScroll({
     //     scrollspeed: 60, // scrolling speed - moves faster if speed is less
@@ -62,9 +64,6 @@ $(document).ready(function() {
     // $('html, body').bind('wheel scroll', function () {
     //     nicescroll.resize();
     //   });
-    
-    $('.hor_parallax_right').css({ right: -10 });
-    $('.hor_parallax_left').css({ left: -10 });
 });
 
 // Portfolio parallax
@@ -281,7 +280,6 @@ $(window).on("load resize scroll", function() {
     var elementTop = $('header').offset().top || 0;
     var currentpos = -10;
     var pos = currentpos + ((windowTop - elementTop) / 10);
-    console.log(windowTop, elementTop, currentpos, pos);
     $('.hor_parallax_right').css({ right: pos });
     $('.hor_parallax_left').css({ left: pos });
 });

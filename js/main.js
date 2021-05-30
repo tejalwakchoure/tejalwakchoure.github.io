@@ -281,8 +281,8 @@ $(window).on("load", function() {
 // Horizontal header parallax
 $(window).on("load resize scroll", function() {
     // Depending on the browser, you may need to use var windowTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
-    var windowTop = $(window).scrollTop();
-    var elementTop = $('header').offset().top;
+    var windowTop = $(window).scrollTop() || 0;
+    var elementTop = $('header').offset().top || 0;
     var currentpos = -10;
     var pos = currentpos + ((windowTop - elementTop) / 10);
     console.log(windowTop, elementTop, currentpos, pos);

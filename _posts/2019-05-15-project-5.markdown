@@ -7,7 +7,10 @@ project-date: May 2019
 img: project-5.jpg
 alt: A computer analysing data
 category: UI/UX Design, Database Management
-description: An end-to-end framework that queries data from Data Lake, Sybase IQ, and Elasticsearch simultaneously to create a flat view for data collection. It solves the problem of smooth lateral data extraction and increases the efficiency of the database management system considerably. The responsive web interface, integrated smoothly with the backend services, makes for a seamless user experience.
+
+summary: An end-to-end framework that queries data from Data Lake, Sybase IQ, and Elasticsearch simultaneously to create a flat view for data collection.
+
+description: If a user wanted to query data from 3 different sources, he would have to go to 3 platforms, get results from each of them, and manually merge them. The idea behind this project was to create a framework that queries these sources simultaneously to create a flat view for data collection. The user would then just have to run a single query from a comprehensive UI. The framework would execute it on different sources internally to produce a consolidated result. This solves the problem of smooth lateral data extraction and increases the efficiency of the database management system considerably. <br /> <br /> I designed and implemented the user interface for this project. The calls sent to the middleware were SQL queries compiled from the user's selections on the UI. It was a responsive web interface created with ReactJS, integrated with the backend services using RESTful APIs to create a seamless user experience.
 
 
 ---

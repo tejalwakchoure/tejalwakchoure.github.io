@@ -58,7 +58,11 @@
 						<div class="row" id="content-row">				
 							<div id="content">
 								<h3>{{ post.title }}</h3>
-								<hr class="kill-on-large-devices"/>
+								<!-- <hr class="kill-on-large-devices"/> -->
+								{% if post.summary %}
+								<p>{{ post.summary }}</p>
+								<hr/>
+								{% endif %}
 								{% if post.description %}
 								<p markdown="1">{{ post.description }}</p>
 								{% endif %}

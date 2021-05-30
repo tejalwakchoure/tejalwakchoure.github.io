@@ -8,6 +8,9 @@ project-date: May 2018
 img: project-2.jpg
 alt: A stethoscope
 category: Digital Health, Deep Learning
-description: Health-based classification into 8 different classes using a convolutional neural network architecture that uses exploratory data analysis techniques like principal component analysis and t-distributed stochastic neighbor embedding. The dataset is based on the expression levels of 77 proteins measured in the cerebral cortex of mice. A real-time diagnostic accuracy of 99.7% is obtained on the predictions.
+
+summary: Health-based classification into 8 different classes on a dataset comprised the expression levels of 77 proteins measured in the cerebral cortex of mice. A real-time diagnostic accuracy of 99.7% was obtained on the predictions.
+
+description: The aim of this project was originally to obtain predictions on medical diagnoses noted by professionals to make their job easier. However, while gathering data for this project from the hospital, we encountered an issue - all the patient data for the past 30 years was handwritten. This predicament led us to a different research direction, namely digitising all that data using machine learning algorithms. <br /> <br /> The classification model notes out-of-range test values and makes a prediction based on these analyses to help the doctor diagnose appropriately. The model was built in PyTorch and used a convolutional neural network (CNN) architecture to create health-based classification using exploratory data analysis techniques like Principal Component Analysis (PCA) and t-distributed Stochastic Neighbour Embedding (t-SNE). The training dataset comprising the expression levels of 77 proteins measured in the cerebral cortex of mice was grouped into 8 classes. We used optical character recognition (OCR) to digitise the physical files.
 
 ---

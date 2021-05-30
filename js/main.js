@@ -62,13 +62,13 @@ $(document).ready(function() {
     // $('html, body').bind('wheel scroll', function () {
     //     nicescroll.resize();
     //   });
-    var windowTop = document.documentElement.scrollTop;
-    var elementTop = document.getElementById('header').getBoundingClientRect().top || windowTop;
-    var currentpos = -10;
-    var pos = currentpos + ((windowTop - elementTop) / 10);
-    console.log(windowTop, scrollTop, currentpos, pos);
-    $('.hor_parallax_right').css({ right: pos });
-    $('.hor_parallax_left').css({ left: pos });
+    // var windowTop = document.documentElement.scrollTop;
+    // var elementTop = document.getElementById('header').getBoundingClientRect().top || windowTop;
+    // var currentpos = -10;
+    // var pos = currentpos + ((windowTop - elementTop) / 10);
+    // console.log(windowTop, scrollTop, currentpos, pos);
+    // $('.hor_parallax_right').css({ right: pos });
+    // $('.hor_parallax_left').css({ left: pos });
 });
 
 // Portfolio parallax
@@ -279,12 +279,13 @@ $(window).on("load", function() {
 });
 
 // Horizontal header parallax
-$(window).on("resize scroll", function() {
+$(window).on("load resize scroll", function() {
     // Depending on the browser, you may need to use var windowTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
     var windowTop = $(window).scrollTop();
     var elementTop = $('header').offset().top;
     var currentpos = -10;
     var pos = currentpos + ((windowTop - elementTop) / 10);
+    console.log(windowTop, scrollTop, currentpos, pos);
     $('.hor_parallax_right').css({ right: pos });
     $('.hor_parallax_left').css({ left: pos });
 });

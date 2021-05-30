@@ -26,7 +26,7 @@
     </div>
     <script type="text/javascript">
       var windowTop = document.documentElement.scrollTop;
-      var elementTop = document.getElementById('header').getBoundingClientRect().top;
+      var elementTop = document.getElementById('header').getBoundingClientRect().top || windowTop;
       var currentpos = -10;
       var pos = currentpos + ((windowTop - elementTop) / 10);
       console.log(windowTop, scrollTop, currentpos, pos);

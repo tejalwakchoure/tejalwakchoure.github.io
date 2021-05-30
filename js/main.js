@@ -62,13 +62,9 @@ $(document).ready(function() {
     // $('html, body').bind('wheel scroll', function () {
     //     nicescroll.resize();
     //   });
-    // var windowTop = document.documentElement.scrollTop;
-    // var elementTop = document.getElementById('header').getBoundingClientRect().top || windowTop;
-    // var currentpos = -10;
-    // var pos = currentpos + ((windowTop - elementTop) / 10);
-    // console.log(windowTop, scrollTop, currentpos, pos);
-    // $('.hor_parallax_right').css({ right: pos });
-    // $('.hor_parallax_left').css({ left: pos });
+    
+    $('.hor_parallax_right').css({ right: -10 });
+    $('.hor_parallax_left').css({ left: -10 });
 });
 
 // Portfolio parallax

@@ -7,6 +7,14 @@ function fadeInChildren(parent, base_delay) {
 }
 
 $(document).ready(function() {
+    var windowTop = document.documentElement.scrollTop;
+    var elementTop = $('header').getBoundingClientRect().top;
+    var currentpos = -10;
+    var pos = currentpos + ((windowTop - elementTop) / 10);
+    $('.hor_parallax_right').css({ right: pos });
+    $('.hor_parallax_left').css({ left: pos });
+
+
     $('#body-container').css({display: 'none'});
     var counter = 0;
     var outerInterval = setInterval(function(){
@@ -272,7 +280,7 @@ $(window).on("load", function() {
 });
 
 // Horizontal header parallax
-$(window).on("load resize scroll", function() {
+$(window).on("resize scroll", function() {
     // Depending on the browser, you may need to use var windowTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
     var windowTop = $(window).scrollTop();
     var elementTop = $('header').offset().top;

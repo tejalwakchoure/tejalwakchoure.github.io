@@ -984,7 +984,7 @@ header mark {
 .swiper-container-innermost {
 	padding: 10px 0;
 	position: absolute;
-	top: 10.5%;
+	top: 4%;
     height: 300px;
 	width: 400px;
 	margin: 75px auto 0 auto;
@@ -1000,7 +1000,7 @@ header mark {
 .swiper-container-in {
 	padding: 10px 0;
 	position: absolute;
-	top: 10.5%;
+	top: 4%;
     height: 300px;
 	width: 600px;
 	overflow: hidden;
@@ -1151,9 +1151,6 @@ header mark {
 	}
 	.swiper-container {
 		width: 100%;
-	}
-	.swiper-container-in {
-		top: 7.5%;
 	}
 	.swiper-container-in .slide-inner {
 		display: -webkit-box;  /* OLD - iOS 6-, Safari 3.1-6, BB7 */

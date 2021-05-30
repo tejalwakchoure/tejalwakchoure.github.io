@@ -7,14 +7,6 @@ function fadeInChildren(parent, base_delay) {
 }
 
 $(document).ready(function() {
-    var windowTop = document.documentElement.scrollTop;
-    var elementTop = $('header').getBoundingClientRect().top;
-    var currentpos = -10;
-    var pos = currentpos + ((windowTop - elementTop) / 10);
-    $('.hor_parallax_right').css({ right: pos });
-    $('.hor_parallax_left').css({ left: pos });
-
-
     $('#body-container').css({display: 'none'});
     var counter = 0;
     var outerInterval = setInterval(function(){
@@ -70,6 +62,12 @@ $(document).ready(function() {
     // $('html, body').bind('wheel scroll', function () {
     //     nicescroll.resize();
     //   });
+    var windowTop = document.documentElement.scrollTop;
+    var elementTop = document.getElementById('header').getBoundingClientRect().top;
+    var currentpos = -10;
+    var pos = currentpos + ((windowTop - elementTop) / 10);
+    $('.hor_parallax_right').css({ right: pos });
+    $('.hor_parallax_left').css({ left: pos });
 });
 
 // Portfolio parallax

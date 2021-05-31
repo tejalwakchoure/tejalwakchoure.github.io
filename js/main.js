@@ -32,9 +32,6 @@ $(document).ready(function() {
       }
     }, 10);
 
-    $('.hor_parallax_right').css({ right: -10 });
-    $('.hor_parallax_left').css({ left: -10 });
-
     swiper_in.controller.control = swiper_innermost;
     swiper.controller.control = swiper_in;
 
@@ -280,6 +277,10 @@ $(window).on("load resize scroll", function() {
     var elementTop = $('header').offset().top || 0;
     var currentpos = -10;
     var pos = currentpos + ((windowTop - elementTop) / 10);
+
+    if (pos < -10) {
+        pos = -10;
+    }
     $('.hor_parallax_right').css({ right: pos });
     $('.hor_parallax_left').css({ left: pos });
 });

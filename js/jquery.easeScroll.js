@@ -117,7 +117,10 @@ $.fn.easeScroll = function(options) {
               // Fall-back if spin cannot be determined
               if (pX && !sX) { sX = (pX < 1) ? -1 : 1; }
               if (pY && !sY) { sY = (pY < 1) ? -1 : 1; }
-              
+
+              var a = pX, i = pY;
+
+
             // var a = e.wheelDeltaX || e.deltaX || (e.axis == 1 ? e.detail : 0) || 0,
             //     i = e.wheelDeltaY || e.deltaY || (e.axis == 2 ? e.detail : 0) || 0;
 

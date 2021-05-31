@@ -328,21 +328,21 @@ hr.primary {
 }*/
 
 
-@media (min-width: 768px){
+@media (min-width: 769px){
     .navbar-expand-custom {
-        flex-direction: row;
         flex-wrap: nowrap;
-        justify-content: flex-start;
-    }
-    .navbar-expand-custom .navbar-nav {
-        flex-direction: row;
     }
     .navbar-expand-custom .navbar-nav .nav-link {
-        padding-right: .5rem;
-        padding-left: .5rem;
+        padding: 15px !important;
     }
     .navbar-expand-custom .navbar-collapse {
-        display: flex!important;
+    	display: -ms-flexbox !important;
+        display: flex !important;
+        -ms-flex-preferred-size: auto;
+	    flex-basis: auto;
+	    height: -moz-fit-content;
+  		height: -webkit-fit-content;
+		height: fit-content;
     }
     .navbar-expand-custom .navbar-toggler {
         display: none;

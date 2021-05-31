@@ -118,7 +118,8 @@ $.fn.easeScroll = function(options) {
               if (pX && !sX) { sX = (pX < 1) ? -1 : 1; }
               if (pY && !sY) { sY = (pY < 1) ? -1 : 1; }
 
-              var a = pX, i = pY;
+              var a = pX * -3, 
+                  i = pY * -3;
 
 
             // var a = e.wheelDeltaX || e.deltaX || (e.axis == 1 ? e.detail : 0) || 0,

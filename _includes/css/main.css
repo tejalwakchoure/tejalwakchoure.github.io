@@ -481,7 +481,7 @@ section h2, #portfolioDetails h3 {
 		display: block !important;
 	}
 	.heading {
-		font-size: 3.125rem;
+		font-size: 5rem;
 		font-weight: 500;
 	}
 	.heading-col {
@@ -527,7 +527,7 @@ section h2, #portfolioDetails h3 {
 	section h2, #portfolioDetails h3 {    
 		font-size: 2rem; 
 	}
-}   
+}
 
 header {    
 	height: 100vh;
@@ -665,16 +665,19 @@ header mark {
 	}
 
 	header .intro-text .name { 
-		font-size: 3rem;
+		font-size: 4rem;
 		padding-bottom: 0.5rem;
 	}   
 
 	header .intro-text .skills {    
-		font-size: 1.3rem;
+		font-size: 1.75rem;
 	}
 } 
 
-@media (max-width: 480px) {
+@media (max-width: 480px) {	
+ 	.heading {
+		font-size: 3.125rem;
+	}
 	header img {
 		max-height: calc(300px - 15px);
 	}
@@ -682,7 +685,16 @@ header mark {
 		width: -moz-min-content;
 		width: -webkit-min-content;
      	width: min-content;
- 	}	
+ 	}
+	header .intro-text .name { 
+		font-size: 3rem;
+	}
+	header .intro-text .skills {    
+		font-size: 1.3rem;
+	}
+	#about .hello {
+	    font-size: 2rem;
+	}
 }
 
 #about .hello {
@@ -801,15 +813,15 @@ header mark {
 	#about .about-main-row {
 		width: 100% !important;
 		min-width: 0 !important;
+		max-width: 600px;
 	}
 	#about .img_div {
 		text-align: center;
 		padding: 3vh 25px;
 	}
 	#about .hello {
-        font-size: 2rem;
+        font-size: 2.5rem;
         padding-bottom: 0;
-
 	}
 	.timeline {
 		flex-direction: column;
@@ -1142,7 +1154,7 @@ header mark {
         -moz-column-count: 1;
         -webkit-column-count: 1;
         column-count: 1;
-        max-width: 400px;
+        max-width: 450px;
         height: initial;
     }
 	.masonry-item {

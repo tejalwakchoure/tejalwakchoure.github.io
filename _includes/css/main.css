@@ -698,6 +698,7 @@ header mark {
 #about .about-main-row {
 	width: 61%;
 	max-width: 1000px;
+	min-width: 600px;
 	margin: auto;
 }
 #about .row {
@@ -722,6 +723,8 @@ header mark {
   	align-items: flex-start;
   	justify-content: center;
   	padding: 0;
+  	margin-left: 10%;
+  	margin-right: 10%;
 }
 
 .timestamp {
@@ -797,6 +800,7 @@ header mark {
 	}
 	#about .about-main-row {
 		width: 100% !important;
+		min-width: 0 !important;
 	}
 	#about .img_div {
 		text-align: center;

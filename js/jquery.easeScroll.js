@@ -71,6 +71,8 @@ $.fn.easeScroll = function(options) {
             var a = e.wheelDeltaX || e.deltaX * -3 || (e.axis == 1 ? e.detail * -3 : 0) || 0,
                 i = e.wheelDeltaY || e.deltaY * -3 || (e.axis == 2 ? e.detail * -3 : 0) || 0;
 
+
+
             // if (e.deltaMode === 0) { // PIXEL
             //     px = -(e.deltaX * (opt.mousescrollstep / (18 * 3))) | 0;
             //     py = -(e.deltaY * (opt.mousescrollstep / (18 * 3))) | 0;
@@ -79,7 +81,7 @@ $.fn.easeScroll = function(options) {
             //     py = -(e.deltaY * opt.mousescrollstep * 50 / 80) | 0;
             // }
 
-            console.log(a, i);
+            console.log(a, i, e.wheelDeltaY, e.deltaY, e.detail);
 
             return a || i || (i = e.wheelDelta || e.detail * -3 || 0), !v.touchpadSupport && f(i) ? !0 : (Math.abs(a) > 1.2 && (a *= v.stepSize / 120), Math.abs(i) > 1.2 && (i *= v.stepSize / 120), o(r, -a, -i), void e.preventDefault())
         }

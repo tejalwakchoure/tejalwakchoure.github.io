@@ -110,8 +110,8 @@ $.fn.easeScroll = function(options) {
             if (pX && !sX) { sX = (pX < 1) ? -1 : 1; }
             if (pY && !sY) { sY = (pY < 1) ? -1 : 1; }
 
-            var a = pX * -2, 
-                i = pY * -2;
+            var a = pX * -1, 
+                i = pY * -1;
 
             console.log(a, i, e.wheelDeltaY, e.deltaY, e.detail);
             console.log(sX, sY, pX, pY);

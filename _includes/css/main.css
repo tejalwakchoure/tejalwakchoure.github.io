@@ -556,7 +556,7 @@ header img {
     object-fit: cover;
     object-position: center;
     margin-top: 0;
-    max-width: none !important;
+    max-width: none;
     max-height: 60vw;
     height: 80vh;
 
@@ -644,6 +644,7 @@ header mark {
 
 	header img {
     	max-height: calc(450px - 15px);
+    	max-width: 450px;
 	    width: calc(75vw - 15px);
 	    height: 100%;
 	}

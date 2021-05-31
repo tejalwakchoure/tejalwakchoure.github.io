@@ -113,9 +113,6 @@ $.fn.easeScroll = function(options) {
             var a = pX * -2, 
                 i = pY * -2;
 
-            console.log(a, i, e.wheelDeltaY, e.deltaY, e.detail);
-            console.log(sX, sY, pX, pY);
-
             return a || i || (i = e.wheelDelta || e.detail * -3 || 0), !v.touchpadSupport && f(i) ? !0 : (Math.abs(a) > 1.2 && (a *= v.stepSize / 120), Math.abs(i) > 1.2 && (i *= v.stepSize / 120), o(r, -a, -i), void e.preventDefault())
         }
 

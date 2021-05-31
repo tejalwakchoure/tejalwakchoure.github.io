@@ -1,0 +1,17 @@
+---
+layout: default
+project-id: 3
+date: 2018-09-01
+title: IRCLogParser
+project-date: Sept 2018
+img: project-3.jpg
+alt: A chat system in use
+category: Text Mining, Natural Language Processing
+link-type: GitHub
+link: //github.com/tejalwakchoure/IRCLogParser
+
+summary: A desktop-based NLP application that uses social network analysis techniques to study user interactions on the Ubuntu IRC networking service.
+
+description: With the increased use of Open Source software, Internet Relay Chat (IRC) has become a popular form of synchronous communication. The primary objective of this study was to track the development of the Ubuntu IRC community over time and examine the dynamically changing participation patterns. The aims of this analysis were twofold - to delineate substructures and to calculate the frequency discussion of concepts in the network. <br /> <br /> Our analysis aims to enable the construction of a community model for information flow. This model can help assist and assess knowledge transfer and filter messages to split participants into groups for greater efficiency. We provided a new perspective on the network skeleton to generalise the pattern of relationships, studying linguistic behaviour using Natural Language Processing (NLP) approaches like reply structure and word context in conjunction with Gephi's clustering analysis and inferential modelling services. <br /> <br /> Users are often subjected to long wait times for developers to resolve their queries, increasing the possibility that the question gets buried under others. Our second aim was to benefit the learning community by capturing the topic-wise rate of discussion to reduce this loss of information exchange. Detecting the distinct topics that IRC users converse about also helped match users to chat rooms, optimize chat queries, and trace topic changes within a channel. We created a python-based application that provides the users a view of the times of day that a topic is most talked about at, increasing the efficiency and ease of usage of the forum substantially.
+
+---

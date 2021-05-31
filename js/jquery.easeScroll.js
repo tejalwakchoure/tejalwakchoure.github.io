@@ -71,63 +71,47 @@ $.fn.easeScroll = function(options) {
             // var a = e.wheelDeltaX || e.deltaX * -3 || (e.axis == 1 ? e.detail * -3 : 0) || 0,
             //     i = e.wheelDeltaY || e.deltaY * -3 || (e.axis == 2 ? e.detail * -3 : 0) || 0;
 
-            // if (e.deltaMode === 0) { // PIXEL
-            //     px = -(e.deltaX * (opt.mousescrollstep / (18 * 3))) | 0;
-            //     py = -(e.deltaY * (opt.mousescrollstep / (18 * 3))) | 0;
-            // } else if (e.deltaMode === 1) { // LINE
-            //     px = -(e.deltaX * opt.mousescrollstep * 50 / 80) | 0;
-            //     py = -(e.deltaY * opt.mousescrollstep * 50 / 80) | 0;
-            // }
-
             // Reasonable defaults
             var PIXEL_STEP  = 10;
             var LINE_HEIGHT = 40;
             var PAGE_HEIGHT = 800;
-              var sX = 0, sY = 0,       // spinX, spinY
-                  pX = 0, pY = 0;       // pixelX, pixelY
+            var sX = 0, sY = 0,       // spinX, spinY
+                pX = 0, pY = 0;       // pixelX, pixelY
 
-              // Legacy
-              if ('detail'      in e) { sY = e.detail; }
-              if ('wheelDelta'  in e) { sY = -e.wheelDelta / 120; }
-              if ('wheelDeltaY' in e) { sY = -e.wheelDeltaY / 120; }
-              if ('wheelDeltaX' in e) { sX = -e.wheelDeltaX / 120; }
+            // Legacy
+            if ('detail'      in e) { sY = e.detail; }
+            if ('wheelDelta'  in e) { sY = -e.wheelDelta / 120; }
+            if ('wheelDeltaY' in e) { sY = -e.wheelDeltaY / 120; }
+            if ('wheelDeltaX' in e) { sX = -e.wheelDeltaX / 120; }
 
-              // side scrolling on FF with DOMMouseScroll
-              if ( 'axis' in e && e.axis === e.HORIZONTAL_AXIS ) {
+            // side scrolling on FF with DOMMouseScroll
+            if ( 'axis' in e && e.axis === e.HORIZONTAL_AXIS ) {
                 sX = sY;
                 sY = 0;
-              }
+            }
 
-              pX = sX * PIXEL_STEP;
-              pY = sY * PIXEL_STEP;
+            pX = sX * PIXEL_STEP;
+            pY = sY * PIXEL_STEP;
 
-              if ('deltaY' in e) { pY = e.deltaY; }
-              if ('deltaX' in e) { pX = e.deltaX; }
+            if ('deltaY' in e) { pY = e.deltaY; }
+            if ('deltaX' in e) { pX = e.deltaX; }
 
-              if ((pX || pY) && e.deltaMode) {
+            if ((pX || pY) && e.deltaMode) {
                 if (e.deltaMode == 1) {          // delta in LINE units
-                  pX *= LINE_HEIGHT;
-                  pY *= LINE_HEIGHT;
-                } else {                             // delta in PAGE units
-                  pX *= PAGE_HEIGHT;
-                  pY *= PAGE_HEIGHT;
+                    pX *= LINE_HEIGHT;
+                    pY *= LINE_HEIGHT;
+                } else {                         // delta in PAGE units
+                    pX *= PAGE_HEIGHT;
+                    pY *= PAGE_HEIGHT;
                 }
-              }
+            }
 
-              // Fall-back if spin cannot be determined
-              if (pX && !sX) { sX = (pX < 1) ? -1 : 1; }
-              if (pY && !sY) { sY = (pY < 1) ? -1 : 1; }
+            // Fall-back if spin cannot be determined
+            if (pX && !sX) { sX = (pX < 1) ? -1 : 1; }
+            if (pY && !sY) { sY = (pY < 1) ? -1 : 1; }
 
-              var a = pX * -3, 
-                  i = pY * -3;
-
-
-            // var a = e.wheelDeltaX || e.deltaX || (e.axis == 1 ? e.detail : 0) || 0,
-            //     i = e.wheelDeltaY || e.deltaY || (e.axis == 2 ? e.detail : 0) || 0;
-
-            // while(i%3 == 0) i/=3;
-            // if(a<3) a*=3;
-            // if(i<3) i*=3;
+            var a = pX * -2, 
+                i = pY * -2;
 
             console.log(a, i, e.wheelDeltaY, e.deltaY, e.detail);
             console.log(sX, sY, pX, pY);

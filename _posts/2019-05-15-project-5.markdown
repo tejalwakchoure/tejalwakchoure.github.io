@@ -6,7 +6,6 @@ title: DBMS
 project-date: May 2019
 img: project-5.jpg
 alt: A computer analysing data
-category: UI/UX Design, Database Management
 
 summary: An end-to-end framework that queries data from Data Lake, Sybase IQ, and Elasticsearch simultaneously to create a flat view for data collection.
 

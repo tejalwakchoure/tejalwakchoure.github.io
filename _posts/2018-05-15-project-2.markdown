@@ -7,7 +7,6 @@ date: 2018-05-15
 project-date: May 2018
 img: project-2.jpg
 alt: A stethoscope
-category: Digital Health, Deep Learning
 
 summary: Health-based classification of patient data into 8 different classes with a real-time diagnostic accuracy of 99.7%.
 

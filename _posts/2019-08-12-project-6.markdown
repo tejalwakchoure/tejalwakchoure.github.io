@@ -6,7 +6,6 @@ title: SuperGlue
 project-date: Aug 2019
 img: project-6.jpg
 alt: A news story being filmed
-category: Affective Analysis, Computer Vision
 link-type: Project Website
 link: //media.mit.edu/projects/superglue/overview/
 

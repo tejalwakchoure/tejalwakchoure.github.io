@@ -7,9 +7,9 @@ project-date: May 2019
 img: project-5.jpg
 alt: A computer analysing data
 
-summary: An end-to-end framework that queries data from Data Lake, Sybase IQ, and Elasticsearch simultaneously to create a flat view for data collection.
+summary: An end-to-end framework that queries data from <a href="">Data Lake</a>, <a href="">Sybase IQ</a>, and <a href="">Elasticsearch</a> simultaneously for a flat view for data collection.
 
-description: If a user wanted to query data from 3 different sources, he would have to go to 3 platforms, get results from each of them, and manually merge them. The idea behind this project was to create a framework that queries these sources simultaneously to create a black box for database querying. The user would then just have to run a single query from a comprehensive UI, and the framework would execute it on different sources internally to produce a consolidated result. This solves the problem of smooth lateral data extraction and increases the efficiency of the database management system considerably. <br /> <br /> I designed and implemented the user interface for this project. The calls sent to the middleware were SQL queries compiled from the user's selections on the UI. It was a responsive web interface created with ReactJS, integrated with the backend services using RESTful APIs to create a seamless user experience.
+description: If a user wanted to query data from 3 different sources, they would have to go to 3 platforms, get results from each of them, and manually merge them. The idea behind this project was to create a framework that queries these sources simultaneously to create a black box for database querying. The user would then have to just run a single query from a comprehensive UI, and the framework would execute it on different sources internally to produce a consolidated result. This design facilitates smooth lateral data extraction and increases the efficiency of the database management system considerably. <br /> <br /> We also designed and implemented a user interface for this project. <a href="">SQL</a> queries compiled from the user's selections on the UI are sent as calls to the middleware. The responsive web interface is developed in <a href="">ReactJS</a>, integrated with the backend services using <a href="">RESTful APIs</a> to create a consistent user experience.
 
 
 ---

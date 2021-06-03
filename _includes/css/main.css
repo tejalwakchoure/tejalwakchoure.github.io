@@ -984,9 +984,9 @@ header mark {
 
 .slide-link {
 	float: left;
-	margin-left: 5px;
 	padding: 5px; 
 	outline: 0;
+	text-decoration: underline;
 	background: transparent;
 	color: #{{ site.color.button }};
 }
@@ -1009,7 +1009,7 @@ header mark {
 .swiper-container-innermost {
 	padding: 10px 0;
 	position: absolute;
-	top: 5.5%;
+	top: 7.5%;
     height: 300px;
 	width: 400px;
 	margin: 75px auto 0 auto;
@@ -1025,7 +1025,7 @@ header mark {
 .swiper-container-in {
 	padding: 10px 0;
 	position: absolute;
-	top: 5.5%;
+	top: 7.5%;
     height: 300px;
 	width: 600px;
 	overflow: hidden;
@@ -1043,6 +1043,7 @@ header mark {
 	height: max-content;
 	width: 85%;
     z-index: 2;
+    max-width: 1200px;
 }
 
 .swiper-slide {
@@ -1077,7 +1078,7 @@ header mark {
 }
 
 .swiper-slide #img-positioning-row {
-	height: 300px; 
+	height: 325px; 
 	width: 100%;
 }
 .swiper-slide #content-row {
@@ -1101,13 +1102,13 @@ header mark {
 	margin: 3.5% 0;
 }
 .swiper-pagination, .swiper-button-prev, .swiper-button-next {
-	position: relative !important;
 	width: auto;
 	height: auto;
 	outline: 0;
 }
 
 .swiper-pagination {
+	position: relative !important;
     width: -moz-fit-content;
 	width: -webkit-fit-content;
 	width: fit-content;
@@ -1125,15 +1126,15 @@ header mark {
 .swiper-navigation {
 	width: 100%;
 }
+.swiper-button-prev, .swiper-button-next {
+	top: 17%;
+	color: #{{ site.color.button }};
+}
 .swiper-button-prev {
 	float: left;
-	margin-left: 10px;
-	color: #{{ site.color.button }};
 }
 .swiper-button-next {
 	float: right;
-	margin-right: 10px;
-	color: #{{ site.color.button }};
 }
 .swiper-button-prev:hover, .swiper-button-next:hover {
 	color: #{{ site.color.heading }};
@@ -1177,6 +1178,9 @@ header mark {
 	.swiper-container {
 		width: 100%;
 	}
+	.swiper-container-in {
+		top: 5.5%;
+	}
 	.swiper-container-in .slide-inner {
 		display: -webkit-box;  /* OLD - iOS 6-, Safari 3.1-6, BB7 */
   		display: -ms-flexbox;  /* TWEENER - IE 10 */
@@ -1210,6 +1214,15 @@ header mark {
 		margin-top: 0;
 		padding: 0;
 	}
+	.swiper-button-prev {
+		margin-left: 0;
+	}
+	.swiper-button-next {
+		margin-right: 0;
+	}
+	.swiper-button-prev, .swiper-button-next {
+		top: 14.5%;
+	}
 	.swiper-button-prev:hover, .swiper-button-next:hover {
 		color: #{{ site.color.heading }} !important;
 	}
@@ -1220,12 +1233,27 @@ header mark {
 		height: 300px !important;
 		min-height: 0 !important;
 	}
-	.swiper-slide #main-img {
-	    height: 300px;
-	    width: 300px;
-	}
 	.swiper-container-in {
-		top: 3.25%;
+		top: 4%;
+	}
+	.swiper-slide #img-positioning-row {
+		height: 275px;
+	}
+	.swiper-slide #main-img {
+        height: 225px;
+    	width: 225px;
+	}
+	.swiper-button-prev, .swiper-button-next {
+		top: 10%;
+	}
+	.swiper-button-prev {
+		left: 0;
+	}
+	.swiper-button-next {
+		right: 0;
+	}
+	.slide-link {
+		padding-left: 0;
 	}
 }
 

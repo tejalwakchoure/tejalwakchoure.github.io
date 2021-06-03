@@ -559,9 +559,7 @@ header img {
     max-width: none;
     max-height: 60vw;
     height: 80vh;
-
-    width: calc(100% - 15px);
-    box-shadow: 15px 15px 0px 0px #{{ site.color.text }};
+    width: 100%;
 }
 
 header .img_div {
@@ -637,15 +635,13 @@ header mark {
 	header picture {
 		margin: auto;
 		width: auto;
-	    padding-right: 15px;
-	    margin-bottom: 15px;
-        height: calc(100% - 15px);
+        height: 100%;
 	}
 
 	header img {
-    	max-height: calc(450px - 15px);
+    	max-height: 450px;
     	max-width: 450px;
-	    width: calc(75vw - 15px);
+	    width: 75vw;
 	    height: 100%;
 	}
 
@@ -683,7 +679,7 @@ header mark {
 		font-size: 3.125rem;
 	}
 	header img {
-		max-height: calc(300px - 15px);
+		max-height: 300px;
 	}
 	header .intro-text {
 		width: -moz-min-content;

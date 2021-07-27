@@ -28,9 +28,9 @@ $(document).ready(function() {
               startTime();
               addPortfolioParallax();
             }
-        }, 10);
+        }, 7);
       }
-    }, 10);
+    }, 7);
 
     swiper_in.controller.control = swiper_innermost;
     swiper.controller.control = swiper_in;

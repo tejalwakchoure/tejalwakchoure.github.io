@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>wordpress</title>
+	<atom:link href="https://tejalwakchoure.github.io/blog/feed/" rel="self" type="application/rss+xml" />
+	<link>https://tejalwakchoure.github.io/blog</link>
+	<description>Just another WordPress site</description>
+	<lastBuildDate>Wed, 28 Jul 2021 19:12:07 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.8</generator>
+	<item>
+		<title>new post #2!</title>
+		<link>https://tejalwakchoure.github.io/blog/new-post-2/</link>
+					<comments>https://tejalwakchoure.github.io/blog/new-post-2/#comments</comments>
+		
+		<dc:creator><![CDATA[tejalw]]></dc:creator>
+		<pubDate>Wed, 28 Jul 2021 19:12:07 +0000</pubDate>
+				<category><![CDATA[Uncategorized]]></category>
+		<guid isPermaLink="false">http://localhost/~tejal/wordpress/?p=12</guid>
+
+					<description><![CDATA[nothing to see here!]]></description>
+										<content:encoded><![CDATA[
+<p>nothing to see here!</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>https://tejalwakchoure.github.io/blog/new-post-2/feed/</wfw:commentRss>
+			<slash:comments>1</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>Hi!</title>
+		<link>https://tejalwakchoure.github.io/blog/hello-world/</link>
+					<comments>https://tejalwakchoure.github.io/blog/hello-world/#comments</comments>
+		
+		<dc:creator><![CDATA[tejalw]]></dc:creator>
+		<pubDate>Tue, 27 Jul 2021 14:37:20 +0000</pubDate>
+				<category><![CDATA[Uncategorized]]></category>
+		<guid isPermaLink="false">http://localhost/~tejal/wordpress/?p=1</guid>
+
+					<description><![CDATA[This is my first post. Hello!]]></description>
+										<content:encoded><![CDATA[
+<p>This is my first post. Hello!</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>https://tejalwakchoure.github.io/blog/hello-world/feed/</wfw:commentRss>
+			<slash:comments>1</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

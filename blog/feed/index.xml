@@ -22,7 +22,6 @@
 	<item>
 		<title>new post #2!</title>
 		<link>https://tejalwakchoure.github.io/blog/new-post-2/</link>
-					<comments>https://tejalwakchoure.github.io/blog/new-post-2/#comments</comments>
 		
 		<dc:creator><![CDATA[tejalw]]></dc:creator>
 		<pubDate>Wed, 28 Jul 2021 19:12:07 +0000</pubDate>
@@ -34,15 +33,12 @@
 <p>nothing to see here!</p>
 ]]></content:encoded>
 					
-					<wfw:commentRss>https://tejalwakchoure.github.io/blog/new-post-2/feed/</wfw:commentRss>
-			<slash:comments>1</slash:comments>
 		
 		
 			</item>
 		<item>
 		<title>Hi!</title>
 		<link>https://tejalwakchoure.github.io/blog/hello-world/</link>
-					<comments>https://tejalwakchoure.github.io/blog/hello-world/#comments</comments>
 		
 		<dc:creator><![CDATA[tejalw]]></dc:creator>
 		<pubDate>Tue, 27 Jul 2021 14:37:20 +0000</pubDate>
@@ -54,8 +50,6 @@
 <p>This is my first post. Hello!</p>
 ]]></content:encoded>
 					
-					<wfw:commentRss>https://tejalwakchoure.github.io/blog/hello-world/feed/</wfw:commentRss>
-			<slash:comments>1</slash:comments>
 		
 		
 			</item>

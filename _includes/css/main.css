@@ -659,7 +659,6 @@ header mark {
 
 	header .intro-text {
 	        max-width: 600px;
-		margin-left: 9%;
 	    width: -moz-fit-content;
 		width: -webkit-fit-content;
 	    width: fit-content;

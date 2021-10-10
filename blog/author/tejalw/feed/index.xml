@@ -8,46 +8,28 @@
 	>
 
 <channel>
-	<title>tejalw &#8211; wordpress</title>
-	<atom:link href="https://tejalwakchoure.github.io/blog/author/tejalw/feed/" rel="self" type="application/rss+xml" />
+	<title>Tejal</title>
+	<atom:link href="https://tejalwakchoure.github.io/blog/author/tejalw/feed" rel="self" type="application/rss+xml" />
 	<link>https://tejalwakchoure.github.io/blog</link>
-	<description>Just another WordPress site</description>
-	<lastBuildDate>Wed, 28 Jul 2021 19:12:07 +0000</lastBuildDate>
+	<description></description>
+	<lastBuildDate>Sun, 10 Oct 2021 20:09:20 +0000</lastBuildDate>
 	<language>en-US</language>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
 	<sy:updateFrequency>
 	1	</sy:updateFrequency>
-	<generator>https://wordpress.org/?v=5.8</generator>
+	<generator>https://wordpress.org/?v=5.8.1</generator>
 	<item>
-		<title>new post #2!</title>
-		<link>https://tejalwakchoure.github.io/blog/new-post-2/</link>
+		<title>Hello</title>
+		<link>https://tejalwakchoure.github.io/blog/hello</link>
 		
-		<dc:creator><![CDATA[tejalw]]></dc:creator>
-		<pubDate>Wed, 28 Jul 2021 19:12:07 +0000</pubDate>
-				<category><![CDATA[Uncategorized]]></category>
-		<guid isPermaLink="false">http://localhost/~tejal/wordpress/?p=12</guid>
+		<dc:creator><![CDATA[Tejal]]></dc:creator>
+		<pubDate>Sun, 10 Oct 2021 20:08:40 +0000</pubDate>
+				<guid isPermaLink="false">https://tejalwakchoure.github.io/blog/?p=23</guid>
 
-					<description><![CDATA[nothing to see here!]]></description>
+					<description><![CDATA[Hi to everyone!]]></description>
 										<content:encoded><![CDATA[
-<p>nothing to see here!</p>
-]]></content:encoded>
-					
-		
-		
-			</item>
-		<item>
-		<title>Hi!</title>
-		<link>https://tejalwakchoure.github.io/blog/hello-world/</link>
-		
-		<dc:creator><![CDATA[tejalw]]></dc:creator>
-		<pubDate>Tue, 27 Jul 2021 14:37:20 +0000</pubDate>
-				<category><![CDATA[Uncategorized]]></category>
-		<guid isPermaLink="false">http://localhost/~tejal/wordpress/?p=1</guid>
-
-					<description><![CDATA[This is my first post. Hello!]]></description>
-										<content:encoded><![CDATA[
-<p>This is my first post. Hello!</p>
+<p>Hi to everyone!</p>
 ]]></content:encoded>
 					
 		

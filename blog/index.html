@@ -13,17 +13,15 @@
     <meta name="description" content="Tejal Wakchoure's Personal Website. Hi! I'm Tejal. I'm a software developer, UI & UX designer, and cinema addict. I currently build code at Goldman Sachs and live in Mumbai, India. I studied computer science at BITS Pilani and pursued my undergraduate thesis with Andrew Lippman at the MIT Media Lab. I like to work on projects that are design-oriented and solve real-world human-computer interaction (HCI) problems. I like to work with people who value empathy-driven development. My research interests are interdisciplinary - I enjoy blending ideas from HCI and product design with literature, cinema, and economics. During my time at MIT, I worked on politics and computer vision for a grassroots-level analysis of news media. Here is an interview on my experience!">
 
     <!-- Favicon support -->
-    <link rel="apple-touch-icon" sizes="180x180" href="http://localhost/assets/img/favicon/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="http://localhost/assets/img/favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="http://localhost/assets/img/favicon/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="//tejalwakchoure.github.io/assets/img/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="//tejalwakchoure.github.io/assets/img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="//tejalwakchoure.github.io/assets/img/favicon/favicon-16x16.png">
 
     <!-- Custom fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com/">
     <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com/">
-    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400&display=swap" rel="stylesheet">
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-133963307-1"></script>
@@ -133,6 +131,11 @@ a:hover,
 		<style type="text/css" id="wp-custom-css">body {
 /* 	background: #fbf4ef !important; */
 }
+.top-bar {
+	display: flex;
+	flex-direction: row;
+	padding: 0.5rem;
+}
 #sitetitle {
 	font-family: 'Raleway',Lato,sans-serif;
 	letter-spacing: -0.08em;
@@ -140,15 +143,27 @@ a:hover,
 	font-size: 1.75rem;
 	text-transform: lowercase !important;
 }
+#menu-container {
+	margin-top: auto;
+	margin-bottom: auto;
+}
 #searchwrap {
 /* 	background: inherit; */
+}
+.blog #primary, 
+.home #primary {
+	margin-top: 1.5rem;
+}
+.hello-text p {
+	margin-bottom: 4rem;
+	font-size: 1rem;
 }
 .postboxloop a .entry-title {
 	font-size: 1.3em;
 	text-transform:	none !important;
 }
 .postboxloop a:hover .entry-title  {
-	color: #0066cc;
+	color: #035eb8;
 }
 .postbox-entry-meta {
 	font-size: .75em;
@@ -157,18 +172,31 @@ a:hover,
     width: 10%;
 }
 .entry-content {
-	font-family: Lato, 'Source Sans Pro', Helvetica, sans-serif;
+	font-family: Lato, Helvetica, sans-serif;
+	font-weight: 400;
+}
+footer p {
+	margin-bottom: 0;
+	margin-top: 1.4rem;
+	font-size: 1.1rem;
 }
 #site-footer {
-	margin-top: 7rem;
-	margin-bottom: 10px; 
+	margin-top: 8rem;
+	margin-bottom: 20px; 
+}
+.hello-text,
+.footer-text {
+	text-align: center; 
+	margin: 0;
+}
+.footer-link {
+	color: #888; 
+	font-size: smaller;
 }
 #bottom-widget-area,
 .widget {
-	margin-bottom: 0;
-}
-#copyright {
-	margin-top: 0;
+	margin: 0;
+	padding: 0;
 }</style>
 		  </head>
 
@@ -176,9 +204,9 @@ a:hover,
 
   <header id="top-menu" class="top-bar" itemscope="itemscope">
 
-    <div class="menu-container-mobile" data-responsive-toggle="menu-container" data-hide-for="large">
-        <button class="icon-menu" type="button" data-toggle></button>
-    </div>
+    <!-- <div class="menu-container-mobile" data-responsive-toggle="menu-container" data-hide-for="large">
+        <button class="icon-menu" type="button"  data-toggle></button>
+    </div> -->
     
     <div class="topbar-title title-logo" itemscope="itemscope" itemtype="http://schema.org/WPHeader" role="banner">
            
@@ -217,12 +245,16 @@ a:hover,
   </div>
 </div>
 <div id="container" class="row">
-  <div id="primary" class="large-7 medium-8 small-11 small-centered columns">
+  <div id="primary" class="large-8 medium-9 small-11 small-centered columns">
+
+              <div class="hello-text">
+              <p>Hi, I'm Tejal. Welcome to my corner of the internet :)</p>
+          </div>
     
            
   
               
-                            	<article id="post-1" class="row postbox postboxloop post-1 post type-post status-publish format-standard hentry category-uncategorized">
+                            		<article id="post-1" class="row postbox postboxloop post-1 post type-post status-publish format-standard hentry category-uncategorized">
 			
 
 								<div class="columns">
@@ -233,7 +265,7 @@ a:hover,
 						</a>
 					</header>
 					 <div class="postbox-entry-meta">
-<span class="screen-reader-text">Posted on</span> <time class="entry-date published" datetime="2021-07-27T14:37:20+05:30">July 27, 2021</time><time class="updated" datetime="2021-10-14T14:46:28+05:30">October 14, 2021</time>
+<span class="screen-reader-text">Posted on</span> <time class="entry-date published updated" datetime="2021-10-17T01:05:20+05:30">October 17, 2021</time>
 </div>				</div>	
 			
 	</article>                      
@@ -250,7 +282,11 @@ a:hover,
 
 	<footer id="site-footer">
 				
-				
+		
+		<div class="footer-text">
+			<p> <a class="footer-link" href="//tejalwakchoure.github.io/">more about me</a> </p>
+		</div>
+
 			      <div id="bottom-widget-area" class="widget-area" role="complementary">
 	        <div class="row"><aside id="block-19" class="medium-12 columns widget bottom-widget widget_block">
 <ul class="wp-block-social-links aligncenter has-normal-icon-size has-icon-color aria-hidden items-justified-center is-style-logos-only">
@@ -269,7 +305,7 @@ a:hover,
 				&copy;&nbsp;2021&nbsp;					  <a href="https://tejalwakchoure.github.io/blog/" title="tw - ">
 					  Tejal Wakchoure					  </a>
 			</div>
-		</div> --><!-- #copyright -->
+		</div> --> <!-- #copyright -->
 
 	<div class="&#114;b row text-center">&#087;&#111;&#114;&#100;&#080;&#114;&#101;&#115;&#115; &#084;&#104;&#101;m&#101; &#098;&#121; <a href="https://tejalwakchoure.github.io/blog/&#104;tt&#112;&#115;://&#82;&#105;&#99;&#104;&#87;&#80;.&#99;o&#109;/">&#82;&#105;&#99;&#104;&#87;&#80;</a>
 </div></footer><script type="text/javascript" src="https://tejalwakchoure.github.io/blog/wp-content/themes/minimum-minimal/assets/js/app.js?ver=1.0" id="minimumminimal-main-js"></script>

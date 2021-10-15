@@ -12,7 +12,7 @@
 	<atom:link href="https://tejalwakchoure.github.io/blog/feed" rel="self" type="application/rss+xml" />
 	<link>https://tejalwakchoure.github.io/blog</link>
 	<description></description>
-	<lastBuildDate>Thu, 14 Oct 2021 09:16:28 +0000</lastBuildDate>
+	<lastBuildDate>Sat, 16 Oct 2021 19:35:20 +0000</lastBuildDate>
 	<language>en-US</language>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
@@ -24,13 +24,21 @@
 		<link>https://tejalwakchoure.github.io/blog/hello-world</link>
 		
 		<dc:creator><![CDATA[Tejal]]></dc:creator>
-		<pubDate>Tue, 27 Jul 2021 14:37:20 +0000</pubDate>
+		<pubDate>Sat, 16 Oct 2021 19:35:20 +0000</pubDate>
 				<category><![CDATA[Uncategorized]]></category>
 		<guid isPermaLink="false">http://localhost/~tejal/wordpress/?p=1</guid>
 
-					<description><![CDATA[This is my first post. Hello!]]></description>
+					<description><![CDATA[Hello hello. Here you&#8217;ll find things that I have: learnt created found interesting or funny Enjoy, and see you around!]]></description>
 										<content:encoded><![CDATA[
-<p>This is my first post. Hello!</p>
+<p>Hello hello. Here you&#8217;ll find things that I have:</p>
+
+
+
+<ol><li>learnt</li><li>created</li><li>found interesting or funny</li></ol>
+
+
+
+<p>Enjoy, and see you around!</p>
 ]]></content:encoded>
 					
 		

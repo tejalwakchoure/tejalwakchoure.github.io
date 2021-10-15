@@ -8,11 +8,11 @@
 	>
 
 <channel>
-	<title></title>
+	<title>tw</title>
 	<atom:link href="https://tejalwakchoure.github.io/blog/feed" rel="self" type="application/rss+xml" />
 	<link>https://tejalwakchoure.github.io/blog</link>
 	<description></description>
-	<lastBuildDate>Sun, 10 Oct 2021 20:09:20 +0000</lastBuildDate>
+	<lastBuildDate>Thu, 14 Oct 2021 09:16:28 +0000</lastBuildDate>
 	<language>en-US</language>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
@@ -20,16 +20,17 @@
 	1	</sy:updateFrequency>
 	<generator>https://wordpress.org/?v=5.8.1</generator>
 	<item>
-		<title>Hello</title>
-		<link>https://tejalwakchoure.github.io/blog/hello</link>
+		<title>Hi!</title>
+		<link>https://tejalwakchoure.github.io/blog/hello-world</link>
 		
 		<dc:creator><![CDATA[Tejal]]></dc:creator>
-		<pubDate>Sun, 10 Oct 2021 20:08:40 +0000</pubDate>
-				<guid isPermaLink="false">https://tejalwakchoure.github.io/blog/?p=23</guid>
+		<pubDate>Tue, 27 Jul 2021 14:37:20 +0000</pubDate>
+				<category><![CDATA[Uncategorized]]></category>
+		<guid isPermaLink="false">http://localhost/~tejal/wordpress/?p=1</guid>
 
-					<description><![CDATA[Hi to everyone!]]></description>
+					<description><![CDATA[This is my first post. Hello!]]></description>
 										<content:encoded><![CDATA[
-<p>Hi to everyone!</p>
+<p>This is my first post. Hello!</p>
 ]]></content:encoded>
 					
 		

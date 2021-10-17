@@ -1,6 +1,10 @@
 <!DOCTYPE html>
 <html>
-    {% include head.html %}
+    <head>
+        {% include head.html %}
+        {% include js.html %}
+        {% include stylesheets.html %}
+    </head>
     <body id="main" class="index">
         {% include preloader.html %}
         <div id="body-container">
@@ -11,8 +15,6 @@
           {% include details.html %}
           {% include contact.html %}        
           {% include footer.html %}
-        </div> 
-        {% include js.html %}
-        <script id="dsq-count-scr" src="//SHORTNAME.disqus.com/count.js" async></script>
+        </div>
     </body>
 </html>

@@ -1,5 +1,3 @@
 {% include css/bootstrap.min.css %}
 {% include css/animate.min.css %}
-{% include css/swiper-bundle.min.css %}
-{% include css/normalize.css %}
 {% include css/main.css %}

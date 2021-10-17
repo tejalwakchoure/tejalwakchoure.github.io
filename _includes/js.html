@@ -1,30 +1,16 @@
- <!-- jQuery Version 1.11.0 -->
- <script src="{{ "/js/jquery-1.11.0.js" }}"></script>
+<!-- <script rel="preload" src="{{ "/js/jquery-1.11.0.js" }}"></script> -->
+<script defer src="{{ "/js/jquery-1.11.0.js" }}"></script>
+<script defer src="{{ "/js/bootstrap.min.js" }}"></script>
+<script defer src="{{ "/js/swiper-bundle.min.js" }}"></script>
+<script defer src="{{ "/js/simpleParallax.min.js" }}"></script>
+<script defer src="{{ "/js/jquery.easeScroll.js" }}"></script>
+<script defer src="{{ "/js/spamspan.js" }}"></script>
+<script defer src="{{ "/js/jquery.easing.min.js" }}"></script>
 
- <!-- Bootstrap Core JavaScript -->
- <script src="{{ "/js/bootstrap.min.js" }}"></script>
-
- <!-- Swiper JavaScript -->
- <script src="{{ "/js/swiper-bundle.min.js" }}"></script>
-
- <!-- SimpleParallax JavaScript -->
- <script src="{{ "/js/simpleParallax.min.js" }}"></script>
-
- <!-- Smooth Scrolling JavaScript -->
- <script src="{{ "/js/jquery.easeScroll.js" }}"></script>
-
- <!-- Email Obfuscation JavaScript -->
- <script src="{{ "/js/spamspan.js" }}"></script>
-
- <!-- jQuery Easing Plugin JavaScript -->
- <script src="{{ "/js/jquery.easing.min.js" }}"></script>
-
- <!-- Custom Theme JavaScript -->
- <script src="{{ "/js/main.js" }}"></script>
-
-  <!-- Custom Theme NoScript -->
- <noscript>
- 	<style>
+<!-- Custom JavaScript & NoScript -->
+<script defer src="{{ "/js/main.js" }}"></script>
+<noscript>
+	<style>
  		html, body {
         	scroll-behavior: smooth;
     	}
@@ -40,20 +26,13 @@
 			display: block;
 		}
     </style>
- </noscript>
-
-<!-- Google verification -->
-<!-- {% if site.google_verify %}<meta name="google-site-verification" content="{{ site.google_verify }}">{% endif %} -->
-
-<!-- Bing Verification -->
-<!-- {% if site.bing_verify %}<meta name="msvalidate.01" content="{{ site.bing_verify }}">{% endif %} -->
+</noscript>
 
 <!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-133963307-1"></script>
+<!-- <script defer src="https://www.googletagmanager.com/gtag/js?id=UA-133963307-1"></script>
 <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
     gtag('config', 'UA-133963307-1', {cookie_flags: 'SameSite=None;Secure'});
-</script>
- 
+</script> -->

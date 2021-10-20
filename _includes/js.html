@@ -1,43 +1,5 @@
-<script src="{{ "/js/jquery-1.11.0.js" }}"></script>
-
-<script type="text/javascript">
-//Preloader and page fade in setup
-function fadeInChildren(parent, base_delay) {
-    var elems = $(parent).children();
-    $(elems).each(function(index) {
-        $(this).css({opacity: 0.0, visibility: "visible"}).delay(base_delay+(500*index)).animate({opacity: 1.0}, 500);
-    });
-}
-
-$(document).ready(function() {
-    $('#body-container').css({display: 'none'});
-    var counter = 0;
-    var outerInterval = setInterval(function(){
-      $("#preloader .container #wrapper #count").html(counter);
-      counter++;
-      if(counter >= 101) {
-        clearInterval(outerInterval);
-        var innerInterval = setInterval(function() {
-            if(document.readyState === 'complete') {
-              clearInterval(innerInterval);
-
-              // Animate components on and off the screen on loading
-              $('#preloader').slideUp(1000);
-              $('#body-container').fadeIn(1000);
-              fadeInChildren('#body-container header',1000);
-              fadeInChildren('#body-container header .intro-text',1000);
-
-              // Fire up other elements
-              startTime();
-              addPortfolioParallax();
-            }
-        }, 7);
-      }
-    }, 7);
-});
-</script>
-
 <!-- <script rel="preload" src="{{ "/js/jquery-1.11.0.js" }}"></script> -->
+<script defer src="{{ "/js/jquery-1.11.0.js" }}"></script>
 <script defer src="{{ "/js/bootstrap.min.js" }}"></script>
 <script defer src="{{ "/js/swiper-bundle.min.js" }}"></script>
 <script defer src="{{ "/js/simpleParallax.min.js" }}"></script>
@@ -46,7 +8,6 @@ $(document).ready(function() {
 <script defer src="{{ "/js/jquery.easing.min.js" }}"></script>
 
 <!-- Custom JavaScript & NoScript -->
-
 <script defer src="{{ "/js/main.js" }}"></script>
 <noscript>
 	<style>

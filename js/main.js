@@ -7,30 +7,30 @@ function fadeInChildren(parent, base_delay) {
 }
 
 $(document).ready(function() {
-    // $('#body-container').css({display: 'none'});
-    // var counter = 0;
-    // var outerInterval = setInterval(function(){
-    //   $("#preloader .container #wrapper #count").html(counter);
-    //   counter++;
-    //   if(counter >= 101) {
-    //     clearInterval(outerInterval);
-    //     var innerInterval = setInterval(function() {
-    //         if(document.readyState === 'complete') {
-    //           clearInterval(innerInterval);
+    $('#body-container').css({display: 'none'});
+    var counter = 0;
+    var outerInterval = setInterval(function(){
+      $("#preloader .container #wrapper #count").html(counter);
+      counter++;
+      if(counter >= 101) {
+        clearInterval(outerInterval);
+        var innerInterval = setInterval(function() {
+            if(document.readyState === 'complete') {
+              clearInterval(innerInterval);
 
-    //           // Animate components on and off the screen on loading
-    //           $('#preloader').slideUp(1000);
-    //           $('#body-container').fadeIn(1000);
-    //           fadeInChildren('#body-container header',1000);
-    //           fadeInChildren('#body-container header .intro-text',1000);
+              // Animate components on and off the screen on loading
+              $('#preloader').slideUp(1000);
+              $('#body-container').fadeIn(1000);
+              fadeInChildren('#body-container header',1000);
+              fadeInChildren('#body-container header .intro-text',1000);
 
-    //           // Fire up other elements
-    //           startTime();
-    //           addPortfolioParallax();
-    //         }
-    //     }, 7);
-    //   }
-    // }, 7);
+              // Fire up other elements
+              startTime();
+              addPortfolioParallax();
+            }
+        }, 7);
+      }
+    }, 7);
 
     swiper_in.controller.control = swiper_innermost;
     swiper.controller.control = swiper_in;

@@ -12,13 +12,13 @@
 	<atom:link href="https://tejalwakchoure.github.io/blog/feed" rel="self" type="application/rss+xml" />
 	<link>https://tejalwakchoure.github.io/blog</link>
 	<description></description>
-	<lastBuildDate>Sat, 16 Oct 2021 19:35:20 +0000</lastBuildDate>
+	<lastBuildDate>Sat, 02 Jul 2022 17:34:34 +0000</lastBuildDate>
 	<language>en-US</language>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
 	<sy:updateFrequency>
 	1	</sy:updateFrequency>
-	<generator>https://wordpress.org/?v=5.8.1</generator>
+	<generator>https://wordpress.org/?v=6.0</generator>
 	<item>
 		<title>Hi!</title>
 		<link>https://tejalwakchoure.github.io/blog/hello-world</link>
@@ -28,18 +28,25 @@
 				<category><![CDATA[Uncategorized]]></category>
 		<guid isPermaLink="false">http://localhost/~tejal/wordpress/?p=1</guid>
 
-					<description><![CDATA[Hello hello. Here you&#8217;ll find things that I have: learnt created found interesting or funny Enjoy, and see you around!]]></description>
+					<description><![CDATA[Hello hello. I&#8217;ve been considering starting a blog for a while now, so this is all very exciting! Here you&#8217;ll find random musings, stuff I have learnt, and ideas I have found interesting and funny &#8230;]]></description>
 										<content:encoded><![CDATA[
-<p>Hello hello. Here you&#8217;ll find things that I have:</p>
+<p>Hello hello. I&#8217;ve been considering starting a blog for a while now, so this is all very exciting! Here you&#8217;ll find random musings, stuff I have learnt, and ideas I have found interesting and funny and worth sharing with everyone who wishes to pay attention.</p>
 
 
 
-<ol><li>learnt</li><li>created</li><li>found interesting or funny</li></ol>
+<p>Why do I want to create an online blog in the era of Instagram and Twitter, you ask? I grew up reading blogs, and I enjoy the warmth that comes from going back to something nostalgic. Besides, it feels much more connected than a social media account.</p>
 
 
 
-<p>Enjoy, and see you around!</p>
-]]></content:encoded>
+<p>Welcome, and thanks for being here.</p>
+
+
+
+<div style="height:26px" aria-hidden="true" class="wp-block-spacer"></div>
+
+
+<div class="wp-block-image is-style-default">
+<figure class="aligncenter size-large is-resized"><img src="https://media.giphy.com/media/xThtaxLbZOC50oAQ2k/giphy.gif" alt="" width="417" height="260"/></figure></div>]]></content:encoded>
 					
 		
 		

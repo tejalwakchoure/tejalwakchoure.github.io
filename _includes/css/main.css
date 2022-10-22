@@ -1022,24 +1022,23 @@ header mark {
 }
 
 #under_construction .btn {
-    width: 30%;
+    width: 20%;
     margin: 20px;
     min-width: -moz-fit-content;
     min-width: -webkit-fit-content;
     min-width: fit-content;
     /*background-color: #{{ site.color.text }};
     border-color: #{{ site.color.text }};*/
-    /*color: #11687d;*/
     color: #{{ site.color.wave_colour }} !important;
     background-color: #{{ site.color.white }};
-    border-color: #{{ site.color.white }};
+    border: none;
 }
 #under_construction .btn:hover,
 #under_construction .btn:focus,
 #under_construction .btn:active,
 #under_construction .btn.active {
     background-color: #{{ site.color.lightest_gray }};
-    border-color: #{{ site.color.lightest_gray }};
+    /*border-color: #{{ site.color.lightest_gray }};*/
     -moz-box-shadow: none;
     -webkit-box-shadow: none; /* Android 2.3+, iOS 4.0.2-4.2, Safari 3-4 */
     box-shadow: none;

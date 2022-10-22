@@ -379,8 +379,13 @@ footer .footer-below {
 	margin-bottom: 0;   
 	padding: .5em;   
 	background: #{{ site.color.white }};
-	border: 1px solid #{{ site.color.gray }};
+	/*border: 1px solid #{{ site.color.gray }};*/
 }   
+
+.floating-label-form-group .middle-form {
+    border-bottom: 1px solid #ebebeb;
+    border-top: 1px solid #ebebeb;
+}
 
 .floating-label-form-group input,   
 .floating-label-form-group textarea {   

@@ -382,7 +382,7 @@ footer .footer-below {
 	/*border: 1px solid #{{ site.color.gray }};*/
 }   
 
-.floating-label-form-group .middle-form {
+.middle-form {
     border-bottom: 1px solid #ebebeb;
     border-top: 1px solid #ebebeb;
 }

@@ -7,6 +7,12 @@
   background: #015871;
 }
 
+@media (max-width: 480px) {
+    .ocean {
+        height: 5%;
+    }
+}
+
 .wave {
   background: url("assets/img/wave.svg") repeat-x;
   position: absolute;

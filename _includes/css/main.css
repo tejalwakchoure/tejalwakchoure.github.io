@@ -1030,6 +1030,7 @@ header mark {
     /*background-color: #{{ site.color.text }};
     border-color: #{{ site.color.text }};*/
     /*color: #11687d;*/
+    color: #{{ site.color.wave_colour }} !important;
     background-color: #{{ site.color.white }};
     border-color: #{{ site.color.white }};
 }

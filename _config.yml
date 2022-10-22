@@ -21,6 +21,7 @@ color:
     button: '484848'
     heading: '000000'
     white: 'ffffff'
+    lightest_gray: 'ebebeb'
     gray: 'bfbfbf'
     wave_colour: '02536a'
 

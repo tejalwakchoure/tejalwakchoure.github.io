@@ -998,7 +998,7 @@ header mark {
     height: 100vh;
     padding: 2% !important;
     /*color: #{{ site.color.text }};*/
-    color: #{{ site.color.wave_colour }};
+    color: #{{ site.color.wave_colour }} !important;
     display: table;
     background: #{{ site.color.backgroundcol_lightest }};
 }
@@ -1009,10 +1009,10 @@ header mark {
     background: transparent;
 }
 
-#under_construction a {
+/*#under_construction a {
     color: #{{ site.color.text }} !important;
     font-weight: 600;
-}
+}*/
 
 #under_construction a:hover,
 #under_construction a:focus, 
@@ -1037,8 +1037,8 @@ header mark {
 #under_construction .btn:focus,
 #under_construction .btn:active,
 #under_construction .btn.active {
-    background-color: #{{ site.color.heading }};
-    border-color: #{{ site.color.heading }};
+    background-color: #{{ site.color.gray }};
+    border-color: #{{ site.color.gray }};
     -moz-box-shadow: none;
     -webkit-box-shadow: none; /* Android 2.3+, iOS 4.0.2-4.2, Safari 3-4 */
     box-shadow: none;

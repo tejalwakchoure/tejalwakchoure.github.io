@@ -998,14 +998,14 @@ header mark {
     height: 100vh;
     padding: 2% !important;
     /*color: #{{ site.color.text }};*/
-    color: #{{ site.color.wave_colour }} !important;
+    color: #{{ site.color.wave_text }} !important;
     display: table;
     background: #{{ site.color.backgroundcol_lightest }};
 }
 
 #under_construction i {
     /*color: #{{ site.color.text }};*/
-    color: #{{ site.color.white }};
+    color: #{{ site.color.wave_text }};
     background: transparent;
 }
 
@@ -1016,7 +1016,7 @@ header mark {
 
 #under_construction hr {
     max-width: 150px;
-    border-color: #{{ site.color.wave_colour }} !important;
+    border-color: #{{ site.color.wave_text }} !important;
 }
 
 #under_construction .fa:hover,
@@ -1034,7 +1034,7 @@ header mark {
     min-width: fit-content;
     /*background-color: #{{ site.color.text }};
     border-color: #{{ site.color.text }};*/
-    color: #{{ site.color.wave_colour }} !important;
+    color: #{{ site.color.wave_text }} !important;
     background-color: #{{ site.color.white }};
     border: none;
 }

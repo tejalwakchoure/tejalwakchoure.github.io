@@ -997,7 +997,8 @@ header mark {
     width: 100%;
     height: 100vh;
     padding: 2% !important;
-    color: #{{ site.color.text }};
+    /*color: #{{ site.color.text }};*/
+    color: #{{ site.color.wave_colour }};
     display: table;
     background: #{{ site.color.backgroundcol_lightest }};
 }
@@ -1028,8 +1029,7 @@ header mark {
     min-width: fit-content;
     /*background-color: #{{ site.color.text }};
     border-color: #{{ site.color.text }};*/
-
-    color: #11687d;
+    /*color: #11687d;*/
     background-color: #{{ site.color.white }};
     border-color: #{{ site.color.white }};
 }

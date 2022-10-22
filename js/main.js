@@ -7,6 +7,7 @@ function fadeInChildren(parent, base_delay) {
 }
 
 $(document).ready(function() {
+  if ($('#body-container').length) {
     $('#body-container').css({display: 'none'});
     var counter = 0;
     var outerInterval = setInterval(function(){
@@ -61,6 +62,7 @@ $(document).ready(function() {
     // $('html, body').bind('wheel scroll', function () {
     //     nicescroll.resize();
     //   });
+  }
 });
 
 // Portfolio parallax
@@ -272,6 +274,7 @@ $(window).on("load", function() {
 
 // Horizontal header parallax
 $(window).on("load resize scroll", function() {
+  if($('header').length) {
     // Depending on the browser, you may need to use var windowTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
     var windowTop = $(window).scrollTop() || 0;
     var elementTop = $('header').offset().top || 0;
@@ -283,4 +286,5 @@ $(window).on("load resize scroll", function() {
     }
     $('.hor_parallax_right').css({ right: pos });
     $('.hor_parallax_left').css({ left: pos });
+  }
 });

@@ -1014,6 +1014,11 @@ header mark {
     font-weight: 600;
 }*/
 
+#under_construction hr {
+    max-width: 150px;
+    border-color: #{{ site.color.wave_colour }} !important;
+}
+
 #under_construction .fa:hover,
 #under_construction .fa:focus, 
 #under_construction .fa:active,

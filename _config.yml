@@ -46,8 +46,10 @@ plugins:
 collections:
   code:
     permalink: /code/:path/
+    output: true
   designs:
     permalink: /designs/:path/
+    output: true
 
 # Credits content
 credits: Tejal Wakchoure

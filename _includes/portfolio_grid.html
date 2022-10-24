@@ -10,8 +10,8 @@
         <div class="container">
             <div class="row">
                 <div class="masonry-grid">
-                    {% for post in site.posts %}
-                        <div id="portfolio-item-{{ post.project-id }}" class="masonry-item grid-item-{{ post.project-id }}">
+                    {% for post in site.posts.page %}
+                        <div class="masonry-item">
                             <div class="portfolio-link-wrapper">
                                 <a id="portfolio-link-{{ post.project-id }}" href="javascript:void(0);" class="overlay-link" onclick="toggleOnPortfolioLink(6-{{ post.project-id }});"></a>
                                 <div class="overlay"> 

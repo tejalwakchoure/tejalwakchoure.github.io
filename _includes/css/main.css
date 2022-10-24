@@ -993,6 +993,17 @@ header mark {
     }
 }
 
+footer a {
+    color: #{{ site.color.button }}; 
+}
+
+footer a:hover,    
+footer a:focus,    
+footer a:active,   
+footer a.active {
+    color: #{{ site.color.heading }};
+}   
+
 #under_construction {
     width: 100%;
     height: 100vh;

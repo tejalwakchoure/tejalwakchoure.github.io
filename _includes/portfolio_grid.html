@@ -9,29 +9,28 @@
     <section id="portfolio">
         <div class="container">
             <div class="row">
-                  {% for post in site.posts %}
-                    {% if post.path contains page.title %}
+                  {% assign pagename = page.title}
+                  {% for post in site.pagename.posts %}
+                    <!-- {% if post.path contains page.title %} -->
                         <div class="col-sm" style="padding: 0 15px;">
                             <div class="portfolio-link-wrapper">
-                                <a href="//tejalwakchoure.github.io/words/" class="overlay-link"></a>
+                                <a href="//tejalwakchoure.github.io/{{ pagename }}/{{ post.project-id }}" class="overlay-link"></a>
                                 <div class="overlay"> 
                                     <span style="margin: auto;"> {{ post.title }} </span>
                                 </div>
                                 <picture>
                                    <source 
                                       media="(max-width: 768px)"
-                                      srcset="../assets/img/small-devices/portfolio/{{ post.img }}">
+                                      srcset="../assets/img/small-devices/portfolio/{{ pagename }}/{{ post.img }}">
                                    <source 
-                                      srcset="../assets/img/portfolio/{{ post.img }}">
-                                   <img src="../assets/img/portfolio/{{ post.img }}" 
+                                      srcset="../assets/img/portfolio/{{ pagename }}/{{ post.img }}">
+                                   <img src="../assets/img/portfolio/{{ pagename }}/{{ post.img }}" 
                                    class="img-responsive" 
-                                   alt="{{ post.alt }}"
-                                   style="height: auto; max-width: 100%;"
-                                   >
+                                   alt="{{ post.alt }}">
                                 </picture>
                             </div>
                         </div>
-                    {% endif %}
+                    <!-- {% endif %} -->
                   {% endfor %}
             </div>
         </div>

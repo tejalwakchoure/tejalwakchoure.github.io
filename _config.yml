@@ -43,6 +43,12 @@ plugins:
 # Include content
 # include: ['pages']
 
+collections:
+  code:
+    permalink: /code/:path/
+  designs:
+    permalink: /designs/:path/
+
 # Credits content
 credits: Tejal Wakchoure
 

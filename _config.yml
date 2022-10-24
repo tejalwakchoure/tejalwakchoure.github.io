@@ -40,6 +40,9 @@ social:
 plugins:
   - jekyll-redirect-from
 
+# Include content
+# include: ['pages']
+
 # Credits content
 credits: Tejal Wakchoure
 

@@ -10,9 +10,9 @@
         <div class="container">
             <div class="row">
                   {% for post in site.posts %}
-                    {% if post.path contains {{ page.title }} %}
+                    {% if post.path contains page.title %}
                         <div class="col">
-                            <a id="portfolio-link-{{ post.project-id }}" href="//tejalwakchoure.github.io/words/" class="overlay-link"></a>
+                            <a href="//tejalwakchoure.github.io/words/" class="overlay-link"></a>
                             <div class="overlay"> 
                                 <span style="margin: auto;"> {{ post.title }} </span>
                             </div>

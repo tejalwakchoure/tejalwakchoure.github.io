@@ -9,6 +9,33 @@
     <section id="portfolio">
         <div class="container">
             <div class="row">
+                  {% for post in site.posts %}
+                    {% if post.path contains {{ page.title }} %}
+                        <div class="col">
+                            <a id="portfolio-link-{{ post.project-id }}" href="//tejalwakchoure.github.io/words/" class="overlay-link"></a>
+                            <div class="overlay"> 
+                                <span style="margin: auto;"> {{ post.title }} </span>
+                            </div>
+                            <picture>
+                               <source 
+                                  media="(max-width: 768px)"
+                                  srcset="../assets/img/small-devices/portfolio/{{ post.img }}">
+                               <source 
+                                  srcset="../assets/img/portfolio/{{ post.img }}">
+                               <img src="../assets/img/portfolio/{{ post.img }}" 
+                               class="img-responsive" 
+                               alt="{{ post.alt }}">
+                            </picture>
+                        </div>
+                    {% endif %}
+                  {% endfor %}
+            </div>
+        </div>
+    </section>
+
+    <!-- <section id="portfolio">
+        <div class="container">
+            <div class="row">
                 <div class="masonry-grid">
                     {% for post in site.posts %}
                       {% if post.path contains {{ page.title }} %}
@@ -35,4 +62,4 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> -->

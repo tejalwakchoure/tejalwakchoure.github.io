@@ -414,7 +414,8 @@ hr.primary {
     box-sizing: border-box; 
 }   
 section {   
-    padding: 5vh 6vw 15vh 6vw;
+    /*padding: 5vh 6vw 15vh 6vw;*/
+    padding: 0 3vw 0 6vw;
     width: 100%;    
     display: table;
     table-layout: auto; 

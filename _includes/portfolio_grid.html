@@ -10,8 +10,8 @@
         <div class="container">
             <div class="row">
                   {% assign pagename = page.title %}
-                  {% assign page = site.pagename %}
-                  {% assign allposts = pagename.posts %}
+                  {% assign sitepage = site.pagename %}
+                  {% assign allposts = sitepage.posts %}
                   {% for post in allposts %}
                     <!-- {% if post.path contains page.title %} -->
                         <div class="col-sm" style="padding: 0 15px;">

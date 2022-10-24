@@ -10,7 +10,9 @@
         <div class="container">
             <div class="row">
                   {% assign pagename = page.title %}
-                  {% for post in site.pagename.posts %}
+                  {% assign page = site.pagename %}
+                  {% assign allposts = pagename.posts %}
+                  {% for post in allposts %}
                     <!-- {% if post.path contains page.title %} -->
                         <div class="col-sm" style="padding: 0 15px;">
                             <div class="portfolio-link-wrapper">

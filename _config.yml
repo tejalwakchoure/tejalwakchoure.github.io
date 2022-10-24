@@ -45,10 +45,10 @@ plugins:
 
 collections:
   code:
-    permalink: /code/:path/
+    # permalink: /code/:path/
     output: true
   designs:
-    permalink: /designs/:path/
+    # permalink: /designs/:path/
     output: true
 
 # Credits content

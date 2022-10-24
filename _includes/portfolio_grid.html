@@ -11,21 +11,25 @@
             <div class="row">
                   {% for post in site.posts %}
                     {% if post.path contains page.title %}
-                        <div class="col">
-                            <a href="//tejalwakchoure.github.io/words/" class="overlay-link"></a>
-                            <div class="overlay"> 
-                                <span style="margin: auto;"> {{ post.title }} </span>
+                        <div class="col-sm" style="padding: 0 15px;">
+                            <div class="portfolio-link-wrapper">
+                                <a href="//tejalwakchoure.github.io/words/" class="overlay-link"></a>
+                                <div class="overlay"> 
+                                    <span style="margin: auto;"> {{ post.title }} </span>
+                                </div>
+                                <picture>
+                                   <source 
+                                      media="(max-width: 768px)"
+                                      srcset="../assets/img/small-devices/portfolio/{{ post.img }}">
+                                   <source 
+                                      srcset="../assets/img/portfolio/{{ post.img }}">
+                                   <img src="../assets/img/portfolio/{{ post.img }}" 
+                                   class="img-responsive" 
+                                   alt="{{ post.alt }}"
+                                   style="height: auto; max-width: 100%;"
+                                   >
+                                </picture>
                             </div>
-                            <picture>
-                               <source 
-                                  media="(max-width: 768px)"
-                                  srcset="../assets/img/small-devices/portfolio/{{ post.img }}">
-                               <source 
-                                  srcset="../assets/img/portfolio/{{ post.img }}">
-                               <img src="../assets/img/portfolio/{{ post.img }}" 
-                               class="img-responsive" 
-                               alt="{{ post.alt }}">
-                            </picture>
                         </div>
                     {% endif %}
                   {% endfor %}

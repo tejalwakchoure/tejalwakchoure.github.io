@@ -518,7 +518,7 @@ header .img_div {
     display: -webkit-flex; /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
     display: flex; 
     align-items: center;
-    width: 40%;
+    /*width: 40%;*/
     position: relative;
     overflow: hidden;
 }

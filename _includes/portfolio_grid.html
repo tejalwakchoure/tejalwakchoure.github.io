@@ -1,23 +1,23 @@
 <!-- Portfolio Section -->
 <section id="work">
 <div class="container" style="padding: 0;">
-    <div class="col-lg-12 text-center heading-col">
-        <h2 class="heading" style="margin-left: -15px; margin-right: -15px;">Featured Work</h2>
+    <div class="col-lg-12 text-right heading-col">
+        <h2 class="heading" style="margin-left: -15px; margin-right: -15px;">{{ page.title }}</h2>
     </div>
 
     <!-- Portfolio Grid Section -->
-    <section id="portfolio" class="animate__animated animate__slideInLeft">
+    <section id="portfolio">
         <div class="container">
             <div class="row">
                 <div class="masonry-grid">
-                    {% for post in site.posts.page %}
+                    {% for post in site.posts %}
+                      {% if post.path contains {{ page.title }} %}
                         <div class="masonry-item">
                             <div class="portfolio-link-wrapper">
-                                <a id="portfolio-link-{{ post.project-id }}" href="javascript:void(0);" class="overlay-link" onclick="toggleOnPortfolioLink(6-{{ post.project-id }});"></a>
+                                <a id="portfolio-link-{{ post.project-id }}" href="//tejalwakchoure.github.io/words/" class="overlay-link"></a>
                                 <div class="overlay"> 
                                     <span style="margin: auto;"> {{ post.title }} </span>
                                 </div>
-                                <!-- To reduce the lossless effect, if the scale is set at 1.2 (default) and your image is 500px width, do the simple math 500 * 1.2 = 600. So you can choose a 600px image to replace your 500px one, and don't see any quality leak. -->
                                 <picture>
                                    <source 
                                       media="(max-width: 768px)"
@@ -30,6 +30,7 @@
                                 </picture>
                             </div>
                         </div>
+                      {% endif %}
                     {% endfor %}
                 </div>
             </div>

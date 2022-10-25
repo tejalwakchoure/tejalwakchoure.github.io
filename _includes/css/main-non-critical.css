@@ -21,7 +21,7 @@
   height: 198px;
   animation: wave 7s cubic-bezier(0.36, 0.45, 0.63, 0.53) infinite;
   transform: translate3d(0, 0, 0);
-  
+
   max-width: -moz-available;
   max-width: -webkit-fill-available;
   max-width: fill-available;
@@ -366,6 +366,25 @@
 #contact a.mail-link:active:before {
   	visibility: visible;
   	width: 100%;
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 95vw;
+    left: 3vw;
+    right: 2vw;
+}
+
+footer a {
+    color: #{{ site.color.button }}; 
+}
+
+footer a:hover,    
+footer a:focus,    
+footer a:active,   
+footer a.active {
+    color: #{{ site.color.heading }};
 }
 
 footer .footer-above {  

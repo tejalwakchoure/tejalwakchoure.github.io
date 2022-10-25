@@ -42,6 +42,10 @@ html,body
     -webkit-border-radius: none;
 }
 
+.fa {
+    font-size: 1.5em !important;
+}
+
 .kill-on-large-devices {
     display: none !important;
 }
@@ -538,6 +542,8 @@ header .img_div {
     display: flex;
     padding-top: 10%;
     position: relative;
+    font-style: italic;
+    color: #{{ site.color.heading }};
 }
 
 .header-intro-text {
@@ -1011,13 +1017,21 @@ footer a.active {
 #under_construction {
     width: 100%;
     height: 100vh;
-    padding: 2% !important;
+    padding: 2% 0 !important;
     /*color: #{{ site.color.text }};*/
     /*color: #{{ site.color.wave_text }} !important;*/
-    display: table;
+    display: flex;
     /*background: #{{ site.color.backgroundcol_lightest }};*/
     background: #{{ site.color.new_backgroundcol }};
     color: #{{ site.color.text }};
+}
+
+#under_construction .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    max-width: none;
 }
 
 #under_construction i {

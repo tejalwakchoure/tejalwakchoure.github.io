@@ -23,7 +23,8 @@ color:
     white: 'ffffff'
     lightest_gray: 'ebebeb'
     gray: 'bfbfbf'
-    wave_text: '034558'
+    # wave_text: '034558'
+    new_backgroundcol: 'C1DAFF'
 
 # Footer settings
 footer:

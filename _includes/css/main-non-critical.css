@@ -1,4 +1,4 @@
-.ocean {
+/*.ocean {
   height: 15%;
   width: 100%;
   position: absolute;
@@ -21,6 +21,14 @@
   height: 198px;
   animation: wave 7s cubic-bezier(0.36, 0.45, 0.63, 0.53) infinite;
   transform: translate3d(0, 0, 0);
+  
+  max-width: -moz-available;
+  max-width: -webkit-fill-available;
+  max-width: fill-available;
+
+  max-height: -moz-available;
+  max-height: -webkit-fill-available;
+  max-height: fill-available;
 }
 
 .wave:nth-of-type(2) {
@@ -49,7 +57,7 @@
 .endWave{
   display:none;
 }
-
+*/
 #portfolioDetails {
 	height: -moz-fit-content;
 	height: -webkit-fit-content;

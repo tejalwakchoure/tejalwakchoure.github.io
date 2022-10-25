@@ -1013,14 +1013,17 @@ footer a.active {
     height: 100vh;
     padding: 2% !important;
     /*color: #{{ site.color.text }};*/
-    color: #{{ site.color.wave_text }} !important;
+    /*color: #{{ site.color.wave_text }} !important;*/
     display: table;
-    background: #{{ site.color.backgroundcol_lightest }};
+    /*background: #{{ site.color.backgroundcol_lightest }};*/
+    background: #{{ site.color.new_backgroundcol }};
+    color: #{{ site.color.text }};
 }
 
 #under_construction i {
     /*color: #{{ site.color.text }};*/
-    color: #{{ site.color.wave_text }};
+    /*color: #{{ site.color.wave_text }};*/
+    color: #{{ site.color.text }};
     background: transparent;
 }
 
@@ -1031,14 +1034,14 @@ footer a.active {
 
 #under_construction hr {
     max-width: 150px;
-    border-color: #{{ site.color.wave_text }} !important;
+    border-color: #{{ site.color.text }} !important;
 }
 
 #under_construction .fa:hover,
 #under_construction .fa:focus, 
 #under_construction .fa:active,
 #under_construction .fa.active {
-    color: #{{ site.color.lightest_gray }} !important;
+    color: #{{ site.color.heading }} !important;
 }
 
 #under_construction .btn {

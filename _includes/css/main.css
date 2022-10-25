@@ -1097,15 +1097,13 @@ footer a.active {
   background-image: url("/path/to/image.jpg");
 }*/
 
-.grainy-page {
-  /*height: 100vh;*/
+/*.grainy-page {
   background: #{{ site.color.new_backgroundcol }};
-}
+}*/
 
 .grainy-page:after {
   animation: grain 8s steps(10) infinite;
-  /*background-image: url("/path/to/grainy/image.jpg");*/
-  background: #{{ site.color.new_backgroundcol }};
+  background-image: url("assets/img/grainy_page.png");
   content: "";
   height: 300%;
   left: -50%;

@@ -1019,7 +1019,7 @@ footer a.active {
 #under_construction {
     width: 100%;
     height: 100vh;
-    padding: 2% 0 !important;
+    padding: 0 !important;
     /*color: #{{ site.color.text }};*/
     /*color: #{{ site.color.wave_text }} !important;*/
     display: flex;
@@ -1034,6 +1034,7 @@ footer a.active {
     justify-content: space-between;
     align-items: center;
     max-width: none;
+    z-index: 1;
 }
 
 #under_construction i {
@@ -1113,6 +1114,7 @@ footer a.active {
   position: fixed;
   top: -100%;
   width: 300%;
+  z-index: 0;
 }
 
 @keyframes grain {

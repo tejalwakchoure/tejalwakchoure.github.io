@@ -527,7 +527,7 @@ header .img_div {
     overflow: hidden;
 }
 
-header .title {
+.header-title {
     width: 50%;
     align-items: center;
     display: block;
@@ -540,7 +540,7 @@ header .title {
     position: relative;
 }
 
-header .intro-text {
+.header-intro-text {
     display: block; 
     visibility: hidden;
     text-align: left;
@@ -555,13 +555,13 @@ header .intro-text {
     line-height: 1.5;
 }
 
-header .intro-text .name {
+.header-intro-text .name {
     font-size: min(4.5vw, 60px);
     font-weight: 700;     
     letter-spacing: 1px;
 }   
 
-header .intro-text .skills {    
+.header-intro-text .skills {    
     font-size: min(2.25vw, 25px);
     font-weight: 200; 
     letter-spacing: 0.5px;
@@ -575,7 +575,7 @@ header mark {
 
 @media(max-width:768px) {
     section,
-    header .intro-text .skills {
+    .header-intro-text .skills {
         color: #{{ site.color.heading }} !important;
     }
     header {
@@ -603,26 +603,26 @@ header mark {
         padding-right: 18px;
     } 
 
-    header .title {
+    .header-title {
         width: 100%;
         padding-left: 10px;
         padding-top: 0;
         padding-bottom: 0;
     }
 
-    header .intro-text {
+    .header-intro-text {
             max-width: 600px;
         width: -moz-fit-content;
         width: -webkit-fit-content;
         width: fit-content;
     }
 
-    header .intro-text .name { 
+    .header-intro-text .name { 
         font-size: 4rem;
         padding-bottom: 0.5rem;
     }   
 
-    header .intro-text .skills {    
+    .header-intro-text .skills {    
         font-size: 1.75rem;
     }
 } 
@@ -634,16 +634,16 @@ header mark {
     header img {
         max-height: 300px;
     }
-    header .intro-text {
+    .header-intro-text {
         width: -moz-min-content;
         width: -webkit-min-content;
         width: min-content;
         margin: auto;
     }
-    header .intro-text .name { 
+    .header-intro-text .name { 
         font-size: 3rem;
     }
-    header .intro-text .skills {    
+    .header-intro-text .skills {    
         font-size: 1.3rem;
     }
     #about .hello {

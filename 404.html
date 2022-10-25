@@ -1,4 +1,4 @@
----
+<!-- ---
 ---
 
 <!DOCTYPE html>
@@ -27,48 +27,79 @@
         </div>
     </body>
 </html>
+ -->
 
-
-<!-- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Page Not Found</title>
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Chango&family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400&display=swap" media="print" onload="this.media='all'">
     <style>
         body{
-            background-image: url("https://images.unsplash.com/photo-1616235132417-99f443954d2e?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=334&q=80");
-            background-size: cover;
-            font-family: 'Roboto', 'sans-serif';
+          font-family: Lato, sans-serif;
         }
-        main{
-            display: flex;
-            height: 100vh;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
+        .container404{
+          display: flex;
+          height: 100vh;
+          background-color: #C1DAFF;
+          justify-content: space-evenly;
+          align-items: center;
+          flex-direction: column;
         }
-        .header404{
-            font-family: 'Chango', cursive;
-            font-size: 48px;
+        .header404 {
+          font-size: 8rem;
+          font-weight: 700;
+          font-style: italic;
         }
-        .content404{
-            text-align: center;
+        .subHeader404 {
+          font-size: 1.75rem;
+        }
+        .content404, .content404 a{
+          text-align: center;
+          color: #393939;
+        }
+        .grainy-page {
+          background-color: #C1DAFF;
+        }
+        .grainy-page:after {
+          animation: grain 8s steps(10) infinite;
+          background-image: url("assets/img/grainy_page_new.jpeg");
+          content: "";
+          height: 300%;
+          left: -50%;
+          opacity: 0.1;
+          position: fixed;
+          top: -100%;
+          width: 300%;
+          z-index: 0;
+        }
+        @keyframes grain {
+          0%, 100% { transform:translate(0, 0) }
+          10% { transform:translate(-5%, -10%) }
+          20% { transform:translate(-15%, 5%) }
+          30% { transform:translate(7%, -25%) }
+          40% { transform:translate(-5%, 25%) }
+          50% { transform:translate(-15%, 10%) }
+          60% { transform:translate(15%, 0%) }
+          70% { transform:translate(0%, 15%) }
+          80% { transform:translate(3%, 35%) }
+          90% { transform:translate(-10%, 10%) }
         }
     </style>
 </head>
 <body>
-    <main>
-        <h4 class="header404">404</h4>
-        <div class="content-404">
-            Uh-oh! We couldn't find the page you are looking for.
-        </div>
-        <p>
-            <a href="/">Check our home page</a>
-        </p>
-    </main>
     
+    <div class="container404 grainy-page">
+        <p class="header404">:(</p>
+        <div class="content404">
+            <p class="subHeader404">Oops! This page doesn't exist.</p>
+          <br/>
+          <br/>
+            <p>take me <a href="//tejalwakchoure.github.io/">home</a>.</p>
+        </div>
+    </div>
 </body>
-</html> -->
+</html>

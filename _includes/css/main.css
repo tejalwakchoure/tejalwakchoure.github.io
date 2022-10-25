@@ -1047,7 +1047,7 @@ footer a.active {
 }*/
 
 #under_construction hr {
-    max-width: 150px;
+    max-width: 100px;
     border-color: #{{ site.color.text }} !important;
 }
 

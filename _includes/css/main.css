@@ -310,7 +310,8 @@ hr.primary {
     display: flex;
     flex-direction: column;
     font-weight: 300;
-    font-size: 1.3em;
+    /*font-size: 1.3em;*/
+    font-size: 1.1em;
     letter-spacing: 2px;  
     background: transparent;
 }
@@ -340,13 +341,14 @@ hr.primary {
     margin: auto;
     padding: 15px;
     text-align: center;
-    font-variant: all-small-caps;
+    /*font-variant: all-small-caps;*/
+    text-transform: lowercase;
     color: #{{ site.color.text }};
 }
 
-.sidenav a {
+/*.sidenav a {
     text-transform: uppercase;
-}
+}*/
 
 .sidenav a:hover{
     text-decoration: none;
@@ -548,7 +550,7 @@ header .img_div {
 
 .header-intro-text {
     display: block; 
-    visibility: hidden;
+    /*visibility: hidden;*/
     text-align: left;
     width: 100%;
     margin-left: 10%;
@@ -1107,7 +1109,7 @@ footer a.active {
   content: "";
   height: 300%;
   left: -50%;
-  opacity: 0.3;
+  opacity: 0.1;
   position: fixed;
   top: -100%;
   width: 300%;

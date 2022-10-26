@@ -75,14 +75,14 @@
 }
 #postDetails .post-title {
 	margin: auto;
-	margin-top: 10vh;
+	margin-top: 5vh;
 }
 #postDetails .post-heading {
     text-transform: unset;
     letter-spacing: unset;
     color: black;
     font-weight: bold;
-    margin-top: 8vh;
+    margin-top: 5vh;
 }
 #postDetails .li {
 	padding-bottom: 0.1rem;
@@ -160,15 +160,16 @@
 
 #postDetails #main-img {
     width: 500px;
-    height: 150px;
+    height: 300px;
     -o-object-fit: cover;
     object-fit: cover;
-    position: absolute;
+    margin-top: 5vh;
+    /*position: absolute;
     left: 50%;
 	-ms-transform: translate3d(-50%, 0, 0);
 	-o-transform: translate3d(-50%, 0, 0);
 	-webkit-transform: translate3d(-50%, 0, 0);
-	transform: translate3d(-50%, 0, 0);
+	transform: translate3d(-50%, 0, 0);*/
 }
 /*.swiper-slide #img-on-top {
     width: 300px;
@@ -194,10 +195,8 @@
 	display: flex;
 	flex-direction: column; 
 	position: relative; 
-	padding-top: 12px;
-}
-#postDetails #content {
 	padding: 3%;
+	padding-top: 10px;
     margin: auto;
     width: 100%;
     max-width: 1000px;

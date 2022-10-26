@@ -142,7 +142,6 @@ body {
 #preloader #count {
     font-size: 1.5em; 
     margin: auto;
-    margin-right: 10px;
 }
 
 .show-on-submit {
@@ -226,7 +225,7 @@ hr.primary {
     width: fit-content;
     color: #{{ site.color.backgroundcol }};
 
-    position: absolute;
+    position: fixed;
     /*left: 0;
     top: 0;*/
     font-weight: bold;
@@ -490,14 +489,14 @@ hr.primary {
 }   
 section {   
     /*padding: 5vh 6vw 15vh 6vw;*/
-    /*padding: 0 0 8vh 6vw;*/ /* footer and nav accounted for */
-    padding: 0 0 8vh 6vw; /* footer and nav accounted for */
+    /*padding: 0 0 8vh 6vw;*/ /* nav accounted for */
+    padding: 0 0 0 6vw; /* nav accounted for */
     width: 100%;    
     display: grid;
     /*table-layout: auto; */
     margin: 0;  
     /*min-height: 90% !important; */
-    height: 100vh;
+    min-height: 100vh;
     color: #{{ site.color.text }};    
     align-content: space-between;
 
@@ -658,7 +657,7 @@ header .img_div {
     font-weight: normal;
     line-height: 1.5;
 
-    padding-left: 10%;
+    padding-left: 8%;
 }
 
 .header-intro-text .name {
@@ -768,7 +767,7 @@ header mark {
     letter-spacing: initial;
     word-spacing: initial;
     font-size: 3rem;
-    margin-bottom: 1rem;
+    /*margin-bottom: 1rem;*/
     color: #{{ site.color.heading }};
 }
 
@@ -784,6 +783,24 @@ header mark {
     display: -webkit-flex; /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
     display: flex; 
     flex-flow: row wrap;
+}
+#about .about-col {
+    display: flex;
+    align-items: center;
+    width: fit-content;
+}
+#about h3 {
+    color: #{{ site.color.heading }};
+}
+#about img {
+    vertical-align: middle;
+    width: 300px;
+    height: 350px;
+    object-fit: cover;
+    -webkit-filter: grayscale(1) contrast(1) brightness(1.25);
+    filter: grayscale(1) contrast(1) brightness(1.25);
+
+    margin: 70px 0 30px 0;
 }
 
 .timeline-row {
@@ -953,6 +970,8 @@ header mark {
     overflow: hidden; 
     height: 100%; 
     width: 100%;
+
+    visibility: hidden;
 }
 
 #portfolio .portfolio-link-wrapper picture {
@@ -1066,12 +1085,12 @@ header mark {
     display: -ms-flexbox;  /* TWEENER - IE 10 */
     display: -webkit-flex; /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
     display: flex;
-    letter-spacing: 3px;
+    letter-spacing: 2px;
     word-spacing: 5px;
     visibility: hidden;
     z-index: 2;
     color: #{{ site.color.white }};
-    background-color: #{{ site.color.text }};
+    background-color: #{{ site.color.heading }};
 }
 
 .overlay-link:hover ~ .overlay {

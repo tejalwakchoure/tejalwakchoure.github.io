@@ -369,12 +369,15 @@
 }
 
 footer {
-    position: absolute;
+    /*position: fixed;
     bottom: 0;
     width: 95vw;
     left: 3vw;
     right: 2vw;
-    display: grid;
+    display: grid;*/
+
+    display: flex;
+    padding: 20px 2vw 0 3vw;
 }
 
 footer a {

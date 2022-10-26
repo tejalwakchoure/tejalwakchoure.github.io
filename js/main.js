@@ -289,3 +289,9 @@ $(window).on("load", function() {
 //     $('.hor_parallax_left').css({ left: pos });
 //   }
 // });
+
+
+// Hide overlay until images are loaded in portfolio
+$(document).ready(function() {
+  $('#portfolio .portfolio-link-wrapper').css({visibility: visible});
+});

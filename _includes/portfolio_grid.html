@@ -13,9 +13,8 @@
                   {% assign sitepage = site.pagename %}
                   {% assign allposts = sitepage.posts %} -->
                   {% for post in site.work_sections %}
-                    {% if post.path contains page.title %}
+                    {% if post.path contains page.title and post.path contains 'posts' %}
                         <div class="col-sm" style="padding: 0 15px;">
-                          <h1>in!!</h1>
                             <div class="portfolio-link-wrapper">
                                 <a href="//tejalwakchoure.github.io/{{ page.title }}/{{ post.project-id }}" class="overlay-link"></a>
                                 <div class="overlay"> 

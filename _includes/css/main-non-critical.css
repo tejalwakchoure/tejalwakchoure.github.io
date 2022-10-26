@@ -58,18 +58,18 @@
   display:none;
 }
 */
-#portfolioDetails {
+#postDetails {
 	height: -moz-fit-content;
 	height: -webkit-fit-content;
 	height: fit-content;
     width: 100%;
-	display: none;
+	/*display: none;
 	padding: 5vw 0;
 	-webkit-animation-duration: 800ms;
-	animation-duration: 800ms;
+	animation-duration: 800ms;*/
 }
 
-#portfolioDetails .li {
+#postDetails .li {
 	padding-bottom: 0.1rem;
 }   
 
@@ -239,11 +239,11 @@
 }
 
 @media ( max-width: 768px ) {
-	#portfolioDetails h2 {
+	#postDetails h2 {
 	    letter-spacing: 2px;
 	    font-size: 1.8rem;
 	}
-	#portfolioDetails .container {
+	#postDetails .container {
 		padding: 0;
 	}
 	.swiper-container {

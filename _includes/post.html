@@ -1,5 +1,6 @@
 	<!-- Post details Section -->
-	<section id="portfolioDetails" data-nosnippet>
+	{% for post in site.posts %}
+	<section id="postDetails" data-nosnippet>
 		<div class="container">
 			<div class="row">
 				<div style="height: fit-content;">
@@ -55,3 +56,4 @@
 			</div>
 		</div>
 	</section>
+	{% endfor %}

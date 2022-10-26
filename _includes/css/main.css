@@ -102,8 +102,9 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    font-weight: 100; 
+    /*font-weight: 100; */
     text-transform: lowercase; 
+    justify-content: space-evenly;
 }
 #preloader #wrapper {
     font-weight: 300;
@@ -133,7 +134,7 @@ body {
 }
 
 #preloader #percent {
-    font-size: 0.8em; 
+    /*font-size: 0.8em; */
     padding-right: 0.1em; 
     margin: auto;
 }
@@ -234,7 +235,8 @@ hr.primary {
 .brand-shadow {
     color: #{{ site.color.text }};
     z-index: -1;
-    transform: rotate(180deg) translate(0.08em, 0.08em);
+    /*transform: rotate(180deg) translate(0.08em, 0.08em);*/
+    transform: translate(0.08em, 0.08em);
 }
 
 .sidenav .page-scroll .navbar-brand:hover {
@@ -506,7 +508,7 @@ section .container {
     vertical-align: middle;   
 }   
 
-section h2, #portfolioDetails h3 {    
+section h2, #postDetails h3 {    
     margin: 0;  
     font-size: 2.5rem; 
     color: #{{ site.color.heading }}; 
@@ -556,7 +558,7 @@ section h2, #portfolioDetails h3 {
     section.first { 
         padding-top: 75px;  
     }   
-    section h2, #portfolioDetails h3 {    
+    section h2, #postDetails h3 {    
         font-size: 2rem; 
     }
 }

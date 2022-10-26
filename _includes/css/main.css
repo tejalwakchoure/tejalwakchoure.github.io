@@ -225,13 +225,13 @@ hr.primary {
     color: #{{ site.color.backgroundcol }};
 
     position: absolute;
-    left: 0;
-    top: 0;
+    /*left: 0;
+    top: 0;*/
     font-weight: bold;
     text-shadow: -1px -1px 0 black, 1px 1px 0 black, 1px -1px 0 black, -1px 1px 0 black;
 }  
 
-.sidenav .page-scroll .navbar-brand .brand-shadow {
+.sidenav .page-scroll .brand-shadow {
     color: #{{ site.color.text }};
     z-index: -1;
     transform: rotate(180deg) translate(0.08em, 0.08em);
@@ -288,19 +288,25 @@ hr.primary {
     flex-direction: column !important;
     height: 100%;
     justify-content: space-around;
-    padding: 300% 0;
+    padding: 200% 0 400%;
 }
 
-.navbar-nav a:before {
+.navbar-nav a:hover,
+.navbar-nav a:focus,
+.navbar-nav a:active {
+    text-decoration: underline;
+}
+
+/*.navbar-nav a:before {
     content: "";
     position: absolute;
     width: 0;
     height: 2px;
     bottom: -3px;
     right: 0;
-    -o-transition: all 200ms ease-out;  /* Opera 10.50–12.00 */
-    -moz-transition: all 200ms ease-out;  /* Firefox 4-15 */
-    -webkit-transition: all 200ms ease-out;  /* Chrome 1-25, Safari 3.2+ */
+    -o-transition: all 200ms ease-out; 
+    -moz-transition: all 200ms ease-out;
+    -webkit-transition: all 200ms ease-out; 
     transition: all 200ms ease-out;
     visibility: hidden;
     background-color: #{{ site.color.text }}; 
@@ -311,7 +317,7 @@ hr.primary {
 .navbar-nav a:active:before {
     visibility: visible;
     width: 100%;
-}
+}*/
 
 #navbarContent {
     flex-basis: 100% !important;
@@ -351,7 +357,8 @@ hr.primary {
     left: 0;
     overflow: visible;
     line-height: 1;
-    padding: 40px 20px;
+    /*padding: 40px 20px;*/
+    padding: 40px 0 40px 20px;
     display: -webkit-box;  /* OLD - iOS 6-, Safari 3.1-6, BB7 */
     display: -ms-flexbox;  /* TWEENER - IE 10 */
     display: -webkit-flex; /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
@@ -374,8 +381,8 @@ hr.primary {
     -o-transform: rotate(180deg);
     -webkit-transform: rotate(180deg);
     transform: rotate(180deg);
-    width: auto;
-    height: auto;
+    /*width: auto;
+    height: auto;*/
     /*margin: auto;*/
     display: -webkit-inline-box;  /* OLD - iOS 6-, Safari 3.1-6, BB7 */
     display: -ms-inline-flexbox;  /* TWEENER - IE 10 */
@@ -561,7 +568,8 @@ header {
     display: -webkit-flex; /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
     display: flex;
     flex-direction: row;
-    background: linear-gradient(to bottom, #{{ site.color.backgroundcol }} 0%, #{{ site.color.backgroundcol }} 75%, #{{ site.color.white }} 100%);
+    /*background: linear-gradient(to bottom, #{{ site.color.backgroundcol }} 0%, #{{ site.color.backgroundcol }} 75%, #{{ site.color.white }} 100%);*/
+    background: #{{ site.color.backgroundcol }};
 }
 
 header picture {

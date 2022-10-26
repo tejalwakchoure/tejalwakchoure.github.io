@@ -12,12 +12,12 @@
                   <!-- {% assign pagename = page.title %}
                   {% assign sitepage = site.pagename %}
                   {% assign allposts = sitepage.posts %} -->
-                  {% for section in site.work_sections %}
-                    {% if section.path contains page.title %}
+                  {% for post in site.work_sections %}
+                    {% if post.path contains page.title %}
                         <div class="col-sm" style="padding: 0 15px;">
                           <h1>in!!</h1>
                             <div class="portfolio-link-wrapper">
-                                <a href="//tejalwakchoure.github.io/{{ pagename }}/{{ post.project-id }}" class="overlay-link"></a>
+                                <a href="//tejalwakchoure.github.io/{{ page.title }}/{{ post.project-id }}" class="overlay-link"></a>
                                 <div class="overlay"> 
                                     <span style="margin: auto;"> {{ post.title }} </span>
                                 </div>
@@ -27,7 +27,7 @@
                                       srcset="/assets/img/small-devices/portfolio/{{ pagename }}/{{ post.img }}">
                                    <source 
                                       srcset="/assets/img/portfolio/{{ pagename }}/{{ post.img }}"> -->
-                                   <img src="https://tejalwakchoure.github.io/assets/img/portfolio/{{ pagename }}/{{ post.img }}" 
+                                   <img src="https://tejalwakchoure.github.io/assets/img/portfolio/{{ page.title }}/{{ post.img }}" 
                                    class="img-responsive" 
                                    alt="{{ post.alt }}">
                                 </picture>

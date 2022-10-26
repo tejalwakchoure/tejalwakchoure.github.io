@@ -70,6 +70,13 @@ body {
     scrollbar-width: none;  /* Firefox */
 }
 
+body .add-bkg {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background: #{{ site.color.backgroundcol }};
+}
+
 #body-container {
     -o-transition: background-color 1s ease;  /* Opera 10.50–12.00 */
     -moz-transition: background-color 1s ease;  /* Firefox 4-15 */
@@ -495,8 +502,8 @@ section {
     display: grid;
     /*table-layout: auto; */
     margin: 0;  
-    /*min-height: 90% !important; */
-    min-height: 100vh;
+
+    /*min-height: 100vh;*/
     color: #{{ site.color.text }};    
     align-content: space-between;
 
@@ -951,11 +958,16 @@ header mark {
     scroll-behavior: smooth;
     background: #{{ site.color.backgroundcol }};
     /*background: linear-gradient(to bottom, #{{ site.color.white }} 0%, #{{ site.color.backgroundcol }} 25%, #{{ site.color.backgroundcol }} 75%, #{{ site.color.white }} 100%);*/
+    flex: 1 0 auto;
+    display: flex;
 }
 
 #portfolio {
     padding: 0;
     height: fit-content;
+    /*min-height: unset;*/
+    display: flex;
+    flex-direction: column;
 }
 
 /*#portfolio {

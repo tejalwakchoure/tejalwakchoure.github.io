@@ -293,5 +293,5 @@ $(window).on("load", function() {
 
 // Hide overlay until images are loaded in portfolio
 $(document).ready(function() {
-  $('#portfolio .portfolio-link-wrapper').css({visibility: visible});
+  $('#portfolio .portfolio-link-wrapper').css({visibility: "visible"});
 });

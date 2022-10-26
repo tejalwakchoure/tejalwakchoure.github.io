@@ -374,6 +374,7 @@ footer {
     width: 95vw;
     left: 3vw;
     right: 2vw;
+    display: grid;
 }
 
 footer a {

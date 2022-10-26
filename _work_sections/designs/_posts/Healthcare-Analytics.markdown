@@ -2,7 +2,7 @@
 
 layout: default
 project-id: 2
-title: Healthcare Analytics
+title: Healthcare-Analytics
 date: 2018-05-15
 project-date: May 2018
 img: project-2.jpg

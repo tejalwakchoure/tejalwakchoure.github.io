@@ -487,18 +487,19 @@ hr.primary {
 }   
 section {   
     /*padding: 5vh 6vw 15vh 6vw;*/
-    padding: 0 3vw 0 6vw;
+    padding: 0 0 0 6vw;
     width: 100%;    
-    display: table;
-    table-layout: auto; 
+    display: grid;
+    /*table-layout: auto; */
     margin: 0;  
-    min-height: 90% !important; 
-    height: 100vh;
+    /*min-height: 90% !important; */
+    /*height: 100vh;*/
     color: #{{ site.color.text }};    
+    align-content: space-between;
 }   
 
 section .container {    
-    display: table-cell;  
+    display: grid;  
     vertical-align: middle;   
 }   
 
@@ -929,6 +930,11 @@ header mark {
     /*background: linear-gradient(to bottom, #{{ site.color.white }} 0%, #{{ site.color.backgroundcol }} 25%, #{{ site.color.backgroundcol }} 75%, #{{ site.color.white }} 100%);*/
 }
 
+#portfolio {
+    padding: 0;
+    height: fit-content;
+}
+
 /*#portfolio {
     padding: 5vw 20px;
     -webkit-animation-duration: 800ms;
@@ -954,6 +960,7 @@ header mark {
     display: block;
     -o-object-fit: cover;
     object-fit: cover;
+    aspect-ratio: 1;
 }
 
 #portfolio .portfolio-item .portfolio-link {    
@@ -1033,7 +1040,7 @@ header mark {
 }
 
 .overlay {
-    font-size: 1.75rem;
+    font-size: 1.5rem;
     font-weight: 300; 
     text-transform: uppercase;
     position: absolute;

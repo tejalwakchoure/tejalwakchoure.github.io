@@ -380,6 +380,17 @@ footer a {
     color: #{{ site.color.button }}; 
 }
 
+footer .text-link {
+	color: #{{ site.color.text }}; 
+}
+
+footer a.text-link:hover,    
+footer a.text-link:focus,    
+footer a.text-link:active,   
+footer a.text-link.active {
+    color: #{{ site.color.text }};
+}
+
 footer a:hover,    
 footer a:focus,    
 footer a:active,   

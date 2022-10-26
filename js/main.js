@@ -294,24 +294,20 @@ $(window).on("load", function() {
 // Hide overlay until images are loaded in portfolio
 $(document).ready(function() {
   $('#portfolio .portfolio-link-wrapper').css({visibility: "visible"});
+
+  // Back link on posts
+  ('back-link').setAttribute('href', document.referrer);
+  $('back-link').onclick = function() {
+    history.back();
+    return false;
+  }
 });
 
 
-// Post back link
-var element = document.getElementById('back-link');
 
-// Provide a standard href to facilitate standard browser features such as 
-//  - Hover to see link
-//  - Right click and copy link
-//  - Right click and open in new tab
-element.setAttribute('href', document.referrer);
-
-// We can't let the browser use the above href for navigation. If it does, 
-// the browser will think that it is a regular link, and place the current 
-// page on the browser history, so that if the user clicks "back" again,
-// it'll actually return to this page. We need to perform a native back to
-// integrate properly into the browser's history behavior
-element.onclick = function() {
-  history.back();
-  return false;
-}
+// var element = document.getElementById('back-link');
+// element.setAttribute('href', document.referrer);
+// element.onclick = function() {
+//   history.back();
+//   return false;
+// }

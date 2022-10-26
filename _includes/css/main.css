@@ -778,11 +778,17 @@ header mark {
     color: #{{ site.color.heading }};
 }
 
-#about .about-main-row {
+#about .about-main-text {
     width: 60%;
     max-width: 1000px;
     min-width: 600px;
     margin: auto;
+}
+#about .about-main-text p {
+    font-size: 1.1rem;
+}
+#about .about-side-text p {
+    font-size: 1rem;
 }
 #about .row {
     display: -webkit-box;  /* OLD - iOS 6-, Safari 3.1-6, BB7 */
@@ -899,7 +905,7 @@ header mark {
     #about .about-col {
         padding: 0;
     }
-    #about .about-main-row {
+    #about .about-main-text {
         width: 100% !important;
         min-width: 0 !important;
         max-width: 600px;

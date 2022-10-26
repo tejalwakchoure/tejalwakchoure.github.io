@@ -164,7 +164,7 @@
     height: 300px;
     -o-object-fit: cover;
     object-fit: cover;
-    margin-top: 5vh;
+    margin: 5vh;
     /*position: absolute;
     left: 50%;
 	-ms-transform: translate3d(-50%, 0, 0);

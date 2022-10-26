@@ -205,7 +205,7 @@ hr.primary {
     margin: 0 auto; 
 }
 
-.sidenav .page-scroll .navbar-brand {   
+.navbar-brand {   
     padding: 0;    
     height: auto;   
     /*font-family: 'Raleway',Lato,sans-serif;*/
@@ -231,7 +231,7 @@ hr.primary {
     text-shadow: -1px -1px 0 black, 1px 1px 0 black, 1px -1px 0 black, -1px 1px 0 black;
 }  
 
-.sidenav .page-scroll .brand-shadow {
+.brand-shadow {
     color: #{{ site.color.text }};
     z-index: -1;
     transform: rotate(180deg) translate(0.08em, 0.08em);
@@ -241,7 +241,7 @@ hr.primary {
     font-size: 2.55em;
 }
 
-.sidenav .navbar-brand-scroll {
+.navbar-brand-scroll {
     padding-top: 15px;
 
     height: 10%;
@@ -443,10 +443,10 @@ hr.primary {
         width: auto; 
         margin: 0;
     }
-    .sidenav .navbar-brand-scroll {
+    .navbar-brand-scroll {
         padding-top: 0;
     }
-    .sidenav .page-scroll .navbar-brand {
+    .sidenav .navbar-brand {
         -ms-transform: none;
         -o-transform: none;
         -webkit-transform: none;
@@ -455,7 +455,7 @@ hr.primary {
         padding: 0 0.5em;
         font-weight: 300;
     }
-    .sidenav .page-scroll .navbar-brand:hover {
+    .sidenav .navbar-brand:hover {
         font-weight: 300;
     }
     .sidenav .text {

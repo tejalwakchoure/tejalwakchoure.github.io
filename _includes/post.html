@@ -3,13 +3,11 @@
     {% if post.path contains page.title and post.path contains 'posts' %}
 	<section id="postDetails" data-nosnippet>
 		<div class="container">
-			<div class="row">
-				<div style="height: fit-content;">
-					<a role="button" href="//tejalwakchoure.github.io/" class="slide-link">
-						<!-- <i class="fa fa-chevron-left" aria-hidden="true"></i> -->
-						BACK
-					</a>
-				</div>
+			<div class="row" style="height: fit-content; margin: 15px;">
+				<a role="button" href="//tejalwakchoure.github.io/" class="slide-link">
+					<!-- <i class="fa fa-chevron-left" aria-hidden="true"></i> -->
+					BACK
+				</a>
 			</div>
 			<div class="row text-center">
                 <picture>
@@ -25,28 +23,28 @@
                 </picture>
 			</div>
 			<div class="row" id="content-row">
-				<h3 class="title">{{ post.title }}</h3>		
+				<h3 class="post-title">{{ post.title }}</h3>		
 				{% if post.project-date %}
-					<span>{{ post.project-date }}</span>
+					<span style="margin: auto; margin-top: 10px; font-weight: 200;">{{ post.project-date }}</span>
 				</li>
 				{% endif %}
 				<div id="content">
 					{% if post.summary %}
 						<p>
-							<h4 class="heading">Summary</h4>
+							<h4 class="post-heading">Summary</h4>
 							{{ post.summary }}
 						</p>
 					{% endif %}
 					{% if post.description %}
 						<p markdown="1">
-							<h4 class="heading">Summary</h4>
+							<h4 class="post-heading">Summary</h4>
 							{{ post.description }}
 						</p>
 					{% endif %}
 					{% if post.link %}
-						<span style="text-align: center; padding: 2rem 0 0 0;">
+						<p style="text-align: center; padding: 2rem 0 0 0;">
 							Further details: <a href={{ post.link }} target="_blank">{{ post.link-type }}</a>
-						</span>
+						</p>
 					{% endif %}
 				</div>
 			</div>

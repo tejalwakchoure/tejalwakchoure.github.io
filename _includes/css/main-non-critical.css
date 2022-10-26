@@ -69,6 +69,21 @@
 	animation-duration: 800ms;*/
 }
 
+#postDetails .container {
+	display: flex;
+    flex-direction: column;
+}
+#postDetails .title {
+	margin: auto;
+	margin-top: 10vh;
+}
+#postDetails .heading {
+    text-transform: unset;
+    letter-spacing: unset;
+    color: black;
+    font-weight: bold;
+    margin-top: 10vh;
+}
 #postDetails .li {
 	padding-bottom: 0.1rem;
 }   
@@ -189,8 +204,12 @@
     max-width: 1000px;
 }
 #postDetails #content p {
-	text-align: justify;
-	margin: 3.5% 0;
+	/*text-align: justify;
+	margin: 3.5% 0;*/
+    width: 80%;
+    max-width: 1000px;
+    min-width: 600px;
+    margin: auto;
 }
 .swiper-pagination, .swiper-button-prev, .swiper-button-next {
 	width: auto;

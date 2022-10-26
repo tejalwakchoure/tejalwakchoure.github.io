@@ -70,7 +70,7 @@ body {
     scrollbar-width: none;  /* Firefox */
 }
 
-body .add-bkg {
+.body-with-bkg {
     min-height: 100vh;
     display: flex;
     flex-direction: column;

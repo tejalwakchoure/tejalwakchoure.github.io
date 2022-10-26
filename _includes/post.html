@@ -9,7 +9,7 @@
 					BACK
 				</a>
 			</div>
-			<div class="row">
+			<div class="row" style="flex-direction: column;">
 				<h3 class="post-title">{{ post.title }}</h3>		
 				{% if post.project-date %}
 					<span style="margin: auto; margin-top: 10px; font-weight: 200;">{{ post.project-date }}</span>
@@ -30,7 +30,7 @@
                 </picture>
 			</div>
 			<div class="row" id="content-row">
-				{% if page.title == 'code' %}
+				{% if post.path contains 'code' %}
 						{% if post.summary %}]
 							<h4 class="post-heading">Summary</h4>
 							<p>{{ post.summary }}</p>
@@ -43,7 +43,7 @@
 							<p style="text-align: center; padding: 2rem 0 0 0;">
 								Further details: <a href={{ post.link }} target="_blank">{{ post.link-type }}</a></p>
 						{% endif %}
-				{% elsif page.title == 'designs' %}
+				{% elsif post.path contains 'designs' %}
 						{% if post.summary %}
 							<h4 class="post-heading">The Problem</h4>
 							<p>{{ post.summary }}</p>

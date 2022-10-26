@@ -13,10 +13,10 @@
                 <picture>
                    <source 
                       media="(max-width: 768px)"
-                      srcset="assets/img/small-devices/portfolio/{{ post.img }}">
+                      srcset="/assets/img/small-devices/portfolio/{{ post.img }}">
                    <source 
-                      srcset="assets/img/portfolio/{{ post.img }}">
-                   <img src="assets/img/portfolio/{{ post.img }}" 
+                      srcset="/assets/img/portfolio/{{ post.img }}">
+                   <img src="/assets/img/portfolio/{{ post.img }}" 
                    class="img-responsive" 
                    alt="{{ post.alt }}"
                    id="main-img">
@@ -29,22 +29,54 @@
 				</li>
 				{% endif %}
 				<div id="content">
-					{% if post.summary %}
-						<p>
-							<h4 class="post-heading">Summary</h4>
-							{{ post.summary }}
-						</p>
-					{% endif %}
-					{% if post.description %}
-						<p markdown="1">
-							<h4 class="post-heading">Summary</h4>
-							{{ post.description }}
-						</p>
-					{% endif %}
-					{% if post.link %}
-						<p style="text-align: center; padding: 2rem 0 0 0;">
-							Further details: <a href={{ post.link }} target="_blank">{{ post.link-type }}</a>
-						</p>
+					{% if page.title == 'code' %}
+							{% if post.summary %}
+								<p>
+									<h4 class="post-heading">Summary</h4>
+									{{ post.summary }}
+								</p>
+							{% endif %}
+							{% if post.description %}
+								<p markdown="1">
+									<h4 class="post-heading">Details</h4>
+									{{ post.description }}
+								</p>
+							{% endif %}
+							{% if post.link %}
+								<p style="text-align: center; padding: 2rem 0 0 0;">
+									Further details: <a href={{ post.link }} target="_blank">{{ post.link-type }}</a>
+								</p>
+							{% endif %}
+					{% elseif page.title == 'designs' %}
+							{% if post.summary %}
+								<p>
+									<h4 class="post-heading">The Problem</h4>
+									{{ post.summary }}
+								</p>
+							{% endif %}
+							{% if post.description %}
+								<p markdown="1">
+									<h4 class="post-heading">The Solution</h4>
+									{{ post.description }}
+								</p>
+							{% endif %}
+							{% if post.link %}
+								<p style="text-align: center; padding: 2rem 0 0 0;">
+									Further details: <a href={{ post.link }} target="_blank">{{ post.link-type }}</a>
+								</p>
+							{% endif %}
+					{% else %}
+							{% if post.summary %}
+								<p><h4 class="post-heading">{{ post.summary }}</h4></p>
+							{% endif %}
+							{% if post.description %}
+								<p markdown="1">{{ post.description }}</p>
+							{% endif %}
+							{% if post.link %}
+								<p style="text-align: center; padding: 2rem 0 0 0;">
+									Original post: <a href={{ post.link }} target="_blank">{{ post.link-type }}</a>
+								</p>
+							{% endif %}
 					{% endif %}
 				</div>
 			</div>

@@ -33,14 +33,14 @@ $(document).ready(function() {
       }
     }, 7);
 
-    swiper_in.controller.control = swiper_innermost;
-    swiper.controller.control = swiper_in;
+    // swiper_in.controller.control = swiper_innermost;
+    // swiper.controller.control = swiper_in;
 
     // Smooth Mouse Scrolling for all browsers
-    $('html, body').easeScroll({
-        frameRate: 60,
-        stepSize: 60,
-      });
+    // $('html, body').easeScroll({
+    //     frameRate: 60,
+    //     stepSize: 60,
+    //   });
 
     // // Backup - slow but works on all browsers
     // var isSmoothScrollSupported = 'scrollBehavior' in document.documentElement.style;
@@ -266,11 +266,14 @@ $(window).on("load", function() {
   var smallScreen = $(window).width() < 768 ? true : false;
   var dir1 = smallScreen ? 'assets/img/small-devices/' : 'assets/img/';
   var dir2 = smallScreen ? 'assets/img/small-devices/portfolio/' : 'assets/img/portfolio/';
+  var dir3 = 'assets/gif/';
 
   var images1 = ['profile-picture.jpeg']
   preloadImages(dir1, images1);
-  var images2 = ['project-1.jpg', 'project-2.jpg', 'project-3.jpg', 'project-4.jpg', 'project-5.jpg', 'project-6.jpg'];
+  var images2 = ['mlcat.jpg', 'irclogparser.jpg', 'superglue.jpg', 'healthcare-analytics.jpg', 'presenceid.jpg', 'dbms.jpg'];
   preloadImages(dir2, images2);
+  var images3 = ['words-glitch.gif', 'code-glitch.gif', 'design-glitch.gif'];
+  preloadImages(dir3, images3);
 });
 
 // Horizontal header parallax

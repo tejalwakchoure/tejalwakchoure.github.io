@@ -73,11 +73,11 @@
 	padding-bottom: 0.1rem;
 }   
 
-.slide-link {
+#postDetails .slide-link {
 	float: left;
 	padding: 5px; 
 	outline: 0;
-	text-decoration: underline;
+	/*text-decoration: underline;*/
 	background: transparent;
 	color: #{{ site.color.button }};
 }
@@ -143,7 +143,7 @@
 	overflow: hidden;
 }
 
-.swiper-slide #main-img {
+#postDetails #main-img {
     width: 500px;
     height: 150px;
     -o-object-fit: cover;
@@ -172,7 +172,7 @@
 	height: 325px; 
 	width: 100%;
 }
-.swiper-slide #content-row {
+#postDetails #content-row {
 	display: -webkit-box;  /* OLD - iOS 6-, Safari 3.1-6, BB7 */
   	display: -ms-flexbox;  /* TWEENER - IE 10 */
   	display: -webkit-flex; /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
@@ -181,14 +181,14 @@
 	position: relative; 
 	padding-top: 12px;
 }
-.swiper-slide #content {
+#postDetails #content {
 	padding-left: 3%;
     padding-right: 3%;
     margin: auto;
     width: 100%;
     max-width: 1000px;
 }
-.swiper-slide #content p {
+#postDetails #content p {
 	text-align: justify;
 	margin: 3.5% 0;
 }
@@ -264,20 +264,20 @@
 	.swiper-slide #img-positioning-row {
 		height: 300px;
 	}
-	.swiper-slide #content-row {
+	#postDetails #content-row {
 		flex-direction: column;
 		width: auto;
 	}
-	.swiper-slide #content{
+	#postDetails #content{
 		overflow: hidden;
 		margin: auto;
 		padding: 3%;
 	}
-	.swiper-slide #main-img {
+	#postDetails #main-img {
 		height: 300px;
 		width: 350px;
 	}
-	.swiper-slide #content p {
+	#postDetails #content p {
 		text-align: left;
 		margin: 5% 2%;
 	}
@@ -375,7 +375,7 @@ footer {
     left: 3vw;
     right: 2vw;
     display: grid;*/
-    
+
 	position: relative;
 	display: flex;
     padding: 20px 2vw 0 3vw;

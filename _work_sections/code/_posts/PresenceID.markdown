@@ -4,7 +4,7 @@ project-id: 4
 title: PresenceID
 date: 2019-01-10
 project-date: Jan 2019
-img: project-4.jpg
+img: presenceid.jpg
 alt: A mobile app detecting contact
 link-type: GitHub
 link: //github.com/tejalwakchoure/PresenceID

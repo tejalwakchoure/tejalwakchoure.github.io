@@ -5,7 +5,7 @@ project-id: 1
 date: 2018-01-10
 title: MLCAT
 project-date: Jan 2018
-img: project-1.jpg
+img: mlcat.jpg
 alt: A system visualizing and manipulating data
 link-type: GitHub
 link: //github.com/tejalwakchoure/MLCAT

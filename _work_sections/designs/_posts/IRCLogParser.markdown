@@ -4,7 +4,7 @@ project-id: 3
 date: 2018-09-01
 title: IRCLogParser
 project-date: Sept 2018
-img: project-3.jpg
+img: irclogparser.jpg
 alt: A chat system in use
 link-type: GitHub
 link: //github.com/tejalwakchoure/IRCLogParser

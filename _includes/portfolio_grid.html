@@ -1,6 +1,6 @@
 <!-- Portfolio Section -->
 <section id="work" style="padding-right: 50px;">
-<div class="container" style="padding: 0;">
+  <div class="container" style="padding: 0;">
     <div class="col-lg-12 text-right heading-col">
         <h2 class="heading" style="margin-right: -50px; font-size: 7.5rem;">{{ page.title }}</h2>
     </div>
@@ -23,7 +23,7 @@
                                       srcset="/assets/img/small-devices/portfolio/{{ pagename }}/{{ post.img }}">
                                    <source 
                                       srcset="/assets/img/portfolio/{{ pagename }}/{{ post.img }}"> -->
-                                   <img src="https://tejalwakchoure.github.io/assets/img/portfolio/{{ page.title }}/{{ post.img }}" 
+                                   <img src="/assets/img/portfolio/{{ page.title }}/{{ post.img }}" 
                                    class="img-responsive" 
                                    alt="{{ post.alt }}">
                                 </picture>
@@ -34,34 +34,5 @@
             </div>
         </div>
     </section>
-
-    <!-- <section id="portfolio">
-        <div class="container">
-            <div class="row">
-                <div class="masonry-grid">
-                    {% for post in site.posts %}
-                      {% if post.path contains {{ page.title }} %}
-                        <div class="masonry-item">
-                            <div class="portfolio-link-wrapper">
-                                <a id="portfolio-link-{{ post.project-id }}" href="//tejalwakchoure.github.io/words/" class="overlay-link"></a>
-                                <div class="overlay"> 
-                                    <span style="margin: auto;"> {{ post.title }} </span>
-                                </div>
-                                <picture>
-                                   <source 
-                                      media="(max-width: 768px)"
-                                      srcset="../assets/img/small-devices/portfolio/{{ post.img }}">
-                                   <source 
-                                      srcset="../assets/img/portfolio/{{ post.img }}">
-                                   <img src="../assets/img/portfolio/{{ post.img }}" 
-                                   class="img-responsive" 
-                                   alt="{{ post.alt }}">
-                                </picture>
-                            </div>
-                        </div>
-                      {% endif %}
-                    {% endfor %}
-                </div>
-            </div>
-        </div>
-    </section> -->
+  </div>
+</section>

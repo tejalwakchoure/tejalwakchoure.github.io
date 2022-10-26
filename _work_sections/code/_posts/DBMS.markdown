@@ -4,7 +4,7 @@ project-id: 5
 date: 2019-05-15
 title: DBMS
 project-date: May 2019
-img: project-5.jpg
+img: dbms.jpg
 alt: A computer analysing data
 
 summary: An end-to-end framework that queries data from 3 different sources simultaneously for a flat view for data collection.

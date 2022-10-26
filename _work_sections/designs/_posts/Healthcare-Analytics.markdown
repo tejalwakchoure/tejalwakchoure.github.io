@@ -5,7 +5,7 @@ project-id: 2
 title: Healthcare Analytics
 date: 2018-05-15
 project-date: May 2018
-img: project-2.jpg
+img: healthcare-analytics.jpg
 alt: A stethoscope
 
 summary: Health-based classification of patient data into 8 different classes with high real-time diagnostic accuracy.

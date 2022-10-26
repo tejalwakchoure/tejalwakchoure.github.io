@@ -4,7 +4,7 @@ project-id: 6
 date: 2019-08-12
 title: SuperGlue
 project-date: Aug 2019
-img: project-6.jpg
+img: superglue.jpg
 alt: A news story being filmed
 link-type: Project Website
 link: //media.mit.edu/projects/superglue/overview/

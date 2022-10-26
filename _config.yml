@@ -44,12 +44,15 @@ plugins:
 # include: ['pages']
 
 collections:
-  code:
-    # permalink: /code/:path/
+  work_sections:
     output: true
-  designs:
-    # permalink: /designs/:path/
-    output: true
+    permalink: /:title/
+  # code:
+  #   permalink: /code/:title/
+  #   output: true
+  # designs:
+  #   permalink: /designs/:title/
+  #   output: true
 
 # Credits content
 credits: Tejal Wakchoure

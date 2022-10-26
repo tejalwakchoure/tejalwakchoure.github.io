@@ -9,11 +9,11 @@
     <section id="portfolio">
         <div class="container">
             <div class="row">
-                  {% assign pagename = page.title %}
+                  <!-- {% assign pagename = page.title %}
                   {% assign sitepage = site.pagename %}
-                  {% assign allposts = sitepage.posts %}
-                  {% for post in allposts %}
-                    <!-- {% if post.path contains page.title %} -->
+                  {% assign allposts = sitepage.posts %} -->
+                  {% for section in site.work_sections %}
+                    {% if section.path contains page.title %}
                         <div class="col-sm" style="padding: 0 15px;">
                           <h1>in!!</h1>
                             <div class="portfolio-link-wrapper">
@@ -33,7 +33,7 @@
                                 </picture>
                             </div>
                         </div>
-                    <!-- {% endif %} -->
+                    {% endif %}
                   {% endfor %}
             </div>
         </div>

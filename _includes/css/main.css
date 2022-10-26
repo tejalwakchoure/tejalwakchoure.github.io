@@ -288,7 +288,7 @@ hr.primary {
     flex-direction: column !important;
     height: 100%;
     justify-content: space-around;
-    padding: 200% 0 400%;
+    padding: 200% 0 300%;
 }
 
 .navbar-nav a:hover,
@@ -337,9 +337,9 @@ hr.primary {
         display: flex !important;
         -ms-flex-preferred-size: auto;
         flex-basis: auto;
-        height: -moz-fit-content;
+        /*height: -moz-fit-content;
         height: -webkit-fit-content;
-        height: fit-content;
+        height: fit-content;*/
     }
     #navbarContent .navbar-toggler {
         display: none;
@@ -417,7 +417,7 @@ hr.primary {
 }*/
 
 .sidenav a:hover{
-    text-decoration: none;
+    text-decoration: underline;
     background: transparent;
     /*font-size: 1.11em;*/
 }
@@ -634,7 +634,7 @@ header .img_div {
     font-style: italic;
     color: #{{ site.color.heading }};
     /*width: fit-content;*/
-    padding-left: 3%;
+    /*padding-left: 3%;*/
 }
 
 .header-intro-text {
@@ -925,6 +925,7 @@ header mark {
 
 #work {
     scroll-behavior: smooth;
+    background: #{{ site.color.backgroundcol }};
     /*background: linear-gradient(to bottom, #{{ site.color.white }} 0%, #{{ site.color.backgroundcol }} 25%, #{{ site.color.backgroundcol }} 75%, #{{ site.color.white }} 100%);*/
 }
 

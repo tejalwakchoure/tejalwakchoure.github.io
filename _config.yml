@@ -10,13 +10,13 @@ google_verify:
 # https://ssl.bing.com/webmaster/configure/verify/ownership
 bing_verify:
 
-# Color settings
+# Color settings - 404 page is done manually
 color:
-    backgroundcol: 'D4F5FF' #'d1e7f4'
-    backgroundcol_light: 'dcf7ff' #'FDF0E6'
-    backgroundcol_lightest: 'e5f9ff' #'FDF0E6' # manual addition on blog header, change there if changed here
-    link: '2C82D6' #'bc763d'
-    link_dark: '0755A4' #'97541e'
+    backgroundcol: 'C1DAFF' #'D4F5FF'
+    backgroundcol_light: 'CDE1FF' #'dcf7ff' (preloader)
+    backgroundcol_lightest: 'DCEAFF' #'e5f9ff' (preloader mobile + manually added on blog, change there if changed here)
+    link: '3C7CDD' #'2C82D6'
+    link_dark: '0D5BCF' #'0755A4'
     text: '393939' #'575757'
     button: '484848'
     heading: '000000'
@@ -24,7 +24,6 @@ color:
     lightest_gray: 'ebebeb'
     gray: 'bfbfbf'
     # wave_text: '034558'
-    new_backgroundcol: 'C1DAFF'
 
 # Footer settings
 footer:

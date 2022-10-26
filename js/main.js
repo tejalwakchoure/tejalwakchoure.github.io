@@ -235,21 +235,21 @@ function toggleOnPortfolioLink(num) {
 }
 
 // onclick page scrolling - requires jQuery Easing plugin
-$(function() {
-    $('.page-scroll a').bind('click', function(event) {
-      var page = $('html, body');
-      var $anchor = $(this);
+// $(function() {
+//     $('.page-scroll a').bind('click', function(event) {
+//       var page = $('html, body');
+//       var $anchor = $(this);
 
-      page.on("scroll mousedown wheel DOMMouseScroll mousewheel keyup touchmove", function(){
-           page.stop();
-      });
-      page.stop().animate({scrollTop: $($anchor.attr('href'))[0].offsetTop}, 
-        1000, 'easeInOutExpo', function(){
-           page.off("scroll mousedown wheel DOMMouseScroll mousewheel keyup touchmove");
-       });
-      event.preventDefault();
-    });
-});
+//       page.on("scroll mousedown wheel DOMMouseScroll mousewheel keyup touchmove", function(){
+//            page.stop();
+//       });
+//       page.stop().animate({scrollTop: $($anchor.attr('href'))[0].offsetTop}, 
+//         1000, 'easeInOutExpo', function(){
+//            page.off("scroll mousedown wheel DOMMouseScroll mousewheel keyup touchmove");
+//        });
+//       event.preventDefault();
+//     });
+// });
 
 // Highlight the top nav as scrolling occurs
 $('body').scrollspy({

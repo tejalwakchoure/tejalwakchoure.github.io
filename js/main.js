@@ -294,15 +294,16 @@ $(window).on("load", function() {
 // Hide overlay until images are loaded in portfolio
 $(document).ready(function() {
   $('#portfolio .portfolio-link-wrapper').css({visibility: "visible"});
-
-  // Back link on posts
-  ('back-link').setAttribute('href', document.referrer);
-  $('back-link').onclick = function() {
-    history.back();
-    return false;
-  }
 });
-
+// Back link on posts
+  // ('back-link').setAttribute('href', document.referrer);
+function backlink() {
+  if ($('back-link').length) {
+      $('back-link').attr('href', document.referrer);
+      history.back();
+      return false;
+    }
+  }
 
 
 // var element = document.getElementById('back-link');

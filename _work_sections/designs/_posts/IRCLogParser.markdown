@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 project-id: 3
 date: 2018-09-01
 title: IRCLogParser

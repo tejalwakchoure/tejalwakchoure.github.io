@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 project-id: 4
 title: PresenceID
 date: 2019-01-10

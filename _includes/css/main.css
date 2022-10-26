@@ -487,15 +487,18 @@ hr.primary {
 }   
 section {   
     /*padding: 5vh 6vw 15vh 6vw;*/
-    padding: 0 0 0 6vw;
+    /*padding: 0 0 8vh 6vw;*/ /* footer and nav accounted for */
+    padding: 0 0 8vh 6vw; /* footer and nav accounted for */
     width: 100%;    
     display: grid;
     /*table-layout: auto; */
     margin: 0;  
     /*min-height: 90% !important; */
-    /*height: 100vh;*/
+    height: 100vh;
     color: #{{ site.color.text }};    
     align-content: space-between;
+
+    grid-auto-rows: 1fr;
 }   
 
 section .container {    
@@ -1048,10 +1051,10 @@ header mark {
     width: 100%;
     text-align: center;
     justify-content: center;
-    -o-transition: transform 400ms, visibility 400ms;  /* Opera 10.50–12.00 */
-    -moz-transition: transform 400ms, visibility 400ms;  /* Firefox 4-15 */
-    -webkit-transition: -webkit-transform 400ms, visibility 400ms;  /* Chrome 1-25, Safari 3.2+ */
-    transition: transform 400ms, visibility 400ms;
+    -o-transition: transform 500ms, visibility 500ms;  /* Opera 10.50–12.00 */
+    -moz-transition: transform 500ms, visibility 500ms;  /* Firefox 4-15 */
+    -webkit-transition: -webkit-transform 500ms, visibility 500ms;  /* Chrome 1-25, Safari 3.2+ */
+    transition: transform 500ms, visibility 500ms;
     -ms-transform: translate3d(-101%, 0, 0);
     -o-transform: translate3d(-101%, 0, 0);
     -webkit-transform: translate3d(-101%, 0, 0);

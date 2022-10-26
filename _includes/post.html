@@ -1,0 +1,57 @@
+	<!-- Post details Section -->
+	<section id="portfolioDetails" data-nosnippet>
+		<div class="container">
+			<div class="row">
+				<div style="height: fit-content;">
+					<a role="button" href="//tejalwakchoure.github.io/" class="slide-link">
+						<i class="fa fa-chevron-left" aria-hidden="true"></i>
+					</a>
+				</div>
+			</div>
+			<div class="row text-center">
+                <picture>
+                   <source 
+                      media="(max-width: 768px)"
+                      srcset="assets/img/small-devices/portfolio/{{ post.img }}">
+                   <source 
+                      srcset="assets/img/portfolio/{{ post.img }}">
+                   <img src="assets/img/portfolio/{{ post.img }}" 
+                   class="img-responsive" 
+                   alt="{{ post.alt }}"
+                   id="main-img">
+                </picture>
+			</div>
+			<div class="row" id="content-row">		
+				<div id="content">
+					<h3>{{ post.title }}</h3>
+					{% if post.summary %}
+					<p>{{ post.summary }}</p>
+					<hr style="max-width: 3rem;"/>
+					{% endif %}
+					{% if post.description %}
+					<p markdown="1">{{ post.description }}</p>
+					{% endif %}
+					<ul class="list-inline item-details small">
+						{% if post.project-date %}
+						<li>Date:
+							<span>{{ post.project-date }}
+							</span>
+						</li>
+						{% endif %}
+						{% if post.category %}
+						<li>Domain:
+							<span>{{ post.category }}
+							</span>
+						</li>
+						{% endif %}
+						{% if post.link %}
+						<li>Details:
+							<span><a href={{ post.link }} target="_blank">{{ post.link-type }}</a>
+							</span>
+						</li>
+						{% endif %}
+					</ul>
+				</div>
+			</div>
+		</div>
+	</section>

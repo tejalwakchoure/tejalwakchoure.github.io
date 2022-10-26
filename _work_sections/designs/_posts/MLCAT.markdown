@@ -1,6 +1,6 @@
 ---
 
-layout: default
+layout: post
 project-id: 1
 date: 2018-01-10
 title: MLCAT

@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 project-id: 5
 date: 2019-05-15
 title: DBMS

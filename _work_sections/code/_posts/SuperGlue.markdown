@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 project-id: 6
 date: 2019-08-12
 title: SuperGlue

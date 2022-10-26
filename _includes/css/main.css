@@ -14,14 +14,16 @@ html,body
     font-feature-settings: "lnum";
     font-weight: 400;
     line-height: 1.5;
-    font-family: Lato, 'Source Sans Pro', Helvetica, sans-serif;
+    /*font-family: Lato, 'Source Sans Pro', Helvetica, sans-serif;*/
+    font-family: 'Source Sans Pro', Helvetica, sans-serif;
     color: #{{ site.color.text }};
 }
 
 .heading,
 .name,
 .skills {
-    font-family: Poppins, Lato, 'Source Sans Pro', Helvetica, sans-serif;
+    /*font-family: Poppins, Lato, 'Source Sans Pro', Helvetica, sans-serif;*/
+    font-family: Poppins, 'Source Sans Pro', Helvetica, sans-serif;
 }
 
 .heading {
@@ -48,10 +50,6 @@ html,body
 
 footer .fa {
     font-size: 1.2em;
-}
-
-footer .fa-envelope {
-    font-size: 1.1em !important;
 }
 
 .kill-on-large-devices {
@@ -130,7 +128,8 @@ body {
     letter-spacing: -0.08em; 
     margin: auto auto 0 auto;
     padding-top: 5%;
-    font-family: 'Raleway', Lato, sans-serif;
+    /*font-family: 'Raleway', Lato, sans-serif;*/
+    font-family: 'Raleway', 'Source Sans Pro', sans-serif;
 }
 
 #preloader #percent {
@@ -209,7 +208,8 @@ hr.primary {
 .sidenav .page-scroll .navbar-brand {   
     padding: 0;    
     height: auto;   
-    font-family: 'Raleway',Lato,sans-serif;
+    /*font-family: 'Raleway',Lato,sans-serif;*/
+    font-family: 'Raleway', 'Source Sans Pro', sans-serif;
     font-variant: none !important;
     text-transform: lowercase !important;
     letter-spacing: -0.08em;
@@ -222,19 +222,31 @@ hr.primary {
     margin: 0;
     writing-mode: horizontal-tb;
     width: fit-content;
+    color: #{{ site.color.backgroundcol }};
 
-    -o-transition: font-size 300ms ease-in-out, margin 300ms ease-in-out; /* Opera 10.50–12.00 */
-    -moz-transition: font-size 300ms ease-in-out, margin 300ms ease-in-out; /* Firefox 4-15 */
-    -webkit-transition: font-size 300ms ease-in-out, margin 300ms ease-in-out; /* Chrome 1-25, Safari 3.2+ */
-    transition: font-size 300ms ease-in-out, margin 300ms ease-in-out;
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-weight: bold;
+    text-shadow: -1px -1px 0 black, 1px 1px 0 black, 1px -1px 0 black, -1px 1px 0 black;
 }  
 
+.sidenav .page-scroll .navbar-brand .brand-shadow {
+    color: #{{ site.color.text }};
+    z-index: -1;
+    transform: rotate(180deg) translate(0.08em, 0.08em);
+}
+
 .sidenav .page-scroll .navbar-brand:hover {
-    font-weight: 200;
+    font-size: 2.55em;
 }
 
 .sidenav .navbar-brand-scroll {
     padding-top: 15px;
+
+    height: 10%;
+    width: 4vw;
+    position: relative;
 }
 .navbar-toggler-icon {
     width: auto;
@@ -274,13 +286,37 @@ hr.primary {
 .navbar-nav {
     -ms-flex-direction: column !important;
     flex-direction: column !important;
-    /*height: 100%;*/
-    height: 50%;
+    height: 100%;
+    justify-content: space-around;
+    padding: 300% 0;
+}
+
+.navbar-nav a:before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -3px;
+    right: 0;
+    -o-transition: all 200ms ease-out;  /* Opera 10.50–12.00 */
+    -moz-transition: all 200ms ease-out;  /* Firefox 4-15 */
+    -webkit-transition: all 200ms ease-out;  /* Chrome 1-25, Safari 3.2+ */
+    transition: all 200ms ease-out;
+    visibility: hidden;
+    background-color: #{{ site.color.text }}; 
+}
+
+.navbar-nav a:hover:before,
+.navbar-nav a:focus:before,
+.navbar-nav a:active:before {
+    visibility: visible;
+    width: 100%;
 }
 
 #navbarContent {
     flex-basis: 100% !important;
     width: 100%;
+    height: 90%;
 }
 
 @media (min-width: 769px){
@@ -320,15 +356,16 @@ hr.primary {
     display: -ms-flexbox;  /* TWEENER - IE 10 */
     display: -webkit-flex; /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     font-weight: 300;
     /*font-size: 1.3em;*/
     font-size: 1.1em;
-    letter-spacing: 2px;  
+    letter-spacing: 1.5px;
     background: transparent;
 
     align-items: flex-start;
     justify-content: space-between;
+
 }
 
 .sidenav .page-scroll {
@@ -359,6 +396,13 @@ hr.primary {
     /*font-variant: all-small-caps;*/
     text-transform: lowercase;
     color: #{{ site.color.text }};
+    font-weight: 400;
+    letter-spacing: 1px;
+
+    -o-transition: font-size 100ms ease-in-out, margin 100ms ease-in-out; /* Opera 10.50–12.00 */
+    -moz-transition: font-size 100ms ease-in-out, margin 100ms ease-in-out; /* Firefox 4-15 */
+    -webkit-transition: font-size 100ms ease-in-out, margin 100ms ease-in-out; /* Chrome 1-25, Safari 3.2+ */
+    transition: font-size 100ms ease-in-out, margin 100ms ease-in-out;
 }
 
 /*.sidenav a {
@@ -368,7 +412,7 @@ hr.primary {
 .sidenav a:hover{
     text-decoration: none;
     background: transparent;
-    font-weight: 400;
+    /*font-size: 1.11em;*/
 }
 
 

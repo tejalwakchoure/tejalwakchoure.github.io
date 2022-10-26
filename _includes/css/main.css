@@ -108,7 +108,7 @@ body {
 }
 #preloader #wrapper {
     font-weight: 300;
-    margin: auto; 
+    /*margin: auto; */
     display: -webkit-box;  /* OLD - iOS 6-, Safari 3.1-6, BB7 */
     display: -ms-flexbox;  /* TWEENER - IE 10 */
     display: -webkit-flex; /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
@@ -135,13 +135,14 @@ body {
 
 #preloader #percent {
     /*font-size: 0.8em; */
-    padding-right: 0.1em; 
     margin: auto;
+    margin-right: 10px;
 }
 
 #preloader #count {
     font-size: 1.5em; 
     margin: auto;
+    margin-right: 10px;
 }
 
 .show-on-submit {

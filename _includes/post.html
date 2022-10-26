@@ -1,5 +1,6 @@
-	<!-- Post details Section -->
-	{% for post in site.posts %}
+<!-- Post details Section -->
+{% for post in site.work_sections %}
+    {% if post.path contains page.title and post.path contains 'posts' %}
 	<section id="postDetails" data-nosnippet>
 		<div class="container">
 			<div class="row">
@@ -56,4 +57,5 @@
 			</div>
 		</div>
 	</section>
-	{% endfor %}
+	{% endif %}
+{% endfor %}

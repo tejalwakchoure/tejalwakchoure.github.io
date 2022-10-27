@@ -223,10 +223,6 @@ hr.primary {
     letter-spacing: -0.08em;
     font-weight: 100;
     font-size: 2.5em;
-    /*-ms-transform: rotate(90deg);
-    -o-transform: rotate(90deg);
-    -webkit-transform: rotate(90deg);
-    transform: rotate(90deg);*/
     margin: 0;
     writing-mode: horizontal-tb;
     width: fit-content;
@@ -237,7 +233,7 @@ hr.primary {
     top: 0;*/
     font-weight: bold;
     text-shadow: -1px -1px 0 black, 1px 1px 0 black, 1px -1px 0 black, -1px 1px 0 black;
-}  
+}
 
 .brand-shadow {
     color: #{{ site.color.text }};
@@ -246,8 +242,24 @@ hr.primary {
     transform: translate(0.08em, 0.08em);
 }
 
+.sidenav .navbar-brand {
+    -webkit-transition: font-size 100ms ease-in-out, margin 100ms ease-in-out;
+    transition: font-size 100ms ease-in-out, margin 100ms ease-in-out;
+    transform: rotate(180deg);
+}
+
+.sidenav .brand-shadow {
+    transform: rotate(180deg) translate(0.08em, 0.08em);
+}
+
 .sidenav .page-scroll .navbar-brand:hover {
     font-size: 2.55em;
+    text-decoration: none;
+    color: #{{ site.color.backgroundcol }};
+}
+
+.sidenav .page-scroll .brand-shadow:hover {
+    color: #{{ site.color.text }};
 }
 
 .navbar-brand-scroll {

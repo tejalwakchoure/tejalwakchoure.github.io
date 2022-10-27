@@ -301,12 +301,10 @@ $(document).ready(function() {
 // Back link on posts
   // ('back-link').setAttribute('href', document.referrer);
 function backlink() {
-  if ($('back-link').length) {
-      $('back-link').attr('href', document.referrer);
+      // $('back-link').attr('href', document.referrer);
       history.back();
       return false;
-    }
-  }
+ }
 
 
 // var element = document.getElementById('back-link');

@@ -26,8 +26,8 @@ $(document).ready(function() {
               fadeInChildren('#body-container header .intro-text',1000);
 
               // Fire up other elements
-              startTime();
-              addPortfolioParallax();
+              // startTime();
+              // addPortfolioParallax();
             }
         }, 7);
       }

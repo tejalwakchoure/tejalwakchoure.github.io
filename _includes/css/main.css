@@ -243,24 +243,25 @@ hr.primary {
 }
 
 .sidenav .navbar-brand {
-    -webkit-transition: font-size 100ms ease-in-out, margin 100ms ease-in-out;
-    transition: font-size 100ms ease-in-out, margin 100ms ease-in-out;
+    -webkit-transition: all 100ms ease-in-out;
+    transition: all 100ms ease-in-out;
     transform: rotate(180deg);
 }
 
-.sidenav .brand-shadow {
+/*.sidenav .brand-shadow {
     transform: rotate(180deg) translate(0.08em, 0.08em);
-}
+}*/
 
 .sidenav .page-scroll .navbar-brand:hover {
-    font-size: 2.55em;
+    /*font-size: 2.55em;*/
     text-decoration: none;
     color: #{{ site.color.backgroundcol }};
+    transform: rotate(180deg) scale(1.05);
 }
 
-.sidenav .page-scroll .brand-shadow:hover {
+/*.sidenav .page-scroll .brand-shadow:hover {
     color: #{{ site.color.text }};
-}
+}*/
 
 .navbar-brand-scroll {
     padding-top: 15px;
@@ -378,8 +379,8 @@ hr.primary {
     left: 0;
     overflow: visible;
     line-height: 1;
-    /*padding: 40px 20px;*/
-    padding: 40px 0 40px 20px;
+    /*padding: 40px 0 40px 20px;*/
+    padding: 30px 0 50px 20px;
     display: -webkit-box;  /* OLD - iOS 6-, Safari 3.1-6, BB7 */
     display: -ms-flexbox;  /* TWEENER - IE 10 */
     display: -webkit-flex; /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
@@ -427,10 +428,10 @@ hr.primary {
     font-weight: 400;
     letter-spacing: 1px;
 
-    -o-transition: font-size 100ms ease-in-out, margin 100ms ease-in-out; /* Opera 10.50–12.00 */
-    -moz-transition: font-size 100ms ease-in-out, margin 100ms ease-in-out; /* Firefox 4-15 */
-    -webkit-transition: font-size 100ms ease-in-out, margin 100ms ease-in-out; /* Chrome 1-25, Safari 3.2+ */
-    transition: font-size 100ms ease-in-out, margin 100ms ease-in-out;
+    -o-transition: all 100ms ease-in-out;/* Opera 10.50–12.00 */
+    -moz-transition: all 100ms ease-in-out; /* Firefox 4-15 */
+    -webkit-transition: all 100ms ease-in-out; /* Chrome 1-25, Safari 3.2+ */
+    transition: all 100ms ease-in-out;
 }
 
 /*.sidenav a {

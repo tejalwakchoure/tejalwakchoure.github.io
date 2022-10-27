@@ -4,9 +4,10 @@
 	<h3>page title = {{ page.title }}</h3>
 	<h3>post path = {{ post.path }}</h3>
 	<h3>post url = {{ post.url }}</h3>
+	<h3>page url = {{ page.url }}</h3>
+	<h3>page path = {{ page.path }}</h3>
 
-
-    {% if post.path contains page.title and post.path contains 'posts' %}
+    {% if post.path contains page.url and post.path contains 'posts' %}
     
 	<h3>IN!!</h3>
 	<h3>title = {{ post.title }}</h3>

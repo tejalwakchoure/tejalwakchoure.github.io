@@ -1,9 +1,9 @@
 ---
 
 layout: post
-project-id: 2
+<!-- project-id: 2 -->
 title: Healthcare Analytics
-date: 2018-05-15
+<!-- date: 2018-05-15 -->
 project-date: May 2018
 img: healthcare-analytics.jpg
 alt: A stethoscope

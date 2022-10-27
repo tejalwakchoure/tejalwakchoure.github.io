@@ -47,7 +47,7 @@ collections:
   work_sections:
     output: true
     # permalink: /:title/
-    permalink: /:categories/:title/
+    # permalink: /:categories/:title/
 
   # code:
   #   permalink: /code/:title/

@@ -3,11 +3,11 @@
     <div class="page-scroll navbar-brand-scroll" style="position: relative;">
         <a class="navbar-brand" style="width: 100%; height: 100%;" href="https://tejalwakchoure.github.io/">
 
-            {% if page.title == 'homepage' or page.title == 'code' or page.title == 'designs' or page.title == 'words' %}
-                <span style="position: fixed;">tw</span>
-            {% else %}
-                <span style="position: fixed; color: white;">tw</span>
-            {% endif %}
+            <!-- {% if page.title == 'homepage' or page.title == 'code' or page.title == 'designs' or page.title == 'words' %} -->
+                <span style="{{ include.white_brand_style | default: ; }} position: fixed;">tw</span>
+            <!-- {% else %} -->
+                <!-- <span style="position: fixed; color: white;">tw</span> -->
+            <!-- {% endif %} -->
             <span class="brand-shadow" style="position: fixed;">tw</span>
         </a>
     </div>

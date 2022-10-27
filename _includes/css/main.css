@@ -17,7 +17,6 @@ html,body
     /*font-family: Lato, 'Source Sans Pro', Helvetica, sans-serif;*/
     font-family: 'Source Sans Pro', Helvetica, sans-serif;
     color: #{{ site.color.text }};
-    --brand-match-bkg: #{{ site.color.white }};
 }
 
 .heading,
@@ -98,7 +97,6 @@ body {
     position: relative;
     z-index: 4;
     background-color: #{{ site.color.backgroundcol_light }};
-    --brand-match-bkg: #{{ site.color.backgroundcol_light }};
     color: #{{ site.color.text }};
 }
 
@@ -228,8 +226,7 @@ hr.primary {
     margin: 0;
     writing-mode: horizontal-tb;
     width: fit-content;
-    /*color: #{{ site.color.backgroundcol }};*/
-    color: var(--brand-match-bkg);
+    color: #{{ site.color.backgroundcol }};
 
     position: fixed;
     /*left: 0;
@@ -258,7 +255,7 @@ hr.primary {
 .sidenav .page-scroll .navbar-brand:hover {
     /*font-size: 2.55em;*/
     text-decoration: none;
-    color: var(--brand-match-bkg);
+    color: #{{ site.color.backgroundcol }};
     transform: rotate(180deg) scale(1.05);
 }
 
@@ -599,7 +596,6 @@ header {
     flex-direction: row;
     /*background: linear-gradient(to bottom, #{{ site.color.backgroundcol }} 0%, #{{ site.color.backgroundcol }} 75%, #{{ site.color.white }} 100%);*/
     background: #{{ site.color.backgroundcol }};
-    --brand-match-bkg: #{{ site.color.backgroundcol }};
 }
 
 header picture {
@@ -980,7 +976,6 @@ header mark {
 #work {
     scroll-behavior: smooth;
     background: #{{ site.color.backgroundcol }};
-    --brand-match-bkg: #{{ site.color.backgroundcol }};
     /*background: linear-gradient(to bottom, #{{ site.color.white }} 0%, #{{ site.color.backgroundcol }} 25%, #{{ site.color.backgroundcol }} 75%, #{{ site.color.white }} 100%);*/
     flex: 1 0 auto;
     display: flex;

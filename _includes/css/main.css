@@ -1238,6 +1238,9 @@ header mark {
 }
 
 @media (max-width: 480px) {
+    #under_construction, html, body {
+        height: calc(100%);
+    }
     #under_construction .container {
         justify-content: flex-start;
     }

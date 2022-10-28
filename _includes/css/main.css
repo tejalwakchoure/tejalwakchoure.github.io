@@ -1255,7 +1255,7 @@ header mark {
         font-size: 16px;
     }
     .grainy-page:after {
-      opacity: 0.05;
+      opacity: 0.05 !important;
     }
 }
 

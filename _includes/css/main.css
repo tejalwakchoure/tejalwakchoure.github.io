@@ -1238,6 +1238,16 @@ header mark {
 }
 
 @media (max-width: 480px) {
+    #under_construction .container {
+        justify-content: flex-start;
+    }
+    #under_construction .header-title {
+        height: 40%;
+        align-items: flex-start;
+    }
+    #under_construction .bottom-row {
+        height: 60%;
+    }
     #under_construction .header-intro-text {
         padding: 0;
     }

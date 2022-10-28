@@ -738,13 +738,14 @@ header mark {
     }
 
     .header-intro-text {
-            max-width: 600px;
-        width: -moz-fit-content;
+        max-width: 600px;
+        /*width: -moz-fit-content;
         width: -webkit-fit-content;
-        width: fit-content;
+        width: fit-content;*/
+        width: 100%;
     }
 
-    .header-intro-text .name { 
+    #under_construction .header-intro-text .name, .header-intro-text .name { 
         font-size: 4rem;
         padding-bottom: 0.5rem;
     }   
@@ -766,8 +767,9 @@ header mark {
         width: -webkit-min-content;
         width: min-content;
         margin: auto;
+        width: 100%;
     }
-    .header-intro-text .name { 
+    #under_construction .header-intro-text .name, .header-intro-text .name { 
         font-size: 3rem;
     }
     .header-intro-text .skills {    
@@ -1229,7 +1231,24 @@ header mark {
     -moz-box-shadow: none;
     -webkit-box-shadow: none; /* Android 2.3+, iOS 4.0.2-4.2, Safari 3-4 */
     box-shadow: none;
-}  
+}
+
+#under_construction .header-intro-text .name {
+    font-size: 10vw;
+}
+
+@media (max-width: 480px) {
+    #under_construction .row {
+        flex: 1;
+    }
+    #under_construction h1 {
+        font-size: 24px;
+    }
+    #under_construction p {
+        font-size: 16px;
+    }
+}
+
 
 /*@media(max-width:768px) {
     #under_construction,
@@ -1276,8 +1295,6 @@ header mark {
   80% { transform:translate(3%, 35%) }
   90% { transform:translate(-10%, 10%) }
 }
-
-
 
 @-ms-viewport{  
     width: device-width;  

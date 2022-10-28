@@ -12,5 +12,18 @@
           {% include header.html %}
           {% include footer.html fix_footer_style="position: fixed; bottom: 0; width: 100vw;" %}
         </div>
+        
+        <!-- Netlify access -->
+        <script>
+          if (window.netlifyIdentity) {
+            window.netlifyIdentity.on("init", user => {
+              if (!user) {
+                window.netlifyIdentity.on("login", () => {
+                  document.location.href = "/admin/";
+                });
+              }
+            });
+          }
+        </script>
     </body>
 </html>

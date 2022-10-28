@@ -694,6 +694,10 @@ header .img_div {
     letter-spacing: 0.5px;
 }  
 
+#under_construction .header-intro-text .name {
+    font-size: 10vw;
+}
+
 header mark {
     background-color: transparent;
     padding-left: 10px;
@@ -738,7 +742,7 @@ header mark {
     }
 
     .header-intro-text {
-        max-width: 600px;
+        /*max-width: 600px;*/
         /*width: -moz-fit-content;
         width: -webkit-fit-content;
         width: fit-content;*/
@@ -1233,19 +1237,25 @@ header mark {
     box-shadow: none;
 }
 
-#under_construction .header-intro-text .name {
-    font-size: 10vw;
-}
-
 @media (max-width: 480px) {
-    #under_construction .row {
-        flex: 1;
+    #under_construction .header-intro-text {
+        padding: 0;
     }
+     #under_construction .header-intro-text .skills {
+        /*font-size: 1rem;*/
+        /*font-weight: normal;*/
+    }
+    /*#under_construction .row {
+        flex: 1;
+    }*/
     #under_construction h1 {
         font-size: 24px;
     }
     #under_construction p {
         font-size: 16px;
+    }
+    .grainy-page:after {
+      opacity: 0.05;
     }
 }
 

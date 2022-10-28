@@ -30,6 +30,12 @@
           color: #393939;
           z-index: 1;
         }
+        p .big-404 {
+          font-size: 1.75em;
+        }
+        p .small-404 {
+          font-size: 1.15em;
+        }
         .grainy-page {
           background-color: #C1DAFF;
         }
@@ -57,6 +63,25 @@
           80% { transform:translate(3%, 35%) }
           90% { transform:translate(-10%, 10%) }
         }
+
+        @media (max-width: 480px) {
+          html, body, .container404 {
+            height: calc(100%);
+          }
+          .container404 {
+            justify-content: center;
+          }
+          .header404 {
+            font-size: 3rem;
+            margin: 24px;
+          }
+          p .big-404 {
+            font-size: 24px;
+          }
+          p .small-404 {
+            font-size: 16px;
+          }
+        }
     </style>
 </head>
 <body>
@@ -64,9 +89,9 @@
     <div class="container404 grainy-page">
         <p class="header404">:(</p>
         <div class="content404">
-            <p style="font-size: 1.75em;">Oops! This page doesn't exist.</p>
+            <p class="big-404">Oops! This page doesn't exist.</p>
           <br/>
-            <p style="font-size: 1.15em;">take me <a href="//tejalwakchoure.github.io/">home</a>.</p>
+            <p class="small-404">take me <a href="//tejalwakchoure.github.io/">home</a>.</p>
         </div>
     </div>
 </body>

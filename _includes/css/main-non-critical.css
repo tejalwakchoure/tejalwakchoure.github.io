@@ -397,6 +397,7 @@ footer {
 	position: relative;
 	display: flex;
     padding: 20px 2vw 0 3vw;
+    z-index: 3;
 }
 
 footer a {

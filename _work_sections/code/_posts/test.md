@@ -1,4 +1,6 @@
 ---
+layout: post
+
 title: test
 project-date: 1/1/22
 img: https://i.imgur.com/F6lWa1e.gif

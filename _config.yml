@@ -49,6 +49,13 @@ collections:
     # permalink: /:title/
     # permalink: /:categories/:title/
 
+  # code:
+  #   permalink: /code/:title/
+  #   output: true
+  # designs:
+  #   permalink: /designs/:title/
+  #   output: true
+
 # Credits content
 credits: Tejal Wakchoure
 

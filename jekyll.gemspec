@@ -21,7 +21,8 @@ Gem::Specification.new do |spec|
   spec.add_runtime_dependency "jekyll-redirect-from"
   spec.add_runtime_dependency "jemoji"
 
-  spec.add_development_dependency "bundler", "~> 2.3.11"
-  spec.add_development_dependency "rake", "~> 12.3.3"
+  spec.add_development_dependency "bundler"
+  spec.add_development_dependency "rake"
+  spec.add_development_dependency "webrick"
   spec.add_development_dependency "github-pages"
 end

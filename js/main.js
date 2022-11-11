@@ -7,31 +7,40 @@ function fadeInChildren(parent, base_delay) {
 }
 
 $(document).ready(function() {
+  $(window).load(function() {
   if ($('#body-container').length) {
-    $('#body-container').css({display: 'none'});
-    var counter = 0;
-    var outerInterval = setInterval(function(){
-      $("#preloader .container #wrapper #count").html(counter);
-      counter++;
-      if(counter >= 101) {
-        clearInterval(outerInterval);
-        var innerInterval = setInterval(function() {
-            if(document.readyState === 'complete') {
-              clearInterval(innerInterval);
 
-              // Animate components on and off the screen on loading
-              $('#preloader').slideUp(1000);
-              $('#body-container').fadeIn(1000);
-              fadeInChildren('#body-container header',1000);
-              fadeInChildren('#body-container header .intro-text',1000);
+    // Preloader if first visit
+    if (!sessionStorage.getItem('doNotPreload')) {
+      sessionStorage.setItem( 'doNotPreload', 'true' );
+      $('#body-container').css({display: 'none'});
+      var counter = 0;
+      var outerInterval = setInterval(function(){
+        $("#preloader .container #wrapper #count").html(counter);
+        counter++;
+        if(counter >= 101) {
+          clearInterval(outerInterval);
+          var innerInterval = setInterval(function() {
+              if(document.readyState === 'complete') {
+                clearInterval(innerInterval);
 
-              // Fire up other elements
-              // startTime();
-              // addPortfolioParallax();
-            }
-        }, 7);
-      }
-    }, 7);
+                // Animate components on and off the screen on loading
+                $('#preloader').slideUp(600);
+                $('#body-container').fadeIn(600);
+                fadeInChildren('#body-container header',500);
+                fadeInChildren('#body-container header .header-intro-text',100);
+
+                // Fire up other elements
+                // startTime();
+                // addPortfolioParallax();
+              }
+          }, 7);
+        }
+      }, 7);
+    } else {
+       $('#preloader').fadeOut(1);
+       $('#preloader').css({display: "none"});
+     }
 
     // swiper_in.controller.control = swiper_innermost;
     // swiper.controller.control = swiper_in;
@@ -63,6 +72,7 @@ $(document).ready(function() {
     //     nicescroll.resize();
     //   });
   }
+});
 });
 
 // Portfolio parallax
@@ -297,7 +307,12 @@ $(window).on("load resize scroll", function() {
 // Hide overlay until images are loaded in portfolio
 $(document).ready(function() {
   $('#portfolio .portfolio-link-wrapper').css({visibility: "visible"});
+
+  //Grainy page
+  var imageRoot = "https://tejalwakchoure.github.io/assets/img/grainy_page.jpeg";
+  $(".grainy-page:after").css('backgroundImage', 'url(' + imageRoot + ')');
 });
+
 // Back link on posts
   // ('back-link').setAttribute('href', document.referrer);
 function backlink() {

@@ -256,7 +256,7 @@ hr.primary {
     /*font-size: 2.55em;*/
     text-decoration: none;
     color: #{{ site.color.backgroundcol }};
-    transform: rotate(180deg) scale(1.05);
+    transform: rotate(180deg) scale(1.03);
 }
 
 /*.sidenav .page-scroll .brand-shadow:hover {

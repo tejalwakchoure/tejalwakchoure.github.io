@@ -7,13 +7,14 @@ function fadeInChildren(parent, base_delay) {
 }
 
 $(document).ready(function() {
-  $(window).load(function() {
   if ($('#body-container').length) {
 
     // Preloader if first visit
     if (!sessionStorage.getItem('doNotPreload')) {
       sessionStorage.setItem( 'doNotPreload', 'true' );
+      $("#preloader").css({visibility: "visible", opacity: 1});
       $('#body-container').css({display: 'none'});
+
       var counter = 0;
       var outerInterval = setInterval(function(){
         $("#preloader .container #wrapper #count").html(counter);
@@ -38,10 +39,11 @@ $(document).ready(function() {
         }
       }, 7);
     } else {
-       $('#preloader').fadeOut(1);
        $('#preloader').css({display: "none"});
+       $('#preloader').css({opacity: 0.0, visibility: "visible"});
      }
-
+  }
+});
     // swiper_in.controller.control = swiper_innermost;
     // swiper.controller.control = swiper_in;
 
@@ -71,9 +73,8 @@ $(document).ready(function() {
     // $('html, body').bind('wheel scroll', function () {
     //     nicescroll.resize();
     //   });
-  }
-});
-});
+//   }
+// });
 
 // Portfolio parallax
 // function addPortfolioParallax() {
@@ -293,7 +294,7 @@ $(window).on("load resize scroll", function() {
     var windowTop = $(window).scrollTop() || 0;
     var elementTop = $('header').offset().top || 0;
     var currentpos = -10;
-    var pos = currentpos + ((windowTop - elementTop) / 10);
+    var pos = currentpos + ((windowTop - elementTop) / 5); // was originally divided by 10
 
     if (pos < -10) {
         pos = -10;
@@ -308,9 +309,9 @@ $(window).on("load resize scroll", function() {
 $(document).ready(function() {
   $('#portfolio .portfolio-link-wrapper').css({visibility: "visible"});
 
-  //Grainy page
-  var imageRoot = "https://tejalwakchoure.github.io/assets/img/grainy_page.jpeg";
-  $(".grainy-page:after").css('backgroundImage', 'url(' + imageRoot + ')');
+  // Grainy page for subpages (doesn't work)
+  // var imageRoot = "https://tejalwakchoure.github.io/assets/img/grainy_page.jpeg";
+  // $(".grainy-page:after").css('backgroundImage', 'url(' + imageRoot + ')');
 });
 
 // Back link on posts

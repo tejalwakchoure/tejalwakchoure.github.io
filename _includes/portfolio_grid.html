@@ -10,13 +10,13 @@
         <div class="container" style="padding: 20px 0;">
             <div class="row">
               <div class="masonry-grid">
+                  <!-- uses 'date' for ordering -->
                   {% for project in site.projects %}
                         <div class="masonry-item">
-                            <div class="portfolio-link-wrapper">
-                                <a href="{{ project.url }}" class="overlay-link"></a>
-                                <div class="overlay"> 
+                            <a href="{{ project.url }}" class="portfolio-link-wrapper">
+                                <!-- <div class="overlay"> 
                                     <span style="margin: auto; padding: 10px;"> {{ project.title }} </span>
-                                </div>
+                                </div> -->
                                 <picture>
                                    <!-- <source 
                                       media="(max-width: 768px)"
@@ -27,7 +27,9 @@
                                    class="img-responsive" 
                                    alt="{{ project.alt }}">
                                 </picture>
-                            </div>
+                                <p class="grid-name">{{ project.title }}</p>
+                                <p class="grid-type">{{ project.type }}</p>
+                            </a>
                         </div>
                   {% endfor %}
                 </div>

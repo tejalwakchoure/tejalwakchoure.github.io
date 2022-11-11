@@ -5,7 +5,7 @@ backend:
   branch: master
   site_domain: tejals-personal-website.netlify.app
 
-site_url: https://tejalwakchoure.github.io/
+site_url: https://tejalwakchoure.github.io
 
 # This line should *not* be indented
 publish_mode: editorial_workflow
@@ -21,10 +21,10 @@ collections:
     slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
     fields: # The fields for each document, usually in front matter
       - {label: "Layout", name: "layout", widget: "hidden", default: "post"}
+      - {label: "Featured Image", name: "img", widget: "image"}
+      - {label: "Image Alt Text", name: "alt", widget: "string"}
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Publish Date", name: "project-date", widget: "string"}
-      # - {label: "Featured Image", name: "img", widget: "image"}
-      # - {label: "Image Alt Text", name: "alt", widget: "string"}
       - {label: "Summary", name: "summary", widget: "string"}
       - {label: "Body", name: "description", widget: "markdown"}
       # - {label: "Link Text", name: "link-type", widget: "string"}

@@ -44,8 +44,13 @@ plugins:
 # include: ['pages']
 
 collections:
-  work_sections:
+  posts:
     output: true
+    permalink: /:title/
+    
+# collections:
+#   work_sections:
+#     output: true
     # permalink: /:title/
     # permalink: /:categories/:title/
 
@@ -65,8 +70,8 @@ permalink: pretty
 
 
 # Netlify support
-backend:
-  name: github
-  repo: tejalwakchoure/tejalwakchoure.github.io
-  branch: master
-  site_domain: tejals-personal-website.netlify.app
+# backend:
+#   name: github
+#   repo: tejalwakchoure/tejalwakchoure.github.io
+#   branch: master
+#   site_domain: tejals-personal-website.netlify.app

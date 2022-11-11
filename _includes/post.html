@@ -1,6 +1,6 @@
 <!-- Post details Section -->
-{% for post in site.work_sections %}
-    {% if page.path == post.path %}
+<!-- {% for post in site.work_sections %}
+    {% if page.path == post.path %} -->
 	<section id="postDetails" data-nosnippet>
 		<div class="container">
 			<div class="row" style="height: fit-content; margin: 15px;">
@@ -30,7 +30,7 @@
                 </picture>
 			</div>
 			<div class="row" id="content-row">
-				{% if post.path contains 'code' %}
+				<!-- {% if post.path contains 'code' %} -->
 						{% if post.summary %}]
 							<h4 class="post-heading">Summary</h4>
 							<p>{{ post.summary }}</p>
@@ -43,7 +43,7 @@
 							<p style="text-align: center; padding: 2rem 0 0 0;">
 								Further details: <a href={{ post.link }} target="_blank">{{ post.link-type }}</a></p>
 						{% endif %}
-				{% elsif post.path contains 'designs' %}
+				<!-- {% elsif post.path contains 'designs' %}
 						{% if post.summary %}
 							<h4 class="post-heading">The Problem</h4>
 							<p>{{ post.summary }}</p>
@@ -67,9 +67,9 @@
 							<p style="text-align: center; padding: 2rem 0 0 0;">
 								Original post: <a href={{ post.link }} target="_blank">{{ post.link-type }}</a></p>
 						{% endif %}
-				{% endif %}
+				{% endif %} -->
 			</div>
 		</div>
 	</section>
-	{% endif %}
-{% endfor %}
+<!-- 	{% endif %}
+{% endfor %} -->

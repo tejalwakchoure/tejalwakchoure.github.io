@@ -1,6 +1,6 @@
 <!-- Post details Section -->
-<!-- {% for post in site.posts %} -->
-    <!-- {% if page.path == post.path %} -->
+{% for post in site.posts %}
+    {% if page.path == post.path %}
 	<section id="postDetails" data-nosnippet>
 		<div class="container">
 			<div class="row" style="height: fit-content; margin: 15px;">
@@ -45,5 +45,5 @@
 			</div>
 		</div>
 	</section>
-	<!-- {% endif %} -->
-<!-- {% endfor %} -->
+	{% endif %}
+{% endfor %}

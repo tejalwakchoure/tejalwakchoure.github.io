@@ -1,6 +1,6 @@
 <!-- Post details Section -->
-{% for post in site.posts %}
-    {% if page.path == post.path %}
+{% for project in site.project %}
+    {% if page.path == project.path %}
 	<section id="postDetails" data-nosnippet>
 		<div class="container">
 			<div class="row" style="height: fit-content; margin: 15px;">
@@ -10,9 +10,9 @@
 				</a>
 			</div>
 			<div class="row" style="flex-direction: column;">
-				<h3 class="post-title">{{ post.title }}</h3>		
-				{% if post.project-date %}
-					<span style="margin: auto; margin-top: 10px; font-weight: 200;">{{ post.project-date }}</span>
+				<h3 class="post-title">{{ project.title }}</h3>		
+				{% if project.project-date %}
+					<span style="margin: auto; margin-top: 10px; font-weight: 200;">{{ project.project-date }}</span>
 				</li>
 				{% endif %}
 			</div>
@@ -20,27 +20,27 @@
                 <picture>
                    <source 
                       media="(max-width: 768px)"
-                      srcset="/assets/img/small-devices/portfolio/{{ post.img }}">
+                      srcset="/assets/img/small-devices/portfolio/{{ project.img }}">
                    <source 
-                      srcset="/assets/img/portfolio/{{ post.img }}">
-                   <img src="/assets/img/portfolio/{{ post.img }}" 
+                      srcset="/assets/img/portfolio/{{ project.img }}">
+                   <img src="/assets/img/portfolio/{{ project.img }}" 
                    class="img-responsive" 
-                   alt="{{ post.alt }}"
+                   alt="{{ project.alt }}"
                    id="main-img">
                 </picture>
 			</div>
 			<div class="row" id="content-row">
-				{% if post.summary %}]
+				{% if project.summary %}]
 					<h4 class="post-heading">Summary</h4>
-					<p>{{ post.summary }}</p>
+					<p>{{ project.summary }}</p>
 				{% endif %}
-				{% if post.description %}
+				{% if project.description %}
 						<h4 class="post-heading">Details</h4>
-						<p markdown="1">{{ post.description }}</p>
+						<p markdown="1">{{ project.description }}</p>
 				{% endif %}
-				{% if post.link %}
+				{% if project.link %}
 					<p style="text-align: center; padding: 2rem 0 0 0;">
-						Further details: <a href={{ post.link }} target="_blank">{{ post.link-type }}</a></p>
+						Further details: <a href={{ project.link }} target="_blank">{{ project.link-type }}</a></p>
 				{% endif %}
 			</div>
 		</div>

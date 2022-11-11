@@ -9,23 +9,23 @@
     <section id="portfolio">
         <div class="container" style="padding: 0;">
             <div class="row">
-                  {% for post in site.posts %}
-                    <!-- {% if post.path contains page.title and post.path contains 'posts' %} -->
+                  {% for project in site.projects %}
+                    <!-- {% if project.path contains page.title and project.path contains 'projects' %} -->
                         <div class="col-sm" style="padding: 0 20px;">
                             <div class="portfolio-link-wrapper">
-                                <a href="{{ post.url }}" class="overlay-link"></a>
+                                <a href="{{ project.url }}" class="overlay-link"></a>
                                 <div class="overlay"> 
-                                    <span style="margin: auto; padding: 10px;"> {{ post.title }} </span>
+                                    <span style="margin: auto; padding: 10px;"> {{ project.title }} </span>
                                 </div>
                                 <picture>
                                    <!-- <source 
                                       media="(max-width: 768px)"
-                                      srcset="/assets/img/small-devices/portfolio/{{ pagename }}/{{ post.img }}">
+                                      srcset="/assets/img/small-devices/portfolio/{{ pagename }}/{{ project.img }}">
                                    <source 
-                                      srcset="/assets/img/portfolio/{{ pagename }}/{{ post.img }}"> -->
-                                   <img src="/assets/img/portfolio/{{ post.img }}" 
+                                      srcset="/assets/img/portfolio/{{ pagename }}/{{ project.img }}"> -->
+                                   <img src="/assets/img/portfolio/{{ project.img }}" 
                                    class="img-responsive" 
-                                   alt="{{ post.alt }}">
+                                   alt="{{ project.alt }}">
                                 </picture>
                             </div>
                         </div>

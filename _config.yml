@@ -44,9 +44,9 @@ plugins:
 # include: ['pages']
 
 collections:
-  posts:
+  projects:
     output: true
-    permalink: /:title/
+    permalink: /:path/
 
 # collections:
 #   work_sections:

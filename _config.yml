@@ -47,7 +47,7 @@ collections:
   posts:
     output: true
     permalink: /:title/
-    
+
 # collections:
 #   work_sections:
 #     output: true
@@ -67,11 +67,3 @@ credits: Tejal Wakchoure
 # Build settings
 markdown: kramdown
 permalink: pretty
-
-
-# Netlify support
-# backend:
-#   name: github
-#   repo: tejalwakchoure/tejalwakchoure.github.io
-#   branch: master
-#   site_domain: tejals-personal-website.netlify.app

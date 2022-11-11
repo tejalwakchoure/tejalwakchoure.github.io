@@ -88,7 +88,7 @@ body {
     height: -moz-fit-content;
     height: -webkit-fit-content;
     height: fit-content;
-    background: #{{ site.color.white }};
+    /*background: #{{ site.color.white }};*/
 }
 
 #preloader {
@@ -130,15 +130,14 @@ body {
     padding: 0.5em; 
 }
 
-#preloader #brand {
+/*#preloader #brand {
     font-size: 4.5em; 
     font-weight: 100;
     letter-spacing: -0.08em; 
     margin: auto auto 0 auto;
     padding-top: 5%;
-    /*font-family: 'Raleway', Lato, sans-serif;*/
     font-family: 'Raleway', 'Source Sans Pro', sans-serif;
-}
+}*/
 
 #preloader #percent {
     /*font-size: 0.8em; */
@@ -564,9 +563,9 @@ section h2, #postDetails h3 {
         height: 3.5em;
         width: 3.5em;
     }
-    #preloader #brand {
+    /*#preloader #brand {
         font-size: 4em;
-    }
+    }*/
     #preloader {
         color: #{{ site.color.heading }} !important;
     }
@@ -584,7 +583,7 @@ section h2, #postDetails h3 {
 }
 
 header {    
-    height: 100vh;
+    height: 85vh;
     width: 100vw;
     padding-right: 0;
     padding-left: 6vw;
@@ -647,7 +646,7 @@ header .img_div {
 }
 
 .header-title {
-    /*width: 50%;*/
+    
     align-items: center;
     /*display: block;
     z-index: 1;*/
@@ -656,11 +655,13 @@ header .img_div {
     display: -webkit-flex; /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
     display: flex;
     /*padding-top: 10%;*/
-    /*position: relative;*/
+    
     font-style: italic;
     color: #{{ site.color.heading }};
-    /*width: fit-content;*/
-    /*padding-left: 3%;*/
+
+    /* for header parallax */
+    width: 75%;
+    position: relative;
 }
 
 .header-intro-text {
@@ -1081,8 +1082,20 @@ header mark {
 .masonry-item:nth-child(6) {
     order: 6;
 }
+.masonry-item:nth-child(7) {
+    order: 7;
+}
+.masonry-item:nth-child(8) {
+    order: 8;
+}
+.masonry-item:nth-child(9) {
+    order: 9;
+}
+.masonry-item:nth-child(10) {
+    order: 10;
+}
 
-.masonry-item:nth-child(3),
+/*.masonry-item:nth-child(3),
 .masonry-item:nth-child(6) {
     min-height: 400px;
     height: 50vh;
@@ -1092,7 +1105,7 @@ header mark {
  {
     min-height: 600px;
     height: 70vh;
-}
+}*/
 
 #portfolio .overlay-link {
     height: 100%;

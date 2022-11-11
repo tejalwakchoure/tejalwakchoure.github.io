@@ -277,21 +277,21 @@ $(window).on("load", function() {
 });
 
 // Horizontal header parallax
-// $(window).on("load resize scroll", function() {
-//   if($('header').length) {
-//     // Depending on the browser, you may need to use var windowTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
-//     var windowTop = $(window).scrollTop() || 0;
-//     var elementTop = $('header').offset().top || 0;
-//     var currentpos = -10;
-//     var pos = currentpos + ((windowTop - elementTop) / 10);
+$(window).on("load resize scroll", function() {
+  if($('header').length) {
+    // Depending on the browser, you may need to use var windowTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
+    var windowTop = $(window).scrollTop() || 0;
+    var elementTop = $('header').offset().top || 0;
+    var currentpos = -10;
+    var pos = currentpos + ((windowTop - elementTop) / 10);
 
-//     if (pos < -10) {
-//         pos = -10;
-//     }
-//     $('.hor_parallax_right').css({ right: pos });
-//     $('.hor_parallax_left').css({ left: pos });
-//   }
-// });
+    if (pos < -10) {
+        pos = -10;
+    }
+    // $('.hor_parallax_right').css({ right: pos });
+    $('.hor_parallax_left').css({ left: pos });
+  }
+});
 
 
 // Hide overlay until images are loaded in portfolio

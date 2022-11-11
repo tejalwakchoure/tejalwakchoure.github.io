@@ -646,7 +646,10 @@ header .img_div {
 }
 
 .header-title {
-    
+    /* for header parallax */
+    width: 75%;
+    position: relative;
+
     align-items: center;
     /*display: block;
     z-index: 1;*/
@@ -658,10 +661,6 @@ header .img_div {
     
     font-style: italic;
     color: #{{ site.color.heading }};
-
-    /* for header parallax */
-    width: 75%;
-    position: relative;
 }
 
 .header-intro-text {
@@ -1308,7 +1307,7 @@ header mark {
 
 .grainy-page:after {
   animation: grain 8s steps(10) infinite;
-  background-image: url("/assets/img/grainy_page.jpeg");
+  background-image: url("https://tejalwakchoure.github.io/assets/img/grainy_page.jpeg");
   content: "";
   height: 300%;
   left: -50%;

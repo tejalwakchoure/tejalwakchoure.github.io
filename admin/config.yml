@@ -14,20 +14,19 @@ media_folder: "/assets/draft_upload" # Media files will be stored in the repo un
 collections:
   - name: "projects" # Used in routes, e.g., /admin/collections/blog
     label: "Projects" # Used in the UI
-    folder: "_projects" # The path to the folder where the documents are stored
+    folder: "_projects/" # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
     slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
     fields: # The fields for each document, usually in front matter
-      # - {label: "Layout", name: "layout", widget: "hidden", default: "blog"}
+      - {label: "Layout", name: "layout", widget: "hidden", default: "post"}
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Publish Date", name: "project-date", widget: "string"}
       # - {label: "Featured Image", name: "img", widget: "image"}
       # - {label: "Image Alt Text", name: "alt", widget: "string"}
       - {label: "Summary", name: "summary", widget: "string"}
-      # - {label: "Rating (scale of 1-5)", name: "rating", widget: "number"}
       - {label: "Body", name: "description", widget: "markdown"}
-      - {label: "Link Text", name: "link-type", widget: "string"}
-      - {label: "Link", name: "link", widget: "string"}
+      # - {label: "Link Text", name: "link-type", widget: "string"}
+      # - {label: "Link", name: "link", widget: "string"}
 
   # - name: "code" # Used in routes, e.g., /admin/collections/blog
   #   label: "Code" # Used in the UI

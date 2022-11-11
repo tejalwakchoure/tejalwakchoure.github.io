@@ -1295,7 +1295,7 @@ header mark {
 
 .grainy-page:after {
   animation: grain 8s steps(10) infinite;
-  background-image: url("assets/img/grainy_page.jpeg");
+  background-image: url("/assets/img/grainy_page.jpeg");
   content: "";
   height: 300%;
   left: -50%;

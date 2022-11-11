@@ -1,6 +1,6 @@
 <!-- Post details Section -->
-<!-- {% for post in site.work_sections %}
-    {% if page.path == post.path %} -->
+{% for post in site.posts %}
+    <!-- {% if page.path == post.path %} -->
 	<section id="postDetails" data-nosnippet>
 		<div class="container">
 			<div class="row" style="height: fit-content; margin: 15px;">
@@ -30,46 +30,20 @@
                 </picture>
 			</div>
 			<div class="row" id="content-row">
-				<!-- {% if post.path contains 'code' %} -->
-						{% if post.summary %}]
-							<h4 class="post-heading">Summary</h4>
-							<p>{{ post.summary }}</p>
-						{% endif %}
-						{% if post.description %}
-								<h4 class="post-heading">Details</h4>
-								<p markdown="1">{{ post.description }}</p>
-						{% endif %}
-						{% if post.link %}
-							<p style="text-align: center; padding: 2rem 0 0 0;">
-								Further details: <a href={{ post.link }} target="_blank">{{ post.link-type }}</a></p>
-						{% endif %}
-				<!-- {% elsif post.path contains 'designs' %}
-						{% if post.summary %}
-							<h4 class="post-heading">The Problem</h4>
-							<p>{{ post.summary }}</p>
-						{% endif %}
-						{% if post.description %}
-							<h4 class="post-heading">The Solution</h4>
-							<p markdown="1">{{ post.description }}</p>
-						{% endif %}
-						{% if post.link %}
-							<p style="text-align: center; padding: 2rem 0 0 0;">
-								Further details: <a href={{ post.link }} target="_blank">{{ post.link-type }}</a></p>
-						{% endif %}
-				{% else %}
-						{% if post.summary %}
-							<h4 class="post-heading">{{ post.summary }}</h4>
-						{% endif %}
-						{% if post.description %}
-							<p markdown="1">{{ post.description }}</p>
-						{% endif %}
-						{% if post.link %}
-							<p style="text-align: center; padding: 2rem 0 0 0;">
-								Original post: <a href={{ post.link }} target="_blank">{{ post.link-type }}</a></p>
-						{% endif %}
-				{% endif %} -->
+				{% if post.summary %}]
+					<h4 class="post-heading">Summary</h4>
+					<p>{{ post.summary }}</p>
+				{% endif %}
+				{% if post.description %}
+						<h4 class="post-heading">Details</h4>
+						<p markdown="1">{{ post.description }}</p>
+				{% endif %}
+				{% if post.link %}
+					<p style="text-align: center; padding: 2rem 0 0 0;">
+						Further details: <a href={{ post.link }} target="_blank">{{ post.link-type }}</a></p>
+				{% endif %}
 			</div>
 		</div>
 	</section>
-<!-- 	{% endif %}
-{% endfor %} -->
+	<!-- {% endif %} -->
+{% endfor %}

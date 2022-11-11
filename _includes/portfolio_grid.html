@@ -11,8 +11,9 @@
             <div class="row">
                   {% for project in site.projects %}
                   <h2>project url - {{ project.url }}</h2>
-                  <h2>project title - {{ project.title }}</h2>
-                    <!-- {% if project.path contains page.title and project.path contains 'projects' %} -->
+                  <br/>
+                  <h3>project title - {{ project.title }}</h3>
+                  <br/>
                         <div class="col-sm" style="padding: 0 20px;">
                             <div class="portfolio-link-wrapper">
                                 <a href="{{ project.url }}" class="overlay-link"></a>
@@ -31,10 +32,11 @@
                                 </picture>
                             </div>
                         </div>
-                    <!-- {% endif %} -->
                   {% endfor %}
             </div>
         </div>
     </section>
   </div>
 </section>
+
+<!-- {% if project.path contains page.title and project.path contains 'projects' %} -->

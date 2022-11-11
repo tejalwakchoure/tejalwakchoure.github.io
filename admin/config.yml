@@ -1,6 +1,6 @@
 
 backend:
- name: github
+  name: github
   repo: tejalwakchoure/tejalwakchoure.github.io
   branch: master
   site_domain: tejals-personal-website.netlify.app

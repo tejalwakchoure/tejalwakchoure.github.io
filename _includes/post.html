@@ -2,13 +2,15 @@
 {% for project in site.projects %}
     {% if page.path == project.path %}
 	<section id="postDetails" data-nosnippet>
-		<div class="container">
-			<div class="row" style="height: fit-content; margin: 15px;">
+		<div class="container" style="justify-content: center;">
+			<!-- <div class="row" style="height: fit-content; margin: 15px;">
 				<a role="button" class="slide-link back-link" onclick="backlink();">
-					<!-- <i class="fa fa-chevron-left" aria-hidden="true"></i> -->
-					BACK
+					<i class="fa fa-long-arrow-left" aria-hidden="true" style=""></i>
 				</a>
-			</div>
+				<a role="button" class="slide-link grid-link" onclick="backlink();">
+					view as grid
+				</a>
+			</div> -->
 			<div class="row" style="flex-direction: column;">
 				<h3 class="post-title">{{ project.title }}</h3>		
 				{% if project.project-date %}
@@ -42,6 +44,7 @@
 					<p style="text-align: center; padding: 2rem 0 0 0;">
 						Further details: <a href={{ project.link }} target="_blank">{{ project.link-type }}</a></p>
 				{% endif %}
+				<p>{{ project.content }}</p>
 			</div>
 		</div>
 	</section>

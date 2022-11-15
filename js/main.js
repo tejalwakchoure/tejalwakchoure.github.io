@@ -43,7 +43,9 @@ $(document).ready(function() {
        $('#preloader').css({opacity: 0.0, visibility: "visible"});
      }
   }
-});
+
+  
+
     // swiper_in.controller.control = swiper_innermost;
     // swiper.controller.control = swiper_in;
 
@@ -74,7 +76,7 @@ $(document).ready(function() {
     //     nicescroll.resize();
     //   });
 //   }
-// });
+});
 
 // Portfolio parallax
 // function addPortfolioParallax() {
@@ -289,19 +291,46 @@ $(window).on("load", function() {
 
 // Horizontal header parallax
 $(window).on("load resize scroll", function() {
-  if($('header').length) {
-    // Depending on the browser, you may need to use var windowTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
-    var windowTop = $(window).scrollTop() || 0;
-    var elementTop = $('header').offset().top || 0;
-    var currentpos = -10;
-    var pos = currentpos + ((windowTop - elementTop) / 5); // was originally divided by 10
+  	if($('header').length) {
+	    // Depending on the browser, you may need to use var windowTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
+	    var windowTop = $(window).scrollTop() || 0;
+	    var elementTop = $('header').offset().top || 0;
+	    var currentpos = -10;
+	    var pos = currentpos + ((windowTop - elementTop) / 5); // was originally divided by 10
 
-    if (pos < -10) {
-        pos = -10;
-    }
-    // $('.hor_parallax_right').css({ right: pos });
-    $('.hor_parallax_left').css({ left: pos });
-  }
+	    if (pos < -10) {
+	        pos = -10;
+	    }
+	    // $('.hor_parallax_right').css({ right: pos });
+	    $('.hor_parallax_left').css({ left: pos });
+  	}
+});
+
+$(window).on("load", function() {
+  // Swiper initialization
+	var swiper = new Swiper(".odds-ends-slider", {
+        effect: "fade",
+        centeredSlides: true,
+        rewind: true,
+        // loop: true,
+        // speed: 600,
+        // cssMode: true,
+        preventInteractionOnTransition: true,
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+        pagination: {
+          el: ".swiper-pagination",
+          type: "fraction",
+        },
+  	});
+	
+	swiper.on('slideChange', function () {
+	    active_slide = $(".swiper-slide-visible");
+	    $('#current-title').html($(active_slide).data('title'));
+	    $('#current-description').html($(active_slide).data('description'));
+	});
 });
 
 

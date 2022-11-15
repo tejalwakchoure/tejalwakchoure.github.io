@@ -1,0 +1,37 @@
+<!-- Slider Section -->
+	<section id="oddsEnds" data-nosnippet>
+		<div class="container" style="justify-content: center;">
+			<!-- <div class="row" style="height: fit-content; margin: 15px;">
+				<a role="button" class="slide-link back-link" onclick="backlink();">
+					<i class="fa fa-long-arrow-left" aria-hidden="true" style=""></i>
+				</a>
+				<a role="button" class="slide-link grid-link" onclick="backlink();">
+					view as grid
+				</a>
+			</div> -->
+			<div class="row">
+			<div id="odds-ends-slider-container">
+			    <div class="swiper odds-ends-slider">
+			      <div class="swiper-wrapper">
+			      	{% for project in page.projects %}
+				        <div class="swiper-slide" data-title="{{project.title}}" data-description="{{project.description}}">
+				        	<img src="{{ site.baseurl }}/assets/img/portfolio/odds-ends/{{ project.slug }}.jpg" alt="image" />
+				        </div>
+					{% endfor %}
+			      </div>
+			      <div class="caption">
+			      	<p id="current-title" style="text-align: center; color: #{{site.color.heading}};">{{ page.projects[0].title }}</p>
+			      	<p id="current-description" class="small" >{{ page.projects[0].description }}</p>
+			      </div>
+			      <div class="swiper-button-next">
+			      	<i class="fa fa-caret-right" aria-hidden="true"></i>
+			      </div>
+			      <div class="swiper-button-prev">
+			      	<i class="fa fa-caret-left" aria-hidden="true"></i>
+			      </div>
+			      <!-- <div class="swiper-pagination"></div> -->
+			    </div>
+			</div>
+		</div>
+		</div>
+	</section>

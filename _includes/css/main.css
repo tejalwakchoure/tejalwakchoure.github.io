@@ -981,7 +981,7 @@ header mark {
 
 #work {
     scroll-behavior: smooth;
-    background: #{{ site.color.backgroundcol }};
+    /*background: #{{ site.color.backgroundcol }};*/
     /*background: linear-gradient(to bottom, #{{ site.color.white }} 0%, #{{ site.color.backgroundcol }} 25%, #{{ site.color.backgroundcol }} 75%, #{{ site.color.white }} 100%);*/
     flex: 1 0 auto;
     display: flex;

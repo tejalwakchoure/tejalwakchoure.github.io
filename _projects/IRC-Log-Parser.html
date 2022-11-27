@@ -1,0 +1,76 @@
+---
+project-id: 6
+title: IRC Log Parser
+
+date: 1000-01-06
+project-date: Aug 2019
+img: superglue.jpg
+alt: A news story being filmed
+link-type: Project Website
+link: //media.mit.edu/projects/superglue/overview/
+
+summary: A media digestion tool that cross-analyses verbal and nonverbal cues for presentation, analysis, and summarization of broadcast news.
+type: Media analysis
+---
+
+<!DOCTYPE html>
+<html>
+<head>
+	{% include head.html %}
+	{% include js.html %}
+	{% include stylesheets.html %}
+</head>
+<body>
+	{% include nav.html %}
+
+	<!-- Project details section -->
+	<section id="projectDetails" data-nosnippet>
+		<div class="container" style="justify-content: center;">
+		<!-- <div class="row" style="height: fit-content; margin: 15px;">
+			<a role="button" class="slide-link back-link" onclick="backlink();">
+				<i class="fa fa-long-arrow-left" aria-hidden="true" style=""></i>
+			</a>
+			<a role="button" class="slide-link grid-link" onclick="backlink();">
+				view as grid
+			</a>
+		</div> -->
+		<div class="row" style="flex-direction: column;">
+			<h3 class="project-title">{{ page.title }}</h3>		
+			{% if page.project-date %}
+			<span style="margin: auto; margin-top: 10px; font-weight: 200;">{{ page.project-date }}</span>
+		</li>
+		{% endif %}
+	</div>
+	<div class="row" style="justify-content: center;">
+		<picture>
+               <!-- <source 
+                  media="(max-width: 768px)"
+                  srcset="/assets/img/small-devices/portfolio/{{ page.img }}">
+               <source 
+               srcset="/assets/img/portfolio/{{ page.img }}"> -->
+               <img src="/assets/img/portfolio/{{ page.img }}" 
+               class="img-responsive" 
+               alt="{{ page.alt }}"
+               id="main-img">
+           </picture>
+       </div>
+       <div class="row" id="content-row">
+       	{% if page.summary %}
+       	<h4 class="project-heading">Summary</h4>
+       	<p>{{ page.summary }}</p>
+       	{% endif %}
+       	<h4 class="project-heading">Details</h4>
+       	<p>
+       		The main objective of this project was to understand the relationship between content and presentation for any given scene and understand the emotive aspects of the same. We wanted to study the extent to which such a presentation affects audiences and see if we can extract the content from its packaging. We also investigated how the presentation of the same content differs from channel to channel. This analysis aimed to measure if such portrayals affect their audiences and contribute to the formation of potentially dangerous echo chambers. <br /> <br /> SuperGlue fuses multiple modalities to create a comprehensive model for the cross-analysis of body language, scene context, and other signals to explore the nature of news on different media outlets. I spearheaded the body language analysis for this project, where we cross-examined hand gestures, facial expressions, and body posture of the newscaster as three dimensions of influence on the overall manner of demonstration. The model is developed in <a href="https://opencv.org/" target="_blank">OpenCV</a> and <a href="https://pytorch.org/" target="_blank">PyTorch</a> using fusion at the decision level for emotion analysis. Its principal components are a <a href="https://en.wikipedia.org/wiki/Recurrent_neural_network" target="_blank">Recurrent Neural Network</a>, <a href="https://en.wikipedia.org/wiki/Convolutional_neural_network" target="_blank">3D Convolutional Neural Network</a>, and <a href="https://azure.microsoft.com/en-us/services/cognitive-services/" target="_blank">Azure Media Analytics’ model</a> for posture recognition, hand gesture recognition, and facial emotion recognition respectively.
+       	</p>
+       	<p style="text-align: center; padding: 2rem 0 0 0;">
+       		Further details: <a href="//github.com/tejalwakchoure/IRCLogParser" target="_blank">GitHub</a>
+       	</p>
+       </div>
+
+   </section>
+
+
+   {% include footer.html %}
+</body>
+</html>

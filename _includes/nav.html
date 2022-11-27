@@ -1,8 +1,8 @@
-<nav class="sidenav navbar navbar-expand-custom">
+<nav class="sidenav navbar navbar-expand-custom {{ include.coloured_back }}">
 
     <div class="page-scroll navbar-brand-scroll" style="position: relative;">
-        <a class="navbar-brand" style="width: 100%; height: 100%;" href="https://tejalwakchoure.github.io/">
-            <span style="{{ include.white_brand_style | default: ; }} position: fixed;">tw</span>
+        <a class="navbar-brand" style="width: 100%; height: 100%;" href="/">
+            <span class="{{ include.coloured_front }}" style="position: fixed;">tw</span>
             <span class="brand-shadow" style="position: fixed;">tw</span>
             <!-- {% if page.title == 'homepage' or page.title == 'code' or page.title == 'designs' or page.title == 'words' %} -->
                 <!-- <span style="{{ include.white_brand_style | default: ; }} position: fixed;">tw</span> -->
@@ -24,11 +24,14 @@
     <div id="navbarContent">
         <ul class="navbar-nav">
             <li class="page-scroll">
-                <a class="text nav-link" href="https://tejalwakchoure.github.io/">home</a>
+                <a class="text nav-link" href="/" style="{{ include.highlight_home | default: ; }}">home</a>
             </li>
             <li class="page-scroll">
-                <a class="text nav-link" href="https://tejalwakchoure.github.io/about/">about</a>
+                <a class="text nav-link" href="/about/" style="{{ include.highlight_about | default: ; }}">about</a>
             </li>
+            <!-- <li class="page-scroll">
+                <a class="text nav-link" href="https://tejalwakchoure.github.io/resume/">resume</a>
+            </li> -->
         </ul>
     </div>
     <!-- <div class="page-scroll kill-on-small-devices">

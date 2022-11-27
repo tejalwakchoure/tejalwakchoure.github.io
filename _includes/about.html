@@ -1,72 +1,81 @@
 <!-- About Section -->
 <section id="about" style="display: flex;">
   <div class="container" style="padding: 0; display: flex; flex-direction: row;">
-    <div class="row">
-      <div class="col about-col" style="height: 100vh; flex-grow: 0; flex-direction: column; margin: 0 50px 0 20px;">
-        <div class="row">
+    <div class="row outer-row">
+      <div class="col about-col" style="flex-grow: 0; flex-direction: column; margin: 0 50px 0 20px;">
+        <div class="row kill-on-small-devices">
           <picture>
-                 <source 
-                    media="(max-width: 768px)"
-                    srcset="/assets/img/small-devices/profile-picture.jpeg">
-                 <source srcset="/assets/img/profile-picture.jpeg">
-                 <img src="/assets/img/profile-picture.jpeg" class="img-responsive about-img" alt="A picture of Tejal">
-             </picture>
-           </div>
-         <div class="row about-side-text">
-            <h3 style="text-transform: capitalize; letter-spacing: unset;">Skills & Interests</h3>
-            <p>
-            I like to work on detail-oriented projects that solve real-world problems. My interests lie in wielding my expertise in the languages of words and code to create beautiful interactions. Storytelling exists in everything we do, whether it be writing meaningful content or designing strong systems to build user perception. 
-            </p>
-            <br>
-            <p>
-            The teams that excite me most focus on creative collaboration to solve complex problems. They believe that creative endeavours are both an art and a science. I enjoy working with teams on projects where I can draw from these three core fields of knowledge to create strong experiences.
-            </p>
+           <source 
+           media="(max-width: 768px)"
+           srcset="/assets/img/small-devices/profile-picture-new.jpeg">
+           <source srcset="/assets/img/profile-picture-new.jpeg">
+             <img src="/assets/img/profile-picture-new.jpeg" class="img-responsive about-img" alt="A picture of Tejal">
+           </picture>
          </div>
-       </div>
-      <div class="col about-col about-main-text" style="padding-top: 50px; display: block;">
+         <div class="row about-side-text">
+          <h3 style="text-transform: capitalize; letter-spacing: unset;">Skills & Interests</h3>
+          <p>
+            I like to work on detail-oriented projects that solve real-world problems. My interests lie in wielding my expertise in the languages of words and code to create beautiful interactions. Storytelling exists in everything we do, whether it be writing meaningful content or designing strong systems to build user perception. 
+          </p>
+          <br>
+          <p>
+            The teams that excite me most focus on creative collaboration to solve complex problems. They believe that creative endeavours are both an art and a science. I enjoy working with teams on projects where I can draw from these three core fields of knowledge to create strong experiences.
+          </p>
+        </div>
+      </div>
+      <div class="col about-col about-main-text" style="padding-top: 50px;">
         <h2 class="hello">Hi! I'm Tejal.</h2>
         <p class="small">(she/her)</p>
+        <picture class="kill-on-large-devices">
+         <source 
+         media="(max-width: 768px)"
+         srcset="/assets/img/small-devices/profile-picture-new.jpeg">
+         <source srcset="/assets/img/profile-picture-new.jpeg">
+           <img src="/assets/img/profile-picture-new.jpeg" class="img-responsive about-img" alt="A picture of Tejal">
+         </picture>
+         <br>
+         <p>
+          I'm a developer and designer based in Mumbai, India. I earned a degree in computer science at <a href="https://www.bits-pilani.ac.in/" target="_blank">BITS Pilani</a> and pursued my undergraduate thesis with <a href="https://web.media.mit.edu/~lip/" target="_blank">Andrew Lippman</a> at the <a href="https://www.media.mit.edu/" target="_blank">MIT Media Lab</a>. Over the pandemic years, I built systems at <a href="https://www.goldmansachs.com/" target="_blank">Goldman Sachs</a>.
+        </p>
         <br>
+
         <p>
-        I'm a developer and designer based in Mumbai, India. I earned a degree in computer science at <a href="https://www.bits-pilani.ac.in/" target="_blank">BITS Pilani</a> and pursued my undergraduate thesis with <a href="https://web.media.mit.edu/~lip/" target="_blank">Andrew Lippman</a> at the <a href="https://www.media.mit.edu/" target="_blank">MIT Media Lab</a>. Over the pandemic years, I built systems at <a href="https://www.goldmansachs.com/" target="_blank">Goldman Sachs</a>.
+          I like to work on detail-oriented projects that solve real-world human-computer interaction (HCI) problems. I enjoy working with people who value empathy-driven development. My interests are interdisciplinary, blending concepts from HCI and product design with literature, art, and economics. 
         </p>
         <br>
         <p>
-        I like to work on detail-oriented projects that solve real-world human-computer interaction (HCI) problems. I enjoy working with people who value empathy-driven development. My interests are interdisciplinary, blending concepts from HCI and product design with literature, art, and economics. 
+          Back in 2019, a summer internship project drove me to explore UI design, and I have been fascinated with it ever since. I built <a href="https://github.com/tejalwakchoure/tejalwakchoure.github.io" target="_blank">this website</a> and implemented <a href="https://github.com/tejalwakchoure/loveletters-premium" target="_blank">one of my favourite tabletop games</a>. For my thesis, I worked on politics and computer vision for a <a href="https://www.media.mit.edu/projects/superglue/overview/" target="_blank">grassroots-level analysis of news media</a>. (<a href="https://bitsrnd.wordpress.com/2020/08/04/578/" target="_blank">Here</a> is an interview on my experience!)
         </p>
         <br>
         <p>
-        Back in 2019, a summer internship project drove me to explore UI design, and I have been fascinated with it ever since. I built <a href="https://github.com/tejalwakchoure/tejalwakchoure.github.io" target="_blank">this website</a> and implemented <a href="https://github.com/tejalwakchoure/loveletters-premium" target="_blank">one of my favourite tabletop games</a>. For my thesis, I worked on politics and computer vision for a <a href="https://www.media.mit.edu/projects/superglue/overview/" target="_blank">grassroots-level analysis of news media</a>. (<a href="https://bitsrnd.wordpress.com/2020/08/04/578/" target="_blank">Here</a> is an interview on my experience!)
+          When I'm not <a href="https://github.com/tejalwakchoure?tab=repositories" target="_blank">coding up random stuff</a>, I:
+          <ul class="about-list">
+            <li>
+              write. Back in university, I was an editor for our literary and technical magazine.
+            </li>
+            <li>
+              illustrate on <a href="https://krita.org/en/" target="_blank">Krita</a>. It's not much, but it's honest work :)
+            </li>
+            <li>
+              attend pub quizzes and play casual games. I have a soft spot for Rollercoaster Tycoon.
+            </li>
+            <li>
+              listen to pop rock. I firmly believe that the '00s was the greatest decade for pop music.
+            </li>
+            <li>
+              read fiction. My current favourite is <a href="https://www.goodreads.com/book/show/37570546-maybe-you-should-talk-to-someone" target="_blank">Maybe You Should Talk to Someone</a>.
+            </li>
+            <li>
+              watch and dissect movies/TV shows. I am obsessed with Vox's <a href="https://www.imdb.com/title/tt8005374/" target="_blank">Explained</a> series.
+            </li>
+          </ul>
         </p>
         <br>
         <p>
-        When I'm not <a href="https://github.com/tejalwakchoure?tab=repositories" target="_blank">coding up random stuff</a>, I:
-        <ul class="about-list">
-          <li>
-          write. Back in university, I was an editor for our literary and technical magazine.
-          </li>
-          <li>
-          illustrate on <a href="https://krita.org/en/" target="_blank">Krita</a>. It's not much, but it's honest work :)
-          </li>
-          <li>
-          attend pub quizzes and play casual games. I have a soft spot for Rollercoaster Tycoon.
-          </li>
-          <li>
-          listen to pop rock. I firmly believe that the '00s was the greatest decade for pop music.
-          </li>
-          <li>
-          read fiction. My current favourite is <a href="https://www.goodreads.com/book/show/37570546-maybe-you-should-talk-to-someone" target="_blank">Maybe You Should Talk to Someone</a>.
-          </li>
-          <li>
-          watch and dissect movies/TV shows. I am obsessed with Vox's <a href="https://www.imdb.com/title/tt8005374/" target="_blank">Explained</a> series.
-          </li>
-        </ul>
-        </p>
-        <br>
-        <p>
-        If you have an opportunity that I would be a great fit for, please <span class="page-scroll"><a href="#contact">contact me</a></span>. Came across an interesting article? I'd love to chat!
+          If you have an opportunity that I would be a great fit for, please <span class="page-scroll"><a href="#contact">contact me</a></span>. Came across an interesting article? I'd love to chat!
         </p>
       </div>
     </div>
   </div>
+</div>
 </section>

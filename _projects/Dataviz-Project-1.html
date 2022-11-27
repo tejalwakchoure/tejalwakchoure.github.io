@@ -1,0 +1,71 @@
+---
+project-id: 1
+title: Dataviz Project 1
+
+date: 1000-01-01
+project-date: Jan 2018
+img: mlcat.jpg
+alt: A system visualizing and manipulating data
+
+summary: A mailing list parser that constructs time-varying conversation thread hypergraphs revealing communication patterns to form predictive models.
+type: Mailing list analysis
+---
+
+<!DOCTYPE html>
+<html>
+<head>
+	{% include head.html %}
+	{% include js.html %}
+	{% include stylesheets.html %}
+</head>
+<body>
+	{% include nav.html %}
+
+	<!-- Project details section -->
+	<section id="projectDetails" data-nosnippet>
+		<div class="container" style="justify-content: center;">
+		<!-- <div class="row" style="height: fit-content; margin: 15px;">
+			<a role="button" class="slide-link back-link" onclick="backlink();">
+				<i class="fa fa-long-arrow-left" aria-hidden="true" style=""></i>
+			</a>
+			<a role="button" class="slide-link grid-link" onclick="backlink();">
+				view as grid
+			</a>
+		</div> -->
+		<div class="row" style="flex-direction: column;">
+			<h3 class="project-title">{{ page.title }}</h3>		
+			{% if page.project-date %}
+			<span style="margin: auto; margin-top: 10px; font-weight: 200;">{{ page.project-date }}</span>
+		</li>
+		{% endif %}
+	</div>
+	<div class="row" style="justify-content: center;">
+		<picture>
+               <!-- <source 
+                  media="(max-width: 768px)"
+                  srcset="/assets/img/small-devices/portfolio/{{ page.img }}">
+               <source 
+               srcset="/assets/img/portfolio/{{ page.img }}"> -->
+               <img src="/assets/img/portfolio/{{ page.img }}" 
+               class="img-responsive" 
+               alt="{{ page.alt }}"
+               id="main-img">
+           </picture>
+       </div>
+       <div class="row" id="content-row">
+       	{% if page.summary %}
+       	<h4 class="project-heading">Summary</h4>
+       	<p>{{ page.summary }}</p>
+       	{% endif %}
+       	<h4 class="project-heading">Details</h4>
+       	<p>
+       		We developed an <a href="https://en.wikipedia.org/wiki/Internet_Message_Access_Protocol" target="_blank">IMAP server</a>-based mailing list parser to extract information such as senders and time stamps, the study of which helped us construct organisational structures and derive local and global communication patterns. The focal points of this research were the invariant characteristics of a discussion thread, mailing list filters to remove spam messages for subscribers, and temporal behaviour modelling. We use the <a href="https://www.mapequation.org/infomap/" target="_blank">Infomap</a> algorithm for multilevel community detection analysis. Relevant labels are incorporated from text mined using the <a href="https://wordnet.princeton.edu/" target="_blank">WordNet</a> lemmatizer. <br /> <br /> This architecture identifies the community structure, makes predictive models, and assigns weights based on the activeness of each user amongst other activities. For example, in cases where conversations happen slowly, authors arrive slowly and the discussion spans many generations of nodes. When they end quickly, however, authors arrive quickly and the discussion ends within a few generations. We can attribute this behaviour to the popularity of the topic - authors come in from many sources for popular ones, but help trickles in slowly for specialised ones. The questions we ask then are, what are these popular threads? Can text mining help us detect them?
+       	</p>
+       </div>
+
+   </section>
+
+
+   {% include footer.html %}
+</body>
+</html>

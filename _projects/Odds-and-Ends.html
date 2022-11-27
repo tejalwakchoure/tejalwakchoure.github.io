@@ -1,10 +1,9 @@
 ---
 layout: slider
-project-id: 10
-date: 1000-01-10
-
+project-id: 7
 title: Odds and Ends
 
+date: 1000-01-07
 img: ../grainy_page.jpeg
 alt: a grainy page
 
@@ -22,3 +21,18 @@ projects:
   title: SuperGlue
   description: A media digestion tool that cross-analyses verbal and nonverbal cues for presentation, analysis, and summarization of broadcast news. For example, in cases where conversations happen slowly, authors arrive slowly and the discussion spans many generations of nodes. When they end quickly, however, authors arrive quickly and the discussion ends within a few generations. We can attribute this behaviour to the popularity of the topic - authors come in from many sources for popular ones, but help trickles in slowly for specialised ones. The questions we ask then are, what are these popular threads? Can text mining help us detect them?
 ---
+
+<!DOCTYPE html>
+<html>
+    <head>
+        {% include head.html %}
+        {% include js.html %}
+        {% include stylesheets.html %}
+    </head>
+    <body id="main" class="index" style="min-height: 100vh; display: flex; flex-direction: column; justify-content: space-between;">
+          {% include nav.html %}
+          {% include slider.html %}
+          {% include footer.html %}
+        </div>
+    </body>
+</html>

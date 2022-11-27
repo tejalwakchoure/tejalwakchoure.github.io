@@ -1,9 +1,9 @@
 //Preloader and page fade in setup
 function fadeInChildren(parent, base_delay) {
-    var elems = $(parent).children();
-    $(elems).each(function(index) {
-        $(this).css({opacity: 0.0, visibility: "visible"}).delay(base_delay+(500*index)).animate({opacity: 1.0}, 500);
-    });
+  var elems = $(parent).children();
+  $(elems).each(function(index) {
+    $(this).css({opacity: 0.0, visibility: "visible"}).delay(base_delay+(500*index)).animate({opacity: 1.0}, 500);
+  });
 }
 
 $(document).ready(function() {
@@ -22,8 +22,8 @@ $(document).ready(function() {
         if(counter >= 101) {
           clearInterval(outerInterval);
           var innerInterval = setInterval(function() {
-              if(document.readyState === 'complete') {
-                clearInterval(innerInterval);
+            if(document.readyState === 'complete') {
+              clearInterval(innerInterval);
 
                 // Animate components on and off the screen on loading
                 $('#preloader').slideUp(600);
@@ -35,16 +35,16 @@ $(document).ready(function() {
                 // startTime();
                 // addPortfolioParallax();
               }
-          }, 7);
+            }, 7);
         }
       }, 7);
     } else {
-       $('#preloader').css({display: "none"});
-       $('#preloader').css({opacity: 0.0, visibility: "visible"});
-     }
-  }
+     $('#preloader').css({display: "none"});
+     $('#preloader').css({opacity: 0.0, visibility: "visible"});
+   }
+ }
 
-  
+
 
     // swiper_in.controller.control = swiper_innermost;
     // swiper.controller.control = swiper_in;
@@ -118,12 +118,12 @@ $(document).ready(function() {
 // Preload images & background images
 function preloadImages(dir, imageArray, index=0) {
   if (imageArray && imageArray.length > index) {
-      var img = new Image ();
-      img.onload = function() {
-          preloadImages(dir, imageArray, index + 1);
-      }
-      img.src = dir + imageArray[index];
+    var img = new Image ();
+    img.onload = function() {
+      preloadImages(dir, imageArray, index + 1);
     }
+    img.src = dir + imageArray[index];
+  }
 }
 
 // Swiper initializations
@@ -291,27 +291,49 @@ $(window).on("load", function() {
 
 // Horizontal header parallax
 $(window).on("load resize scroll", function() {
-  	if($('header').length) {
+ if($('header').length) {
 	    // Depending on the browser, you may need to use var windowTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
-	    var windowTop = $(window).scrollTop() || 0;
-	    var elementTop = $('header').offset().top || 0;
-	    var currentpos = -10;
-	    var pos = currentpos + ((windowTop - elementTop) / 5); // was originally divided by 10
+      var windowTop = $(window).scrollTop() || window.pageYOffset || 0;
+      var elementTop = $('header').offset().top || 0;
+      var currentpos = -10;
+      var factor = 5;
+      if($(window).width() < 1024) {
+        factor = 10;
+        currentpos = 0;
+      }
+	    var pos = currentpos + ((windowTop - elementTop) / factor); // was originally divided by 10
 
 	    if (pos < -10) {
-	        pos = -10;
-	    }
+       pos = -10;
+     }
 	    // $('.hor_parallax_right').css({ right: pos });
 	    $('.hor_parallax_left').css({ left: pos });
-  	}
+      console.log(pos);
+    }
+  });
+
+
+// Horizontal header parallax for mobile
+$(document.body).on('touchmove', function() {
+  var windowTop = document.body.scrollTop || 0;
+  var elementTop = $('header').offset().top || 0;
+  var currentpos = 0;
+  var factor = 10;
+  var pos = currentpos + ((windowTop - elementTop) / factor);
+
+  if (pos < -10) {
+    pos = -10;
+  }
+  $('.hor_parallax_left').css({ left: pos });
 });
+
 
 $(window).on("load", function() {
   // Swiper initialization
-	var swiper = new Swiper(".odds-ends-slider", {
-        effect: "fade",
-        centeredSlides: true,
-        rewind: true,
+  var swiper = new Swiper(".odds-ends-slider", {
+    effect: "fade",
+    centeredSlides: true,
+    rewind: true,
         // loop: true,
         // speed: 600,
         // cssMode: true,
@@ -324,13 +346,13 @@ $(window).on("load", function() {
           el: ".swiper-pagination",
           type: "fraction",
         },
-  	});
-	
-	swiper.on('slideChange', function () {
-	    active_slide = $(".swiper-slide-visible");
-	    $('#current-title').html($(active_slide).data('title'));
-	    $('#current-description').html($(active_slide).data('description'));
-	});
+      });
+
+  swiper.on('slideChange', function () {
+   active_slide = $(".swiper-slide-visible");
+   $('#current-title').html($(active_slide).data('title'));
+   $('#current-description').html($(active_slide).data('description'));
+ });
 });
 
 
@@ -343,13 +365,13 @@ $(document).ready(function() {
   // $(".grainy-page:after").css('backgroundImage', 'url(' + imageRoot + ')');
 });
 
-// Back link on posts
+// Back link on projects
   // ('back-link').setAttribute('href', document.referrer);
-function backlink() {
+  function backlink() {
       // $('back-link').attr('href', document.referrer);
       history.back();
       return false;
- }
+    }
 
 
 // var element = document.getElementById('back-link');

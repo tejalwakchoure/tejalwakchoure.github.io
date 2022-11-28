@@ -15,7 +15,11 @@
 			      <div class="swiper-wrapper">
 			      	{% for project in page.projects %}
 				        <div class="swiper-slide" data-title="{{project.title}}" data-description="{{project.description}}">
-				        	<img src="{{ site.baseurl }}/assets/img/portfolio/odds-ends/{{ project.slug }}.jpg" alt="image" />
+				        	{% if project.video %}
+				        		<img src="{{ site.baseurl }}/assets/img/portfolio/odds-ends/{{ project.slug }}.gif" alt="image" />
+				        	{% else %}
+				        		<img src="{{ site.baseurl }}/assets/img/portfolio/odds-ends/{{ project.slug }}.jpg" alt="image" />
+				        	{% endif %}
 				        </div>
 					{% endfor %}
 			      </div>
@@ -29,7 +33,6 @@
 			      <div class="swiper-button-prev">
 			      	<i class="fa fa-caret-left" aria-hidden="true"></i>
 			      </div>
-			      <!-- <div class="swiper-pagination"></div> -->
 			    </div>
 			</div>
 		</div>

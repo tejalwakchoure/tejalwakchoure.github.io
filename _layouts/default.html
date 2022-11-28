@@ -8,14 +8,13 @@
     <body id="main" class="index body-with-bkg">
 
       <style>#preloader{visibility: hidden; opacity: 0;}</style>
-        {% include preloader.html %}
+        {% include preloader.html coloured_front_light='coloured_front_light' %}
 
         <div id="body-container">
           {% include nav.html coloured_front='coloured_front' coloured_back='coloured_back' highlight_home='text-decoration: underline; text-underline-offset: 4px;' %}
           {% include header.html %}
           {% include portfolio_grid.html %}
           {% include footer.html %}
-          <!-- fix_footer_style="position: fixed; bottom: 0; width: 100vw;" %} -->
         </div>
         
         <!-- Netlify access -->

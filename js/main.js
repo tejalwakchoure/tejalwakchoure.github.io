@@ -43,40 +43,9 @@ $(document).ready(function() {
      $('#preloader').css({opacity: 0.0, visibility: "visible"});
    }
  }
-
-
-
     // swiper_in.controller.control = swiper_innermost;
     // swiper.controller.control = swiper_in;
-
-    // Smooth Mouse Scrolling for all browsers
-    // $('html, body').easeScroll({
-    //     frameRate: 60,
-    //     stepSize: 60,
-    //   });
-
-    // // Backup - slow but works on all browsers
-    // var isSmoothScrollSupported = 'scrollBehavior' in document.documentElement.style;
-    // var nicescroll = $('html, body').niceScroll({
-    //     scrollspeed: 60, // scrolling speed - moves faster if speed is less
-    //     mousescrollstep: 16,
-    //     autohidemode: false, 
-    //     zindex: 999 
-    //   });
-
-    // // Hide scrollbar
-    // var _super = nicescroll.getContentSize;
-    // nicescroll.getContentSize = function () {
-    //     var page = _super.call(nicescroll);
-    //     page.h = nicescroll.win.height();
-    //     return page;
-    //   }
-    // $('.nicescroll-rails.nicescroll-rails-vr').remove();
-    // $('html, body').bind('wheel scroll', function () {
-    //     nicescroll.resize();
-    //   });
-//   }
-});
+  });
 
 // Portfolio parallax
 // function addPortfolioParallax() {
@@ -94,25 +63,6 @@ $(document).ready(function() {
 //             });
 //         }
 //     }, 100);
-// }
-
-// Local datetime update
-// function startTime() {
-//     var today = new Date();
-//     var h = today.getHours();
-//     var m = today.getMinutes();
-//     var mth = today.getMonth() + 1;
-//     var day = today.getDate();
-//     h = checkTime(h);
-//     m = checkTime(m);
-//     mth = checkTime(mth);
-//     day = checkTime(day);
-//     $('.navbar-text').html(day + "/" + mth  +  "<br>" + h + ":" + m);
-//     var t = setTimeout(startTime, 500);
-// }
-// function checkTime(i) {
-//     if (i < 10) {i = "0" + i};
-//     return i;
 // }
 
 // Preload images & background images
@@ -312,21 +262,19 @@ $(window).on("load resize scroll", function() {
     }
   });
 
+// // Horizontal header parallax for mobile
+// $(document.body).on('touchmove', function() {
+//   var windowTop = document.body.scrollTop || 0;
+//   var elementTop = $('header').offset().top || 0;
+//   var currentpos = 0;
+//   var factor = 10;
+//   var pos = currentpos + ((windowTop - elementTop) / factor);
 
-// Horizontal header parallax for mobile
-$(document.body).on('touchmove', function() {
-  var windowTop = document.body.scrollTop || 0;
-  var elementTop = $('header').offset().top || 0;
-  var currentpos = 0;
-  var factor = 10;
-  var pos = currentpos + ((windowTop - elementTop) / factor);
-
-  if (pos < -10) {
-    pos = -10;
-  }
-  $('.hor_parallax_left').css({ left: pos });
-});
-
+//   if (pos < -10) {
+//     pos = -10;
+//   }
+//   $('.hor_parallax_left').css({ left: pos });
+// });
 
 $(window).on("load", function() {
   // Swiper initialization
@@ -334,19 +282,16 @@ $(window).on("load", function() {
     effect: "fade",
     centeredSlides: true,
     rewind: true,
-        // loop: true,
-        // speed: 600,
-        // cssMode: true,
-        preventInteractionOnTransition: true,
-        navigation: {
-          nextEl: ".swiper-button-next",
-          prevEl: ".swiper-button-prev",
-        },
-        pagination: {
-          el: ".swiper-pagination",
-          type: "fraction",
-        },
-      });
+    preventInteractionOnTransition: true,
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+    pagination: {
+      el: ".swiper-pagination",
+      type: "fraction",
+    },
+  });
 
   swiper.on('slideChange', function () {
    active_slide = $(".swiper-slide-visible");
@@ -359,24 +304,15 @@ $(window).on("load", function() {
 // Hide overlay until images are loaded in portfolio
 $(document).ready(function() {
   $('#portfolio .portfolio-link-wrapper').css({visibility: "visible"});
-
   // Grainy page for subpages (doesn't work)
   // var imageRoot = "https://tejalwakchoure.github.io/assets/img/grainy_page.jpeg";
   // $(".grainy-page:after").css('backgroundImage', 'url(' + imageRoot + ')');
 });
 
 // Back link on projects
-  // ('back-link').setAttribute('href', document.referrer);
-  function backlink() {
-      // $('back-link').attr('href', document.referrer);
-      history.back();
-      return false;
-    }
-
-
-// var element = document.getElementById('back-link');
-// element.setAttribute('href', document.referrer);
-// element.onclick = function() {
-//   history.back();
-//   return false;
-// }
+// ('back-link').setAttribute('href', document.referrer);
+function backlink() {
+    // $('back-link').attr('href', document.referrer);
+    history.back();
+    return false;
+  }

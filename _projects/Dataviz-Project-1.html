@@ -1,7 +1,7 @@
 ---
 project-id: 1
-title: Dataviz Project 1
-type: Mailing list analysis
+title: Guinea-Bisseau
+type: dataviz
 
 date: 1000-01-01
 img: ../../grainy_page.jpeg
@@ -19,49 +19,57 @@ alt: a grainy page
 	{% include nav.html %}
 
 	<!-- Project details section -->
-	<section id="projectDetails" data-nosnippet>
+	<section id="projectDetails" class="coup" data-nosnippet>
 		<div class="container" style="justify-content: center;">
-		<!-- <div class="row" style="height: fit-content; margin: 15px;">
-			<a role="button" class="slide-link back-link" onclick="backlink();">
-				<i class="fa fa-long-arrow-left" aria-hidden="true" style=""></i>
-			</a>
-			<a role="button" class="slide-link grid-link" onclick="backlink();">
-				view as grid
-			</a>
-		</div> -->
-		<div class="row" style="flex-direction: column;">
-			<h3 class="project-title">{{ page.title }}</h3>		
-			{% if page.project-date %}
-			<span style="margin: auto; margin-top: 10px; font-weight: 200;">{{ page.project-date }}</span>
-		</li>
-		{% endif %}
-	</div>
-	<div class="row" style="justify-content: center;">
-		<picture>
-               <!-- <source 
+			<div class="row" style="align-items: center;">
+				<h1 class="project-title">{{ page.title }}</h1>
+			</div>
+		      <!-- <picture>
+               <source 
                   media="(max-width: 768px)"
                   srcset="/assets/img/small-devices/portfolio/{{ page.img }}">
                <source 
-               srcset="/assets/img/portfolio/{{ page.img }}"> -->
+               srcset="/assets/img/portfolio/{{ page.img }}">
                <img src="/assets/img/portfolio/{{ page.img }}" 
                class="img-responsive" 
                alt="{{ page.alt }}"
                id="main-img">
-           </picture>
-       </div>
-       <div class="row" id="content-row">
-       	{% if page.summary %}
-       	<h4 class="project-heading">Summary</h4>
-       	<p>{{ page.summary }}</p>
-       	{% endif %}
-       	<h4 class="project-heading">Details</h4>
-       	<p>
-       		We developed an <a href="https://en.wikipedia.org/wiki/Internet_Message_Access_Protocol" target="_blank">IMAP server</a>-based mailing list parser to extract information such as senders and time stamps, the study of which helped us construct organisational structures and derive local and global communication patterns. The focal points of this research were the invariant characteristics of a discussion thread, mailing list filters to remove spam messages for subscribers, and temporal behaviour modelling. We use the <a href="https://www.mapequation.org/infomap/" target="_blank">Infomap</a> algorithm for multilevel community detection analysis. Relevant labels are incorporated from text mined using the <a href="https://wordnet.princeton.edu/" target="_blank">WordNet</a> lemmatizer. <br /> <br /> This architecture identifies the community structure, makes predictive models, and assigns weights based on the activeness of each user amongst other activities. For example, in cases where conversations happen slowly, authors arrive slowly and the discussion spans many generations of nodes. When they end quickly, however, authors arrive quickly and the discussion ends within a few generations. We can attribute this behaviour to the popularity of the topic - authors come in from many sources for popular ones, but help trickles in slowly for specialised ones. The questions we ask then are, what are these popular threads? Can text mining help us detect them?
-       	</p>
-       </div>
+           </picture> -->
 
+           <div class="row" id="content-row">
+           	<div id="overview">
+           		<p>
+           			We had just been sent home from college due to the pandemic. Bored and restless, two of us implemented one of our favourite board games, Love Letter, onto a locally-hosted web platform so that we could play it with our friends over Zoom. The interface included the layout and positioning of 18 cards and 3 screens which incorporated all gameplay controls (cards, points, tokens) to support interactive online play for up to 8 players.
+           		</p>
+           		<br><br>
+           		<p> <span class="bold">Project Type: </span>{{ page.type }}</p>
+           		<p> <span class="bold">Role: </span>end-to-end UI design, front-end development, wireframing, prototyping, playtesting</p>
+           		<p> <span class="bold">Tools: </span>Figma for wireframing and prototyping, ReactJS for web development</p>
+           		<p> <span class="bold">Date: </span>June 2020</p>
+           	</div>
+
+
+           	<div id="main-graph">
+           		<h4 class="project-heading">Main Graph</h4>
+           		<p>
+           		</p>
+           	</div>
+
+           	<div id="graphic">
+           		<div id="sections">
+           			<!-- text -->
+           			<section class="step"></section>
+           			<section class="step"></section>
+           		</div>
+           		<div id="vis">
+           			<!-- background vis -->
+           		</div>
+           	</div>
+
+
+           </div>
+       </div>
    </section>
-
 
    {% include footer.html %}
 </body>

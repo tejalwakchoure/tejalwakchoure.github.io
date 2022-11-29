@@ -528,34 +528,26 @@ header .img_div {
 }
 
 #about .about-main-text {
-    width: 60%;
+    /*width: 60%;*/
+    flex-basis: 65%;
     max-width: 1000px;
     min-width: 600px;
     margin: auto;
 }
-/*#about .about-main-text p {
-    font-size: 1.1rem;
-}
-#about .about-side-text p {
-    font-size: 1rem;
-}*/
-/*#about p {
-    font-size: 1.1rem;
-}*/
 #about .timepass p {
-    font-size: 1em;
-    line-height: 1e.1m;
-    /*text-align: justify;*/
+    line-height: 1.4em;
 }
 #about .timepass .fa-parent {
     /*position: relative; */
     height: 6em;
-    margin-bottom: 0.8em;
+    max-width: 12em;
+    margin: 0 0 0.8em 0;
     display: flex;
     border-radius: 5px;
     vertical-align: middle;
     text-align: center;
-    box-shadow: 0px 0px 8px 0px #{{ site.color.light_gray }};
+    /*border: 2px solid #{{ site.color.light_gray }};*/
+    box-shadow: 0px 0px 5px 0px #{{ site.color.light_gray }};
 }
 #about .timepass .fa {
     font-size: 3em;
@@ -578,12 +570,17 @@ header .img_div {
     color: #c593ff;
 }
 
-#about .timepass .fa-shadow {
-    /*color: #{{ site.color.text }};
+/*#about .timepass .fa-shadow {
+    color: #{{ site.color.text }};
     z-index: -1;
-    transform: translate(calc( 0.04em - 45% ), 0.04em);*/
-}
+    transform: translate(calc( 0.04em - 45% ), 0.04em);
+}*/
 
+#about .container {
+    padding: 0; 
+    display: flex; 
+    flex-direction: row;
+}
 
 #about .row {
     display: -webkit-box;  /* OLD - iOS 6-, Safari 3.1-6, BB7 */
@@ -600,17 +597,29 @@ header .img_div {
     width: -webkit-fit-content;
     width: fit-content;
 }
+#about .about-col {
+    padding-top: 50px;
+}
+#about .about-img-col {
+    flex-basis: 35%;
+    width: 100%;
+    text-align: center;
+    padding-right: 2vw;
+}
 #about h3 {
     color: #{{ site.color.heading }};
 }
 #about img {
     vertical-align: middle;
-    width: 300px;
-    height: 350px;
+    /*width: 25vw;*/
+    width: 100%;
+    height: auto;
     object-fit: cover;
-    -webkit-filter: brightness(1.4);
-    filter: brightness(1.4);
-    margin: 70px 0 30px 0;
+    -webkit-filter: grayscale(1) brightness(1.5);
+    filter: grayscale(1) brightness(1.5);
+    /*-webkit-filter: brightness(1.5);
+    filter: brightness(1.5);*/
+    border-radius: 5px;
 }
 
 #work {
@@ -749,11 +758,20 @@ header .img_div {
     header {
         height: 60vh;
     }
+    #about .outer-row {
+        flex-flow: column;
+        margin: auto;
+    }
     #about .about-main-text {
         min-width: 0;
     }
     #about .about-col {
         margin: 10px !important;
+    }
+    #about img {
+        margin: 10px 0;
+        height: 250px;
+        width: 40vw;
     }
     .masonry-grid {
         padding: 0 35px;
@@ -844,11 +862,9 @@ header .img_div {
         font-size: 4rem;
         padding-bottom: 0.5rem;
     }   
-
     .header-intro-text .skills {    
         font-size: 1.75rem;
     }
-
     #about .about-col {
         padding: 0;
     }
@@ -856,7 +872,12 @@ header .img_div {
         font-size: 2.5rem;
         padding-bottom: 0;
     }
-
+    #about .timepass .col {
+        flex-basis: 40%;
+    }
+    #about .container {
+        flex-direction: column;
+    }
     .masonry-item {
         height: 450px !important;
         width: 80%;
@@ -873,24 +894,12 @@ header .img_div {
         height: -webkit-fit-content;
         height: fit-content;
     }
-    #about .outer-row {
-        flex-flow: column-reverse wrap;
-        margin: auto;
-    }
     #about .about-col {
         flex-direction: column;
     }
     #about .row {
         width: 100%;
         margin: 0;
-    }
-    #about picture {
-        margin: auto;
-    }
-    #about img {
-        margin: 10px 0;
-        width: 250px;
-        height: 200px;
     }
     .sidenav .page-scroll,
     .sidenav .text {
@@ -947,9 +956,6 @@ header .img_div {
     .heading {
         font-size: 3.125rem;
     }
-    header img {
-        max-height: 300px;
-    }
     .header-intro-text {
         width: -moz-min-content;
         width: -webkit-min-content;
@@ -963,6 +969,10 @@ header .img_div {
     .header-intro-text .skills {    
         font-size: 1.25rem;
         font-weight: normal;
+    }
+    #about img {
+        height: 200px;
+        width: 60vw;
     }
     #about .hello {
         font-size: 2rem;

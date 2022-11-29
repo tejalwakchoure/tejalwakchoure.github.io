@@ -1,0 +1,181 @@
+---
+project-id: 4
+title: Love Letter
+type: UI/UX design, game design
+
+date: 1000-01-04
+img: main screen.jpg
+alt: landing page of the app
+---
+
+<!DOCTYPE html>
+<html>
+<head>
+	{% include head.html %}
+	{% include js.html %}
+	{% include stylesheets.html %}
+</head>
+<body>
+	{% include nav.html %}
+
+	<!-- Project details section -->
+	<section id="projectDetails" class="loveletter" data-nosnippet>
+		<div class="container" style="justify-content: center;">
+      <div class="row" style="align-items: center;">
+        <img class="main" src="/assets/img/portfolio/loveletter/main screen.gif">
+        <h1 class="project-title">{{ page.title }}</h1>
+      </div>
+		      <!-- <picture>
+               <source 
+                  media="(max-width: 768px)"
+                  srcset="/assets/img/small-devices/portfolio/{{ page.img }}">
+               <source 
+               srcset="/assets/img/portfolio/{{ page.img }}">
+               <img src="/assets/img/portfolio/{{ page.img }}" 
+               class="img-responsive" 
+               alt="{{ page.alt }}"
+               id="main-img">
+             </picture> -->
+
+             <div class="row" id="content-row">
+              <div id="overview">
+                <p class="italic">The good Princess Annette, heartbroken over the recent arrest of her mother Queen Marianna for high treason, has locked herself in the palace. You are a suitor trying to ease her pain by sending her letters of love. Since you cannot reach her immediately, you must rely on intermediaries to carry your message.</p>
+                <br><br>
+                <p>
+                  We had just been sent home from college due to the pandemic. Bored and restless, two of us implemented one of our favourite board games, Love Letter, onto a locally-hosted web platform so that we could play it with our friends over Zoom. The interface included the layout and positioning of 18 cards and 3 screens which incorporated all gameplay controls (cards, points, tokens) to support interactive online play for up to 8 players.
+                </p>
+                <br><br>
+                <p> <span class="bold">Project Type: </span>{{ page.type }}</p>
+                <p> <span class="bold">Role: </span>end-to-end UI design, front-end development, wireframing, prototyping, playtesting</p>
+                <p> <span class="bold">Tools: </span>Figma for wireframing and prototyping, ReactJS for web development</p>
+                <p> <span class="bold">Date: </span>June 2020</p>
+                <p> <span sclass="bold">Code: </span><a href="https://github.com/tejalwakchoure/loveletters-premium" target="_blank">GitHub</a></p>
+              </div>
+
+
+              <div id="problem">
+                <h4 class="project-heading">The Problem</h4>
+                <p>
+                </p>
+              </div>
+
+
+              <div id="goals">
+                <h4 class="project-heading">Design Goals</h4>
+                <p>
+                  Our aim was to make a simple, intuitive web application that would bring back the experience of playing a cozy board game with our loved ones. Love Letter is a strategy card game at its core, so I focused on three main goals:
+                  <ol>
+                    <li>
+                      <span style="text-transform: uppercase;"> Clean:</span> Steer clear of any unnecessary components and keep the focus on gameplay.</li>
+                      <li>
+                        <span style="text-transform: uppercase;">Simple:</span> Keep the design intuitive so that someone with little to no experience with technology would be able to play.
+                      </li>
+                      <li>
+                        <span style="text-transform: uppercase;">Community:</span> Match the original gameplay to retain the vibe of the game and maintain a sense of community.
+                      </li>
+                    </ol>
+                  </p>
+                </div>
+
+
+
+                <div id="approach">
+                  <h4 class="project-heading">The Approach</h4>
+                  <div class="row">
+                    <div class="col">
+                      <p>Since this is an online game, I went for a contemporary and friendly aesthetic. I went for a gentle colour palette, easy-to-read typography, and intuitive iconography (to indicate any status changes).</p>
+                    </div>
+                    <div class="col text-center">
+                      <img class="placeholder" src="/assets/img/portfolio/{{ page.img }}">
+                    </div>
+                  </div>
+
+                    <h5 class="project-heading">User Workflow</h5>
+                    <div class="row" style="padding-bottom: 20px;">
+                      <div class="col">
+                        <figure>
+                          <img src="/assets/img/portfolio/loveletter/main screen.jpg" class="img-responsive">
+                          <figcaption>Screen 1: Landing page</figcaption>
+                        </figure>
+                      </div>
+                      <div class="col">
+                        <figure>
+                          <img src="/assets/img/portfolio/loveletter/Play Screen (current player).jpg" class="img-responsive">
+                          <figcaption>Screen 2: Player screen (individual for each player, shows the player's card and what's going on at the moment)</figcaption>
+                        </figure>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col">
+                        <figure>
+                          <img src="/assets/img/portfolio/loveletter/round results.jpg" class="img-responsive">
+                          <figcaption>Screen 3: Round results</figcaption>
+                        </figure>
+                      </div>
+                      <div class="col">
+                        <figure>
+                          <img src="/assets/img/portfolio/loveletter/game results.jpg" class="img-responsive">
+                          <figcaption>Screen 3: Game results</figcaption>
+                        </figure>
+                      </div>
+                    </div>
+
+                  <div class="row" style="margin: 7vh 0;">
+                    <div class="col" style="margin: auto;">
+                      <p>At any point in time, a player could either be playing, spectating, or eliminated (in which case they'd still be spectating but outside the game circle).</p>
+                    </div>
+                    <div class="col text-center">
+                      <img src="/assets/img/portfolio/loveletter/Play Screen (eliminated).jpg" class="img-responsive">
+                    </div>
+                  </div>
+                  <div class="row" style="margin: 7vh 0;">
+                    <div class="col text-center">
+                      <img src="/assets/img/portfolio/loveletter/immunity.jpg" class="img-responsive">
+                    </div>
+                    <div class="col" style="margin: auto;">
+                      <p>Some cards give players additional properties. For example, on playing the 'Handmaid' card, a player receives immunity until their next turn. This was indicated by a simple shield.</p>
+                    </div>
+                  </div>
+
+                  <div id="wireframing">
+                    <h4 class="project-heading">Initial Wireframing</h4>
+                    <img class="placeholder" src="/assets/img/portfolio/loveletter/initial wireframing.jpeg" style="width: 100%; height: auto; object-fit: contain; border-radius: 0; box-shadow: none;">
+                  </div>
+ 
+                  <div id="highlights">
+                    <h4 class="project-heading">Outcome Highlights</h4>
+
+                    <br>
+                    <h6 style="letter-spacing: 0.5px; font-size: 0.85em;">DESIGN GOAL: Community</h6>
+                    <p class="bold">A common starting point</p>
+                    <br>
+                    <h6>USER SCENARIO</h6>
+                    <p>With the game being virtual and server-hosted, there can be a disconnect between players which may lead to them not knowing what's going on.</p>
+                    <h6>SOLUTION</h6>
+                    <p>Ensured that all player screens are in sync with each other. Each player could see what was going on as if they were sitting in a circle.</p>
+
+                    <br>
+                    <br>
+                    <h6 style="letter-spacing: 0.5px; font-size: 0.85em;">DESIGN GOAL: Clean, Simple</h6>
+                    <p class="bold">Simple and easy-to-grasp iconography</p>
+                    <br>
+                    <h6>USER SCENARIO</h6>
+                    <p>Users who do not often participate in the gaming community find it hard to understand what symbols mean.</p>
+                    <h6>SOLUTION</h6>
+                    <p>Introduced simple icons which you would come across daily.</p>
+                  </div>
+                  <div id="improvements">
+                    <h4 class="project-heading">Further Improvements</h4>
+                    <p>
+                     <ul>
+                       <li>One pain point we missed was a screen for when users get disconnected from the game.</li>
+                       <li>The cards in the used pile could be more simplified. Currently difficult to see the card numbers clearly on mobile.</li>
+                     </ul>
+                   </p>
+                 </div>
+
+               </div>
+             </section>
+             {% include footer.html %}
+           </body>
+           </html>

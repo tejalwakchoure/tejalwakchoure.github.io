@@ -31,6 +31,7 @@
   color: black;
   font-weight: bold;
   margin-top: 5vh;
+  margin-bottom: 2vh;
 }
 #projectDetails .li {
 	padding-bottom: 0.1rem;
@@ -57,7 +58,7 @@
   height: 500px;
   -o-object-fit: cover;
   object-fit: cover;
-  margin: 5vh;
+  /*margin: 5vh;*/
 }
 #projectDetails #content-row {
 	display: -webkit-box;  /* OLD - iOS 6-, Safari 3.1-6, BB7 */
@@ -103,6 +104,9 @@
   object-fit: contain;
   max-width: 1000px;
 }
+#projectDetails img {
+  object-fit: contain;
+}
 #odds-ends-slider-container {
  height: calc( 600px+400px );
  width: 80vw;
@@ -129,9 +133,6 @@
 }
 .caption {
 	padding: 20px;
-}
-#oddsEnds {
-	padding-top: 5vh;
 }
 .swiper-button-prev, .swiper-button-next {
 	top: calc( 700px/2 );
@@ -184,15 +185,20 @@
   transition: all 100ms ease-in-out;
   transform: rotate(90deg);
 }
-.irc .explanation-card {
+.explanation-card {
   border-radius: 2em;
   padding: 3em;
+  margin: 3em auto;
   background-color: #{{ site.color.backgroundcol_lightest }};
 }
-.irc .explanation-card-small {
+.explanation-card-inline {
   border-radius: 0.5em;
   padding: 1em;
+  margin-top: auto;
   background-color: #{{ site.color.backgroundcol_lightest }};
+}
+#projectDetails .explanation-card .project-heading {
+  margin-top: auto;
 }
 .irc figure {
   text-align: center;
@@ -207,8 +213,42 @@
 .irc figcaption {
   margin-top: 20px;
 }
-
-
+.loveletter .placeholder,
+.nobelles .placeholder {
+  height: 300px;
+  width: 200px;
+  /*padding: 10px;*/
+}
+.bold {
+  font-weight: bold;
+}
+.italic {
+  font-style: italic;
+}
+#projectDetails h6 {
+  letter-spacing: 1px;
+  font-variant: small-caps;
+}
+.loveletter img,
+.nobelles img {
+   max-width: 100%;
+}
+.loveletter img {
+   width: fit-content;
+   margin: auto;
+   border-radius: 0.5em;
+   border: 0px;
+   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+.loveletter .main {
+   height: 700px; 
+   width: fit-content;
+   margin: auto;
+   border-radius: 2em;
+   margin: 2em auto;
+   border: 0px;
+   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
 
 
 

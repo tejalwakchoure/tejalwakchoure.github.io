@@ -48,13 +48,11 @@ html,body
 }
 
 footer .fa {
-    /*font-size: 1.2em;*/
     font-size: 1.5em;
 }
 
 footer .fa-envelope {
-    /*font-size: 1.1em;*/
-    font-size: 1.35em;
+    font-size: 1.4em;
 }
 
 .kill-on-large-devices {
@@ -208,6 +206,11 @@ hr.primary {
 .coloured_front {
     color: #{{ site.color.backgroundcol }} !important;
 }
+a.coloured_hover:hover,
+a.coloured_hover:active,
+a.coloured_hover:focus {
+    color: #{{ site.color.backgroundcol }} !important;
+}
 .coloured_back {
     background-color: #{{ site.color.backgroundcol }} !important;
 }
@@ -240,7 +243,7 @@ hr.primary {
 .brand-shadow {
     color: #{{ site.color.text }};
     z-index: -1;
-    transform: translate(0.08em, 0.08em);
+    transform: translate(0.06em, 0.06em);
 }
 
 .sidenav .navbar-brand {
@@ -251,7 +254,7 @@ hr.primary {
 
 .sidenav .page-scroll .navbar-brand:hover {
     text-decoration: none;
-    color: #{{ site.color.backgroundcol }};
+    color: #{{ site.color.white }};
     transform: rotate(180deg) scale(1.03);
 }
 
@@ -309,14 +312,15 @@ hr.primary {
     flex-direction: column !important;
     height: 100%;
     justify-content: space-around;
-    padding: 200% 0 300%;
+    /*padding: 200% 0 300%;*/
+    padding: 150% 0 ;
 }
 
-.navbar-nav a:hover,
+/*.navbar-nav a:hover,
 .navbar-nav a:focus,
 .navbar-nav a:active {
     text-decoration: underline;
-}
+}*/
 
 #navbarContent {
     flex-basis: 100% !important;
@@ -529,12 +533,58 @@ header .img_div {
     min-width: 600px;
     margin: auto;
 }
-#about .about-main-text p {
+/*#about .about-main-text p {
     font-size: 1.1rem;
 }
 #about .about-side-text p {
     font-size: 1rem;
+}*/
+/*#about p {
+    font-size: 1.1rem;
+}*/
+#about .timepass p {
+    font-size: 1em;
+    line-height: 1e.1m;
+    /*text-align: justify;*/
 }
+#about .timepass .fa-parent {
+    /*position: relative; */
+    height: 6em;
+    margin-bottom: 0.8em;
+    display: flex;
+    border-radius: 5px;
+    vertical-align: middle;
+    text-align: center;
+    box-shadow: 0px 0px 8px 0px #{{ site.color.light_gray }};
+}
+#about .timepass .fa {
+    font-size: 3em;
+    margin: auto;
+    /*position: absolute;*/
+    /*top: 0;*/
+    /*left: 45%;*/
+    /*transform: translate(-45%,0);*/
+}
+.fa-gamepad {
+    color: #ffd156;
+}
+.fa-bookmark {
+    color: #ffc7f6;
+}
+.fa-headphones {
+    color: #aeedc1;
+}
+.fa-tv {
+    color: #c593ff;
+}
+
+#about .timepass .fa-shadow {
+    /*color: #{{ site.color.text }};
+    z-index: -1;
+    transform: translate(calc( 0.04em - 45% ), 0.04em);*/
+}
+
+
 #about .row {
     display: -webkit-box;  /* OLD - iOS 6-, Safari 3.1-6, BB7 */
     display: -ms-flexbox;  /* TWEENER - IE 10 */
@@ -542,7 +592,8 @@ header .img_div {
     display: flex; 
     flex-flow: row wrap;
 }
-#about .about-col {
+#about .about-col,
+#about .timepass .col {
     display: flex;
     flex-direction: column;
     width: -moz-fit-content;
@@ -859,7 +910,8 @@ header .img_div {
         padding-top: 3px;
     }
     #navbarContent .page-scroll {
-        padding: 0 20px;
+        /*padding: 0 20px;*/
+        padding: 0 10px;
     }
     #navbarContent .text {
         letter-spacing: 0.5px;
@@ -947,7 +999,7 @@ header .img_div {
         font-size: 1.75em !important;
     }
     footer .fa-envelope {
-        font-size: 1.5em !important;
+        font-size: 1.6em !important;
     }
 }
 

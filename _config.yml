@@ -22,6 +22,7 @@ color:
     heading: '000000'
     white: 'ffffff'
     lightest_gray: 'ebebeb'
+    light_gray: 'dcdcdc'
     gray: 'bfbfbf'
     # wave_text: '034558'
 

@@ -1,21 +1,21 @@
-<nav class="sidenav navbar navbar-expand-custom {{ include.coloured_back }}">
+<nav class="sidenav navbar navbar-expand-custom {{ include.coloured_back }} {{ include.dark_mode }}">
 
     <div class="page-scroll navbar-brand-scroll" style="position: relative;">
         <a class="navbar-brand {{ include.coloured_hover }}" style="width: 100%; height: 100%;" href="/">
             <span class="{{ include.coloured_front }}" style="position: fixed;">tw</span>
-            <span class="brand-shadow" style="position: fixed;">tw</span>
+            <span class="brand-shadow" style="position: fixed; {{ include.light_shadow_style | default: ; }}">tw</span>
         </a>
     </div>
     <div id="navbarContent">
         <ul class="navbar-nav">
             <li class="page-scroll">
-                <a class="text nav-link" href="/" style="{{ include.highlight_home | default: ; }}">home</a>
+                <a class="text nav-link {{ include.dark_mode }}" href="/" style="{{ include.highlight_home | default: ; }}">home</a>
             </li>
             <li class="page-scroll">
-                <a class="text nav-link" href="/about/" style="{{ include.highlight_about | default: ; }}">about</a>
+                <a class="text nav-link {{ include.dark_mode }}" href="/about/" style="{{ include.highlight_about | default: ; }}">about</a>
             </li>
             <li class="page-scroll">
-                <a class="text nav-link" href="/assets/tejal wakchoure resume.pdf">resume</a>
+                <a class="text nav-link {{ include.dark_mode }}" href="/assets/tejal wakchoure resume.pdf">resume</a>
             </li>
         </ul>
     </div>

@@ -1,40 +1,34 @@
-<!-- <script rel="preload" src="{{ "/js/jquery-1.11.0.js" }}"></script> -->
-<script defer src="{{ "/js/jquery-1.11.0.js" }}"></script>
+<script src="{{ "/js/jquery-1.11.0.js" }}"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/1.0.21/jquery.csv.min.js"></script> 
+
 <script defer src="{{ "/js/bootstrap.min.js" }}"></script>
 <script defer src="{{ "/js/swiper-bundle.min.js" }}"></script>
 <!-- <script defer src="{{ "/js/simpleParallax.min.js" }}"></script> -->
-<!-- <script defer src="{{ "/js/jquery.easeScroll.js" }}"></script> -->
+<script defer src="{{ "/js/jquery.easeScroll.js" }}"></script>
 <script defer src="{{ "/js/spamspan.js" }}"></script>
 
 <!-- Custom JavaScript & NoScript -->
 <script defer src="{{ "/js/main.js" }}"></script>
-<script defer src="{{ "/js/main-non-critical.js" }}"></script>
-<script defer src="{{ "/svelte-bundle.js" }}"></script>
+<!-- <script defer src="{{ "/svelte-bundle.js" }}"></script> -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.8.0/chart.min.js"></script>
+<script src="https://d3js.org/d3.v7.min.js"></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/noframework.waypoints.min.js'></script>
 
 <noscript>
 	<style>
- 		html, body {
-        	scroll-behavior: smooth;
-    	}
-	    #preloader {
-	        display: none;
-	    }
-	    header .intro-text {
-	    	visibility: unset;
-	    }
-	    #under_construction .btn:focus ~ .show-on-submit,
+		html, body {
+			scroll-behavior: smooth;
+		}
+		#preloader {
+			display: none;
+		}
+		header .intro-text {
+			visibility: unset;
+		}
+		#under_construction .btn:focus ~ .show-on-submit,
 		#under_construction .btn:active ~ .show-on-submit,
 		#under_construction .btn.active ~ .show-on-submit {
 			display: block;
 		}
-    </style>
+	</style>
 </noscript>
-
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<!-- <script defer src="https://www.googletagmanager.com/gtag/js?id=UA-133963307-1"></script>
-<script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'UA-133963307-1', {cookie_flags: 'SameSite=None;Secure'});
-</script> -->

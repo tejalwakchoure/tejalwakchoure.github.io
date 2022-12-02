@@ -1,23 +1,29 @@
 <!-- Footer -->
-<footer style="{{ include.fix_footer_style | default: ; }}"> 
-    <!-- total width minus navbar -->
-    <div class="container" style="max-width: 100%; display: block; padding: 0;">
-        <div class="row" style="margin: 0.25rem 0;">
-          <div class="col-md float-left">     
-            <p><a style="padding-right:8px;" href="mailto:tejal.wakchoure@gmail.com">
-              <i class="fa fa-envelope" aria-hidden="true"></i></a>
-              <a style="padding-right:8px; padding-left:8px;" href="//linkedin.com/in/tejalw" target="_blank">
-                  <i class="fa fa-brands fa-linkedin-in" aria-hidden="true"></i></a>
-                  <a style="padding-left:8px;" href="//github.com/tejalwakchoure" target="_blank">
-                      <i class="fa fa-brands fa-github" aria-hidden="true"></i></a></p>
-                  </div>
-                  <div class="col-md text-right">
-                    <p style="margin-bottom: 0; font-size: 0.8rem;">
-                        made with <a class="text-link" href="//github.com/tejalwakchoure/tejalwakchoure.github.io" target="_blank" 
-                        style="text-decoration: underline;">github</a>.</p>
-                        <p style="margin-bottom: 0; font-size: 0.8rem;">
-                        © tejal wakchoure</p>
-                    </div>
-                </div>
-            </div>
-        </footer>
+<footer class="{{ include.dark_mode }}" style="{{ include.fix_footer_style | default: ; }}"> 
+  <!-- total width minus navbar -->
+  <div class="container" style="max-width: 100%; display: block; padding: 0;">
+    <div class="row" style="margin: 0.25rem 0;">
+      <div class="col-md float-left">     
+        <p>
+          <a class="{{ include.dark_mode }}" 
+          style="padding-right:8px;" href="mailto:tejal.wakchoure@gmail.com">
+          <i class="fa fa-envelope" aria-hidden="true"></i></a>
+
+          <a  class="{{ include.dark_mode }}"
+          style="padding-right:8px; padding-left:8px;" href="//linkedin.com/in/tejalw" target="_blank">
+          <i class="fa fa-brands fa-linkedin-in" aria-hidden="true"></i></a>
+
+          <a  class="{{ include.dark_mode }}"
+          style="padding-left:8px;" href="//github.com/tejalwakchoure" target="_blank">
+          <i class="fa fa-brands fa-github" aria-hidden="true"></i></a></p>
+        </div>
+        <div class="col-md text-right">
+          <p style="margin-bottom: 0; font-size: 0.8rem;">
+            made with <a class="text-link {{ include.dark_mode }}" href="//github.com/tejalwakchoure/tejalwakchoure.github.io" target="_blank" 
+            style="text-decoration: underline;">github</a>.</p>
+            <p style="margin-bottom: 0; font-size: 0.8rem;">
+            © tejal wakchoure</p>
+          </div>
+        </div>
+      </div>
+    </footer>

@@ -1,0 +1,156 @@
+Acq year,Market,COUNTA of Company
+2001,Other,1
+2003,Advertising & Marketing,2
+2003,Analytics,1
+2003,Curated Web,1
+2003,Search Engines,1
+2003,Other,1
+2004,Analytics,2
+2004,Internet,1
+2004,Software,2
+2005,Applications,1
+2005,Mobile,3
+2005,Search Engines,1
+2005,Social Media,1
+2005,Software,2
+2005,Other,1
+2006,Analytics,1
+2006,Artificial Intelligence,1
+2006,Curated Web,1
+2006,Enterprise Software,2
+2006,Games,1
+2006,Mobile,1
+2006,Search Engines,1
+2006,Software,1
+2006,Other,1
+2007,Advertising & Marketing,3
+2007,Curated Web,5
+2007,Enterprise Software,1
+2007,Health & Wellness,1
+2007,Mobile,1
+2007,Security,1
+2007,Social Media,1
+2007,Software,1
+2007,Other,2
+2008,Enterprise Software,1
+2008,Mobile,1
+2009,Advertising & Marketing,3
+2009,Curated Web,1
+2009,Security,2
+2010,Advertising & Marketing,1
+2010,Applications,2
+2010,Curated Web,1
+2010,Enterprise Software,2
+2010,Games,2
+2010,Hardware,2
+2010,Media,3
+2010,Mobile,3
+2010,Music Services,1
+2010,Search Engines,2
+2010,Social Media,1
+2010,Software,3
+2010,Other,3
+2011,Advertising & Marketing,1
+2011,Analytics,3
+2011,Artificial Intelligence,2
+2011,Curated Web,3
+2011,Finance,1
+2011,Games,1
+2011,Media,4
+2011,Mobile,4
+2011,Music Services,1
+2011,Search Engines,1
+2011,Security,1
+2011,Social Media,2
+2011,Other,2
+2012,Advertising & Marketing,2
+2012,Analytics,1
+2012,Applications,1
+2012,Artificial Intelligence,2
+2012,Internet,1
+2012,Mobile,2
+2012,Social Media,1
+2012,Other,1
+2013,Advertising & Marketing,1
+2013,Applications,1
+2013,Artificial Intelligence,4
+2013,E-Commerce,1
+2013,Hardware,1
+2013,Health & Wellness,1
+2013,Manufacturing,2
+2013,Mobile,1
+2013,Robotics,5
+2013,Other,3
+2014,Advertising & Marketing,2
+2014,Applications,3
+2014,Artificial Intelligence,4
+2014,Cloud Computing,1
+2014,Curated Web,2
+2014,E-Commerce,2
+2014,Enterprise Software,2
+2014,Finance,1
+2014,Health & Wellness,2
+2014,Internet,2
+2014,Manufacturing,2
+2014,Media,2
+2014,Mobile,2
+2014,Music Services,1
+2014,Security,3
+2014,Software,1
+2014,Other,2
+2015,Advertising & Marketing,1
+2015,Applications,1
+2015,Enterprise Software,1
+2015,Finance,1
+2015,Internet,1
+2015,Media,1
+2015,Mobile,5
+2015,Social Media,1
+2015,Software,1
+2015,Other,2
+2016,Advertising & Marketing,1
+2016,Applications,2
+2016,Artificial Intelligence,3
+2016,Cloud Computing,3
+2016,Enterprise Software,1
+2016,Internet,1
+2016,Mobile,1
+2016,Music Services,1
+2016,Other,4
+2017,Analytics,1
+2017,Applications,1
+2017,Artificial Intelligence,1
+2017,Cloud Computing,1
+2017,Mobile,2
+2017,Music Services,1
+2017,Social Media,1
+2017,Other,3
+2018,Analytics,1
+2018,Cloud Computing,1
+2018,Hardware,1
+2018,Search Engines,1
+2018,Other,6
+2019,Analytics,1
+2019,Applications,1
+2019,Cloud Computing,2
+2019,Enterprise Software,1
+2019,Social Media,1
+2019,Other,2
+2020,Analytics,1
+2020,Cloud Computing,1
+2020,E-Commerce,1
+2020,Enterprise Software,1
+2020,Mobile,1
+2020,Security,1
+2020,Software,1
+2020,Other,1
+2021,E-Commerce,1
+2021,Games,1
+2021,Health & Wellness,1
+2021,Mobile,1
+2021,Robotics,1
+2022,Analytics,1
+2022,Artificial Intelligence,1
+2022,Robotics,1
+2022,Security,2
+2022,Other,3

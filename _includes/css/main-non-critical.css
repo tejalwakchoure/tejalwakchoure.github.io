@@ -204,11 +204,11 @@
   text-align: center;
 }
 .irc figure img {
-    height: 600px;
-    width: auto;
-    /*border-radius: 2.5%;*/
-    /*border: 1px solid #{{ site.color.link }};*/
-    /*box-shadow: 0 5px 15px rgba(0, 0, 0, 0.25);*/
+  height: 600px;
+  width: auto;
+  /*border-radius: 2.5%;*/
+  /*border: 1px solid #{{ site.color.link }};*/
+  /*box-shadow: 0 5px 15px rgba(0, 0, 0, 0.25);*/
 }
 .irc figcaption {
   margin-top: 20px;
@@ -231,30 +231,131 @@
 }
 .loveletter img,
 .nobelles img {
-   max-width: 100%;
+ max-width: 100%;
 }
 .loveletter img {
-   width: fit-content;
-   margin: auto;
-   border-radius: 0.5em;
-   border: 0px;
-   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+ width: fit-content;
+ margin: auto;
+ border-radius: 0.5em;
+ border: 0px;
+ box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 .loveletter .main {
-   height: 700px; 
-   width: fit-content;
-   margin: auto;
-   border-radius: 2em;
-   margin: 2em auto;
-   border: 0px;
-   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+ height: 700px; 
+ width: fit-content;
+ margin: auto;
+ border-radius: 2em;
+ margin: 2em auto;
+ border: 0px;
+ box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 .coup #vis {
   position: fixed;
 }
+#projectDetails hr {
+  margin: 5rem 0 2rem 0;
+  max-width: 100%;
+}
+.coup .project-title {
+  color: white !important;
+}
+.dark-mode,
+.coup {
+  background: black !important;
+  color: white !important;
+}
+.coup a {
+  color: #ffc822 !important;
+}
+.coup a:hover,
+.coup a:focus,
+.coup a:active {
+  color: #d69b00 !important;
+}
 
 
+.graphic {
+  width: 100%;
+  position: relative;
+}
 
+.graphic__prose {
+  width: 60%;
+  height: fit-content;
+}
+
+.graphic__prose .trigger {
+  height: fit-content;
+  padding: 40px;
+  margin: 100px 50px 100vh 50px;
+  background: black;
+  color: white !important;
+  vertical-align: middle;
+  box-shadow: 0 0 13px 3px #7e7e7e;
+}
+.graphic__prose .trigger p {
+  margin-top: 2em;
+  font-size: 1em;
+}
+
+.graphic__vis {
+  /*position: fixed;  note: originally absolute */
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 40%;
+}
+
+.graphic__vis .img_wrapper {
+  height: 300px;
+  width: 100%;
+  margin: calc( 50vh - 150px ) auto;
+  background: none;
+  background-size: cover !important;
+  transition: all 1s;
+}
+
+.graphic__vis.is-fixed {
+  position: fixed;
+}
+
+.graphic__vis.is-bottom {
+  top: auto;
+  bottom: 0;
+  margin-bottom: 10px;
+}
+
+
+#scorecards {
+  padding: 20px 0;
+}
+#scorecards > div {
+  margin: 10px;
+  border-radius: 0.8em;
+  border: 2px solid #cecece;
+  box-shadow: 2px 2px 0 2px lavender;
+}
+  
+
+.acquisitions .logo {
+  height: auto;
+  width: 100%;
+}
+
+.acquisitions .mamma-wrapper {
+  height: 200px;
+  width: 50%;
+  padding: 20px;
+}
+
+/*.acquisitions .goog-acquisitions,
+.acquisitions .amz-acquisitions,
+.acquisitions .appl-acquisitions,
+.acquisitions .meta-acquisitions,
+.acquisitions .msft-acquisitions {
+  padding: 50px;
+}*/
 
 
 

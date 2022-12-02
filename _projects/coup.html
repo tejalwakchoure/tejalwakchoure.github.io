@@ -1,0 +1,169 @@
+---
+project-id: 1
+title: The Coups of Guinea-Bisseau
+type: data storytelling, data visualization
+
+date: 1000-01-01
+img: ../../grainy_page.jpeg
+alt: a grainy page
+---
+
+<!DOCTYPE html>
+<html class="dark-mode">
+<head>
+	{% include head.html %}
+	{% include js.html %}
+  <script src="https://cdn.jsdelivr.net/npm/chartjs-chart-matrix@1.1"></script>
+  <script defer src="../js/coup.js"></script>
+  {% include stylesheets.html %}
+</head>
+
+<body class="dark-mode">  
+	{% include nav.html dark_mode='dark-mode' light_shadow_style='color: #c5c5c5;' %}
+
+	<!-- Project details section -->
+	<section id="projectDetails" class="coup" data-nosnippet>
+		<div class="container" style="justify-content: center;">
+			<div class="row" style="align-items: center;">
+				<h1 class="project-title">{{ page.title }}</h1>
+			</div> 
+     <div class="row" id="content-row">
+
+      <div style="height: 500px; width: 100%;">
+        <canvas id="country-heatmap"></canvas>
+      </div>
+      <canvas id="gdp-barchart"></canvas>
+
+      <div id="intro">
+        <p>
+          On February 1, 2022, President Embalo survived an attempted coup. He was in a cabinet meeting at the government palace when the palace was attacked. The shooting lasted for five hours. At least eight people were killed. Embalo stated that "It wasn’t just a coup. It was an attempt to kill the president, the prime minister and all the cabinet."
+          <br><br>
+          Since its independence in 1973, the West African country of Guinea-Bissau has seen fourteen coup attempts in an environment of constant political instability - the latest being the feb 2022 attack on president Umaro Sissoco Embalo. Ten of these attempts have occured in the 21st century. Till date, only one elected president (José Mário Vaz) has ever completed a five-year term in office.
+        </p>
+      </div>
+
+      <div id="first-graph">
+       <p class="small italic">Since its independence in 1973, Guinea-Bissau has seen 14 coup attempts (4 successful), claiming the world #21 spot. It remains the country with the highest attempts at a coup in the 21st century (10), followed by Mauritania(5) and Venezuela(5).
+        <br> In the 21st century, Guinea-Bissau has seen 10 coup attempts. Only 2 of these were successful, with 2 blocked in the conspiracy stage and 6 thwarted during the attempt - the latest being the feb 2022 attack on president Embalo (point out).
+        <br>
+        Outcomes - 2003 - house arrest & forced resignation, 2012 - jailed & exiled. 
+      </p>
+      <p class="small">chart - geomap/scattermap of coups in 21st century/all, show GB highest <br>
+        chart: bubble/large square, divided into parts
+      </p>
+    </div>
+
+    <p class="small">overall viz - timeline ft. leader faces, with descriptions of attempts</p>
+    <div id="timeline" class='graphic'>
+      <div class='graphic__prose'>
+        <div class='trigger' data-step='0'>
+          <h5>November 23, 2000</h5>
+          <p>
+            The first democratically elected President of Guinea-Bissau, Kumba Yala, is appointed in Jan 2000. In Nov 2000, Yala demotes army General Ansumane Mané who led the bloody civil war of 1998. Dissatisfied with this decision, Mané places the new chief of staff under house arrest and declares himself head of the armed forces. Violence breaks out in the capital. Mané is forced to flee and eventually killed.
+          </p>
+        </div>
+
+        <div class='trigger' data-step='0'>
+          <h5>December 2, 2001</h5>
+          <p>
+            President Yala dismisses prime minister Faustino Imbali and foreign minister Antonieta Rosa Gomes without proper explanation. The government states that it thwarted a coup attempt by army officers over President Yala's increasingly volatile and regressive rule.
+          </p>
+        </div>
+
+        <div class='trigger' data-step='1'>
+          <h5>September 14, 2003</h5>
+          <p>
+            The first succesful coup atttempt. A 32-man junta led by General Verissimo Correia Seabra stages a military coup and arrests Yala after he suspends parliament following a vote of no confidence in his presidency. Yala is later forced to resign. The coup is welcomed by the people. The country's economy and infrastructure starts improving under interim civilian president Henrique Rosa.
+          </p>
+          <p class="small">chart of GDP % change by year - see effects post-coup</p>
+        </div>
+
+        <div class='trigger' data-step='1'>
+          <h5>May 25, 2005</h5>
+          <p>
+            Exiled former president Kumba Yala returns and claims that he is still the legitimate head of state. He forces a brief occupation of the Presidential Palace but ultimately concedes to former president Joao Bernardo Vieira who wins the election held in June. 
+          </p>
+        </div>
+
+        <div class='trigger' data-step='2'>
+          <h5>August 8, 2008</h5>
+          <p>
+            President Vieira dissolves parliament in a move to "bring an end to the political crisis". The Army discloses that certain military officers led by the Head of the navy Rear-Admiral Jose Americo Bubo Na Tchuto attempted a coup. Na Tchuto is placed under house arrest.
+          </p>
+        </div>
+
+        <div class='trigger' data-step='2'>
+          <h5>November 23, 2008</h5>
+          <p>
+            After President Vieira's political party wins a strong majority in the new parliament, Vieira's residence is attacked by members of the armed forces. A guard is killed but the president is unharmed. Vieira accuses Army Chief of Staff, General Batista Tagme Na Waie of the attempt.
+            <br>
+            In march 2009, Tagme Na Waie is killed in a bomb blast and Vieira is shot dead by renegade soldiers hours later. Many link the assassination to the drug trade. Malam Bacai Sanhá is elected as president in June.
+
+          </p>
+        </div>
+
+        <div class='trigger' data-step='2'>
+          <h5>April 1, 2010</h5>
+          <p>
+            Military officers place Prime Minister Carlos Gomes Junior under house arrest. Army chief of staff Zamora Induta is taken to a military camp and replaced with Deputy Chief of Staff of the Army Antonio Ndjai. Following protests, Ndjai threatens to kill Gomes. Gomes is released the next day and moves to Portugal for several months but does not make parliamentary changes on return.
+          </p>
+        </div>
+
+        <div class='trigger' data-step='3'>
+          <h5>April 12, 2012</h5>
+          <p>
+            The second succesful coup atttempt. In Jan 2012, President Sanhá dies from complications of diabetes. Following unrest regarding military reform, army officials under Chief of Staff Ndjai attack Interim President Pereira and both leading presidential contenders including ex-PM Carlos Gomes Junior. Gomes Junior's residence is bombarded. Foreign embassies are sealed off and roads in and out of the capital are blockaded. Periera and Gomes Junior are arrested. Members of the civilian government are ordered to turn themselves over to the Army. Manuel Serifo Nhamadjo is nominated to take control of the country as transitional president.
+          </p>
+          <p class="small">chart of GDP % change by year - see effects post-coup</p>
+          <p>
+            The coup has disastrous effects on the country's economy. GDP drops X%. Diplomatic relations also suffer as neighbouring Senegal closes its borders and the UN imposes travel bans. After military officials suspected of involvement in drug trafficking seize power as a result of this coup, the cocaine trade picks up heavily in the country, giving this coup the name "the cocaine coup".
+          </p>
+        </div>
+
+        <div class='trigger' data-step='3'>
+          <h5>October 21, 2012</h5>
+          <p>
+            An air force base is attacked, leaving seven killed. The gunmen are linked to the government overthrown in the April coup. The government calls it a foiled attempt at destabilisation and accuses ex-PM Carlos Gomes Junior and the government of Portugal.
+          </p>
+        </div>
+      </div>
+
+      <div class='graphic__vis'>
+        <div class='img_wrapper'></div>
+      </div>
+    </div>
+
+
+    <div id="conclusion">
+      <p>
+        This brings us back to the latest coup attempt to overthrow President Embaló earlier this year. Six days after the attempt, a radio station critical of the government was attacked and its equipment destroyed.
+        <br><br>
+        The country continues to be in a state of constant tension between its civilian government and its military, along with the added pressure of the drug trade. While it is unclear who perpetrated the 2022 attempt, president Embalo and his government appear to resume their focus on combating drug trafficking and corruption.
+      </p>
+    </div>
+
+    <div id="sources">
+      <hr style="border-color: #adadad !important;" />
+      <p>
+       <span class="bold">Sources:</span>
+       <a href="https://clinecenter.illinois.edu/project/research-themes/democracy-and-development/coup-detat-project" target="_blank">
+       Cline Center Coup D'état Database</a>,
+       <a href="https://data.worldbank.org/country/guinea-bissau" target="_blank">
+       World Bank</a>,
+       <a href="https://www.aljazeera.com/" target="_blank">
+       Al Jazeera</a>
+     </p>
+   </div>
+
+   <div id="overview">
+    <p> <span class="bold">Project Type: </span>{{ page.type }}</p>
+    <p> <span class="bold">Tools: </span>Figma for prototyping, Svelte and Plotly for web development</p>
+  </div>
+
+</div>
+</div>
+</section>
+
+{% include footer.html dark_mode='dark-mode' %}
+</body>
+</html>

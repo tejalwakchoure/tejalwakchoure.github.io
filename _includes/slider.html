@@ -16,9 +16,9 @@
 			      	{% for project in page.projects %}
 				        <div class="swiper-slide" data-title="{{project.title}}" data-description="{{project.description}}">
 				        	{% if project.video %}
-				        		<img src="{{ site.baseurl }}/assets/img/portfolio/odds-ends/{{ project.slug }}.gif" alt="image" />
+				        		<img src="/assets/img/portfolio/odds-ends/{{ project.slug }}.gif" alt="image" />
 				        	{% else %}
-				        		<img src="{{ site.baseurl }}/assets/img/portfolio/odds-ends/{{ project.slug }}.jpg" alt="image" />
+				        		<img src="/assets/img/portfolio/odds-ends/{{ project.slug }}.jpg" alt="image" />
 				        	{% endif %}
 				        </div>
 					{% endfor %}
@@ -27,10 +27,10 @@
 			      	<p id="current-title" style="text-align: center; color: #{{site.color.heading}};">{{ page.projects[0].title }}</p>
 			      	<p id="current-description" class="small" >{{ page.projects[0].description }}</p>
 			      </div>
-			      <div class="swiper-button-next">
+			      <div class="swiper-button-next kill-on-small-devices">
 			      	<i class="fa fa-caret-right" aria-hidden="true"></i>
 			      </div>
-			      <div class="swiper-button-prev">
+			      <div class="swiper-button-prev kill-on-small-devices">
 			      	<i class="fa fa-caret-left" aria-hidden="true"></i>
 			      </div>
 			    </div>

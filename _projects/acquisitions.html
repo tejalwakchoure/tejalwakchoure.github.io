@@ -15,7 +15,11 @@ alt: a grainy page
 	{% include js.html %}
 	{% include stylesheets.html %}
 	<script src="https://cdn.jsdelivr.net/npm/chartjs-chart-treemap@2.1.3/dist/chartjs-chart-treemap.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/d3@4.13.0/build/d3.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/d3-timelines@1.3.1/build/d3-timelines.min.js"></script>
 	<script defer src="../js/acquisitions.js"></script>
+	<!-- <script src="https://d3js.org/d3-time-format.v2.min.js"></script> -->
+
 </head>
 
 <body>
@@ -118,19 +122,45 @@ alt: a grainy page
 
 				<div id="companies">
 					<p>Which companies does Google invest in? How does it carry out these investments?</p>
+					<p class="large">Out of the 254 companies Google has acquired so far,</p>
+					<div class="hor-scroll row">
+						<div class="item col">
+							<span class="number">2</span><span class="caption">are unicorns</span>
+						</div>
+						<div class="item col">
+							<span class="number">15</span><span class="caption">were accelerated by Y-Combinator</span>
+						</div>
+						<div class="item col">
+							<span class="number">188</span><span class="caption">are headquartered in the US</span>
+						</div>
+					</div>
 					<p class="small">2 were Unicorns and 15 (6%) were accelerated by YC. 188 companies are based in the US. scorecard - Define, illustrate (as # or as %) (add cute unicorn horn to viz hehe)</p>
-					<p class="bold">On average, a min of 58% of companies were acquired within 6 years of creation.</p>
-					<p class="small"> boxplot timeline of founding dates vs yrs - cant show for all companies, better to show barplot of datedif</p>
+
+					<p>On average, a min of 58% of companies were acquired within 6 years of creation.</p>
+					<div style="margin: 3em auto; text-align: center;">
+						<h6 style="margin-bottom: 1em;">typical age of acquired company at the time of acquisition</h6>
+						<img src="../assets/img/portfolio/acquisitions/google-ages.png" style="max-width: 100%;" />
+					</div>
+					
 					<p class="bold">Were bought for $Y when the total amount they raised was $Z.</p>
 					<p class="small">stacked areas - for the buying prices disclosed, we have most funding amounts, not all</p>
+					
 					<p class="bold">By far, 2014 was the best year for Google to acquire companies, acquiring a whopping 34 companies in a single year.</p>
+					<!-- <canvas id="acq-timeline"></canvas> -->
 					<p class="small">bar graph</p>
 				</div>
 
 				<div id="conclusion">
 					<p class="small italic">What next? [double intention - what after acq + what should the user do next]</p>
 					<p class="bold">Y% of acquisitions are merged with Google cloud (10%) or Android (9%).</p>
-					<p class="small">boxplot by product of company x year added. add unicorn yrs, YC grad yrs. allow play-around by product</p>
+
+					<div class="text-center">
+						<select id="selectbox">
+						</select>
+						<div id="acq-timeline"></div>
+						<p class="small">** note what you've omitted ** boxplot by product of company x year added. add unicorn yrs, YC grad yrs. allow play-around by product</p>
+					</div>
+					
 				</div>
 
 				<div id="sources">

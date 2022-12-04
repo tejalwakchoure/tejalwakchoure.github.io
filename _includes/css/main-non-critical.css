@@ -1,3 +1,4 @@
+
 #oddsEnds .row {
 	min-width: 0;
 }
@@ -83,17 +84,20 @@
   width: 100%;
   height: 100%;
   overflow: hidden;
-  padding: 0 5% 5% 5%;
+  padding: 3rem;
+  padding-bottom: 1rem;
+  /*padding: 0 5% 5% 5%;*/
   min-width: 0;
 }
 .swiper-wrapper {
  height: 600px;
+ box-shadow: 0px 0px 20px 5px #eeeeee;
 }
 
 .swiper-slide {
   background-position: center;
   background-size: cover;
-  box-shadow: 0px 4px 20px 0px #eeeeee;
+  /*box-shadow: 0px 0px 20px 0px #eeeeee;*/
 }
 
 .swiper-slide img {
@@ -131,8 +135,8 @@
 .swiper-notification {
 	display: none;
 }
-.caption {
-	padding: 20px;
+#oddsEnds .caption {
+	padding-top: 20px;
 }
 .swiper-button-prev, .swiper-button-next {
 	top: calc( 700px/2 );
@@ -336,7 +340,6 @@
   border: 2px solid #cecece;
   box-shadow: 2px 2px 0 2px lavender;
 }
-  
 
 .acquisitions .logo {
   height: auto;
@@ -355,7 +358,103 @@
 .acquisitions .meta-acquisitions,
 .acquisitions .msft-acquisitions {
   padding: 50px;
-}*/
+  }*/
+  .hor-scroll {
+    color: magenta;
+    /*height: 90vh;*/
+/*  flex-wrap: nowrap;
+overflow-x: scroll;*/
+}
+.hor-scroll .item {
+  /*width: 75vw;*/
+  padding: 20px;
+  align-items: center !important;
+  /*width: 33vw;*/
+  /*word-wrap: wrap;*/
+}
+.hor-scroll .number {
+  /*font-size: 75vh;*/
+  font-size: 10em;
+  font-weight: bold;
+}
+.hor-scroll .caption {
+  /*font-size: 4vh;*/
+  font-size: 20px;
+  font-weight: 100;
+  padding: 0;
+}
+#acq-timeline {
+  transition: all 2s ease;
+}
+
+
+
+
+
+.s-hidden {
+  visibility:hidden;
+  padding-right:10px;
+}
+.select {
+  cursor:pointer;
+  display:inline-block;
+  position:relative;
+  background: lavender;
+  width: 50vw;
+  height: 50px;
+  border-radius: 5px;
+  text-align: center;
+  margin-bottom: 10vh;
+}
+.styledSelect {
+  position:absolute;
+  top:15%;
+  right:0;
+  bottom:0;
+  left:0;
+  padding:0 10px;
+  font-weight:bold;
+  font-size: 1.3em;
+  color: gray;
+}
+.styledSelect:after {
+  content:"";
+  width:0;
+  height:0;
+  border: 10px solid transparent;
+  border-color: #7e7ef5 transparent transparent transparent;
+  position: absolute;
+  top: calc( 40% - 15% );
+  right: 5%;
+}
+.styledSelect:active, .styledSelect.active {
+  /*background-color:#eee;*/
+}
+.options {
+  display:none;
+  position:absolute;
+  top:100%;
+  right:0;
+  left:0;
+  z-index:999;
+  margin:0 0;
+  padding:0 0;
+  list-style:none;
+  /*border:1px solid #ccc;*/
+  background-color:#fdfdfd;
+  -webkit-box-shadow:0 1px 2px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow:0 1px 2px rgba(0, 0, 0, 0.2);
+  box-shadow:0 1px 2px rgba(0, 0, 0, 0.2);
+}
+.options li {
+  padding:0 6px;
+  margin:0 0;
+  padding:0 10px;
+  font-size: 0.9em;
+}
+.options li:hover {
+  background-color:lavender;
+}
 
 
 
@@ -365,34 +464,102 @@
 
 @media ( max-width: 768px ) {
 	#projectDetails h2 {
-   letter-spacing: 2px;
-   font-size: 1.8rem;
- }
- #projectDetails .container {
-  padding: 0;
-}
-#projectDetails #content-row {
-  flex-direction: column;
-  width: auto;
-}
-#projectDetails #content{
-  overflow: hidden;
-  margin: auto;
-  padding: 3%;
-}
-#projectDetails #main-img {
-  height: 300px;
-  /*width: 350px;*/
-}
-#projectDetails #content p {
-  text-align: left;
-  margin: 5% 2%;,
-}
+    letter-spacing: 2px;
+    font-size: 1.8rem;
+  }
+  #projectDetails .container {
+    padding: 0;
+  }
+  #projectDetails #content-row {
+    flex-direction: column;
+    width: auto;
+  }
+  #projectDetails #content{
+    overflow: hidden;
+    margin: auto;
+    padding: 3%;
+  }
+  #projectDetails #main-img {
+    height: 300px;
+    /*width: 350px;*/
+  }
+  #projectDetails #content p {
+    text-align: left;
+    margin: 5% 2%;,
+  }
+  #oddsEnds .swiper {
+    padding: 0;
+  }
+  #under_construction .container {
+    justify-content: flex-start;
+  }
+  #under_construction .header-title {
+    height: 40%;
+    align-items: flex-start;
+  }
+  #under_construction .bottom-row {
+    height: 60%;
+  }
+  #under_construction .header-intro-text {
+    padding: 0;
+  }
+  #under_construction h1 {
+    font-size: 24px;
+  }
+  #under_construction p {
+    font-size: 16px;
+  }
+  .grainy-page:after {
+    opacity: 0.05 !important;
+  }
+  #contact .row {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    text-align: center;
+  }
+  #contact a.mail-link:before {
+    visibility: visible;
+    width: 100%;
+  }
+  #contact a,
+  #contact a.mail-link:before,
+  footer a,
+  footer .footer-below,
+  .floating-label-form-group-with-focus label { 
+    color: #{{ site.color.heading }} !important; 
+  }
 }
 
 @media (max-width: 480px) {
 	#main-img {
     height: 250px;
+  }
+  .swiper-slide img {
+    height: auto;
+  }
+  .swiper-slide,
+  .swiper-wrapper {
+    height: fit-content;
+  }
+  #oddsEnds .swiper {
+    padding-top: 20px;
+  }
+  #oddsEnds .caption {
+    padding: 30px;
+  }
+  #oddsEnds #current-title {
+    font-weight: bold;
+  }
+  #oddsEnds, 
+  #oddsEnds .container {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  #odds-ends-slider-container {
+    width: 100vw;
+  }
+  footer .col {
+    text-align: center !important;
   }
 }
 
@@ -699,44 +866,3 @@ form .row:first-child .floating-label-form-group {
       80% { transform:translate(3%, 35%) }
       90% { transform:translate(-10%, 10%) }
     }
-
-    @media (max-width: 768px) {
-     #under_construction .container {
-      justify-content: flex-start;
-    }
-    #under_construction .header-title {
-      height: 40%;
-      align-items: flex-start;
-    }
-    #under_construction .bottom-row {
-      height: 60%;
-    }
-    #under_construction .header-intro-text {
-      padding: 0;
-    }
-    #under_construction h1 {
-      font-size: 24px;
-    }
-    #under_construction p {
-      font-size: 16px;
-    }
-    .grainy-page:after {
-      opacity: 0.05 !important;
-    }
-    #contact .row {
-      padding-left: 0 !important;
-      padding-right: 0 !important;
-      text-align: center;
-    }
-    #contact a.mail-link:before {
-      visibility: visible;
-      width: 100%;
-    }
-    #contact a,
-    #contact a.mail-link:before,
-    footer a,
-    footer .footer-below,
-    .floating-label-form-group-with-focus label { 
-      color: #{{ site.color.heading }} !important; 
-    }
-  }

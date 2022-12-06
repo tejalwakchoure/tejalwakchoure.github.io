@@ -16,13 +16,13 @@ alt: landing page of the app
 	{% include stylesheets.html %}
 </head>
 <body>
-	{% include nav.html %}
+  <img class="loveletter-main-img" src="/assets/img/portfolio/loveletter/main screen.gif">
+  {% include nav.html coloured_back="transparent_back" %}
 
-	<!-- Project details section -->
-	<section id="projectDetails" class="loveletter" data-nosnippet>
-		<div class="container" style="justify-content: center;">
+  <!-- Project details section -->
+  <section id="projectDetails" class="loveletter" data-nosnippet>
+    <div class="container" style="justify-content: center;">
       <div class="row" style="align-items: center;">
-        <img class="main" src="/assets/img/portfolio/loveletter/main screen.gif">
         <h1 class="project-title">{{ page.title }}</h1>
       </div>
 		      <!-- <picture>
@@ -39,10 +39,10 @@ alt: landing page of the app
 
              <div class="row" id="content-row">
               <div id="overview">
-                <p class="italic">The good Princess Annette, heartbroken over the recent arrest of her mother Queen Marianna for high treason, has locked herself in the palace. You are a suitor trying to ease her pain by sending her letters of love. Since you cannot reach her immediately, you must rely on intermediaries to carry your message.</p>
+                <p class="italic">"The good Princess Annette, heartbroken over the recent arrest of her mother Queen Marianna for high treason, has locked herself in the palace. You are a suitor trying to ease her pain by sending her letters of love. Since you cannot reach her immediately, you must rely on intermediaries to carry your message."</p>
                 <br><br>
                 <p>
-                  We had just been sent home from college due to the pandemic. Bored and restless, two of us implemented one of our favourite board games, Love Letter, onto a locally-hosted web platform so that we could play it with our friends over Zoom. The interface included the layout and positioning of 18 cards and 3 screens which incorporated all gameplay controls (cards, points, tokens) to support interactive online play for up to 8 players.
+                  Bored and restless during the pandemic, two of us implemented our favourite board game, Love Letter, onto a locally-hosted web platform so that we could play it with our friends over Zoom. The interface included the layout and positioning of 18 cards and 3 screens which incorporated all gameplay controls (cards, points, tokens) to support interactive online play for up to 8 players.
                 </p>
                 <br><br>
                 <p> <span class="bold">Project Type: </span>{{ page.type }}</p>
@@ -53,14 +53,14 @@ alt: landing page of the app
               </div>
 
 
-              <div id="problem">
+              <!-- <div id="problem">
                 <h4 class="project-heading">The Problem</h4>
                 <p>
                 </p>
-              </div>
+              </div> -->
 
 
-              <div id="goals">
+              <div id="goals" class="mt10">
                 <h4 class="project-heading">Design Goals</h4>
                 <p>
                   Our aim was to make a simple, intuitive web application that would bring back the experience of playing a cozy board game with our loved ones. Love Letter is a strategy card game at its core, so I focused on three main goals:
@@ -79,48 +79,49 @@ alt: landing page of the app
 
 
 
-                <div id="approach">
+                <div id="approach" class="mt10">
                   <h4 class="project-heading">The Approach</h4>
                   <div class="row">
-                    <div class="col">
+                    <div class="col" style="flex-basis: 60%;">
                       <p>Since this is an online game, I went for a contemporary and friendly aesthetic. I went for a gentle colour palette, easy-to-read typography, and intuitive iconography (to indicate any status changes).</p>
                     </div>
-                    <div class="col text-center">
-                      <img class="placeholder" src="/assets/img/portfolio/{{ page.img }}">
+                    <div class="col text-center" style="flex-basis: 40%;">
+                      <img class="normal" src="/assets/img/portfolio/loveletter/approach-1.png">
+                    </div>
+                  </div>
+                  <img class="normal" style="margin: 10vh 0;" src="/assets/img/portfolio/loveletter/approach-2.png">
+
+                  <h5 class="project-heading mt10">User Workflow</h5>
+                  <div class="row" style="padding-bottom: 20px;">
+                    <div class="col">
+                      <figure>
+                        <img src="/assets/img/portfolio/loveletter/main screen.jpg" class="img-responsive">
+                        <figcaption>Screen 1: Landing page</figcaption>
+                      </figure>
+                    </div>
+                    <div class="col">
+                      <figure>
+                        <img src="/assets/img/portfolio/loveletter/Play Screen (current player).jpg" class="img-responsive">
+                        <figcaption>Screen 2: Player screen (individual for each player, shows the player's card and what's going on at the moment)</figcaption>
+                      </figure>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col">
+                      <figure>
+                        <img src="/assets/img/portfolio/loveletter/round results.jpg" class="img-responsive">
+                        <figcaption>Screen 3: Round results</figcaption>
+                      </figure>
+                    </div>
+                    <div class="col">
+                      <figure>
+                        <img src="/assets/img/portfolio/loveletter/game results.jpg" class="img-responsive">
+                        <figcaption>Screen 3: Game results</figcaption>
+                      </figure>
                     </div>
                   </div>
 
-                    <h5 class="project-heading">User Workflow</h5>
-                    <div class="row" style="padding-bottom: 20px;">
-                      <div class="col">
-                        <figure>
-                          <img src="/assets/img/portfolio/loveletter/main screen.jpg" class="img-responsive">
-                          <figcaption>Screen 1: Landing page</figcaption>
-                        </figure>
-                      </div>
-                      <div class="col">
-                        <figure>
-                          <img src="/assets/img/portfolio/loveletter/Play Screen (current player).jpg" class="img-responsive">
-                          <figcaption>Screen 2: Player screen (individual for each player, shows the player's card and what's going on at the moment)</figcaption>
-                        </figure>
-                      </div>
-                    </div>
-                    <div class="row">
-                      <div class="col">
-                        <figure>
-                          <img src="/assets/img/portfolio/loveletter/round results.jpg" class="img-responsive">
-                          <figcaption>Screen 3: Round results</figcaption>
-                        </figure>
-                      </div>
-                      <div class="col">
-                        <figure>
-                          <img src="/assets/img/portfolio/loveletter/game results.jpg" class="img-responsive">
-                          <figcaption>Screen 3: Game results</figcaption>
-                        </figure>
-                      </div>
-                    </div>
-
-                  <div class="row" style="margin: 7vh 0;">
+                  <div class="row mt10">
                     <div class="col" style="margin: auto;">
                       <p>At any point in time, a player could either be playing, spectating, or eliminated (in which case they'd still be spectating but outside the game circle).</p>
                     </div>
@@ -128,7 +129,7 @@ alt: landing page of the app
                       <img src="/assets/img/portfolio/loveletter/Play Screen (eliminated).jpg" class="img-responsive">
                     </div>
                   </div>
-                  <div class="row" style="margin: 7vh 0;">
+                  <div class="row mt10">
                     <div class="col text-center">
                       <img src="/assets/img/portfolio/loveletter/immunity.jpg" class="img-responsive">
                     </div>
@@ -137,34 +138,42 @@ alt: landing page of the app
                     </div>
                   </div>
 
-                  <div id="wireframing">
+                  <div id="wireframing" class="mt10">
                     <h4 class="project-heading">Initial Wireframing</h4>
                     <img class="placeholder" src="/assets/img/portfolio/loveletter/initial wireframing.jpeg" style="width: 100%; height: auto; object-fit: contain; border-radius: 0; box-shadow: none;">
                   </div>
- 
-                  <div id="highlights">
+
+                  <div id="highlights" class="mt10">
                     <h4 class="project-heading">Outcome Highlights</h4>
+                    <br/>
+                    <div class="row">
+                      <div class="col" style="flex-basis: 60%;">
+                        <p class="bold">A common starting point</p>
+                        <br>
+                        <h6>DESIGN GOAL</h6>
+                        <p>Community</p>
+                        <h6>USER SCENARIO</h6>
+                        <p>With the game being virtual and server-hosted, there can be a disconnect between players which may lead to them not knowing what's going on.</p>
+                        <h6>SOLUTION</h6>
+                        <p>Ensured that all player screens are in sync with each other. Each player could see what was going on as if they were sitting in a circle.</p>
+                        <br>
+                        <br>
 
-                    <br>
-                    <h6 style="letter-spacing: 0.5px; font-size: 0.85em;">DESIGN GOAL: Community</h6>
-                    <p class="bold">A common starting point</p>
-                    <br>
-                    <h6>USER SCENARIO</h6>
-                    <p>With the game being virtual and server-hosted, there can be a disconnect between players which may lead to them not knowing what's going on.</p>
-                    <h6>SOLUTION</h6>
-                    <p>Ensured that all player screens are in sync with each other. Each player could see what was going on as if they were sitting in a circle.</p>
-
-                    <br>
-                    <br>
-                    <h6 style="letter-spacing: 0.5px; font-size: 0.85em;">DESIGN GOAL: Clean, Simple</h6>
-                    <p class="bold">Simple and easy-to-grasp iconography</p>
-                    <br>
-                    <h6>USER SCENARIO</h6>
-                    <p>Users who do not often participate in the gaming community find it hard to understand what symbols mean.</p>
-                    <h6>SOLUTION</h6>
-                    <p>Introduced simple icons which you would come across daily.</p>
+                        <p class="bold">Simple and easy-to-grasp iconography</p>
+                        <br>
+                        <h6>DESIGN GOAL</h6>
+                        <p>Clean, Simple</p>
+                        <h6>USER SCENARIO</h6>
+                        <p>Users who do not often participate in the gaming community find it hard to understand what symbols mean.</p>
+                        <h6>SOLUTION</h6>
+                        <p>Introduced simple icons which you would come across daily.</p>
+                      </div>
+                      <div class="col text-center" style="flex-basis: 40%;">
+                        <img class="normal" style="max-height: 80vh;" src="/assets/img/portfolio/loveletter/mobile.png">
+                      </div>
+                    </div>
                   </div>
-                  <div id="improvements">
+                  <div id="improvements" class="mt10">
                     <h4 class="project-heading">Further Improvements</h4>
                     <p>
                      <ul>

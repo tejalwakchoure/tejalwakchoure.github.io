@@ -211,12 +211,16 @@ a.coloured_hover:active,
 a.coloured_hover:focus {
     color: #{{ site.color.backgroundcol }} !important;
 }
+.transparent_back {
+    background-color: transparent !important;
+}
 .coloured_back {
     background-color: #{{ site.color.backgroundcol }} !important;
 }
 .coloured_front_light {
     color: #{{ site.color.backgroundcol_light }} !important;
 }
+
 
 .navbar-brand {   
     padding: 0;    

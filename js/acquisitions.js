@@ -1,12 +1,4 @@
 
-// $(window).on("load", function() {
-//   const scrollContainer = document.querySelector('.hor-scroll');
-//   scrollContainer.addEventListener('wheel', (evt) => {
-//     evt.preventDefault();
-//     scrollContainer.scrollLeft += evt.deltaY;
-//   });
-// }
-
 $(document).ready(function() {
  "use strict";
 
@@ -33,13 +25,10 @@ $(document).ready(function() {
 
  $.ajax({
   type: "GET",
-  url: "../chart-data/product-timeline.csv",
+  url: "../chart-data/product-groups.csv",
   dataType: "text",
-  success: function(data) {processProductTimeline(data);}
+  success: function(data) {processProductGroups(data);}
 });
-
-// console.log($('.hor-scroll'));
-// document.getElementById("hor-scroll-id").scrollIntoView();
 
 });
 
@@ -56,11 +45,11 @@ function processMAMMA(csvdata) {
     all_years.push(i);
   }
   
-  var goog_data = [];
-  var amz_data = [];
-  var appl_data = [];
-  var meta_data = [];
-  var msft_data = [];
+  // var goog_data = [];
+  // var amz_data = [];
+  // var appl_data = [];
+  // var meta_data = [];
+  // var msft_data = [];
 
 
   var goog_data_line = [];
@@ -71,28 +60,26 @@ function processMAMMA(csvdata) {
 
   data_array.forEach(function(row) {
     if ( row[0] == 'Google' ) {
-      goog_data.push({x: parseInt(row[1], 10), y: parseInt(row[2], 10)});
+      // goog_data.push({x: parseInt(row[1], 10), y: parseInt(row[2], 10)});
       goog_data_line.push([parseInt(row[1], 10), parseInt(row[2], 10)]);
     }
     else if ( row[0] == 'Amazon' ) {
-      amz_data.push({x: parseInt(row[1], 10), y: parseInt(row[2], 10)});
+      // amz_data.push({x: parseInt(row[1], 10), y: parseInt(row[2], 10)});
       amz_data_line.push([parseInt(row[1], 10), parseInt(row[2], 10)]);
     }
     else if ( row[0] == 'Apple' ) {
-      appl_data.push({x: parseInt(row[1], 10), y: parseInt(row[2], 10)});
+      // appl_data.push({x: parseInt(row[1], 10), y: parseInt(row[2], 10)});
       appl_data_line.push([parseInt(row[1], 10), parseInt(row[2], 10)]);
     }
     else if ( row[0] == 'Meta' ) {
-      meta_data.push({x: parseInt(row[1], 10), y: parseInt(row[2], 10)});
+      // meta_data.push({x: parseInt(row[1], 10), y: parseInt(row[2], 10)});
       meta_data_line.push([parseInt(row[1], 10), parseInt(row[2], 10)]);
     }
     else if ( row[0] == 'Microsoft' ) {
-      msft_data.push({x: parseInt(row[1], 10), y: parseInt(row[2], 10)});
+      // msft_data.push({x: parseInt(row[1], 10), y: parseInt(row[2], 10)});
       msft_data_line.push([parseInt(row[1], 10), parseInt(row[2], 10)]);
     }
   });
-  // console.log(arrayColumn(goog_data_line,0));
-
 
   const chart1 = new Chart('goog-acquisitions', {
     type: 'line',
@@ -265,78 +252,79 @@ function processMAMMA(csvdata) {
   }
 });
 
-  const chart_total = new Chart('mamma-acquisitions', {
-    type: 'scatter',
-    data: {
-      datasets: [{
-        label: 'Google',
-        data: goog_data,
-        borderWidth: 2,
-        fill: false,
-        borderColor: 'teal',
-        showLine: true 
-      },
-      {
-        label: 'Amazon',
-        data: amz_data,
-        borderWidth: 1,
-        fill: false,
-        borderColor: 'gray',
-        showLine: true 
-      },
-      {
-        label: 'Apple',
-        data: appl_data,
-        borderWidth: 1,
-        fill: false,
-        borderColor: 'gray',
-        showLine: true 
-      },
-      {
-        label: 'Meta',
-        data: meta_data,
-        borderWidth: 1,
-        fill: false,
-        borderColor: 'gray',
-        showLine: true 
-      },
-      {
-        label: 'Microsoft',
-        data: msft_data,
-        borderWidth: 1,
-        fill: false,
-        borderColor: 'gray',
-        showLine: true 
-      },
-      ],
-    },
-    options: {
-      tooltips: {
-        mode: 'index',
-        intersect: false,
-      },
-      hover: {
-        mode: 'nearest',
-        intersect: true
-      },
-      responsive: true,
-      elements: {
-        point: {
-          radius: 0
-        }
-      },
-    }
-  });
+  // const chart_total = new Chart('mamma-acquisitions', {
+  //   type: 'scatter',
+  //   data: {
+  //     datasets: [{
+  //       label: 'Google',
+  //       data: goog_data,
+  //       borderWidth: 2,
+  //       fill: false,
+  //       borderColor: 'teal',
+  //       showLine: true 
+  //     },
+  //     {
+  //       label: 'Amazon',
+  //       data: amz_data,
+  //       borderWidth: 1,
+  //       fill: false,
+  //       borderColor: 'gray',
+  //       showLine: true 
+  //     },
+  //     {
+  //       label: 'Apple',
+  //       data: appl_data,
+  //       borderWidth: 1,
+  //       fill: false,
+  //       borderColor: 'gray',
+  //       showLine: true 
+  //     },
+  //     {
+  //       label: 'Meta',
+  //       data: meta_data,
+  //       borderWidth: 1,
+  //       fill: false,
+  //       borderColor: 'gray',
+  //       showLine: true 
+  //     },
+  //     {
+  //       label: 'Microsoft',
+  //       data: msft_data,
+  //       borderWidth: 1,
+  //       fill: false,
+  //       borderColor: 'gray',
+  //       showLine: true 
+  //     },
+  //     ],
+  //   },
+  //   options: {
+  //     tooltips: {
+  //       mode: 'index',
+  //       intersect: false,
+  //     },
+  //     hover: {
+  //       mode: 'nearest',
+  //       intersect: true
+  //     },
+  //     responsive: true,
+  //     elements: {
+  //       point: {
+  //         radius: 0
+  //       }
+  //     },
+  //   }
+  // });
 }
 
 
 function processMarkets(csvdata) {
-  var data_array = $.csv.toArrays(csvdata);
-  data_array.splice(0, 1);
+  var dataset = $.csv.toObjects(csvdata);
+  // data_array.splice(0, 1);
 
-  const arrayColumn = (arr, n) => arr.map(x => x[n]);
-  const market = arrayColumn(data_array, 0);
-  const num_companies = arrayColumn(data_array, 1);
+  // const arrayColumn = (arr, n) => arr.map(x => x[n]);
+  // const market = arrayColumn(data_array, 0);
+  // const num_companies = arrayColumn(data_array, 1);
+  console.log(dataset)
 
   function colorFromRaw(ctx) {
     if (ctx.type !== 'data') {
@@ -347,73 +335,91 @@ function processMarkets(csvdata) {
     return 'rgb(54, 162, 235,'+alpha+')';
   }
 
-//   const treemap = new Chart('market-treemap', {
-//     type: 'treemap',
-//     data: {
-//       datasets: [
-//       {
-//       // label: 'My treemap dataset',
-//       tree: num_companies,
-//       borderColor: 'rgb(54, 162, 235)',
-//       borderWidth: 0.5,
-//       borderRadius: 4,
-//       spacing: 1,
-//       backgroundColor: (ctx) => colorFromRaw(ctx),
-//       // captions: {
-//       //   display: true,
-//       //   formatter: function(ctx) {
-//       //     const data = ctx.chart.data;
-//       //     console.log(data);
-//       //     console.log(`Custom Text: ${data.datasets[ctx.datasetIndex].tree[ctx.dataIndex]}`);
-//       //     return `Custom Text: ${data.datasets[ctx.datasetIndex].tree[ctx.dataIndex]}`;
-//       //   }
-//       // },
-//     }
-//     ],
-//   },
-//   options: {
-//     plugins: {
-//       title: {
-//         display: true,
-//         text: 'My treemap chart'
-//       },
-//       legend: {
-//         display: false
-//       }
-//     }
-//   }
-// });
-
-
-
-const data = [
-{category: 'main', subcategory: 'one', value: 1},
-{category: 'main', subcategory: 'one', value: 5},
-{category: 'main', subcategory: 'one', value: 3},
-{category: 'main', subcategory: 'two', value: 2},
-{category: 'main', subcategory: 'two', value: 1},
-{category: 'main', subcategory: 'two', value: 8},
-{category: 'other', subcategory: 'one', value: 4},
-{category: 'other', subcategory: 'one', value: 5},
-{category: 'other', subcategory: 'two', value: 4},
-{category: 'other', subcategory: 'two', value: 1},
-];
-const treemap = new Chart('market-treemap', {
-  type: 'treemap',
-  data: {
-    datasets: [{
-      tree: data,
-      key: 'value',
-      groups: ['subcategory', 'value'],
-      captions: {
+  Chart.defaults.color = '#fff';
+  const treemap = new Chart('market-treemap', {
+    type: 'treemap',
+    data: {
+      datasets: [
+      {
+      // label: 'Number of companies',
+      tree: dataset,
+      key: "num_companies",
+      borderColor: 'rgb(54, 162, 235)',
+      borderWidth: 0.5,
+      borderRadius: 4,
+      spacing: 1,
+      fontColor: 'red',
+      backgroundColor: (ctx) => colorFromRaw(ctx),
+      // captions: {
+      //   display: true,
+      //   formatter: function(ctx) {
+      //     const data = ctx.chart.data;
+      //     console.log(data);
+      //     console.log(`Custom Text: ${data.datasets[ctx.datasetIndex].tree[ctx.dataIndex]}`);
+      //     return `Custom Text: ${data.datasets[ctx.datasetIndex].tree[ctx.dataIndex]}`;
+      //   }
+      // },
+      labels: {
         display: true,
         formatter(ctx) {
-          return ctx.type === 'data' ?  ctx.raw.g : '';
+          const data = ctx.chart.data.datasets[ctx.datasetIndex].tree[ctx.dataIndex];
+          var labelling = String(data.market)+": "+String(data.num_companies);
+          return labelling;
+        },
+        font: {
+          size: 14,
+          family: "Source Sans Pro",
+          color: '#fff',
+          weight: 'bold'
         }
       },
-    }]
+    }
+    ],
   },
+  options: {
+    events: [],
+    plugins: {
+      title: {
+        display: false,
+        // text: 'My treemap chart'
+      },
+      legend: {
+        display: false
+      }
+    }
+  }
 });
+
+
+
+// const data = [
+// {category: 'main', subcategory: 'one', value: 1},
+// {category: 'main', subcategory: 'one', value: 5},
+// {category: 'main', subcategory: 'one', value: 3},
+// {category: 'main', subcategory: 'two', value: 2},
+// {category: 'main', subcategory: 'two', value: 1},
+// {category: 'main', subcategory: 'two', value: 8},
+// {category: 'other', subcategory: 'one', value: 4},
+// {category: 'other', subcategory: 'one', value: 5},
+// {category: 'other', subcategory: 'two', value: 4},
+// {category: 'other', subcategory: 'two', value: 1},
+// ];
+// const treemap = new Chart('market-treemap', {
+//   type: 'treemap',
+//   data: {
+//     datasets: [{
+//       tree: data,
+//       key: 'value',
+//       groups: ['subcategory', 'value'],
+//       captions: {
+//         display: true,
+//         formatter(ctx) {
+//           return ctx.type === 'data' ?  ctx.raw.g : '';
+//         }
+//       },
+//     }]
+//   },
+// });
 }
 
 
@@ -498,63 +504,42 @@ function processMarketDates(csvdata) {
 }
 
 
-function processProductTimeline(csvdata) {
+function processProductGroups(csvdata) {
   "use strict";
-  var data_array = $.csv.toArrays(csvdata);
-  // data_array.splice(0, 1);
+  var data_object = $.csv.toObjects(csvdata);
 
-  console.log(data_array);
+  var dataset = {
+    'AdSense': [],
+    'Android': [],
+    'Cloud': [],
+    'Developers': [],
+    'GSuite': [],
+    'Maps': [],
+    'Play': [],
+    'Search': [],
+    'X (Google X)': [],
+    'YouTube': [],
+    'Other':[]
+  };
+  data_object.forEach(function(row) {
+    // if(dataset[row.product_group])
+    dataset[row.productgroup].push({color: "#D1A7FF", label: row.company, times: [{"starting_time": Date.parse("01-01-"+row.founded), "ending_time": Date.parse("12-31-"+row.acquired)}]});
+    // else 
+      // dataset[row.product_group] = [{label: row.company, times: [{"starting_time": Date.parse("01-01-"+row.founded), "ending_time": Date.parse("12-31-"+row.acquired)}]}];
 
-  const arrayColumn = (arr, n) => arr.map(x => x[n]);
-  const years = arrayColumn(data_array, 0);
-  const market = arrayColumn(data_array, 1);
-  const num_companies = arrayColumn(data_array, 2);
+    });
 
-  data_array.forEach(function(row) {
-    if ( row[0] == 'Google' ) {
-      goog_data.push({x: parseInt(row[1], 10), y: parseInt(row[2], 10)});
-      goog_data_line.push([parseInt(row[1], 10), parseInt(row[2], 10)]);
-    }
-    else if ( row[0] == 'Amazon' ) {
-      amz_data.push({x: parseInt(row[1], 10), y: parseInt(row[2], 10)});
-      amz_data_line.push([parseInt(row[1], 10), parseInt(row[2], 10)]);
-    }
-    else if ( row[0] == 'Apple' ) {
-      appl_data.push({x: parseInt(row[1], 10), y: parseInt(row[2], 10)});
-      appl_data_line.push([parseInt(row[1], 10), parseInt(row[2], 10)]);
-    }
-    else if ( row[0] == 'Meta' ) {
-      meta_data.push({x: parseInt(row[1], 10), y: parseInt(row[2], 10)});
-      meta_data_line.push([parseInt(row[1], 10), parseInt(row[2], 10)]);
-    }
-    else if ( row[0] == 'Microsoft' ) {
-      msft_data.push({x: parseInt(row[1], 10), y: parseInt(row[2], 10)});
-      msft_data_line.push([parseInt(row[1], 10), parseInt(row[2], 10)]);
-    }
-  });
-  
-  console.log(Date.parse(new Date()));
-
+  console.log(dataset)
   var testData = [
   {class: "pA", label: "person a", times: [
-  {"color":"pink", "starting_time": Date.parse("01-01-2010"), "ending_time": Date.parse("01-01-2015")},
-  {"color":"pink", "starting_time": Date.parse("01-01-2016"), "ending_time": Date.parse("01-01-2020")},
+  {"color":"pink", "starting_time": Date.parse("01-01-2010"), "ending_time": Date.parse("01-01-2015"), "label": "GSuite"},
+  {"color":"pink", "starting_time": Date.parse("01-01-2016"), "ending_time": Date.parse("01-01-2020"), "label": "GSuite"},
   ]},
   ];
 
-  var chart = d3.timelines()
-  .width(700)
-  .margin({left:70, right:30, top:0, bottom:0})
-  .stack()
-  .tickFormat({
-   format:  d3.timeFormat("%Y"),
-   tickTime: d3.timeYear,
-              // tickInterval: 10,
-              // tickSize: 3
-            })
+  testData = dataset;
 
-
-//   var testData = [
+//     var testData = [
 //   {class: "pA", label: "person a", times: [
 // {"color":"pink", "starting_time": 1355767900000, "ending_time": 1355774400000}
 // ]},
@@ -564,6 +549,31 @@ function processProductTimeline(csvdata) {
 // {"color":"red", "starting_time": 1355761910000, "ending_time": 1355763910000}]}
 // ];
 
+var chart = d3.timelines()
+.margin({left:170, right:30, top:0, bottom:0})
+.stack()
+  // .showTimeAxisTick() 
+  .itemHeight(20)
+  .itemMargin(20)
+  .tickFormat({
+   format:  d3.timeFormat("%Y"),
+   tickTime: d3.timeYear,
+              // tickInterval: 10,
+              tickSize: 1
+            })
+  // .hover(function (d, i, datum) {
+  //         // d is the current rendering object
+  //         // i is the index during d3 rendering
+  //         // datum is the id object
+  //         console.log(d)
+  //         var div = $('#hoverRes');
+  //         div.find('.coloredDiv').css('background-color', d.color)
+  //         div.find('#name').text(datum.label);
+  //       })
+
+
+
+
 // var chart = d3.timelines()
 // .width(700)
 // .margin({left:70, right:30, top:0, bottom:0})
@@ -572,12 +582,19 @@ function processProductTimeline(csvdata) {
 
 
 var svg = d3.select("#acq-timeline").append("svg")
-.attr("width", 700)
-.datum([testData[0]])
+.attr("width", 800)
+.attr("height", 3000)
+.datum(testData['Other'])
 .call(chart);
 //     svg.transition()
 //     .duration(3000);
+
+
+
+
+
 var groups = [0, 1, 2]
+
 
     // add the options to the button
     d3.select("#selectbox")
@@ -595,7 +612,7 @@ function update(selectedGroup) {
     d3.select("#acq-timeline").select('svg').remove();
 
     var svg = d3.select("#acq-timeline").append("svg")
-    .attr("width", 500)
+    // .attr("width", 500)
     .datum([testData[selectedGroup]])
     .call(chart);
 
@@ -603,11 +620,6 @@ function update(selectedGroup) {
     // .duration(1000);
   }
 
-  // d3.select("#selectbox").on("change", function(d) {
-  //       var selectedGroup = d3.select(this).property("value");
-  //       console.log("selected group", selectedGroup)
-  //       update(selectedGroup)
-  //     });
 
     // Cache the number of options
     var $this = $("#selectbox"),

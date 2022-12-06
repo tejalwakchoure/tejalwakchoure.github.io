@@ -244,15 +244,47 @@
  border: 0px;
  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
-.loveletter .main {
- height: 700px; 
- width: fit-content;
- margin: auto;
- border-radius: 2em;
- margin: 2em auto;
+.loveletter img.normal {
+ border-radius: 0;
  border: 0px;
- box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+ box-shadow: none;
 }
+.loveletter-main-img {
+ height: 90vh; 
+ width: 100%;
+ object-fit: contain;
+ background: #A5C6FF;
+ /*margin: auto;*/
+ /*border-radius: 2em;*/
+ /*margin: 2em auto;*/
+ border: 0px;
+ /*box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);*/
+}
+.loveletter #highlights h6 {
+  letter-spacing: 0.5px; 
+  font-size: 0.85em;
+  /*text-transform: uppercase;*/
+}
+.nobelles-main-img {
+ height: 90vh; 
+ width: 100%;
+ object-fit: contain;
+ background: #fff;
+ /*margin: auto;*/
+ /*border-radius: 2em;*/
+ /*margin: 2em auto;*/
+ border: 0px;
+ /*box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);*/
+}
+.nobelles #print .normal {
+  padding: 50px;
+  margin: 4vh 0;
+  background: lightgray;
+}
+.mt10 {
+  margin-top: 20vh;
+}
+
 .coup #vis {
   position: fixed;
 }
@@ -309,15 +341,17 @@
   right: 0;
   height: 100%;
   width: 40%;
+  transition: all 700ms ease;
+  /*right: -10%;*/
 }
 
 .graphic__vis .img_wrapper {
   height: 300px;
-  width: 100%;
+  width: 400px;
   margin: calc( 50vh - 150px ) auto;
   background: none;
   background-size: cover !important;
-  transition: all 1s;
+  transition: all 700ms ease;
 }
 
 .graphic__vis.is-fixed {
@@ -336,20 +370,30 @@
 }
 #scorecards > div {
   margin: 10px;
+  padding: 20px;
   border-radius: 0.8em;
   border: 2px solid #cecece;
   box-shadow: 2px 2px 0 2px lavender;
 }
+#scorecards > div > p {
+  margin-bottom: 0;
+}
 
 .acquisitions .logo {
-  height: auto;
-  width: 100%;
+  height: 100px;
+  width: 100px;
+  margin-bottom: 10px;
 }
 
 .acquisitions .mamma-wrapper {
   height: 200px;
   width: 50%;
   padding: 20px;
+}
+
+.acquisitions .num {
+  height: 40vh;
+  /*width: 33%;*/
 }
 
 /*.acquisitions .goog-acquisitions,
@@ -384,7 +428,18 @@ overflow-x: scroll;*/
   padding: 0;
 }
 #acq-timeline {
+  pointer-events: none;
   transition: all 2s ease;
+}
+
+#acq-timeline path.domain,
+#acq-timeline g.tick line {
+  stroke: gray;
+  stroke-width: 0.5;
+  stroke-dasharray: none;
+}
+#acq-timeline rect {
+  fill: #cda0ff !important;
 }
 
 
@@ -454,6 +509,20 @@ overflow-x: scroll;*/
 }
 .options li:hover {
   background-color:lavender;
+}
+.plotly-map-container {
+  /*align-items: center;*/
+  width: 100%; 
+  height: 90vh;
+  padding: 5vh 0;
+  /*border: 1px gray solid;*/
+}
+.js-plotly-plot .plotly .user-select-none {
+  margin: auto;
+}
+.infolayer .cbtitle,
+.modebar-container {
+  display: none;
 }
 
 

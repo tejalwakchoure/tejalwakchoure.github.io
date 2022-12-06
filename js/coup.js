@@ -111,8 +111,8 @@ function processCountries(csvdata) {
         let alpha = (1 + Math.log(value)) / 5;
         return 'rgb(54, 162, 235,'+alpha+')';
       },
-      width: ({chart}) => width / 10,
-      height: ({chart}) => height / 2,
+      // width: ({chart}) => width / 10,
+      // height: ({chart}) => height / 2,
     }]
   }
 
@@ -162,22 +162,27 @@ function processCountries(csvdata) {
   // actions to take on each step of our scroll-driven story
   var steps = [
   function step0() {
-    graphicVisImgWrapper.style('background', 'url(../assets/img/portfolio/dbms.jpg)');
+    graphicVisImgWrapper.style('background', 'url(../assets/img/portfolio/coup/1-kumba-yala.jpg)');
+    // graphicVisImg.attr('src', '../assets/img/portfolio/coup/1-kumba-yala.jpg');
   },
 
   function step1() {
-    graphicVisImgWrapper.style('background', 'url(../assets/img/portfolio/superglue.jpg)');
-    // graphicVisImg.attr('src', './assets/img/portfolio/presenceid.jpg');
+    graphicVisImgWrapper.style('background', 'url(../assets/img/portfolio/coup/2-henrique-rosa.jpg)');
+    // graphicVisImg.attr('src', '../assets/img/portfolio/coup/2-henrique-rosa.jpg');
   },
 
   function step2() {
-    graphicVisImgWrapper.style('background', 'url(../assets/img/portfolio/presenceid.jpg)');
-    // graphicVisImg.attr('src', './assets/img/portfolio/dbms.jpg');
+    graphicVisImgWrapper.style('background', 'url(../assets/img/portfolio/coup/3-vieira.jpg)');
+    // graphicVisImg.attr('src', '../assets/img/portfolio/coup/3-vieira.jpg');
   },
 
   function step3() {
-    graphicVisImgWrapper.style('background', 'url(../assets/img/portfolio/irclogparser.jpg)');
-    // graphicVisImg.attr('src', './assets/img/portfolio/irclogparser.jpg');
+    graphicVisImgWrapper.style('background', 'url(../assets/img/portfolio/coup/4-sanha.jpg)');
+    // graphicVisImg.attr('src', '../assets/img/portfolio/coup/4-sanha.jpg');
+  },
+  function step4() {
+    graphicVisImgWrapper.style('background', 'url(../assets/img/portfolio/coup/5-manuel.jpg)');
+    // graphicVisImg.attr('src', '../assets/img/portfolio/coup/5-manuel.jpg');
   },
   ]
 
@@ -220,10 +225,15 @@ $(document).ready(function() {
 
         // handle the fixed/static position of grahpic
         var toggle = function(fixed, bottom) {
-          if (fixed) 
+          if (fixed) {
+            // graphicVisEl.style.right='0';
             graphicVisEl.classList.add('is-fixed');
-          else 
+
+          }
+          else {
+            // graphicVisEl.style.right='-10%';
             graphicVisEl.classList.remove('is-fixed');
+          }
 
           if (bottom) 
             graphicVisEl.classList.add('is-bottom');

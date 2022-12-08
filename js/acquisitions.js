@@ -102,10 +102,10 @@ function processMAMMA(csvdata) {
         }
       },
       plugins: {
-        title: {
-         display: true,
-         text: 'Google'
-       },
+       //  title: {
+       //   display: true,
+       //   text: 'Google'
+       // },
        legend: {
         display: false
       },
@@ -164,10 +164,10 @@ function processMAMMA(csvdata) {
         }
       },
       plugins: {
-        title: {
-         display: true,
-         text: 'Amazon'
-       },
+       //  title: {
+       //   display: true,
+       //   text: 'Amazon'
+       // },
        legend: {
         display: false
       },
@@ -226,10 +226,10 @@ function processMAMMA(csvdata) {
         }
       },
       plugins: {
-        title: {
-         display: true,
-         text: 'Apple'
-       },
+       //  title: {
+       //   display: true,
+       //   text: 'Apple'
+       // },
        legend: {
         display: false
       },
@@ -286,10 +286,10 @@ function processMAMMA(csvdata) {
         }
       },
       plugins: {
-        title: {
-         display: true,
-         text: 'Meta'
-       },
+       //  title: {
+       //   display: true,
+       //   text: 'Meta'
+       // },
        legend: {
         display: false
       },
@@ -346,10 +346,10 @@ function processMAMMA(csvdata) {
         }
       },
       plugins: {
-        title: {
-         display: true,
-         text: 'Microsoft'
-       },
+       //  title: {
+       //   display: true,
+       //   text: 'Microsoft'
+       // },
        legend: {
         display: false
       },

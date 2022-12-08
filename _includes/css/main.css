@@ -740,11 +740,11 @@ a.coloured_hover:focus {
     -o-object-position: 0 0;
     object-position: 0 0;
 }
-.masonry-item:nth-child(4) img {
+.masonry-item:nth-child(3) img {
     -o-object-position: 60% 50%;
     object-position: 60% 50%;
 }
-.masonry-item:nth-child(5) img {
+.masonry-item:nth-child(4) img {
     -o-object-position: 50% 100%;
     object-position: 50% 100%;
     background: white;

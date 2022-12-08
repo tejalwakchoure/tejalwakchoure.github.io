@@ -706,7 +706,8 @@ a.coloured_hover:focus {
     flex-flow: column wrap;
     align-content: center;
     /*height: calc( 630px * 4 );*/
-    height: calc( 700px * 4 );
+    /*height: calc( 720px * 4 );*/
+    height: calc( 720px * 3 );
 }
 
 .masonry-item {

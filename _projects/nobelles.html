@@ -4,8 +4,8 @@ title: Nobelles (Concept)
 type: layout & editorial design, web design
 
 date: 1000-01-05
-img: hero img.jpg
-alt: landing page of the magazine
+img: mobile.png
+alt: mobile site for the magazine
 ---
 
 <!DOCTYPE html>
@@ -17,89 +17,88 @@ alt: landing page of the magazine
 </head>
 <body>
   <img class="nobelles-main-img" src="/assets/img/portfolio/nobelles/page001.png">
-	{% include nav.html %}
+  {% include nav.html coloured_back="transparent_back" %}
 
-	<!-- Project details section -->
-	<section id="projectDetails" class="nobelles" data-nosnippet>
-		<div class="container" style="justify-content: center;">
-		<div class="row">
-			<h1 class="project-title">{{ page.title }}</h1>
-		</div>
-		<!-- picture>
-               <source 
-                  media="(max-width: 768px)"
-                  srcset="/assets/img/small-devices/portfolio/{{ page.img }}">
-               <source 
-               srcset="/assets/img/portfolio/{{ page.img }}">
-               <img src="/assets/img/portfolio/{{ page.img }}" 
-               class="img-responsive" 
-               alt="{{ page.alt }}"
-               id="main-img">
-           </picture> -->
-           <div class="row" id="content-row">
-           	<div id="overview" class="mt10">
-           		<p>
-           			Seventeen women have been awarded the Nobel Prize in Literature to date.
-           			<br><br>
-           			The idea behind this magazine was to introduce these literary greats to a wider audience, mainly young women who may not have been exposed to their work, in a contemporary fashion. Nobelles features their classic speeches throughout the decades. It centers an exploration of the female experience, touching on topics like race, fortune, and generational trauma. It aims to inspire young women around the world by letting the awardees express their stories in their own words.
-           		</p>
-           		<br><br>
-           		<p> <span class="bold">Project Type: </span>{{ page.type }}</p>
-           		<p> <span class="bold">Role: </span> layout & editorial design, web design</p>
-           		<p> <span class="bold">Tools: </span>InDesign for layout, Illustrator for components, Figma for prototyping</p>
-           		<p> <span class="bold">Date: </span>September 2022</p> 
-           	</div>
+  <!-- Project details section -->
+  <section id="projectDetails" class="nobelles" data-nosnippet>
+    <div class="container" style="justify-content: center;">
+      <div class="row">
+       <h1 class="project-title">{{ page.title }}</h1>
+     </div>
+     <div class="row" id="content-row">
+      <div id="overview" class="mt5">
+       <p>
+        Seventeen women have been awarded the Nobel Prize in Literature to date.
+        <br><br>
+        The idea behind this magazine was to introduce these literary greats to a wider audience, mainly young women who may not have been exposed to their work, in a contemporary fashion. Nobelles features their classic speeches throughout the decades. It centers an exploration of the female experience, touching on topics like race, fortune, and generational trauma. The magazine aims to inspire young women around the world by letting awardees represent their work in their own words.
+      </p>
+      <br><br>
+      <p> <span class="bold">Project Type: </span>{{ page.type }}</p>
+      <p> <span class="bold">Role: </span> layout & editorial design, web design</p>
+      <p> <span class="bold">Tools: </span>InDesign for layout, Illustrator for components, Figma for prototyping</p>
+      <p> <span class="bold">Date: </span>September 2022</p> 
+    </div>
 
-           	<div id="process" class="mt10">
-           		<h4 class="project-heading">The Process - Establishing Visual Language</h4>
-           		<!-- <p class="italic">~ "Nobelles" = nobels + belles + novels ~</p> -->
-           		<div class="row">
-           			<div class="col">                  
-           				<p>
-           				While the overall aim was to play with strong and feminine colours, the speeches themselves informed the colour scheme for each spread.</p>
-           				<ul>
-           					<li>Louise's speech had themes of childhood, so I used teal to evoke a sense of comfort.</li>
-           					<li>Wislawa's speech focused on the beauty of poetry, so I used purple to evoke indulgence.</li>
-           					<li>Toni's speech focused on language and injustice, so I used bold red and black to arouse feelings of frustration and grief.</li>
-           				</ul>
-           				<p>The colourful aesthetic and contemporary typefaces keep the content rooted firmly in the present and attach a sense of modernity to connect with young readers.</p>
-           			</div>
-           			<div class="col text-center">
-           				<img class="normal" src="/assets/img/portfolio/nobelles/approach.png">
-           			</div>
-           		</div>
-           	</div>
-           	<div id="print" class="row mt10">
-           	 <!-- <img class="placeholder" src="/assets/img/portfolio/{{ page.img }}"> -->
-             <!-- <img class="normal" src="/assets/img/portfolio/nobelles/page001.png"> -->
-             <img class="normal" src="/assets/img/portfolio/nobelles/page002.png">
-             <img class="normal" src="/assets/img/portfolio/nobelles/page003.png">
-             <img class="normal" src="/assets/img/portfolio/nobelles/page003s1.png">
-             <img class="normal" src="/assets/img/portfolio/nobelles/page003s2.png">
-             <img class="normal" src="/assets/img/portfolio/nobelles/page004.png">
-             <img class="normal" src="/assets/img/portfolio/nobelles/page004alt.png">
-           	</div>
-           	<div id="web" class="row mt10">
-           		<div class="col" style="margin-right: 20px;">
-           			<img style="height: 500px;" src="/assets/img/portfolio/nobelles/web.gif">
-           		</div>
-	           	<div>
-	           		<img style="height: 550px;" src="/assets/img/portfolio/nobelles/mobile.png">
-	           	</div>
-           	</div>
-           	<div id="references" class="mt10">
-           		<h4 class="project-heading">Credits</h4>
-           		<p>
-           			Speeches: <a href="https://www.nobelprize.org/" target="_blank"> The Nobel Prize Website</a>
-           			<br>
-           			Pictures: <a href="https://unsplash.com/" target="_blank"> Unsplash</a>
-           			<br>
-           			"I'm nobody" illustration: <a href="https://amysmooc.wordpress.com/" target="_blank"> Amy Burvall</a>
-           		</p>
-           	</div>
+    <div id="process" class="mt10">
+     <h4 class="project-heading">The Process: establishing a visual language</h4>
+     <!-- <p class="italic">~ "Nobelles" = nobels + belles + novels ~</p> -->
+     <div class="row mt5">
+      <img class="normal" style="width: 70%; margin: auto;" src="/assets/img/portfolio/nobelles/approach.png">
+       <p class="mt5">
+       While my overall aim was to play with strong feminine themes, the speeches themselves informed the colour scheme for each spread.</p>
+       <br>
+       <ul>
+        <li>Louise's speech had themes of childhood, so I used shades of teal to evoke a sense of comfort.</li>
+        <li>Wislawa's speech focused on the beauty of poetry, so I used purple to portray indulgence.</li>
+        <li>Toni's speech focused on cultural injustices, so I used bold red and black to arouse feelings of frustration and grief.</li>
+      </ul>
+      <br>
+      <p>The colourful aesthetic and contemporary typefaces keep the content rooted firmly in the present and attach a sense of modernity to connect with young readers.</p>
+    </div>
+ </div>
+</div>
+</div>
+</div>
 
-           </div>
-       </section>
-       {% include footer.html %}
-   </body>
-   </html>
+<!-- <div id="print" class="row mt10"> -->
+ <!-- <img class="placeholder" src="/assets/img/portfolio/{{ page.img }}"> -->
+ <!-- <img class="normal" src="/assets/img/portfolio/nobelles/page001.png"> -->
+ <div class="mt10"></div>
+ <img class="normal" src="/assets/img/portfolio/nobelles/page002.png">
+ <img class="normal" src="/assets/img/portfolio/nobelles/page003.png">
+ <img class="normal" src="/assets/img/portfolio/nobelles/page003s1.png">
+ <img class="normal" src="/assets/img/portfolio/nobelles/page003s2.png">
+ <img class="normal" src="/assets/img/portfolio/nobelles/page004.png">
+ <!-- </div> -->
+
+
+ <div id="web" class="row mt10" style="justify-content: center; align-items: center;">
+   <!-- <div style="width: 50%"> -->
+    <img style="height: 500px; margin-right: 100px;" src="/assets/img/portfolio/nobelles/web.gif">
+      <!-- </div>
+        <div style="width: 50%"> -->
+          <img style="height: 550px;" src="/assets/img/portfolio/nobelles/mobile.png">
+          <!-- </div> -->
+        </div>
+
+        <!-- <div class="container" style="justify-content: center;"> -->
+          <div class="row" id="content-row">
+            <div id="references" class="mt10">
+              <hr/>
+              <h4 class="project-heading">Credits</h4>
+              <p>
+                Speeches: <a href="https://www.nobelprize.org/" target="_blank"> The Nobel Prize Website</a>
+                <br>
+                Pictures: <a href="https://unsplash.com/" target="_blank"> Unsplash</a>
+                <br>
+                "I'm nobody" illustration: <a href="https://amysmooc.wordpress.com/" target="_blank"> Amy Burvall</a>
+              </p>
+            </div>
+          </div>
+          <!-- </div> -->
+
+          <!-- </div> -->
+        </section>
+        {% include footer.html %}
+      </body>
+      </html>

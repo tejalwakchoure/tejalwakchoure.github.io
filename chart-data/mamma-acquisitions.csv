@@ -1,4 +1,4 @@
-split name,split year,count unique key
+name,year,count
 Microsoft,1987,1
 Apple,1988,4
 Apple,1989,1
@@ -115,3 +115,7 @@ Apple,2022,2
 Google,2022,8
 Meta,2022,2
 Microsoft,2022,4
+Microsoft,2022,
+Amazon,2022,
+Apple,2022,
+Meta,2022,

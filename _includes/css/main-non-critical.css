@@ -16,7 +16,7 @@
   min-width: 0;
 }
 #projectDetails .project-title {
-	margin: 5vh auto;
+	margin: 10vh auto 5vh auto;
   font-size: 3rem;
   letter-spacing: none;
   text-transform: none;
@@ -156,12 +156,12 @@
 .irc .top-row {
   margin: 5rem 0;
 }
-.irc .card {
+.irc .top-row .card {
   font-family: Poppins, 'Source Sans Pro', Helvetica, sans-serif;
   text-transform: uppercase;
   background-color: #{{ site.color.white }};
   height: 200px;
-  width: 300px;
+  width: 300px !important;
   border: 0px;
   border-radius: 0.75em;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
@@ -171,13 +171,13 @@
   /*margin: 10px;*/
 }
 
-.irc .card h1 {
+.irc .top-row .card h1 {
   font-size: 4.15rem;
   font-weight: 600;
   margin: 0;
   color: #{{ site.color.link }};
 }
-.irc .card p {
+.irc .top-row .card p {
   margin: 0;
   color: #{{ site.color.text }};
 }
@@ -276,13 +276,44 @@
  border: 0px;
  /*box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);*/
 }
-.nobelles #print .normal {
-  padding: 50px;
-  margin: 4vh 0;
-  background: lightgray;
+.nobelles,
+.coup,
+.acquisitions,
+.fires {
+  padding: 0 !important;
+  display: flex !important;
+  flex-direction: column;
+}
+.nobelles .container,
+.coup .container,
+.acquisitions .container,
+.fires .container {
+  padding-left: 6vw !important;
+  justify-content: flex-start !important;
+}
+.nobelles #content-row,
+.coup #content-row,
+.acquisitions #content-row,
+.fires #content-row {
+  margin: 0 auto !important;
+}
+.nobelles img.normal {
+  padding: 50px 20px;
+  margin: 2vh 0;
+  /*background: lightgray;*/
+}
+#projectDetails > div {
+  width: 100%;
+}
+
+.mt20 {
+  margin-top: 40vh;
 }
 .mt10 {
   margin-top: 20vh;
+}
+.mt5 {
+  margin-top: 10vh;
 }
 
 .coup #vis {
@@ -316,7 +347,8 @@
 }
 
 .graphic__prose {
-  width: 60%;
+  width: 50%;
+  margin-left: 6vw;
   height: fit-content;
 }
 
@@ -340,7 +372,7 @@
   top: 0;
   right: 0;
   height: 100%;
-  width: 40%;
+  width: 50%;
   transition: all 700ms ease;
   /*right: -10%;*/
 }
@@ -369,26 +401,38 @@
   padding: 20px 0;
 }
 #scorecards > div {
-  margin: 10px;
   padding: 20px;
-  border-radius: 0.8em;
-  border: 2px solid #cecece;
-  box-shadow: 2px 2px 0 2px lavender;
+  /*border:1px solid #cda1ff;*/
+  margin: 10px;
+  border-radius: 0.2em;
+  /*border: 2px solid #cecece;*/
+  /*box-shadow: 2px 2px 0 0 black;*/
+  background: #6160d3; /*#00a9c4;*/
+  color: white !important;
 }
 #scorecards > div > p {
+  margin: 10px auto;
+  font-size: 1.5rem;
+}
+#scorecards > div > p.small {
   margin-bottom: 0;
+  font-size: 1.1rem;
 }
 
 .acquisitions .logo {
   height: 100px;
   width: 100px;
   margin-bottom: 10px;
+  filter: grayscale(1) brightness(3);
 }
 
 .acquisitions .mamma-wrapper {
-  height: 200px;
-  width: 50%;
-  padding: 20px;
+  height: -webkit-fit-content;
+  height: fit-content;
+  min-height: 25vh;
+  width: 30vw;
+  margin: 2vh 2vw;
+
 }
 
 .acquisitions .num {
@@ -429,10 +473,10 @@ overflow-x: scroll;*/
 }
 #acq-timeline {
   pointer-events: none;
-  transition: all 2s ease;
+  /*transition: all 2s ease;*/
 }
 
-#acq-timeline path.domain,
+/*#acq-timeline path.domain,
 #acq-timeline g.tick line {
   stroke: gray;
   stroke-width: 0.5;
@@ -440,7 +484,7 @@ overflow-x: scroll;*/
 }
 #acq-timeline rect {
   fill: #cda0ff !important;
-}
+}*/
 
 
 
@@ -451,33 +495,33 @@ overflow-x: scroll;*/
   padding-right:10px;
 }
 .select {
-  cursor:pointer;
-  display:inline-block;
-  position:relative;
-  background: lavender;
-  width: 50vw;
-  height: 50px;
-  border-radius: 5px;
-  text-align: center;
-  margin-bottom: 10vh;
+  cursor: pointer;
+    display: inline-block;
+    position: relative;
+    background: white;
+    width: 300px;
+    height: 50px;
+    border-radius: 5px;
+    border: 1px solid #cda1ff;
+    text-align: center;
+    margin: 2vh auto;
 }
 .styledSelect {
   position:absolute;
-  top:15%;
+  top:18%;
   right:0;
   bottom:0;
   left:0;
-  padding:0 10px;
   font-weight:bold;
-  font-size: 1.3em;
-  color: gray;
+  font-size: 1.2em;
+  color: #{{ site.color.text }};
 }
 .styledSelect:after {
   content:"";
   width:0;
   height:0;
-  border: 10px solid transparent;
-  border-color: #7e7ef5 transparent transparent transparent;
+  border: 9px solid transparent;
+  border-color: #cda1ff transparent transparent transparent;
   position: absolute;
   top: calc( 40% - 15% );
   right: 5%;
@@ -496,7 +540,7 @@ overflow-x: scroll;*/
   padding:0 0;
   list-style:none;
   /*border:1px solid #ccc;*/
-  background-color:#fdfdfd;
+  background-color:#fdfaff;
   -webkit-box-shadow:0 1px 2px rgba(0, 0, 0, 0.2);
   -moz-box-shadow:0 1px 2px rgba(0, 0, 0, 0.2);
   box-shadow:0 1px 2px rgba(0, 0, 0, 0.2);
@@ -513,8 +557,8 @@ overflow-x: scroll;*/
 .plotly-map-container {
   /*align-items: center;*/
   width: 100%; 
-  height: 90vh;
-  padding: 5vh 0;
+  /*height: 90vh;*/
+  padding: 10vh 0;
   /*border: 1px gray solid;*/
 }
 .js-plotly-plot .plotly .user-select-none {

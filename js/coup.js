@@ -24,8 +24,11 @@ function processGDP(csvdata) {
   const arrayColumn = (arr, n) => arr.map(x => x[n]);
   const years = arrayColumn(data_array, 1);
   const gdps = arrayColumn(data_array, 2);
+  years[3] = [years[3], " test"];
+  console.log(years);
+
   const data = {
-    labels: years,
+    labels: ['2001','2002',['2003','First Coup'],'2004','2005','2006','2007','2008','2009', '2010','2011',['2012','Second Coup'],'2013'],
     datasets: [{
       label: 'GDP % Change',
       data: gdps,
@@ -42,7 +45,11 @@ function processGDP(csvdata) {
     options: {
       scales: {
         x: {
-          color: '#fff',
+          ticks: {
+            color: '#fff',
+            // maxRotation: 0,
+            // callback: function(val,index){ console.log(val,this.getLabelForValue(val))}, 
+          }
         },
         y: {
           beginAtZero: true,
@@ -57,7 +64,7 @@ function processGDP(csvdata) {
         },
         tooltip: {
           usePointStyle: true,
-          backgroundColor: 'rgb(0, 0, 235)'
+          backgroundColor: 'gray'
         }
       },
     },
@@ -90,8 +97,8 @@ function processCountries(csvdata) {
   });
   console.log(dataset);
 
-  var height = document.getElementById('country-heatmap').height;
-  var width = document.getElementById('country-heatmap').width;
+  // var height = document.getElementById('country-heatmap').height;
+  // var width = document.getElementById('country-heatmap').width;
   var data = {
     labels: all_years,
     datasets: [{
@@ -108,7 +115,7 @@ function processCountries(csvdata) {
         var value = chart.dataset.data[chart.dataIndex].v;
         // var alpha = (value - 5) / 40;
         // return 'rgb(54, 162, 235,'+alpha+')';
-        let alpha = (1 + Math.log(value)) / 5;
+        let alpha = 1- ((1 + Math.log(value)) / 5);
         return 'rgb(54, 162, 235,'+alpha+')';
       },
       // width: ({chart}) => width / 10,
@@ -157,31 +164,42 @@ function processCountries(csvdata) {
     var graphicVisEl = graphicEl.select('.graphic__vis')
     var graphicProseEl = graphicEl.select('.graphic__prose')
     var graphicVisImg = graphicVisEl.select('img')
+    // var graphicVisImgText = document.getElementById('img_text')
     var graphicVisImgWrapper = graphicVisEl.select('.img_wrapper')
+
+    var paragraph = document.getElementById("img_text");
+
+
 
   // actions to take on each step of our scroll-driven story
   var steps = [
   function step0() {
     graphicVisImgWrapper.style('background', 'url(../assets/img/portfolio/coup/1-kumba-yala.jpg)');
+    // graphicVisImgText.innerHTML("test");
+    paragraph.textContent = "Kumba Yalá";
     // graphicVisImg.attr('src', '../assets/img/portfolio/coup/1-kumba-yala.jpg');
   },
 
   function step1() {
     graphicVisImgWrapper.style('background', 'url(../assets/img/portfolio/coup/2-henrique-rosa.jpg)');
+    paragraph.textContent = "Henrique Rosa";
     // graphicVisImg.attr('src', '../assets/img/portfolio/coup/2-henrique-rosa.jpg');
   },
 
   function step2() {
     graphicVisImgWrapper.style('background', 'url(../assets/img/portfolio/coup/3-vieira.jpg)');
+    paragraph.textContent = "João Bernardo Vieira";
     // graphicVisImg.attr('src', '../assets/img/portfolio/coup/3-vieira.jpg');
   },
 
   function step3() {
     graphicVisImgWrapper.style('background', 'url(../assets/img/portfolio/coup/4-sanha.jpg)');
+    paragraph.textContent = "Malam Bacai Sanhá";
     // graphicVisImg.attr('src', '../assets/img/portfolio/coup/4-sanha.jpg');
   },
   function step4() {
     graphicVisImgWrapper.style('background', 'url(../assets/img/portfolio/coup/5-manuel.jpg)');
+    paragraph.textContent = "Manuel Serifo Nhamadjo";
     // graphicVisImg.attr('src', '../assets/img/portfolio/coup/5-manuel.jpg');
   },
   ]
@@ -284,21 +302,35 @@ $(document).ready(function() {
 
       waypoints();
 
-    });
 
-$('html, body').easeScroll({
-  frameRate: 30,
-    // animationTime: 3000,
-    stepSize: 30,
-    // pulseAlgorithm: 1,
-    // pulseScale: 8,
-    // pulseNormalize: 1,
-    // accelerationDelta: 20,
-    // accelerationMax: 1,
-    // keyboardSupport: true,
-    // arrowScroll: 50,
-    // touchpadSupport: true,
-  });
+
+      $('html, body').easeScroll({
+        frameRate: 30,
+        // animationTime: 3000,
+        stepSize: 30,
+        // pulseAlgorithm: 1,
+        // pulseScale: 8,
+        // pulseNormalize: 1,
+        // accelerationDelta: 20,
+        // accelerationMax: 1,
+        // keyboardSupport: true,
+        // arrowScroll: 50,
+        // touchpadSupport: true,
+      });
+
+      $('div#coup-all').hide();
+      $('#first-graph .btn').on('click', function(event){
+        if(this.querySelector('input').id=='coup-2000') {
+          $('div#coup-all').hide();
+          $('div#coup-2000').show();
+        }
+        else {
+          $('div#coup-2000').hide();
+          $('div#coup-all').show();
+        }
+      });
+
+    });
 
 // import createScrollSnap from 'scroll-snap';
 // const element = document.getElementById('graphic');

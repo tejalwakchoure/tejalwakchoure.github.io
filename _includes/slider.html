@@ -16,9 +16,9 @@
 			      	{% for project in page.projects %}
 				        <div class="swiper-slide" data-title="{{project.title}}" data-description="{{project.description}}">
 				        	{% if project.video %}
-				        		<img src="/assets/img/portfolio/odds-ends/{{ project.slug }}.gif" alt="image" />
+				        		<img src="/assets/img/portfolio/{{ page.slug }}/{{ project.slug }}.gif" alt="image" />
 				        	{% else %}
-				        		<img src="/assets/img/portfolio/odds-ends/{{ project.slug }}.jpg" alt="image" />
+				        		<img src="/assets/img/portfolio/{{ page.slug }}/{{ project.slug }}.jpg" alt="image" />
 				        	{% endif %}
 				        </div>
 					{% endfor %}

@@ -1,11 +1,11 @@
 ---
 project-id: 3
-title: Fires in NYC
+title: Multi-family elevator buildings in New York at increased risk of structural fires
 type: data storytelling, data visualization
 
 date: 1000-01-03
-img: ../../grainy_page.jpeg
-alt: a grainy page
+img: violations-map.png
+alt: map of violations
 ---
 
 <!DOCTYPE html>
@@ -22,76 +22,11 @@ alt: a grainy page
 	<!-- Project details section -->
 	<section id="projectDetails" class="fires" data-nosnippet>
 		<div class="container" style="justify-content: center;">
-			<div class="row" style="align-items: center;">
-				<h1 class="project-title">{{ page.title }}</h1>
-			</div>
-			<div class="row" id="content-row">
-
-				<div id="intro">
-					<p>
-						The New York Fire Department's expenses totalled $37 million in FY 2021. 9999 buildings have open violation orders right now.
-						[Notice of violation = Often issued for administrative reasons, Ignoring may lead to default penalties & open compliance status
-						Violation order = Often issued for imminent safety hazards, Ignoring may lead to Criminal Summons or Vacate Order]
-					</p>
-				</div>
-
-				<div class="plotly-map-container">
-					{% include violations-map.html %}
-				</div>
-
-				<div id="mainmap">
-					<p>Which buildings have the most open violation orders? </p>
-					<p class="small">Map of all buildings coloured by the magnitude of active violations. notices will likely clutter - add if no. of violation orders is less (split by borough?)</p>
-				</div>
-
-				<div id="boroughs">
-					<p>What % is that by borough?</p>
-					<p class="small">bar graph (normalised by total no. of buildings in the borough)</p>
-				</div>
-
-				<div id="details">
-					<p>How does the type of building correlate with no. of violations?</p>
-					<p class="small">tiles, connect previous bar graph using the cool method</p>
-
-					<p>Are there any connections to building characteristics? (Possible explanations):</p>
-					<p class="small">small multiples</p>
-
-					<p>how old it is/when it was last renovated?</p>
-
-					<p>how tall is the building (normalised on) How many units are in the building?</p>
-					<canvas id="height-barchart"></canvas>
-
-					<p>What kind of building is it? </p>
-					<!-- <canvas id="owner-bubble"></canvas> -->
-					<img src="../assets/img/portfolio/fires/bubble-types.svg"  style="width: 100%; margin: 10vh 0;" />
-					<!-- <p>What about the owner/builder? </p> -->
-				</div>
-
-				<div id="conclusion">
-					<!-- <p>How many structural fire-related incidents have occurred in these locations in the past 5 years, and when?</p> -->
-					<!-- <p class="small">new map of all incidents (=alarm box locations; what if not?) laid on top of buildings (split by borough?). mention datetime on hover</p> -->
-					<p>13,973 structural fires in 2021</p>
-				</div>
-
-				<div id="sources">
-					<hr/>
-					<p>
-						<span class="bold">Sources:</span>
-						<a href="https://data.cityofnewyork.us/" target="_blank">
-						NYC Open Data</a>,
-						<a href="https://www.atsdr.cdc.gov/placeandhealth/svi/" target="_blank">
-						CDC/ATSDR census data</a>,
-						<a href="https://www.maximfortin.com/project/bpl-us/" target="_blank">
-						Open Building Population Layer</a>
-					</p>
-				</div>
-
-				<div id="overview">
-					<p> <span class="bold">Project Type: </span>{{ page.type }}</p>
-					<p> <span class="bold">Tools: </span>Figma for prototyping, Svelte and Plotly for web development</p>
-				</div>
-
-			</div>
+			<div class="col text-center">
+				<h1 class="project-title">Coming soon!</h1>
+				<p>December 2022</p>
+			</div> 
+			
 		</div>
 	</section>
 

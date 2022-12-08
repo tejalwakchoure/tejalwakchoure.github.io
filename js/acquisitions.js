@@ -90,18 +90,44 @@ function processMAMMA(csvdata) {
         data: arrayColumn(goog_data_line,1),
         borderWidth: 1,
         fill: false,
-        borderColor: 'pink',
+        borderColor: '#706FEE',
       }]
     },
     options: {
+      maintainAspectRatio: false,
       responsive: true,
       elements: {
         point: {
-          radius: 0
+          radius: 1
+        }
+      },
+      plugins: {
+        title: {
+         display: true,
+         text: 'Google'
+       },
+       legend: {
+        display: false
+      },
+      tooltip: {
+       callbacks: {
+        title(items) {
+          return;
+        },
+        label: function(ctx) {
+         let num = ctx.dataset.data[ctx.dataIndex];
+         let year = arrayColumn(goog_data_line,0)[ctx.dataIndex];
+              // console.log(num,year);
+              return [year, "acquisitions: "+num];
+            }
+          }
         }
       },
       scales : {
         x: {
+          grid: {
+            display: false
+          },
           ticks: {
             callback: function(value, index, values) {
              return (index === values.length - 1 || index === 0) ? this.getLabelForValue(value) : '';
@@ -115,6 +141,8 @@ function processMAMMA(csvdata) {
     }
   }
 });
+  
+
   const chart2 = new Chart('amz-acquisitions', {
     type: 'line',
     data: {
@@ -124,18 +152,44 @@ function processMAMMA(csvdata) {
         data: arrayColumn(amz_data_line,1),
         borderWidth: 1,
         fill: false,
-        borderColor: 'pink',
+        borderColor: '#706FEE',
       }]
     },
     options: {
+      maintainAspectRatio: false,
       responsive: true,
       elements: {
         point: {
-          radius: 0
+          radius: 1
+        }
+      },
+      plugins: {
+        title: {
+         display: true,
+         text: 'Amazon'
+       },
+       legend: {
+        display: false
+      },
+      tooltip: {
+       callbacks: {
+        title(items) {
+          return;
+        },
+        label: function(ctx) {
+         let num = ctx.dataset.data[ctx.dataIndex];
+         let year = arrayColumn(amz_data_line,0)[ctx.dataIndex];
+              // console.log(num,year);
+              return [year, "acquisitions: "+num];
+            }
+          }
         }
       },
       scales : {
         x: {
+          grid: {
+            display: false
+          },
           ticks: {
             callback: function(value, index, values) {
              return (index === values.length - 1 || index === 0) ? this.getLabelForValue(value) : '';
@@ -149,6 +203,8 @@ function processMAMMA(csvdata) {
     }
   }
 });
+
+
   const chart3 = new Chart('appl-acquisitions', {
     type: 'line',
     data: {
@@ -158,18 +214,44 @@ function processMAMMA(csvdata) {
         data: arrayColumn(appl_data_line,1),
         borderWidth: 1,
         fill: false,
-        borderColor: 'pink',
+        borderColor: '#706FEE',
       }]
     },
     options: {
+      maintainAspectRatio: false,
       responsive: true,
       elements: {
         point: {
-          radius: 0
+          radius: 1
+        }
+      },
+      plugins: {
+        title: {
+         display: true,
+         text: 'Apple'
+       },
+       legend: {
+        display: false
+      },
+      tooltip: {
+       callbacks: {
+        title(items) {
+          return;
+        },
+        label: function(ctx) {
+         let num = ctx.dataset.data[ctx.dataIndex];
+         let year = arrayColumn(appl_data_line,0)[ctx.dataIndex];
+              // console.log(num,year);
+              return [year, "acquisitions: "+num];
+            }
+          }
         }
       },
       scales : {
         x: {
+          grid: {
+            display: false
+          },
           ticks: {
             callback: function(value, index, values) {
              return (index === values.length - 1 || index === 0) ? this.getLabelForValue(value) : '';
@@ -192,18 +274,44 @@ function processMAMMA(csvdata) {
         data: arrayColumn(meta_data_line,1),
         borderWidth: 1,
         fill: false,
-        borderColor: 'pink',
+        borderColor: '#706FEE',
       }]
     },
     options: {
+      maintainAspectRatio: false,
       responsive: true,
       elements: {
         point: {
-          radius: 0
+          radius: 1
+        }
+      },
+      plugins: {
+        title: {
+         display: true,
+         text: 'Meta'
+       },
+       legend: {
+        display: false
+      },
+      tooltip: {
+       callbacks: {
+        title(items) {
+          return;
+        },
+        label: function(ctx) {
+         let num = ctx.dataset.data[ctx.dataIndex];
+         let year = arrayColumn(meta_data_line,0)[ctx.dataIndex];
+              // console.log(num,year);
+              return [year, "acquisitions: "+num];
+            }
+          }
         }
       },
       scales : {
         x: {
+          grid: {
+            display: false
+          },
           ticks: {
             callback: function(value, index, values) {
              return (index === values.length - 1 || index === 0) ? this.getLabelForValue(value) : '';
@@ -226,18 +334,44 @@ function processMAMMA(csvdata) {
         data: arrayColumn(msft_data_line,1),
         borderWidth: 1,
         fill: false,
-        borderColor: 'pink',
+        borderColor: '#706FEE',
       }]
     },
     options: {
+      maintainAspectRatio: false,
       responsive: true,
       elements: {
         point: {
-          radius: 0
+          radius: 1
+        }
+      },
+      plugins: {
+        title: {
+         display: true,
+         text: 'Microsoft'
+       },
+       legend: {
+        display: false
+      },
+      tooltip: {
+       callbacks: {
+        title(items) {
+          return;
+        },
+        label: function(ctx) {
+         let num = ctx.dataset.data[ctx.dataIndex];
+         let year = arrayColumn(msft_data_line,0)[ctx.dataIndex];
+              // console.log(num,year);
+              return [year, "acquisitions: "+num];
+            }
+          }
         }
       },
       scales : {
         x: {
+          grid: {
+            display: false
+          },
           ticks: {
             callback: function(value, index, values) {
              return (index === values.length - 1 || index === 0) ? this.getLabelForValue(value) : '';
@@ -331,8 +465,9 @@ function processMarkets(csvdata) {
       return 'transparent';
     }
     const value = ctx.raw.v;
-    let alpha = (1 + Math.log(value)) / 5;
-    return 'rgb(54, 162, 235,'+alpha+')';
+    let alpha = (1 + Math.log(value)) / 3.5;
+    // return 'rgb(165, 187, 255,'+alpha+')';
+    return 'rgb(92, 111, 246,'+alpha+')';
   }
 
   Chart.defaults.color = '#fff';
@@ -344,50 +479,71 @@ function processMarkets(csvdata) {
       // label: 'Number of companies',
       tree: dataset,
       key: "num_companies",
-      borderColor: 'rgb(54, 162, 235)',
-      borderWidth: 0.5,
-      borderRadius: 4,
+      // borderColor: 'rgb(54, 162, 235)',
+      // borderWidth: 0.5,
+      // borderRadius: 4,
       spacing: 1,
-      fontColor: 'red',
-      backgroundColor: (ctx) => colorFromRaw(ctx),
-      // captions: {
-      //   display: true,
-      //   formatter: function(ctx) {
-      //     const data = ctx.chart.data;
-      //     console.log(data);
-      //     console.log(`Custom Text: ${data.datasets[ctx.datasetIndex].tree[ctx.dataIndex]}`);
-      //     return `Custom Text: ${data.datasets[ctx.datasetIndex].tree[ctx.dataIndex]}`;
-      //   }
-      // },
+      // backgroundColor: (ctx) => colorFromRaw(ctx),
+      backgroundColor: '#7F67E5',
+      hoverColor: 'white',
+      hoverBackgroundColor: '#765CE4',
       labels: {
+        align: 'left',
         display: true,
+        overflow: 'hidden',
         formatter(ctx) {
+          if (ctx.type !== 'data') {
+            return;
+          }
           const data = ctx.chart.data.datasets[ctx.datasetIndex].tree[ctx.dataIndex];
-          var labelling = String(data.market)+": "+String(data.num_companies);
+          var labelling = [String(data.market),String(data.num_companies)];
           return labelling;
         },
-        font: {
+        // font: {
+        //   size: 16,
+        //   family: "Source Sans Pro",
+        //   color: '#fff',
+        //   weight: 'bold'
+        // }
+        color: ['white'],
+        font: [{
+          size: 16, 
+          family: "Source Sans Pro",
+          weight: 'bold'
+        }, 
+        {
           size: 14,
           family: "Source Sans Pro",
-          color: '#fff',
-          weight: 'bold'
-        }
+        }],
+        position: 'top',
       },
     }
     ],
   },
   options: {
-    events: [],
+    // events: [],
     plugins: {
       title: {
         display: false,
-        // text: 'My treemap chart'
       },
       legend: {
         display: false
+      },
+      tooltip: {
+       callbacks: {
+        title(items) {
+          return;
+        },
+        label(item) {
+          const dataItem = item.raw;
+          const obj = dataItem._data;
+          var labelling = [String(obj.market),String(obj.num_companies)];
+          return labelling;
+        }
       }
     }
   }
+}
 });
 
 
@@ -539,19 +695,9 @@ function processProductGroups(csvdata) {
 
   testData = dataset;
 
-//     var testData = [
-//   {class: "pA", label: "person a", times: [
-// {"color":"pink", "starting_time": 1355767900000, "ending_time": 1355774400000}
-// ]},
-// {class: "pB", label: "person b", times: [
-// {"color":"orange", "starting_time": 1355759910000, "ending_time": 1355761900000}]},
-// {class: "pC", label: "person c", times: [
-// {"color":"red", "starting_time": 1355761910000, "ending_time": 1355763910000}]}
-// ];
-
-var chart = d3.timelines()
-.margin({left:170, right:30, top:0, bottom:0})
-.stack()
+  var chart = d3.timelines()
+  .margin({left:170, right:30, top:0, bottom:0})
+  .stack()
   // .showTimeAxisTick() 
   .itemHeight(20)
   .itemMargin(20)
@@ -561,18 +707,6 @@ var chart = d3.timelines()
               // tickInterval: 10,
               tickSize: 1
             })
-  // .hover(function (d, i, datum) {
-  //         // d is the current rendering object
-  //         // i is the index during d3 rendering
-  //         // datum is the id object
-  //         console.log(d)
-  //         var div = $('#hoverRes');
-  //         div.find('.coloredDiv').css('background-color', d.color)
-  //         div.find('#name').text(datum.label);
-  //       })
-
-
-
 
 // var chart = d3.timelines()
 // .width(700)
@@ -580,11 +714,10 @@ var chart = d3.timelines()
 // .stack()
 // .relativeTime()
 
-
 var svg = d3.select("#acq-timeline").append("svg")
 .attr("width", 800)
 .attr("height", 3000)
-.datum(testData['Other'])
+.datum(testData['AdSense'])
 .call(chart);
 //     svg.transition()
 //     .duration(3000);
@@ -592,8 +725,19 @@ var svg = d3.select("#acq-timeline").append("svg")
 
 
 
-
-var groups = [0, 1, 2]
+var groups = [
+'AdSense',
+'Android',
+'Google Cloud',
+'Google for Developers',
+'GSuite',
+'Google Maps',
+'Google Play',
+'Search',
+'X (Google X)',
+'YouTube',
+'Other'
+]
 
 
     // add the options to the button
@@ -609,15 +753,15 @@ function update(selectedGroup) {
     // Create new data with the selection
     // var dataFilter = data.map(function(d){return {time: d.time, value:d[selectedGroup]} })
 
-    d3.select("#acq-timeline").select('svg').remove();
+    // d3.select("#acq-timeline").select('svg').remove();
 
-    var svg = d3.select("#acq-timeline").append("svg")
-    // .attr("width", 500)
-    .datum([testData[selectedGroup]])
-    .call(chart);
+    // var svg = d3.select("#acq-timeline").append("svg")
+    // // .attr("width", 500)
+    // .datum([testData[selectedGroup]])
+    // .call(chart);
 
-    // .transition()
-    // .duration(1000);
+
+    d3.select("#acq-timeline").attr('src', '../assets/img/portfolio/acquisitions/'+selectedGroup+'.svg');
   }
 
 

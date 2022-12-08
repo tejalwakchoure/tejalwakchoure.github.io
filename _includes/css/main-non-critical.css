@@ -251,7 +251,7 @@
  box-shadow: none;
 }
 .loveletter-main-img {
- height: 90vh; 
+ height: 85vh; 
  width: 100%;
  object-fit: contain;
  background: #A5C6FF;
@@ -267,7 +267,7 @@
   /*text-transform: uppercase;*/
 }
 .nobelles-main-img {
- height: 90vh; 
+ height: 85vh; 
  width: 100%;
  object-fit: contain;
  background: #fff;

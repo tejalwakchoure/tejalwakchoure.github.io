@@ -112,8 +112,9 @@
   object-fit: contain;
 }
 #odds-ends-slider-container {
- height: calc( 600px+400px );
- width: 80vw;
+ /*height: calc( 600px+400px );*/
+ /*width: 80vw;*/
+ width: 100%;
  margin: auto;
  padding: 0;
  position: relative;

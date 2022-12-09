@@ -13,8 +13,6 @@ alt: Guinness-Bisseau President Embaló
 <head>
 	{% include head.html %}
 	{% include js.html %}
-  <script src="https://cdn.jsdelivr.net/npm/chartjs-chart-matrix@1.1"></script>
-  <script src="https://unpkg.com/chartjs-chart-geo@3"></script>
   <script defer src="../js/coup.js"></script>
   {% include stylesheets.html %}
 </head>
@@ -37,7 +35,11 @@ alt: Guinness-Bisseau President Embaló
     <div class="row" id="content-row">
       <div id="intro" class="mt10">
         <p>
-          On February 1, Guinea-Bissau's government palace was attacked during a scheduled cabinet meeting. The shooting lasted for five hours, and at least eight people were killed. President Umaro Sissoco Embaló survived the attempted coup. "It wasn’t just a coup. It was an attempt to kill the president, the prime minister and all the cabinet," Embaló said. Six days after the attempt, a radio station critical of the government was attacked and its equipment destroyed.
+          On February 1, 
+          <a href="https://www.aljazeera.com/news/2022/2/1/gunfire-heard-near-government-house-in-guinea-bissau" target="_blank">
+            Guinea-Bissau's government palace was attacked
+          </a>
+          during a scheduled cabinet meeting. The shooting lasted for five hours, and at least eight people were killed. President Umaro Sissoco Embaló survived the attempted coup. "It wasn’t just a coup. It was an attempt to kill the president, the prime minister and all the cabinet," Embaló said. Six days after the attempt, a radio station critical of the government was attacked and its equipment destroyed.
           <br><br>
           Since 2000, the West African nation has seen 10 coup attempts, higher than any other nation globally. While only 2 of these attempts have been successful, they have contributed to ongoing political instability in the region. Only one elected president (José Mário Vaz, elected in 2014) has ever completed a five-year term in office. 
         </p>
@@ -157,7 +159,7 @@ alt: Guinness-Bisseau President Embaló
 
   <div class="container">
     <div class="text-center" style="margin-bottom: 10vh;">
-      <h6>gdp % change, Guinea-Bissau</h6>
+      <h6>Annual gdp % change, Guinea-Bissau</h6>
       <canvas id="gdp-barchart" style="margin: 10vh -15px;"></canvas>
     </div>
     <div id="conclusion" class="row mt10">
@@ -179,9 +181,7 @@ alt: Guinness-Bisseau President Embaló
        <a href="https://clinecenter.illinois.edu/project/research-themes/democracy-and-development/coup-detat-project" target="_blank">
        Cline Center Coup D'état Database</a>,
        <a href="https://data.worldbank.org/country/guinea-bissau" target="_blank">
-       World Bank</a>,
-       <a href="https://www.aljazeera.com/" target="_blank">
-       Al Jazeera</a>
+       World Bank Data</a>
      </p>
      <p> <span class="bold">Project Type: </span>{{ page.type }}</p>
      <p> <span class="bold">Tools: </span>Figma for prototyping, D3.js for graphics</p>

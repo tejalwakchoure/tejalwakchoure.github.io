@@ -706,8 +706,8 @@ a.coloured_hover:focus {
     flex-flow: column wrap;
     align-content: center;
     /*height: calc( 630px * 4 );*/
-    /*height: calc( 720px * 4 );*/
-    height: calc( 720px * 3 );
+    height: calc( 720px * 4 );
+    /*height: calc( 720px * 3 );*/
 }
 
 .masonry-item {
@@ -740,11 +740,11 @@ a.coloured_hover:focus {
     -o-object-position: 0 0;
     object-position: 0 0;
 }
-.masonry-item:nth-child(3) img {
+.masonry-item:nth-child(4) img {
     -o-object-position: 60% 50%;
     object-position: 60% 50%;
 }
-.masonry-item:nth-child(4) img {
+.masonry-item:nth-child(5) img {
     -o-object-position: 50% 100%;
     object-position: 50% 100%;
     background: white;

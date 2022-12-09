@@ -8,12 +8,12 @@ $(document).ready(function() {
   success: function(data) {processGDP(data);}
 });
 
- $.ajax({
-  type: "GET",
-  url: "../chart-data/countries.csv",
-  dataType: "text",
-  success: function(data) {processCountries(data);}
-});
+//  $.ajax({
+//   type: "GET",
+//   url: "../chart-data/countries.csv",
+//   dataType: "text",
+//   success: function(data) {processCountries(data);}
+// });
 });
 
 function processGDP(csvdata) {
@@ -71,85 +71,85 @@ function processGDP(csvdata) {
   });
 }
 
-function processCountries(csvdata) {
-  "use strict";
-  var data_array = $.csv.toArrays(csvdata);
-  data_array.splice(0, 1);
-  console.log(data_array);
+// function processCountries(csvdata) {
+//   "use strict";
+//   var data_array = $.csv.toArrays(csvdata);
+//   data_array.splice(0, 1);
+//   console.log(data_array);
 
-  const arrayColumn = (arr, n) => arr.map(x => x[n]);
-  var unique_countries = arrayColumn(data_array, 0).filter(function onlyUnique(value, index, self) {
-    return self.indexOf(value) === index;
-  });
+//   const arrayColumn = (arr, n) => arr.map(x => x[n]);
+//   var unique_countries = arrayColumn(data_array, 0).filter(function onlyUnique(value, index, self) {
+//     return self.indexOf(value) === index;
+//   });
 
-  var all_years = [];
-  for (var i = 2000; i <= 2022; i++) {
-    all_years.push(i)
-  }
-  all_years = all_years.map(String);
+//   var all_years = [];
+//   for (var i = 2000; i <= 2022; i++) {
+//     all_years.push(i)
+//   }
+//   all_years = all_years.map(String);
 
-  var dataset = [];
-  data_array.forEach(function(row) {
+//   var dataset = [];
+//   data_array.forEach(function(row) {
 
-    // unique_countries.indexOf(row[0])
-    if(row[0]!='')
-      dataset.push({ x: row[1], y: row[0], v: row[2]});
-  });
-  console.log(dataset);
+//     // unique_countries.indexOf(row[0])
+//     if(row[0]!='')
+//       dataset.push({ x: row[1], y: row[0], v: row[2]});
+//   });
+//   console.log(dataset);
 
-  // var height = document.getElementById('country-heatmap').height;
-  // var width = document.getElementById('country-heatmap').width;
-  var data = {
-    labels: all_years,
-    datasets: [{
-      label: 'Country',
-      data: dataset,
-      // [
-      // { x: 2002, y: 1, v: 11 },
-      // { x: 2004, y: 2, v: 22 },
-      // { x: 2010, y: 3, v: 33 }
-      // ],
-      // borderWidth: 1,
-      // borderColor: 'rgba(0,0,0,0.5)',
-      backgroundColor: function(chart) {
-        var value = chart.dataset.data[chart.dataIndex].v;
-        // var alpha = (value - 5) / 40;
-        // return 'rgb(54, 162, 235,'+alpha+')';
-        let alpha = 1- ((1 + Math.log(value)) / 5);
-        return 'rgb(54, 162, 235,'+alpha+')';
-      },
-      // width: ({chart}) => width / 10,
-      // height: ({chart}) => height / 2,
-    }]
-  }
+//   // var height = document.getElementById('country-heatmap').height;
+//   // var width = document.getElementById('country-heatmap').width;
+//   var data = {
+//     labels: all_years,
+//     datasets: [{
+//       label: 'Country',
+//       data: dataset,
+//       // [
+//       // { x: 2002, y: 1, v: 11 },
+//       // { x: 2004, y: 2, v: 22 },
+//       // { x: 2010, y: 3, v: 33 }
+//       // ],
+//       // borderWidth: 1,
+//       // borderColor: 'rgba(0,0,0,0.5)',
+//       backgroundColor: function(chart) {
+//         var value = chart.dataset.data[chart.dataIndex].v;
+//         // var alpha = (value - 5) / 40;
+//         // return 'rgb(54, 162, 235,'+alpha+')';
+//         let alpha = 1- ((1 + Math.log(value)) / 5);
+//         return 'rgb(54, 162, 235,'+alpha+')';
+//       },
+//       // width: ({chart}) => width / 10,
+//       // height: ({chart}) => height / 2,
+//     }]
+//   }
 
-  const chart = new Chart('country-heatmap', {
-    type: 'matrix',
-    data: data,
-    options: {
-      scales: {
-        x: {
-            // display: false,
-            // min: 2000,
-            // max: 2020,
-            // offset: true
-          },
-          y: {
-            // display: false,
-            // offset: true
-            type: 'category',
-            labels: unique_countries
-          }
-        },
-        responsive: true,
-        plugins: {
-          legend: { 
-            display: false,
-          },
-        },
-      },
-    });
-}
+//   const chart = new Chart('country-heatmap', {
+//     type: 'matrix',
+//     data: data,
+//     options: {
+//       scales: {
+//         x: {
+//             // display: false,
+//             // min: 2000,
+//             // max: 2020,
+//             // offset: true
+//           },
+//           y: {
+//             // display: false,
+//             // offset: true
+//             type: 'category',
+//             labels: unique_countries
+//           }
+//         },
+//         responsive: true,
+//         plugins: {
+//           legend: { 
+//             display: false,
+//           },
+//         },
+//       },
+//     });
+// }
 
    /* 
   I've created a function here that is a simple d3 chart.

@@ -685,42 +685,34 @@ function processProductGroups(csvdata) {
 
     });
 
-  console.log(dataset)
-  var testData = [
-  {class: "pA", label: "person a", times: [
-  {"color":"pink", "starting_time": Date.parse("01-01-2010"), "ending_time": Date.parse("01-01-2015"), "label": "GSuite"},
-  {"color":"pink", "starting_time": Date.parse("01-01-2016"), "ending_time": Date.parse("01-01-2020"), "label": "GSuite"},
-  ]},
-  ];
+  var testData = dataset;
 
-  testData = dataset;
+//   var chart = d3.timelines()
+//   .margin({left:170, right:30, top:0, bottom:0})
+//   .stack()
+//   // .showTimeAxisTick() 
+//   .itemHeight(20)
+//   .itemMargin(20)
+//   .tickFormat({
+//    format:  d3.timeFormat("%Y"),
+//    tickTime: d3.timeYear,
+//               // tickInterval: 10,
+//               tickSize: 1
+//             })
 
-  var chart = d3.timelines()
-  .margin({left:170, right:30, top:0, bottom:0})
-  .stack()
-  // .showTimeAxisTick() 
-  .itemHeight(20)
-  .itemMargin(20)
-  .tickFormat({
-   format:  d3.timeFormat("%Y"),
-   tickTime: d3.timeYear,
-              // tickInterval: 10,
-              tickSize: 1
-            })
+// // var chart = d3.timelines()
+// // .width(700)
+// // .margin({left:70, right:30, top:0, bottom:0})
+// // .stack()
+// // .relativeTime()
 
-// var chart = d3.timelines()
-// .width(700)
-// .margin({left:70, right:30, top:0, bottom:0})
-// .stack()
-// .relativeTime()
-
-var svg = d3.select("#acq-timeline").append("svg")
-.attr("width", 800)
-.attr("height", 3000)
-.datum(testData['AdSense'])
-.call(chart);
-//     svg.transition()
-//     .duration(3000);
+// var svg = d3.select("#acq-timeline").append("svg")
+// .attr("width", 800)
+// .attr("height", 3000)
+// .datum(testData['AdSense'])
+// .call(chart);
+// //     svg.transition()
+// //     .duration(3000);
 
 
 

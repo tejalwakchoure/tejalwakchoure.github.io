@@ -176,7 +176,7 @@
   font-size: 4.15rem;
   font-weight: 600;
   margin: 0;
-  color: #{{ site.color.link }};
+  color: #ff7043;
 }
 .irc .top-row .card p {
   margin: 0;
@@ -308,13 +308,13 @@
 }
 
 .mt20 {
-  margin-top: 40vh;
+  margin-top: min(40vh, 500px);
 }
 .mt10 {
-  margin-top: 20vh;
+  margin-top: min(20vh, 300px);
 }
 .mt5 {
-  margin-top: 10vh;
+  margin-top: min(10vh, 100px);
 }
 
 .coup #vis {

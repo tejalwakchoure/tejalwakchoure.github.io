@@ -985,6 +985,7 @@ a.coloured_hover:focus {
             width: min-content;
             margin: auto;
             width: 100%;
+            padding-left: 0;
         }
         #under_construction .header-intro-text .name, .header-intro-text .name { 
             font-size: 3rem;
@@ -1007,7 +1008,7 @@ a.coloured_hover:focus {
             font-size: 1.75em;
         }
         .masonry-item {
-            height: 400px !important;
+            height: 550px !important;
             width: 100%;
             padding: 0;
         }

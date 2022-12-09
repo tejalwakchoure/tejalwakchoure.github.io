@@ -475,8 +475,13 @@ overflow-x: scroll;*/
 #acq-timeline {
   pointer-events: none;
   margin: 5vh 5vw 20vh 10vw;
-  width: auto;
+  width: 100%;
+  max-width: 1180px;
   /*transition: all 2s ease;*/
+}
+.timeline-wrapper {
+  width: 100%;
+  text-align: center;
 }
 
 /*#acq-timeline path.domain,
@@ -787,7 +792,7 @@ overflow-x: scroll;*/
     width: 100% !important;
   }
   #acq-timeline {
-    margin: 0 10px;
+    margin: 0;
   }
 }
 

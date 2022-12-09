@@ -920,6 +920,10 @@ a.coloured_hover:focus {
         #about .about-col {
             flex-direction: column;
         }
+        #about .about-img-col {
+            width: auto;
+            margin: 50px auto !important;
+        }
         #about .row {
             width: 100%;
             margin: 0;

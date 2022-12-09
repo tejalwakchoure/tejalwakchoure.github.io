@@ -485,18 +485,18 @@ overflow-x: scroll;*/
 }
 #acq-timeline rect {
   fill: #cda0ff !important;
-}*/
+  }*/
 
 
 
 
 
-.s-hidden {
-  visibility:hidden;
-  padding-right:10px;
-}
-.select {
-  cursor: pointer;
+  .s-hidden {
+    visibility:hidden;
+    padding-right:10px;
+  }
+  .select {
+    cursor: pointer;
     display: inline-block;
     position: relative;
     background: white;
@@ -506,83 +506,151 @@ overflow-x: scroll;*/
     border: 1px solid #cda1ff;
     text-align: center;
     margin: 2vh auto;
+  }
+  .styledSelect {
+    position:absolute;
+    top:18%;
+    right:0;
+    bottom:0;
+    left:0;
+    font-weight:bold;
+    font-size: 1.2em;
+    color: #{{ site.color.text }};
+  }
+  .styledSelect:after {
+    content:"";
+    width:0;
+    height:0;
+    border: 9px solid transparent;
+    border-color: #cda1ff transparent transparent transparent;
+    position: absolute;
+    top: calc( 40% - 15% );
+    right: 5%;
+  }
+  .styledSelect:active, .styledSelect.active {
+    /*background-color:#eee;*/
+  }
+  .options {
+    display:none;
+    position:absolute;
+    top:100%;
+    right:0;
+    left:0;
+    z-index:999;
+    margin:0 0;
+    padding:0 0;
+    list-style:none;
+    /*border:1px solid #ccc;*/
+    background-color:#fdfaff;
+    -webkit-box-shadow:0 1px 2px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow:0 1px 2px rgba(0, 0, 0, 0.2);
+    box-shadow:0 1px 2px rgba(0, 0, 0, 0.2);
+  }
+  .options li {
+    padding:0 6px;
+    margin:0 0;
+    padding:0 10px;
+    font-size: 0.9em;
+  }
+  .options li:hover {
+    background-color:lavender;
+  }
+  .plotly-map-container {
+    /*align-items: center;*/
+    width: 100%; 
+    /*height: 90vh;*/
+    padding: 10vh 0;
+    /*border: 1px gray solid;*/
+  }
+  .js-plotly-plot .plotly .user-select-none {
+    margin: auto;
+  }
+  .infolayer .cbtitle,
+  .modebar-container {
+    display: none;
+  }
+  .irc #content-row > div,
+  .fires #content-row {
+    width: 100% !important;
+  }
+
+@media ( min-width: 1200px ) {
+  #projectDetails .container {
+    padding-left: 0 !important;
+  }
 }
-.styledSelect {
-  position:absolute;
-  top:18%;
-  right:0;
-  bottom:0;
-  left:0;
-  font-weight:bold;
-  font-size: 1.2em;
-  color: #{{ site.color.text }};
-}
-.styledSelect:after {
-  content:"";
-  width:0;
-  height:0;
-  border: 9px solid transparent;
-  border-color: #cda1ff transparent transparent transparent;
-  position: absolute;
-  top: calc( 40% - 15% );
-  right: 5%;
-}
-.styledSelect:active, .styledSelect.active {
-  /*background-color:#eee;*/
-}
-.options {
-  display:none;
-  position:absolute;
-  top:100%;
-  right:0;
-  left:0;
-  z-index:999;
-  margin:0 0;
-  padding:0 0;
-  list-style:none;
-  /*border:1px solid #ccc;*/
-  background-color:#fdfaff;
-  -webkit-box-shadow:0 1px 2px rgba(0, 0, 0, 0.2);
-  -moz-box-shadow:0 1px 2px rgba(0, 0, 0, 0.2);
-  box-shadow:0 1px 2px rgba(0, 0, 0, 0.2);
-}
-.options li {
-  padding:0 6px;
-  margin:0 0;
-  padding:0 10px;
-  font-size: 0.9em;
-}
-.options li:hover {
-  background-color:lavender;
-}
-.plotly-map-container {
-  /*align-items: center;*/
-  width: 100%; 
-  /*height: 90vh;*/
-  padding: 10vh 0;
-  /*border: 1px gray solid;*/
-}
-.js-plotly-plot .plotly .user-select-none {
-  margin: auto;
-}
-.infolayer .cbtitle,
-.modebar-container {
-  display: none;
-}
+
+  @media ( max-width: 1023px ) {
+    #projectDetails .project-title {
+      font-size: 2rem;
+    }
+    #projectDetails .project-title img {
+      height: 48px !important;
+      width: 48px !important;
+    }
+    .irc .top-row .card {
+      height: 200px;
+      width: 200px !important;
+    }
+    .irc .top-row .card h1 {
+      font-size: 2.35rem;
+    }
+    .irc figure,
+    .irc figure img {
+      width: 100%;
+      height: auto;
+    }
+    .mt5 {
+      margin-top: min(8vh, 100px);
+    }
+    .mt10 {
+      margin-top: min(16vh, 300px);
+    }
+    .mt20 {
+      margin-top: min(25vh, 500px);
+    }
+    .nobelles-main-img,
+    .loveletter-main-img {
+      height: 75vh;
+    }
+    .nobelles #web img {
+      margin: auto;
+      padding-bottom: 100px;
+    }
+    .loveletter .workflow {
+      flex-direction: column;
+    }
+    .loveletter .workflow-opp {
+      flex-direction: column-reverse;
+    }
+    .loveletter .workflow .col,
+    .loveletter .workflow-opp .col {
+      padding-bottom: 25px;
+    }
+    .acquisitions .mamma-wrapper {
+      width: 300px;
+    }
+    .acquisitions .num {
+      height: 20vh;
+    }
+    #acq-timeline {
+      margin: 0;
+      width: 100%;
+    }
+  }
 
 
 
 
 
-
-
-@media ( max-width: 768px ) {
-	#projectDetails h2 {
+  @media ( max-width: 768px ) {
+   #projectDetails h2 {
     letter-spacing: 2px;
     font-size: 1.8rem;
   }
   #projectDetails .container {
     padding: 0;
+    margin: 0;
   }
   #projectDetails #content-row {
     flex-direction: column;
@@ -645,36 +713,77 @@ overflow-x: scroll;*/
 }
 
 @media (max-width: 480px) {
-	#main-img {
-    height: 250px;
-  }
-  .swiper-slide img {
-    height: auto;
-  }
-  .swiper-slide,
-  .swiper-wrapper {
-    height: fit-content;
-  }
-  #oddsEnds .swiper {
-    padding-top: 20px;
-  }
-  #oddsEnds .caption {
-    padding: 30px;
-  }
-  #oddsEnds #current-title {
-    font-weight: bold;
-  }
-  #oddsEnds, 
-  #oddsEnds .container {
-    padding-left: 0;
-    padding-right: 0;
-  }
-  #odds-ends-slider-container {
-    width: 100vw;
-  }
-  footer .col {
-    text-align: center !important;
-  }
+ #main-img {
+  height: 250px;
+}
+.swiper-slide img {
+  height: auto;
+}
+.swiper-slide,
+.swiper-wrapper {
+  height: fit-content;
+}
+#oddsEnds .swiper {
+  padding-top: 20px;
+}
+#oddsEnds .caption {
+  padding: 30px;
+}
+#oddsEnds #current-title {
+  font-weight: bold;
+}
+#oddsEnds, 
+#oddsEnds .container {
+  padding-left: 0;
+  padding-right: 0;
+}
+#odds-ends-slider-container {
+  width: 100vw;
+}
+footer .col {
+  text-align: center !important;
+}
+.graphic__prose .trigger {
+  width: 85vw;
+  padding: 20px;
+  z-index: 2;
+  margin: 40vh auto;
+}
+.graphic__vis {
+  display: none;
+}
+#gdp-barchart {
+  width: 100% !important;
+}
+.coup img {
+  width: 300px !important;
+  height: 200px !important;
+  padding-bottom: 10px;
+}
+#projectDetails .project-title {
+  font-size: 1.7rem;
+}
+#projectDetails .container
+{
+  padding: 10px !important;
+}
+.acquisitions .mamma-wrapper {
+  margin: 2vh auto;
+}
+.acquisitions #companies .row {
+  flex-direction: column;
+}
+.acquisitions .num {
+  height: 300px;
+  margin: 20px auto;
+}
+.fires #content-row {
+  width: 100% !important;
+}
+.fires .plotly-map-container .main-svg,
+.fires .plotly-map-container .svg-container {
+  width: 100% !important;
+}
 }
 
 #portfolio .overlay-link {

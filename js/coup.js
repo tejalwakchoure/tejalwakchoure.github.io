@@ -43,6 +43,7 @@ function processGDP(csvdata) {
     type: 'bar',
     data: data,
     options: {
+      responsive: true,
       scales: {
         x: {
           ticks: {

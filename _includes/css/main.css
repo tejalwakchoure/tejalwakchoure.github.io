@@ -669,6 +669,7 @@ a.coloured_hover:focus {
     font-family: Poppins, 'Source Sans Pro', Helvetica, sans-serif;
     font-weight: 600;
     letter-spacing: 0.1px;
+    text-transform: capitalize;
     color: #{{ site.color.heading }}; 
 }
 
@@ -740,10 +741,10 @@ a.coloured_hover:focus {
     -o-object-position: 0 0;
     object-position: 0 0;
 }
-.masonry-item:nth-child(4) img {
+/*.masonry-item:nth-child(4) img {
     -o-object-position: 60% 50%;
     object-position: 60% 50%;
-}
+}*/
 .masonry-item:nth-child(5) img {
     -o-object-position: 50% 100%;
     object-position: 50% 100%;

@@ -19,7 +19,8 @@
 	margin: 10vh auto 5vh auto;
   font-size: 3rem;
   letter-spacing: none;
-  text-transform: none;
+  /*text-transform: none;*/
+  text-transform: capitalize;
   font-family: Poppins, 'Source Sans Pro', Helvetica, sans-serif;
   font-weight: 600;
   letter-spacing: 0.8px;

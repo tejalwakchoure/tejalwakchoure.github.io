@@ -25,168 +25,181 @@ alt: Some timelines of acquisition
 
 	<!-- Project details section -->
 	<section id="projectDetails" class="acquisitions" data-nosnippet>
-		<div class="mt5"></div>
+		<div class="mt10"></div>
 		<div class="container" style="justify-content: center;">
 			<div class="col text-center">
 				<h1 class="project-title">{{ page.title }}</h1>
-				<p>November 2022</p>
 			</div> 
 			<div class="row" id="content-row">
-
-				<div id="intro" class="mt10">
+				<div id="overview" class="mt5">
 					<p>
-						Since 2001, Google has acquired 254 companies including giants like Android and YouTube.
+						With the tech industry facing unprecedented financial problems, I was surprised to see Alphabet <a href="https://www.edsurge.com/news/2022-10-11-google-discreetly-acquires-edtech-analytics-company-brightbytes" target="_blank">continue to acquire</a> companies through the end of 2022. This led me to an exploration of their M&A strategy and how it has changed over time. 
 					</p>
-				</div>
-
-				<div id="scorecards" class="row">
-					<div class="text-center col">
-						<img class="logo" 
-						src="../assets/img/portfolio/acquisitions/motorola-logo.png">
-						<p>$12.5B</p>
-						<p class="small">Motorola Mobility (2011)</p>
-					</div>
-					<div class="text-center col">
-						<img class="logo" src="../assets/img/portfolio/acquisitions/nest-logo.png">
-						<p>$3.2B</p>
-						<p class="small">Nest Labs (2014)</p>
-					</div>
-					<div class="text-center col">
-						<img class="logo" src="../assets/img/portfolio/acquisitions/fitbit-logo.png">
-						<p>$2.1B</p>
-						<p class="small">Fitbit (2021)</p>
-					</div>
-					<div class="text-center col">
-						<img class="logo" src="../assets/img/portfolio/acquisitions/youtube-logo.png">
-						<p>$1.65B</p>
-						<p class="small">YouTube (2006)</p>
-					</div>
-					<div class="text-center col">
-						<img class="logo" src="../assets/img/portfolio/acquisitions/android-logo.png">
-						<p>$50M</p>
-						<p class="small">Android (2005)</p>
-					</div>
-				</div>
-
-				<div id="mamma" class="mt10">
-					<p>
-						Compared to its <a href="https://www.cnbc.com/2021/10/29/cramer-new-acronym-to-replace-faang-after-facebook-name-change-to-meta.html" target="_blank">MAMMA</a> peers, Google has consistently focused on acquiring startups, surpassed only by Microsoft with 265 total acquisitions. The company focused on expansion most in 2014, acquiring 34 companies that year alone.
-					</p>
-				</div>
-			</div>
-		</div>
-
-		<h6 style="text-align: center; margin-left: 1vw;">annual acquisitions by company</h6>
-		<div class="row text-center" style="justify-content: center; margin-left: 1vw;">
-			<div class="col" style="width: 100%; margin-top: 3vh;">
-				<p class="bold" style="margin-bottom: 0;">Google</p>
-				<div class="mamma-wrapper" style="margin: auto;">
-					<canvas id="goog-acquisitions"></canvas>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col" style="width: 100%; margin-top: 2vh;">
-					<p class="bold" style="margin-bottom: 0;">Microsoft</p>
-					<div class="mamma-wrapper">
-						<canvas id="msft-acquisitions"></canvas>
-					</div>
-				</div>
-				<div class="col" style="width: 100%; margin-top: 2vh;">
-					<p class="bold" style="margin-bottom: 0;">Amazon</p>
-					<div class="mamma-wrapper">
-						<canvas id="amz-acquisitions"></canvas>
-					</div>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col" style="width: 100%; margin-top: 2vh;">
-					<p class="bold" style="margin-bottom: 0;">Apple</p>
-					<div class="mamma-wrapper">
-						<canvas id="appl-acquisitions"></canvas>
-					</div>
-				</div>
-				<div class="col" style="width: 100%; margin-top: 2vh;">
-					<p class="bold" style="margin-bottom: 0;">Meta</p>
-					<div class="mamma-wrapper">
-						<canvas id="meta-acquisitions"></canvas>
-					</div>
-				</div>
-			</div>
-		</div>
-
-		<div class="container mt10" style="justify-content: center;">
-			<div class="col">
-				<div id="markets" class="col">
-					<h4 class="project-heading">Focus on the mobile market</h4>
-					<p>
-						Over 10% of the companies that Google has acquired operated in the mobile domain. These mergers supplemented the growth of Android over the past two decades. Since its acquisition in 2005, Android has grown to reach 3 billion users worldwide. It now holds 71% of the global market share for operating systems.
-					</p>
-					<h6 class="mt5">breakdown of acquired companies by market</h6>
-					<div style="width: 100%;">
-						<canvas id="market-treemap"></canvas>
-					</div>
-					<!-- <p>Has Google had phases of expansion into these domains? -> project Loon and X in 2014-15</p> -->
-					<!-- <p class="small">scatter (bubble) plot/box with whiskers plot of market x year acquired (x # size)</p> -->
-				</div>
-
-				<div id="companies" class="mt10">
-					<h4 class="project-heading">Young, US-based companies in the lead</h4>
-					<p class="mt5">Out of the 254 companies Google has acquired so far,</p>
-					<div class="row" style="margin: 1vh 0 15vh 0; justify-content: space-between;">
-						<img class="num" src='../assets/img/portfolio/acquisitions/num_unicorns.svg'/>
-						<img class="num" style="margin-left: 2rem; margin-right: 2rem;" src='../assets/img/portfolio/acquisitions/num_yc.svg'/>
-						<img class="num" src='../assets/img/portfolio/acquisitions/num_hq.svg'/>
-					</div>
-					<div style="margin-top: 15vh"></div>
-					<p>
-						According to Google's public records, most companies were acquired within 6 years of their creation. Only 5 companies were over 20 years old at the time of acquisition (Zagat, Director, Like.com, Instantiations, and Boston Dynamics).
-					</p>
-					<div style="margin: 8vh auto 15vh auto; text-align: center;">
-						<h6 style="">typical age of acquired company on deal date</h6>
-						<img src="../assets/img/portfolio/acquisitions/google-ages.png" style="max-width: 100%;" />
-					</div>
-					
-					<!-- <p class="bold">Were bought for $Y when the total amount they raised was $Z.</p> -->
-					<!-- <p class="small">stacked areas - for the buying prices disclosed, we have most funding amounts, not all</p> -->
-				</div>
-
-				<div id="conclusion" class="mt20">
-					<h4 class="project-heading">What next?</h4>
-					<p>
-						Some of these acquisitions didn't work out, including Slide (bought for $182M, shut down after 2 years) and Motorola Mobility (bought for $12.5B, sold for $3B after 2 years). But due to the sheer number of fields that Google has product lines in, most of these businesses have been integrated into its existing products.
-					</p>
-					<div class="col text-center mt5">
-						<h6>company details by common product groups</h6>
-						<select id="selectbox">
-						</select>
-						<img id="acq-timeline" src="../assets/img/portfolio/acquisitions/AdSense.svg" style="margin: 5vh 3% 20vh 2%; width: 95%;">
-					</div>
-					<!-- <p class="small">** note what you've omitted **</p> -->
-				</div>
-			</div>
-
-			<div class="col">
-				<div id="sources" class="mt5">
-					<hr/>
-					<p>
-						<span class="bold">Sources:</span>
+					<br><br>
+					<p> <span class="bold">Project Type: </span>{{ page.type }}</p>
+					<p> <span class="bold">Role: </span>data storytelling, data visualization</p>
+					<p> <span class="bold">Tools: </span>Figma for prototyping, Illustrator and D3.js for graphics</p>
+					<p> <span class="bold">Date: </span>November 2022</p>
+					<p><span class="bold">Sources:</span>
 						Crunchbase scraped data,
 						<a href="https://www.cbinsights.com/research-unicorn-companies/" target="_blank">
 						CB Insights</a>,
 						<a href="https://www.kaggle.com/datasets/thedevastator/google-s-m-a-history-a-comprehensive-list-of-acq" target="_blank">
-						Kaggle (Google M&A)</a>
-					</p>
-				</div>
+						Kaggle (Google M&A)</a></p>
+						<hr/>
+					</div>
 
-				<div id="overview">
-					<p> <span class="bold">Project Type: </span>{{ page.type }}</p>
-					<p> <span class="bold">Tools: </span>Figma for prototyping, Illustrator and D3.js for graphics</p>
-				</div>
+					<div id="intro" class="mt5">
+						<p>
+							Since 2001, Google has acquired 254 companies including giants like Android and YouTube. Some of these acquisitions haven't worked out, including Slide (bought for $182M, shut down after 2 years) and Motorola Mobility (bought for $12.5B, sold for $3B after 2 years). But due to the sheer number of fields that Google operates in, most of these businesses have been integrated into its existing products.
+						</p>
+						<div class="text-center mt5">
+							<h6>company details by common product groups</h6>
+							<select id="selectbox">
+							</select>
+							<img id="acq-timeline" src="../assets/img/portfolio/acquisitions/AdSense.svg" style="margin: 5vh 3% 0 2%; /*width: 95%;*/">
+						</div>
+						<!-- <p class="small">** note what you've omitted **</p> -->
+					</div>
 
+					<div id="scorecards" class="row mt10">
+						<div class="text-center col">
+							<img class="logo" 
+							src="../assets/img/portfolio/acquisitions/motorola-logo.png">
+							<p>$12.5B</p>
+							<p class="small">Motorola Mobility (2011)</p>
+						</div>
+						<div class="text-center col">
+							<img class="logo" src="../assets/img/portfolio/acquisitions/nest-logo.png">
+							<p>$3.2B</p>
+							<p class="small">Nest Labs (2014)</p>
+						</div>
+						<div class="text-center col">
+							<img class="logo" src="../assets/img/portfolio/acquisitions/fitbit-logo.png">
+							<p>$2.1B</p>
+							<p class="small">Fitbit (2021)</p>
+						</div>
+						<div class="text-center col">
+							<img class="logo" src="../assets/img/portfolio/acquisitions/youtube-logo.png">
+							<p>$1.65B</p>
+							<p class="small">YouTube (2006)</p>
+						</div>
+						<div class="text-center col">
+							<img class="logo" src="../assets/img/portfolio/acquisitions/android-logo.png">
+							<p>$50M</p>
+							<p class="small">Android (2005)</p>
+						</div>
+					</div>
+
+
+					<div id="mamma" class="row mt5">
+						<p>
+							Compared to its <a href="https://www.cnbc.com/2021/10/29/cramer-new-acronym-to-replace-faang-after-facebook-name-change-to-meta.html" target="_blank">MAMMA</a> peers, Google has consistently focused on acquiring startups, surpassed only by Microsoft with 265 total acquisitions. The company focused on expansion most in 2014, acquiring 34 companies that year alone.
+						</p>
+					</div>
+
+					<h6 class="mt5" style="text-align: center; margin-left: 1vw; margin-bottom: 50px;">annual acquisitions by company</h6>
+					<div class="mamma-wrapper" style="margin: auto;">
+						<canvas id="goog-acquisitions"></canvas>
+					</div>
+				</div>
+				<!-- </div>
+				 </div>
+
+			
+			<div class="row text-center" style="justify-content: center; margin-left: 1vw;">
+				<div class="col" style="width: 100%; margin-top: 3vh;">
+					<p class="bold" style="margin-bottom: 0;">Google</p>
+					
+				<div class="row">
+					<div class="col" style="width: 100%; margin-top: 2vh;">
+						<p class="bold" style="margin-bottom: 0;">Microsoft</p>
+						<div class="mamma-wrapper">
+							<canvas id="msft-acquisitions"></canvas>
+						</div>
+					</div>
+					<div class="col" style="width: 100%; margin-top: 2vh;">
+						<p class="bold" style="margin-bottom: 0;">Amazon</p>
+						<div class="mamma-wrapper">
+							<canvas id="amz-acquisitions"></canvas>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col" style="width: 100%; margin-top: 2vh;">
+						<p class="bold" style="margin-bottom: 0;">Apple</p>
+						<div class="mamma-wrapper">
+							<canvas id="appl-acquisitions"></canvas>
+						</div>
+					</div>
+					<div class="col" style="width: 100%; margin-top: 2vh;">
+						<p class="bold" style="margin-bottom: 0;">Meta</p>
+						<div class="mamma-wrapper">
+							<canvas id="meta-acquisitions"></canvas>
+						</div>
+					</div>
+				</div>
 			</div>
-		</div>
-	</section>
 
-	{% include footer.html %}
-</body>
-</html>
+			<div class="container mt10" style="justify-content: center;"> -->
+				<div class="row mt10">
+					<div id="markets" class="row">
+						<div class="row" id="content-row">
+							<h4 class="project-heading">Focus on the mobile market</h4>
+							<p>
+								Over 10% of the companies that Google has acquired operated in the mobile domain. These mergers supplemented the growth of Android over the past two decades. Since its acquisition in 2005, Android has grown to reach 3 billion users worldwide. It now holds 71% of the global market share for operating systems.
+							</p>
+						</div>
+						<h6 class="mt5">breakdown of acquired companies by market</h6>
+						<div style="width: 100%;">
+							<canvas id="market-treemap"></canvas>
+						</div>
+						<!-- <p>Has Google had phases of expansion into these domains? -> project Loon and X in 2014-15</p> -->
+						<!-- <p class="small">scatter (bubble) plot/box with whiskers plot of market x year acquired (x # size)</p> -->
+					</div>
+
+					<div id="companies" class="mt10">
+						<div class="row" id="content-row">
+							<h4 class="project-heading">Young, US-based companies in the lead</h4>
+							<p>Out of the 254 companies Google has acquired so far,</p>
+						</div>
+						<div class="row" style="margin: 1vh 0 15vh 0; justify-content: space-between;">
+							<img class="num" src='../assets/img/portfolio/acquisitions/num_unicorns.svg'/>
+							<img class="num" style="margin-left: 2rem; margin-right: 2rem;" src='../assets/img/portfolio/acquisitions/num_yc.svg'/>
+							<img class="num" src='../assets/img/portfolio/acquisitions/num_hq.svg'/>
+						</div>
+						<div style="margin-top: 15vh"></div>
+						<div class="row" id="content-row">
+							<p>
+								According to Google's public records, most companies were acquired within 6 years of their creation. Only 5 companies were over 20 years old at the time of acquisition (Zagat, Director, Like.com, Instantiations, and Boston Dynamics).
+							</p>
+						</div>
+						<div style="margin: 8vh auto 15vh auto; text-align: center;">
+							<h6 style="">typical age of acquired company on deal date</h6>
+							<img src="../assets/img/portfolio/acquisitions/google-ages.png" style="max-width: 100%;" />
+						</div>
+
+						<!-- <p class="bold">Were bought for $Y when the total amount they raised was $Z.</p> -->
+						<!-- <p class="small">stacked areas - for the buying prices disclosed, we have most funding amounts, not all</p> -->
+					</div>
+
+					<!-- <div id="conclusion" class="mt20">
+						<h4 class="project-heading">What next?</h4>
+						<p>
+							Some of these acquisitions didn't work out, including Slide (bought for $182M, shut down after 2 years) and Motorola Mobility (bought for $12.5B, sold for $3B after 2 years). But due to the sheer number of fields that Google has product lines in, most of these businesses have been integrated into its existing products.
+						</p>
+						<div class="col text-center mt5">
+							<h6>company details by common product groups</h6>
+							<select id="selectbox">
+							</select>
+							<img id="acq-timeline" src="../assets/img/portfolio/acquisitions/AdSense.svg" style="margin: 5vh 3% 20vh 2%; width: 95%;">
+						</div>
+						
+					</div> -->
+				</div>
+			</div>
+		</section>
+
+		{% include footer.html %}
+	</body>
+	</html>

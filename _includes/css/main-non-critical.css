@@ -324,6 +324,7 @@
 #projectDetails hr {
   margin: 5rem 0 2rem 0;
   max-width: 100%;
+  border-top: 0.5px solid #848484;
 }
 .coup .project-title {
   color: white !important;
@@ -409,7 +410,7 @@
   border-radius: 0.2em;
   /*border: 2px solid #cecece;*/
   /*box-shadow: 2px 2px 0 0 black;*/
-  background: #6160d3; /*#00a9c4;*/
+  background: #9e68db; /*#6160d3;*/
   color: white !important;
 }
 #scorecards > div > p {
@@ -431,8 +432,10 @@
 .acquisitions .mamma-wrapper {
   height: -webkit-fit-content;
   height: fit-content;
-  min-height: 25vh;
-  width: 30vw;
+  min-height: min(50vh, 700px);
+
+  /*width: 30vw;*/
+  width: 100%;
   margin: 0 2vw 2vh 2vw;
 
 }
@@ -628,9 +631,9 @@ overflow-x: scroll;*/
     .loveletter .workflow-opp .col {
       padding-bottom: 25px;
     }
-    .acquisitions .mamma-wrapper {
+    /*.acquisitions .mamma-wrapper {
       width: 300px;
-    }
+    }*/
     .acquisitions .num {
       height: 20vh;
     }

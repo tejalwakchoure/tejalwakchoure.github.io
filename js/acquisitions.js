@@ -81,34 +81,133 @@ function processMAMMA(csvdata) {
     }
   });
 
-  const chart1 = new Chart('goog-acquisitions', {
-    type: 'line',
-    data: {
-      labels: arrayColumn(goog_data_line,0),
-      datasets: [{
-        label: 'Google',
-        data: arrayColumn(goog_data_line,1),
-        borderWidth: 1,
-        fill: false,
-        borderColor: '#706FEE',
-      }]
+//   const chart1 = new Chart('goog-acquisitions', {
+//     type: 'line',
+//     data: {
+//       labels: arrayColumn(goog_data_line,0),
+//       datasets: [{
+//         label: 'Google',
+//         data: arrayColumn(goog_data_line,1),
+//         borderWidth: 1,
+//         fill: false,
+//         borderColor: '#706FEE',
+//       }]
+//     },
+//     options: {
+//       maintainAspectRatio: false,
+//       responsive: true,
+//       elements: {
+//         point: {
+//           radius: 1
+//         }
+//       },
+//       plugins: {
+//        //  title: {
+//        //   display: true,
+//        //   text: 'Google'
+//        // },
+//        legend: {
+//         display: false
+//       },
+//       tooltip: {
+//        callbacks: {
+//         title(items) {
+//           return;
+//         },
+//         label: function(ctx) {
+//          let num = ctx.dataset.data[ctx.dataIndex];
+//          let year = arrayColumn(goog_data_line,0)[ctx.dataIndex];
+//               // console.log(num,year);
+//               return [year, "acquisitions: "+num];
+//             }
+//           }
+//         }
+//       },
+//       scales : {
+//         x: {
+//           grid: {
+//             display: false
+//           },
+//           ticks: {
+//             callback: function(value, index, values) {
+//              return (index === values.length - 1 || index === 0) ? this.getLabelForValue(value) : '';
+//            },
+//          }
+//        },
+//        y : {
+//         min: 0,
+//         max: 40,
+//       }
+//     }
+//   }
+// });
+
+const chart1 = new Chart('goog-acquisitions', {
+  type: 'line',
+  data: {
+    labels: arrayColumn(goog_data_line,0),
+    datasets: [{
+      label: 'Google',
+      data: arrayColumn(goog_data_line,1),
+      borderWidth: 1.5,
+      fill: false,
+      backgroundColor: '#ffffff',
+      borderColor: '#853ed5',
     },
-    options: {
-      maintainAspectRatio: false,
-      responsive: true,
-      elements: {
-        point: {
-          radius: 1
-        }
-      },
-      plugins: {
+    {
+      label: 'Amazon',
+      data: arrayColumn(amz_data_line,1),
+      borderWidth: 1,
+      fill: false,
+      backgroundColor: '#ffffff',
+      borderColor: '#74b5db',
+    },
+    {
+      label: 'Apple',
+      data: arrayColumn(appl_data_line,1),
+      borderWidth: 1,
+      fill: false,
+      backgroundColor: '#ffffff',
+      borderColor: '#41e957',
+    },
+    {
+      label: 'Meta',
+      data: arrayColumn(meta_data_line,1),
+      borderWidth: 1,
+      fill: false,
+      backgroundColor: '#ffffff',
+      borderColor: '#db74cb',
+    },
+    {
+      label: 'Microsoft',
+      data: arrayColumn(msft_data_line,1),
+      borderWidth: 1,
+      fill: false,
+      backgroundColor: '#ffffff',
+      borderColor: '#e98641',
+    }
+    ]
+  },
+  options: {
+    maintainAspectRatio: false,
+    responsive: true,
+    elements: {
+      point: {
+        radius: 1
+      }
+    },
+    hover: {
+      mode: 'dataset',
+      intersect: false
+    },
+    plugins: {
        //  title: {
        //   display: true,
        //   text: 'Google'
        // },
-       legend: {
-        display: false
-      },
+      //  legend: {
+      //   display: false
+      // },
       tooltip: {
        callbacks: {
         title(items) {
@@ -117,8 +216,7 @@ function processMAMMA(csvdata) {
         label: function(ctx) {
          let num = ctx.dataset.data[ctx.dataIndex];
          let year = arrayColumn(goog_data_line,0)[ctx.dataIndex];
-              // console.log(num,year);
-              return [year, "acquisitions: "+num];
+              return [ctx.dataset.label, num+ " acquisitions in "+year];
             }
           }
         }
@@ -128,263 +226,263 @@ function processMAMMA(csvdata) {
           grid: {
             display: false
           },
-          ticks: {
-            callback: function(value, index, values) {
-             return (index === values.length - 1 || index === 0) ? this.getLabelForValue(value) : '';
-           },
-         }
+         //  ticks: {
+         //    callback: function(value, index, values) {
+         //     return (index === values.length - 1 || index === 0) ? this.getLabelForValue(value) : '';
+         //   },
+         // }
        },
        y : {
         min: 0,
         max: 40,
       }
-    }
-  }
-});
-  
-
-  const chart2 = new Chart('amz-acquisitions', {
-    type: 'line',
-    data: {
-      labels: arrayColumn(amz_data_line,0),
-      datasets: [{
-        label: 'Amazon',
-        data: arrayColumn(amz_data_line,1),
-        borderWidth: 1,
-        fill: false,
-        borderColor: '#706FEE',
-      }]
     },
-    options: {
-      maintainAspectRatio: false,
-      responsive: true,
-      elements: {
-        point: {
-          radius: 1
-        }
-      },
-      plugins: {
-       //  title: {
-       //   display: true,
-       //   text: 'Amazon'
-       // },
-       legend: {
-        display: false
-      },
-      tooltip: {
-       callbacks: {
-        title(items) {
-          return;
-        },
-        label: function(ctx) {
-         let num = ctx.dataset.data[ctx.dataIndex];
-         let year = arrayColumn(amz_data_line,0)[ctx.dataIndex];
-              // console.log(num,year);
-              return [year, "acquisitions: "+num];
-            }
-          }
-        }
-      },
-      scales : {
-        x: {
-          grid: {
-            display: false
-          },
-          ticks: {
-            callback: function(value, index, values) {
-             return (index === values.length - 1 || index === 0) ? this.getLabelForValue(value) : '';
-           },
-         }
-       },
-       y : {
-        min: 0,
-        max: 40,
-      }
-    }
   }
 });
 
 
-  const chart3 = new Chart('appl-acquisitions', {
-    type: 'line',
-    data: {
-      labels: arrayColumn(appl_data_line,0),
-      datasets: [{
-        label: 'Apple',
-        data: arrayColumn(appl_data_line,1),
-        borderWidth: 1,
-        fill: false,
-        borderColor: '#706FEE',
-      }]
-    },
-    options: {
-      maintainAspectRatio: false,
-      responsive: true,
-      elements: {
-        point: {
-          radius: 1
-        }
-      },
-      plugins: {
-       //  title: {
-       //   display: true,
-       //   text: 'Apple'
-       // },
-       legend: {
-        display: false
-      },
-      tooltip: {
-       callbacks: {
-        title(items) {
-          return;
-        },
-        label: function(ctx) {
-         let num = ctx.dataset.data[ctx.dataIndex];
-         let year = arrayColumn(appl_data_line,0)[ctx.dataIndex];
-              // console.log(num,year);
-              return [year, "acquisitions: "+num];
-            }
-          }
-        }
-      },
-      scales : {
-        x: {
-          grid: {
-            display: false
-          },
-          ticks: {
-            callback: function(value, index, values) {
-             return (index === values.length - 1 || index === 0) ? this.getLabelForValue(value) : '';
-           },
-         }
-       },
-       y : {
-        min: 0,
-        max: 40,
-      }
-    }
-  }
-});
-  const chart4 = new Chart('meta-acquisitions', {
-    type: 'line',
-    data: {
-      labels: arrayColumn(meta_data_line,0),
-      datasets: [{
-        label: 'Meta',
-        data: arrayColumn(meta_data_line,1),
-        borderWidth: 1,
-        fill: false,
-        borderColor: '#706FEE',
-      }]
-    },
-    options: {
-      maintainAspectRatio: false,
-      responsive: true,
-      elements: {
-        point: {
-          radius: 1
-        }
-      },
-      plugins: {
-       //  title: {
-       //   display: true,
-       //   text: 'Meta'
-       // },
-       legend: {
-        display: false
-      },
-      tooltip: {
-       callbacks: {
-        title(items) {
-          return;
-        },
-        label: function(ctx) {
-         let num = ctx.dataset.data[ctx.dataIndex];
-         let year = arrayColumn(meta_data_line,0)[ctx.dataIndex];
-              // console.log(num,year);
-              return [year, "acquisitions: "+num];
-            }
-          }
-        }
-      },
-      scales : {
-        x: {
-          grid: {
-            display: false
-          },
-          ticks: {
-            callback: function(value, index, values) {
-             return (index === values.length - 1 || index === 0) ? this.getLabelForValue(value) : '';
-           },
-         }
-       },
-       y : {
-        min: 0,
-        max: 40,
-      }
-    }
-  }
-});
-  const chart5 = new Chart('msft-acquisitions', {
-    type: 'line',
-    data: {
-      labels: arrayColumn(msft_data_line,0),
-      datasets: [{
-        label: 'Microsoft',
-        data: arrayColumn(msft_data_line,1),
-        borderWidth: 1,
-        fill: false,
-        borderColor: '#706FEE',
-      }]
-    },
-    options: {
-      maintainAspectRatio: false,
-      responsive: true,
-      elements: {
-        point: {
-          radius: 1
-        }
-      },
-      plugins: {
-       //  title: {
-       //   display: true,
-       //   text: 'Microsoft'
-       // },
-       legend: {
-        display: false
-      },
-      tooltip: {
-       callbacks: {
-        title(items) {
-          return;
-        },
-        label: function(ctx) {
-         let num = ctx.dataset.data[ctx.dataIndex];
-         let year = arrayColumn(msft_data_line,0)[ctx.dataIndex];
-              // console.log(num,year);
-              return [year, "acquisitions: "+num];
-            }
-          }
-        }
-      },
-      scales : {
-        x: {
-          grid: {
-            display: false
-          },
-          ticks: {
-            callback: function(value, index, values) {
-             return (index === values.length - 1 || index === 0) ? this.getLabelForValue(value) : '';
-           },
-         }
-       },
-       y : {
-        min: 0,
-        max: 40,
-      }
-    }
-  }
-});
+// const chart2 = new Chart('amz-acquisitions', {
+//   type: 'line',
+//   data: {
+//     labels: arrayColumn(amz_data_line,0),
+//     datasets: [{
+//       label: 'Amazon',
+//       data: arrayColumn(amz_data_line,1),
+//       borderWidth: 1,
+//       fill: false,
+//       borderColor: '#706FEE',
+//     }]
+//   },
+//   options: {
+//     maintainAspectRatio: false,
+//     responsive: true,
+//     elements: {
+//       point: {
+//         radius: 1
+//       }
+//     },
+//     plugins: {
+//        //  title: {
+//        //   display: true,
+//        //   text: 'Amazon'
+//        // },
+//        legend: {
+//         display: false
+//       },
+//       tooltip: {
+//        callbacks: {
+//         title(items) {
+//           return;
+//         },
+//         label: function(ctx) {
+//          let num = ctx.dataset.data[ctx.dataIndex];
+//          let year = arrayColumn(amz_data_line,0)[ctx.dataIndex];
+//               // console.log(num,year);
+//               return [year, "acquisitions: "+num];
+//             }
+//           }
+//         }
+//       },
+//       scales : {
+//         x: {
+//           grid: {
+//             display: false
+//           },
+//           ticks: {
+//             callback: function(value, index, values) {
+//              return (index === values.length - 1 || index === 0) ? this.getLabelForValue(value) : '';
+//            },
+//          }
+//        },
+//        y : {
+//         min: 0,
+//         max: 40,
+//       }
+//     }
+//   }
+// });
+
+
+// const chart3 = new Chart('appl-acquisitions', {
+//   type: 'line',
+//   data: {
+//     labels: arrayColumn(appl_data_line,0),
+//     datasets: [{
+//       label: 'Apple',
+//       data: arrayColumn(appl_data_line,1),
+//       borderWidth: 1,
+//       fill: false,
+//       borderColor: '#706FEE',
+//     }]
+//   },
+//   options: {
+//     maintainAspectRatio: false,
+//     responsive: true,
+//     elements: {
+//       point: {
+//         radius: 1
+//       }
+//     },
+//     plugins: {
+//        //  title: {
+//        //   display: true,
+//        //   text: 'Apple'
+//        // },
+//        legend: {
+//         display: false
+//       },
+//       tooltip: {
+//        callbacks: {
+//         title(items) {
+//           return;
+//         },
+//         label: function(ctx) {
+//          let num = ctx.dataset.data[ctx.dataIndex];
+//          let year = arrayColumn(appl_data_line,0)[ctx.dataIndex];
+//               // console.log(num,year);
+//               return [year, "acquisitions: "+num];
+//             }
+//           }
+//         }
+//       },
+//       scales : {
+//         x: {
+//           grid: {
+//             display: false
+//           },
+//           ticks: {
+//             callback: function(value, index, values) {
+//              return (index === values.length - 1 || index === 0) ? this.getLabelForValue(value) : '';
+//            },
+//          }
+//        },
+//        y : {
+//         min: 0,
+//         max: 40,
+//       }
+//     }
+//   }
+// });
+// const chart4 = new Chart('meta-acquisitions', {
+//   type: 'line',
+//   data: {
+//     labels: arrayColumn(meta_data_line,0),
+//     datasets: [{
+//       label: 'Meta',
+//       data: arrayColumn(meta_data_line,1),
+//       borderWidth: 1,
+//       fill: false,
+//       borderColor: '#706FEE',
+//     }]
+//   },
+//   options: {
+//     maintainAspectRatio: false,
+//     responsive: true,
+//     elements: {
+//       point: {
+//         radius: 1
+//       }
+//     },
+//     plugins: {
+//        //  title: {
+//        //   display: true,
+//        //   text: 'Meta'
+//        // },
+//        legend: {
+//         display: false
+//       },
+//       tooltip: {
+//        callbacks: {
+//         title(items) {
+//           return;
+//         },
+//         label: function(ctx) {
+//          let num = ctx.dataset.data[ctx.dataIndex];
+//          let year = arrayColumn(meta_data_line,0)[ctx.dataIndex];
+//               // console.log(num,year);
+//               return [year, "acquisitions: "+num];
+//             }
+//           }
+//         }
+//       },
+//       scales : {
+//         x: {
+//           grid: {
+//             display: false
+//           },
+//           ticks: {
+//             callback: function(value, index, values) {
+//              return (index === values.length - 1 || index === 0) ? this.getLabelForValue(value) : '';
+//            },
+//          }
+//        },
+//        y : {
+//         min: 0,
+//         max: 40,
+//       }
+//     }
+//   }
+// });
+// const chart5 = new Chart('msft-acquisitions', {
+//   type: 'line',
+//   data: {
+//     labels: arrayColumn(msft_data_line,0),
+//     datasets: [{
+//       label: 'Microsoft',
+//       data: arrayColumn(msft_data_line,1),
+//       borderWidth: 1,
+//       fill: false,
+//       borderColor: '#706FEE',
+//     }]
+//   },
+//   options: {
+//     maintainAspectRatio: false,
+//     responsive: true,
+//     elements: {
+//       point: {
+//         radius: 1
+//       }
+//     },
+//     plugins: {
+//        //  title: {
+//        //   display: true,
+//        //   text: 'Microsoft'
+//        // },
+//        legend: {
+//         display: false
+//       },
+//       tooltip: {
+//        callbacks: {
+//         title(items) {
+//           return;
+//         },
+//         label: function(ctx) {
+//          let num = ctx.dataset.data[ctx.dataIndex];
+//          let year = arrayColumn(msft_data_line,0)[ctx.dataIndex];
+//               // console.log(num,year);
+//               return [year, "acquisitions: "+num];
+//             }
+//           }
+//         }
+//       },
+//       scales : {
+//         x: {
+//           grid: {
+//             display: false
+//           },
+//           ticks: {
+//             callback: function(value, index, values) {
+//              return (index === values.length - 1 || index === 0) ? this.getLabelForValue(value) : '';
+//            },
+//          }
+//        },
+//        y : {
+//         min: 0,
+//         max: 40,
+//       }
+//     }
+//   }
+// });
 
   // const chart_total = new Chart('mamma-acquisitions', {
   //   type: 'scatter',

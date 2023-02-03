@@ -22,46 +22,61 @@ alt: Guinness-Bisseau President Embaló
 
 	<!-- Project details section -->
 	<section id="projectDetails" class="coup" data-nosnippet>
-    <div class="mt5"></div>
+    <div class="mt10"></div>
     <div class="container" style="justify-content: center;">
      <div class="col text-center">
       <h1 class="project-title">{{ page.title }}</h1>
-      <p>November 2022</p>
     </div> 
-
-    <!-- <canvas id="country-heatmap" style="height: 1000px; width: 100%;"></canvas> -->
-    <!-- <canvas id="country-bubble"></canvas> -->
-
     <div class="row" id="content-row">
-      <div id="intro" class="mt10">
+      <div id="overview" class="mt5">
         <p>
-          On February 1, 
-          <a href="https://www.aljazeera.com/news/2022/2/1/gunfire-heard-near-government-house-in-guinea-bissau" target="_blank">
-            Guinea-Bissau's government palace was attacked
-          </a>
-          during a scheduled cabinet meeting. The shooting lasted for five hours, and at least eight people were killed. President Umaro Sissoco Embaló survived the attempted coup. "It wasn’t just a coup. It was an attempt to kill the president, the prime minister and all the cabinet," Embaló said. Six days after the attempt, a radio station critical of the government was attacked and its equipment destroyed.
-          <br><br>
-          Since 2000, the West African nation has seen 10 coup attempts, higher than any other nation globally. While only 2 of these attempts have been successful, they have contributed to ongoing political instability in the region. Only one elected president (José Mário Vaz, elected in 2014) has ever completed a five-year term in office. 
+          I came across Cline Center's <a href="https://clinecenter.illinois.edu/project/research-themes/democracy-and-development/coup-detat-project" target="_blank"> Coup D'état Database</a> via Jeremy Singer-Vine's <a href="https://www.data-is-plural.com/" target="_blank"> Data Is Plural</a> newsletter. The attempted assassination on Guinea-Bissau's president was still doing rounds in the news, and I was curious to see how the history of political instability in the country has progressed over the years. I was also learning D3 at the time, and since the story called for a chronological narrative I decided to make it a scrollytelling project.
         </p>
+        <br><br>
+        <p> <span class="bold">Project Type: </span>{{ page.type }}</p>
+        <p> <span class="bold">Role: </span>data storytelling, data visualization</p>
+        <p> <span class="bold">Tools: </span>Figma for prototyping, D3.js for graphics</p>
+        <p> <span class="bold">Date: </span>November 2022</p>
+        <p><span class="bold">Sources:</span>
+          <a href="https://clinecenter.illinois.edu/project/research-themes/democracy-and-development/coup-detat-project" target="_blank">
+          Cline Center Coup D'état Database</a>,
+          <a href="https://data.worldbank.org/country/guinea-bissau" target="_blank">
+          World Bank Data</a></p>
+          <hr/>
+        </div>
+
+        <!-- <canvas id="country-heatmap" style="height: 1000px; width: 100%;"></canvas> -->
+        <!-- <canvas id="country-bubble"></canvas> -->
+
+        <div id="intro" class="mt5">
+          <p>
+            On February 1, 
+            <a href="https://www.aljazeera.com/news/2022/2/1/gunfire-heard-near-government-house-in-guinea-bissau" target="_blank">
+              Guinea-Bissau's government palace was attacked
+            </a>
+            during a scheduled cabinet meeting. The shooting lasted for five hours, and at least eight people were killed. President Umaro Sissoco Embaló survived the attempted coup. "It wasn’t just a coup. It was an attempt to kill the president, the prime minister and all the cabinet," Embaló said. Six days after the attempt, a radio station critical of the government was attacked and its equipment destroyed.
+            <br><br>
+            Since 2000, the West African nation has seen 10 coup attempts, higher than any other nation globally. While only 2 of these attempts have been successful, they have contributed to ongoing political instability in the region. Only one elected president (José Mário Vaz, elected in 2014) has ever completed a five-year term in office. 
+          </p>
+        </div>
+      </div>
+
+      <div id="first-graph" class="mt10 text-center">
+        <div class="btn-group btn-group-toggle" data-toggle="buttons" style="width: 80%; justify-content: center;">
+          <label class="btn btn-outline-secondary btn-coup-2000 active" style="color: white;">
+            <input type="radio" name="options" id="coup-2000" autocomplete="off" checked> Coups after 2000
+          </label>
+          <label class="btn btn-outline-secondary btn-coup-all" style="color: white;">
+            <input type="radio" name="options" id="coup-all" autocomplete="off" > Coups over all time
+          </label>
+        </div>
+
+        <div class="plotly-map-container" style="width: 100%; height: 80vh;">
+          <div id="coup-all">{% include coups-all-map.html %}</div>
+          <div id="coup-2000">{% include coups-2000-map.html %}</div>
+        </div>
       </div>
     </div>
-
-    <div id="first-graph" class="mt10 text-center">
-      <div class="btn-group btn-group-toggle" data-toggle="buttons" style="width: 80%; justify-content: center;">
-        <label class="btn btn-outline-secondary btn-coup-2000 active" style="color: white;">
-          <input type="radio" name="options" id="coup-2000" autocomplete="off" checked> Coups after 2000
-        </label>
-        <label class="btn btn-outline-secondary btn-coup-all" style="color: white;">
-          <input type="radio" name="options" id="coup-all" autocomplete="off" > Coups over all time
-        </label>
-      </div>
-
-      <div class="plotly-map-container" style="width: 100%; height: 80vh;">
-        <div id="coup-all">{% include coups-all-map.html %}</div>
-        <div id="coup-2000">{% include coups-2000-map.html %}</div>
-      </div>
-    </div>
-  </div>
 
     <!-- <div class="row">
       <div id="first-graph">
@@ -158,11 +173,11 @@ alt: Guinness-Bisseau President Embaló
 
 
   <div class="container">
-    <div class="text-center" style="margin-bottom: 10vh;">
+    <div class="text-center">
       <h6>Annual gdp % change, Guinea-Bissau</h6>
       <canvas id="gdp-barchart" style="margin: 10vh -15px;"></canvas>
     </div>
-    <div id="conclusion" class="row mt5">
+    <div id="conclusion" class="row mt5" style="margin-bottom: 10%;">
       <div class="col text-center">
         <img src="../assets/img/portfolio/coup/current-embalo.jpg" style="height: 300px; width: 400px;"/>
         <p class='small'style="color: gray;">Umaro Sissoco Embaló</p>
@@ -173,21 +188,7 @@ alt: Guinness-Bisseau President Embaló
         </p>
       </div>
     </div>
-
-    <div id="overview" class="col">
-      <hr style="border-color: #adadad !important;" />
-      <p>
-       <span class="bold">Sources:</span>
-       <a href="https://clinecenter.illinois.edu/project/research-themes/democracy-and-development/coup-detat-project" target="_blank">
-       Cline Center Coup D'état Database</a>,
-       <a href="https://data.worldbank.org/country/guinea-bissau" target="_blank">
-       World Bank Data</a>
-     </p>
-     <p> <span class="bold">Project Type: </span>{{ page.type }}</p>
-     <p> <span class="bold">Tools: </span>Figma for prototyping, D3.js for graphics</p>
-   </div>
-
- </div>
+  </div>
 </div>
 </section>
 

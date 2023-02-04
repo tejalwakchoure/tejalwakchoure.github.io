@@ -1,40 +1,43 @@
 
 $(document).ready(function() {
- "use strict";
-
- $.ajax({
-  type: "GET",
-  url: "../chart-data/mamma-acquisitions.csv",
-  dataType: "text",
-  success: function(data) {processMAMMA(data);}
+  d3.csv("../chart-data/mamma-acquisitions.csv", function(data) { processMAMMA(data) });
+  d3.csv("../chart-data/google-markets.csv", function(data) { processMarkets(data) });
+  d3.csv("../chart-data/market-dates.csv", function(data) { processMarketDates(data) });
+  d3.csv("../chart-data/product-groups.csv", function(data) { processProductGroups(data) });
 });
 
- $.ajax({
-  type: "GET",
-  url: "../chart-data/google-markets.csv",
-  dataType: "text",
-  success: function(data) {processMarkets(data);}
-});
+// $.ajax({
+//   type: "GET",
+//   url: "../chart-data/mamma-acquisitions.csv",
+//   dataType: "text",
+//   success: function(data) {processMAMMA(data, chart1);},
+// });
 
- $.ajax({
-  type: "GET",
-  url: "../chart-data/market-dates.csv",
-  dataType: "text",
-  success: function(data) {processMarketDates(data);}
-});
+// $.ajax({
+//   type: "GET",
+//   url: "../chart-data/google-markets.csv",
+//   dataType: "text",
+//   success: function(data) {processMarkets(data);}
+// });
 
- $.ajax({
-  type: "GET",
-  url: "../chart-data/product-groups.csv",
-  dataType: "text",
-  success: function(data) {processProductGroups(data);}
-});
+// $.ajax({
+//   type: "GET",
+//   url: "../chart-data/market-dates.csv",
+//   dataType: "text",
+//   success: function(data) {processMarketDates(data);}
+// });
 
-});
+// $.ajax({
+//   type: "GET",
+//   url: "../chart-data/product-groups.csv",
+//   dataType: "text",
+//   success: function(data) {processProductGroups(data);}
+// });
+
+// });
 
 function processMAMMA(csvdata) {
-  "use strict";
-  var data_array = $.csv.toArrays(csvdata);
+  var data_array = csvdata.map( Object.values );
   data_array.splice(0, 1);
 
   const arrayColumn = (arr, n) => arr.map(x => x[n]);
@@ -44,13 +47,7 @@ function processMAMMA(csvdata) {
   for (var i = Math.min.apply(Math, years); i <= Math.max.apply(Math, years); i++) {
     all_years.push(i);
   }
-  
-  // var goog_data = [];
-  // var amz_data = [];
-  // var appl_data = [];
-  // var meta_data = [];
-  // var msft_data = [];
-
+  console.log(years);
 
   var goog_data_line = [];
   var amz_data_line = [];
@@ -142,6 +139,8 @@ function processMAMMA(csvdata) {
 //   }
 // });
 
+
+
 const chart1 = new Chart('goog-acquisitions', {
   type: 'line',
   data: {
@@ -216,16 +215,16 @@ const chart1 = new Chart('goog-acquisitions', {
         label: function(ctx) {
          let num = ctx.dataset.data[ctx.dataIndex];
          let year = arrayColumn(goog_data_line,0)[ctx.dataIndex];
-              return [ctx.dataset.label, num+ " acquisitions in "+year];
-            }
-          }
-        }
-      },
-      scales : {
-        x: {
-          grid: {
-            display: false
-          },
+         return [ctx.dataset.label, num+ " acquisitions in "+year];
+       }
+     }
+   }
+ },
+ scales : {
+  x: {
+    grid: {
+      display: false
+    },
          //  ticks: {
          //    callback: function(value, index, values) {
          //     return (index === values.length - 1 || index === 0) ? this.getLabelForValue(value) : '';
@@ -239,7 +238,6 @@ const chart1 = new Chart('goog-acquisitions', {
     },
   }
 });
-
 
 // const chart2 = new Chart('amz-acquisitions', {
 //   type: 'line',
@@ -550,7 +548,7 @@ const chart1 = new Chart('goog-acquisitions', {
 
 
 function processMarkets(csvdata) {
-  var dataset = $.csv.toObjects(csvdata);
+  var dataset = csvdata; //$.csv.toObjects(csvdata);
   // data_array.splice(0, 1);
 
   // const arrayColumn = (arr, n) => arr.map(x => x[n]);
@@ -568,7 +566,7 @@ function processMarkets(csvdata) {
     return 'rgb(92, 111, 246,'+alpha+')';
   }
 
-  Chart.defaults.color = '#fff';
+  // Chart.defaults.color = '#fff';
   const treemap = new Chart('market-treemap', {
     type: 'treemap',
     data: {
@@ -680,7 +678,7 @@ function processMarkets(csvdata) {
 
 function processMarketDates(csvdata) {
   "use strict";
-  var data_array = $.csv.toArrays(csvdata);
+  var data_array = csvdata.map( Object.values );
   data_array.splice(0, 1);
 
   const arrayColumn = (arr, n) => arr.map(x => x[n]);
@@ -760,7 +758,7 @@ function processMarketDates(csvdata) {
 
 function processProductGroups(csvdata) {
   "use strict";
-  var data_object = $.csv.toObjects(csvdata);
+  var data_object = csvdata; //$.csv.toObjects(csvdata);
 
   var dataset = {
     'AdSense': [],

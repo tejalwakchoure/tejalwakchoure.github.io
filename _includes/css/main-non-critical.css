@@ -445,16 +445,19 @@
   /*width: 33%;*/
 }
 
-/*.acquisitions .goog-acquisitions,
-.acquisitions .amz-acquisitions,
-.acquisitions .appl-acquisitions,
-.acquisitions .meta-acquisitions,
-.acquisitions .msft-acquisitions {
-  padding: 50px;
-  }*/
-  .hor-scroll {
-    color: magenta;
-    /*height: 90vh;*/
+.acquisitions #content-row,
+.acquisitions #content-row-2,
+.acquisitions #content-row > div.row,
+.acquisitions #content-row-2 > div.row {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+.hor-scroll {
+  color: magenta;
+  /*height: 90vh;*/
 /*  flex-wrap: nowrap;
 overflow-x: scroll;*/
 }
@@ -578,11 +581,11 @@ overflow-x: scroll;*/
     width: 100% !important;
   }
 
-@media ( min-width: 1200px ) {
-  #projectDetails .container {
-    padding-left: 0 !important;
+  @media ( min-width: 1200px ) {
+    #projectDetails .container {
+      padding-left: 0 !important;
+    }
   }
-}
 
   @media ( max-width: 1023px ) {
     #projectDetails .project-title {
@@ -633,161 +636,184 @@ overflow-x: scroll;*/
     }
     /*.acquisitions .mamma-wrapper {
       width: 300px;
-    }*/
-    .acquisitions .num {
-      height: 20vh;
+      }*/
+      .acquisitions .num {
+        height: 20vh;
+      }
+      #acq-timeline {
+        margin: 0 !important;
+        width: 100% !important;
+      }
     }
-    #acq-timeline {
-      margin: 0 !important;
+
+
+
+
+
+    @media ( max-width: 768px ) {
+     #projectDetails h2 {
+      letter-spacing: 2px;
+      font-size: 1.8rem;
+    }
+    #projectDetails .container {
+      padding: 0 !important;
+      margin: auto !important;
+    }
+    #projectDetails #content-row {
+      flex-direction: column;
+      width: auto;
+    }
+    #projectDetails #content{
+      overflow: hidden;
+      margin: auto;
+      padding: 3%;
+    }
+    #projectDetails #main-img {
+      height: 300px;
+      /*width: 350px;*/
+    }
+    #projectDetails #content p {
+      text-align: left;
+      margin: 5% 2%;,
+    }
+    .plotly-map-container {
+      padding: 5%;
+    }
+    .coup .graphic__prose {
+      margin-left: 0;
+    }
+    .coup #conclusion #content-row {
+      flex-direction: column !important;
+    }
+    .coup #conclusion #content-row > div.col {
       width: 100% !important;
+      margin: 10px auto;
+    }
+    .graphic__vis .img_wrapper {
+      height: 200px;
+      width: 250px;
+    }
+    .graphic__vis .img_wrapper #img_text {
+      top: calc( 50% + 75px ) !important;
+    }
+    #oddsEnds .swiper {
+      padding: 0;
+    }
+    #under_construction .container {
+      justify-content: flex-start;
+    }
+    #under_construction .header-title {
+      height: 40%;
+      align-items: flex-start;
+    }
+    #under_construction .bottom-row {
+      height: 60%;
+    }
+    #under_construction .header-intro-text {
+      padding: 0;
+    }
+    #under_construction h1 {
+      font-size: 24px;
+    }
+    #under_construction p {
+      font-size: 16px;
+    }
+    .grainy-page:after {
+      opacity: 0.05 !important;
+    }
+    #contact .row {
+      padding-left: 0 !important;
+      padding-right: 0 !important;
+      text-align: center;
+    }
+    #contact a.mail-link:before {
+      visibility: visible;
+      width: 100%;
+    }
+    #contact a,
+    #contact a.mail-link:before,
+    footer a,
+    footer .footer-below,
+    .floating-label-form-group-with-focus label { 
+      color: #{{ site.color.heading }} !important; 
     }
   }
 
 
 
-
-
-  @media ( max-width: 768px ) {
-   #projectDetails h2 {
-    letter-spacing: 2px;
-    font-size: 1.8rem;
+  @media (max-width: 480px) {
+   #main-img {
+    height: 250px;
   }
-  #projectDetails .container {
-    padding: 0;
-    margin: 0;
+  .swiper-slide img {
+    height: auto;
   }
-  #projectDetails #content-row {
-    flex-direction: column;
-    width: auto;
-  }
-  #projectDetails #content{
-    overflow: hidden;
-    margin: auto;
-    padding: 3%;
-  }
-  #projectDetails #main-img {
-    height: 300px;
-    /*width: 350px;*/
-  }
-  #projectDetails #content p {
-    text-align: left;
-    margin: 5% 2%;,
+  .swiper-slide,
+  .swiper-wrapper {
+    height: fit-content;
   }
   #oddsEnds .swiper {
-    padding: 0;
+    padding-top: 20px;
   }
-  #under_construction .container {
-    justify-content: flex-start;
+  #oddsEnds .caption {
+    padding: 30px;
   }
-  #under_construction .header-title {
-    height: 40%;
-    align-items: flex-start;
+  #oddsEnds #current-title {
+    font-weight: bold;
   }
-  #under_construction .bottom-row {
-    height: 60%;
+  #oddsEnds, 
+  #oddsEnds .container {
+    padding-left: 0;
+    padding-right: 0;
   }
-  #under_construction .header-intro-text {
-    padding: 0;
+  #odds-ends-slider-container {
+    width: 100vw;
   }
-  #under_construction h1 {
-    font-size: 24px;
+  footer .col {
+    text-align: center !important;
   }
-  #under_construction p {
-    font-size: 16px;
+  .graphic__prose .trigger {
+    width: 85vw;
+    padding: 20px;
+    z-index: 2;
+    margin: 40vh 8vw;
   }
-  .grainy-page:after {
-    opacity: 0.05 !important;
+  .graphic__vis {
+    display: none;
   }
-  #contact .row {
-    padding-left: 0 !important;
-    padding-right: 0 !important;
-    text-align: center;
+  #gdp-barchart {
+    width: 100% !important;
+    margin: 5vh auto !important;
   }
-  #contact a.mail-link:before {
-    visibility: visible;
-    width: 100%;
+  .coup img {
+    width: 300px !important;
+    height: 200px !important;
+    padding-bottom: 10px;
   }
-  #contact a,
-  #contact a.mail-link:before,
-  footer a,
-  footer .footer-below,
-  .floating-label-form-group-with-focus label { 
-    color: #{{ site.color.heading }} !important; 
+  #projectDetails .project-title {
+    font-size: 1.7rem;
   }
-}
-
-@media (max-width: 480px) {
- #main-img {
-  height: 250px;
-}
-.swiper-slide img {
-  height: auto;
-}
-.swiper-slide,
-.swiper-wrapper {
-  height: fit-content;
-}
-#oddsEnds .swiper {
-  padding-top: 20px;
-}
-#oddsEnds .caption {
-  padding: 30px;
-}
-#oddsEnds #current-title {
-  font-weight: bold;
-}
-#oddsEnds, 
-#oddsEnds .container {
-  padding-left: 0;
-  padding-right: 0;
-}
-#odds-ends-slider-container {
-  width: 100vw;
-}
-footer .col {
-  text-align: center !important;
-}
-.graphic__prose .trigger {
-  width: 85vw;
-  padding: 20px;
-  z-index: 2;
-  margin: 40vh auto;
-}
-.graphic__vis {
-  display: none;
-}
-#gdp-barchart {
-  width: 100% !important;
-}
-.coup img {
-  width: 300px !important;
-  height: 200px !important;
-  padding-bottom: 10px;
-}
-#projectDetails .project-title {
-  font-size: 1.7rem;
-}
-#projectDetails .container
-{
-  padding: 10px !important;
-}
-.acquisitions .mamma-wrapper {
-  margin: 2vh auto;
-}
-.acquisitions #companies .row {
-  flex-direction: column;
-}
-.acquisitions .num {
-  height: 300px;
-  margin: 20px auto;
-}
-.fires #content-row {
-  width: 100% !important;
-}
-.fires .plotly-map-container .main-svg,
-.fires .plotly-map-container .svg-container {
-  width: 100% !important;
-}
+  #projectDetails .container
+  {
+    padding: 10px !important;
+  }
+  .acquisitions .mamma-wrapper {
+    margin: 2vh auto;
+  }
+  .acquisitions #companies .row {
+    flex-direction: column;
+  }
+  .acquisitions .num {
+    height: 300px;
+    margin: 20px auto;
+  }
+  .fires #content-row {
+    width: 100% !important;
+  }
+  .fires .plotly-map-container .main-svg,
+  .fires .plotly-map-container .svg-container {
+    width: 100% !important;
+  }
 }
 
 #portfolio .overlay-link {

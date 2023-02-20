@@ -343,6 +343,9 @@
   color: #d69b00 !important;
 }
 
+.coup .plotly-graph-div {
+  margin: auto;
+}
 
 .graphic {
   width: 100%;
@@ -399,6 +402,19 @@
   margin-bottom: 10px;
 }
 
+#coup-m,
+#coup-s {
+  display: none;
+}
+#coup-l {
+  display: block;
+}
+#fire-s {
+  display: none;
+}
+#fire-l {
+  display: block;
+}
 
 #scorecards {
   padding: 20px 0;
@@ -644,6 +660,13 @@ overflow-x: scroll;*/
         margin: 0 !important;
         width: 100% !important;
       }
+      #coup-l,
+      #coup-s {
+        display: none;
+      }
+      #coup-m {
+        display: block;
+      }
     }
 
 
@@ -737,6 +760,12 @@ overflow-x: scroll;*/
     .floating-label-form-group-with-focus label { 
       color: #{{ site.color.heading }} !important; 
     }
+    #fire-s {
+      display: block;
+    }
+    #fire-l {
+      display: none;
+    }
   }
 
 
@@ -813,6 +842,14 @@ overflow-x: scroll;*/
   .fires .plotly-map-container .main-svg,
   .fires .plotly-map-container .svg-container {
     width: 100% !important;
+  }
+  
+  #coup-l,
+  #coup-m {
+    display: none;
+  }
+  #coup-s {
+    display: block;
   }
 }
 

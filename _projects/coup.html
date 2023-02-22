@@ -59,33 +59,40 @@ alt: Guinness-Bisseau President Embaló
 							Since 2000, the West African nation has seen 10 coup attempts, higher than any other nation globally. While only 2 of these attempts have been successful, they have contributed to ongoing political instability in the region. Only one elected president (José Mário Vaz, elected in 2014) has ever completed a five-year term in office. 
 						</p>
 					</div>
-				</div>
-			</div>
-
-			<div id="first-graph" class="mt10 text-center">
-				<div class="btn-group btn-group-toggle" data-toggle="buttons" style="width: 80%; justify-content: center;">
-					<label class="btn btn-outline-secondary btn-coup-2000 active" style="color: white;">
-						<input type="radio" name="options" id="coup-2000" autocomplete="off" checked> Coups after 2000
-					</label>
-					<label class="btn btn-outline-secondary btn-coup-all" style="color: white;">
-						<input type="radio" name="options" id="coup-all" autocomplete="off" > Coups over all time
-					</label>
-				</div>
-
-				<div class="plotly-map-container" style="width: 100%; /*height: 80vh;*/">
-					<div id="coup-all">
-						<div id="coup-l">{% include coups-all-map.html %}</div>
-						<div id="coup-m">{% include coups-all-map-med.html %}</div>
-						<div id="coup-s">{% include coups-all-map-small.html %}</div>
-					</div>
-					<div id="coup-2000">
-						<div id="coup-l">{% include coups-2000-map.html %}</div>
-						<div id="coup-m">{% include coups-2000-map-med.html %}</div>
-						<div id="coup-s">{% include coups-2000-map-small.html %}</div>
+					<p class="takeaway mt10">Guinea-Bissau way ahead of other countries in number of coup attempts</p>
+					<p class="otherinfo">Guinea-Bissau's 10 attempts are followed by Venezuela and Mauritania with 5 attempts each</p>
+					<div class="btn-group btn-group-toggle text-center" data-toggle="buttons" style="width: fit-content; width: -webkit-fit-content; justify-content: center; margin: 50px auto;">
+						<label class="btn btn-outline-secondary btn-coup-2000 active" style="color: white;">
+							<input type="radio" name="options" id="coup-2000" autocomplete="off" checked> Coups after 2000
+						</label>
+						<label class="btn btn-outline-secondary btn-coup-all" style="color: white;">
+							<input type="radio" name="options" id="coup-all" autocomplete="off" > Coups over all time
+						</label>
 					</div>
 				</div>
 			</div>
+
 			
+			<div id="first-graph">
+				<div class="plotly-map-container" style="width: 100%;">
+				<div id="coup-all">
+					<div id="coup-l">{% include coups-all-map.html %}</div>
+					<div id="coup-m">{% include coups-all-map-med.html %}</div>
+					<div id="coup-s">{% include coups-all-map-small.html %}</div>
+				</div>
+				<div id="coup-2000">
+					<div id="coup-l">{% include coups-2000-map.html %}</div>
+					<div id="coup-m">{% include coups-2000-map-med.html %}</div>
+					<div id="coup-s">{% include coups-2000-map-small.html %}</div>
+				</div>
+			</div>
+		</div>
+		<div class="container">
+			<div class="row" id="content-row">
+				<p class="otherinfo">Data: Cline Center</p>
+			</div>
+		</div>
+
 
     <!-- <div class="row">
       <div id="first-graph">
@@ -179,17 +186,20 @@ alt: Guinness-Bisseau President Embaló
 </div>
 
 
-<div class="container" id="conclusion">
-	<div class="col text-center">
-		<h6>Annual gdp % change, Guinea-Bissau</h6>
-		<canvas id="gdp-barchart" style="margin: 10vh -15px;"></canvas>
+<div class="container" id="conclusion" style="margin-bottom: 40px;">
+	<div class="col">
+		<p class="takeaway mt5">Both successful coups have divergent effects on GDP</p>
+		<p class="otherinfo">Annual GDP % change. The 2003 coup, welcomed by the public, leads to an increase in GDP whereas the 2012 coup leads to a drastic drop</p>
+		<!-- <h6 style="text-align: center; margin-top: 50px;"> Guinea-Bissau</h6> -->
+		<canvas id="gdp-barchart" style="margin: 50px -15px;"></canvas>
+		<p class="otherinfo">Data: World Bank</p>
 	</div>
-	<div id="content-row" class="row mt5" style="margin-bottom: 10%; flex-direction: row;">
-		<div class="col text-center" style="width: 30%;">
+	<div id="content-row" class="row" style="margin-bottom: 10%; flex-direction: row;">
+		<div class="col text-center mt5" style="width: 30%;">
 			<img src="../assets/img/portfolio/coup/current-embalo.jpg" style="height: auto; width: 100%;"/>
 			<p class="small" style="color: gray;margin-top: 5px;">Umaro Sissoco Embaló</p>
 		</div>
-		<div class="col">
+		<div class="col mt5">
 			<p>
 				The country continues to be in a state of constant tension between its civilian government and its military, with the added pressure of the drug trade. While it is unclear who perpetrated the attempt this year, President Embaló and his government appear to resume their focus on combating drug trafficking and corruption.
 			</p>

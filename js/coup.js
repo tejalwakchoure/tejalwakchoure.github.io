@@ -320,7 +320,7 @@ $(document).ready(function() {
       });
 
       $('div#coup-all').hide();
-      $('#first-graph .btn').on('click', function(event){
+      $('.coup .btn').on('click', function(event){
         if(this.querySelector('input').id=='coup-2000') {
           $('div#coup-all').hide();
           $('div#coup-2000').show();

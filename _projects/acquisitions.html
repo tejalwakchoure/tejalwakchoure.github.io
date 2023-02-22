@@ -53,16 +53,30 @@ alt: Some timelines of acquisition
 						<p>
 							Since 2001, Google has acquired 254 companies including giants like Android and YouTube. Some of these acquisitions haven't worked out, including Slide (bought for $182M, shut down after 2 years) and Motorola Mobility (bought for $12.5B, sold for $3B after 2 years). But due to the sheer number of fields that Google operates in, most of these businesses have been integrated into its existing products.
 						</p>
-						<div class="text-center mt5">
-							<h6>company details by common product groups</h6>
+						<p class="takeaway mt5">Nearly 10% of all (disclosed) companies have been integrated into GSuite bundle</p>
+						<p class="otherinfo">Company details by common product groups</p>
+						<div class="text-center" style="margin: 50px 0;">
 							<select id="selectbox">
 							</select>
 							<img id="acq-timeline" src="../assets/img/portfolio/acquisitions/AdSense.svg" style="margin: 5vh 3% 0 2%; /*width: 95%;*/">
 						</div>
 						<!-- <p class="small">** note what you've omitted **</p> -->
+						<p class="otherinfo">Data: Crunchbase, CB Insights</p>
 					</div>
 
-					<div id="scorecards" class="row mt10">
+					<div id="mamma" class="row mt10">
+						<p>
+							Compared to its <a href="https://www.cnbc.com/2021/10/29/cramer-new-acronym-to-replace-faang-after-facebook-name-change-to-meta.html" target="_blank">MAMMA</a> peers, Google has consistently focused on acquiring startups, surpassed only by Microsoft with 265 total acquisitions. The company focused on expansion most in 2014, acquiring 34 companies that year alone.
+						</p>
+					</div>
+					<p class="takeaway mt5">Google outpaces most MAMMA Peers</p>
+					<p class="otherinfo">Annual acquisitions, 2001-2022</p>
+					<div class="mamma-wrapper" style="margin: 50px auto;">
+						<canvas id="goog-acquisitions"></canvas>
+					</div>
+					<p class="otherinfo">Data: Kaggle</p>
+
+					<div id="scorecards" class="row mt5">
 						<div class="text-center col">
 							<img class="logo" 
 							src="../assets/img/portfolio/acquisitions/motorola-logo.png">
@@ -90,23 +104,8 @@ alt: Some timelines of acquisition
 							<p class="small">Android (2005)</p>
 						</div>
 					</div>
-
-
-					<div id="mamma" class="row mt5">
-						<p>
-							Compared to its <a href="https://www.cnbc.com/2021/10/29/cramer-new-acronym-to-replace-faang-after-facebook-name-change-to-meta.html" target="_blank">MAMMA</a> peers, Google has consistently focused on acquiring startups, surpassed only by Microsoft with 265 total acquisitions. The company focused on expansion most in 2014, acquiring 34 companies that year alone.
-						</p>
-					</div>
-
-					<h6 class="mt5" style="text-align: center; margin-left: 1vw; margin-bottom: 50px;">annual acquisitions by company</h6>
-					<div class="mamma-wrapper" style="margin: auto;">
-						<canvas id="goog-acquisitions"></canvas>
-					</div>
 				</div>
-				<!-- </div>
-				 </div>
-
-			
+				<!-- 
 			<div class="row text-center" style="justify-content: center; margin-left: 1vw;">
 				<div class="col" style="width: 100%; margin-top: 3vh;">
 					<p class="bold" style="margin-bottom: 0;">Google</p>
@@ -150,10 +149,15 @@ alt: Some timelines of acquisition
 								Over 10% of the companies that Google has acquired operated in the mobile domain. These mergers supplemented the growth of Android over the past two decades. Since its acquisition in 2005, Android has grown to reach 3 billion users worldwide. It now holds 71% of the global market share for operating systems.
 							</p>
 						</div>
-						<h6 class="mt5 text-center" style="width: 100%;margin-bottom: 30px;">breakdown of acquired companies by market</h6>
-						<div style="width: 100%;">
+
+						<div>
+							<p class="takeaway mt5">M&A strategy broken down by market</p>
+							<p class="otherinfo">Number of acquired companies, 2001-2022</p>
+						</div>
+						<div style="width: 100%; margin: 30px 0;">
 							<canvas id="market-treemap"></canvas>
 						</div>
+						<p class="otherinfo">Data: Kaggle</p>
 						<!-- <p>Has Google had phases of expansion into these domains? -> project Loon and X in 2014-15</p> -->
 						<!-- <p class="small">scatter (bubble) plot/box with whiskers plot of market x year acquired (x # size)</p> -->
 					</div>
@@ -171,13 +175,15 @@ alt: Some timelines of acquisition
 						<div style="margin-top: 15vh"></div>
 						<div class="row" id="content-row">
 							<p>
-								According to Google's public records, most companies were acquired within 6 years of their creation. Only 5 companies were over 20 years old at the time of acquisition (Zagat, Director, Like.com, Instantiations, and Boston Dynamics).
+								According to Google's public records, 157 of its 254 companies were created less than 6 years ago at the time of their acquisition. Only 5 companies were over 20 years old (Zagat, Director, Like.com, Instantiations, and Boston Dynamics).
 							</p>
 						</div>
-						<div style="margin: 5vh auto 15vh auto; text-align: center;">
-							<h6 style="">typical age of acquired company on deal date</h6>
-							<img src="../assets/img/portfolio/acquisitions/google-ages.png" style="max-width: 100%;" />
-							<!-- <img src="../assets/img/portfolio/acquisitions/google-ages-old.png" style="max-width: 100%;" /> -->
+						<div class="mt5" style="margin-bottom: 15vh;">
+							<!-- <h6 style="">typical age of acquired company on deal date</h6> -->
+							<p class="takeaway">Most startups have been acquired within 6 years of their creation</p>
+							<p class="otherinfo">% of acquired companies with typical age on deal date</p>
+							<img src="../assets/img/portfolio/acquisitions/google-ages.png" style="max-width: 100%; margin: 50px auto;" />
+							<p class="otherinfo">Data: Crunchbase, CB Insights</p>
 						</div>
 
 						<!-- <p class="bold">Were bought for $Y when the total amount they raised was $Z.</p> -->

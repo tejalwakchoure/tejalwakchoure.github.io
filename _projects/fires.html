@@ -52,25 +52,27 @@ alt: map of violations
 						</p>
 					</div>
 
-					<p class="bold text-center mt5" style="margin-bottom: 0">Number of elevator buildings with violations by Community District, 2019-2022 (normalized)</p>
-					<div class="plotly-map-container">
+					<p class="takeaway mt5">Community districts in Southern Brooklyn have the most elevator buildings with fire code violations</p>
+					<p class="otherinfo">Elevator buildings with violations by Community District (normalized for population), 2019-2022</p>
+					<div class="plotly-map-container" style="margin-top: 50px;">
 						<div id="fire-l">{% include violations-map.html %}</div>
 						<div id="fire-s">{% include violations-map-small.html %}</div>
 					</div>
+					<p class="otherinfo">Data: NYC Open Data, CDC/ATSDR census data</p>
 
 					<div id="all-nyc" class="mt5">
 						<p>
 							The Fire Department of New York responded to 13,973 emergencies related to structural fires in 2021. Right now, 19,043 buildings have open fire code violations with the HPD. About 600 of these are classified as "immediately hazardous", the most severe class of housing code violations. These violations range from defective smoke alarms to damaged self-closing doors and obstructed fire escapes.
 						</p>
 					</div>
-					<p class="bold text-center mt10" style="margin-bottom: 0">Types of buildings for every 10,000 violations</p>
-					<img src="../assets/img/portfolio/fires/landuse.svg"  style="width: 100%;" />
+					<p class="takeaway mt10">Multi-family elevator buildings over 2x more likely to have fire code violations than any other category</p>
+					<p class="otherinfo">Types of buildings for every 10,000 violations (normalized), 2019-2022</p>
+					<img src="../assets/img/portfolio/fires/landuse.svg"  style="width: 100%; margin-bottom: 50px;" />
+					<p class="otherinfo">Data: NYC Open Data</p>
 
 					<div id="why-elevators" class="mt5" style="margin-bottom: 5%;">
 						<p>
-							Over half of all buildings that have been served fire code violations since 2019 are multi-family elevator buildings. One and two-family buildings accounted for the lowest number of violations of any kind of occupied structure – even lower than vacant land – likely because this category is not subject to some fire safety codes like the 
-							<a href = "https://www.nyc.gov/site/hpd/services-and-information/self-closing-doors.page" target="_blank">
-							self-closing door rule</a>. And because most of the structures in Staten Island are one and two-family apartments, it has the least number of buildings with overall fire code violations.
+							While multi-family elevator buildings were the most likely to have fire code violations, one and two-family buildings accounted for the lowest number of violations of any kind of occupied structure – even lower than vacant land. This could be attributed to the fact that this category is not subject to some fire safety codes, like the <a href = "https://www.nyc.gov/site/hpd/services-and-information/self-closing-doors.page" target="_blank">self-closing door rule</a>. And because most of the structures in Staten Island are one and two-family apartments, it has the fewest number of buildings with fire code violations overall.
 							<br><br>
 							As of December 2022, over 9,000 elevator buildings have open violations, some of them active since January 2019. 395 of these are rent-impairing, which if not corrected soon will be <a href="https://www.nyc.gov/site/hpd/services-and-information/code-enforcement.page" target="_blank">"a fire hazard or a serious threat to the life, health or safety of occupants"</a>. On reinspections, HPD has found that 766 buildings have not yet complied with their notices of violation. HPD was unable to access 606 buildings for reinspection, and 358 buildings sent in invalid certifications.
 						</p>

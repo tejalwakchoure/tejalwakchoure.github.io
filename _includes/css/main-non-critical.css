@@ -35,9 +35,28 @@
   margin-top: 5vh;
   margin-bottom: 2vh;
 }
+
+.acquisitions .project-heading {
+  text-transform: uppercase !important;
+  margin-bottom: 3vh !important;
+}
 #projectDetails .li {
 	padding-bottom: 0.1rem;
 }   
+
+#projectDetails .takeaway {
+  font-size: 1.5rem;
+  font-weight: bold;
+  letter-spacing: 0;
+  margin-bottom: 0;
+}
+
+#projectDetails .otherinfo {
+  font-size: 0.9rem;
+  color: gray;
+  letter-spacing: 0;
+  margin-bottom: 0;
+}
 
 .slide-link {
   padding: 25px;
@@ -423,9 +442,10 @@
   padding: 20px;
   /*border:1px solid #cda1ff;*/
   margin: 10px;
-  border-radius: 0.2em;
+  border-radius: 0.5em;
   /*border: 2px solid #cecece;*/
   /*box-shadow: 2px 2px 0 0 black;*/
+  box-shadow: 4px 4px 0px 0px #f4e5ff;
   background: #9e68db; /*#6160d3;*/
   color: white !important;
 }
@@ -435,7 +455,7 @@
 }
 #scorecards > div > p.small {
   margin-bottom: 0;
-  font-size: 1.1rem;
+  font-size: 1rem;
 }
 
 .acquisitions .logo {
@@ -523,31 +543,33 @@ overflow-x: scroll;*/
     display: inline-block;
     position: relative;
     background: white;
-    width: 300px;
-    height: 50px;
+    width: 230px;
+    height: fit-content;
+    height: -webkit-fit-content;
     border-radius: 5px;
     border: 1px solid #cda1ff;
     text-align: center;
     margin: 2vh auto;
+    padding: 5px;
   }
   .styledSelect {
     position:absolute;
-    top:18%;
+    top:11%;
     right:0;
     bottom:0;
     left:0;
     font-weight:bold;
-    font-size: 1.2em;
+    font-size: 1em;
     color: #{{ site.color.text }};
   }
   .styledSelect:after {
     content:"";
     width:0;
     height:0;
-    border: 9px solid transparent;
+    border: 8px solid transparent;
     border-color: #cda1ff transparent transparent transparent;
     position: absolute;
-    top: calc( 40% - 15% );
+    top: calc( 40% - 10% );
     right: 5%;
   }
   .styledSelect:active, .styledSelect.active {
@@ -582,7 +604,7 @@ overflow-x: scroll;*/
     /*align-items: center;*/
     width: 100%; 
     /*height: 90vh;*/
-    padding: 10vh 0;
+    padding: 0;
     /*border: 1px gray solid;*/
   }
   .js-plotly-plot .plotly .user-select-none {

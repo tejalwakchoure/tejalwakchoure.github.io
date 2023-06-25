@@ -1,0 +1,150 @@
+---
+project-id: 8
+title: So you think you can Broadway?
+type: data journalism
+
+date: 1000-01-08
+img: timelines.png
+alt: Some timelines of stars
+---
+
+<!DOCTYPE html>
+<html>
+<head>
+	{% include head.html %}
+	{% include js.html %}
+	{% include stylesheets.html %}
+	<script src="https://cdn.plot.ly/plotly-2.16.1.min.js"></script> 
+</head>
+<body>
+	{% include nav.html coloured_back="transparent_back" %}
+
+	<!-- Project details section -->
+    <img class="project-main-img" style="object-fit: cover; filter: grayscale(1) brightness(3);" src="../assets/img/portfolio/broadway/header.jpg">
+	<section id="projectDetails" class="broadway" data-nosnippet>
+		<div class="container" style="justify-content: center;">
+			<div class="col text-center">
+				<h1 class="project-title">{{ page.title }}</h1>
+			</div> 
+			<div class="row" id="content-row">
+				<div id="overview" class="mt5">
+					<p>
+						Data journalism project for the <a href="https://ledeprogram.com/" target="_blank"> Lede Program at Columbia</a>.
+					</p>
+					<br><br>
+					<p> <span class="bold">Project Type: </span>{{ page.type }}</p>
+					<p> <span class="bold">Role: </span>data collection, data analysis, data visualization</p>
+					<p> <span class="bold">Tools: </span>Python(Jupyter) for scraping and analysis, Plotly for graphics</p>
+					<p> <span class="bold">Date: </span>June 2023</p>
+					<p><span class="bold">Sources:</span>
+						<a href="https://www.ibdb.com" target="_blank">IBDB</a>, 
+						<a href="https://www.playbill.com/" target="_blank">Playbill</a>, 
+						<a href="https://en.wikipedia.org/" target="_blank">Wikipedia</a>
+                    <p> <span class="bold">Code: </span>
+                        <a href="https://github.com/tejalwakchoure/Broadway-Analysis" target="_blank">GitHub</a>
+                    </p>
+					<hr/>
+				</div>
+
+
+					<div id="intro" class="mt5">
+						<p>
+							I recently witnessed pop star JoJo play Satine in <span class="italic">Moulin Rouge</span>'s most recent run on Broadway. While it's not unheard of for artists to move into sister fields, it felt like a fever dream to see her in her new glittery persona. Over 12 million people attended the 2022-23 Broadway season, the first full-fledged season since 
+							<a href="https://www.history.com/this-day-in-history/broadway-goes-dark-covid19-pandemic" target="_blank">covid-19 shut theatres down</a>. Long considered the highest form of theatre in the world, it stays a dream for most musical actors. This begs the question – how on earth do you get to Broadway?
+
+						</p>
+					</div>
+					
+
+					<div id="" class="mt5">
+						<h3 class="project-heading">You come from a famous family</h3>
+						<p>
+							Most performers don't begin as 
+							<a href="https://www.billboard.com/artist/jojo/" target="_blank">
+							Billboard Hot 100-topping singers at the age of 13</a>, but many of them do start with family connections. 15 out of every 100 opening night cast members for current shows were born into prominent families. Although musical theatre is not nearly as <a href="https://www.vulture.com/article/hollywood-nepotism-babies-list-taxonomy.html" target="_blank">nepotistic as Hollywood</a>, the fact that it is part of the entertainment industry means that it still places a priority on relationships. Here are some performers whose relatives have a Wikipedia page, the true mark of stardom.
+
+						</p>
+					</div>
+
+					<div class="row nepo-row mt5">
+						<div class="col"><img class="nepo-img" src="../assets/img/portfolio/broadway/beanie-jonah.svg"/></div>
+						<div class="col">
+							<p>Hill is a prolific actor, comedian, and producer who has been nominated for the Academy, BAFTA, Golden Globe, and SAG Awards.</p>
+						</div>
+					</div>
+					
+					<div class="row nepo-row mt5">
+						<div class="col">
+							<p>Calud performed as Kim in the Broadway production of <span class="italic">Miss Saigon</span> in 1991. Noblezada later played the same role in 2017.</p>
+						</div>
+						<div class="col"><img class="nepo-img" src="../assets/img/portfolio/broadway/eva-annette.svg"/></div>
+					</div>
+
+					<div class="row nepo-row mt5">
+						<div class="col"><img class="nepo-img" src="../assets/img/portfolio/broadway/linmanuel-luis.svg"/></div>
+						<div class="col">
+							<p>Miranda Jr. consulted on high-profile political campaigns including those for Hillary Clinton and Chuck Schumer. He was chairman of the Board of the NYC Health and Hospitals Corporation, appointed by Mayor Rudolph Giuliani.</p>
+						</div>
+					</div>
+
+					<div class="row nepo-row mt5">
+						<div class="col">
+							<p>Colin Powell was the former United States Secretary of State, National Security Advisor, and Chairman of the Joint Chiefs of Staff.</p>
+						</div>
+						<div class="col"><img class="nepo-img" src="../assets/img/portfolio/broadway/linda-colin.svg"/></div>
+					</div>
+
+					<div class="row nepo-row mt5">
+						<div class="col"><img class="nepo-img" src="../assets/img/portfolio/broadway/rachel-kate.svg"/></div>
+						<div class="col">
+							<p>Spade was the co-founder and co-owner of the designer brand Kate Spade New York. Brosnahan rose to fame as the titular Jewish American character on <span class="italic">The Marvelous Mrs. Maisel</span>, despite not being of Jewish descent.</p>
+						</div>
+					</div>
+					
+
+
+
+					<div id="" class="mt10">
+						<h3 class="project-heading">You go to NYU</h3>
+						<p>
+							A staggering 40% of stars who went to college attended one of 5 schools. New York University is at the top by a large margin, beating specialized schools like Julliard and the American Musical and Dramatic Academy (AMDA). NYU alumni include 
+							<span class="italic">Wicked</span>'s Idina Menzel, 
+							<span class="italic">The Book of Mormon</span>'s Jared Gertner, and 
+							<span class="italic">Kimberly Akimbo</span>'s Victoria Clark.
+
+						</p>
+					</div>
+
+					<p class="takeaway mt5">Nearly half of all college-educated broadway stars come from these 5 schools</p> 
+					<p class="otherinfo">Schools that actors obtained their highest qualifications from</p>
+					<img src="../assets/img/portfolio/broadway/schools.png"  style="width: 100%; margin-bottom: 50px; object-fit: contain; margin: auto;" />
+					<p class="otherinfo">source: wikipedia</p>
+
+					<div>
+						<p class="mt5">
+							It's worth noting that while most of these stars have received a professional education, many have also opted not to go to college. These performers usually start as child actors, as in the case of <span class="italic">Grey House</span>'s Mia Sinclair Jenness (who also happens to be actress Emily Bauer's daughter) and industry veterans Neil Patrick Harris and Adam Godley.
+						</p>
+					</div>
+
+					<div id="" class="mt10">
+						<h3 class="project-heading">You have performed on-screen</h3>
+						<p>
+							Musical theatre is a competitive field with few winners on top – only 176 of all 783 opening night cast members for current shows have Wikipedia pages, and many of them are because of crossovers in other sections of the entertainment industry. So, many performers choose to start their careers with advertisements or small roles in TV shows. For instance, out of the 22 cast members of the 2015 smash hit <span class="italic">Hamilton</span>, 16 had already appeared on screen. Renée Elise Goldsberry, who won the Tony for Best Featured Actress in a Musical for her role as Angelica Schuyler, already had 26 film and TV credits to her name before opening night.
+
+						</p>
+					</div>
+
+					<p class="takeaway mt5">over 70% of broadway actors have on-screen credits before opening night</p>
+					<p class="otherinfo">Number of credited on-screen performances by actors before opening night, by show</p>
+				</div>
+			</div>
+
+				<div class="plotly-map-container screen-credits" style="margin-top: 50px;margin-bottom: 100px;margin-right: 8%;height:fit-content;">
+					<div>{% include broadway-screen-credits.html %}</div>
+					<p class="otherinfo">source: wikipedia</p>
+				</div>
+			</section>
+
+			{% include footer.html %}
+		</body>
+		</html>

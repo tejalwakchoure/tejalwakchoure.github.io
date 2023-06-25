@@ -51,6 +51,31 @@
   margin-bottom: 0;
 }
 
+section.broadway {
+  grid-auto-rows: 1fr min-content;
+
+}
+
+.broadway .takeaway {
+  text-transform: capitalize;
+}
+
+.broadway .plotly-map-container .main-svg,
+.broadway .plotly-map-container .svg-container {
+  width: 100% !important;
+}
+
+.broadway .nepo-row {
+  display: flex;
+  align-items: center;
+}
+
+.broadway .nepo-img {
+  width: 100%; 
+  padding: 10%; 
+  object-fit: contain;
+}
+
 #projectDetails .otherinfo {
   font-size: 0.9rem;
   color: gray;
@@ -270,11 +295,11 @@
  border: 0px;
  box-shadow: none;
 }
-.loveletter-main-img {
+.project-main-img {
  height: 85vh; 
  width: 100%;
  object-fit: contain;
- background: #A5C6FF;
+ background: #fff;
  /*margin: auto;*/
  /*border-radius: 2em;*/
  /*margin: 2em auto;*/
@@ -285,17 +310,6 @@
   letter-spacing: 0.5px; 
   font-size: 0.85em;
   /*text-transform: uppercase;*/
-}
-.nobelles-main-img {
- height: 85vh; 
- width: 100%;
- object-fit: contain;
- background: #fff;
- /*margin: auto;*/
- /*border-radius: 2em;*/
- /*margin: 2em auto;*/
- border: 0px;
- /*box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);*/
 }
 .nobelles,
 .coup,

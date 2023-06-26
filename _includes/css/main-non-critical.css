@@ -714,6 +714,9 @@ overflow-x: scroll;*/
       letter-spacing: 2px;
       font-size: 1.8rem;
     }
+    .project-main-img {
+      height: 60vh;
+    }
     #projectDetails .container {
       padding: 0 !important;
       margin: auto !important;

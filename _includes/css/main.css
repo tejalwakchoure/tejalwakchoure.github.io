@@ -976,6 +976,7 @@ a.coloured_hover:focus {
             height: fit-content;
             padding: 10px 30px;
             align-content: space-between;
+            background: #ffffff !important;
         }
     }
 

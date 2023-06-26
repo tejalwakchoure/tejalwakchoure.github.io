@@ -20,8 +20,8 @@ alt: Some timelines of stars
 	{% include nav.html coloured_back="transparent_back" %}
 
 	<!-- Project details section -->
-    <img class="project-main-img" style="object-fit: cover; filter: grayscale(1) brightness(3);" src="../assets/img/portfolio/broadway/header.jpg">
-	<section id="projectDetails" class="broadway" data-nosnippet>
+    <img class="project-main-img" style="object-fit: cover; filter: grayscale(1) brightness(3);" src="../assets/img/portfolio/broadway/header.jpg" alt="black and white picture of a cast performing on stage">
+	<section id="projectDetails" class="broadway" style="display: block;" data-nosnippet>
 		<div class="container" style="justify-content: center;">
 			<div class="col text-center">
 				<h1 class="project-title">{{ page.title }}</h1>
@@ -67,35 +67,41 @@ alt: Some timelines of stars
 					</div>
 
 					<div class="row nepo-row mt5">
-						<div class="col"><img class="nepo-img" src="../assets/img/portfolio/broadway/beanie-jonah.svg"/></div>
+						<div class="col"><img class="nepo-img" src="../assets/img/portfolio/broadway/beanie-jonah.svg" 
+							alt="Beanie Feldstein (Funny Girl, 2022) and Jonah Hill (brother, actor)"/></div>
 						<div class="col">
 							<p>Hill is a prolific actor, comedian, and producer who has been nominated for the Academy, BAFTA, Golden Globe, and SAG Awards.</p>
 						</div>
 					</div>
 					
 					<div class="row nepo-row mt5">
-						<div class="col">
+						<div class="col order-lg-2"><img class="nepo-img" src="../assets/img/portfolio/broadway/eva-annette.svg"
+							alt="Eva Noblezada (Hadestown, 2019) and Annette Calud (aunt, actress)"/></div>
+						<div class="col order-lg-1">
 							<p>Calud performed as Kim in the Broadway production of <span class="italic">Miss Saigon</span> in 1991. Noblezada later played the same role in 2017.</p>
 						</div>
-						<div class="col"><img class="nepo-img" src="../assets/img/portfolio/broadway/eva-annette.svg"/></div>
+						
 					</div>
 
 					<div class="row nepo-row mt5">
-						<div class="col"><img class="nepo-img" src="../assets/img/portfolio/broadway/linmanuel-luis.svg"/></div>
+						<div class="col"><img class="nepo-img" src="../assets/img/portfolio/broadway/linmanuel-luis.svg"
+							alt="Lin-Manuel Miranda (Hamilton, 2015) and Luis A. Miranda Jr. (father, political strategist)"/></div>
 						<div class="col">
 							<p>Miranda Jr. consulted on high-profile political campaigns including those for Hillary Clinton and Chuck Schumer. He was chairman of the Board of the NYC Health and Hospitals Corporation, appointed by Mayor Rudolph Giuliani.</p>
 						</div>
 					</div>
 
 					<div class="row nepo-row mt5">
-						<div class="col">
+						<div class="col order-lg-2"><img class="nepo-img" src="../assets/img/portfolio/broadway/linda-colin.svg"
+							alt="Linda Powell (A Beautiful Noise, The Neil Diamond Musical, 2022) and Colin Powell (father, politician)"/></div>
+						<div class="col order-lg-1">
 							<p>Colin Powell was the former United States Secretary of State, National Security Advisor, and Chairman of the Joint Chiefs of Staff.</p>
 						</div>
-						<div class="col"><img class="nepo-img" src="../assets/img/portfolio/broadway/linda-colin.svg"/></div>
 					</div>
 
 					<div class="row nepo-row mt5">
-						<div class="col"><img class="nepo-img" src="../assets/img/portfolio/broadway/rachel-kate.svg"/></div>
+						<div class="col"><img class="nepo-img" src="../assets/img/portfolio/broadway/rachel-kate.svg"
+							alt="Rachel Brosnahan (The Sign in Sidney Brustein's Window, 2023) and Kate Spade (aunt, fashion designer)"/></div>
 						<div class="col">
 							<p>Spade was the co-founder and co-owner of the designer brand Kate Spade New York. Brosnahan rose to fame as the titular Jewish American character on <span class="italic">The Marvelous Mrs. Maisel</span>, despite not being of Jewish descent.</p>
 						</div>
@@ -117,7 +123,7 @@ alt: Some timelines of stars
 
 					<p class="takeaway mt5">Nearly half of all college-educated broadway stars come from these 5 schools</p> 
 					<p class="otherinfo">Schools that actors obtained their highest qualifications from</p>
-					<img src="../assets/img/portfolio/broadway/schools.png"  style="width: 100%; margin-bottom: 50px; object-fit: contain; margin: auto;" />
+					<img src="../assets/img/portfolio/broadway/schools.png"  style="width: 100%; margin-bottom: 50px; object-fit: contain; margin: auto;" alt="a radial bar chart of the schools that actors went to. NYU, CMU, Julliard, USC, and Northwestern are highlighted"/>
 					<p class="otherinfo">source: wikipedia</p>
 
 					<div>
@@ -139,10 +145,19 @@ alt: Some timelines of stars
 				</div>
 			</div>
 
-				<div class="plotly-map-container screen-credits" style="margin-top: 50px;margin-bottom: 100px;margin-right: 8%;height:fit-content;">
+				<div class="plotly-map-container screen-credits" style="margin-top: 50px;margin-bottom: 100px;margin-right: 8%;height:fit-content; width: 90%;">
+					<span class="sr-only sr-only-focusable" tabindex="0">a scatterplot of actors vs the number of on-screen credits they held before opening night, grouped by show</span>
 					<div>{% include broadway-screen-credits.html %}</div>
 					<p class="otherinfo">source: wikipedia</p>
 				</div>
+				<div class="container" style="justify-content: center;">
+					<div class="row" id="content-row">
+					<h5 class="project-heading" style="font-size: 1rem;">Methodology</h5>
+					<p class="small" style="color: gray;">
+						Shows and cast list are from IBDB. While the IBDB database mentions 783 opening night cast members (including ensemble and understudies) for all of the shows currently playing on Broadway, only 176 of these had enough information about them on the internet. This information was scraped from the actors' Wikipedia and Playbill profiles. 'School' here refers to the latest school that the actor went to (mostly MFAs).
+					</p>
+				</div>
+</div>
 			</section>
 
 			{% include footer.html %}

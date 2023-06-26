@@ -722,6 +722,10 @@ overflow-x: scroll;*/
       flex-direction: column;
       width: auto;
     }
+    #projectDetails #content-row .nepo-row{
+      flex-direction: column;
+      width: auto;
+    }
     #projectDetails #content{
       overflow: hidden;
       margin: auto;

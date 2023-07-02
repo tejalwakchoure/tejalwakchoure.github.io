@@ -976,6 +976,8 @@ a.coloured_hover:focus {
             height: fit-content;
             padding: 10px 30px;
             align-content: space-between;
+        }
+        .transparent_back {
             background: #ffffff !important;
         }
     }

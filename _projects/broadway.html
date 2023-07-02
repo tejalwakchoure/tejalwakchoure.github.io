@@ -1,10 +1,11 @@
 ---
-project-id: 8
+project-id: 4
 title: So you think you can Broadway?
 type: data journalism
+tag: journalism
 
 date: 1000-01-08
-img: linda-colin.png
+img: grid-image.png
 alt: black and white picture of a cast performing on stage
 description: I recently witnessed pop star JoJo play Satine in Moulin Rouge's most recent run on Broadway. While it's not unheard of for artists to move into sister fields, it felt like a fever dream to see her in her new glittery persona.
 ---
@@ -22,32 +23,12 @@ description: I recently witnessed pop star JoJo play Satine in Moulin Rouge's mo
 
 	<!-- Project details section -->
     <img class="project-main-img" style="object-fit: cover;" src="../assets/img/portfolio/broadway/header.jpg" alt="black and white picture of a cast performing on stage">
-	<section id="projectDetails" class="broadway" style="display: block;" data-nosnippet>
+	<section id="projectDetails" class="broadway article" style="display: block;" data-nosnippet>
 		<div class="container" style="justify-content: center;">
 			<div class="col text-center">
 				<h1 class="project-title">{{ page.title }}</h1>
 			</div> 
 			<div class="row" id="content-row">
-				<div id="overview" class="mt5">
-					<p>
-						Data journalism project for the <a href="https://ledeprogram.com/" target="_blank"> Lede Program at Columbia</a>.
-					</p>
-					<br><br>
-					<p> <span class="bold">Project Type: </span>{{ page.type }}</p>
-					<p> <span class="bold">Role: </span>data collection, data analysis, data visualization</p>
-					<p> <span class="bold">Tools: </span>Python(Jupyter) for scraping and analysis, Plotly for graphics</p>
-					<p> <span class="bold">Date: </span>June 2023</p>
-					<p><span class="bold">Sources:</span>
-						<a href="https://www.ibdb.com" target="_blank">IBDB</a>, 
-						<a href="https://www.playbill.com/" target="_blank">Playbill</a>, 
-						<a href="https://en.wikipedia.org/" target="_blank">Wikipedia</a>
-                    <p> <span class="bold">Code: </span>
-                        <a href="https://github.com/tejalwakchoure/Broadway-Analysis" target="_blank">GitHub</a>
-                    </p>
-					<hr/>
-				</div>
-
-
 					<div id="intro" class="mt5">
 						<p>
 							I recently witnessed pop star JoJo play Satine in <span class="italic">Moulin Rouge</span>'s most recent run on Broadway. While it's not unheard of for artists to move into sister fields, it felt like a fever dream to see her in her new glittery persona. <a href="https://www.broadwayleague.com/research/statistics-broadway-nyc/" target="_blank">Over 12 million people</a> attended the 2022-23 Broadway season, the first full-fledged season since 
@@ -66,6 +47,8 @@ description: I recently witnessed pop star JoJo play Satine in Moulin Rouge's mo
 
 						</p>
 					</div>
+				</div> 
+				<div class="row" id="content-row" style="max-width: 100% !important;">
 
 					<div class="row nepo-row mt5">
 						<div class="col"><img class="nepo-img" src="../assets/img/portfolio/broadway/beanie-jonah.svg" 
@@ -108,7 +91,8 @@ description: I recently witnessed pop star JoJo play Satine in Moulin Rouge's mo
 						</div>
 					</div>
 					
-
+				</div> 
+				<div class="row" id="content-row">
 
 
 					<div id="" class="mt10">
@@ -125,7 +109,7 @@ description: I recently witnessed pop star JoJo play Satine in Moulin Rouge's mo
 					<p class="takeaway mt5">Nearly half of all college-educated broadway stars come from these 5 schools</p> 
 					<p class="otherinfo">Schools that actors obtained their highest qualifications from</p>
 					<img src="../assets/img/portfolio/broadway/schools.png"  style="width: 100%; margin-bottom: 50px; object-fit: contain; margin: auto;" alt="a radial bar chart of the schools that actors went to. NYU, CMU, Julliard, USC, and Northwestern are highlighted"/>
-					<p class="otherinfo">source: wikipedia</p>
+					<p class="otherinfo">Source: Wikipedia</p>
 
 					<div>
 						<p class="mt5">
@@ -149,18 +133,36 @@ description: I recently witnessed pop star JoJo play Satine in Moulin Rouge's mo
 				<div class="plotly-map-container screen-credits" style="margin-top: 50px;margin-bottom: 100px;margin-right: 8%;height:fit-content; width: 90%;">
 					<span class="sr-only sr-only-focusable" tabindex="0">a scatterplot of actors vs the number of on-screen credits they held before opening night, grouped by show</span>
 					<div>{% include broadway-screen-credits.html %}</div>
-					<p class="otherinfo">source: wikipedia</p>
+					<p class="otherinfo">Source: Wikipedia</p>
 				</div>
 				<div class="container" style="justify-content: center;">
-					<div class="row" id="content-row">
-					<h5 class="project-heading" style="font-size: 1rem;">Methodology</h5>
-					<p class="small" style="color: gray;">
-						Shows and cast list are from IBDB. While the IBDB database mentions 783 opening night cast members (including ensemble and understudies) for all of the shows currently playing on Broadway, only 176 of these had enough information about them on the internet. This information was scraped from the actors' Wikipedia and Playbill profiles. 'School' here refers to the latest school that the actor went to (mostly MFAs).
-					</p>
-				</div>
-</div>
-			</section>
+					<div id="overview" class="mt5">
+						<h5 class="project-heading" style="font-size: 1rem;">Methodology</h5>
+						<p class="small" style="color: gray;">
+							Shows and cast list are from IBDB. While the IBDB database mentions 783 opening night cast members (including ensemble and understudies) for all of the shows currently playing on Broadway, only 176 of these had enough information about them on the internet. This information was scraped from the actors' Wikipedia and Playbill profiles. 'School' here refers to the latest school that the actor went to (mostly MFAs).
+						</p>
+						<hr/>
+						<p style="font-style: italic;">
+							Data journalism project for the <a href="https://ledeprogram.com/" target="_blank"> Lede Program at Columbia</a>.
+						</p>
+						<br><br>
+						<p> <span class="bold">Project Type: </span>{{ page.type }}</p>
+						<p> <span class="bold">Role: </span>data collection, data analysis, data visualization</p>
+						<p> <span class="bold">Tools: </span>Python(Jupyter) for scraping and analysis, Plotly for graphics</p>
+						<p> <span class="bold">Date: </span>June 2023</p>
+						<p><span class="bold">Sources:</span>
+							<a href="https://www.ibdb.com" target="_blank">IBDB</a>, 
+							<a href="https://www.playbill.com/" target="_blank">Playbill</a>, 
+							<a href="https://en.wikipedia.org/" target="_blank">Wikipedia</a>
+						<p> <span class="bold">Code: </span>
+							<a href="https://github.com/tejalwakchoure/Broadway-Analysis" target="_blank">GitHub</a>
+						</p>
+						<br><br>
+					</div>
+			</div>
+			
+		</section>
+		{% include footer.html %}
 
-			{% include footer.html %}
-		</body>
-		</html>
+	</body>
+</html>

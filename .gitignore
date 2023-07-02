@@ -19,5 +19,6 @@ _includes/svelte/public/build/
 _includes/svelte/package-lock.json
 _includes/svelte/README.md
 
-# Ignore any temporary folders created to test out dataviz
+# Ignore any temporary folders created to test stuff
 temp/
+*(old)*

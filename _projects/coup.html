@@ -2,9 +2,10 @@
 project-id: 1
 title: Guinea-Bissau's latest coup attempt is only one of 10 in this century
 type: data storytelling, data visualization
+tag: journalism
 
 date: 1000-01-01
-img: current-embalo.jpg
+img: grid-image.png
 alt: Guinness-Bisseau President Embaló
 description: On February 1, Guinea-Bissau's government palace was attacked during a scheduled cabinet meeting. The shooting lasted for five hours, and at least eight people were killed. President Umaro Sissoco Embaló survived the attempted coup. "It wasn't just a coup. It was an attempt to kill the president, the prime minister and all the cabinet," Embaló said. Six days after the attempt, a radio station critical of the government was attacked and its equipment destroyed.
 ---
@@ -22,33 +23,15 @@ description: On February 1, Guinea-Bissau's government palace was attacked durin
 	{% include nav.html dark_mode='dark-mode' light_shadow_style='color: #c5c5c5;' %}
 
 	<!-- Project details section -->
-	<section id="projectDetails" class="coup" data-nosnippet>
+	<section id="projectDetails" class="coup article" data-nosnippet>
 		<div class="mt10"></div>
 		<div class="container" style="justify-content: center;">
 			<div class="col text-center">
 				<h1 class="project-title">{{ page.title }}</h1>
 			</div> 
 			<div class="row" id="content-row">
-				<div id="overview" class="mt5">
-					<p>
-						I came across Cline Center's <a href="https://clinecenter.illinois.edu/project/research-themes/democracy-and-development/coup-detat-project" target="_blank"> Coup D'état Database</a> via Jeremy Singer-Vine's <a href="https://www.data-is-plural.com/" target="_blank"> Data Is Plural</a> newsletter. The attempted assassination of Guinea-Bissau's president was still doing rounds in the news, and I was curious to see how the history of political instability in the country has progressed over the years. I was also learning D3 at the time, and since the story called for a chronological narrative, I decided to make it a scrollytelling project.
-					</p>
-					<br><br>
-					<p> <span class="bold">Project Type: </span>{{ page.type }}</p>
-					<p> <span class="bold">Role: </span>data storytelling, data visualization</p>
-					<p> <span class="bold">Tools: </span>Figma for prototyping, D3.js for graphics</p>
-					<p> <span class="bold">Date: </span>November 2022</p>
-					<p><span class="bold">Sources:</span>
-						<a href="https://clinecenter.illinois.edu/project/research-themes/democracy-and-development/coup-detat-project" target="_blank">
-						Cline Center Coup D'état Database</a>,
-						<a href="https://data.worldbank.org/country/guinea-bissau" target="_blank">
-						World Bank Data</a></p>
-						<hr/>
-					</div>
-
 					<!-- <canvas id="country-heatmap" style="height: 1000px; width: 100%;"></canvas> -->
 					<!-- <canvas id="country-bubble"></canvas> -->
-
 					<div id="intro" class="mt5">
 						<p>
 							On February 1, 
@@ -60,6 +43,7 @@ description: On February 1, Guinea-Bissau's government palace was attacked durin
 							Since 2000, the West African nation has seen 10 coup attempts, higher than any other nation globally. While only 2 of these attempts have been successful, they have contributed to ongoing political instability in the region. Only one elected president (José Mário Vaz, elected in 2014) has ever completed a five-year term in office. 
 						</p>
 					</div>
+
 					<p class="takeaway mt10">Guinea-Bissau way ahead of other countries in number of coup attempts</p>
 					<p class="otherinfo">Guinea-Bissau's 10 attempts are followed by Venezuela and Mauritania with 5 attempts each</p>
 					<div class="btn-group btn-group-toggle text-center" data-toggle="buttons" style="width: fit-content; width: -webkit-fit-content; justify-content: center; margin: 50px auto;">
@@ -89,7 +73,7 @@ description: On February 1, Guinea-Bissau's government palace was attacked durin
 			</div>
 		</div>
 		<div class="container">
-			<div class="row" id="content-row">
+			<div class="row">
 				<p class="otherinfo">Data: Cline Center</p>
 			</div>
 		</div>
@@ -196,7 +180,14 @@ description: On February 1, Guinea-Bissau's government palace was attacked durin
 		<p class="otherinfo">Data: World Bank</p>
 	</div>
 	<div id="content-row" class="row" style="margin-bottom: 10%; flex-direction: row;">
-		<div class="col text-center mt5" style="width: 30%;">
+		<p class="mt5">
+			The country continues to be in a state of constant tension between its civilian government and its military, with the added pressure of the drug trade. While it is unclear who perpetrated the attempt this year, President Embaló and his government appear to resume their focus on combating drug trafficking and corruption.
+		</p>
+			<img src="../assets/img/portfolio/coup/current-embalo.jpg" style="height: auto; width: 100%; margin-top: 50px;"/>
+			<p class="small" style="color: gray;margin-top: 5px;">Umaro Sissoco Embaló</p>
+			
+		</div>
+		<!-- <div class="col text-center mt5" style="width: 30%;">
 			<img src="../assets/img/portfolio/coup/current-embalo.jpg" style="height: auto; width: 100%;"/>
 			<p class="small" style="color: gray;margin-top: 5px;">Umaro Sissoco Embaló</p>
 		</div>
@@ -204,7 +195,24 @@ description: On February 1, Guinea-Bissau's government palace was attacked durin
 			<p>
 				The country continues to be in a state of constant tension between its civilian government and its military, with the added pressure of the drug trade. While it is unclear who perpetrated the attempt this year, President Embaló and his government appear to resume their focus on combating drug trafficking and corruption.
 			</p>
-		</div>
+		</div> -->
+	</div>
+	<div id="overview" class="container mt5">
+		<hr/>
+		<p style="font-style: italic;">
+			I came across Cline Center's <a href="https://clinecenter.illinois.edu/project/research-themes/democracy-and-development/coup-detat-project" target="_blank"> Coup D'état Database</a> via Jeremy Singer-Vine's <a href="https://www.data-is-plural.com/" target="_blank"> Data Is Plural</a> newsletter. The attempted assassination of Guinea-Bissau's president was still doing rounds in the news, and I was curious to see how the history of political instability in the country has progressed over the years. I was also learning D3 at the time, and since the story called for a chronological narrative, I decided to make it a scrollytelling project.
+		</p>
+		<br><br>
+		<p> <span class="bold">Project Type: </span>{{ page.type }}</p>
+		<p> <span class="bold">Role: </span>data storytelling, data visualization</p>
+		<p> <span class="bold">Tools: </span>Figma for prototyping, D3.js for graphics</p>
+		<p> <span class="bold">Date: </span>November 2022</p>
+		<p><span class="bold">Sources:</span>
+			<a href="https://clinecenter.illinois.edu/project/research-themes/democracy-and-development/coup-detat-project" target="_blank">
+			Cline Center Coup D'état Database</a>,
+			<a href="https://data.worldbank.org/country/guinea-bissau" target="_blank">
+			World Bank Data</a></p>
+		<br><br>	
 	</div>
 </div>
 </div>

@@ -5,14 +5,24 @@
         <h2 class="heading" style="margin-right: -50px; font-size: 7.5rem;">{{ page.title }}</h2>
     </div>
 
+    {% assign jrn = site.projects | sort: 'project-id' | where_exp: "item", "item.tag contains 'journalism'" %}
+    {% assign datades = site.projects | sort: 'project-id' | where_exp: "item", "item.tag contains 'datadesign'" %}
+
     <!-- Portfolio Grid Section -->
     <section id="portfolio">
         <div class="container" style="/*padding: 20px 0;*/">
             <div class="row">
-              <div class="masonry-grid">
-                  <!-- uses 'date' for ordering -->
-                  {% for project in site.projects %}
-                        <div class="masonry-item">
+                <div class="col" style="padding: 1.1rem; text-align: right;">
+                    <h6 class="tagname" style="text-transform: lowercase; font-style: initial;">journalism</h6>
+                    <hr/>
+                </div>
+            </div>
+
+            <div class="row">
+              <div class="jrn masonry-grid">
+                  <!-- uses 'project-id' for ordering -->
+                  {% for project in jrn reversed %}
+                        <div class="masonry-item" id="{{ project.slug }}">
                             <a href="{{ project.url }}" class="portfolio-link-wrapper">
                                 <!-- <div class="overlay"> 
                                     <span style="margin: auto; padding: 10px;"> {{ project.title }} </span>
@@ -23,17 +33,53 @@
                                       srcset="/assets/img/small-devices/portfolio/{{ pagename }}/{{ project.img }}">
                                    <source 
                                       srcset="/assets/img/portfolio/{{ pagename }}/{{ project.img }}"> -->
-                                   <img src="/assets/img/portfolio/{{ project.slug }}/{{ project.img }}" 
+                                      <img src="/assets/img/portfolio/{{ project.slug }}/{{ project.img }}" 
                                    class="img-responsive" 
                                    alt="{{ project.alt }}">
                                 </picture>
                                 <p class="grid-name">{{ project.title }}</p>
-                                <p class="grid-type">{{ project.type }}</p>
+                                <!-- <p class="grid-type">{{ project.type }}</p>  -->
                             </a>
                         </div>
                   {% endfor %}
                 </div>
             </div>
+
+
+            <div class="row mt10">
+                <div class="col" style="padding: 1.1rem; text-align: right;">
+                    <h6 class="tagname" style="text-transform: lowercase; font-style: initial;">data & design</h6>
+                    <hr/>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="datades masonry-grid">
+                    <!-- uses 'project-id' for ordering -->
+                    {% for project in datades reversed %}
+                          <div class="masonry-item" id="{{ project.slug }}">
+                              <a href="{{ project.url }}" class="portfolio-link-wrapper">
+                                  <!-- <div class="overlay"> 
+                                      <span style="margin: auto; padding: 10px;"> {{ project.title }} </span>
+                                  </div> -->
+                                  <picture>
+                                     <!-- <source 
+                                        media="(max-width: 768px)"
+                                        srcset="/assets/img/small-devices/portfolio/{{ pagename }}/{{ project.img }}">
+                                     <source 
+                                        srcset="/assets/img/portfolio/{{ pagename }}/{{ project.img }}"> -->
+                                        <img src="/assets/img/portfolio/{{ project.slug }}/{{ project.img }}" 
+                                     class="img-responsive" 
+                                     alt="{{ project.alt }}">
+                                  </picture>
+                                  <p class="grid-name">{{ project.title }}</p>
+                                  <!-- <p class="grid-type">{{ project.type }}</p>  -->
+                              </a>
+                          </div>
+                    {% endfor %}
+                  </div>
+              </div>
+              <div class="mt10"></div>
         </div>
     </section>
   </div>

@@ -225,19 +225,19 @@ function preloadImages(dir, imageArray, index=0) {
 // });
 
 // Preload images
-$(window).on("load", function() {
-  var smallScreen = $(window).width() < 768 ? true : false;
-  var dir1 = smallScreen ? 'assets/img/small-devices/' : 'assets/img/';
-  var dir2 = smallScreen ? 'assets/img/small-devices/portfolio/' : 'assets/img/portfolio/';
-  var dir3 = 'assets/gif/';
+// $(window).on("load", function() {
+//   var smallScreen = $(window).width() < 768 ? true : false;
+//   var dir1 = smallScreen ? 'assets/img/small-devices/' : 'assets/img/';
+//   var dir2 = smallScreen ? 'assets/img/small-devices/portfolio/' : 'assets/img/portfolio/';
+//   var dir3 = 'assets/gif/';
 
-  var images1 = ['profile-picture.jpeg']
-  preloadImages(dir1, images1);
-  var images2 = ['mlcat.jpg', 'irclogparser.jpg', 'superglue.jpg', 'healthcare-analytics.jpg', 'presenceid.jpg', 'dbms.jpg'];
-  preloadImages(dir2, images2);
-  var images3 = ['words-glitch.gif', 'code-glitch.gif', 'design-glitch.gif'];
-  preloadImages(dir3, images3);
-});
+//   var images1 = ['profile-picture.jpeg']
+//   preloadImages(dir1, images1);
+//   var images2 = ['mlcat.jpg', 'irclogparser.jpg', 'superglue.jpg', 'healthcare-analytics.jpg', 'presenceid.jpg', 'dbms.jpg'];
+//   preloadImages(dir2, images2);
+//   var images3 = ['words-glitch.gif', 'code-glitch.gif', 'design-glitch.gif'];
+//   preloadImages(dir3, images3);
+// });
 
 // Horizontal header parallax
 $(window).on("load resize scroll", function() {

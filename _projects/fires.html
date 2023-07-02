@@ -2,6 +2,7 @@
 project-id: 3
 title: Elevator buildings in New York at highest risk of structural fires
 type: data storytelling, data visualization
+tag: journalism
 
 date: 1000-01-03
 img: violations-map.png
@@ -21,30 +22,13 @@ description: Nearly 85% of all elevator buildings in Brooklyn have been served o
 	{% include nav.html %}
 
 	<!-- Project details section -->
-	<section id="projectDetails" class="fires" data-nosnippet>
+	<section id="projectDetails" class="fires article" data-nosnippet>
 		<div class="mt10"></div>
 		<div class="container" style="justify-content: center;">
 			<div class="col text-center">
 				<h1 class="project-title">{{ page.title }}</h1>
 			</div> 
 			<div class="row" id="content-row">
-				<div id="overview" class="mt5">
-					<p>
-						The terrible onslaught of fires in New York on Thanksgiving weekend caught my attention. Since the city's database is open and extensively recorded, I was able to look for trends and factors that might explain where or why these fires occur. I was itching to make a mapping visualization and obtained census data to that effect.
-					</p>
-					<br><br>
-					<p> <span class="bold">Project Type: </span>{{ page.type }}</p>
-					<p> <span class="bold">Role: </span>data storytelling, data visualization</p>
-					<p> <span class="bold">Tools: </span>Python(Jupyter) for data, Illustrator and Plotly for graphics</p>
-					<p> <span class="bold">Date: </span>December 2022</p>
-					<p><span class="bold">Sources:</span>
-						<a href="https://data.cityofnewyork.us/" target="_blank">
-						NYC Open Data</a>,
-						<a href="https://www.atsdr.cdc.gov/placeandhealth/svi/" target="_blank">
-						CDC/ATSDR census data</a></p>
-						<hr/>
-					</div>
-
 					<div id="intro" class="mt5">
 						<p>
 							Nearly 85% of all elevator buildings in Brooklyn have been served one or more notices of violation related to fire codes by the city's Department of Housing Preservation and Development (HPD) in the past four years. These include an 80-unit building with 135 violation orders (24 of which are open) and 26 buildings on Ridge Boulevard in Brooklyn, where a woman was 
@@ -96,10 +80,28 @@ description: Nearly 85% of all elevator buildings in Brooklyn have been served o
 						<p>What about the owner/builder? </p> -->
 						<!-- <p>How many structural fire-related incidents have occurred in these locations in the past 5 years, and when?</p> -->
 						<!-- <p class="small">new map of all incidents (=alarm box locations; what if not?) laid on top of buildings (split by borough?). mention datetime on hover</p> -->
-					</div>
+					
+					
 				</div>
-			</section>
-
-			{% include footer.html %}
-		</body>
-		</html>
+				<div id="overview" class="mt5">
+					<hr/>
+					<p style="font-style: italic;">
+						The terrible onslaught of fires in New York on Thanksgiving weekend caught my attention. Since the city's database is open and extensively recorded, I was able to look for trends and factors that might explain where or why these fires occur. I was itching to make a mapping visualization and obtained census data to that effect.
+					</p>
+					<br><br>
+					<p> <span class="bold">Project Type: </span>{{ page.type }}</p>
+					<p> <span class="bold">Role: </span>data storytelling, data visualization</p>
+					<p> <span class="bold">Tools: </span>Python(Jupyter) for data, Illustrator and Plotly for graphics</p>
+					<p> <span class="bold">Date: </span>December 2022</p>
+					<p><span class="bold">Sources:</span>
+						<a href="https://data.cityofnewyork.us/" target="_blank">
+						NYC Open Data</a>,
+						<a href="https://www.atsdr.cdc.gov/placeandhealth/svi/" target="_blank">
+						CDC/ATSDR census data</a></p>
+					<br><br>
+				</div>
+			</div>
+		</section>
+		{% include footer.html %}
+	</body>
+</html>

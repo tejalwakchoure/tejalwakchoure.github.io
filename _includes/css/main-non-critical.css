@@ -375,13 +375,46 @@ section.broadway {
   max-width: 100%;
   border-top: 0.5px solid #848484;
 }
-.coup .project-title {
+.arctic p,
+.arctic li {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  letter-spacing: 0.02rem;
+  color: #f2f2f2;
+}
+.arctic h5 {
+  text-transform: none;
+  margin-bottom: 0.5rem !important;
+}
+.arctic a {
+  text-decoration: underline;
+  text-decoration-style: dotted;
+  color:  #f2f2f2;
+}
+.arctic a:hover,
+.arctic a:focus,
+.arctic a:active {
+  color:  #f2f2f2 !important;
+}
+
+
+.dark-mode .project-title,
+.med-dark-mode .project-title {
   color: white !important;
 }
 .dark-mode,
-.coup {
-  background: black !important;
+.med-dark-mode,
+.coup,
+.arctic {
   color: white !important;
+}
+.dark-mode {
+  background: black !important;
+}
+.med-dark-mode {
+  background: #212121 !important;
+}
+.arctic .otherinfo {
+  color: #C8C8C8 !important;
 }
 .coup a {
   color: #ffc822 !important;

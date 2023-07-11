@@ -1,13 +1,12 @@
 ---
 project-id: 5
-title: Global Iodine Levels May Be Highest Ever By 2050, Ozone Layer Directly Affected
-type: data journalism
+title: Global iodine levels set to reach record high by 2050, threaten ozone layer
 tag: journalism
 
 date: 1000-01-09
-img: iodine and ozone placeholder.png
-alt: 
-description: 
+img: grid-image.png
+alt: area chart showing iodine levels rising over time
+description: The amount of iodine in the atmosphere has tripled between 1950 and 2010.
 ---
 
 
@@ -16,7 +15,7 @@ description:
 <head>
 	{% include head.html %}
 	{% include js.html %}
-	<script defer src="../js/coup.js"></script>
+	<script src="https://cdn.plot.ly/plotly-2.16.1.min.js"></script> 
 	{% include stylesheets.html %}
 </head>
 
@@ -36,102 +35,103 @@ description:
 			<div class="row" id="content-row">
 				<div id="intro" class="mt5">
 					<p>
-						The amount of iodine in the atmosphere has <a href="">tripled</a> between 1950 and 2010.		
+						The amount of iodine in the atmosphere has <a href="https://www.nature.com/articles/s41467-018-03756-1" target="_blank">tripled between 1950 and 2010</a>, according to studies by the National Center for Atmospheric Research.
 					</p>
 					
-					
-					<p class="mt5 otherinfo">
-						// insert 1950-2010 iodine levels chart //						
-					</p>
-					
-					<!-- <h5 class="takeaway mt5">Nearly half of all college-educated broadway stars come from these 5 schools</h5> 
-						<h5 class="otherinfo">Schools that actors obtained their highest qualifications from</h5>
-						<img src="../assets/img/portfolio/arctic/iodine and ozone placeholder.png"  style="width: 100%; margin-bottom: 50px; object-fit: contain; margin: auto;" alt=""/>
-						<p class="otherinfo">Source: </p> -->
-					</div>
-					
-					
-					
-					<div id="" class="mt5">
-						<p>
-							Oceans and human iodine emissions are the largest contributors to atmospheric ozone. The Arctic sea ice extent has been <a href="">shrinking by 12.6%</a> every ten years since 1979.  Underwater plankton and algae directly emit organic iodine. And when waves break on the shore? Sea sprays are hotbeds for gaseous iodine to be released into the atmosphere.
-							<br><br>
-							Since the mid-20th century, human emissions have also increased levels dramatically. While it is difficult to measure iodine levels in the stratosphere, scientists believe that current levels are already at <a href="">2-5 times the expected upper limit</a>. 
-							
-						</p>
-						<!-- </div> -->
-						<p class="mt5 otherinfo">
-							// possibly insert relevant image/graphic //						
-						</p>
-						
-						<!-- <div id="" class="mt5"> -->
-							<p>
-								<br><br>
-								Iodine is well-documented in its ability to destroy ozone. Until recently, it was regarded as a useful tool to weaken the ozone closest to the earth's surface (tropospheric ozone), which is a key component of smog. The problem is that "<a href="">what goes on in the troposphere doesn't stay in the troposphere</a>", which means some of this iodine escapes up to the 'good' ozone (stratospheric ozone, which forms the ozone layer). A 2015 experiment showed that iodine processes could account for <a href="">nearly 30% of the ozone loss</a> in the lower stratosphere. Iodine also increases the lifetime of greenhouse gases like methane by gobbling up the free radicals that would have otherwise absorbed them.
-								
-							</p>
-							
-							<p class="mt5 otherinfo">
-								// insert iodine vs ozone effects chart //					
-							</p>
-							
-							<!-- <h5 class="takeaway mt5">Nearly half of all college-educated broadway stars come from these 5 schools</h5> 
-								<h5 class="otherinfo">Schools that actors obtained their highest qualifications from</h5>
-								<img src="../assets/img/portfolio/arctic/iodine and ozone placeholder.png"  style="width: 100%; margin-bottom: 50px; object-fit: contain; margin: auto;" alt=""/>
-								<p class="otherinfo">Source: </p> -->
-							</div>
-							
-							
-							<div id="" class="mt5">
-								<p>
-									Even as the ozone layer shows signs of recovery in the upper stratosphere, ozone in the lower stratosphere continues to decline. This is despite the success of the 2016 <a href="">Montreal Pact</a> when 118 countries pledged to crack down on ozone-depleting gases. Iodine levels were so low at the time that they were not considered for regulation.
-									
-									
-									<br><br>
-									Researchers identified two key measurements that preceded the highest-ever iodine levels, 130,000 years ago. 
-								</p>
-								<br>
-								<ol>
-									<li>
-										The northern Atlantic Ocean had a surface temperature of 16°C. That is only 2°C greater than its temperature in 2022. The global temperature is projected to rise 3-4°C by 2100.
-									</li>
-									<br>
-									<li>
-										The Arctic region had "almost ice-free summers". Ice-free Arctic summers are <a href="">predicted by 2050</a>. 
-										
-									</li>
-								</ol>
-								<br><br>
-								<p>
-									In previous warm periods, inorganic iodine emissions due to external influences were considered negligible. Now that human emissions have tripled that component, inorganic iodine accounts for approximately 75% of the total iodine in the atmosphere. These emissions are expected to increase throughout the 21st century. Left unmitigated, the planet's iodine levels could soon surpass all recorded measurements.
-								</p>
-							</div>
-							
-						</div>
-						
-						<div id="overview" class="mt5">
-							<p class="otherinfo" style="margin-bottom: 20px;">Methodology</p>
-							<p class="otherinfo">
-								// TBD //
-							</p>
-							<hr/>
-							<p style="font-style: italic;">
-								Data journalism project for the <a href="https://ledeprogram.com/" target="_blank"> Lede Program at Columbia</a>.
-							</p>
-							<br><br>
-							<p> <span class="bold">Project Type: </span>{{ page.type }}</p>
-							<p> <span class="bold">Role: </span>data collection, data analysis, data visualization</p>
-							<p> <span class="bold">Tools: </span>Python(Jupyter) for scraping and analysis, Datawrapper and Figma for graphics</p>
-							<p> <span class="bold">Date: </span>July 2023</p>
-							<p><span class="bold">Sources:</span> // TBD //</p>
-							<p> <span class="bold">Code: </span>
-								<a href="" target="_blank"> // TBD //</a>
-							</p>
-							<br><br>
-						</div>
-					</div>
-				</section>
+					<h5 class="takeaway mt5">A dramatic rise</h5> 
+					<h5 class="otherinfo">Iodine levels measured in Arctic ice, 1950-2010</h5>
+					<img src="../assets/img/portfolio/iodine-ozone/iodine-tripled.svg"  style="width: 100%; padding: 50px 0; object-fit: contain; margin: auto;" alt=""/>	
+					<h5 class="otherinfo">Source: 
+						<a href="https://www.nature.com/articles/s41467-018-03756-1" target="_blank" style="color: #C8C8C8 !important">Rapid increase in atmospheric iodine levels in the North Atlantic since the mid-20th century
+						</a>
+					</h5>
+				</div>
 				
-				{% include footer.html dark_mode='med-dark-mode' %}
-			</body>
-			</html>
+				<!-- <p class="mt5 otherinfo">
+					// possibly insert relevant image/graphic //						
+				</p> -->
+				
+				<p class="mt5">
+					Iodine is well-documented in its ability to destroy ozone. Until recently, it was regarded as a useful tool to weaken the ozone closest to the earth's surface (tropospheric ozone), which is a key component of smog. The problem is that what goes on in the troposphere doesn't stay in the troposphere, which means some of this iodine escapes up to the 'good' ozone (stratospheric ozone, which forms the ozone layer). A 2020 experiment at the University of Colorado Boulder showed that iodine processes could account for <a href="https://www.pnas.org/doi/full/10.1073/pnas.1916828117" target="_blank">over 30% of the ozone loss</a> in the lower stratosphere. Iodine also increases the lifetime of greenhouse gases like methane by gobbling up the free radicals that would have otherwise absorbed them.
+				</p>
+				
+				<!-- // insert iodine vs ozone effects chart //	 -->
+				<h5 class="takeaway mt5">Springtime Antarctic ozone levels decrease by up to 11% with the addition of iodine</h5> 
+				<h5 class="otherinfo" style="padding-bottom: 75px;">Simulated average annual Antarctic ozone levels from 1980 to 2015, in parts per billion</h5>
+				<div class="large-heatmaps">
+					<h5 class="otherinfo" style="padding-bottom: 10px; color: #f2f2f2 !important; text-align: center;">Ozone levels without iodine</h5>
+					{% include heatmap_no_iodine.html %}
+					<h5 class="otherinfo" style="padding-bottom: 10px; color: #f2f2f2 !important;padding-top: 75px; text-align: center;">Ozone levels with iodine</h5>
+					{% include heatmap_with_iodine.html %}
+				</div>
+				<div class="small-heatmaps">
+					<h5 class="otherinfo" style="padding-bottom: 10px; color: #f2f2f2 !important; text-align: center;">Ozone levels without iodine</h5>
+					{% include heatmap_no_iodine_small_device.html %}
+					<h5 class="otherinfo" style="padding-bottom: 10px; color: #f2f2f2 !important;padding-top: 75px; text-align: center;">Ozone levels with iodine</h5>
+					{% include heatmap_with_iodine_small_device.html %}
+				</div>
+
+				
+				<h5 class="otherinfo" style="padding-top: 50px;">Source: 
+					<a href="https://www.pnas.org/doi/full/10.1073/pnas.2110864119" target="_blank" style="color: #C8C8C8 !important">The influence of iodine on the Antarctic stratospheric ozone hole
+					</a>
+				</h5>
+				
+				<p class="mt5">
+					
+					Even as the ozone layer shows signs of recovery in the upper stratosphere, ozone in the lower stratosphere <a href="https://www.pnas.org/doi/full/10.1073/pnas.1916828117" target="_blank">continues to decline</a>. This is despite the success of the 2016 <a href="https://www.unep.org/ozonaction/who-we-are/about-montreal-protocol" target="_blank">Montreal Protocol</a> – iodine levels were so low at the time that they were not considered for regulation. Scientists at the Spanish National Research Council (CSIC) now believe that iodine emissions are <a href="https://agupubs.onlinelibrary.wiley.com/doi/10.1002/2015GL064796" target="_blank">one of the largest contributors</a> to atmospheric ozone depletion. 
+					<br><br>
+					
+					The main sources of iodine are marine life and human emissions. NASA has found that Arctic sea ice extent has been <a href="https://climate.nasa.gov/vital-signs/arctic-sea-ice/" target="_blank">shrinking by 12.6%</a> every ten years since 1979. With this increased sea surface area, the number of underwater plankton and algae that emit organic iodine had been increasing as well. And when large waves break on the shore? Sea sprays are hotbeds for this iodine to be released into the atmosphere.
+					<br><br>
+					
+					<!-- Since the mid-20th century, human emissions have also contributed to the dramatic rise in these levels. While it is difficult to measure iodine directly in the stratosphere, the CSIC study estimates that current levels are already at <a href="https://agupubs.onlinelibrary.wiley.com/doi/10.1002/2015GL064796" target="_blank">2-5 times the expected upper limit</a>.  -->
+					
+					
+					<a href="https://www.nature.com/articles/s41467-021-27642-5" target="_blank">A 2022 study at CSIC</a> identified two key measurements that preceded the highest-ever iodine levels 130,000 years ago:
+				</p>
+				<br>
+				<ol>
+					<li>
+						<em>The northern Atlantic Ocean had a surface temperature of 16°C</em>. <br>That is only 2°C greater than its average temperature in 2022, and it is projected to rise by 3-4°C by 2100.
+					</li>
+					<br>
+					<li>
+						<em>The Arctic region had "almost ice-free summers"</em>. <br>The European Space Agency predicts <a href="https://climate.esa.int/en/projects/sea-ice/news-and-events/news/simulations-suggest-ice-free-arctic-summers-2050/" target="_blank">ice-free Arctic summers by 2050</a>. 
+						
+					</li>
+				</ol>
+				<br>
+				<p>
+					On top of that, non-oceanic (inorganic) iodine levels were negligible 130,000 years ago. Inorganic iodine now accounts for  <a href="https://acp.copernicus.org/articles/15/583/2015/" target="_blank">approximately 75% of the total iodine</a> in the atmosphere due to the significant rise in human emissions. Left unmitigated, the planet's iodine levels could soon surpass all recorded measurements.
+				</p>
+			</div>
+			
+			<div id="overview" class="mt5">
+				<p class="otherinfo" style="margin-bottom: 20px;">Methodology</p>
+				<p class="otherinfo">
+					Data is from the supplementary sections of these two papers: <a href="https://www.nature.com/articles/s41467-018-03756-1" target="_blank" style="color: #C8C8C8 !important">Rapid increase in atmospheric iodine levels in the North Atlantic since the mid-20th century</a> and <a href="https://www.pnas.org/doi/full/10.1073/pnas.2110864119" target="_blank" style="color: #C8C8C8 !important">The influence of iodine on the Antarctic stratospheric ozone hole</a>. Validated and examined in Jupyter notebook. Plotted the heatmaps using <a href="https://github.com/brunorosilva/plotly-calplot" target="_blank" style="color: #C8C8C8 !important">plotly-calplot</a> in Python. Plotted the area chart using Rawgraphs and polished it in Figma.
+				</p>
+				<hr/>
+				<p style="font-style: italic;">
+					Data journalism project for the <a href="https://ledeprogram.com/" target="_blank"> Lede Program at Columbia</a>.
+				</p>
+				<br><br>
+				<p> <span class="bold">Project Type: </span>{{ page.type }}</p>
+				<p> <span class="bold">Role: </span>data collection, data analysis, data visualization</p>
+				<p> <span class="bold">Tools: </span>Python(Jupyter) for scraping and analysis. Plotly, Rawgraphs, and Figma for graphics</p>
+				<p> <span class="bold">Date: </span>July 2023</p>
+				<p><span class="bold">Sources:</span> 
+					<a href="https://www.nature.com/articles/s41467-018-03756-1" target="_blank">Rapid increase in atmospheric iodine levels in the North Atlantic since the mid-20th century</a>, <a href="https://www.pnas.org/doi/full/10.1073/pnas.2110864119" target="_blank">The influence of iodine on the Antarctic stratospheric ozone hole</a>
+				</p>
+				<p> <span class="bold">Code: </span>
+					<a href="https://github.com/tejalwakchoure/iodine-ozone" target="_blank">GitHub</a>
+				</p>
+				<br><br>
+			</div>
+		</div>
+	</section>
+	
+	{% include footer.html dark_mode='med-dark-mode' %}
+</body>
+</html>

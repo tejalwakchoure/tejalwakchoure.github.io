@@ -1027,6 +1027,9 @@ a.coloured_hover:focus {
             font-size: 1.25rem;
             font-weight: normal;
         }
+        section {   
+            padding: 2%;
+        }
         #about img {
             height: 200px;
             width: 60vw;

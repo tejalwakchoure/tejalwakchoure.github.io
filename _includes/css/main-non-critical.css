@@ -78,6 +78,9 @@ section.broadway {
   padding: 10%; 
   object-fit: contain;
 }
+.arctic .js-plotly-plot .plotly .main-svg {
+  width: 100%;
+}
 
 #projectDetails .otherinfo {
   font-size: 1.05rem !important; /* 0.9rem; */
@@ -135,7 +138,7 @@ section.broadway {
 }
 .article #content-row p,
 .article #content-row li {
-  font-size: 1.25rem;
+  /* font-size: 1.25rem; */
   line-height: 1.6;
   /* margin-left: auto;
   margin-right: auto; */
@@ -379,7 +382,7 @@ section.broadway {
 .arctic p,
 .arctic li {
   font-family: Georgia, 'Times New Roman', Times, serif;
-  letter-spacing: 0.02rem;
+  letter-spacing: 0.01rem;
   color: #f2f2f2;
 }
 .arctic h5 {
@@ -397,6 +400,15 @@ section.broadway {
   color:  #f2f2f2 !important;
 }
 
+.arctic .large-heatmaps {
+  flex-direction: column;
+  align-items: center;
+}
+.arctic .small-heatmaps {
+  flex-direction: column;
+  align-items: center;
+  display: none !important;
+}
 
 .dark-mode .project-title,
 .med-dark-mode .project-title {
@@ -942,7 +954,6 @@ section.broadway {
   .fires .plotly-map-container .svg-container {
     width: 100% !important;
   }
-  
   #coup-l,
   #coup-m {
     display: none;
@@ -950,6 +961,13 @@ section.broadway {
   #coup-s {
     display: block;
   }
+  .arctic .large-heatmaps {
+    display: none !important;
+  }
+  .arctic .small-heatmaps {
+    display: flex !important;
+  }
+  
 }
 
 #portfolio .overlay-link {

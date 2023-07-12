@@ -404,6 +404,11 @@ section.broadway {
   flex-direction: column;
   align-items: center;
 }
+.arctic .med-heatmaps {
+  flex-direction: column;
+  align-items: center;
+  display: none !important;
+}
 .arctic .small-heatmaps {
   flex-direction: column;
   align-items: center;
@@ -438,6 +443,7 @@ section.broadway {
   color: #d69b00 !important;
 }
 
+.arctic .plotly-graph-div,
 .coup .plotly-graph-div {
   margin: auto;
 }
@@ -877,6 +883,15 @@ section.broadway {
   #fire-l {
     display: none;
   }
+  .arctic .large-heatmaps {
+    display: none !important;
+  }
+  .arctic .med-heatmaps {
+    display: flex !important;
+  }
+  .arctic .small-heatmaps {
+    display: none !important;
+  }
 }
 
 
@@ -962,6 +977,9 @@ section.broadway {
     display: block;
   }
   .arctic .large-heatmaps {
+    display: none !important;
+  }
+  .arctic .med-heatmaps {
     display: none !important;
   }
   .arctic .small-heatmaps {

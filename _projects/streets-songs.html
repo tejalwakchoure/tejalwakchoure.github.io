@@ -1,0 +1,227 @@
+---
+project-id: 6
+title: New York, New York
+type: data storytelling, mapping, game development
+tag: journalism
+
+date: 1000-01-10
+img: grid-image.gif
+alt: Taylor Swift
+description: Streets of NY referenced in songs
+---
+
+
+<!doctype html>
+<html>
+<head>
+  {% include head.html %}
+  {% include js.html %}
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.8.5/d3.min.js"></script> -->
+  <!-- <script src="https://unpkg.com/scrollama"></script> -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mediaelement/4.2.7/mediaelement-and-player.min.js"></script>
+  <script defer src="../js/game.js"></script>
+  <script defer src="../js/words.js"></script>
+  <script defer src="../js/streets-songs.js"></script>
+  
+  {% include stylesheets.html %}
+</head>
+
+<body>
+  {% include nav.html coloured_back="transparent_back" %}
+  
+  
+  <section id="projectDetails" class="article songs" data-nosnippet>
+    <div style="justify-content: center;">
+      <div class="title-screen">
+        <div class="text">
+          <h1 style="    font-size: 2.5em;
+          ">{{ page.title }}</h1>
+          <p class="small">how do musicians look at the city?</p>
+          <a class="btn startbtn blinking" style="    margin-top: 50px;
+          ">START</a>
+        </div>
+      </div>
+      
+      <div class="intro-screen">
+        <div class="text-div">
+          <p>
+            In 2019, travel company Celebrity Cruises <a href="https://www.celebritycruises.com/music-mapped/" target="_blank">analysed top-40 songs</a> since the 1960s to find the locations that inspired them. They found that the city of New York has inspired over 160 songs, followed much farther by London at 102. And this analysis was done by searching the phrase 'New York' in the lyrics, without any mention of the boroughs or neighborhoods of the city.
+            <br><br>
+            Nothing demonstrates this better than 2009's 'Empire State of Mind', which has been called the <a href="https://web.archive.org/web/20180813175234/http://theboombox.com/empire-state-of-mind-replaces-new-york-at-race-track/" target="_blank">"quintessential 21st century theme song for New York City" by the  New York Racing Association.</a>
+          </p>
+          <div class="img-div" style="text-align: center;
+          max-width: 400px;
+          margin: auto;">
+          <img src="../assets/img/portfolio/streets-songs/empirestate.svg" 
+          height="200"
+          width="200"
+          />
+          <p class="otherinfo" style="font-size: 0.8rem !important; color: #595959;">I walked the Brooklyn Bridge last month, and I do not exaggerate when I say that this song was blasting every 200 feet.</p>
+        </div>
+      </p>
+    </div>
+    <a class="btn intronextbtn">
+      <i class="fa-solid fa-2x fa-forward"></i>
+    </a>
+  </div>
+  
+  <div class="game-intro-screen">
+    <div class="text-div" style="    width: 100%;
+    max-width: 100%;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 3%;
+    flex-direction: row;
+    ">
+    
+    <div class="img-div" style="    
+    display: flex;
+    height: 100%;
+    width: 45%;">
+    <img src="../assets/img/portfolio/streets-songs/original-analysis.svg" 
+    style="height: auto;
+    width: 100%;"
+    />
+  </div>
+  <p style="    width: 350px;
+  ">
+  This begs the question: what is it about New York that makes it so inspiring?
+  <br><br>
+  I analysed 15 songs based on places in the city. Most of these focused on memories associated with a particular place. The two other common stories that these songs explored were starting from the bottom and "making it" in the city, and ruminations on life as a New Yorker.
+  <br><br>
+  Let's explore!
+  </p>
+</div>
+<a class="btn gameintronextbtn">
+  <i class="fa-solid fa-2x fa-forward"></i>
+</a>
+</div>
+
+<div class="map-screen">
+  <div class="mapinfo">
+    Click any icon on the map to open a mini game
+    <a id="howtobtn" class="btn">how to play</a>
+    <div id="howto" class="modal">
+      <div class="modal-content">
+        <p class="bold">How to Play</p>
+        <p class="small">
+          This game is played like Wordle. Type your guesses in!
+          <br><br>
+          Grey coloring indicates that the letter is not present in the answer.
+          <br>
+          Light pink indicates that the letter is present in the answer but not at the right position.
+          <br>
+          Hot pink indicates that the letter is present in the answer at the right position.
+          <br><br>
+          The objective of this game is to guess the entire name before you run out of guesses. The good news is that your guesses do not have to be real words!
+        </p>
+      </div>
+    </div>
+  </div>
+  
+  {% include ai2html-song-map.html %}
+</div>  
+
+<div class="game-screen" style="display: flex;
+flex-direction: row;     justify-content: flex-end;
+">
+<audio style="width: 100%;" class="fc-media previewAudio" id="myTunePreview"> <source class="previewAudioSrc" src="" type="audio/mp3"/> </audio>
+<div style="display: flex;
+flex-direction: column;
+width: fit-content;
+flex-grow: 1;
+">
+<div class="content">
+  <p class="bold">
+    Can you guess the place that 
+    <span class="songpreview">
+      <a class="btn previewbtn" data-toggle="tooltip" title="Preview">
+        <i id="stateicon" class="fa fa-play previewicon"></i>
+      </a> 
+      this song</span>
+      is named after?
+    </p>
+    <!-- <p>// inset map //</p> -->
+    <input type="text" class="typing-input" maxlength="1">
+    <div class="inputs container" id=""></div>
+  </div>
+  <div class-="backdiv">
+    <a class="btn backbtn">
+      <p>back to map</p>
+      <img src="../assets/img/portfolio/streets-songs/vinyl.svg" />
+      <!-- <i class="fa fa-chevron-double-left"></i> -->
+    </a>
+  </div>
+</div>
+<div style="display: flex;
+flex-direction: column;
+justify-content: center;
+width: fit-content;">
+<div class-="resultsdiv">
+  <a class="btn gamenextbtn" style="transform: rotate(270deg);">
+    <i class="fa-solid fa-forward" style="transform: rotate(90deg);"></i>
+    <p style="margin: 0; font-size: 0.7rem; color: gray;">answer</p>
+    
+    <!-- <i class="fa fa-chevron-double-left"></i> -->
+  </a>
+</div>
+</div>
+<!-- <div class="results"></div> -->
+
+<!-- <div class="textcol col">
+  <p class="small">
+    I don't believe you! I want to hear 5 secs of this “song”!
+  </p>
+</div> -->
+</div>
+
+<div class="breakdown-screen" style="    justify-content: flex-start;
+">
+  
+  <div class="breakdown-textdiv">
+    <!-- <div></div> -->
+    <!-- <p></p> -->
+  </div>
+  
+  
+  <div class="backdiv">
+    <a class="btn backbtn" onclick="goBack()">
+      <p>back to map</p>
+      <img src="../assets/img/portfolio/streets-songs/vinyl.svg" />
+      <!-- <i class="fa fa-chevron-double-left"></i> -->
+    </a>
+  </div>
+</div>
+
+
+
+<a id="methodologybtn" class="btn">more info</a>
+<div id="methodology" class="modal">
+  <div class="modal-content">
+    <p class="bold">Methodology</p>
+    <p class="small">
+      Collected street names and public spaces (parks, neighborhoods) from NYC Open Data. Searched for these using Spotify's API to get a list of songs whose names matched. After manual analysis to confirm that these are actually places in NY (ex. there are multiple Mulberry Streets across the country), picked the most popular songs and plotted them on a map in geoJSON, moved the coordinates to Datawrapper, and finished the map using Illustrator/ai2html.
+      <br><br>
+      For the game itself, used Javascript to build on the core game <a href="https://github.com/ozboware/wordled" target="_blank">'Wordled'</a>. Audio was embedded in HTML elements and played using the autoplay feature.
+    </p>
+    <hr/>
+    <p style="font-style: italic;" class="small">
+      Data journalism project for the <a href="https://ledeprogram.com/" target="_blank"> Lede Program at Columbia</a>.
+    </p>
+    <br><br>
+    <p class="small"> <span class="bold">Project Type: </span>{{ page.type }}</p>
+    <p class="small"> <span class="bold">Role: </span>data analysis, mapping, data visualization, game development</p>
+    <p class="small"> <span class="bold">Tools: </span>Python(Jupyter) for API calls and analysis. GeoJSON, Datawrapper, Illustrator/ai2html, and Figma for graphics</p>
+    <p class="small"> <span class="bold">Date: </span>August 2023</p>
+    <p class="small"><span class="bold">Sources:</span> 
+      Spotify API,
+      <a href="https://data.cityofnewyork.us/" target="_blank">NYC Open Data</a>
+    </p>
+  </div>
+</div>
+
+
+</div>
+</section>
+</body>
+</html>

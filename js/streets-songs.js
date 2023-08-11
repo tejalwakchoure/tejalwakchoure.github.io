@@ -72,28 +72,31 @@ $(".breakdown-screen").css("display", "none");
 
 
 document.querySelector(".startbtn").addEventListener("click", ()=> {
-    // $(".title-screen").addClass("mr-full");
-    // $('.map-screen').removeClass("ml-full");
-    $(".title-screen").fadeOut();
-    $(".intro-screen").fadeIn();    
+    $('.title-screen:visible').fadeOut(500, function() {
+        $('.intro-screen').fadeIn(500);
+    });
 });
 
 document.querySelector(".intronextbtn").addEventListener("click", ()=> {
-    $(".intro-screen").fadeOut();
-    $(".game-intro-screen").fadeIn();    
+    $('.intro-screen:visible').fadeOut(500, function() {
+        $('.game-intro-screen').fadeIn(500);
+    });    
 });
 
 document.querySelector(".gameintronextbtn").addEventListener("click", ()=> {
-    $(".game-intro-screen").fadeOut();
-    $(".map-screen").fadeIn();    
+    $('.game-intro-screen:visible').fadeOut(500, function() {
+        $('.map-screen').fadeIn(500);
+    });
 });
 
 document.querySelector("g #Cornelia_Street").addEventListener("click", ()=> {
-// $( document ).ready(function() {
+    // $( document ).ready(function() {
     // $(".map-screen").addClass("mt-full");
     // $('.game-screen').removeClass("mb-full");
-    $(".map-screen").fadeOut();
-    $(".game-screen").fadeIn();
+    
+    $('.map-screen:visible').fadeOut(500, function() {
+        $('.game-screen').fadeIn(500);
+    });
     
     $(".game-screen .inputs").attr('id', 'cornelia_street');
     $(".game-screen .previewbtn").attr('id', 'cornelia_street');
@@ -105,8 +108,9 @@ document.querySelector("g #Cornelia_Street").addEventListener("click", ()=> {
 
 
 document.querySelector("g #Brooklyn").addEventListener("click", ()=> {
-    $(".map-screen").fadeOut();
-    $(".game-screen").fadeIn();
+    $('.map-screen:visible').fadeOut(500, function() {
+        $('.game-screen').fadeIn(500);
+    });
     
     $(".game-screen .inputs").attr('id', 'brooklyn');
     $(".game-screen .previewbtn").attr('id', 'brooklyn');
@@ -117,11 +121,16 @@ document.querySelector("g #Brooklyn").addEventListener("click", ()=> {
 });
 
 function goBack() {
-    // $(".game-screen").addClass("mb-full");
-    // $('.map-screen').removeClass("mt-full");
-    $(".game-screen").fadeOut();
-    $(".breakdown-screen").fadeOut();
-    $(".map-screen").fadeIn();
+    $('.game-screen:visible').fadeOut(500, function() {
+        $('.map-screen').fadeIn(500);
+    });
+    $('.breakdown-screen:visible').fadeOut(500, function() {
+        $('.map-screen').fadeIn(500);
+    });
+    
+    // $(".game-screen").fadeOut();
+    // $(".breakdown-screen").fadeOut();
+    // $(".map-screen").fadeIn();
     
     var audio = document.getElementById("myTunePreview");
     if (!audio.paused) {audio.pause();}

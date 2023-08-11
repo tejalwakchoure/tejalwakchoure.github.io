@@ -13,6 +13,10 @@ function makeLayout() {
     // let ranItem = wordList[Math.floor(Math.random() * wordList.length)];
     word = document.querySelector(".inputs").id.toLowerCase();
     answerid = word;
+    guessnum = 0;
+    letternum = 0;
+    // letters = [];
+    // letterSpaces = [];
     
     let spaceindex = word.indexOf('_') - 1;
     word = word.replace('_', '');
@@ -38,7 +42,6 @@ function makeLayout() {
     }
     html += `</div>`;
     inputs.innerHTML = html;
-    
     
     $(".mejs__button .mejs__playpause-button .mejs__play button").click();
 }
@@ -110,6 +113,9 @@ function makeGuess(e) {
             checkGuess();            
         }, 0);
     }   
+
+    console.log("letternum", letternum);
+    console.log("guessnum", guessnum);
 }
 
 function handleDeletes(e) {
@@ -131,9 +137,14 @@ let guessnum = 0;
 
 function showAnswer() {
     // answerid = "cornelia_street"
-
-    $(".game-screen").fadeOut();
-    $(".breakdown-screen").fadeIn();
+    
+    // $(".game-screen").fadeOut();
+    // $(".breakdown-screen").fadeIn();
+    
+    $('.game-screen:visible').fadeOut(500, function() {
+        $('.breakdown-screen').fadeIn(500);
+    });
+    
     
     console.log(answerid);
     completedSongids.push(answerid);
@@ -142,23 +153,26 @@ function showAnswer() {
         // $(".cover-art img").attr('src', '../assets/img/portfolio/streets-songs/cornelia_street.png');
         // $(".breakdown-analysis img").attr('src', '../assets/img/portfolio/streets-songs/cornelia-analysis.svg');
         // $(".breakdown-textdiv p").innerHTML = "In this song, Swift writes about the moments shared with a loved one in an apartment she had rented on the Manhattan street. The location of this apartment is now popular among 'Swiftie' tourists."
-
+        
         let results = document.querySelector(".breakdown-textdiv");
-
+        
         let html = '<div class="results container"> <div class="row"> <h5 style="padding-bottom: 2%;">You got it!!</h5> </div> <div class="row"><p> In this song, Swift writes about the moments shared with a lover in an apartment she had rented on the Manhattan street. The location of this apartment is now popular with Swiftie tourists. </p> </div> <div class="row"> <div class="contain embed-player"> <div class="music-player"> <div class="cover"> <img src="../assets/img/portfolio/streets-songs/cornelia_street.png" alt=""> </div> <div class="titre"> <h4>Cornelia Street</h4> <p>Taylor Swift</p> </div> <a class="btn btn-default" data-toggle="tooltip" title="Preview" onclick="aud_play_pause_result()"><i id="stateicon" class="fa fa-pause songicon"></i></a> <div class="lecteur"> <audio style="width: 100%;" class="fc-media" autoplay="true" id="myTune"> <source src="../assets/img/portfolio/streets-songs/cornelia_street.mp3" type="audio/mp3"/> </audio> </div> </div> </div> <div class="breakdown-analysis" style="width: fit-content;height: fit-content;"><img src="../assets/img/portfolio/streets-songs/cornelia-analysis.svg" style="width: auto; height: 350px;"/></div></div> </div>';
         results.innerHTML = html;
-
-
+        
+        
         
     } else if (answerid === "brooklyn")
     {
         let results = document.querySelector(".breakdown-textdiv");
-
+        
         let html = '<div class="results container"> <div class="row"> <h5 style="padding-bottom: 2%;">You got it!!</h5> </div> <div class="row"><p> The Boys highlight their experiences while on tour now that they have made it big. The lyrics of this song describe all the events that make a tour exhausting, but also hype them up and push them to keep moving forward until they reach home base. </p> </div> <div class="row"> <div class="contain embed-player"> <div class="music-player"> <div class="cover"> <img src="../assets/img/portfolio/streets-songs/brooklyn.png" alt=""> </div> <div class="titre"> <h4>No Sleep Till Brooklyn</h4> <p>Beastie Boys</p> </div> <a class="btn btn-default" data-toggle="tooltip" title="Preview" onclick="aud_play_pause_result()"><i id="stateicon" class="fa fa-pause songicon"></i></a> <div class="lecteur"> <audio style="width: 100%;" class="fc-media" autoplay="true" id="myTune"> <source src="../assets/img/portfolio/streets-songs/brooklyn.mp3" type="audio/mp3"/> </audio> </div> </div> </div> <div class="breakdown-analysis" style="width: fit-content;height: fit-content;"><img src="../assets/img/portfolio/streets-songs/brooklyn-analysis.svg" style="width: auto; height: 350px;"/></div></div> </div>';
         results.innerHTML = html;
     } else {
-        $(".breakdown-screen").fadeOut();
-        $(".map-screen").fadeIn();
+        // $(".breakdown-screen").fadeOut();
+        // $(".map-screen").fadeIn();
+        $('.breakdown-screen:visible').fadeOut(500, function() {
+            $('.map-screen').fadeIn(500);
+        });
         // $(".breakdown-analysis img").attr('src', '../assets/img/portfolio/streets-songs/original-analysis.svg');
     }
     

@@ -1,0 +1,92 @@
+{
+  "cornelia_street": {
+    "title": "Cornelia Street",
+    "artist": "Taylor Swift",
+    "description": "Swift writes about the moments shared with a lover in an apartment she had rented on the Manhattan street. The location of this apartment is now popular with Swiftie tourists.",
+    "theme": "Memories and nostalgia"
+  },
+  "brooklyn": {
+    "title": "No Sleep Till Brooklyn",
+    "artist": "Beastie Boys",
+    "description": "The Boys highlight their experiences while on tour now that they have made it big. The lyrics of this song describe all the events that make a tour exhausting, but also hype them up and push them to keep moving forward until they reach home base.",
+    "theme": "Making it big"
+  },
+  "toms_diner": {
+    "title": "Tom's Diner",
+    "artist": "Suzanne Vega",
+    "description": "Vega writes this song as a tribute to Tom's Restaurant, a place she frequented while attending Barnard College. She attempts to capture the lives of patrons from the perspective of an outsider. In 2008, she wrote an <a href='https://archive.nytimes.com/opinionator.blogs.nytimes.com/2008/09/23/toms-essay/' target='_blank'>essay in The New York Times</a> about the story behind the song.",
+    "theme": "City life"
+  },
+  "harlem": {
+    "title": "Harlem Shake",
+    "artist": "Baauer",
+    "description": "Who doesn't know this viral track? Baauer came up with the beats while messing around on Soundcloud one night in his New York apartment. However, the 'Harlem Shake' is actually a dance move invented by a certain 'Al B' as a way to imitate drunk people on the streets of Harlem.",
+    "theme": "City life"
+  },
+  "washington_heights": {
+    "title": "In the Heights",
+    "artist": "Lin-Manuel Miranda",
+    "description": "Serving as the exposition for Miranda's Broadway show and film of the same name, this song emulates the vibrant Caribbean block of Washington Heights, the setting of the show. Usnavi, the protagonist, takes this audience through his story of coming from a poor, immigrant background with dreams of winning the lottery.",
+    "theme": "Making it big"
+  },
+  "spanish_harlem": {
+    "title": "Spanish Harlem",
+    "artist": "Aretha Franklin",
+    "description": "Franklin's cover of Ben E. King's original 1960 track takes us to the Latin area of Harlem ('Spanish' Harlem). The song evokes a romantic portrayal of this neighborhood, using the motif of a rose to symbolize the love and beauty that King experienced while living there.",
+    "theme": "Memories and nostalgia"
+  },
+  "central_park": {
+    "title": "Central Park Blues",
+    "artist": "Nina Simone",
+    "description": "This instrumental jazz piece does not have lyrics or a specific narrative like many of Simone's other songs. Fans believe that the title refers to the atmosphere of Central Park, which has long been a place for performance and music for New Yorkers and tourists alike.",
+    "theme": "City life"
+  },
+  "chelsea": {
+    "title": "Chelsea Morning",
+    "artist": "Joni Mitchell",
+    "description": "Mitchell paints a vivid and whimsical picture of the city, emphasizing the small, delightful moments of everyday life. The track is often seen as a reflection of the late 1960s and the counterculture movement, which emphasized the importance of love, peace, and a connection to nature.",
+    "theme": "City life"
+  },
+  "bleecker_street": {
+    "title": "Bleecker Street",
+    "artist": "Simon & Garfunkel",
+    "description": "Bleecker Street is an introspective song that captures the mood and ambiance of Greenwich Village, a neighborhood famous for its folk music and bohemian culture. Touching on memory and the passage of time, Simon & Garfunkel reflects on the changing nature of the city and life itself.",
+    "theme": "City life"
+  },
+  "mulberry_street": {
+    "title": "Big Man on Mulberry Street",
+    "artist": "Billy Joel",
+    "description": "Joel tells the story of a man who has dreams of being a 'somebody'. The big-Broadway-style production of the music complements the delusions the young narrator talks about to his audience.",
+    "theme": "Making it big"
+  },
+  "waverly_place": {
+    "title": "Wizards of Waverly Place",
+    "artist": "Selena Gomez",
+    "description": "Granted, this song has nothing to do with the street – but millennials will look at this one with nostalgia for the much-loved Disney show by the same name starring Selena Gomez. Gomez sings about the magical world of the show in this opening number that sets the tone for the series.",
+    "theme": "Memories and nostalgia"
+  },
+  "tompkins_square_park": {
+    "title": "Tompkins Square Park",
+    "artist": "Mumford and Sons",
+    "description": "Mumford and Sons don't explicitly describe the park itself but use it as a backdrop for a personal story. The singer speaks of love and loss around this park, as he reflects on a past relationship and the memories associated with it.",
+    "theme": "Memories and nostalgia"
+  },
+  "avenue_b": {
+    "title": "Avenue B",
+    "artist": "Iggy Pop",
+    "description": "Pop reflects on the season of his life when he lived on Avenue B. He describes the people around him, and the audience can sense his loneliness as he watches them go about their lives.",
+    "theme": "City life"
+  },
+  "coney_island": {
+    "title": "Coney Island",
+    "artist": "Taylor Swift",
+    "description": "Swift and Aaron Dessner (of The National) sing from the perspectives of two lovers reflecting on a past relationship. Coney Island symbolizes a place of joy as they reminisce about the good times they shared there, contrasted with the melancholy tone of the rest of the lyrics.",
+    "theme": "Memories and nostalgia"
+  },
+  "rockaway_beach": {
+    "title": "Rockaway Beach",
+    "artist": "The Ramones",
+    "description": "The Ramones celebrate the joys of spending time at Rockaway Beach and the simple pleasures of youth. This song has become an anthem for beachgoers in the summer, capturing the carefree spirit of the band and their love for New York City.",
+    "theme": "Making it big"
+  }
+}

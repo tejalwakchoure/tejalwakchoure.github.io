@@ -12,7 +12,7 @@ description: Streets of NY referenced in songs
 
 
 <!doctype html>
-<html>
+<html style="background-color: #ffc7f6;">
 <head>
   {% include head.html %}
   {% include js.html %}
@@ -26,7 +26,7 @@ description: Streets of NY referenced in songs
   {% include stylesheets.html %}
 </head>
 
-<body>
+<body style="background-color: #ffc7f6;">
   {% include nav.html coloured_back="transparent_back" %}
   
   
@@ -36,7 +36,7 @@ description: Streets of NY referenced in songs
         <div class="text">
           <h1 style="    font-size: 2.5em;
           ">{{ page.title }}</h1>
-          <p class="small">how do musicians look at the city?</p>
+          <p class="small">exploring the city through the eyes of musicians</p>
           <a class="btn startbtn blinking" style="    margin-top: 50px;
           ">START</a>
         </div>
@@ -51,7 +51,7 @@ description: Streets of NY referenced in songs
           </p>
           <div class="img-div" style="text-align: center;
           max-width: 400px;
-          margin: auto;">
+          margin: 10px auto;">
           <img src="../assets/img/portfolio/streets-songs/empirestate.svg" 
           height="200"
           width="200"
@@ -61,43 +61,61 @@ description: Streets of NY referenced in songs
       </p>
     </div>
     <a class="btn intronextbtn">
-      <i class="fa-solid fa-2x fa-forward"></i>
+      NEXT
     </a>
   </div>
   
-  <div class="game-intro-screen">
+  <div class="intro-2-screen">
     <div class="text-div" style="    width: 100%;
     max-width: 100%;
     align-items: center;
     justify-content: space-evenly;
     padding: 3%;
-    flex-direction: row;
     ">
-    
+    <p style="max-width: 600px;">
+      This begs the question: what is it about New York that makes it so inspiring?
+      <br><br>
+      I analyzed 15 songs based on places in the city. Most of these focused on memories associated with a particular place. The two other common stories that these songs explored were starting from the bottom and "making it" in the city, and ruminations on life as a New Yorker.
+    </p>
     <div class="img-div" style="    
     display: flex;
     height: 100%;
-    width: 45%;">
-    <img src="../assets/img/portfolio/streets-songs/original-analysis.svg" 
-    style="height: auto;
-    width: 100%;"
-    />
+    width: 100%;
+    max-width: 600px;
+    flex-direction: column;
+    align-items: center;">
+    <!-- <img src="../assets/img/portfolio/streets-songs/original-analysis.svg" 
+      style="height: auto;
+      width: 100%;"
+      /> -->
+      {% include train-org.html %}
+      <p class="otherinfo" style="font-size: 0.7rem !important; color: #595959;">(@pikisuperstar/Freepik)</p>
+    </div>
+    
   </div>
-  <p style="    width: 350px;
-  ">
-  This begs the question: what is it about New York that makes it so inspiring?
-  <br><br>
-  I analyzed 15 songs based on places in the city. Most of these focused on memories associated with a particular place. The two other common stories that these songs explored were starting from the bottom and "making it" in the city, and ruminations on life as a New Yorker.
-  <br><br>
-  Let's explore!
-  </p>
+  <a class="btn intro2nextbtn">
+    NEXT
+  </a>
 </div>
-<a class="btn gameintronextbtn">
-  <i class="fa-solid fa-2x fa-forward"></i>
+
+<div class="game-intro-screen">
+  <div class="text-div" style="    width: 100%;
+  max-width: 100%;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 3%;
+  ">
+  <p style="max-width: 600px; font-size: 1.4rem; text-align: center;">
+    Let's explore these songs through a geo-musical guessing game!
+  </p>    
+</div>
+<a class="btn gameintronextbtn blinking">
+  LET'S PLAY!
 </a>
 </div>
 
 <div class="map-screen">
+  <span id="scrollbtn" class="btn"><i class="fa fa-chevron-down"></i></span>
   <div class="mapinfo">
     Click any icon on the map to open a mini game
     <a id="howtobtn" class="btn">how to play</a>
@@ -122,49 +140,49 @@ description: Streets of NY referenced in songs
   {% include ai2html-song-map.html %}
 </div>  
 
-<div class="game-screen" style="display: flex;
-flex-direction: row;     justify-content: flex-end;
-">
-<audio style="width: 100%;" class="fc-media previewAudio" id="myTunePreview"> <source class="previewAudioSrc" src="" type="audio/mp3"/> </audio>
-<div style="display: flex;
-flex-direction: column;
-width: fit-content;
-flex-grow: 1;
-">
-<div class="content">
-  <p class="bold">
-    Can you guess the place that 
-    <span class="songpreview">
-      <a class="btn previewbtn" data-toggle="tooltip" title="Preview">
-        <i id="stateicon" class="fa fa-play previewicon"></i>
-      </a> 
-      this song</span>
-      is named after?
-    </p>
-    <!-- <p>// inset map //</p> -->
-    <input type="text" class="typing-input" maxlength="1">
-    <div class="inputs container" id=""></div>
+<div class="game-screen" style="display: flex; flex-direction: column; justify-content: space-between;">
+  <div class="row" style="justify-content: flex-end; padding-left: 6vw;">
+    <audio style="width: 100%;" class="fc-media previewAudio" id="myTunePreview"> <source class="previewAudioSrc" src="" type="audio/mp3"/> </audio>
+    <div style="display: flex;
+    flex-direction: column;
+    width: fit-content;
+    flex-grow: 1;
+    ">
+    <div class="content">
+      <p class="bold">
+        Can you guess the place that 
+        <span class="songpreview">
+          <a class="btn previewbtn" data-toggle="tooltip" title="Preview">
+            <i id="stateicon" class="fa fa-play previewicon"></i>
+          </a> 
+          this song</span>
+          is named after?
+        </p>
+        <!-- <p>// inset map //</p> -->
+        <input type="text" class="typing-input" maxlength="1">
+        <div class="inputs container" id=""></div>
+      </div>
+    </div>
+    <div style="display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: fit-content;">
+    <div class="resultsdiv">
+      <a class="btn gamenextbtn" style="transform: rotate(270deg);">
+        <i class="fa-solid fa-forward" style="transform: rotate(90deg);"></i>
+        <p style="margin: 0; font-size: 0.7rem; color: gray;">answer</p>
+      </a>
+    </div>
   </div>
-  <div class-="backdiv">
+</div>
+<div class="row">
+  <div class="backdiv">
     <a class="btn backbtn">
       <p>back to map</p>
       <img src="../assets/img/portfolio/streets-songs/vinyl.svg" />
       <!-- <i class="fa fa-chevron-double-left"></i> -->
     </a>
   </div>
-</div>
-<div style="display: flex;
-flex-direction: column;
-justify-content: center;
-width: fit-content;">
-<div class-="resultsdiv">
-  <a class="btn gamenextbtn" style="transform: rotate(270deg);">
-    <i class="fa-solid fa-forward" style="transform: rotate(90deg);"></i>
-    <p style="margin: 0; font-size: 0.7rem; color: gray;">answer</p>
-    
-    <!-- <i class="fa fa-chevron-double-left"></i> -->
-  </a>
-</div>
 </div>
 <!-- <div class="results"></div> -->
 
@@ -175,15 +193,31 @@ width: fit-content;">
 </div> -->
 </div>
 
-<div class="breakdown-screen" style="    justify-content: flex-start;
-">
+<div class="breakdown-screen" style="display: flex; flex-direction: column; justify-content: space-between;">
   
-  <div class="breakdown-textdiv">
-    <!-- <div></div> -->
-    <!-- <p></p> -->
+  <div style="display: flex;justify-content: flex-start; flex-direction: row; height: 100%; width: 100%; padding-left: 6vw;">
+    <div class="results container">
+      <div class="row" style="max-width: 600px;">
+        <div class="col breakdown-textdiv"></div>
+      </div>
+      <div class="row" style="
+      width: 100%;
+      height: 100%;
+      flex-grow: 1;
+      max-height: 50vh;
+      max-width: 85vh;
+      margin-top: 10px;">
+      <!-- <div class="col"> -->
+        {% include train-memories.html %}
+        {% include train-citylife.html %}
+        {% include train-makingit.html %}
+        <!-- </div> -->
+      </div>
+    </div>
+    <div style="display: flex;justify-content: center; flex-direction: column; align-items: flex-end; width: 30vw;">
+      <div class="breakdown-playerdiv" style="margin: auto;"></div>
+    </div>
   </div>
-  
-  
   <div class="backdiv">
     <a class="btn backbtn" onclick="goBack()">
       <p>back to map</p>
@@ -192,7 +226,6 @@ width: fit-content;">
     </a>
   </div>
 </div>
-
 
 
 <a id="methodologybtn" class="btn">more info</a>

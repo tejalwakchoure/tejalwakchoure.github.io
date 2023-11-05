@@ -65,6 +65,7 @@ window.onclick = function(event) {
 
 // $(".title-screen").css("display", "none"); 
 $(".intro-screen").css("display", "none"); 
+$(".intro-2-screen").css("display", "none"); 
 $(".game-intro-screen").css("display", "none"); 
 $(".map-screen").css("display", "none"); 
 $(".game-screen").css("display", "none"); 
@@ -72,60 +73,87 @@ $(".breakdown-screen").css("display", "none");
 
 
 document.querySelector(".startbtn").addEventListener("click", ()=> {
-    $('.title-screen:visible').fadeOut(500, function() {
-        $('.intro-screen').fadeIn(500);
+    $('.title-screen:visible').fadeOut('slow', function() {
+        $('.intro-screen').fadeIn('slow');
     });
 });
 
 document.querySelector(".intronextbtn").addEventListener("click", ()=> {
-    $('.intro-screen:visible').fadeOut(500, function() {
-        $('.game-intro-screen').fadeIn(500);
+    $('.intro-screen:visible').fadeOut('slow', function() {
+        $('.intro-2-screen').fadeIn('slow');
+    });    
+});
+
+document.querySelector(".intro2nextbtn").addEventListener("click", ()=> {
+    $('.intro-2-screen:visible').fadeOut('slow', function() {
+        $('.game-intro-screen').fadeIn('slow');
     });    
 });
 
 document.querySelector(".gameintronextbtn").addEventListener("click", ()=> {
-    $('.game-intro-screen:visible').fadeOut(500, function() {
-        $('.map-screen').fadeIn(500);
+    $('.game-intro-screen:visible').fadeOut('slow', function() {
+        $('.map-screen').fadeIn('slow');
     });
 });
 
-document.querySelector("g #Cornelia_Street").addEventListener("click", ()=> {
+document.querySelectorAll("g .datapoint").forEach((pt)=> {
     // $( document ).ready(function() {
     // $(".map-screen").addClass("mt-full");
     // $('.game-screen').removeClass("mb-full");
-    
-    $('.map-screen:visible').fadeOut(500, function() {
-        $('.game-screen').fadeIn(500);
+    pt.addEventListener('click', () => {
+        $('.map-screen:visible').fadeOut('slow', function() {
+            $('.game-screen').fadeIn('slow');
+        });
+        
+        var pt_id = pt.id.toLowerCase();
+        
+        $(".game-screen .inputs").attr('id', pt_id);
+        $(".game-screen .previewbtn").attr('id', pt_id);
+        makeLayout();
+        
+        $(".game-screen .previewAudio").attr('src', '../assets/mp3/portfolio/streets-songs/'+pt_id+'_preview.mp3');
+        $(".game-screen .previewAudioSrc").attr('src', '../assets/mp3/portfolio/streets-songs/'+pt_id+'_preview.mp3');
     });
-    
-    $(".game-screen .inputs").attr('id', 'cornelia_street');
-    $(".game-screen .previewbtn").attr('id', 'cornelia_street');
-    makeLayout();
-    
-    $(".game-screen .previewAudio").attr('src', '../assets/img/portfolio/streets-songs/cornelia_street_preview.mp3');
-    $(".game-screen .previewAudioSrc").attr('src', '../assets/img/portfolio/streets-songs/cornelia_street_preview.mp3');
-});
+})
 
 
-document.querySelector("g #Brooklyn").addEventListener("click", ()=> {
-    $('.map-screen:visible').fadeOut(500, function() {
-        $('.game-screen').fadeIn(500);
-    });
-    
-    $(".game-screen .inputs").attr('id', 'brooklyn');
-    $(".game-screen .previewbtn").attr('id', 'brooklyn');
-    makeLayout();
-    
-    $(".game-screen .previewAudio").attr('src', '../assets/img/portfolio/streets-songs/brooklyn_preview.mp3');
-    $(".game-screen .previewAudioSrc").attr('src', '../assets/img/portfolio/streets-songs/brooklyn_preview.mp3');
-});
+// document.querySelector("g #Cornelia_Street").addEventListener("click", ()=> {
+//     $('.map-screen:visible').fadeOut(500, function() {
+//         $('.game-screen').fadeIn(500);
+//     });
+
+//     $(".game-screen .inputs").attr('id', 'cornelia_street');
+//     $(".game-screen .previewbtn").attr('id', 'cornelia_street');
+//     makeLayout();
+
+//     $(".game-screen .previewAudio").attr('src', '../assets/img/portfolio/streets-songs/cornelia_street_preview.mp3');
+//     $(".game-screen .previewAudioSrc").attr('src', '../assets/img/portfolio/streets-songs/cornelia_street_preview.mp3');
+// });
+
+
+// document.querySelector("g #Brooklyn").addEventListener("click", ()=> {
+//     $('.map-screen:visible').fadeOut(500, function() {
+//         $('.game-screen').fadeIn(500);
+//     });
+
+//     $(".game-screen .inputs").attr('id', 'brooklyn');
+//     $(".game-screen .previewbtn").attr('id', 'brooklyn');
+//     makeLayout();
+
+//     $(".game-screen .previewAudio").attr('src', '../assets/img/portfolio/streets-songs/brooklyn_preview.mp3');
+//     $(".game-screen .previewAudioSrc").attr('src', '../assets/img/portfolio/streets-songs/brooklyn_preview.mp3');
+// });
 
 function goBack() {
-    $('.game-screen:visible').fadeOut(500, function() {
-        $('.map-screen').fadeIn(500);
+    $('.game-screen:visible').fadeOut('slow', function() {
+        $('.map-screen').fadeIn('slow');
+        var audio = document.getElementById("myTunePreview");
+        if (!audio.paused) {audio.pause();}
     });
-    $('.breakdown-screen:visible').fadeOut(500, function() {
-        $('.map-screen').fadeIn(500);
+    $('.breakdown-screen:visible').fadeOut('slow', function() {
+        $('.map-screen').fadeIn('slow');
+        var audio = document.getElementById("myTune");
+        if (!audio.paused) {audio.pause();}
     });
     
     // $(".game-screen").fadeOut();
@@ -144,7 +172,16 @@ document.querySelector(".gamenextbtn").addEventListener("click", ()=> {
     // $(".breakdown-screen").fadeIn();    
     var audio = document.getElementById("myTunePreview");
     if (!audio.paused) {audio.pause();}
-    showAnswer();
+    showAnswer("won");
 });
+
+// $(".ai2html").onscroll
+
+document.querySelector(".ai2html").addEventListener('scroll', function (event) {
+    if(document.documentElement.scrollTop + window.innerHeight == document.documentElement.scrollHeight)
+    {
+        $("#scrollbtn").fadeOut(100);
+    }
+}, true /*Capture event*/);
 
 // document.querySelector(".intronextbtn").addEventListener("click", showAnswer);

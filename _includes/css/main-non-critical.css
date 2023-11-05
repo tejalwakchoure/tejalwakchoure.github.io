@@ -689,6 +689,7 @@ section.broadway {
   /* .cover-sheet, */
   .title-screen,
   .intro-screen,
+  .intro-2-screen,
   .game-intro-screen,
   .map-screen,
   .game-screen,
@@ -701,8 +702,9 @@ section.broadway {
     z-index: 1;
     transition: all 0.75s linear;
   }
-
+  
   .intro-screen,
+  .intro-2-screen,
   .game-intro-screen,
   .breakdown-screen {
     display: flex;
@@ -711,8 +713,15 @@ section.broadway {
     flex-direction: column;
     background-color: #ffc7f6;
   }
-
+  
+  .intro-screen,
+  .intro-2-screen,
+  .game-intro-screen {
+    justify-content: flex-end;
+  }
+  
   .intro-screen .text-div,
+  .intro-2-screen .text-div,
   .game-intro-screen .text-div {
     display: flex;
     max-width: 600px;
@@ -720,11 +729,20 @@ section.broadway {
     height: fit-content;
     flex-direction: column;
     justify-content: center;
+    
+    flex-grow: 1;
+    padding: 20px;
     /* background-color: #ffbdf5; */
-
+    
     /* padding-bottom: 30px; */
   }
-
+  
+  .intro-screen .btn,
+  .intro-2-screen .btn,
+  .game-intro-screen .btn {
+    padding-bottom: 20px;
+  }
+  
   .intro-screen {
     /* background-image: url('../assets/img/portfolio/streets-songs/musicsheet.svg'), linear-gradient(#F19FE4,#F19FE4); */
   } 
@@ -754,7 +772,7 @@ section.broadway {
       font-weight: 600;
       font-size: 2.5em;
     }
-
+    
     a {
       color: black !important;
     }
@@ -772,6 +790,9 @@ section.broadway {
   .title-screen  h1,
   #methodologybtn,
   .startbtn,
+  .intronextbtn,
+  .intro2nextbtn,
+  .gameintronextbtn,
   #howtobtn,
   .results h5 {
     font-family: Orbitron, 'Source Sans Pro', Helvetica, sans-serif;
@@ -782,6 +803,12 @@ section.broadway {
     font-size: 14px;
     letter-spacing: 1px;
     color: #393939;
+  }
+  
+  .breakdown-screen {
+    justify-content: flex-end;
+    display: flex;
+    flex-direction: row;
   }
   
   .results {
@@ -796,8 +823,9 @@ section.broadway {
     object-fit: contain;
   }
   
-  .title-screen > *,
-  .results > * {
+  .title-screen > *
+  /* .results > *  */
+  {
     max-width: 75%;
   }
   
@@ -1036,9 +1064,11 @@ section.broadway {
   height: 570px;
   margin: auto;
   margin-top: 6%;
-  border-radius: 0 0 10px 10px;
+  border-radius: 10px;
   background: #f1f1f1;
-  box-shadow: 0px 0px 0px 1px #585858;
+  box-shadow: 0px 0px 0px 1px #848484;
+  border-radius: 10px;
+  /* box-shadow: 0px 0px 0px 1px white; */
   text-align: center;
   
   display: flex;
@@ -1046,19 +1076,23 @@ section.broadway {
   justify-content: space-between;
   
   margin: auto;
-  width: 200px;
-  height: 300px;
-  border-radius: 3%;
-  padding: 5%;
+  /* width: 200px;
+  height: 300px; */
+  height: fit-content;
+  /* width: fit-content; */
+  width: 16vw;
+  /* border-radius: 10px 0 0 10px; */
+  padding: 3%;
+  max-width: 170px;
 }
-.embed-player .cover {
+/* .embed-player .cover {
   float: left;
   width: 100%;
   height: 66%;
   
   height: 50%;
   
-}
+} */
 .embed-player .cover img {
   /* display: block;
   position: absolute;
@@ -1073,6 +1107,9 @@ section.broadway {
   
   height: 100%;
   width: auto;
+  
+  height: 150px;
+  width: 150px;
   padding: 5%;
 }
 .embed-player .titre {
@@ -1080,11 +1117,19 @@ section.broadway {
   width: 100%;
   color: rgb(30, 30, 30) !important;
   font-size: 1rem;
-  margin-bottom: 0;
-  
+  margin-bottom: 0;  
 }
 .embed-player .titre h4 {
   font-size: 1.25rem !important;
+}
+#projectDetails .embed-player .titre hr {
+  border-top: 0.5px solid white;
+  margin: auto;
+  max-width: 80%;
+}
+.embed-player .titre p {
+  font-size: 0.9rem !important;
+  margin: 10px 0 !important;
 }
 .embed-player i {
   color: rgb(30, 30, 30) !important;
@@ -1102,9 +1147,19 @@ section.broadway {
   float: left;
 }
 
+.embed-player .other-info {
+  display: flex;
+  flex-direction: column;
+  padding: 10px 0;
+}
+
 .results {
   margin-top: 3%;
+  height: 90vh;
+  display: flex;
+  justify-content: flex-start;
 }
+
 .results > .row {
   width: 100%;
   max-width: 100%;
@@ -1112,13 +1167,26 @@ section.broadway {
   flex-wrap: nowrap;
   justify-content: space-around  ;
   align-items: center;
+  flex-direction: column;
 }
 
 .results p {
-  margin: 30px;
+  /* margin: 30px; */
   margin-top: 10px;
-max-width: 600px;
+  max-width: 600px;
 }
+
+#g-train-memories-box,
+#g-train-citylife-box,
+#g-train-makingit-box {
+  display: none;
+}
+
+.results-disabled {
+  fill: #494949;
+  opacity: 0.75;
+}
+
 
 .mejs__button>button:focus {
   outline: 0px dotted #999;
@@ -1312,22 +1380,113 @@ max-width: 600px;
   height: 100%;
   width: 100%;
 }
-.ai2html path {
+.ai2html-map {
+  overflow: scroll;
+}
+.ai2html-map path {
   animation: blinking 1s linear infinite;
   fill: #F19FE4;
+}
+.ai2html-map path.song-completed {
+  animation: none !important;
+  fill: #b2b2b2 !important;
+}
+
+.ai2html-train-org,
+.ai2html-train-org #g-train-org-Artboard_1,
+.ai2html-train-org #g-train-org-Artboard_1-img,
+.ai2html-train-org #g-train-org-Artboard_1-interactions-img {
+  height: 100% !important;
+}
+.ai2html-train-org #g-train-org-Artboard_1 > div {
+  padding: 0 !important;
+}
+
+.ai2html,
+.ai2html #g-train-makingit-Artboard_1,
+.ai2html #g-train-makingit-Artboard_1-img,
+.ai2html #g-train-makingit-Artboard_1-interactions-img,
+.ai2html #g-train-citylife-Artboard_1,
+.ai2html #g-train-citylife-Artboard_1-img,
+.ai2html #g-train-citylife-Artboard_1-interactions-img,
+.ai2html #g-train-memories-Artboard_1,
+.ai2html #g-train-memories-Artboard_1-img,
+.ai2html #g-train-memories-Artboard_1-interactions-img {
+  height: 100% !important;
+}
+
+
+/* #g-train-makingit-Artboard_1-img, #g-train-makingit-Artboard_1-interactions-img,
+#g-train-citylife-Artboard_1-img, #g-train-citylife-Artboard_1-interactions-img,
+#g-train-memories-Artboard_1-img, #g-train-memories-Artboard_1-interactions-img {
+  height: 350px;
+} */
+
+#g-train-makingit-Artboard_1 .img-padding {
+  padding: 0 0 83.0116% 0;
+}
+#g-train-citylife-Artboard_1 .img-padding {
+  padding: 0 0 43.8776% 0;
+}
+#g-train-memories-Artboard_1 .img-padding {
+  padding: 0 0 59.3103% 0;
+}
+/* #g-train-makingit-Artboard_1 .img-padding,
+#g-train-citylife-Artboard_1 .img-padding,
+#g-train-memories-Artboard_1 .img-padding {
+  padding: 0 0 350px 0;
+} */
+
+
+.shaking-head {
+  animation: shake-head 0.5s infinite;
+}
+
+.theme-destination {
+  animation: pulse 2s linear infinite;
+}
+
+@keyframes pulse {
+  0% { color: #d8d8d8; }
+  50% { color: #6f6f6f; }
+  100% { color: #d8d8d8; }
+}
+
+.theme-destination:after {
+  content: "";
+  animation: swap 6s linear infinite;
+}
+
+@keyframes swap {
+  0% { content:"Memories and nostalgia"; }
+  33.3% { content:"Making it big"; }
+  66.6% { content:"City life"; }
+  /* 99% { content:"Memories and nostalgia"; } */
+  100% { content:"Memories and nostalgia"; }
+}
+
+@keyframes shake-head {
+  0% { transform: translate(0, 0) rotate(0deg); }
+  25% { transform: translate(0.15px, 0.15px) rotate(0.15deg); }
+  50% { transform: translate(0, 0) rotate(0deg); }
+  75% { transform: translate(-0.15px, 0.15px) rotate(-0.15deg); }
+  100% { transform: translate(0, 0) rotate(0deg); }
 }
 
 .backdiv {
   position: relative;
   height: 100%;
   width: 100%;
+  
+  height: 100px;
+  display: flex;
 }
 .backbtn {
-  height: 107px;
+  height: 83px;
   overflow: hidden;
   position: absolute;
   bottom: 0;
-  left: 39%;
+  left: 45%;
 }
 @keyframes spin {
   from { transform: rotate(0deg); }
@@ -1336,16 +1495,16 @@ max-width: 600px;
 
 .backbtn img {
   animation: spin 8s linear infinite;
-  height: 200px;
-  width: 200px;
+  height: 150px;
+  width: 150px;
 }
 .backbtn p {
   position: absolute;
-  top: 37px;
+  top: 26px;
   z-index: 15;
   color: #ededed;
-  left: 34%;
-  font-size: 0.75rem;
+  left: 30%;
+  font-size: 12px;
 }
 
 .mapinfo {
@@ -1355,16 +1514,11 @@ max-width: 600px;
   z-index: 10;
   border: 5px solid #ffc7f6;
   top: 50px;
-    right: 50px;
+  right: 50px;
 }
 
-.map-screen,
-.game-screen {
-  /* margin-left: 100vw !important;
-  z-index: -1 !important; */
-  
-  /* display: none; */
-  /* transform: translate(0, 100vw); */
+.map-screen {
+  overflow: hidden;
 }
 
 .ml-full{
@@ -1418,6 +1572,14 @@ max-width: 600px;
   margin: 3px auto 0 auto;
 }
 
+#scrollbtn {
+  z-index: 10;
+  position: absolute;
+  bottom: 0;
+  right: 45%; 
+  color: #F19FE4;
+}
+
 
 div#mep_0 {
   display: none;
@@ -1456,19 +1618,19 @@ div#mep_0 {
 
 .game-screen {
   display: flex;
-
+  
   .content {
     text-align: center;
     /* height: 100%; */
     height: fit-content;
     margin: 6%;
-
+    
     width: fit-content;
     margin: auto;
     margin-top: 50px;
-
+    
     /* margin-right: 8%; */
-
+    
     
     .results {
       display: flex;

@@ -18,7 +18,9 @@ function makeLayout() {
     // letters = [];
     // letterSpaces = [];
     
-    let spaceindex = word.indexOf('_') - 1;
+    let spaceindex1 = word.indexOf('_') - 1;
+    word = word.replace('_', '');
+    let spaceindex2 = word.lastIndexOf('_') - 1;
     word = word.replace('_', '');
     word = word.replace('\'', '');
     
@@ -32,7 +34,7 @@ function makeLayout() {
     for (let i = 0; i < maxGuesses; i++) {
         html += `<div class="row num`+i+`">`;
         for (let j = 0; j < word.length; j++) {
-            if(j==spaceindex) {
+            if(j==spaceindex1 || j==spaceindex2) {
                 html += `<input type="text" style="margin-right: 40px;" disabled>`;
             } else {
                 html += `<input type="text" disabled>`;
@@ -70,9 +72,9 @@ function checkGuess() {
     
     
     if(letters.toString() == word) {
-        showAnswer();
+        showAnswer("won");
         // results.style.animation = "fade 0.3s linear";
-        html = '<div class="results"> <h5 style="padding-bottom: 2%;">You got it!!</h5> <div class="contain embed-player"> <div class="music-player"> <div class="cover"> <img src="https://mariongrandvincent.github.io/HTML-Personal-website/img-codePen/kygo.png" alt=""> </div> <div class="titre"> <h4>Stole the show</h4> <p>Kygo</p> </div> <a href="javascript:void(0)" class="btn btn-default" data-toggle="tooltip" title="Preview" onclick="aud_play_pause()"><i id="stateicon" class="fa fa-pause"></i></a> <div class="lecteur"> <audio style="width: 100%;" class="fc-media" autoplay="true" id="myTune"> <source src="https://mariongrandvincent.github.io/HTML-Personal-website/img-codePen/kygo-stole-the-show.mp3" type="audio/mp3"/> </audio> </div> </div> </div> </div>';
+        // html = '<div class="results"> <h5 style="padding-bottom: 2%;">You got it!!</h5> <div class="contain embed-player"> <div class="music-player"> <div class="cover"> <img src="https://mariongrandvincent.github.io/HTML-Personal-website/img-codePen/kygo.png" alt=""> </div> <div class="titre"> <h4>Stole the show</h4> <p>Kygo</p> </div> <a href="javascript:void(0)" class="btn btn-default" data-toggle="tooltip" title="Preview" onclick="aud_play_pause()"><i id="stateicon" class="fa fa-pause"></i></a> <div class="lecteur"> <audio style="width: 100%;" class="fc-media" autoplay="true" id="myTune"> <source src="https://mariongrandvincent.github.io/HTML-Personal-website/img-codePen/kygo-stole-the-show.mp3" type="audio/mp3"/> </audio> </div> </div> </div> </div>';
         // html+=
         // '<iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/12M5uqx0ZuwkpLp5rJim1a?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>'
         
@@ -82,10 +84,11 @@ function checkGuess() {
         // $(".game-screen").css("color", "white"); 
         
     } else if(guessnum === maxGuesses) {
-        let results = document.querySelector(".game-screen .content");
-        let html = "<p>Out of moves!</p><p>Check out the answer :)</p>";
-        // results.style.animation = "fade 0.3s linear";
-        results.innerHTML = html;
+        showAnswer("lost");
+        // let results = document.querySelector(".game-screen .content");
+        // let html = "<p>Out of moves!</p><p>Check out the answer :)</p>";
+        // // results.style.animation = "fade 0.3s linear";
+        // results.innerHTML = html;
     }
     
     letters = [];
@@ -113,7 +116,7 @@ function makeGuess(e) {
             checkGuess();            
         }, 0);
     }   
-
+    
     console.log("letternum", letternum);
     console.log("guessnum", guessnum);
 }
@@ -134,10 +137,48 @@ function handleDeletes(e) {
 
 let letternum = 0;
 let guessnum = 0;
+let memories = ['cornelia_street','coney_island','waverly_place','spanish_harlem','tompkins_square_park']
+let makingit = ['rockaway_beach','brooklyn','mulberry_street']
+let citylife = ['toms_diner','harlem','washington_heights','central_park','chelsea','bleecker_street','avenue_b']
 
-function showAnswer() {
+function disableIncomplete(answerid, themelist, themeid) {
+    themelist.forEach(songid => {
+        if(completedSongids.indexOf(songid)!=-1)
+        return;
+        
+        document.querySelectorAll("#"+themeid+" g#"+songid+"_tunes g g *").forEach(path => {
+            path.style.filter = 'grayscale(1) opacity(0) brightness(0.25)';
+            path.classList.remove("blinking");
+        });
+        
+        document.querySelectorAll("#"+themeid+" g#"+songid+"_head *").forEach(path => {
+            path.style.filter = 'grayscale(1) opacity(0.75) brightness(0.25)';
+            path.classList.remove("shaking-head");
+        });
+        
+        document.querySelectorAll("#"+themeid+" g#"+songid+"_body *").forEach(path => {path.style.filter = 'grayscale(1) opacity(0.75) brightness(0.25)';});
+        document.querySelectorAll("#"+themeid+" div#"+songid+" p").forEach(path => {path.style.opacity = 0;});
+    });
+}
+
+function enableCompleted(answerid, themeid) {
+    completedSongids.forEach(songid => {
+        document.querySelectorAll("#"+themeid+" g#"+songid+"_tunes g g *").forEach(path => {
+            path.style.filter = 'none';
+            path.classList.add("blinking");
+        });
+        document.querySelectorAll("#"+themeid+" g#"+songid+"_head *").forEach(path => {
+            path.style.filter = 'none';
+            path.classList.add("shaking-head");
+        });
+        document.querySelectorAll("#"+themeid+" g#"+songid+"_body *").forEach(path => {path.style.filter = 'none';});
+        document.querySelectorAll("#"+themeid+" div#"+songid+" p").forEach(path => {path.style.opacity = 1;});
+    });    
+}
+
+function showAnswer(result) {
+    console.log("answer= "+answerid)
     // answerid = "cornelia_street"
-    
     // $(".game-screen").fadeOut();
     // $(".breakdown-screen").fadeIn();
     
@@ -145,37 +186,62 @@ function showAnswer() {
         $('.breakdown-screen').fadeIn(500);
     });
     
-    
-    console.log(answerid);
-    completedSongids.push(answerid);
-    if(answerid === "cornelia_street")
-    {
-        // $(".cover-art img").attr('src', '../assets/img/portfolio/streets-songs/cornelia_street.png');
-        // $(".breakdown-analysis img").attr('src', '../assets/img/portfolio/streets-songs/cornelia-analysis.svg');
-        // $(".breakdown-textdiv p").innerHTML = "In this song, Swift writes about the moments shared with a loved one in an apartment she had rented on the Manhattan street. The location of this apartment is now popular among 'Swiftie' tourists."
+    if(songids.indexOf(answerid) !== -1) {
+        console.log(answerid);
+        completedSongids.push(answerid);
+        var paths = document.querySelectorAll(".map-screen #"+answerid+" path");
+        paths[0].classList.add("song-completed");
+        paths[1].classList.add("song-completed");
+        
+        if(memories.indexOf(answerid)!=-1) {
+            document.querySelector("#g-train-memories-box").style.display = 'block';
+            document.querySelector("#g-train-makingit-box").style.display = 'none';
+            document.querySelector("#g-train-citylife-box").style.display = 'none';
+            
+            enableCompleted(answerid, "g-train-memories-box");
+            disableIncomplete(answerid, memories, "g-train-memories-box");
+        } else if(makingit.indexOf(answerid)!=-1) {
+            document.querySelector("#g-train-memories-box").style.display = 'none';
+            document.querySelector("#g-train-makingit-box").style.display = 'block';
+            document.querySelector("#g-train-citylife-box").style.display = 'none';
+            
+            enableCompleted(answerid, "g-train-makingit-box");
+            disableIncomplete(answerid, makingit, "g-train-makingit-box");
+        } else {
+            document.querySelector("#g-train-memories-box").style.display = 'none';
+            document.querySelector("#g-train-makingit-box").style.display = 'none';
+            document.querySelector("#g-train-citylife-box").style.display = 'block';
+            
+            enableCompleted(answerid, "g-train-citylife-box");
+            disableIncomplete(answerid, citylife, "g-train-citylife-box");
+        }
+        
+        
         
         let results = document.querySelector(".breakdown-textdiv");
-        
-        let html = '<div class="results container"> <div class="row"> <h5 style="padding-bottom: 2%;">You got it!!</h5> </div> <div class="row"><p> In this song, Swift writes about the moments shared with a lover in an apartment she had rented on the Manhattan street. The location of this apartment is now popular with Swiftie tourists. </p> </div> <div class="row"> <div class="contain embed-player"> <div class="music-player"> <div class="cover"> <img src="../assets/img/portfolio/streets-songs/cornelia_street.png" alt=""> </div> <div class="titre"> <h4>Cornelia Street</h4> <p>Taylor Swift</p> </div> <a class="btn btn-default" data-toggle="tooltip" title="Preview" onclick="aud_play_pause_result()"><i id="stateicon" class="fa fa-pause songicon"></i></a> <div class="lecteur"> <audio style="width: 100%;" class="fc-media" autoplay="true" id="myTune"> <source src="../assets/img/portfolio/streets-songs/cornelia_street.mp3" type="audio/mp3"/> </audio> </div> </div> </div> <div class="breakdown-analysis" style="width: fit-content;height: fit-content;"><img src="../assets/img/portfolio/streets-songs/cornelia-analysis.svg" style="width: auto; height: 350px;"/></div></div> </div>';
+        let message="";
+        if(result=="won") {
+            message="You got it!"
+        }
+        else {
+            message="Whoops, you're out of moves!"
+        }
+        if(completedSongids.length==15) {
+            message="Game over <br /> thanks for playing!"
+        }
+        let html = '<div class="row" style="justify-content: center;"> <h5 style="padding-bottom: 2%;">'+message+'</h5> </div> <div class="row" style="padding-top: 15px;align-items: center;justify-content: center;display: flex;flex-direction: row;"><p style="">'+songInfo[answerid]['description']+'</p> </div>';
         results.innerHTML = html;
         
-        
-        
-    } else if (answerid === "brooklyn")
-    {
-        let results = document.querySelector(".breakdown-textdiv");
-        
-        let html = '<div class="results container"> <div class="row"> <h5 style="padding-bottom: 2%;">You got it!!</h5> </div> <div class="row"><p> The Boys highlight their experiences while on tour now that they have made it big. The lyrics of this song describe all the events that make a tour exhausting, but also hype them up and push them to keep moving forward until they reach home base. </p> </div> <div class="row"> <div class="contain embed-player"> <div class="music-player"> <div class="cover"> <img src="../assets/img/portfolio/streets-songs/brooklyn.png" alt=""> </div> <div class="titre"> <h4>No Sleep Till Brooklyn</h4> <p>Beastie Boys</p> </div> <a class="btn btn-default" data-toggle="tooltip" title="Preview" onclick="aud_play_pause_result()"><i id="stateicon" class="fa fa-pause songicon"></i></a> <div class="lecteur"> <audio style="width: 100%;" class="fc-media" autoplay="true" id="myTune"> <source src="../assets/img/portfolio/streets-songs/brooklyn.mp3" type="audio/mp3"/> </audio> </div> </div> </div> <div class="breakdown-analysis" style="width: fit-content;height: fit-content;"><img src="../assets/img/portfolio/streets-songs/brooklyn-analysis.svg" style="width: auto; height: 350px;"/></div></div> </div>';
+        results = document.querySelector(".breakdown-playerdiv");
+        html = '<div class="contain embed-player"> <div class="music-player"> <div class="cover"> <img src="../assets/img/portfolio/streets-songs/'+answerid+'.png" alt=""> </div> <div class="other-info"> <div class="titre"> <h4>'+songInfo[answerid]['title']+'</h4> <hr/> <p>'+songInfo[answerid]['artist']+'</p> </div> <a class="btn btn-default" data-toggle="tooltip" title="Preview" onclick="aud_play_pause_result()"><i id="stateicon" class="fa fa-pause songicon"></i></a> <div class="lecteur"> <audio style="width: 100%;" class="fc-media" autoplay="true" id="myTune"> <source src="../assets/mp3/portfolio/streets-songs/'+answerid+'.mp3" type="audio/mp3"/> </audio> </div> </div>';
         results.innerHTML = html;
+        
+        // html = '<div class="results container"> <div class="row"> <h5 style="padding-bottom: 2%;">'+message+'</h5> </div> <div class="row" style="padding-top: 15px;align-items: center;justify-content: center;display: flex;flex-direction: row;"><p style="width: 50%;">'+songInfo[answerid]['description']+'</p> <div class="contain embed-player"> <div class="music-player"> <div class="cover"> <img src="../assets/img/portfolio/streets-songs/'+answerid+'.png" alt=""> </div> <div class="other-info"> <div class="titre"> <h4>'+songInfo[answerid]['title']+'</h4> <p>'+songInfo[answerid]['artist']+'</p> </div> <a class="btn btn-default" data-toggle="tooltip" title="Preview" onclick="aud_play_pause_result()"><i id="stateicon" class="fa fa-pause songicon"></i></a> <div class="lecteur"> <audio style="width: 100%;" class="fc-media" autoplay="true" id="myTune"> <source src="../assets/mp3/portfolio/streets-songs/'+answerid+'.mp3" type="audio/mp3"/> </audio> </div> </div> </div> </div> </div> </div>';
     } else {
-        // $(".breakdown-screen").fadeOut();
-        // $(".map-screen").fadeIn();
         $('.breakdown-screen:visible').fadeOut(500, function() {
             $('.map-screen').fadeIn(500);
         });
-        // $(".breakdown-analysis img").attr('src', '../assets/img/portfolio/streets-songs/original-analysis.svg');
     }
-    
 }
 
 
@@ -244,10 +310,27 @@ $("#myTunePreview").on("ended", ()=> {
     $('.previewicon').removeClass('fa-pause');
     $('.previewicon').addClass('fa-play');
 });
+$("#myTune").on("ended", ()=> {
+    $('.songicon').removeClass('fa-pause');
+    $('.songicon').addClass('fa-play');
+});
 
 
 document.querySelector(".previewbtn").addEventListener("click", (e)=> {
     // $(".game-screen").fadeOut();
     // $(".breakdown-screen").fadeIn();    
     aud_play_pause(e);
+});
+
+
+let songInfo, songids;
+$(document).ready(function() {
+    fetch('../chart-data/song-info.json')
+    .then(response => response.json())
+    .then(data => {
+        songInfo = data; // Assign the JSON data to the variable
+        songids = Object.keys(songInfo);
+        console.log(songInfo, songids);
+    })
+    .catch(error => console.error('Error reading JSON file:', error));
 });

@@ -686,7 +686,25 @@ section.broadway {
     transition: all 1s linear;
   }
   
+  .cover-screen {
+    /* filter: blur(12px); */
+    /* -webkit-filter: blur(12px); */
+    /* display: flex; */
+    vertical-align: middle;
+    text-align: center;
+    justify-content: center;
+    z-index: 100 !important;
+    flex-direction: column;
+    align-items: center;
+  }
+  .cover-screen > * {
+    margin: 5px auto;
+    max-width: 75%;
+    color: #393939 !important;
+  }
+  
   /* .cover-sheet, */
+  .cover-screen,
   .title-screen,
   .intro-screen,
   .intro-2-screen,
@@ -1392,14 +1410,21 @@ section.broadway {
   fill: #b2b2b2 !important;
 }
 
-.ai2html-train-org,
+/* .ai2html-train-org,
 .ai2html-train-org #g-train-org-Artboard_1,
-.ai2html-train-org #g-train-org-Artboard_1-img,
-.ai2html-train-org #g-train-org-Artboard_1-interactions-img {
+.ai2html-train-org #g-train-org-Artboard_1-img, */
+
+.ai2html-train-org #g-train-org-Artboard_1-interactions-img,
+#g-train-org-box .g-aiImg {
   height: 100% !important;
+  width: 100% !important;
 }
+/*
 .ai2html-train-org #g-train-org-Artboard_1 > div {
   padding: 0 !important;
+} */
+#g-train-org-box {
+  height: fit-content !important;
 }
 
 .ai2html,
@@ -1422,6 +1447,10 @@ section.broadway {
   height: 350px;
 } */
 
+#g-train-org-Artboard_1 .img-padding {
+  /* padding: 0 0 63.4036% 0; */
+  padding: 0 0 50vh 0;
+}
 #g-train-makingit-Artboard_1 .img-padding {
   padding: 0 0 83.0116% 0;
 }
@@ -1655,11 +1684,7 @@ div#mep_0 {
 }
 
 
-.songs {
-  .map-screen {
-    /* display: none; */
-  }
-  
+.songs {  
   .game-screen {
     border: 1px solid #F19FE4;
     background-color: white;  
@@ -1691,9 +1716,6 @@ div#mep_0 {
       padding: 20px 25px;
       border-bottom: 1px solid #ccc;
     } */
-    .wrapper .content{
-      /* margin: 25px 25px 35px; */
-    }
     .content .inputs{
       display: flex;
       flex-wrap: wrap;

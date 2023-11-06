@@ -58,18 +58,42 @@ window.onclick = function(event) {
     }
 }
 
+function onLoadResize() {
+    if(window.innerWidth < 769) { 
+        $(".screen").css("filter", "blur(15px)"); 
+        $(".cover-screen").css("filter", "none"); 
+        $(".cover-screen").css("display", "flex"); 
 
-// $( document ).ready(function() {
-//     $(".cover-sheet").css("background", "none"); 
-// });
+        let results = document.querySelector(".cover-screen");
+        let html = '<i class="fa-solid fa-display"></i><p class="landscape">this game is best enjoyed on a larger screen.</p>';
+        results.innerHTML = html;
 
-// $(".title-screen").css("display", "none"); 
-$(".intro-screen").css("display", "none"); 
-$(".intro-2-screen").css("display", "none"); 
-$(".game-intro-screen").css("display", "none"); 
-$(".map-screen").css("display", "none"); 
-$(".game-screen").css("display", "none"); 
-$(".breakdown-screen").css("display", "none"); 
+    }
+    else if( window.innerHeight > window.innerWidth) { 
+        $(".screen").css("filter", "blur(15px)"); 
+        $(".cover-screen").css("filter", "none"); 
+        $(".cover-screen").css("display", "flex"); 
+
+        let results = document.querySelector(".cover-screen");
+        let html = '<i class="fa-solid fa-rotate"></i><p class="landscape">this game is best enjoyed in landscape mode.</p>';
+        results.innerHTML = html;
+    }
+    else {
+        $(".screen").css("filter", "none"); 
+        $(".cover-screen").css("display", "none");
+    }
+}
+window.addEventListener('load', onLoadResize);
+window.addEventListener('resize', onLoadResize);
+
+$(".screen").css("display", "none"); 
+$(".title-screen").css("display", "flex");
+// $(".intro-screen").css("display", "none"); 
+// $(".intro-2-screen").css("display", "none"); 
+// $(".game-intro-screen").css("display", "none"); 
+// $(".map-screen").css("display", "none"); 
+// $(".game-screen").css("display", "none"); 
+// $(".breakdown-screen").css("display", "none"); 
 
 
 document.querySelector(".startbtn").addEventListener("click", ()=> {

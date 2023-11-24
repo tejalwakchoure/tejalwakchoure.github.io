@@ -1,33 +1,35 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        {% include head.html %}
-        {% include js.html %}
-        {% include stylesheets.html %}
-    </head>
-    <body id="main" class="index body-with-bkg">
-
-      <style>#preloader{visibility: hidden; opacity: 0;}</style>
-        {% include preloader.html coloured_front_light='coloured_front_light' %}
-
-        <div id="body-container">
-          {% include nav.html coloured_front='coloured_front' coloured_hover='coloured_hover' coloured_back='coloured_back' highlight_home='text-decoration: underline; text-underline-offset: 4px;' %}
-          {% include header.html %}
-          {% include portfolio_grid.html %}
-          {% include footer.html %}
-        </div>
-        
-        <!-- Netlify access -->
-        <!-- <script>
-          if (window.netlifyIdentity) {
-            window.netlifyIdentity.on("init", user => {
-              if (!user) {
-                window.netlifyIdentity.on("login", () => {
-                  document.location.href = "/admin/";
-                });
-              }
+<head>
+  {% include head.html %}
+  {% include js.html %}
+  {% include stylesheets.html %}
+</head>
+<body id="main" class="index body-with-bkg">
+  <span data-nosnippet="">
+    
+    <style>#preloader{visibility: hidden; opacity: 0;}</style>
+    {% include preloader.html coloured_front_light='coloured_front_light' %}
+    
+    <div id="body-container">
+      {% include nav.html coloured_front='coloured_front' coloured_hover='coloured_hover' coloured_back='coloured_back' highlight_home='text-decoration: underline; text-underline-offset: 4px;' %}
+      {% include header.html %}
+      {% include portfolio_grid.html %}
+      {% include footer.html %}
+    </div>
+    
+    <!-- Netlify access -->
+    <!-- <script>
+      if (window.netlifyIdentity) {
+        window.netlifyIdentity.on("init", user => {
+          if (!user) {
+            window.netlifyIdentity.on("login", () => {
+              document.location.href = "/admin/";
             });
           }
-        </script> -->
-    </body>
+        });
+      }
+    </script> -->
+  </span>
+</body>
 </html>

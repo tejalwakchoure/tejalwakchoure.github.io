@@ -2255,7 +2255,7 @@ footer {
 }
 
 footer a {
-  color: #{{ site.color.button }}; 
+  color: #{{ site.color.button }} !important; 
 }
 
 footer .text-link {

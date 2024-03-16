@@ -40,9 +40,14 @@ btn.onclick = function() {
 }
 var modal2 = document.getElementById("howto");
 var btn2 = document.getElementById("howtobtn");
+var btn2_1 = document.getElementById("howtobtn-gamescreen");
 
 // When the user clicks on the button, open the modal
 btn2.onclick = function() {
+    modal2.style.display = "block";
+}
+btn2_1.onclick = function() {
+    console.log('clicked', modal2);
     modal2.style.display = "block";
 }
 // When the user clicks anywhere outside of the modal, close it

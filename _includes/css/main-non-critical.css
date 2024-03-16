@@ -812,6 +812,7 @@ section.broadway {
   .intro2nextbtn,
   .gameintronextbtn,
   #howtobtn,
+  #howtobtn-gamescreen,
   .results h5 {
     font-family: Orbitron, 'Source Sans Pro', Helvetica, sans-serif;
     
@@ -1601,6 +1602,13 @@ section.broadway {
   margin: 3px auto 0 auto;
 }
 
+#howtobtn-gamescreen {
+  z-index: 10;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
 #scrollbtn {
   z-index: 10;
   position: absolute;
@@ -1626,7 +1634,7 @@ div#mep_0 {
 .modal {
   display: none; /* Hidden by default */
   position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
+  z-index: 2; /* Sit on top */
   left: 0;
   top: 0;
   width: 100%; /* Full width */

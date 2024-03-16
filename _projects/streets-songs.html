@@ -37,18 +37,17 @@ description: Streets of NY referenced in songs
       <div class="title-screen screen">
         <div class="text">
           <h1 style="font-size: 2.5em;">{{ page.title }}</h1>
-          <p class="small">exploring the city through the eyes of musicians</p>
-          <a class="btn startbtn blinking" style="    margin-top: 50px;
-          ">START</a>
+          <p class="small" style="font-family: monospace;">- the city in music -</p>
+          <a class="btn startbtn blinking" style="margin-top: 50px;">START</a>
         </div>
       </div>
       
       <div class="intro-screen screen">
         <div class="text-div">
           <p>
-            In 2019, travel company Celebrity Cruises <a href="https://www.celebritycruises.com/music-mapped/" target="_blank">analyzed top-40 songs</a> since the 1960s to find the locations that inspired them. They found that the city of New York has inspired over 160 songs, followed by London at 102. And this analysis was done by searching the phrase 'New York' in the lyrics, without any mention of the boroughs or neighborhoods of the city.
+            In 2019, travel company Celebrity Cruises <a href="https://www.celebritycruises.com/music-mapped/" target="_blank">analyzed top-40 songs</a> since the 1960s to find the locations that inspired them. They found that the city of New York topped the list with over 160 songs to its name, followed by London at 102. And they just looked for the phrase 'New York' in the lyrics, so this data does not include the tracks named after any famous spots or neighborhoods in the city.
             <br><br>
-            Nothing demonstrates this better than 2009's 'Empire State of Mind', which has been called the <a href="https://web.archive.org/web/20180813175234/http://theboombox.com/empire-state-of-mind-replaces-new-york-at-race-track/" target="_blank">"quintessential 21st-century theme song for New York City" by the  New York Racing Association.</a>
+            No song demonstrates this city's popularity in the industry better than 2009's 'Empire State of Mind', which has been named the <a href="https://web.archive.org/web/20180813175234/http://theboombox.com/empire-state-of-mind-replaces-new-york-at-race-track/" target="_blank">"quintessential 21st-century theme song for New York City"</a> by the New York Racing Association.
           </p>
           <div class="img-div" style="text-align: center;
           max-width: 400px;
@@ -57,7 +56,7 @@ description: Streets of NY referenced in songs
           height="200"
           width="200"
           />
-          <p class="otherinfo" style="font-size: 0.8rem !important; color: #595959;">I walked the Brooklyn Bridge last month, and I do not exaggerate when I say that this song was blasting every 200 feet.</p>
+          <p class="otherinfo" style="font-size: 0.8rem !important; color: #595959;">I walked the Brooklyn Bridge last summer, and I do not exaggerate when I say that this song was blasting every 200 feet.</p>
         </div>
       </p>
     </div>
@@ -74,9 +73,9 @@ description: Streets of NY referenced in songs
     padding: 3%;
     ">
     <p style="max-width: 600px;">
-      This begs the question: what is it about New York that makes it so inspiring?
+      This begs the question: what is it about this city that makes it so inspiring?
       <br><br>
-      I analyzed 15 songs based on places in the city. Most of these focused on memories associated with a particular place. The two other common stories that these songs explored were starting from the bottom and "making it" in the city, and ruminations on life as a New Yorker.
+      I analyzed 15 songs named after places in the city and found that most of them focused on the artists' memories associated with those places. Other common themes involved ruminating on life as a New Yorker and "making it" in the big city.
     </p>
     <div class="img-div" style="    
     display: flex;
@@ -91,7 +90,7 @@ description: Streets of NY referenced in songs
       width: 100%;"
       /> -->
       {% include train-org.html %}
-      <p class="otherinfo" style="font-size: 0.7rem !important; color: #595959;">(@pikisuperstar/Freepik)</p>
+      <p class="otherinfo" style="font-size: 0.7rem !important; color: #595959;">(base image: @pikisuperstar/Freepik)</p>
     </div>
     
   </div>
@@ -101,14 +100,17 @@ description: Streets of NY referenced in songs
 </div>
 
 <div class="game-intro-screen screen">
-  <div class="text-div" style="    width: 100%;
+  <div class="text-div" style="
+  width: 100%;
   max-width: 100%;
   align-items: center;
   justify-content: space-evenly;
   padding: 3%;
   ">
   <p style="max-width: 600px; font-size: 1.4rem; text-align: center;">
-    Let's explore these songs through a geo-musical guessing game!
+    Now, I love to gamify everything.
+    <br>
+    So let's explore these songs through a musical Wordle map!
   </p>    
 </div>
 <a class="btn gameintronextbtn blinking">
@@ -119,30 +121,15 @@ description: Streets of NY referenced in songs
 <div class="map-screen screen">
   <span id="scrollbtn" class="btn"><i class="fa fa-chevron-down"></i></span>
   <div class="mapinfo">
-    Click any icon on the map to open a mini game
+    Click any icon on the map to open a mini game.
     <a id="howtobtn" class="btn">how to play</a>
-    <div id="howto" class="modal">
-      <div class="modal-content">
-        <p class="bold">How to Play</p>
-        <p class="small">
-          This game is played like Wordle. Type your guesses in!
-          <br><br>
-          Grey coloring indicates that the letter is not present in the answer.
-          <br>
-          Light pink indicates that the letter is present in the answer but not in the right position.
-          <br>
-          Hot pink indicates that the letter is present in the answer in the right position.
-          <br><br>
-          The objective of this game is to guess the entire name before you run out of guesses. The good news is that your guesses do not have to be real words!
-        </p>
-      </div>
-    </div>
   </div>
   
   {% include ai2html-song-map.html %}
-</div>  
+</div>
 
 <div class="game-screen screen" style="display: flex; flex-direction: column; justify-content: space-between;">
+  <a id="howtobtn-gamescreen" class="btn">how to play</a>
   <div class="row" style="justify-content: flex-end; padding-left: 6vw;">
     <audio style="width: 100%;" class="fc-media previewAudio" id="myTunePreview"> <source class="previewAudioSrc" src="" type="audio/mp3"/> </audio>
     <div style="display: flex;
@@ -196,7 +183,6 @@ description: Streets of NY referenced in songs
 </div>
 
 <div class="breakdown-screen screen" style="display: flex; flex-direction: column; justify-content: space-between;">
-  
   <div style="display: flex;justify-content: flex-start; flex-direction: row; height: 100%; width: 100%; padding-left: 6vw;">
     <div class="results container">
       <div class="row" style="max-width: 600px;">
@@ -229,6 +215,26 @@ description: Streets of NY referenced in songs
   </div>
 </div>
 
+<div id="howto" class="modal">
+  <div class="modal-content">
+    <p class="bold">How to Play</p>
+    <p class="small">
+      There are 15 locations marked on this map. Each of these locations has a song named after it. The goal is to guess as many songs as you can!
+      <br><br>
+      You can play a 30-second clip of the song. Just like in Wordle, you then type in what you think this song is called.
+      <br><br>
+      The good news is that each answer is a real place, and your guesses do not have to be actual words.
+      <br><br>
+      Here's what those colored squares mean:
+      <br>
+      Grey = the letter is not present in the answer
+      <br>
+      Light pink = the letter is present in the answer, but not at that position
+      <br>
+      Hot pink = the letter is present in the answer at that position
+    </p>
+  </div>
+</div>
 
 <a id="methodologybtn" class="btn">more info</a>
 <div id="methodology" class="modal">
@@ -237,7 +243,7 @@ description: Streets of NY referenced in songs
     <p class="small">
       Collected street names and public spaces (parks, neighborhoods) from NYC Open Data. Searched for these using Spotify's API to get a list of songs whose names matched. After manual analysis to confirm that these are actually places in NY (ex. there are multiple Mulberry Streets across the country), picked the most popular songs and plotted them on a map in geoJSON, moved the coordinates to Datawrapper, and finished the map using Illustrator/ai2html.
       <br><br>
-      For the game itself, used Javascript to build on the core game <a href="https://github.com/ozboware/wordled" target="_blank">'Wordled'</a>. Audio was embedded in HTML elements and played using the autoplay feature.
+      For the game itself, used Javascript to build on the core game <a href="https://github.com/ozboware/wordled" target="_blank">'Wordled'</a>. Audio is embedded in HTML elements and played using the autoplay feature.
     </p>
     <hr/>
     <p style="font-style: italic;" class="small">

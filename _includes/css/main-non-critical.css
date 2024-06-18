@@ -366,10 +366,12 @@ section.broadway {
 }
 
 .mt20 {
-  margin-top: min(40vh, 500px);
+  /* margin-top: min(40vh, 500px); */
+  margin-top: min(20vh, 300px); /* mt20 was way too much */
 }
 .mt10 {
-  margin-top: min(20vh, 300px);
+  /* margin-top: min(20vh, 300px); */
+  margin-top: min(10vh, 100px); /* mt10 was too much */
 }
 .mt5 {
   margin-top: min(10vh, 100px);

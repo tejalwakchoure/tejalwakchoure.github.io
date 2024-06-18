@@ -335,9 +335,13 @@ section.broadway {
 .coup,
 .acquisitions,
 .fires {
-  padding: 0 !important;
+  /* padding: 0 !important; */
   display: flex !important;
   flex-direction: column;
+}
+.nobelles,
+.coup {
+  padding: 0 !important;
 }
 .nobelles .container,
 .coup .container,

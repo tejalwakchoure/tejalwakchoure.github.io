@@ -403,7 +403,7 @@ a.coloured_hover:focus {
 
 section {   
     /* padding: 0 0 0 6vw; nav accounted for */
-    padding: 0 0 0 7.25vw; /* nav accounted for */
+    padding: 0 3vw 0 7.25vw; /* nav accounted for */
     width: 100%;    
     display: grid;
     margin: 0;  

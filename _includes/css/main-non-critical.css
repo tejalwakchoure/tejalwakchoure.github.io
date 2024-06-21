@@ -326,6 +326,11 @@ section.broadway {
   border: 0px;
   /*box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);*/
 }
+.broadway-main-img {
+  height: 100vh; 
+  position: absolute; 
+  z-index:-1;
+}
 .loveletter #highlights h6 {
   letter-spacing: 0.5px; 
   font-size: 0.85em;
@@ -1967,6 +1972,10 @@ div#mep_0 {
   }
   .project-main-img {
     height: 60vh;
+  }
+  .broadway-main-img {
+    height: unset; 
+    position: relative; 
   }
   #projectDetails .container {
     padding: 0 !important;

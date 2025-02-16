@@ -1,0 +1,93 @@
+---
+project-id: 1
+title: Have you met someone named Kindle? Chances are, you will
+type: data visualization
+tag: journalism
+
+date: 1000-01-01
+img: babynames.jpg
+alt: babynames
+description: A quick-and-dirty analysis in Python on the rise in 'Kindle' as a baby name.
+---
+
+<!DOCTYPE html>
+<html>
+<head>
+	{% include head.html %}
+	{% include js.html %}
+	{% include stylesheets.html %}
+</head>
+<body>
+	{% include nav.html %}
+	
+	<!-- Project details section -->
+	<section id="projectDetails" class="article" data-nosnippet>
+		<!-- <div class="mt10"></div> -->
+		<div class="container" style="justify-content: center;">
+			<div class="col text-center">
+				<h1 class="project-title">{{ page.title }}</h1>
+				<h5 class="otherinfo" style="text-transform: unset;">Tejal Wakchoure | Jun 25, 2023</h5>
+			</div> 
+			<div class="row" id="content-row">
+				<div id="intro" class="mt5">
+					<p>
+						I know. It's wild. But Americans are increasingly naming their kids after household devices. As of June 2023, the Social Security Administration's database notes 77 Siris, 15 Cortanas and 51 Kindles.
+						<br><br>
+						The two to three years following every Kindle release see a rise in babies named after it. In 2011, a year after Kindle for Android was released, 31 newborn girls were named Kindle, the highest in a single year.
+					</p>
+				</div>
+			</div>
+			
+			<img style="width: 100%; margin: auto; margin-top: 25px;" src="../assets/img/portfolio/baby-names/babynames.jpg"/>
+			<div class="row" id="content-row">
+				<div class="mt5">
+					<iframe
+					id="quarto-embed"
+					src="https://tejalwakchoure.github.io/Kindle-Baby-Names/babynames"
+					style="width: 100%; border: none; scroll-behavior: smooth;"
+					></iframe>
+				</div>
+				
+				<div id="overview">
+					<!-- <p> <span class="bold">Project Type: </span>{{ page.type }}</p>
+					<p> <span class="bold">Role: </span>data storytelling, data visualization</p>
+					<p> <span class="bold">Tools: </span>Python(Jupyter) for data, Illustrator and Plotly for graphics</p>
+					<p> <span class="bold">Date: </span>December 2022</p> -->
+					<br>
+					<p>
+						<span class="">Analysis:</span>
+						<a href="" target="_blank">
+							GitHub</a>
+							<br>
+							<span class="">Source:</span>
+							<a href="https://www.ssa.gov/oact/babynames/" target="_blank">
+								Social Security Administration</a>'s list of baby names</p>
+							</div>
+						</div>
+					</div>
+				</section>
+				{% include footer.html %}
+			</body>
+			</html>
+			
+			<script>
+				let lastIframeHeight = 0; // Track the current height of the iframe
+				
+				window.addEventListener("message", function(event) {
+					// Allow only messages from the trusted domain
+					if (event.origin !== "https://tejalwakchoure.github.io") {
+						console.warn("Blocked message from unknown origin:", event.origin);
+						return;
+					}
+					
+					if (event.data.type === "resize") {
+						const iframe = document.getElementById("quarto-embed");
+						
+						// Only adjust the iframe height if it's different from the last one
+						if (event.data.height !== lastIframeHeight) {
+							iframe.style.height = event.data.height + "px";
+							lastIframeHeight = event.data.height;
+						}
+					}
+				});
+			</script>

@@ -1,0 +1,99 @@
+---
+project-id: 10
+title: Data visualizations and products for The Banner
+type: data journalism, data pipeline
+tag: datadesign
+
+date: 1000-01-01
+img: vertical-video-opiods.png
+alt: vertical-video-opiods
+description: Visual features that I have created or helped create at The Baltimore Banner.
+---
+
+<!DOCTYPE html>
+<html>
+<head>
+	{% include head.html %}
+	{% include js.html %}
+	{% include stylesheets.html %}
+</head>
+<body>
+	{% include nav.html %}
+	
+	<!-- Project details section -->
+	<section id="projectDetails" class="article" data-nosnippet>
+		<!-- <div class="mt10"></div> -->
+		<div class="container" style="justify-content: center;">
+			<div class="col text-center">
+				<h1 class="project-title">{{ page.title }}</h1>
+				<!-- <h5 class="otherinfo" style="text-transform: unset;">Tejal Wakchoure | Published Dec 20, 2022</h5> -->
+			</div> 
+			<div class="row" id="content-row">
+				<div id="intro" class="mt5">
+				</div>
+			</div>
+			
+			<div class="row" id="content-row">
+				<p>
+					Helped the data reporting team create a <a href='https://www.thebaltimorebanner.com/community/criminal-justice/data-dashboard-latest-data-shows-gun-violence-among-teens-falling-FYP45MPR7FGUZEKBCLSCK57GAM/' target='_blank'>dashboard on gun violence</a> in the Baltimore area, which was The Banner's first interactive dashboard ever.
+				</p>
+			</div>
+			<div class="row split" style="margin-top: 50px;">
+				<img style="padding-right: 10px;" src="../assets/img/portfolio/banner-products/gun-violence-dashboard-1.png"/>
+				<img style="border-left: 1px solid #e1e1e1;" src="../assets/img/portfolio/banner-products/gun-violence-dashboard-2.png"/>
+			</div>
+			
+			<div class="mt5"></div>
+			<div class="row" id="content-row">
+				<p>
+					Directed the development of a vertical video carousel on the homepage. This has since been used many times, but perhaps the most crucial time was when we published short video explainers on a large-scale investigation into the overdose crisis in Baltimore in collaboration with The New York Times.
+				</p>
+			</div>
+			<div>
+				<img src="../assets/img/portfolio/banner-products/vertical-video-opiods.png"  style="width: 100%; margin-bottom: 50px;" />
+			</div>
+			
+			<div class="mt5"></div>
+			<div class="row" id="content-row">
+				<p>
+					Assisted the data reporting team with our first-ever <a href='https://www.thebaltimorebanner.com/community/public-health/baltimore-opioid-overdose-capital-ZWBYWMCJ45CGNPCGAMFOE6YDGI/' target='_blank'>scrollytelling article</a>.
+				</p>
+			</div>
+			<div>
+				<img src="../assets/img/portfolio/banner-products/scrollytelling.gif"  style="width: 100%; margin-bottom: 50px;" />
+			</div>
+			
+			<div class="mt5"></div>
+			<div class="row" id="content-row">
+				<p>
+					Implemented multiple audience engagement features like breaking news alerts (during Baltimore's Key Bridge collapse) and audio narration in the app, which received positive feedback from our subscribers.
+				</p>
+			</div>
+			<div class="row split" style="margin-top: 50px; width: 80%; margin: auto;">
+				<img src="../assets/img/portfolio/banner-products/key-bridge-3.png"  style="margin-bottom: 50px;" />
+				<img src="../assets/img/portfolio/banner-products/narration.png"  style="margin-bottom: 50px;" />
+			</div>
+			<p class="otherinfo"></p>
+			
+		</div>
+		
+	</div>
+</section>
+{% include footer.html %}
+</body>
+</html>
+
+<style>
+	.split {
+		/* height: min-content; */
+		img {
+			width: 50%;
+			object-fit: cover;
+		}
+	}
+	@media (max-width: 480px) {
+		.split {
+			width: 100% !important;
+		}
+	}
+</style>

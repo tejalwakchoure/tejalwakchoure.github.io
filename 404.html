@@ -14,7 +14,7 @@
         .container404{
           display: flex;
           height: 100vh;
-          background-color: #C1DAFF;
+          background-color: white;
           justify-content: space-evenly;
           align-items: center;
           flex-direction: column;
@@ -22,13 +22,15 @@
         .header404 {
           font-size: 8rem;
           font-weight: 700;
-          font-style: italic;
+          /* font-style: italic; */
           margin: 0;
         }
-        .content404, .content404 a{
+        .content404, .content404 a {
           text-align: center;
-          color: #393939;
           z-index: 1;
+        }
+        a {
+          color: #9d00db;
         }
         p .big-404 {
           font-size: 1.75em;
@@ -37,7 +39,7 @@
           font-size: 1.15em;
         }
         .grainy-page {
-          background-color: #C1DAFF;
+          background-color: white;
         }
         .grainy-page:after {
           animation: grain 8s steps(10) infinite;
@@ -91,7 +93,7 @@
         <div class="content404">
             <p class="big-404">Oops! This page doesn't exist.</p>
           <br/>
-            <p class="small-404">take me <a href="//tejalwakchoure.github.io/">home</a>.</p>
+            <p class="small-404"><a href="//tejalwakchoure.github.io/">take me home</a></p>
         </div>
     </div>
 </body>

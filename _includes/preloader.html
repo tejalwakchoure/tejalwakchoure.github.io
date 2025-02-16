@@ -2,12 +2,79 @@
 <div id="preloader">
 	<div class="container">
 		<div class="navbar-brand-scroll" style="width: 100%; text-align: center; display: flex; justify-content: space-around;">
-	        <p class="navbar-brand {{ include.coloured_front_light }}" style="position: absolute; font-size: 5em;">tw</p>
-	        <p class="navbar-brand brand-shadow" style="position: absolute; font-size: 5em; transform: translate(0.05em, 0.05em);">tw</p>
-	    </div>
+			<p class="navbar-brand {{ include.coloured_front_light }}" style="position: absolute; font-size: 5em;">tw</p>
+			<p class="navbar-brand brand-shadow" style="position: absolute; font-size: 5em; transform: translate(0.05em, 0.05em);">tw</p>
+		</div>
 		<div id="wrapper">
 			<p id="percent">%</p>
-		    <p id="count">0</p>
+			<p id="count">0</p>
 		</div>
 	</div>
 </div>
+<style>
+	#preloader {
+		height: 100vh;
+		width: 100%;
+		position: relative;
+		z-index: 4;
+		background-color: #{{ site.color.backgroundcol_light }};
+		color: #{{ site.color.text }};
+	}
+	
+	#preloader .container {
+		height: 100vh; 
+		width: 100%;
+		display: -webkit-box;  /* OLD - iOS 6-, Safari 3.1-6, BB7 */
+		display: -ms-flexbox;  /* TWEENER - IE 10 */
+		display: -webkit-flex; /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		/*font-weight: 100; */
+		text-transform: lowercase; 
+		justify-content: space-evenly;
+	}
+	#preloader #wrapper {
+		font-weight: 300;
+		/*margin: auto; */
+		display: -webkit-box;  /* OLD - iOS 6-, Safari 3.1-6, BB7 */
+		display: -ms-flexbox;  /* TWEENER - IE 10 */
+		display: -webkit-flex; /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
+		display: flex;
+		flex-direction: row; 
+		align-items: center;
+		height: 4.5em; 
+		width: 4.5em; 
+		min-width: -moz-fit-content;
+		min-width: -webkit-fit-content;
+		min-width: fit-content;
+		padding: 0.5em; 
+	}
+	
+	#preloader #percent {
+		margin: auto;
+		margin-right: 10px;
+	}
+	
+	#preloader #count {
+		font-size: 1.5em; 
+		margin: auto;
+	}
+	
+	@media(max-width:768px) {
+		#preloader {
+			background-color: #{{ site.color.backgroundcol_lightest }};
+		}
+		#preloader .navbar-brand {
+			color: #{{ site.color.backgroundcol_lightest }} !important;
+		}
+		#preloader #wrapper {
+			height: 3.5em;
+			width: 3.5em;
+		}
+		#preloader {
+			color: #{{ site.color.heading }} !important;
+		}
+		
+	}
+</style>

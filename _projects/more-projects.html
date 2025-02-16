@@ -1,59 +1,89 @@
 ---
-layout: slider
 project-id: 1
-title: More Projects
-type: computational politics, android app development, facial recognition, graphs, scrapers, illustrations
+title: Ideas and more!
+type: machine learning, android app development, facial recognition, graphs, scrapers, illustrations
 tag: datadesign
 
-date: 1000-01-07
-img: presenceid.jpg
-alt: presence ID app layout
-description: More projects over the years.
-
-projects:
-
-- slug: superglue
-  title: SuperGlue
-  video: true
-  description: At the MIT Media Lab, we created a digestion tool that cross-analyses verbal and nonverbal cues for presentation, analysis, and summarization of broadcast news. Our main objective was to understand the emotive content of a scene and study how such a presentation affects audiences. I spearheaded the body language analysis for this project, where we cross-examined hand gestures, facial expressions, and body posture of the newscaster as three dimensions of influence on the overall manner of demonstration. More here - <a href='//www.media.mit.edu/projects/sg-kinesics/overview/'>Official project page</a>
-
-- slug: presenceid
-  title: presence ID
-  description: A facial recognition-based Android attendance system built to improve transparency in student-teacher interaction, reduce instances of bias, and raise overall administrative efficiency. The algorithm was trained on 1000+ images and packaged as an Android app with separate interfaces for students and teachers. Features included components for courses, grading, personal dashboards, and registration.
-
-- slug: mlcat
-  title: MLCAT
-  description: We developed an IMAP server-based mailing list parser to analyse community structure and derive hypergraphs on communication patterns. Some questions we ask are - what is <a href='//en.wikipedia.org/wiki/Dunbars_number' target='_blank'>Dunbar’s number</a> on this list? Is there a correlation between the number of authors and the length of a thread? What is the churn rate of this network? Which factors make a thread popular, and can text mining help us detect them? Source code here - <a href='//github.com/tejalwakchoure/MLCAT' target='_blank'>GitHub</a>
-
-- slug: gs-internship
-  noshadow: true
-  description: This project is under NDA as it is affiliated with Goldman Sachs, but I have recreated its main components here. We created an end-to-end framework that queries data from 3 different sources simultaneously to create a black box for database querying. I designed and implemented the user interface for this project using ReactJS. 
-
-- slug: ml-labs
-  description: I took a Machine Learning course at university and I loved how the exercise graphs turned out. Here are some I found most exciting.
-
-- slug: automation
-  description: Web scraping scripts to automate some menial tasks. Source code here - <a href='//github.com/tejalwakchoure/' target='_blank'>GitHub</a>
-
-- slug: posters
-  description: Some posters I’ve made here and there, mostly at university :)
-
-- slug: illustrations
-  description: More fun! This is stuff I created while I was first toying around with Inkscape that I still hold dear.
-
+date: 1000-01-01
+img: srccon-idea-board-zoomed.png
+alt: srccon-idea-board-zoomed
+description: Ideas, designs, and visualizations.
 ---
 
 <!DOCTYPE html>
 <html>
-    <head>
-        {% include head.html %}
-        {% include js.html %}
-        {% include stylesheets.html %}
-    </head>
-    <body id="main" class="index" style="min-height: 100vh; display: flex; flex-direction: column; justify-content: space-between;">
-          {% include nav.html %}
-          {% include slider.html %}
-          {% include footer.html %}
-        </div>
-    </body>
+<head>
+	{% include head.html %}
+	{% include js.html %}
+	{% include stylesheets.html %}
+</head>
+<body>
+	{% include nav.html %}
+	
+	<!-- Project details section -->
+	<section id="projectDetails" class="article" data-nosnippet>
+		<!-- <div class="mt10"></div> -->
+		<div class="container" style="justify-content: center;">
+			<div class="col text-center">
+				<h1 class="project-title">{{ page.title }}</h1>
+				<!-- <h5 class="otherinfo" style="text-transform: unset;">Tejal Wakchoure | Published Dec 20, 2022</h5> -->
+			</div> 
+			<div class="mt5"></div>
+			<div id="content-row" class="row">
+				<p>
+					More visualization and design projects.
+				</p>
+			</div>
+			<hr style="margin-top:0;">
+			<div class="row" id="content-row">
+				<p>
+					Attended a fun talk at SRCCON where we brainstormed ideas for topic x presentation! Our group was tasked with presenting a story on television sitcoms as an interactive game. We came up with a 1v1 game called <em>Sitcom Smash</em> where you'd pit protagonists from common TV shows against one another!
+				</p>
+			</div>
+			<img src="../assets/img/portfolio/more-projects/srccon-idea-board-zoomed.png"  style="width: 100%; margin-bottom: 50px;" />
+			<img src="../assets/img/portfolio/more-projects/srccon-idea-board.png"  style="width: 100%; margin-bottom: 50px;" />
+			
+			<div class="row" id="content-row">
+				<p>
+					I took some courses on machine learning at university and I loved how the exercise graphs turned out. Here are some I found most exciting.
+				</p>
+			</div>
+			<img src="../assets/img/portfolio/more-projects/ml-labs.jpg">
+			
+			<div class="mt5"></div>
+			<div class="row" id="content-row">
+				<p>
+					I built a facial recognition-based Android attendance system to improve transparency in student-teacher interaction, reduce instances of bias, and raise overall administrative efficiency. The algorithm was trained on 1,000+ images and packaged as an Android app with separate interfaces for students and teachers. Features included components for courses, grading, personal dashboards, and registration.
+				</p>
+			</div>
+			<img src="../assets/img/portfolio/more-projects/presenceid.jpg">
+			
+			<div class="mt5"></div>
+			<div class="row" id="content-row">
+				<p>
+					Some event posters I've designed over the years :)
+				</p>
+			</div>
+			<img src="../assets/img/portfolio/more-projects/posters.jpg">
+			
+			<div class="mt5"></div>
+			<div class="row" id="content-row">
+				<p>
+					More fun stuff! These are graphics I created while I was first toying around with Illustrator that I still hold dear.
+				</p>
+			</div>
+			<img src="../assets/img/portfolio/more-projects/illustrations.jpg">
+			
+		</div>
+		
+	</div>
+</section>
+{% include footer.html %}
+</body>
 </html>
+
+<style>
+	/* section {
+	padding: 0;
+	} */
+</style>

@@ -1,0 +1,52 @@
+---
+project-id: 7
+title: Scrapers
+type: web scraping
+tag: datadesign
+
+date: 1000-01-01
+img: automation-grid.jpg
+alt: automation
+description: Python scrapers to automate boring tasks.
+---
+
+<!DOCTYPE html>
+<html>
+<head>
+	{% include head.html %}
+	{% include js.html %}
+	{% include stylesheets.html %}
+</head>
+<body>
+	{% include nav.html %}
+	
+	<!-- Project details section -->
+	<section id="projectDetails" class="article" data-nosnippet>
+		<!-- <div class="mt10"></div> -->
+		<div class="container" style="justify-content: center;">
+			<div class="col text-center">
+				<h1 class="project-title">{{ page.title }}</h1>
+				<!-- <h5 class="otherinfo" style="text-transform: unset;">Tejal Wakchoure | Published Dec 20, 2022</h5> -->
+			</div> 
+			<div class="row" id="content-row">
+				<div id="intro" class="mt5">
+					<p>
+						Web scraping scripts in Python to automate some repetitive tasks from start to end, including authentication. Source code on <a href='//github.com/tejalwakchoure/' target='_blank'>GitHub</a>.
+					</p>
+				</div>
+				
+			</div>
+			<div>
+				<img src="../assets/img/portfolio/automation/automation.jpg">
+			</div>
+		</div>
+	</section>
+	{% include footer.html %}
+</body>
+</html>
+
+<style>
+	img {
+		max-width: 100%;;
+	}
+</style>

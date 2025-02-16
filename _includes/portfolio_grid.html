@@ -1,86 +1,101 @@
 <!-- Portfolio Section -->
-<section id="work" style="padding-right: 6vw;">
-  <div class="container" style="padding: 0;">
-    <div class="col-lg-12 text-right heading-col">
-        <h2 class="heading" style="margin-right: -50px; font-size: 7.5rem;">{{ page.title }}</h2>
-    </div>
-
-    {% assign jrn = site.projects | sort: 'project-id' | where_exp: "item", "item.tag contains 'journalism'" %}
-    {% assign datades = site.projects | sort: 'project-id' | where_exp: "item", "item.tag contains 'datadesign'" %}
-
-    <!-- Portfolio Grid Section -->
-    <section id="portfolio">
-        <div class="container" style="/*padding: 20px 0;*/">
-            <div class="row">
-                <div class="col" style="padding: 1.1rem; text-align: right;">
-                    <h6 class="tagname" style="text-transform: lowercase; font-style: initial;">journalism</h6>
-                    <hr/>
+<section id="work">
+    <div class="container" style="padding: 0;">
+                
+        <div class="col-lg-12 text-right heading-col">
+            <h2 class="heading" style="margin-right: -50px; font-size: 7.5rem;">{{ page.title }}</h2>
+        </div>
+        
+        {% assign jrn = site.projects | sort: 'project-id' | where_exp: "item", "item.tag contains 'journalism'" %}
+        {% assign datades = site.projects | sort: 'project-id' | where_exp: "item", "item.tag contains 'datadesign'" %}
+        
+        <!-- Portfolio Grid Section -->
+        <section id="portfolio">
+            <div class="container">
+                <div class="row">
+                    <div class="col" style="padding: 1rem 0; text-align: right;">
+                        <h6 class="tagname" style="text-transform: lowercase; font-style: initial;">data reporting</h6>
+                        <hr/>
+                    </div>
                 </div>
-            </div>
-
-            <div class="row">
-              <div class="jrn masonry-grid">
-                  <!-- uses 'project-id' for ordering -->
-                  {% for project in jrn reversed %}
-                        <div class="masonry-item" id="{{ project.slug }}">
-                            <a href="{{ project.url }}" class="portfolio-link-wrapper">
+                
+                <div class="row">
+                    <div class="jrn portfolio-grid">
+                        <!-- uses 'project-id' for ordering -->
+                        {% for project in jrn reversed %}
+                        <div class="portfolio-item" id="{{ project.slug }}">
+                            <div class="portfolio-link-wrapper">
                                 <!-- <div class="overlay"> 
                                     <span style="margin: auto; padding: 10px;"> {{ project.title }} </span>
                                 </div> -->
-                                <picture>
-                                   <!-- <source 
-                                      media="(max-width: 768px)"
-                                      srcset="/assets/img/small-devices/portfolio/{{ pagename }}/{{ project.img }}">
-                                   <source 
-                                      srcset="/assets/img/portfolio/{{ pagename }}/{{ project.img }}"> -->
-                                      <img src="/assets/img/portfolio/{{ project.slug }}/{{ project.img }}" 
-                                   class="img-responsive" 
-                                   alt="{{ project.alt }}">
-                                </picture>
-                                <p class="grid-name">{{ project.title }}</p>
-                                <!-- <p class="grid-type">{{ project.type }}</p>  -->
-                            </a>
-                        </div>
-                  {% endfor %}
-                </div>
-            </div>
-
-
-            <div class="row mt10">
-                <div class="col" style="padding: 1.1rem; text-align: right;">
-                    <h6 class="tagname" style="text-transform: lowercase; font-style: initial;">data & design</h6>
-                    <hr/>
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="datades masonry-grid">
-                    <!-- uses 'project-id' for ordering -->
-                    {% for project in datades reversed %}
-                          <div class="masonry-item" id="{{ project.slug }}">
-                              <a href="{{ project.url }}" class="portfolio-link-wrapper">
-                                  <!-- <div class="overlay"> 
-                                      <span style="margin: auto; padding: 10px;"> {{ project.title }} </span>
-                                  </div> -->
-                                  <picture>
-                                     <!-- <source 
+                                <a class="portfolio-item-images" href="{{ project.url }}">
+                                    <!-- <picture> -->
+                                        <!-- <source 
                                         media="(max-width: 768px)"
                                         srcset="/assets/img/small-devices/portfolio/{{ pagename }}/{{ project.img }}">
-                                     <source 
+                                        <source 
                                         srcset="/assets/img/portfolio/{{ pagename }}/{{ project.img }}"> -->
+                                        <img src="/assets/img/portfolio/frame-top.svg" 
+                                        class="img-responsive frame">
                                         <img src="/assets/img/portfolio/{{ project.slug }}/{{ project.img }}" 
-                                     class="img-responsive" 
-                                     alt="{{ project.alt }}">
-                                  </picture>
-                                  <p class="grid-name">{{ project.title }}</p>
-                                  <!-- <p class="grid-type">{{ project.type }}</p>  -->
-                              </a>
-                          </div>
-                    {% endfor %}
-                  </div>
-              </div>
-              <div class="mt10"></div>
-        </div>
-    </section>
-  </div>
+                                        class="img-responsive" 
+                                        alt="{{ project.alt }}">
+                                    <!-- </picture> -->
+                                </a>
+                                <div>
+                                    <a href="{{ project.url }}"><p class="portfolio-item-title">{{ project.title }}</p></a>
+                                    <p class="portfolio-item-subtitle">{{ project.description }}</p>
+                                </div>
+                                <!-- <p class="grid-type">{{ project.type }}</p>  -->
+                            </div>
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+                
+                
+                <div class="row mt10">
+                    <div class="col" style="padding: 1.1rem 0; text-align: right;">
+                        <h6 class="tagname" style="text-transform: lowercase; font-style: initial;">code & design</h6>
+                        <hr/>
+                    </div>
+                </div>
+                
+                <div class="row">
+                    <div class="datades portfolio-grid">
+                        <!-- uses 'project-id' for ordering -->
+                        {% for project in datades reversed %}
+                        <div class="portfolio-item" id="{{ project.slug }}">
+                            <div class="portfolio-link-wrapper">
+                                <!-- <div class="overlay"> 
+                                    <span style="margin: auto; padding: 10px;"> {{ project.title }} </span>
+                                </div> -->
+                                <a href="{{ project.url }}" class="portfolio-item-images">
+                                    <!-- <picture> -->
+                                        <!-- <source 
+                                        media="(max-width: 768px)"
+                                        srcset="/assets/img/small-devices/portfolio/{{ pagename }}/{{ project.img }}">
+                                        <source 
+                                        srcset="/assets/img/portfolio/{{ pagename }}/{{ project.img }}"> -->
+                                        <img src="/assets/img/portfolio/frame-top.svg" 
+                                        class="img-responsive frame">
+                                        <img src="/assets/img/portfolio/{{ project.slug }}/{{ project.img }}" 
+                                        class="img-responsive" 
+                                        alt="{{ project.alt }}">
+                                    <!-- </picture> -->
+                                </a>
+                                <div>
+                                    <a href="{{ project.url }}"><p class="portfolio-item-title">{{ project.title }}</p></a>
+                                    <p class="portfolio-item-subtitle">{{ project.description }}</p>
+                                </div>
+                                <!-- <p class="grid-type">{{ project.type }}</p>  -->
+                            </div>
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+                <!-- <div class="mt10"></div> -->
+            </div>
+        </section>
+    </div>
 </section>

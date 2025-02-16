@@ -1,0 +1,61 @@
+---
+project-id: 9
+title: SuperGlue
+type: computational journalism
+tag: datadesign
+
+date: 1000-01-01
+img: superglue.gif
+alt: superglue
+description: Built a computational journalism tool at MIT for nonverbal language analysis on broadcast news.
+---
+
+<!DOCTYPE html>
+<html>
+<head>
+	{% include head.html %}
+	{% include js.html %}
+	{% include stylesheets.html %}
+</head>
+<body>
+	{% include nav.html %}
+	
+	<!-- Project details section -->
+	<section id="projectDetails" class="article" data-nosnippet>
+		<!-- <div class="mt10"></div> -->
+		<div class="container" style="justify-content: center;">
+			<div class="col text-center">
+				<h1 class="project-title">{{ page.title }}</h1>
+				<!-- <h5 class="otherinfo" style="text-transform: unset;">Tejal Wakchoure | Published Dec 20, 2022</h5> -->
+			</div> 
+			<div class="row" id="content-row" style="margin-top: 20px; padding-bottom: 0;">
+				<div id="intro">
+					<p>
+						At the MIT Media Lab, we created a digestion tool that analyzes verbal and nonverbal cues in the presentation and summarization of broadcast news. Our main objective was to understand the emotive content of a scene and study its influence on audiences and potential for cultivating political echo chambers.
+						
+						<br><br>
+						This artificial intelligence tool, 'SuperGlue', cross-analyzed 31 features including the anchors' expressions and body language. We analyzed visual cues on 14 national news channels, focusing on Fox and MSNBC.
+						
+						<br><br>
+						I spearheaded the nonverbal language analysis for this project, where we examined hand gestures, facial expressions, and body posture of the newscaster as three dimensions of influence on the overall manner of presentation. More here - <a href='//www.media.mit.edu/projects/sg-kinesics/overview/'>Official project page</a>
+					</p>
+				</div>
+				
+			</div>
+			<img src="../assets/img/portfolio/superglue/superglue.gif">
+		</div>
+	</section>
+	{% include footer.html %}
+</body>
+</html>
+
+<style>
+	.row {
+		justify-content: center;
+	}
+	img {
+		width: 100%;
+		max-width: 1024px;
+		margin: auto;
+	}
+</style>

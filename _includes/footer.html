@@ -1,39 +1,42 @@
 <!-- Footer -->
-<footer class="{{ include.dark_mode }}" style="{{ include.fix_footer_style | default: ; }}"> 
+<footer class="{{ include.dark_mode }} container" style="{{ include.fix_footer_style | default: ; }}"> 
   <!-- total width minus navbar -->
-  <div class="container" style="max-width: 100%; display: block; padding: 0;">
-    <div class="row" style="margin: 0.25rem 0;">
-      <div class="col float-left">     
+  <div class="" style="max-width: 100%; display: block; padding: 0;">
+    <div style="margin: 0.25rem 0;">
+      <div class="text-right">     
         <p>
           <a class="{{ include.dark_mode }}" 
           style="padding-right:8px;" href="mailto:tejal.wakchoure@gmail.com">
           <i class="fa fa-envelope" aria-hidden="true"></i></a>
-
+          
           <a  class="{{ include.dark_mode }}"
           style="padding-right:8px; padding-left:8px;" href="//linkedin.com/in/tejalw" target="_blank">
           <i class="fa fa-brands fa-linkedin-in" aria-hidden="true"></i></a>
-
+          
           <!-- <a  class="{{ include.dark_mode }}"
           style="padding-left:8px;" href="//github.com/tejalwakchoure" target="_blank">
           <i class="fa fa-brands fa-github" aria-hidden="true"></i></a> -->
-
+          
           <a  class="{{ include.dark_mode }}"
           style="padding-right:8px; padding-left:8px;" href="//twitter.com/tejaldehyde" target="_blank">
           <i class="fa fa-brands fa-twitter" aria-hidden="true"></i></a>
 
           <a  class="{{ include.dark_mode }}"
-          style="padding-left:8px;" href="//instagram.com/tejalwakchoure" target="_blank">
+          style="padding-right:8px; padding-left:8px;" href="//twitter.com/tejaldehyde" target="_blank">
           <i class="fa fa-brands fa-instagram" aria-hidden="true"></i></a>
-
+          
+          <a  class="{{ include.dark_mode }}"
+          style="padding-left:8px;" href="//instagram.com/tejalwakchoure" target="_blank">
+          <i class="fa fa-brands fa-github" aria-hidden="true"></i></a>
+          
         </p>
-        </div>
-        <div class="col text-right">
-          <p style="margin-bottom: 0; font-size: 0.8rem;">
-            made with <a class="text-link {{ include.dark_mode }}" href="//github.com/tejalwakchoure" target="_blank" 
-            style="text-decoration: underline;">github</a>.</p>
-            <p style="margin-bottom: 0; font-size: 0.8rem;">
-            © tejal wakchoure</p>
+        <!-- <p style="margin-bottom: 0; font-size: 0.8rem;">
+          made with <a class="text-link {{ include.dark_mode }}" href="//github.com/tejalwakchoure" target="_blank" 
+          style="text-decoration: underline;">github</a>.</p> -->
+          <!-- <p style="margin-bottom: 0; font-size: 0.8rem;">
+            © tejal wakchoure</p> -->
           </div>
         </div>
       </div>
     </footer>
+    

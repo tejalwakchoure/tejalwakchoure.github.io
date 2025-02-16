@@ -6,46 +6,45 @@ function fadeInChildren(parent, base_delay) {
   });
 }
 
-$(document).ready(function() {
-  if ($('#body-container').length) {
+//     // Preloader on first visit
+// $(document).ready(function() {
+//   if ($('#body-container').length) {
+//     if (!sessionStorage.getItem('doNotPreload')) {
+//       sessionStorage.setItem( 'doNotPreload', 'true' );
+//       $("#preloader").css({visibility: "visible", opacity: 1});
+//       $('#body-container').css({display: 'none'});
 
-    // Preloader if first visit
-    if (!sessionStorage.getItem('doNotPreload')) {
-      sessionStorage.setItem( 'doNotPreload', 'true' );
-      $("#preloader").css({visibility: "visible", opacity: 1});
-      $('#body-container').css({display: 'none'});
+//       var counter = 0;
+//       var outerInterval = setInterval(function(){
+//         $("#preloader .container #wrapper #count").html(counter);
+//         counter++;
+//         if(counter >= 101) {
+//           clearInterval(outerInterval);
+//           var innerInterval = setInterval(function() {
+//             if(document.readyState === 'complete') {
+//               clearInterval(innerInterval);
 
-      var counter = 0;
-      var outerInterval = setInterval(function(){
-        $("#preloader .container #wrapper #count").html(counter);
-        counter++;
-        if(counter >= 101) {
-          clearInterval(outerInterval);
-          var innerInterval = setInterval(function() {
-            if(document.readyState === 'complete') {
-              clearInterval(innerInterval);
+//                 // Animate components on and off the screen on loading
+//                 $('#preloader').slideUp(600);
+//                 $('#body-container').fadeIn(600);
+//                 fadeInChildren('#body-container header',500);
+//                 fadeInChildren('#body-container header .header-intro-text',100);
 
-                // Animate components on and off the screen on loading
-                $('#preloader').slideUp(600);
-                $('#body-container').fadeIn(600);
-                fadeInChildren('#body-container header',500);
-                fadeInChildren('#body-container header .header-intro-text',100);
-
-                // Fire up other elements
-                // startTime();
-                // addPortfolioParallax();
-              }
-            }, 7);
-        }
-      }, 7);
-    } else {
-     $('#preloader').css({display: "none"});
-     $('#preloader').css({opacity: 0.0, visibility: "visible"});
-   }
- }
-    // swiper_in.controller.control = swiper_innermost;
-    // swiper.controller.control = swiper_in;
-  });
+//                 // Fire up other elements
+//                 // startTime();
+//                 // addPortfolioParallax();
+//               }
+//             }, 7);
+//         }
+//       }, 7);
+//     } else {
+//      $('#preloader').css({display: "none"});
+//      $('#preloader').css({opacity: 0.0, visibility: "visible"});
+//    }
+//  }
+//     // swiper_in.controller.control = swiper_innermost;
+//     // swiper.controller.control = swiper_in;
+//   });
 
 // Portfolio parallax
 // function addPortfolioParallax() {

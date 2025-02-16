@@ -1,0 +1,85 @@
+---
+project-id: 3
+title: Mailing list analysis tool for community pattern detection
+type: machine learning
+tag: datadesign
+
+date: 1000-01-01
+img: mlcat.jpg
+alt: mlcat
+description: A parser that analyses structures and patterns in mailing list communication.
+---
+
+<!DOCTYPE html>
+<html>
+<head>
+	{% include head.html %}
+	{% include js.html %}
+	{% include stylesheets.html %}
+</head>
+<body>
+	{% include nav.html %}
+	
+	<!-- Project details section -->
+	<section id="projectDetails" class="article" data-nosnippet>
+		<!-- <div class="mt10"></div> -->
+		<div class="container" style="justify-content: center;">
+			<div class="col text-center">
+				<h1 class="project-title">{{ page.title }}</h1>
+				<!-- <h5 class="otherinfo" style="text-transform: unset;">Tejal Wakchoure | Published Dec 20, 2022</h5> -->
+			</div> 
+			<div class="row" >
+				<div id="content-row" class="mt5">
+					<p>
+						We developed an IMAP server-based mailing list parser to analyze community structure and derive hypergraphs on communication patterns. Some questions we asked:
+					</p>
+					
+					<ul>
+						<li>what is the <a href='//en.wikipedia.org/wiki/Dunbars_number' target='_blank'>Dunbar’s number</a> for this list?</li>
+						<li>Is there a correlation between the number of authors and the length of a thread?</li>
+						<li>What is the churn rate of this network?</li>
+						<li>Which factors make a thread popular, and can text mining help us detect them?</li>
+					</ul>
+					
+				</div>
+				
+				<div class="" style="margin-top: 50px;">
+					<img src="../assets/img/portfolio/mlcat/mlcat.jpg">
+				</div>
+				<p class="mt5">
+					More details on <a href='//github.com/tejalwakchoure/MLCAT' target='_blank'>GitHub</a>.
+				</p>
+				
+			</div>
+			<!-- <div id="overview" class="mt5">
+				<hr/>
+				<p style="font-style: italic;">
+					The terrible onslaught of fires in New York on Thanksgiving weekend caught my attention. Since the city's database is open and extensively recorded, I was able to look for trends and factors that might explain where or why these fires occur. I was itching to make a mapping visualization and obtained census data to that effect.
+				</p>
+				<br><br>
+				<p> <span class="bold">Project Type: </span>{{ page.type }}</p>
+				<p> <span class="bold">Role: </span>data storytelling, data visualization</p>
+				<p> <span class="bold">Tools: </span>Python(Jupyter) for data, Illustrator and Plotly for graphics</p>
+				<p> <span class="bold">Date: </span>December 2022</p>
+				<p><span class="bold">Sources:</span>
+					<a href="https://data.cityofnewyork.us/" target="_blank">
+						NYC Open Data</a>,
+						<a href="https://www.atsdr.cdc.gov/placeandhealth/svi/" target="_blank">
+							CDC/ATSDR census data</a></p>
+							<br><br>
+						</div> -->
+					</div>
+				</section>
+				{% include footer.html %}
+			</body>
+			</html>
+			
+			<style>
+				.row {
+					justify-content: center;
+				}
+				img {
+					width: 100%;
+					max-width: 1024px;
+				}
+			</style>

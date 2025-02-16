@@ -1,0 +1,85 @@
+---
+project-id: 11
+title: Elections 2024
+type: data structure, layout design
+tag: datadesign
+
+date: 1000-01-01
+img: homepage.png
+alt: homepage.png
+description: Created homepage visuals and a voter guide for the 2024 Maryland Primary and General Election.
+---
+
+<!DOCTYPE html>
+<html>
+<head>
+	{% include head.html %}
+	{% include js.html %}
+	{% include stylesheets.html %}
+</head>
+<body>
+	{% include nav.html %}
+	
+	<!-- Project details section -->
+	<section id="projectDetails" class="article" data-nosnippet>
+		<!-- <div class="mt10"></div> -->
+		<div class="container" style="justify-content: center;">
+			<div class="col text-center">
+				<h1 class="project-title">{{ page.title }}</h1>
+				<!-- <h5 class="otherinfo" style="text-transform: unset;">Tejal Wakchoure | Published Dec 20, 2022</h5> -->
+			</div> 
+			<div class="mt5"></div>
+			<div class="row" id="content-row">
+				<p>
+					Visualized the layout of The Banner's homepage on the night of the General Election and integrated AP widgets to fit the style language of the rest of the site.
+				</p>
+			</div>
+			<img src="../assets/img/portfolio/banner-elections/homepage.png"  style="width: 100%; margin-bottom: 50px;max-width: 768px;" />
+			<div class="mt5"></div>
+			<div class="row" id="content-row">
+				<p>
+					Built a voter guide for the 2024 Maryland Primary and the General Election with its own contained designs. Both the guides got high page views and furthered our efforts in utility journalism. I also got the chance to present this work at <a href="https://www.ire.org/training/conferences/nicar-2024/" target="_blank">NICAR</a>!
+				</p>
+			</div>
+			<img src="../assets/img/portfolio/banner-elections/voter-guide-interruptor.png"  style="width: 100%; margin-bottom: 50px;max-width: 996px;" />
+			<div class="mt5"></div>
+			<div class="row" id="content-row">
+				<p>
+					The voter guide implemented several new components fed via our CMS, like improved navigation and calls to action, an accordion questionnaire for profiles and a live blog for election day.
+				</p>
+			</div>
+			
+			<img src="../assets/img/portfolio/banner-elections/nicar-talk-2.png"  style="width: 100%; margin-bottom: 50px;" />
+			<div class="row split">
+				<img src="../assets/img/portfolio/banner-elections/voter-guide-questionnaire.png"  />
+				<img src="../assets/img/portfolio/banner-elections/live-blog.png" />
+			</div>
+			<div class="mt5"></div>
+			<div class="row" id="content-row">
+				<p>
+					H/T to THE CITY's Meet Your Mayor and the LAist's Voter Game Plan.
+				</p>
+			</div>
+			<img src="../assets/img/portfolio/banner-elections/nicar-talk-1.png"  style="width: 100%; margin-bottom: 50px;" />
+		</div>
+		
+	</div>
+</section>
+{% include footer.html %}
+</body>
+</html>
+
+<style>
+	.split {
+		padding: 0 2%;
+		/* height: min-content; */
+		img {
+			width: 50% !important;
+			object-fit: cover;
+		}
+	}
+	img {
+		max-width: 1200px;
+		margin: auto;
+	}
+</style>

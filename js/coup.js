@@ -305,19 +305,19 @@ $(document).ready(function() {
 
 
 
-      $('html, body').easeScroll({
-        frameRate: 30,
-        // animationTime: 3000,
-        stepSize: 30,
-        // pulseAlgorithm: 1,
-        // pulseScale: 8,
-        // pulseNormalize: 1,
-        // accelerationDelta: 20,
-        // accelerationMax: 1,
-        // keyboardSupport: true,
-        // arrowScroll: 50,
-        // touchpadSupport: true,
-      });
+      // $('html, body').easeScroll({
+      //   frameRate: 50,
+      //   // animationTime: 3000,
+      //   stepSize: 30,
+      //   // pulseAlgorithm: 1,
+      //   // pulseScale: 8,
+      //   // pulseNormalize: 1,
+      //   // accelerationDelta: 20,
+      //   // accelerationMax: 1,
+      //   // keyboardSupport: true,
+      //   // arrowScroll: 50,
+      //   // touchpadSupport: true,
+      // });
 
       $('div#coup-all').hide();
       $('.coup .btn').on('click', function(event){

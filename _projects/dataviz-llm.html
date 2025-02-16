@@ -1,0 +1,213 @@
+---
+project-id: 7
+title: A week of stories in LLMs
+type: data visualization, artificial intelligence
+tag: journalism
+
+date: 1000-02-02
+img: scatterplot.png
+alt: scatterplot
+description: An exploration of stories published by multiple outlets over a week using large-language models and D3.js.
+---
+
+<!DOCTYPE html>
+<html>
+<head>
+  {% include head.html %}
+  {% include js.html %}
+  {% include stylesheets.html %}
+  <script src="https://d3js.org/d3.v6.min.js"></script>
+</head>
+<body>
+  {% include nav.html %}
+  
+  <!-- Project details section -->
+  <section id="projectDetails" class="article" data-nosnippet>
+    <!-- <div class="mt10"></div> -->
+    <div class="container" style="justify-content: center;">
+      <div class="col text-center">
+        <h1 class="project-title">{{ page.title }}</h1>
+        <h5 class="otherinfo" style="text-transform: unset;">Tejal Wakchoure | Mar 13, 2024</h5>
+      </div> 
+      <div class="row" id="content-row">
+        <div id="intro" class="mt5">
+          <p>
+            This came out of a <a href="https://www.ire.org/training/conferences/nicar-2024/" target="_blank">NICAR</a> workshop on large-language models! We explored stories published by multiple outlets over a week using LLMs and D3.js. The database is a subset of <a href="https://www.mediacloud.org/media-cloud-directory" target="_blank">MediaCloud</a>, and the base scatterplot was produced by the LLM (ChatGPT).
+            <br><br>
+            Hover over points in the scatterplot to learn more about the stories, or filter the scatterplot by publication name. The subset we pulled includes stories from:
+            <br><br>
+            <span class="small" style="color:gray;"> Buzzfeed, CNBC, CNN, Fox News, LA Times, New York Post, Newsweek, Politico, Reuters, Reuters Japan, The Guardian, The New York Times, USA Today</span>
+            
+          </p>
+        </div>
+        <div>
+          <div style="text-align:center; margin: 50px auto;">
+            <input type="text" id="search" placeholder="Filter by Publication">
+          </div>
+          <div id="scatterplot"></div>
+        </div>
+        <div id="overview">
+        <p><span class="">Source:</span>
+          <a href="https://www.mediacloud.org/media-cloud-directory" target="_blank">
+            MediaCloud</a>
+            <br>
+            <span class="">Code:</span>
+            <a href="https://github.com/tejalwakchoure/tejalwakchoure.github.io/blob/master/_projects/dataviz-llm.html" target="_blank">
+              GitHub</a>
+            </p>
+          </div>
+        </div>
+        
+      </div>
+    </section>
+    {% include footer.html %}
+  </body>
+  </html>
+  
+  
+  <style>
+    body {
+      font-family: sans-serif;
+    }
+    input {
+      border: 2px solid #3a3a3a;
+      border-radius: 5px;
+      padding: 10px;
+    }
+    #scatterplot {
+      /* width: 800px; */
+      max-width: 100%;
+      height: 600px;
+      margin: 20px auto;
+      /* cursor: url('../assets/img/portfolio/dataviz-llm/cursor.png'), auto; */
+      /* border: 1px solid lightgray; */
+    }
+    
+    .tooltip {
+      position: absolute;
+      color: #393939;
+      background-color: #f7edfc;
+      border: 1px solid #393939;
+      /* border-radius: 5px; */
+      padding: 10px;
+      pointer-events: none;
+      opacity: 0;
+      text-align: left;
+      left: 0;
+      top: 0;
+    }
+  </style>
+  
+  <script>
+    // Load data from CSV
+    d3.csv("../chart-data/stories-with-embeddings.csv").then(function(data) {
+      // Create SVG container
+      var svg = d3.select("#scatterplot")
+      .append("svg")
+      // .attr("width", 800)
+      // .attr("height", 600);
+      .attr("viewBox", "0 0 800 600")  // Set aspect ratio (width x height)
+      .attr("preserveAspectRatio", "xMidYMid meet")  // Keeps aspect ratio
+      .style("width", "100%")  // Makes it scale with the container
+      .style("height", "auto") // Keeps height proportional
+      .style("display", "block");  // Prevents extra whitespace
+      
+      
+      // Define scales
+      var xScale = d3.scaleLinear()
+      .domain(d3.extent(data, d => +d.x))
+      .range([50, 750]);
+      
+      var yScale = d3.scaleLinear()
+      .domain(d3.extent(data, d => +d.y))
+      .range([550, 50]);
+      
+      // Define color scale
+      var colorScale = d3.scaleOrdinal(d3.schemeSet2)
+      .domain(data.map(d => d.domain));
+      
+      // Create circles
+      svg.selectAll("circle")
+      .data(data)
+      .enter().append("circle")
+      .attr("cx", d => xScale(+d.x))
+      .attr("cy", d => yScale(+d.y))
+      .attr("r", 5)
+      .attr("fill", d => colorScale(d.domain))
+      .on("mouseover", showTooltip)
+      .on("click", showTooltip)
+      .on("mouseout", hideTooltip);
+      
+      // Create tooltip
+      var tooltip = d3.select("#scatterplot")
+      .append("div")
+      .attr("class", "tooltip")
+      .style("opacity", 0);
+      
+      function showTooltip(event, d) {
+        const svg = d3.select("svg");
+        const bbox = svg.node().getBoundingClientRect();
+        const width = bbox.width;
+        const height = bbox.height;
+        
+        console.log(`SVG Width: ${width}, SVG Height: ${height}`);
+        
+        
+        
+        const [x, y] = d3.pointer(event, svg.node()); 
+        tooltip.transition()
+        .duration(200)
+        .style("opacity", 1);
+        tooltip.html(`<span style="color:black; font-weight: bold;">${d.title}</span><br><br>${d.publication}<br>Published ${d.publication_date}`)
+        .style("left", `${x - 10}px`)
+        .style("top", `${y + height - 20}px`);
+      }
+      
+      function hideTooltip() {
+        tooltip.transition()
+        .duration(200)
+        .style("opacity", 0);
+      }
+      
+      // Filter by search
+      d3.select("#search").on("input", function() {
+        var searchDomain = this.value.toLowerCase();
+        var filteredData = data.filter(d => d.publication.toLowerCase().includes(searchDomain));
+        svg.selectAll("circle")
+        .style("display", d => (d.publication.toLowerCase().includes(searchDomain) ? "block" : "none"));
+      });
+      
+      function resizeSVG() {
+        const svg = d3.select("svg");
+        const bbox = svg.node().getBBox();
+        
+        svg.style("width", "100%")  
+        .style("height", `${bbox.height}px`);
+        
+        const scatterplot = document.getElementById("scatterplot");
+        scatterplot.style.width = "100%";
+        scatterplot.style.height = `${bbox.height}px`;
+      }
+      resizeSVG();
+    });
+  </script>
+  
+  <!-- <p> Instructions:
+    Visit <a href="http://data4news.com", target="_blank">data4news.com</a> to see these instructions again.</p>
+    <section class="example-prompt">
+      <h2>Example Prompt to Get You Started</h2>
+      <ol>
+        <li><a href="chat.openai.com"></a>Login to ChatGPT</a> and enter the prompt below.</li>
+        <p class="prompt">I am looking to build a data visualization of some news stories in d3.js. The stories are from various news outlets from 02/25/2024 and 02/29/2024 and the data source is a database called MediaCloud.
+          
+          The data is in a CSV file named stories-with-embeddings.csv with the following columns: title,publication_date,capture_time,language,domain,url,original_capture_url,archive_playback_url,article_url,snippet,keywords,embedding,x,y
+          
+          Show me the code to make a scatterplot in D3 with a tooltip. Each dot should be placed at x,y. When a user hovers on the tooltip, they should see the title, publication_date and domain. And please add a search box that will let users filter by searching the Name column.
+          
+          Please provide the HTML, CSS and JS in separate files named index.html, style.css and script.js respectively
+        </p>
+        <li>It will give you three files (index.html, stlye.css and script.js). </li>
+        <li>Put the code into the respective files in VSCode and refresh this page to view the website it built for you.</li>
+      </ol>
+      
+    </section> -->

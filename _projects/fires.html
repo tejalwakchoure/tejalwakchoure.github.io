@@ -1,13 +1,13 @@
 ---
-project-id: 3
-title: Elevator buildings in New York at highest risk of structural fires
+project-id: 2
+title: More than 19,000 buildings in New York have open fire code violations
 type: data storytelling, data visualization
 tag: journalism
 
 date: 1000-01-03
 img: violations-map.png
 alt: map of violations
-description: Nearly 85% of all elevator buildings in Brooklyn have been served one or more notices of violation related to fire codes by the city's Department of Housing Preservation and Development (HPD) in the past four years. These include an 80-unit building with 135 violation orders (24 of which are open) and 26 buildings on Ridge Boulevard in Brooklyn, where a woman was critically injured in a fire last week.
+description: Mapping fire code violations in the city.
 ---
 
 <!DOCTYPE html>
@@ -23,16 +23,16 @@ description: Nearly 85% of all elevator buildings in Brooklyn have been served o
 
 	<!-- Project details section -->
 	<section id="projectDetails" class="fires article" data-nosnippet>
-		<div class="mt10"></div>
+		<!-- <div class="mt10"></div> -->
 		<div class="container" style="justify-content: center;">
 			<div class="col text-center">
 				<h1 class="project-title">{{ page.title }}</h1>
-				<h5 class="otherinfo" style="text-transform: unset;">Tejal Wakchoure | Published Dec 20, 2022</h5>
+				<h5 class="otherinfo" style="text-transform: unset;">Tejal Wakchoure | Dec 20, 2022</h5>
 			</div> 
 			<div class="row" id="content-row">
 					<div id="intro" class="mt5">
 						<p>
-							Nearly 85% of all elevator buildings in Brooklyn have been served one or more notices of violation related to fire codes by the city's Department of Housing Preservation and Development (HPD) in the past four years. These include an 80-unit building with 135 violation orders (24 of which are open) and 26 buildings on Ridge Boulevard in Brooklyn, where a woman was 
+							Nearly 85 percent of all elevator buildings in Brooklyn have been served one or more notices of violation related to fire codes by the city's Department of Housing Preservation and Development (HPD) in the past four years. These include an 80-unit building with 135 violation orders (24 of which are open) and 26 buildings on Ridge Boulevard in Brooklyn, where a woman was 
 							<span><a href="https://abc7ny.com/apartment-fire-bay-ridge-smoke-inhalation-critical-condition/12521701/" target="_blank">
 							critically injured</a></span> in a fire last week. 
 						</p>
@@ -60,7 +60,7 @@ description: Nearly 85% of all elevator buildings in Brooklyn have been served o
 						<p>
 							While multi-family elevator buildings were the most likely to have fire code violations, one and two-family buildings accounted for the lowest number of violations of any kind of occupied structure – even lower than vacant land. This could be attributed to the fact that this category is not subject to some fire safety codes, like the <a href = "https://www.nyc.gov/site/hpd/services-and-information/self-closing-doors.page" target="_blank">self-closing door rule</a>. And because most of the structures in Staten Island are one and two-family apartments, it has the fewest number of buildings with fire code violations overall.
 							<br><br>
-							As of December 2022, over 9,000 elevator buildings have open violations, some of them active since January 2019. 395 of these are rent-impairing, which if not corrected soon will be <a href="https://www.nyc.gov/site/hpd/services-and-information/code-enforcement.page" target="_blank">"a fire hazard or a serious threat to the life, health or safety of occupants"</a>. On reinspections, HPD has found that 766 buildings have not yet complied with their notices of violation. HPD was unable to access 606 buildings for reinspection, and 358 buildings sent in invalid certifications.
+							As of December 2022, over 9,000 elevator buildings have open violations, some of them active since January 2019. 395 of these are rent-impairing, which if not corrected soon will be <a href="https://www.nyc.gov/site/hpd/services-and-information/code-enforcement.page" target="_blank">"a fire hazard or a serious threat to the life, health or safety of occupants"</a>. On re-inspections, HPD has found that 766 buildings have not yet complied with their notices of violation. HPD was unable to access 606 buildings for re-inspection, and 358 buildings sent in invalid certifications.
 						</p>
 					</div>
 					<!-- <div id="boroughs">
@@ -83,24 +83,27 @@ description: Nearly 85% of all elevator buildings in Brooklyn have been served o
 						<!-- <p class="small">new map of all incidents (=alarm box locations; what if not?) laid on top of buildings (split by borough?). mention datetime on hover</p> -->
 					
 					
-				</div>
-				<div id="overview" class="mt5">
-					<hr/>
-					<p style="font-style: italic;">
+				
+				<div id="overview">
+					<!-- <p style="font-style: italic;">
 						The terrible onslaught of fires in New York on Thanksgiving weekend caught my attention. Since the city's database is open and extensively recorded, I was able to look for trends and factors that might explain where or why these fires occur. I was itching to make a mapping visualization and obtained census data to that effect.
 					</p>
 					<br><br>
 					<p> <span class="bold">Project Type: </span>{{ page.type }}</p>
 					<p> <span class="bold">Role: </span>data storytelling, data visualization</p>
 					<p> <span class="bold">Tools: </span>Python(Jupyter) for data, Illustrator and Plotly for graphics</p>
-					<p> <span class="bold">Date: </span>December 2022</p>
-					<p><span class="bold">Sources:</span>
+					<p> <span class="bold">Date: </span>December 2022</p> -->
+					<p> <span class="">Analysis: </span>
+						<a href="https://tejalwakchoure.github.io/Fires/fires" target="_blank">
+							Jupyter notebook</a>
+							<br>
+							<span class="">Sources:</span>
 						<a href="https://data.cityofnewyork.us/" target="_blank">
 						NYC Open Data</a>,
 						<a href="https://www.atsdr.cdc.gov/placeandhealth/svi/" target="_blank">
-						CDC/ATSDR census data</a></p>
-					<br><br>
+						CDC/ATSDR census data</a></p>					
 				</div>
+			</div>
 			</div>
 		</section>
 		{% include footer.html %}

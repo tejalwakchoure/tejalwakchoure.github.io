@@ -1,5 +1,5 @@
 ---
-project-id: 4
+project-id: 9
 title: New York, New York
 type: data storytelling, mapping, game development
 tag: journalism
@@ -7,7 +7,7 @@ tag: journalism
 date: 1000-01-10
 img: grid-image.gif
 alt: Taylor Swift
-description: Streets of NY referenced in songs
+description: A musical wordle of songs named after places in the city! Made entirely in JavaScript and Mapbox.
 ---
 
 
@@ -35,20 +35,21 @@ description: Streets of NY referenced in songs
       <div class="cover-screen screen"></div>
       
       <div class="title-screen screen">
-        <div class="text">
+        <div class="text" style="position: relative;">
           <h1 style="font-size: 2.5em;">{{ page.title }}</h1>
-          <p class="small" style="font-family: monospace;">- the city in music -</p>
-          <h5 class="otherinfo" style="padding: 20px 0; font-size:0.9rem !important; color: #393939;">Tejal Wakchoure | Published Aug 8, 2023</h5>
+          <p class="small" style="font-family: monospace;">- the city in music: a game -</p>
+          <h5 class="otherinfo" style="padding: 20px 0; font-size:0.9rem !important; color: #393939;">Tejal Wakchoure | Aug 8, 2023</h5>
           <a class="btn startbtn blinking" style="margin-top: 50px;">START</a>
+          <a id="methodologybtn" class="btn">methodology</a>
         </div>
       </div>
       
       <div class="intro-screen screen">
         <div class="text-div">
           <p>
-            In 2019, travel company Celebrity Cruises <a href="https://www.celebritycruises.com/music-mapped/" target="_blank">analyzed top-40 songs</a> since the 1960s to find the locations that inspired them. They found that the city of New York topped the list with over 160 songs to its name, followed by London at 102. And they just looked for the phrase 'New York' in the lyrics, so this data does not include the tracks named after any famous spots or neighborhoods in the city.
+            In 2019, travel company Celebrity Cruises <a href="https://www.celebritycruises.com/music-mapped/" target="_blank">analyzed chart toppers</a> since the 1960s to find the locations that inspired them. They found that the city of New York topped the list with over 160 songs to its name, followed by London at 102. And they just looked for the phrase 'New York' in the lyrics, so this data does not include the tracks named after any famous spots or neighborhoods in the city.
             <br><br>
-            No song demonstrates this city's popularity in the industry better than 2009's 'Empire State of Mind', which has been named the <a href="https://web.archive.org/web/20180813175234/http://theboombox.com/empire-state-of-mind-replaces-new-york-at-race-track/" target="_blank">"quintessential 21st-century theme song for New York City"</a> by the New York Racing Association.
+            No song demonstrates this city's popularity in the industry better than 2009's "Empire State of Mind", which has been named the <a href="https://web.archive.org/web/20180813175234/http://theboombox.com/empire-state-of-mind-replaces-new-york-at-race-track/" target="_blank">"quintessential 21st-century theme song for New York City"</a> by the New York Racing Association.
           </p>
           <div class="img-div" style="text-align: center;
           max-width: 400px;
@@ -237,25 +238,24 @@ description: Streets of NY referenced in songs
   </div>
 </div>
 
-<a id="methodologybtn" class="btn">more info</a>
 <div id="methodology" class="modal">
   <div class="modal-content">
     <p class="bold">Methodology</p>
     <p class="small">
-      Collected street names and public spaces (parks, neighborhoods) from NYC Open Data. Searched for these using Spotify's API to get a list of songs whose names matched. After manual analysis to confirm that these are actually places in NY (ex. there are multiple Mulberry Streets across the country), picked the most popular songs and plotted them on a map in geoJSON, moved the coordinates to Datawrapper, and finished the map using Illustrator/ai2html.
+      Collected street names and public spaces (parks, neighborhoods) from NYC Open Data and matched these against Spotify's song API. After manual analysis to confirm that these are actually places in New York (it turns out there are multiple Mulberry Streets across the country), I picked the most popular songs and plotted them on a map in Mapbox, moved the coordinates to Datawrapper, and finished the map using Illustrator/ai2html.
       <br><br>
-      For the game itself, used Javascript to build on the core game <a href="https://github.com/ozboware/wordled" target="_blank">'Wordled'</a>. Audio is embedded in HTML elements and played using the autoplay feature.
+      For the game itself, I used Javascript to build on the core game <a href="https://github.com/ozboware/wordled" target="_blank">'Wordled'</a> and embedded audio in HTML elements.
     </p>
-    <hr/>
+    <!-- <hr/>
     <p style="font-style: italic;" class="small">
       Data journalism project for the <a href="https://ledeprogram.com/" target="_blank"> Lede Program at Columbia</a>.
     </p>
     <br><br>
-    <p class="small"> <span class="bold">Project Type: </span>{{ page.type }}</p>
-    <p class="small"> <span class="bold">Role: </span>data analysis, mapping, data visualization, game development</p>
-    <p class="small"> <span class="bold">Tools: </span>Python(Jupyter) for API calls and analysis. GeoJSON, Datawrapper, Illustrator/ai2html, and Figma for graphics</p>
-    <p class="small"> <span class="bold">Date: </span>August 2023</p>
-    <p class="small"><span class="bold">Sources:</span> 
+    <p class="small"> <span class="bold">Project Type: </span>{{ page.type }}</p> -->
+    <!-- <p class="small"> <span class="bold">Role: </span>data analysis, mapping, data visualization, game development</p>
+    <p class="small"> <span class="bold">Tools: </span>Python(Jupyter) for API calls and analysis. Mapbox, Datawrapper, Illustrator/ai2html, and Figma for graphics</p> -->
+    <!-- <p class="small"> <span class="bold">Date: </span>August 2023</p> -->
+    <p class="small"><span class="">Sources:</span> 
       Spotify API,
       <a href="https://data.cityofnewyork.us/" target="_blank">NYC Open Data</a>,
       <a href="https://www.celebritycruises.com/music-mapped/" target="_blank">Music Mapped</a>

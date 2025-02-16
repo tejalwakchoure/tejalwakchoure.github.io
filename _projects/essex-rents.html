@@ -1,0 +1,72 @@
+---
+project-id: 7
+title: In Vermont, short-term rental prices shoot to the top
+type: data journalism, data visualization
+tag: journalism
+
+date: 1000-01-01
+img: chart.png
+alt: Essex rental prices
+description: Plotly and Illustrator graphic on the abrupt rise in short-term rental prices in Essex County, Vermont.
+---
+
+<!DOCTYPE html>
+<html>
+<head>
+	{% include head.html %}
+	{% include js.html %}
+	{% include stylesheets.html %}
+</head>
+<body>
+	{% include nav.html %}
+	
+	<!-- Project details section -->
+	<section id="projectDetails" class="article" data-nosnippet>
+		<!-- <div class="mt10"></div> -->
+		<div class="container" style="justify-content: center;">
+			<div class="col text-center">
+				<h1 class="project-title">{{ page.title }}</h1>
+				<h5 class="otherinfo" style="text-transform: unset;">Tejal Wakchoure | March 31, 2023</h5>
+			</div> 
+			<div class="row" id="content-row">
+				<div id="intro" class="mt5">
+					<p>
+						Short-term rental prices in Vermont follow a specific pattern—they rise in the winter and drop in the summer.
+						<br><br>
+						Airbnb and Vrbo data show that almost all counties follow this trend. This is hardly surprising, considering most tourists like to visit Vermont when the leaves change color or when it's a winter wonderland.
+						<br><br>
+						However, something strange happened in early 2021. While the rest of the counties had a generally consistent price over the winter, Essex County showed a sharp rise in average daily price. Normally, this would be explained by a simple shortage of available rental units – the higher the demand, the higher the price. But according to the same data, this rise was not accompanied by a huge change in the number of rental units. 
+						<br><br>
+						Short-term rentals in Essex are usually priced among the lowest of all counties. In February 2021, its average price surpassed that of all other counties, reaching $432 per night. 
+						<br><br>
+					</p>
+				</div>
+			</div>
+			<img style="width:90%; margin: auto;" src="../assets/img/portfolio/essex-rents/chart.png"/>
+			
+			<div class="row" id="content-row">
+				<div id="overview" class="mt5">
+					<!-- <hr/>
+					<p style="font-style: italic;">
+						The terrible onslaught of fires in New York on Thanksgiving weekend caught my attention. Since the city's database is open and extensively recorded, I was able to look for trends and factors that might explain where or why these fires occur. I was itching to make a mapping visualization and obtained census data to that effect.
+					</p>
+					<br><br>
+					<p> <span class="bold">Project Type: </span>{{ page.type }}</p>
+					<p> <span class="bold">Role: </span>data storytelling, data visualization</p>
+					<p> <span class="bold">Tools: </span>Python(Jupyter) for data, Illustrator and Plotly for graphics</p>
+					<p> <span class="bold">Date: </span>December 2022</p> -->
+					<p>
+						<span class="">Analysis: </span> Excel. I'm interested to examine this anomaly further and find out whether this sharp change was due to environmental factors, a change in housing or tourism policy, or something else entirely.
+						<br>
+						<span class="">Source:</span>
+						<a href="https://www.housingdata.org/profile" target="_blank">
+							Vermont housing data</a></p>
+						</div>
+						
+					</div>
+					
+				</div>
+			</section>
+			{% include footer.html %}
+		</body>
+		</html>

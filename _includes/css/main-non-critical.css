@@ -1632,7 +1632,7 @@ a.btn.startbtn {
 #howtobtn-gamescreen {
   z-index: 10;
   position: absolute;
-  top: 0;
+  bottom: 0;
   right: 0;
 }
 #scrollbtn {

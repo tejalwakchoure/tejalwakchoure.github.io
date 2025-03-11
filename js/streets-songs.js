@@ -102,26 +102,26 @@ $(".title-screen").css("display", "flex");
 
 
 document.querySelector(".startbtn").addEventListener("click", ()=> {
-    $('.title-screen:visible').fadeOut('slow', function() {
-        $('.intro-screen').fadeIn('slow');
+    $('.title-screen:visible').fadeOut('fast', function() {
+        $('.intro-screen').fadeIn('fast');
     });
 });
 
 document.querySelector(".intronextbtn").addEventListener("click", ()=> {
-    $('.intro-screen:visible').fadeOut('slow', function() {
-        $('.intro-2-screen').fadeIn('slow');
+    $('.intro-screen:visible').fadeOut('fast', function() {
+        $('.intro-2-screen').fadeIn('fast');
     });    
 });
 
 document.querySelector(".intro2nextbtn").addEventListener("click", ()=> {
-    $('.intro-2-screen:visible').fadeOut('slow', function() {
-        $('.game-intro-screen').fadeIn('slow');
+    $('.intro-2-screen:visible').fadeOut('fast', function() {
+        $('.game-intro-screen').fadeIn('fast');
     });    
 });
 
 document.querySelector(".gameintronextbtn").addEventListener("click", ()=> {
-    $('.game-intro-screen:visible').fadeOut('slow', function() {
-        $('.map-screen').fadeIn('slow');
+    $('.game-intro-screen:visible').fadeOut('fast', function() {
+        $('.map-screen').fadeIn('fast');
     });
 });
 
@@ -130,8 +130,8 @@ document.querySelectorAll("g .datapoint").forEach((pt)=> {
     // $(".map-screen").addClass("mt-full");
     // $('.game-screen').removeClass("mb-full");
     pt.addEventListener('click', () => {
-        $('.map-screen:visible').fadeOut('slow', function() {
-            $('.game-screen').fadeIn('slow');
+        $('.map-screen:visible').fadeOut('fast', function() {
+            $('.game-screen').fadeIn('fast');
         });
         
         var pt_id = pt.id.toLowerCase();
@@ -174,13 +174,13 @@ document.querySelectorAll("g .datapoint").forEach((pt)=> {
 // });
 
 function goBack() {
-    $('.game-screen:visible').fadeOut('slow', function() {
-        $('.map-screen').fadeIn('slow');
+    $('.game-screen:visible').fadeOut('fast', function() {
+        $('.map-screen').fadeIn('fast');
         var audio = document.getElementById("myTunePreview");
         if (!audio.paused) {audio.pause();}
     });
-    $('.breakdown-screen:visible').fadeOut('slow', function() {
-        $('.map-screen').fadeIn('slow');
+    $('.breakdown-screen:visible').fadeOut('fast', function() {
+        $('.map-screen').fadeIn('fast');
         var audio = document.getElementById("myTune");
         if (!audio.paused) {audio.pause();}
     });

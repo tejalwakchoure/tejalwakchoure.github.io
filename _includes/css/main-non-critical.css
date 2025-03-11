@@ -840,7 +840,6 @@ fill: #cda0ff !important;
     font-family: Orbitron, 'Source Sans Pro', Helvetica, sans-serif;
     
   }
-  
   #methodlogybtn {
     font-size: 14px;
     letter-spacing: 1px;
@@ -1610,14 +1609,19 @@ padding: 0 0 350px 0;
   padding: 1px;
 }
 
+a.btn.startbtn {
+  color: #c105a2 !important;
+  /* border: 2px solid #c105a2; */
+  letter-spacing: 2px;
+}
 #methodologybtn {
   /* z-index: 10; */
   position: absolute;
   bottom: 10px;
   font-size: small;
-  color: #c105a2 !important;
+  letter-spacing: 1px;
+  color: #393939 !important;
 }
-
 #howtobtn {
   font-size: 0.7rem;
   letter-spacing: 1px;
@@ -1625,14 +1629,12 @@ padding: 0 0 350px 0;
   width: fit-content;
   margin: 3px auto 0 auto;
 }
-
 #howtobtn-gamescreen {
   z-index: 10;
   position: absolute;
   top: 0;
   right: 0;
 }
-
 #scrollbtn {
   z-index: 10;
   position: absolute;
@@ -1641,11 +1643,9 @@ padding: 0 0 350px 0;
   color: #F19FE4;
 }
 
-
 div#mep_0 {
   display: none;
 }
-
 
 .songs a {
   color: #c105a2 !important;

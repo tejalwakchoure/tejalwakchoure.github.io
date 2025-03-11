@@ -843,7 +843,7 @@ fill: #cda0ff !important;
   #methodlogybtn {
     font-size: 14px;
     letter-spacing: 1px;
-    color: #393939;
+    /* color: #393939; */
   }
   
   .breakdown-screen {
@@ -1610,7 +1610,7 @@ padding: 0 0 350px 0;
 }
 
 a.btn.startbtn {
-  color: #c105a2 !important;
+  color: black !important;
   /* border: 2px solid #c105a2; */
   letter-spacing: 2px;
 }
@@ -1620,7 +1620,7 @@ a.btn.startbtn {
   bottom: 10px;
   font-size: small;
   letter-spacing: 1px;
-  color: #393939 !important;
+  color: #c105a2 !important;
 }
 #howtobtn {
   font-size: 0.7rem;

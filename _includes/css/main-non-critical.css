@@ -1632,8 +1632,8 @@ a.btn.startbtn {
 #howtobtn-gamescreen {
   z-index: 10;
   position: absolute;
-  bottom: 0;
-  right: 0;
+  bottom: 10px;
+  left: 20px;
 }
 #scrollbtn {
   z-index: 10;
@@ -1971,10 +1971,10 @@ padding-left: 0 !important;
   }
   /* #coup-l,
   #coup-s {
-    display: none;
+  display: none;
   }
   #coup-m {
-    display: block;
+  display: block;
   } */
 }
 

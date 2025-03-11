@@ -54,7 +54,7 @@ function fadeInChildren(parent, base_delay) {
 //             clearInterval(interval);
 //             var images = document.querySelectorAll('.px_img');
 //             images.forEach(img => {
-//                 var img_parallax = new simpleParallax(img, {delay: .5,
+  //                 var img_parallax = new simpleParallax(img, {delay: .5,
 //                                                             scale: 1.3,
 //                                                             transition: 'cubic-bezier(0,0,0,1)',
 //                                                             customWrapper: img.parentNode.nodeName,
@@ -240,26 +240,26 @@ function preloadImages(dir, imageArray, index=0) {
 
 // Horizontal header parallax
 $(window).on("load resize scroll", function() {
- if($('header').length) {
-	    // Depending on the browser, you may need to use var windowTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
-      var windowTop = $(window).scrollTop() || window.pageYOffset || 0;
-      var elementTop = $('header').offset().top || 0;
-      var currentpos = -10;
-      var factor = 5;
-      if($(window).width() < 1024) {
-        factor = 10;
-        currentpos = 0;
-      }
-	    var pos = currentpos + ((windowTop - elementTop) / factor); // was originally divided by 10
-
-	    if (pos < -10) {
-       pos = -10;
-     }
-	    // $('.hor_parallax_right').css({ right: pos });
-	    $('.hor_parallax_left').css({ left: pos });
-      console.log(pos);
+  if($('header').length) {
+    // Depending on the browser, you may need to use var windowTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
+    var windowTop = $(window).scrollTop() || window.pageYOffset || 0;
+    var elementTop = $('header').offset().top || 0;
+    var currentpos = -10;
+    var factor = 5;
+    if($(window).width() < 1024) {
+      factor = 10;
+      currentpos = 0;
     }
-  });
+    var pos = currentpos + ((windowTop - elementTop) / factor); // was originally divided by 10
+    
+    if (pos < -10) {
+      pos = -10;
+    }
+    // $('.hor_parallax_right').css({ right: pos });
+    $('.hor_parallax_left').css({ left: pos });
+    console.log(pos);
+  }
+});
 
 // // Horizontal header parallax for mobile
 // $(document.body).on('touchmove', function() {
@@ -291,12 +291,12 @@ $(window).on("load", function() {
       type: "fraction",
     },
   });
-
+  
   swiper.on('slideChange', function () {
-   active_slide = $(".swiper-slide-visible");
-   $('#current-title').html($(active_slide).data('title'));
-   $('#current-description').html($(active_slide).data('description'));
- });
+    active_slide = $(".swiper-slide-visible");
+    $('#current-title').html($(active_slide).data('title'));
+    $('#current-description').html($(active_slide).data('description'));
+  });
 });
 
 
@@ -311,7 +311,15 @@ $(document).ready(function() {
 // Back link on projects
 // ('back-link').setAttribute('href', document.referrer);
 function backlink() {
-    // $('back-link').attr('href', document.referrer);
-    history.back();
-    return false;
-  }
+  // $('back-link').attr('href', document.referrer);
+  history.back();
+  return false;
+}
+
+
+// document.addEventListener("DOMContentLoaded", function() {
+//   var link = document.createElement('link');
+//   link.rel = 'stylesheet';
+//   link.href = '/style-non-critical.css';
+//   document.head.appendChild(link);
+// });

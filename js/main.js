@@ -275,38 +275,36 @@ $(window).on("load resize scroll", function() {
 //   $('.hor_parallax_left').css({ left: pos });
 // });
 
-$(window).on("load", function() {
+
   // Swiper initialization
-  var swiper = new Swiper(".odds-ends-slider", {
-    effect: "fade",
-    centeredSlides: true,
-    rewind: true,
-    preventInteractionOnTransition: true,
-    navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
-    },
-    pagination: {
-      el: ".swiper-pagination",
-      type: "fraction",
-    },
-  });
+// $(window).on("load", function() {
+//   var swiper = new Swiper(".odds-ends-slider", {
+//     effect: "fade",
+//     centeredSlides: true,
+//     rewind: true,
+//     preventInteractionOnTransition: true,
+//     navigation: {
+//       nextEl: ".swiper-button-next",
+//       prevEl: ".swiper-button-prev",
+//     },
+//     pagination: {
+//       el: ".swiper-pagination",
+//       type: "fraction",
+//     },
+//   });
   
-  swiper.on('slideChange', function () {
-    active_slide = $(".swiper-slide-visible");
-    $('#current-title').html($(active_slide).data('title'));
-    $('#current-description').html($(active_slide).data('description'));
-  });
-});
+//   swiper.on('slideChange', function () {
+//     active_slide = $(".swiper-slide-visible");
+//     $('#current-title').html($(active_slide).data('title'));
+//     $('#current-description').html($(active_slide).data('description'));
+//   });
+// });
 
 
 // Hide overlay until images are loaded in portfolio
-$(document).ready(function() {
-  $('#portfolio .portfolio-link-wrapper').css({visibility: "visible"});
-  // Grainy page for subpages (doesn't work)
-  // var imageRoot = "https://tejalwakchoure.github.io/assets/img/grainy_page.jpeg";
-  // $(".grainy-page:after").css('backgroundImage', 'url(' + imageRoot + ')');
-});
+// $(document).ready(function() {
+//   $('#portfolio .portfolio-link-wrapper').css({visibility: "visible"});
+// });
 
 // Back link on projects
 // ('back-link').setAttribute('href', document.referrer);

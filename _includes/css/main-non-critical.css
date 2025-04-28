@@ -531,14 +531,20 @@ section.broadway {
   /* padding: 40px;
   margin: 100px 50px 100vh 50px; */
   padding: 40px 25px;
-  margin: 100px 25px 65vh 25px;
-  /* background: #121212; */
+  margin: 100px 25px 70vh 25px;
   color: white !important;
   vertical-align: middle;
   /* box-shadow: 0 0 13px 3px #7e7e7e; */
 }
+.graphic__prose .trigger h5 {
+  margin-bottom: 0;
+  padding-top: 2em;
+  background: #212121;
+}
 .graphic__prose .trigger p {
-  margin-top: 2em;
+  padding-top: 2em;
+  padding-bottom: 2em;
+  background: #212121;
   /* font-size: 1em; */
 }
 
@@ -549,31 +555,66 @@ section.broadway {
   right: 0;
   height: 100%;
   width: 50%;
-  /*right: -10%;*/
-  transition: all 100ms linear;
+  /* transition: all 100ms linear; */
 }
 
 #timeline .line {
   position: absolute;
   top: 0;
-  right: 25%;
+  right: 50%;
   height: 100%;
   width: 1px;
   background: linear-gradient(rgba(0,0,0,0) 0%, #5f5f5f 5%, #5f5f5f 95%, rgba(0,0,0,0));
   
 }
 
-.graphic__vis .img_wrapper {
+.graphic__vis #main_img,
+.graphic__vis #transition_img
+{
+  position: absolute;
   height: 300px;
   width: 300px;
   margin: calc( 50vh - 150px ) auto;
-  border: 1px solid #5f5f5f;
+  border: 5px solid #212121;
+  background-color: #212121;
   border-radius: 50%;
-  background: none;
-  background-size: cover !important;
-  transition: background 100ms ease-in-out;
+  object-fit: cover !important;
+  left: 0;
+  right: 0;
 }
-.graphic__vis .img_wrapper p {
+.graphic__vis #main_img {
+  z-index: 1;
+}
+/* .graphic__vis #transition_img {
+  top: calc(50vh - 150px);
+} */
+
+.graphic__prose .mobile-prose-img {
+  display: none !important;
+  height: 250px !important;
+  width: 250px !important;
+  background-color: #212121;
+  border: 10px solid  #212121;
+  border-radius: 50%;
+  object-fit: cover !important;
+  padding: 0;
+  display: block;
+  margin: auto; 
+  margin-top: 30px;
+}
+
+/* .graphic__vis .img_wrapper {
+height: 300px;
+width: 300px;
+margin: calc( 50vh - 150px ) auto;
+background-color: #212121;
+border-radius: 50%;
+background: none;
+background-size: cover !important;
+transition: background 100ms ease-in-out;
+} */
+
+#timeline p.caption {
   position: absolute; 
   top: calc( 50% + 175px ); 
   color: gray;    
@@ -583,6 +624,11 @@ section.broadway {
   margin-left:auto;
   margin-right:auto;
   background: #212121;
+}
+.graphic__prose p.caption {
+  display: none;
+  position: relative !important;
+  padding: 8px 0;
 }
 
 .graphic__vis.is-fixed {
@@ -2052,7 +2098,7 @@ padding-left: 0 !important;
   }
   .coup .graphic__prose {
     margin-left: 0;
-    width: 80%;
+    width: 60%;
     z-index: 5;
     position: relative;
   }
@@ -2063,9 +2109,16 @@ padding-left: 0 !important;
     width: 100% !important;
     margin: 10px auto;
   }
+  .coup .graphic__vis {
+    width: 40%;
+  }
   .graphic__vis .img_wrapper {
     height: 200px;
     width: 250px;
+  }
+  .graphic__vis #main_img, .graphic__vis #transition_img {
+    height: 200px;
+    width: 200px;
   }
   .graphic__vis .img_wrapper #img_text {
     top: calc( 50% + 75px ) !important;
@@ -2193,11 +2246,17 @@ padding-left: 0 !important;
   }
   .graphic__prose .trigger {
     width: 85vw;
-    padding: 20px;
+    padding: 20px 0;
     z-index: 2;
-    margin: 40vh 8vw;
+    margin: 0 8vw;
   }
-  .graphic__vis {
+  .graphic__prose .trigger h5 {
+    text-align: center;
+  }
+  .coup .graphic__vis {
+    width: 100%;
+  }
+  .graphic__vis .img_wrapper {
     display: none;
   }
   #gdp-barchart {
@@ -2205,9 +2264,10 @@ padding-left: 0 !important;
     margin: 5vh auto !important;
   }
   .coup img {
-    width: 300px !important;
-    height: 200px !important;
+    /* width: 300px !important;
+    height: 200px !important; */
     padding-bottom: 10px;
+    margin: auto;
   }
   #projectDetails .project-title {
     font-size: 1.7rem;
@@ -2239,6 +2299,13 @@ padding-left: 0 !important;
   }
   #coup-s {
     display: block;
+  }
+  #timeline .line {
+    right: 50%;
+  }
+  .graphic__prose .mobile-prose-img,
+  .graphic__prose p.caption {
+    display: block !important;
   }
   .arctic .large-heatmaps {
     display: none !important;

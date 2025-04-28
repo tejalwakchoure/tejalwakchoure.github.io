@@ -65,47 +65,77 @@ function processGDP(csvdata) {
   });
 }
 
+function crossfadeTo(img, newSrc, caption, newName) {
+  if (img.attr("src") != newSrc) {
+    // Fade out
+    img.transition("fade") // give the transition a name
+    .duration(200)
+    .style("opacity", 0)
+    .on("end", () => {
+      // When fade out is done:
+      img.interrupt("fade"); // stop any ongoing transition cleanly
+      img.attr("src", newSrc);
+      img.style("opacity", 0); // set opacity immediately to 0 (without transition)
+      // THEN fade back in
+      img.transition("fadein")
+      .duration(200)
+      .style("opacity", 1);
+      caption.textContent = newName;
+    });
+  }
+}
+
 window.createGraphic = function(graphicSelector) {
   
   var graphicEl = d3.select('.graphic')
   var graphicVisEl = graphicEl.select('.graphic__vis')
   var graphicProseEl = graphicEl.select('.graphic__prose')
-  var graphicVisImg = graphicVisEl.select('img')
-  var graphicVisImgWrapper = graphicVisEl.select('.img_wrapper')
+  var graphicVisImg = graphicVisEl.select('#main_img')
+  var graphicVisTransitionImg = graphicVisEl.select('#transition_img')
+  // var graphicVisImgWrapper = graphicVisEl.select('.img_wrapper')
   
-  var paragraph = document.getElementById("img_text");
-  
-  
+  var caption = document.getElementById("img_text");
+  var delay = 400;
   
   // actions to take on each step
   var steps = [
     function step0() {
-      graphicVisImgWrapper.style('background', 'url(../assets/img/portfolio/coup/1-kumba-yala.jpg)');
-      paragraph.textContent = "Kumba Yalá";
-      // graphicVisImg.attr('src', '../assets/img/portfolio/coup/1-kumba-yala.jpg');
+      // graphicVisImgWrapper.style('background', 'url(../assets/img/portfolio/coup/1-kumba-yala.jpg)');
+      // caption.textContent = "Kumba Yalá";      
+      setTimeout(() => {
+        crossfadeTo(graphicVisImg, '../assets/img/portfolio/coup/1-kumba-yala.jpg', caption, "Kumba Yalá");
+      }, delay);
     },
     
     function step1() {
-      graphicVisImgWrapper.style('background', 'url(../assets/img/portfolio/coup/2-henrique-rosa.jpg)');
-      paragraph.textContent = "Henrique Rosa";
-      // graphicVisImg.attr('src', '../assets/img/portfolio/coup/2-henrique-rosa.jpg');
+      // graphicVisImgWrapper.style('background', 'url(../assets/img/portfolio/coup/2-henrique-rosa.jpg)');
+      // paragraph.textContent = "Henrique Rosa";      
+      setTimeout(() => {
+        crossfadeTo(graphicVisImg, '../assets/img/portfolio/coup/2-henrique-rosa.jpg', caption, "Henrique Rosa");
+      }, delay);
     },
     
     function step2() {
-      graphicVisImgWrapper.style('background', 'url(../assets/img/portfolio/coup/3-vieira.jpg)');
-      paragraph.textContent = "João Bernardo Vieira";
-      // graphicVisImg.attr('src', '../assets/img/portfolio/coup/3-vieira.jpg');
+      // graphicVisImgWrapper.style('background', 'url(../assets/img/portfolio/coup/3-vieira.jpg)');
+      // paragraph.textContent = "João Bernardo Vieira";
+      setTimeout(() => {
+        crossfadeTo(graphicVisImg, '../assets/img/portfolio/coup/3-vieira.jpg', caption, "João Bernardo Vieira");
+      }, delay);
     },
     
     function step3() {
-      graphicVisImgWrapper.style('background', 'url(../assets/img/portfolio/coup/4-sanha.jpg)');
-      paragraph.textContent = "Malam Bacai Sanhá";
-      // graphicVisImg.attr('src', '../assets/img/portfolio/coup/4-sanha.jpg');
+      // graphicVisImgWrapper.style('background', 'url(../assets/img/portfolio/coup/4-sanha.jpg)');
+      // paragraph.textContent = "Malam Bacai Sanhá";
+      setTimeout(() => {
+        crossfadeTo(graphicVisImg, '../assets/img/portfolio/coup/4-sanha.jpg', caption, "Malam Bacai Sanhá");
+      }, delay);
     },
     function step4() {
-      graphicVisImgWrapper.style('background', 'url(../assets/img/portfolio/coup/5-manuel.jpg)');
-      paragraph.textContent = "Manuel Serifo Nhamadjo";
-      // graphicVisImg.attr('src', '../assets/img/portfolio/coup/5-manuel.jpg');
+      // graphicVisImgWrapper.style('background', 'url(../assets/img/portfolio/coup/5-manuel.jpg)');
+      // paragraph.textContent = "Manuel Serifo Nhamadjo";
+      setTimeout(() => {
+        crossfadeTo(graphicVisImg, '../assets/img/portfolio/coup/5-manuel.jpg', caption, "Manuel Serifo Nhamadjo");
+      }, delay);
     },
   ]
   
@@ -141,7 +171,7 @@ $(document).ready(function() {
     
     // viewport height
     var viewportHeight = window.innerHeight;
-    var halfViewportHeight = Math.floor(viewportHeight / 4);
+    var halfViewportHeight = Math.floor(viewportHeight / 2);
     
     // a global function creates and handles all the vis + updates
     var graphic = createGraphic('.graphic');
@@ -180,7 +210,7 @@ $(document).ready(function() {
           // tell our graphic to update with a specific step
           graphic.update(nextStep);
         },
-        offset: '50%',  // trigger halfway up the viewport
+        offset: '75%',  // trigger halfway up the viewport
       });
     });
     
@@ -223,5 +253,5 @@ $(document).ready(function() {
       // $('div#coup-all').css("opacity", "1");
     }
   });
-
+  
 });

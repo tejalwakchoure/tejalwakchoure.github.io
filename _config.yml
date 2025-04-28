@@ -1,7 +1,9 @@
 # Site settings
 title: Tejal Wakchoure
 url: https://tejalwakchoure.github.io
-description: Hi! I'm Tejal. I'm a product manager at The Baltimore Banner and a graduate of Columbia's Lede Program for data journalism. Previously, I researched computational journalism at MIT and studied computer science at BITS Pilani. I write on technology, politics and pop culture, and speak three human and five beep-boop languages.
+description: Hi! I'm Tejal. I manage data and newsroom products at The Baltimore Banner. I studied data journalism at Columbia, computational journalism at MIT, and computer science at BITS Pilani. I write about technology, politics and cities, and speak three human and five beep-boop languages.
+
+# Hi! I'm Tejal. I'm a product manager at The Baltimore Banner and a graduate of Columbia's Lede Program for data journalism. Previously, I researched computational journalism at MIT and studied computer science at BITS Pilani. I write on technology, politics and pop culture, and speak three human and five beep-boop languages.
 # description: Tejal Wakchoure's personal website - data and graphics journalist, newsroom product manager. Hi! I'm Tejal. I create products for the newsroom at The Baltimore Banner. I also tell stories using words and code as a data & graphics journalist trained at Columbia Journalism School's Lede Program for Data Journalism.
 
 meta_author: Tejal Wakchoure
@@ -18,8 +20,8 @@ color:
     backgroundcol: 'ffffff' #'C1DAFF' #'D4F5FF'
     backgroundcol_light: 'CDE1FF' #'dcf7ff' (preloader)
     backgroundcol_lightest: 'DCEAFF' #'e5f9ff' (preloader mobile + manually added on blog, change there if changed here)
-    link: '9d00db' #'3C7CDD' #'2C82D6'
-    link_dark:  '8209b1' #'0D5BCF' #'0755A4'
+    link: '8200db' #'9d00db' #'3C7CDD' #'2C82D6'
+    link_dark:  '6b06b0' #'8209b1' #'0D5BCF' #'0755A4'
     text: '000' #'393939' #'575757'
     button: '484848'
     heading: '000000'

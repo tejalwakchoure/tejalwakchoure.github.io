@@ -122,7 +122,8 @@ html {
 }
 
 p, ul, ol { 
-    font-size: 1.15rem;
+    /* font-size: 1.15rem; */
+    font-size: 20px;
 }   
 
 .small {   
@@ -563,26 +564,29 @@ header .img_div {
     max-width: 12em;
     margin: 0 0 0.8em 0;
     display: flex;
-    /* border-radius: 5px; */
+    border-radius: 5px;
     vertical-align: middle;
     text-align: center;
-    border: 1px solid black;
+    border: 1px solid #{{ site.color.button }};  
     /* box-shadow: 0px 0px 0px 2px black; */
 }
 #about .timepass .fa-parent .topper {
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid #{{ site.color.button }};  
 }
 #about .timepass .col:nth-of-type(1) .fa-parent .topper {
-    border-top: 6px solid #eebb31;
+    /* border-top: 6px solid #eebb31; */
+    border-top: 6px solid #{{ site.color.button }};  
 }
 #about .timepass .col:nth-of-type(2) .fa-parent .topper {
-    border-top: 6px solid #dc6eca;
+    /* border-top: 6px solid #dc6eca; */
+    border-top: 6px solid #{{ site.color.button }};  
 }
 #about .timepass .col:nth-of-type(3) .fa-parent .topper {
-    border-top: 6px solid #54af6f;
+    /* border-top: 6px solid #54af6f; */
+    border-top: 6px solid #{{ site.color.button }};  
 }
 #about .timepass .col:nth-of-type(4) .fa-parent .topper {
-    border-top: 6px solid #8f4fd9;
+    border-top: 6px solid #{{ site.color.button }};  
 }
 #about .timepass .fa {
     font-size: 3em;
@@ -593,16 +597,19 @@ header .img_div {
     /*transform: translate(-45%,0);*/
 }
 .fa-gamepad {
-    color: #eebb31;
+    /* color: #eebb31; */
+    color: #{{ site.color.button }};  
 }
 .fa-bookmark {
-    color: #dc6eca;
+    /* color: #dc6eca; */
+    color: #{{ site.color.button }};  
 }
 .fa-headphones {
-    color: #54af6f;
+    /* color: #54af6f; */
+    color: #{{ site.color.button }};  
 }
 .fa-tv {
-    color: #8f4fd9;
+    color: #{{ site.color.button }};  
 }
 
 /*#about .timepass .fa-shadow {
@@ -1203,7 +1210,7 @@ display: none;
     }
 }
 @media (max-width: 576px) { 
-    section {   
+    section, header, footer {   
         /* padding: 2% !important; */
         padding: 16px !important;
     }
@@ -1214,9 +1221,9 @@ display: none;
     .heading {
         font-size: 3.125rem;
     }
-    header {
+    /* header {
         padding: 2% !important;
-    }
+    } */
     .header-intro-text {
         width: -moz-min-content;
         width: -webkit-min-content;
@@ -1273,3 +1280,4 @@ display: none;
     @-ms-viewport{  
         width: device-width;  
     }
+}

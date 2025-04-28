@@ -396,6 +396,7 @@ section.broadway {
 .coup #vis {
   position: fixed;
 }
+#about hr,
 #projectDetails hr {
   margin: 5rem 0 2rem 0;
   max-width: 100%;
@@ -527,9 +528,11 @@ section.broadway {
 
 .graphic__prose .trigger {
   height: fit-content;
-  padding: 40px;
-  margin: 100px 50px 100vh 50px;
-  background: black;
+  /* padding: 40px;
+  margin: 100px 50px 100vh 50px; */
+  padding: 40px 25px;
+  margin: 100px 25px 65vh 25px;
+  /* background: #121212; */
   color: white !important;
   vertical-align: middle;
   /* box-shadow: 0 0 13px 3px #7e7e7e; */
@@ -547,16 +550,39 @@ section.broadway {
   height: 100%;
   width: 50%;
   /*right: -10%;*/
-  transition: all 200ms linear;
+  transition: all 100ms linear;
+}
+
+#timeline .line {
+  position: absolute;
+  top: 0;
+  right: 25%;
+  height: 100%;
+  width: 1px;
+  background: linear-gradient(rgba(0,0,0,0) 0%, #5f5f5f 5%, #5f5f5f 95%, rgba(0,0,0,0));
+  
 }
 
 .graphic__vis .img_wrapper {
   height: 300px;
   width: 300px;
   margin: calc( 50vh - 150px ) auto;
+  border: 1px solid #5f5f5f;
+  border-radius: 50%;
   background: none;
   background-size: cover !important;
-  transition: all 200ms linear;
+  transition: background 100ms ease-in-out;
+}
+.graphic__vis .img_wrapper p {
+  position: absolute; 
+  top: calc( 50% + 175px ); 
+  color: gray;    
+  width: fit-content;
+  left:0;
+  right:0;
+  margin-left:auto;
+  margin-right:auto;
+  background: #212121;
 }
 
 .graphic__vis.is-fixed {
@@ -2130,7 +2156,8 @@ padding-left: 0 !important;
     /* padding: 0 7px !important; */
     font-size: 1.5em !important;
   }
-  footer .fa-envelope {
+  footer .fa-envelope,
+  footer .fa-bluesky {
     font-size: 1.4em !important;
   }
   #main-img {
@@ -2375,7 +2402,8 @@ footer .fa {
   font-size: 1.2em;
 }
 
-footer .fa-envelope {
+footer .fa-envelope,
+footer .fa-bluesky {
   /* font-size: 1.4em; */
   font-size: 1.1em;
 }

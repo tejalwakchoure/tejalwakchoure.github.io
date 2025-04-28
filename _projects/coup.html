@@ -16,6 +16,7 @@ description: Only one elected president in Guinea-Bissau has ever completed a fi
 	{% include head.html %}
 	{% include js.html %}
 	<script src="{{ "/js/d3.v7.min.js" }}"></script>
+	<script src="{{ "/js/chart.min.js" }}"></script>
 	<script src="{{ "/js/waypoints.min.js" }}"></script>
 	<script defer src="../js/coup.js"></script>
 	{% include stylesheets.html %}
@@ -36,6 +37,13 @@ description: Only one elected president in Guinea-Bissau has ever completed a fi
 				<!-- <canvas id="country-heatmap" style="height: 1000px; width: 100%;"></canvas> -->
 				<!-- <canvas id="country-bubble"></canvas> -->
 				<div id="intro" class="mt5">
+					<hr style="margin: 20px auto">
+					<p style="font-size:18px;"><em>
+						<a href="https://tejalwakchoure.github.io/Coups/coup-readme" target="_blank">Head here</a> for details on the data collection, analysis, and visualization process for this story.
+					</em></p>
+					<hr style="margin: 20px auto">
+					<br>
+					<br>
 					<p>
 						On Feb. 1, 2022, 
 						<a href="https://www.aljazeera.com/news/2022/2/1/gunfire-heard-near-government-house-in-guinea-bissau" target="_blank">
@@ -53,10 +61,10 @@ description: Only one elected president in Guinea-Bissau has ever completed a fi
 				<p class="otherinfo">Guinea-Bissau's 10 attempts are followed by Venezuela and Mauritania with five attempts each</p>
 				<div class="btn-group btn-group-toggle text-center" data-toggle="buttons" style="width: fit-content; width: -webkit-fit-content; justify-content: center; margin: 50px auto;">
 					<label class="btn btn-outline-secondary btn-coup-2000 active" style="color: white;">
-						<input type="radio" name="options" id="coup-2000" autocomplete="off" checked> After 2000
+						<input type="radio" name="options" id="radio-coup-2000" autocomplete="off" checked> After 2000
 					</label>
 					<label class="btn btn-outline-secondary btn-coup-all" style="color: white;">
-						<input type="radio" name="options" id="coup-all" autocomplete="off" > All time
+						<input type="radio" name="options" id="radio-coup-all" autocomplete="off" > All time
 					</label>
 				</div>
 			</div>
@@ -99,7 +107,8 @@ description: Only one elected president in Guinea-Bissau has ever completed a fi
 	</div> -->
 	
 	
-	<div id="timeline" class='graphic mt5'>
+	<div id="timeline" class='graphic mt5' style="padding-top:5vh;">
+		<div class="line"></div>
 		<div class='graphic__prose'>
 			<div class='trigger' data-step='0'>
 				<h5>November 23, 2000</h5>
@@ -155,6 +164,7 @@ description: Only one elected president in Guinea-Bissau has ever completed a fi
 				<p>
 					The second successful coup attempt. President Sanhá dies in January 2012 from complications of diabetes. Following unrest regarding military reform policies, army officials led by Chief of Staff Ndjai attack Interim President Raimundo Pereira and both leading presidential contenders, including former Prime Minister Gomes Júnior. Periera and Gomes Júnior are arrested. Foreign embassies are sealed off and roads in and out of the capital are blockaded. Other members of the civilian government are ordered to turn themselves over to the Army. Manuel Serifo Nhamadjo is nominated as transitional president.
 					<br>
+					<br>
 					The coup has disastrous effects on the country's economy. GDP drops by almost 2 percent in a single year. Diplomatic relations also suffer as neighboring Senegal closes its borders and the UN imposes travel bans. After military officials suspected of involvement in drug trafficking seize power as a result of this coup, the cocaine trade picks up heavily in the country, giving it the name "the cocaine coup".
 				</p>
 			</div>
@@ -169,7 +179,7 @@ description: Only one elected president in Guinea-Bissau has ever completed a fi
 		
 		<div class='graphic__vis'>
 			<div class='img_wrapper'>
-				<p class='small' id='img_text' style="position: absolute; top: calc( 50% + 175px ); color: gray;"></p>
+				<p class='small' id='img_text'></p>
 			</div>
 			
 		</div>

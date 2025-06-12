@@ -25,3 +25,6 @@ temp/
 
 # Ignore todo list
 portfolio TODO.*
+
+# Ignore access codes for security
+js/access-codes.js

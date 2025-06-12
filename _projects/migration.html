@@ -1,0 +1,92 @@
+---
+<!-- project-id: 20 -->
+title: Virginia sees an influx in state-to-state migration for the first time in four years
+type: data journalism
+tag: journalism
+
+date: 1000-01-09
+img: Migration patterns TK.png
+alt: Migration patterns TK
+description: Migration patterns TK
+---
+
+
+<!DOCTYPE html>
+<html class="med-dark-mode">
+<head>
+	{% include head.html %}
+	{% include js.html %}
+	<script defer src="../js/access-codes.js"></script>
+	<script defer src="../js/migration-map.js"></script>
+	{% include stylesheets.html %}
+</head>
+<style>
+	.blink {
+		animation: blink 2s ease infinite;
+	}
+	@keyframes blink {
+		0% { opacity: 1; }
+		50% { opacity: 0; }
+		100% { opacity: 1; }
+	}
+</style>
+
+<body class="med-dark-mode">  
+	{% include nav.html dark_mode='med-dark-mode' light_shadow_style='color: #c5c5c5;' %}
+	
+	<!-- Project details section -->
+	<section id="projectDetails" class="arctic article"style="display: block;padding: 0;" data-nosnippet>		
+		<div class="container" style="justify-content: center; height: 100vh;position: relative;z-index: 1;">
+			<div class="row">
+				<div class="col text-center">
+					<h1 class="project-title">{{ page.title }}</h1>
+					<h5 class="otherinfo" style="text-transform: unset;margin: auto;">Tejal Wakchoure | June 13, 2025</h5>
+				</div> 
+			</div>
+			<div class="row" id="content-row">
+				<div id="intro" class="">
+					<p>
+						The Census Bureau recently released <a href="https://www.census.gov/programs-surveys/popest/data/tables.2023.List_58029271.html#list-tab-List_58029271" target="_blank">annual US population changes</a> on the state, county, and city levels for 2024.
+					</p>
+					<br>
+				</div>
+				<div class="mt5 text-center">
+					<i class="fa-solid fa-angles-down blink" style="margin: auto; font-size: 1.5em; color: #ffffff4a"></i>
+				</div>
+			</div>
+		</div>
+		
+		<div class="mt5" id="migration-map-container" style="position: relative; margin: 50vh 0;">
+			{% include migration-map.html %}
+		</div>
+		
+		<div class="container" style="justify-content: center;">
+			<div class="row" id="content-row">
+				<p class="mt5">
+					The rate of international migration into the state rose as well, following an upward trend since 2020 with a record +56,155 international migrants. Nearly 30 percent of this population moved into Fairfax County, offsetting its negative rate of domestic migration for a net positive rate of migration. That number might change under the Trump administration <a href="https://www.axios.com/local/richmond/2025/06/05/virginia-immigration-enforcement-ice-deportations" target="_blank">as law enforcement cracks down on immigration</a> in the state.					
+				</p>
+				<h5 class="takeaway mt5">Net migration in Virginia, 2020-2024</h5> 
+				<!-- <h5 class="otherinfo">Iodine levels in Arctic ice in parts per billion, 1950–2010</h5> -->
+				<div style="min-height:582px" id="datawrapper-vis-OsyZi"><script type="text/javascript" defer src="https://datawrapper.dwcdn.net/OsyZi/embed.js" charset="utf-8" data-target="#datawrapper-vis-OsyZi"></script><noscript><img src="https://datawrapper.dwcdn.net/OsyZi/full.png" alt="" /></noscript></div>
+				<br>
+				<h5 class="otherinfo">Source: 
+					Census Bureau
+				</h5>
+				
+				
+				<div id="overview" class="mt5" style="background-color: #1a1a1a;">
+					<p class="bold" style="margin-bottom: 20px;">Methodology</p>
+					<p class="">
+						Data collected from the Census Bureau in CSV and analyzed in Excel. Map interactive was built using Mapbox Studio And Mapbox GL JS, and line chart was built in Datawrapper.
+					</p>
+					<p> <span class="bold">Code: </span>
+						<a href="https://github.com/tejalwakchoure/tejalwakchoure.github.io/blob/master/_projects/migration.html" target="_blank">GitHub repository</a>
+					</p>
+				</div>
+			</div>
+		</div>
+	</section>
+	
+	{% include footer.html dark_mode='med-dark-mode' %}
+</body>
+</html>

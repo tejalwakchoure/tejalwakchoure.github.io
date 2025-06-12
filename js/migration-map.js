@@ -1,7 +1,7 @@
 var config = {
     style: 'mapbox://styles/tejalw/cmbr8zvrl00vq01s27hmr4uuh',
     // leave commented to use Mapbox Standard Style
-    accessToken: MAPBOX_TOKEN,
+    accessToken: 'pk.eyJ1IjoidGVqYWx3IiwiYSI6ImNtYnI2ZW54aDA2dXAyaXB2dm50NXFnY3IifQ.1YpdEWLRTTHVLE5W8A6TnA',
     showMarkers: false,
     markerColor: '#3FB1CE',
     projection: 'albers',

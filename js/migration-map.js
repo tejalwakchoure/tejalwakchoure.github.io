@@ -1,32 +1,16 @@
 var config = {
     style: 'mapbox://styles/tejalw/cmbr8zvrl00vq01s27hmr4uuh',
-    // leave commented to use Mapbox Standard Style
     accessToken: 'pk.eyJ1IjoidGVqYWx3IiwiYSI6ImNtYnI2ZW54aDA2dXAyaXB2dm50NXFnY3IifQ.1YpdEWLRTTHVLE5W8A6TnA',
-    showMarkers: false,
     markerColor: '#3FB1CE',
     projection: 'albers',
-    //Read more about available projections here
-    //https://docs.mapbox.com/mapbox-gl-js/example/projections/
     inset: false,
-    // insetOptions: {
-    //     markerColor: 'orange'
-    // },
-    // insetPosition: 'bottom-right',
     theme: 'dark',
-    // use3dTerrain: false, //set true for enabling 3D maps.
-    // auto: false,
-    // title: 'Your Title Goes Here',
-    // subtitle: 'The Storytelling Template helps you create an awesome animated map story with ease.',
-    // byline: 'By a I.M. Amapper',
-    // footer: 'Source: source citations, etc. <br> Created using <a href="https://github.com/mapbox/storytelling" target="_blank">Mapbox Storytelling</a> template.',
     chapters: [
         {
             id: 'slug-style-id',
             alignment: 'left',
             hidden: false,
-            // title: 'San Francisco',
-            // image: './assets/san-fran.jpeg',
-            description: 'Overall, Americans migrated towards the sun belt, continuing a trend from previous years. Texas led the way in numbers, making up nearly 21 percent of all the 411,004 domestic migrants between states from July 1, 2023 to July 1, 2024.',
+            description: 'Overall, Americans migrated towards the Sun Belt, continuing a trend from previous years. Texas led the way in numbers, making up nearly 21% of all the 411,004 state-to-state migrants between July 1, 2023 and July 1, 2024.',
             location: {
                 center: [-97.63692, 39.53021],
                 zoom: 4,
@@ -34,12 +18,15 @@ var config = {
                 bearing: 0
             },
             mapAnimation: 'flyTo',
-            // rotateAnimation: false,
             callback: '',
             onChapterEnter: [
                 {
                     layer: 'regions',
-                    opacity: 0.4
+                    opacity: 0.5
+                },
+                {
+                    layer: 'state-percent',
+                    opacity: 0
                 }
             ],
             onChapterExit: [
@@ -53,98 +40,79 @@ var config = {
             id: 'second-identifier',
             alignment: 'left',
             hidden: false,
-            // title: 'Washington, D.C.',
-            // image: './assets/washington-dc.jpg',
             description: 'This is not surprising. Texas, like most other southern states, has seen a positive net state-to-state migration since 2020.',
             location: {
                 center: [-97.63692, 39.53021],
                 zoom: 4,
                 pitch: 0,
                 bearing: 0
-                // flyTo additional controls-
-                // These options control the flight curve, making it move
-                // slowly and zoom out almost completely before starting
-                // to pan.
-                //speed: 2, // make the flying slow
                 //curve: 1, // change the speed at which it zooms out
             },
             mapAnimation: 'flyTo',
-            // rotateAnimation: true,
             callback: '',
-            onChapterEnter: [ {
-                layer: 'state-percent',
-                opacity: 0.4
-            }],
-            onChapterExit: [ {
-                layer: 'state-percent',
-                opacity: 0
-            }]
+            onChapterEnter: [ 
+                {
+                    layer: 'state-percent',
+                    opacity: 0.5
+                }
+            ],
+            onChapterExit: [ 
+                {
+                    layer: 'state-percent',
+                    opacity: 0
+                }
+            ]
         },
         {
             id: 'third-identifier',
             alignment: 'left',
             hidden: false,
-            // title: 'Minneapolis',
-            // image: './assets/geneva.jpg',
-            description: 'In fact, the only state in the sun belt that has flipped from a net negative rate of domestic migration to net positive is Virginia. With a record population of 8.8 million, it saw the highest number of domestic migrants in the past four years. <br><br> This rise in population was accompanied by the <a href="https://www.elections.virginia.gov/resultsreports/registrationturnout-statistics/" target="_blank">highest ever number of registered voters in the state</a> for a presidential election since 1976 (Kamala Harris won Virginia in November 2024 by a 5.78% margin). As demand increased, statewide median home prices also rose by 7 percent year-over-year, reaching $461,800 in July 2024 <a href="https://www.redfin.com/state/Virginia/housing-market#supply" target="_blank">according to housing data from Redfin</a>.',
+            description: 'In fact, the only state in the Sun Belt that has flipped from a net negative rate of domestic migration to positive is Virginia. With a record population of 8.8 million, it saw the highest number of domestic migrants in the past four years. <br><br> This rise in population was accompanied by the <a href="https://www.elections.virginia.gov/resultsreports/registrationturnout-statistics/" target="_blank">highest-ever number of registered voters in the state</a> for a presidential election since 1976 (Kamala Harris won Virginia in November 2024 by a 5.78% margin). As demand increased, statewide median home prices also rose by 7% year-over-year, reaching $461,800 in July 2024 <a href="https://www.redfin.com/state/Virginia/housing-market#supply" target="_blank">according to housing data from Redfin</a>.',
             location: {
                 center: [-81.86057, 37.51803],
-                zoom: 6.25,
+                zoom: 6.5,
                 pitch: 8.01,
-                bearing: 0
+                bearing: 0,
+                speed: 1.5
             },
             mapAnimation: 'flyTo',
-            // rotateAnimation: false,
             callback: '',
-            onChapterEnter: [{
-                layer: 'va-counties',
-                opacity: 1
-            }],
-            onChapterExit: [{
-                layer: 'va-counties',
-                opacity: 0
-            }]
+            onChapterEnter: [
+                {
+                    layer: 'va-counties-migration',
+                    opacity: 1
+                }
+            ],
+            onChapterExit: [
+                {
+                    layer: 'va-counties-migration',
+                    opacity: 0
+                }
+            ]
         },
         {
             id: 'fourth-chapter',
             alignment: 'left',
             hidden: false,
-            // title: 'Buenos Aires',
-            // image: './assets/buenos-aires.jpg',
-            description: 'Chesterfield County and Suffolk city saw the most increase in domestic migration in the past year, by +2,096 and +1,608 residents respectively. Fairfax County lost the most residents in the state, losing -8,323 residents to other counties in and outside the state.',
+            description: 'Chesterfield County and Suffolk City saw the highest number of domestic migrants in the past year, raising their population by 2,096 and 1,608 residents respectively. Fairfax County lost the most residents in the state, losing 8,323 residents to other counties in and outside the state.',
             location: {
                 center: [-81.86057, 37.51803],
-                zoom: 6.25,
+                zoom: 6.5,
                 pitch: 8.01,
                 bearing: 0
             },
             mapAnimation: 'flyTo',
-            // rotateAnimation: false,
             callback: '',
-            onChapterEnter: [{
-                layer: 'va-counties',
-                opacity: 1
-            }],
-            onChapterExit: [{
-                layer: 'va-counties',
-                opacity: 0
-            }]
+            onChapterEnter: [
+                {
+                    layer: 'va-counties-migration',
+                    opacity: 1
+                }
+            ],
+            onChapterExit: []
         }
     ]
 };
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 var initLoad = true;
 var layerTypes = {
@@ -165,6 +133,7 @@ var alignments = {
 }
 
 function getLayerPaintType(layer) {
+    console.log("PROBELM LAYER:", layer)
     var layerType = map.getLayer(layer).type;
     return layerTypes[layerType];
 }
@@ -294,32 +263,8 @@ if (config.showMarkers) {
 
 // instantiate the scrollama
 var scroller = scrollama();
-
-
 map.on("load", function () {
-    // if (config.use3dTerrain) {
-    //     map.addSource('mapbox-dem', {
-    //         'type': 'raster-dem',
-    //         'url': 'mapbox://mapbox.mapbox-terrain-dem-v1',
-    //         'tileSize': 512,
-    //         'maxzoom': 14
-    //     });
-    //     // add the DEM source as a terrain layer with exaggerated height
-    //     map.setTerrain({ 'source': 'mapbox-dem', 'exaggeration': 1.5 });
-    
-    //     // add a sky layer that will show when the map is highly pitched
-    //     map.addLayer({
-    //         'id': 'sky',
-    //         'type': 'sky',
-    //         'paint': {
-    //             'sky-type': 'atmosphere',
-    //             'sky-atmosphere-sun': [0.0, 0.0],
-    //             'sky-atmosphere-sun-intensity': 15
-    //         }
-    //     });
-    // };
-    
-    // setup the instance, pass callback functions
+    // set up the instance, pass callback functions
     scroller
     .setup({
         step: '.step',
@@ -367,16 +312,52 @@ map.on("load", function () {
         }
     });
     
-    
     if (config.auto) {
         document.querySelectorAll('[data-scrollama-index="0"]')[0].scrollIntoView();
     }
+    
+    // Create a popup, but don't add it to the map yet.
+    const popup = new mapboxgl.Popup({
+        closeButton: false,
+        closeOnClick: false
+    });
+    
+    map.on('mouseenter', 'va-counties-migration', (e) => {
+        if (map.getPaintProperty('va-counties-migration', 'icon-opacity') == 0) {
+            return;
+        }
+        
+        // Copy coordinates array.
+        console.log(e.features[0])
+        const coordinates = e.features[0].geometry.coordinates.slice();
+        const name = e.features[0].properties['NAMELSAD'];
+        const migration = e.features[0].properties['Net Domestic Migration'];
+        const description = name + '<br>' + migration;
+        
+        // Ensure that if the map is zoomed out such that multiple
+        // copies of the feature are visible, the popup appears
+        // over the copy being pointed to.
+        if (['mercator', 'equirectangular'].includes(map.getProjection().name)) {
+            while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) {
+                coordinates[0] +=
+                e.lngLat.lng > coordinates[0] ? 360 : -360;
+            }
+        }
+    
+        // Populate the popup and set its coordinates
+        // based on the feature found.
+        popup.setLngLat(coordinates).setHTML(description).addTo(map);
+    });
+    
+    map.on('mouseleave', 'va-counties-migration', () => {
+        popup.remove();
+    });
+    map.setPaintProperty('va-counties-migration', 'icon-opacity', 0);
 });    
 
 window.addEventListener('scroll', () => {
     const scrolly = document.getElementById('story');
     const rect = scrolly.getBoundingClientRect();
-    
     const inView = rect.top < window.innerHeight && rect.bottom > 0;
     document.body.classList.toggle('scrolly-visible', inView);
 });

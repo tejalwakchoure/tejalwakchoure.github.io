@@ -5,9 +5,9 @@ type: data journalism
 tag: journalism
 
 date: 1000-01-09
-img: Migration patterns TK.png
-alt: Migration patterns TK
-description: Migration patterns TK
+img: migration-map-va.png
+alt: Domestic migration patterns across the country
+description: Exploring annual domestic migration patterns across the country using a scrolly map.
 ---
 
 
@@ -26,29 +26,16 @@ description: Migration patterns TK
 </head>
 
 <style>
-	.blink {
-		animation: blink 2s ease infinite;
-	}
-	@keyframes blink {
-		0% { opacity: 1; }
-		50% { opacity: 0; }
-		100% { opacity: 1; }
-	}
-	.mapboxgl-popup-content {
-		background-color: #2e2e2e9f;
-		font-size: 12px;
-		padding: 5px;
-		text-align: center;
-		color: #e0e0e0;
-	}
-	.mapboxgl-popup-anchor-bottom .mapboxgl-popup-tip {
-		border-top-color: #2e2e2e9f;
-	}
 	#map {
 		top: 0;
 		height: 100vh;
 		width: 100vw;
 		position: fixed;
+		opacity: 0;
+		transition: opacity 0.25s ease;
+	}
+	body.scrolly-visible #map {
+		opacity: 1;
 	}
 	
 	#features {
@@ -92,7 +79,6 @@ description: Migration patterns TK
 	
 	.step {
 		padding-bottom: 50vh;
-		/* margin-bottom: 10vh; */
 		opacity: 0.25;
 	}
 	
@@ -111,7 +97,6 @@ description: Migration patterns TK
 	}
 	
 	@media (max-width: 750px) {
-		
 		.centered,
 		.lefty,
 		.righty,
@@ -125,18 +110,25 @@ description: Migration patterns TK
 	.mapboxgl-canvas-container.mapboxgl-touch-zoom-rotate.mapboxgl-touch-drag-pan,
 	.mapboxgl-canvas-container.mapboxgl-touch-zoom-rotate.mapboxgl-touch-drag-pan .mapboxgl-canvas {
 		touch-action: unset;
+	}	
+	.mapboxgl-popup-content {
+		background-color: #2e2e2ec0;
+		font-size: 12px;
+		padding: 5px;
+		text-align: center;
+		color: #e0e0e0;
 	}
-	
-	#map {
-		opacity: 0;
-		transition: opacity 0.25s ease;
-		/* z-index: 0; */
+	.mapboxgl-popup-anchor-bottom .mapboxgl-popup-tip {
+		border-top-color: #2e2e2ec0;
 	}
-	
-	body.scrolly-visible #map {
-		opacity: 1;
+	.blink {
+		animation: blink 2s ease infinite;
 	}
-	
+	@keyframes blink {
+		0% { opacity: 1; }
+		50% { opacity: 0; }
+		100% { opacity: 1; }
+	}
 </style>
 
 

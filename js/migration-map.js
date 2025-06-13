@@ -1,19 +1,23 @@
+
+// Using Scrollama and Mapbox GL to create an interactive scrollytelling map exploring domestic migration data from the Census Bureau
+// Built on top of https://github.com/mapbox/storytelling
 var config = {
+    // apply base styles with layers from mapbox studio
     style: 'mapbox://styles/tejalw/cmbr8zvrl00vq01s27hmr4uuh',
     accessToken: 'pk.eyJ1IjoidGVqYWx3IiwiYSI6ImNtYnI2ZW54aDA2dXAyaXB2dm50NXFnY3IifQ.1YpdEWLRTTHVLE5W8A6TnA',
-    markerColor: '#3FB1CE',
     projection: 'albers',
     inset: false,
     theme: 'dark',
     chapters: [
         {
+            // Chapter 1: Overall trends by region
             id: 'slug-style-id',
             alignment: 'left',
             hidden: false,
             description: 'Overall, Americans migrated towards the Sun Belt, continuing a trend from previous years. Texas led the way in numbers, making up nearly 21% of all the 411,004 state-to-state migrants between July 1, 2023 and July 1, 2024.',
             location: {
                 center: [-97.63692, 39.53021],
-                zoom: 4,
+                zoom: 3.9,
                 pitch: 0,
                 bearing: 0
             },
@@ -21,55 +25,56 @@ var config = {
             callback: '',
             onChapterEnter: [
                 {
+                    // adding the layer with regional datapoints when the reader scrolls in
                     layer: 'regions',
                     opacity: 0.5
-                },
-                {
-                    layer: 'state-percent',
-                    opacity: 0
                 }
             ],
             onChapterExit: [
                 {
+                    // removing regional layer when the reader scrolls past
                     layer: 'regions',
                     opacity: 0
                 }
             ]
         },
         {
+            // Chapter 2: Trends by state
             id: 'second-identifier',
             alignment: 'left',
             hidden: false,
             description: 'This is not surprising. Texas, like most other southern states, has seen a positive net state-to-state migration since 2020.',
             location: {
                 center: [-97.63692, 39.53021],
-                zoom: 4,
+                zoom: 3.9,
                 pitch: 0,
                 bearing: 0
-                //curve: 1, // change the speed at which it zooms out
             },
             mapAnimation: 'flyTo',
             callback: '',
             onChapterEnter: [ 
                 {
+                    // adding the layer with state-level datapoints when the reader scrolls in
                     layer: 'state-percent',
                     opacity: 0.5
                 }
             ],
             onChapterExit: [ 
                 {
+                    // removing regional layer when the reader scrolls past
                     layer: 'state-percent',
                     opacity: 0
                 }
             ]
         },
         {
+            // Chapter 3: Focusing on Virginia
             id: 'third-identifier',
             alignment: 'left',
             hidden: false,
             description: 'In fact, the only state in the Sun Belt that has flipped from a net negative rate of domestic migration to positive is Virginia. With a record population of 8.8 million, it saw the highest number of domestic migrants in the past four years. <br><br> This rise in population was accompanied by the <a href="https://www.elections.virginia.gov/resultsreports/registrationturnout-statistics/" target="_blank">highest-ever number of registered voters in the state</a> for a presidential election since 1976 (Kamala Harris won Virginia in November 2024 by a 5.78% margin). As demand increased, statewide median home prices also rose by 7% year-over-year, reaching $461,800 in July 2024 <a href="https://www.redfin.com/state/Virginia/housing-market#supply" target="_blank">according to housing data from Redfin</a>.',
             location: {
-                center: [-81.86057, 37.51803],
+                center: [-80.86057, 37.51803],
                 zoom: 6.5,
                 pitch: 8.01,
                 bearing: 0,
@@ -79,24 +84,27 @@ var config = {
             callback: '',
             onChapterEnter: [
                 {
+                    // adding the layer with county-level datapoints when the reader scrolls in
                     layer: 'va-counties-migration',
                     opacity: 1
                 }
             ],
             onChapterExit: [
                 {
+                    // removing county layer when the reader scrolls past
                     layer: 'va-counties-migration',
                     opacity: 0
                 }
             ]
         },
         {
+            // Chapter 3: Focusing on Virginia ctd. with additional context
             id: 'fourth-chapter',
             alignment: 'left',
             hidden: false,
             description: 'Chesterfield County and Suffolk City saw the highest number of domestic migrants in the past year, raising their population by 2,096 and 1,608 residents respectively. Fairfax County lost the most residents in the state, losing 8,323 residents to other counties in and outside the state.',
             location: {
-                center: [-81.86057, 37.51803],
+                center: [-80.86057, 37.51803],
                 zoom: 6.5,
                 pitch: 8.01,
                 bearing: 0
@@ -105,6 +113,7 @@ var config = {
             callback: '',
             onChapterEnter: [
                 {
+                    // adding the layer with county-level datapoints when the reader scrolls in
                     layer: 'va-counties-migration',
                     opacity: 1
                 }
@@ -114,6 +123,8 @@ var config = {
     ]
 };
 
+
+// More config for Mapbox GL
 var initLoad = true;
 var layerTypes = {
     'fill': ['fill-opacity'],
@@ -132,12 +143,13 @@ var alignments = {
     'full': 'fully'
 }
 
+// Helper function to get layer
 function getLayerPaintType(layer) {
-    console.log("PROBELM LAYER:", layer)
     var layerType = map.getLayer(layer).type;
     return layerTypes[layerType];
 }
 
+// Helper function to set opacity for layers, triggered on scroll
 function setLayerOpacity(layer) {
     var paintProps = getLayerPaintType(layer.layer);
     paintProps.forEach(function (prop) {
@@ -151,36 +163,50 @@ function setLayerOpacity(layer) {
     });
 }
 
+// Create a popup instance 
+const popup = new mapboxgl.Popup({
+    closeButton: false,
+    closeOnClick: false
+});
+
+// Helper function to add tooltips, used in Chapters 3 & 4
+function addTooltip(layer, property_name, property_value) {
+    // show tooltip on hover
+    map.on('mouseenter', layer, (e) => {
+        // only show tooltip if the layer is visible
+        if (map.getPaintProperty(layer, 'icon-opacity') == 0) {
+            return;
+        }
+        
+        // Copy coordinates, name, description
+        const coordinates = e.features[0].geometry.coordinates.slice();
+        const name = e.features[0].properties[property_name];
+        const value = e.features[0].properties[property_value];
+        const description = name + '<br>' + value;
+        
+        // Ensure that if multiple copies of the feature are visible, the popup appears over the copy being pointed to
+        if (['mercator', 'equirectangular'].includes(map.getProjection().name)) {
+            while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) {
+                coordinates[0] +=
+                e.lngLat.lng > coordinates[0] ? 360 : -360;
+            }
+        }
+        
+        // Populate the popup and set its coordinates based on the feature found
+        popup.setLngLat(coordinates).setHTML(description).addTo(map);
+    });
+    // hide tooltip when mouse leaves
+    map.on('mouseleave', layer, () => {
+        popup.remove();
+    });
+}
+
+// Set up Scrollama
 var story = document.getElementById('story');
 var features = document.createElement('div');
 features.setAttribute('id', 'features');
 
-var header = document.createElement('div');
-
-if (config.title) {
-    var titleText = document.createElement('h1');
-    titleText.innerText = config.title;
-    header.appendChild(titleText);
-}
-
-if (config.subtitle) {
-    var subtitleText = document.createElement('h2');
-    subtitleText.innerText = config.subtitle;
-    header.appendChild(subtitleText);
-}
-
-if (config.byline) {
-    var bylineText = document.createElement('p');
-    bylineText.innerText = config.byline;
-    header.appendChild(bylineText);
-}
-
-if (header.innerText.length > 0) {
-    header.classList.add(config.theme);
-    header.setAttribute('id', 'header');
-    story.appendChild(header);
-}
-
+// Set up chapters
 config.chapters.forEach((record, idx) => {
     var container = document.createElement('div');
     var chapter = document.createElement('div');
@@ -189,12 +215,6 @@ config.chapters.forEach((record, idx) => {
         var title = document.createElement('h3');
         title.innerText = record.title;
         chapter.appendChild(title);
-    }
-    
-    if (record.image) {
-        var image = new Image();
-        image.src = record.image;
-        chapter.appendChild(image);
     }
     
     if (record.description) {
@@ -220,22 +240,8 @@ config.chapters.forEach((record, idx) => {
 
 story.appendChild(features);
 
-var footer = document.createElement('div');
-
-if (config.footer) {
-    var footerText = document.createElement('p');
-    footerText.innerHTML = config.footer;
-    footer.appendChild(footerText);
-}
-
-if (footer.innerText.length > 0) {
-    footer.classList.add(config.theme);
-    footer.setAttribute('id', 'footer');
-    story.appendChild(footer);
-}
-
+// Set up Mapbox
 mapboxgl.accessToken = config.accessToken;
-
 var map = new mapboxgl.Map({
     container: 'map',
     style: config.style,
@@ -247,24 +253,11 @@ var map = new mapboxgl.Map({
     projection: config.projection
 });
 
-// Create a inset map if enabled in config.js
-if (config.inset) {
-    map.addControl(
-        new GlobeMinimap({ ...config.insetOptions }),
-        config.insetPosition
-    );
-}
 
-if (config.showMarkers) {
-    var marker = new mapboxgl.Marker({ color: config.markerColor });
-    marker.setLngLat(config.chapters[0].location.center).addTo(map);
-}
-
-
-// instantiate the scrollama
+// Instantiate Scrollama
 var scroller = scrollama();
 map.on("load", function () {
-    // set up the instance, pass callback functions
+    // Set up the instance, pass callback functions
     scroller
     .setup({
         step: '.step',
@@ -272,6 +265,7 @@ map.on("load", function () {
         progress: true
     })
     .onStepEnter(async response => {
+        // Execute the changes outlined in config on entering each step
         var current_chapter = config.chapters.findIndex(chap => chap.id === response.element.id);
         var chapter = config.chapters[current_chapter];
         
@@ -305,6 +299,7 @@ map.on("load", function () {
         }
     })
     .onStepExit(response => {
+        // Execute the changes outlined in config on exiting each step
         var chapter = config.chapters.find(chap => chap.id === response.element.id);
         response.element.classList.remove('active');
         if (chapter.onChapterExit.length > 0) {
@@ -315,46 +310,13 @@ map.on("load", function () {
     if (config.auto) {
         document.querySelectorAll('[data-scrollama-index="0"]')[0].scrollIntoView();
     }
-    
-    // Create a popup, but don't add it to the map yet.
-    const popup = new mapboxgl.Popup({
-        closeButton: false,
-        closeOnClick: false
-    });
-    
-    map.on('mouseenter', 'va-counties-migration', (e) => {
-        if (map.getPaintProperty('va-counties-migration', 'icon-opacity') == 0) {
-            return;
-        }
-        
-        // Copy coordinates array.
-        console.log(e.features[0])
-        const coordinates = e.features[0].geometry.coordinates.slice();
-        const name = e.features[0].properties['NAMELSAD'];
-        const migration = e.features[0].properties['Net Domestic Migration'];
-        const description = name + '<br>' + migration;
-        
-        // Ensure that if the map is zoomed out such that multiple
-        // copies of the feature are visible, the popup appears
-        // over the copy being pointed to.
-        if (['mercator', 'equirectangular'].includes(map.getProjection().name)) {
-            while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) {
-                coordinates[0] +=
-                e.lngLat.lng > coordinates[0] ? 360 : -360;
-            }
-        }
-    
-        // Populate the popup and set its coordinates
-        // based on the feature found.
-        popup.setLngLat(coordinates).setHTML(description).addTo(map);
-    });
-    
-    map.on('mouseleave', 'va-counties-migration', () => {
-        popup.remove();
-    });
+    // Add tooltip to Chapter 3 & 4
+    addTooltip('va-counties-migration', 'NAMELSAD', 'Net Domestic Migration');
+    // hide Chapter 3 & 4 icons before the layer is visible
     map.setPaintProperty('va-counties-migration', 'icon-opacity', 0);
 });    
 
+// hide map until the reader scrolls into the first chapter and after they scroll past the last chapter
 window.addEventListener('scroll', () => {
     const scrolly = document.getElementById('story');
     const rect = scrolly.getBoundingClientRect();

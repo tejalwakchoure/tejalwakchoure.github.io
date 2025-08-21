@@ -1,5 +1,5 @@
 ---
-<!-- project-id: 20 -->
+project-id: 20
 title: Virginia sees an influx in state-to-state migration for the first time in four years
 type: data journalism
 tag: journalism
@@ -7,7 +7,7 @@ tag: journalism
 date: 1000-01-09
 img: migration-map-va.png
 alt: Domestic migration patterns across the country
-description: Exploring annual domestic migration patterns across the country using a scrolly map.
+description: Exploring annual US domestic migration patterns using a scrolly map.
 ---
 
 
@@ -16,7 +16,7 @@ description: Exploring annual domestic migration patterns across the country usi
 <head>
 	{% include head.html %}
 	{% include js.html %}
-	<script defer src="../js/access-codes.js"></script>
+	<!-- <script defer src="../js/access-codes.js"></script> -->
 	<script defer src="../js/migration-map.js"></script>
 	<script src='https://api.tiles.mapbox.com/mapbox-gl-js/v3.12.0/mapbox-gl.js'></script>
 	<script src="https://cdn.jsdelivr.net/npm/mapbox-gl-globe-minimap@1.2.0/dist/bundle.js"></script>
@@ -126,8 +126,8 @@ description: Exploring annual domestic migration patterns across the country usi
 	}
 	@keyframes blink {
 		0% { opacity: 1; }
-		50% { opacity: 0; }
-		100% { opacity: 1; }
+		25% { opacity: 0; }
+		75% { opacity: 1; }
 	}
 </style>
 
@@ -152,8 +152,8 @@ description: Exploring annual domestic migration patterns across the country usi
 					</p>
 					<br>
 				</div>
-				<div class="mt5 text-center">
-					<i class="fa-solid fa-angles-down blink" style="margin: auto; font-size: 1.5em; color: #ffffff4a"></i>
+				<div class="mt5 text-center blink">
+					<i class="fa-solid fa-angles-down" style="margin: auto; font-size: 1.5em; color: #ffffff69"></i><p style="color: #ffffff69; font-size:16px;">scroll to explore</p>
 				</div>
 			</div>
 		</div>

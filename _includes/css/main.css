@@ -673,8 +673,8 @@ text-decoration: underline;
     object-fit: cover;
     /*-webkit-filter: grayscale(1) brightness(1.5);
     filter: grayscale(1) brightness(1.5);*/
-    -webkit-filter: brightness(1.15);
-    filter: brightness(1.15);
+    /* -webkit-filter: brightness(1.15);
+    filter: brightness(1.15); */
     border-radius: 5px;
 }
 

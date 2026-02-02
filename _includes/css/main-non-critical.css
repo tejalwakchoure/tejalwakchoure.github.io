@@ -2130,11 +2130,11 @@ padding-left: 0 !important;
     justify-content: flex-start;
   }
   #under_construction .header-title {
-    height: 40%;
+    /* height: 40%; */
     align-items: flex-start;
   }
   #under_construction .bottom-row {
-    height: 60%;
+    /* height: 60%; */
   }
   #under_construction .header-intro-text {
     padding: 0;
@@ -2559,13 +2559,26 @@ form .row:first-child .floating-label-form-group {
   outline: 0; 
 }
 
+body.under_construction {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+body.under_construction footer {
+  margin: 0 auto;
+  justify-content: center;
+}
+
 #under_construction .header-intro-text .name {
-  font-size: 10vw;
+  font-size: 7rem;
+  line-height: 1.2;
 }
 
 #under_construction {
   width: 100%;
-  height: 100vh;
+  /* height: 100vh; */
+  height: 75vh;
   padding: 0 !important;
   display: flex;
   color: #{{ site.color.text }};

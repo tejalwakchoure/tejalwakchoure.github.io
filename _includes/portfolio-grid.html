@@ -1,14 +1,14 @@
 <!-- Portfolio Section -->
 <section id="work">
     <div class="container" style="padding: 0;">
-        
+
         <div class="col-lg-12 text-right heading-col">
             <h2 class="heading" style="margin-right: -50px; font-size: 7.5rem;">{{ page.title }}</h2>
         </div>
         {% assign projects = site.data.project-directory | sort: 'project-id' | reverse %}
         <!-- {% assign jrn = projects | sort: 'project-id' | where_exp: "item", "item.tag contains 'journalism'" %}
         {% assign datades = projects | sort: 'project-id' | where_exp: "item", "item.tag contains 'datadesign'" %} -->
-        
+
         <!-- Portfolio Grid Section -->
         <section id="portfolio">
             <div class="container">
@@ -22,36 +22,54 @@
                 <div class="row">
                     <div class="jrn portfolio-grid">
                         <!-- uses 'project-id' for ordering -->
+                        {% assign projects = projects | where_exp: "p", "p.slug != 'HIDE'" %}
+
                         {% for project in projects %}
                         <!-- {% assign small_device_img = '/assets/img/small-devices/portfolio/{{ project.slug }}/{{ project.img }}' %} -->
-                        
-                        <div class="portfolio-item" id="{{ project.slug }}">
+
+                        <!-- handle external projects -->
+                        {% assign slug = project.slug | to_s | strip %}
+                        {% assign img = project.img | to_s | strip %}
+                        {%- assign slug_https = slug | slice: 0, 8 -%}
+                        {%- assign slug_http = slug | slice: 0, 7 -%}
+
+                        {% if slug_https == "https://" or slug_http == "http://" %}
+                            {% assign url = slug %}
+                            {% assign img_url = img %}
+                        {% else %}
+                            {% assign url = "/" | append: slug | relative_url %}
+                            {% assign img_url = "/assets/img/portfolio/" | append: slug | append: "/" | append: img |
+                        relative_url %}
+                        {% endif %}
+
+                        <div class="portfolio-item" id="{{ url }}">
                             <div class="portfolio-link-wrapper">
                                 <!-- <div class="overlay"> 
                                     <span style="margin: auto; padding: 10px;"> {{ project.title }} </span>
                                 </div> -->
-                                <a class="portfolio-item-images" href="/{{ project.slug }}">
-                                    
-                                    <img src="/assets/img/portfolio/frame-top.svg" 
-                                    class="img-responsive frame">
+                                <a class="portfolio-item-images" href="{{ url }}">
+
+
+                                    <img src="/assets/img/portfolio/frame-top.svg" class="img-responsive frame">
                                     <!-- <picture class="portfolio-picture"> -->
-                                        <!-- {% if small_device_img | file_exists %}
+                                    <!-- {% if small_device_img | file_exists %}
                                         <source 
                                         media="(max-width: 768px)"
                                         srcset="/assets/img/small-devices/portfolio/{{ project.slug }}/{{ project.img }}"
                                         class="img-responsive" 
                                         alt="{{ project.alt }}">
                                         {% endif %} -->
-                                        <img src="/assets/img/portfolio/{{ project.slug }}/{{ project.img }}" 
-                                        class="img-responsive" 
-                                        alt="{{ project.alt }}">
+                                    <img src="{{ img_url }}" class="img-responsive" alt="{{ project.alt }}">
+
                                     <!-- </picture> -->
                                 </a>
                                 <div>
-                                    <a href="/{{ project.slug }}"><p class="portfolio-item-title">{{ project.title }}</p></a>
+                                    <a href="{{ url }}">
+                                        <p class="portfolio-item-title">{{ project.title }}</p>
+                                    </a>
                                     <p class="portfolio-item-subtitle">{{ project.description }}</p>
                                     {% if project.tag contains 'journalism' %}
-                                        <p class="portfolio-item-type"><span>data story</span></p>
+                                    <p class="portfolio-item-type"><span>data story</span></p>
                                     {% endif %}
                                 </div>
                                 <!-- <p class="grid-type">{{ project.type }}</p>  -->
@@ -60,8 +78,8 @@
                         {% endfor %}
                     </div>
                 </div>
-                
-                
+
+
                 <!-- <div class="row mt10">
                     <div class="col" style="padding: 1.1rem 0; text-align: right;">
                         <h6 class="tagname" style="text-transform: lowercase; font-style: initial;">code & design</h6>

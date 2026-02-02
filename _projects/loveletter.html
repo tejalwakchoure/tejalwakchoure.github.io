@@ -11,12 +11,13 @@
 <body>
   <img class="project-main-img" style="background: #A5C6FF;" src="/assets/img/portfolio/loveletter/main screen.gif">
   {% include nav.html coloured_back="transparent_back" %}
+  {% include project-getter.html slug=page.slug %}
   
   <!-- Project details section -->
   <section id="projectDetails" class="loveletter" data-nosnippet>
     <div class="container" style="justify-content: center;">
       <div class="row" style="align-items: center;">
-        <h1 class="project-title">{{ page.title }}</h1>
+        <h1 class="project-title">{{ project.title }}</h1>
       </div>
       
       <div class="row mt5" id="content-row">
@@ -27,8 +28,8 @@
             A friend and I were bored during the pandemic. So we implemented our favorite board game, <a href="https://www.zmangames.com/en/games/love-letter/" target="_blank">Love Letter</a>, onto a locally-hosted web platform to play with the rest of our friends over Zoom. The interface design included the layout and positioning of 18 cards and 3 screens which incorporated all gameplay controls (points, tokens) to support interactive online play for up to 8 players.
           </p>
           <br><br>
-          <p> <span class="bold">Project Type: </span>{{ page.type }}</p>
-          <p> <span class="bold">Role: </span>end-to-end UI design, front-end development, wireframing, prototyping, playtesting</p>
+          <!-- <p> <span class="bold">Project Type: </span>{{ project.type }}</p> -->
+          <p> <span class="bold">Role: </span>UI/UX design, game design, front-end development, wireframing, prototyping, playtesting</p>
           <p> <span class="bold">Tools: </span>Figma for wireframing and design, ReactJS for development</p>
           <p> <span class="bold">Date: </span>June 2020</p>
           <p> <span class="bold">Code: </span><a href="https://github.com/tejalwakchoure/loveletters-premium" target="_blank">GitHub</a></p>

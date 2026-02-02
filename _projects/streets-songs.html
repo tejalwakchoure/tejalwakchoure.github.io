@@ -14,13 +14,13 @@
   <script defer src="../js/words.js"></script>
   <script defer src="../js/streets-songs.js"></script>
   
-  {% include stylesheets.html %}
+	{% include stylesheets.html %}
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Orbitron:wght@100;200;300;600&display=block">
 </head>
 
 <body style="background-color: #ffc7f6;">
   {% include nav.html coloured_back="transparent_back" %}
-  
+  {% include project-getter.html slug=page.slug %}
   
   <section id="projectDetails" class="article songs" data-nosnippet>
     <div style="justify-content: center;">
@@ -28,7 +28,7 @@
       
       <div class="title-screen screen">
         <div class="text" style="position: relative;">
-          <h1 style="font-size: 2.5em;">{{ page.title }}</h1>
+          <h1 style="font-size: 2.5em;">{{ project.title }}</h1>
           <p class="small" style="font-family: monospace;">- the city in music: a game -</p>
           <h5 class="otherinfo" style="padding: 20px 0; font-size:0.9rem !important; color: #393939;">Tejal Wakchoure | Aug 8, 2023</h5>
           <a class="btn startbtn blinking" style="margin-top: 50px;">START</a>
@@ -243,7 +243,7 @@
       Data journalism project for the <a href="https://ledeprogram.com/" target="_blank"> Lede Program at Columbia</a>.
     </p>
     <br><br>
-    <p class="small"> <span class="bold">Project Type: </span>{{ page.type }}</p> -->
+    <p class="small"> <span class="bold">Project Type: </span>{{ project.type }}</p> -->
     <!-- <p class="small"> <span class="bold">Role: </span>data analysis, mapping, data visualization, game development</p>
     <p class="small"> <span class="bold">Tools: </span>Python(Jupyter) for API calls and analysis. Mapbox, Datawrapper, Illustrator/ai2html, and Figma for graphics</p> -->
     <!-- <p class="small"> <span class="bold">Date: </span>August 2023</p> -->

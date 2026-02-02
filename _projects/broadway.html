@@ -11,13 +11,14 @@
 </head>
 <body style="background: #f6f1e8;">
 	{% include nav.html coloured_back="transparent_back" %}
+	{% include project-getter.html slug=page.slug %}
 
 	<!-- Project details section -->
     <!-- <img class="project-main-img broadway-main-img" style="object-fit: cover;" src="../assets/img/portfolio/broadway/header_color.jpg" alt="picture of a theater"> -->
 	<section id="projectDetails" class="broadway article" style="display: block;" data-nosnippet>
 		<div class="container" style="justify-content: center; padding-top: 2vh; background: #f6f1e8;">
 			<div class="col text-center">
-				<h1 class="project-title">{{ page.title }}</h1>
+				<h1 class="project-title">{{ project.title }}</h1>
 				<h5 class="otherinfo" style="text-transform: unset;">Tejal Wakchoure | June 17, 2023</h5>
 			</div> 
 			
@@ -140,7 +141,7 @@
 							Data journalism project for the <a href="https://ledeprogram.com/" target="_blank"> Lede Program at Columbia</a>.
 						</p>
 						<br><br>
-						<p> <span class="bold">Project Type: </span>{{ page.type }}</p> -->
+						<p> <span class="bold">Project Type: </span>{{ project.type }}</p> -->
 						<!-- <p> <span class="bold">Role: </span>data collection, data analysis, data visualization</p>
 						<p> <span class="bold">Tools: </span>Python(Jupyter) for scraping and analysis, Plotly for graphics</p>
 						<p> <span class="bold">Date: </span>June 2023</p> -->

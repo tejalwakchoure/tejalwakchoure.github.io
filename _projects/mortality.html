@@ -10,13 +10,14 @@
 </head>
 <body>
 	{% include nav.html %}
+	{% include project-getter.html slug=page.slug %}
 	
 	<!-- Project details section -->
 	<section id="projectDetails" class="article" data-nosnippet>
 		<!-- <div class="mt10"></div> -->
 		<div class="container" style="justify-content: center;">
 			<div class="col text-center">
-				<h1 class="project-title">{{ page.title }}</h1>
+				<h1 class="project-title">{{ project.title }}</h1>
 				<h5 class="otherinfo" style="text-transform: unset;">Tejal Wakchoure | June 28, 2023</h5>
 			</div> 
 			<div class="row" id="content-row">

@@ -1,0 +1,4 @@
+{% assign project = site.data.project-directory
+  | where: "slug", include.slug
+  | first
+%}

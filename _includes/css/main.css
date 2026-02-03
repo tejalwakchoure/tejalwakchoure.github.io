@@ -838,7 +838,8 @@ color: #{{ site.color.link }};
 .portfolio-item .portfolio-item-images {
     position: relative;
     display: flex;
-    box-shadow: black -9px 9px 0px 0px;
+    /* box-shadow: black -9px 9px 0px 0px; */
+    box-shadow: black -5px 6px 0px 0px;    
 }
 
 .portfolio-item img,

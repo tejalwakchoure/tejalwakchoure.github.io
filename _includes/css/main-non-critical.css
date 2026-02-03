@@ -2421,7 +2421,7 @@ footer {
   max-width: 1140px;
   margin: auto;
   z-index: 3;
-  justify-content: right;
+  justify-content: center;
 }
 
 footer a {
